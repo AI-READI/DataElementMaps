@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "aaron-bond.better-comments",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-vscode.cpptools",
+    "ms-python.isort",
+    "Vue.vscode-typescript-vue-plugin",
+    "VisualStudioExptTeam.vscodeintellicode"
+  ]
+}

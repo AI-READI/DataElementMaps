@@ -1,0 +1,28 @@
+abstract: "A sample template for AI-READI projects"
+authors:
+  - affiliation: "FAIR Data Innovations Hub"
+    email: "ssoundarajan@calmi2.org"
+    family-names: Soundarajan
+    given-names: Sanjay
+  - affiliation: "FAIR Data Innovations Hub"
+    email: "bpatel@calmi2.org"
+    family-names: Patel
+    given-names: Bhavesh
+cff-version: 1.2.0
+date-released: "2022-11-28"
+identifiers:
+  - description: "DOI for this software's record on Zenodo"
+    type: doi
+    value: "10.5281/zenodo.7373697"
+keywords:
+  - "AI-READI"
+  - template
+  - project
+license: MIT
+message: "If you use this software, please cite it as below."
+repository-artifact: "https://github.com/AI-READI/template"
+repository-code: "https://github.com/AI-READI/template"
+title: "AI-READI Template"
+type: software
+url: "https://aireadi.org"
+version: 0.0.1

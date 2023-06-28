@@ -1,0 +1,56 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "@type": "SoftwareSourceCode",
+    "license": "https://spdx.org/licenses/MIT",
+    "codeRepository": "https://github.com/AI-READI/template",
+    "dateCreated": "2022-11-28",
+    "dateModified": "2022-11-28",
+    "downloadUrl": "https://github.com/AI-READI/template",
+    "issueTracker": "https://github.com/AI-READI/template/issues",
+    "name": "AI-READI Template",
+    "version": "0.0.1",
+    "identifier": "https://doi.org/10.5281/zenodo.7373697",
+    "description": "A sample template for AI-READI projects",
+    "applicationCategory": "Scientific",
+    "funding": "1OT2OD032644",
+    "developmentStatus": "active",
+    "isPartOf": "https://aireadi.org/",
+    "funder": {
+        "@type": "Organization",
+        "@name": "National Institutes of Health (NIH)"
+    },
+    "keywords": [
+        "AI-READI",
+        "template",
+        "project"
+    ],
+    "programmingLanguage": [
+        "JavaScript",
+        "CSS"
+    ],
+    "relatedLink": [
+        "https://github.com/AI-READI"
+    ],
+    "author": [
+        {
+            "@type": "Person",
+            "givenName": "Sanjay",
+            "familyName": "Soundarajan",
+            "email": "ssoundarajan@calmi2.org",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "FAIR Data Innovations Hub"
+            }
+        },
+        {
+            "@type": "Person",
+            "givenName": "Bhavesh",
+            "familyName": "Patel",
+            "email": "bpatel@calmi2.org",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "FAIR Data Innovations Hub"
+            }
+        }
+    ]
+}
