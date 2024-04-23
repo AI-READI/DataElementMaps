@@ -1,0 +1,542 @@
+Variable / Field Name,Form Name,Section Header,Field Type,Field Label,"Choices, Calculations, OR Slider Labels",Field Note,Text Validation Type OR Show Slider Number,Text Validation Min,Text Validation Max,Identifier?,Branching Logic (Show field only if...),Required Field?,Custom Alignment,Question Number (surveys only),Matrix Group Name,Matrix Ranking?,Field Annotation
+studyid,study_enrollment,,text,Participant Study ID,,"Assigned when participant visit occurs, not before.",integer,1000,9999,,,,LV,,,,
+screen_alert_trigger,recruitment_survey_management,,checkbox,FAQ Follow Upÿ- Move participant forward to Screening,"1, Send participant invitation to resume surveys starting at the Screening survey",,,,,,[faq_survey_complete] = '2' and [scrn_intst2] = '2',,LV,,,,
+consent_alert_trigger,recruitment_survey_management,,checkbox,Pre-Consent Follow Up - Move participant forward to Consent,"1, Send participant invitation to resume surveys starting at the Consent survey",,,,,,[preconsent_survey_complete] = '2' and [icf_c16468] = '2' and [c184390(1)] = '0',,LV,,,,
+stop_srvy,recruitment_survey_management,,checkbox,Cancel survey invitations,"1, Checking this box and saving the form cancels any scheduled automated invitations and prevents any future invitations from being scheduled",,,,,,,,LV,,,,
+reccmpdat,recruitment_survey,,text,Recruitment survey date(date survey/form opened),,,date_mdy,,,,,,LV,,,, @HIDDEN-SURVEY @TODAY
+recruit_nd,recruitment_survey,,checkbox,No participant response,"999, Recruitment survey not done",,,,,,[survey-time-completed:recruitment_survey] = '',,LV,,,, @HIDDEN-SURVEY
+scrn_intst1,recruitment_survey,,radio,Are you interested to learn if you're eligible for our research program?,"1, Yes, I'm interested | 2, I have questions | 0, No I'm not interested at this time",,,,,,[recruit_nd(999)] = '0',y,LV,,,,
+recstartts,recruitment_survey,,text,Recruitment Survey Started Timestamp (from REDCap),,,,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-started:recruitment_survey]<> '', [survey-time-started:recruitment_survey],''))"
+reccmpts,recruitment_survey,,text,Recruitment Survey Completed Timestamp (from REDCap),,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-completed:recruitment_survey]<> '', [survey-time-completed:recruitment_survey],''))"
+faq_nd,faq_survey,,checkbox,No participant response,"999, FAQ survey not done",,,,,,[survey-time-completed:faq_survey] = '',,LV,,,, @HIDDEN-SURVEY
+scrn_intst2,faq_survey,,radio,Are you interested in learning if you're eligible for our research program?,"1, Yes, I'm interested | 2, I still have questions and I would like to have a staff member call me | 0, No I'm not interested at this time",,,,,,[faq_nd(999)] = '0',y,LV,,,,
+faqstartts,faq_survey,,text,FAQ Survey Started Timestamp (from REDCap),,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-started:faq_survey]<> '', [survey-time-started:faq_survey],''))"
+faqcmpts,faq_survey,,text,FAQ Survey Completed Timestamp (from REDCap),,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-completed:faq_survey]<> '', [survey-time-completed:faq_survey],''))"
+scrcmpdat,screening_survey,,text,Screening survey date(date survey/form opened),,,date_mdy,,,,,,LV,,,, @HIDDEN-SURVEY @TODAY
+screen_nd,screening_survey,,checkbox,No participant response,"999, Screening survey not done",,,,,,[survey-time-completed:screening_survey] = '',,LV,,,, @HIDDEN-SURVEY
+mhterm_dm1,screening_survey,,yesno,Type I Diabetes,,,,,,,[rp_childpot] = '0' and [screen_nd(999)] = '0',y,LV,,,,
+mh_a1c,screening_survey,,yesno,Elevated A1C levels (elevated blood sugars),,,,,,,[rp_childpot] = '0' and [mhterm_dm1] = '0' and [screen_nd(999)] = '0',y,LV,,,,
+mhterm_dm2,screening_survey,,yesno,Type II Diabetes,,,,,,,[rp_childpot] = '0' and [mhterm_dm1] = '0' and [screen_nd(999)] = '0',y,LV,,,,
+mh_dm_age,screening_survey,,text,"If yes, at what age were you first diagnosed?",,,integer,1,99,,[mhterm_dm2] = '1',y,LV,,,,
+mhterm_predm,screening_survey,,yesno,Pre-diabetes,,,,,,,[rp_childpot] = '0' and [mhterm_dm1] = '0' and [mhterm_dm2] = '0' and [screen_nd(999)] = '0',y,LV,,,,
+cmtrt_a1c,screening_survey,,radio,"Do you take pills to control your A1C and blood glucose levels? Metformin (Glucophage, Glumetza, Fortamet, Riomet), Glucotrol, Amaryl, DiaBeta, Blynase PresTab, Micronase, Actos, Avandia, Precose, Glyset, Prandin, Starlix, Januvia, Onglyza, Tradjenta, Nesina, Invokana, Farxiga, Jardiance, Welchol, and Cyclocet","1, Yes|0, No",,,,,,[rp_childpot] = '0' and [mhterm_dm1] = '0' and ([mhterm_dm2] = '1' or [mhterm_predm]= '1' or [mh_a1c] = '1') and [screen_nd(999)] = '0',y,LV,,,,
+cmtrt_insln,screening_survey,,yesno,Do you inject insulin to control your blood glucose levels?,,,,,,,[rp_childpot] = '0' and [mhterm_dm1] = '0' and ([mhterm_dm2] = '1' or [mhterm_predm]= '1' or [mh_a1c] = '1') and [screen_nd(999)] = '0',y,LV,,,,
+cmtrt_glcs,screening_survey,,yesno,"Do you use other injections to control your blood glucose levels?ÿ Examples:Victoza, Ozempic, Symlin, Tanzeum, and Trulicity",,,,,,,[rp_childpot] = '0' and [mhterm_dm1] = '0' and ([mhterm_dm2] = '1' or [mhterm_predm]= '1' or [mh_a1c] = '1') and [screen_nd(999)] = '0',y,LV,,,,
+cmtrt_lfst,screening_survey,,yesno,"Do you use lifestyle changes to control your A1C and blood glucose levels? Examples: regular exercise, avoiding sugary foods and beverages, eating a balanced diet with lots of vegetables, sticking to a consistent eating schedule",,,,,,,[rp_childpot] = '0' and [mhterm_dm1] = '0' and ([mhterm_dm2] = '1' or [mhterm_predm]= '1' or [mh_a1c] = '1') and [screen_nd(999)] = '0',y,LV,,,,
+scrstartts,screening_survey,,text,Screening Survey Started Timestamp (from REDCap),,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-started:screening_survey]<> '', [survey-time-started:screening_survey],''))"
+scrcmpts,screening_survey,,text,Screening Survey Completed Timestamp (from REDCap),,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-completed:screening_survey]<> '', [survey-time-completed:screening_survey],''))"
+preconcmpdat,preconsent_survey,,text,Pre-consent survey/form date(date survey/form opened),,,date_mdy,,,,,,LV,,,, @HIDDEN-SURVEY @TODAY
+precon_nd,preconsent_survey,,checkbox,No participant response,"999, Pre-consent survey not done",,,,,,[survey-time-completed:preconsent_survey] = '',,LV,,,, @HIDDEN-SURVEY
+icf_c16468,preconsent_survey,,radio,"You have the option to continue to our informed consent document, which contains more details on the data to be collected, as well as your rights as a volunteer. You also have the option to request that a research team member call you to answer any questions you have, or choose not to participate and exit this website.","1, Yes, I'd like to enroll in the AI-READI research program and complete the consent form | 2, I have questions and would like to receive a call from research staff | 0, No, I do not want to enroll in the program",,,,,,[precon_nd(999)] = '0',y,LV,,,,
+preconstartts,preconsent_survey,,text,Pre-consent Survey Started Timestamp (from REDCap),,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-started:preconsent_survey]<> '', [survey-time-started:preconsent_survey],''))"
+preconcmpts,preconsent_survey,,text,Pre-consent Survey Completed Timestamp (from REDCap),,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-completed:preconsent_survey]<> '', [survey-time-completed:preconsent_survey],''))"
+icf_nd,consent_survey,,checkbox,No participant response,"999, Consent survey not done",,,,,,[survey-time-completed:consent_survey] = '' and [c184390(1)] = '0',,LV,,,, @HIDDEN-PDF @HIDDEN-SURVEY
+c184390,consent_survey,,checkbox,Paper consent obtained,"1, Check this box to confirm that paper consent was obtained",,,,,,[icf_nd(999)] = '0' and [survey-date-completed:consent_survey] = '',,LV,,,, @HIDDEN-PDF @HIDDEN-SURVEY
+c184390_dat,consent_survey,,text,Date paper consent completed,,,datetime_mdy,,,,[c184390(1)]='1',,LV,,,,
+icf_dat,consent_survey,,text,Date,,,date_mdy,today,today,,[icf_consent] = '1',y,LV,,,,
+icfsvyts,consent_survey,,text,Consent Survey Start Timestamp,,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-started:consent_survey]<> '', [survey-time-started:consent_survey],''))"
+icfcmpts,consent_survey,,text,Consent Survey Completed Timestamp,,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-completed:consent_survey]<> '', [survey-time-completed:consent_survey],''))"
+prtcmpdat,participant_contact_information_survey,,text,Participant contact survey/form date(date survey/form opened),,,date_mdy,,,,,,LV,,,, @HIDDEN-SURVEY @TODAY
+dmgcmpdat,demographics_survey,,text,Demographic survey date(date survey/form opened),,,date_mdy,,,,,,LV,,,, @TODAY @HIDDEN-SURVEY
+brthyy,demographics_survey,,text,Year (e.g. 1967),,,integer,1923,1985,,[dmg_nd(999)] = '0',y,LV,,,,
+cage,demographics_survey,,text,Age (in years),,,integer,37,95,,[dmg_nd(999)] = '0',y,LV,,,,
+cl_maristat,demographics_survey,,radio,Marital Status,"C51773, Married|C51774, Single|C51776, Divorced|C51775, Widowed|C53262, Domestic Partner|C51777, Living separately but not divorced|888, Other|777, Prefer not to say",,,,,,[dmg_nd(999)] = '0',y,LV,,,,
+dmgstartts,demographics_survey,,text,Demographics Survey Started Timestamp (from REDCap),,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-started:demographics_survey]<> '', [survey-time-started:demographics_survey],''))"
+dmgcmpts,demographics_survey,,text,Demograhics Survey Completed Timestamp (from REDCap),,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-completed:demographics_survey]<> '', [survey-time-completed:demographics_survey],''))"
+mhcmpdat,health_survey,,text,Health survey date,,,date_mdy,,,,,,LV,,,, @TODAY @HIDDEN-SURVEY
+mh_nd,health_survey,,checkbox,No participant response,"999, Recruitment survey not done",,,,,,[survey-time-completed:health_survey] = '',,LV,,,, @HIDDEN-SURVEY
+mhoccur_mi,health_survey,,radio,Heart attack,"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_cvdot,health_survey,,radio,"Other heart issues (Examples: pacemaker, heart valve disease, open heart surgery)","1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_strk,health_survey,,radio,Stroke,"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_circ,health_survey,,radio,"Circulation problems (Examples: arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins","1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_clsh,health_survey,,radio,High blood cholesterol,"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_hbp,health_survey,,radio,High blood pressure,"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_lbp,health_survey,,radio,Low blood pressure,"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_pd,health_survey,,radio,Parkinson's disease,"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_ad,health_survey,,radio,"Dementia (Examples: Alzheimer's Disease, vascular dementia, etc)","1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhcat_adot,health_survey,,radio,"If yes, please choose between:","1, Alzheimer's disease|888, Other|999, Unsure from the options listed|777, Prefer not to say",,,,,,[mhoccur_ad] ='1',y,LV,,,,
+mhoccur_cogn,health_survey,,radio,"Mild cognitive impairment (known as ""MCI""; mild but noticeable cognitive changes, may slow or interfere with daily activities but does not stop them)","1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_ms,health_survey,,radio,Multiple sclerosis,"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_cns,health_survey,,radio,Other neurological conditions,"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_ra,health_survey,,radio,Arthritis (joint pain),"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_oa,health_survey,,radio,Osteoporosis (loss of bone density),"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_ca,health_survey,,radio,Cancer (any type),"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_plm,health_survey,,radio,"Chronic pulmonary (lung) problems (Examples: emphysema, asthma, tuberculosis, asbestosis)","1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_gi,health_survey,,radio,"Digestive problems (Examples: stomach ulcer, gastrointestinal problems, hiatal hernia)","1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_ua,health_survey,,radio,"Urinary problems (Examples: urinary tract infections, incontinence, prostate problems)","1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_rnl,health_survey,,radio,Kidney problems,"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_ear,health_survey,,radio,Hearing impairment,"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_obs,health_survey,,radio,Obesity,"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+fh_dm2pt,health_survey,,radio,Were either of your parents diagnosed with Type II Diabetes?,"1, Yes|0, No|555, Unknown|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+fh_dm2ptsp,health_survey,,checkbox,"If yes, which parent?","1, Mother|2, Father",,,,,,[fh_dm2pt]='1',,LV,,,,
+fh_dm2sb,health_survey,,radio,Has a sibling been diagnosed with Type II Diabetes?,"1, Yes|0, No|555, Unknown|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+fh_dm2sbsp,health_survey,,checkbox,"If yes, please check all that apply:","1, Sister|2, Brother|3, Half-Sister|4, Half-Brother",,,,,,[fh_dm2sb]='1',,LV,,,,
+mhoccur_glc,health_survey,,radio,Glaucoma (in one or both eyes),"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_amd,health_survey,,radio,Age-related macular degeneration (AMD) (in one or both eyes),"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_crt,health_survey,,radio,Cataracts (in one or both eyes),"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_pdr,health_survey,,radio,Diabetic retinopathy (in one or both eyes),"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_rvo,health_survey,,radio,"Retinal vascular occlusion (""stroke in the eye or eye vessels"" - in one or both eyes)","1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_ded,health_survey,,radio,Dry eye (in one or both eyes),"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_yn,health_survey,,radio,"Have you been diagnosed with any conditions not listed above? (any condition, not just eyes)","1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_fall,health_survey,,radio,Have you fallen in the last 12 months? (a fall is defined as an event which results in a person coming to rest inadvertently on the ground or floor or other lower level),"1, Yes|0, No|777, Prefer not to say",,,,,,[mh_nd(999)] = '0',y,LV,,,,
+mhoccur_fallot,health_survey,,text,"If so, how many times in the last 12 months?",,,integer,,,,[mhoccur_fall]='1',,LV,,,,
+mhstartts,health_survey,,text,Health Survey Started Timestamp (from REDCap),,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-started:health_survey]<> '', [survey-time-started:health_survey],''))"
+mhcmpts,health_survey,,text,Heath Survey Completed Timestamp (from REDCap),,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-completed:health_survey]<> '', [survey-time-completed:health_survey],''))"
+sucmpdat,substance_use_survey,,text,Substance use survey date,,,date_mdy,,,,,,LV,,,, @TODAY @HIDDEN-SURVEY
+su_nd,substance_use_survey,,checkbox,No participant response,"999, Substance Use survey not done",,,,,,[survey-time-completed:health_survey] = '',,LV,,,, @HIDDEN-SURVEY
+susmkncf,substance_use_survey,,radio,Have you smoked at least 100 cigarettes or more in your lifetime?ÿ(100 cigarettes = 5 packs),"1, Yes|0, No|777, Prefer not to say",,,,,,[su_nd(999)] = '0',y,LV,,,,
+susmkstaage,substance_use_survey,,dropdown,At what age did you start smoking? (Age started - years old),"5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|13, 13|14, 14|15, 15|16, 16|17, 17|18, 18|19, 19|20, 20|21, 21|22, 22|23, 23|24, 24|25, 25|26, 26|27, 27|28, 28|29, 29|30, 30|31, 31|32, 32|33, 33|34, 34|35, 35|36, 36|37, 37|38, 38|39, 39|40, 40|41, 41|42, 42|43, 43|44, 44|45, 45|46, 46|47, 47|48, 48|49, 49|50, 50|51, 51|52, 52|53, 53|54, 54|55, 55|56, 56|57, 57|58, 58|59, 59|60, 60|98, More than 60 years old|999, Prefer not to say",,,,,,[susmkncf]='1',y,LV,,,,
+susmkcdur,substance_use_survey,,radio,Do you smoke now?,"1, Yes|0, No|777, Prefer not to say",,,,,,[susmkncf]='1',y,LV,,,,
+susmkstoage,substance_use_survey,,dropdown,How many total years have you smoked?,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|13, 13|14, 14|15, 15|16, 16|17, 17|18, 18|19, 19|20, 20|21, 21|22, 22|23, 23|24, 24|25, 25|26, 26|27, 27|28, 28|29, 29|30, 30|31, 31|32, 32|33, 33|34, 34|35, 35|36, 36|37, 37|38, 38|39, 39|40, 40|41, 41|42, 42|43, 43|44, 44|45, 45|46, 46|47, 47|48, 48|49, 49|50, 50|51, 51|52, 52|53, 53|54, 54|55, 55|56, 56|57, 57|58, 58|59, 59|60, 60|98, More than 60 years|999, Prefer not to say",,,,,,[susmkncf]='1',y,LV,,,,
+susmkdosfr,substance_use_survey,,dropdown,On average how many cigarettes do/did you usually smoke in a day? (Number of cigarettes | 20 cigarettes = 1 pack),"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|13, 13|14, 14|15, 15|16, 16|17, 17|18, 18|19, 19|20, 20|21, 21-30 (up to 1.5 packs)|31, 31-40 (up to  2 packs)|41, 41-50 (up to 2.5 packs)|51, More than 50 (3 or more packs)|999, Prefer not to say",,,,,,[susmkncf]='1',y,LV,,,,
+sualckncf,substance_use_survey,,radio,Have you ever consumed alcohol?,"1, Yes|0, No|777, Prefer not to say",,,,,,[su_nd(999)] = '0',y,LV,,,,
+sualcage,substance_use_survey,,dropdown,At what age did you start drinking alcohol? (Age started - years old),"5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|13, 13|14, 14|15, 15|16, 16|17, 17|18, 18|19, 19|20, 20|21, 21|22, 22|23, 23|24, 24|25, 25|26, 26|27, 27|28, 28|29, 29|30, 30|31, 31|32, 32|33, 33|34, 34|35, 35|36, 36|37, 37|38, 38|39, 39|40, 40|41, 41|42, 42|43, 43|44, 44|45, 45|46, 46|47, 47|48, 48|49, 49|50, 50|51, 51|52, 52|53, 53|54, 54|55, 55|56, 56|57, 57|58, 58|59, 59|60, 60|98, More than 60 years old|999, Prefer not to say",,,,,,[sualckncf] = '1',y,LV,,,,
+suvptoyr,substance_use_survey,,dropdown,How many total years have you consumed alcohol?,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|13, 13|14, 14|15, 15|16, 16|17, 17|18, 18|19, 19|20, 20|21, 21|22, 22|23, 23|24, 24|25, 25|26, 26|27, 27|28, 28|29, 29|30, 30|31, 31|32, 32|33, 33|34, 34|35, 35|36, 36|37, 37|38, 38|39, 39|40, 40|41, 41|42, 42|43, 43|44, 44|45, 45|46, 46|47, 47|48, 48|49, 49|50, 50|51, 51|52, 52|53, 53|54, 54|55, 55|56, 56|57, 57|58, 58|59, 59|60, 60|98, More than 60 years old|999, Prefer not to say",,,,,,[sualckncf] = '1',y,LV,,,,
+subrkncf,substance_use_survey,,radio,Have you had any beer or ale in the past year?,"1, Yes|0, No|777, Prefer not to say",,,,,,[sualckncf] = '1',y,LV,,,,
+subrdosfr,substance_use_survey,,dropdown,"During the average week, how many 12 oz. bottles or cans of beer do you usually drink? (Number of bottles or cans per week)","0, Less than 1|1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|13, 13|14, 14  or 2 drinks per night in a week|15, 15|16, 16|17, 17|18, 18|19, 19|20, 20|21, 21 or 3 drinks per night in a week|22, 22 to 28|29, 29 to 35|36, 36 or more|999, Prefer not to say",,,,,,[subrkncf]='1',y,LV,,,,
+suwnkncf,substance_use_survey,,radio,Have you had any wine in the past year?,"1, Yes|0, No|777, Prefer not to say",,,,,,[sualckncf] = '1',y,LV,,,,
+suwndosfr,substance_use_survey,,dropdown,"During the average week, how many 5 oz. glasses of wine do you usually drink?ÿThe average wine bottle has 5 servings. (Number of glasses per week)","0, Less than 1|1, 1|2, 2|3, 3|4, 4|5, 5 (1 bottle)|6, 6|7, 7|8, 8|9, 9|10, 10 (2 bottles)|11, 11|12, 12|13, 13|14, 14|15, 15 (3 bottles)|16, 16|17, 17|18, 18|19, 19|20, 20 (4 bottles)|21, 21-25 (5 bottles)|26, 26-30 (6 bottles)|31, 31-35 (7 bottles)|35, More than 36 (greater than 7 bottles)|777, Prefer not to say",,,,,,[suwnkncf]='1',y,LV,,,,
+sulqkncf,substance_use_survey,,radio,"Have you had any liquor in the past year, such as brandy, whiskey, vodka, gin, schnapps, cocktails, or liqueurs?","1, Yes|0, No|777, Prefer not to say",,,,,,[sualckncf] = '1',y,LV,,,,
+sulqdosfr,substance_use_survey,,dropdown,"During the average week, how many 1.5 oz. of liquor do you usually drink, either as shots or in mixed cocktails? (Number of drinks per week)","0, Less than 1|1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7 (or 1 per day)|8, 8|9, 9|10, 10|11, 11|12, 12|13, 13|14, 14 (or 2 per day)|15, 15|16, 16|17, 17|18, 18|19, 19|20, 20|21, 21 (or 3 per day)|22, 22-28|29, 29-35|36, More than 36|777, Prefer not to say",,,,,,[sulqkncf]='1',y,LV,,,,"1, 1
+2, 2
+3, 3
+4, 4
+5, 5
+6, 6
+7, 7
+8, 8
+9, 9
+10, 10
+11, 11
+12, 12
+13, 13
+14, 14
+15, 15
+16, 16
+17, 17
+18, 18
+19, 19
+20, 20
+21, 21-30
+31, 31-40
+41, 41-50
+777, Prefer not to say"
+sualcdrv,substance_use_survey,,radio,"Do you drive after having a drink, even if it is only one drink?","0, Never|1, Rarely|2, Sometimes|3, Often|4, Always|777, Prefer not to say",,,,,,[subrkncf]='1' OR [suwnkncf]='1' OR [sulqkncf]='1',y,LV,,,,
+suvpkncf1,substance_use_survey,,radio,Have you ever vaped or used e-cigarettes?,"1, Yes|0, No|777, Prefer not to say",,,,,,[su_nd(999)] = '0',y,LV,,,,
+suvpstage,substance_use_survey,,dropdown,At what age did you start vaping or using e-cigarettes? (Age started - years old),"5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|13, 13|14, 14|15, 15|16, 16|17, 17|18, 18|19, 19|20, 20|21, 21|22, 22|23, 23|24, 24|25, 25|26, 26|27, 27|28, 28|29, 29|30, 30|31, 31|32, 32|33, 33|34, 34|35, 35|36, 36|37, 37|38, 38|39, 39|40, 40|41, 41|42, 42|43, 43|44, 44|45, 45|46, 46|47, 47|48, 48|49, 49|50, 50|51, 51|52, 52|53, 53|54, 54|55, 55|56, 56|57, 57|58, 58|59, 59|60, 60|98, More than 60 years old|999, Prefer not to say",,,,,,[suvpkncf1]='1',y,LV,,,,
+suvpcdur,substance_use_survey,,radio,Do you vape or use e-cigarettes now?,"1, Yes|0, No|777, Prefer not to say",,,,,,[suvpkncf1]='1',y,LV,,,,
+suvptoage,substance_use_survey,,dropdown,How many total years have you vaped or used e-cigarettes?,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|13, 13|14, 14|15, 15|16, 16|17, 17|18, 18|19, 19|20, 20|98, More than 20 years|999, Prefer not to say",,,,,,[suvpkncf1] = '1',y,LV,,,,
+suvpdosfr,substance_use_survey,,dropdown,"When you vaped or used e-cigarettes, approximately how many days in a typical week would you use it?","1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|999, Prefer not to answer",,,,,,[suvpkncf1]='1',y,LV,,,,
+sumrjkncf,substance_use_survey,,radio,"Have you ever used marijuana (cannabis)? (This includes smoking marijuana, using cannabis concentrates, and edibles.)","1, Yes|0, No|777, Prefer not to say",,,,,,[record-dag-name] <> 'uab' and [su_nd(999)] = '0',y,LV,,,,
+sumrjstage,substance_use_survey,,dropdown,At what age did you start using marijuana?ÿ(Age started - years old),"5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|13, 13|14, 14|15, 15|16, 16|17, 17|18, 18|19, 19|20, 20|21, 21|22, 22|23, 23|24, 24|25, 25|26, 26|27, 27|28, 28|29, 29|30, 30|31, 31|32, 32|33, 33|34, 34|35, 35|36, 36|37, 37|38, 38|39, 39|40, 40|41, 41|42, 42|43, 43|44, 44|45, 45|46, 46|47, 47|48, 48|49, 49|50, 50|51, 51|52, 52|53, 53|54, 54|55, 55|56, 56|57, 57|58, 58|59, 59|60, 60|98, More than 60 years old|999, Prefer not to say",,,,,,[sumrjkncf]='1' and [record-dag-name] <> 'uab',y,LV,,,,
+sumrjcdur,substance_use_survey,,radio,Do you use marijuana now?,"1, Yes|0, No|777, Prefer not to say",,,,,,[sumrjkncf]='1' and [record-dag-name] <> 'uab',y,LV,,,,
+sumrjtrt,substance_use_survey,,checkbox,In what form do you usually use marijuana?ÿ(check all that apply),"1, Inhaled/Smoked (for example: joints, blunts, bongs, vaping, dabs)|2, Oral/Edibles  (for example: oils, tinctures, beverages, capsules, sprays) |3, Topical (for example: sprays or oils) |777, Prefer not to say",,,,,,[sumrjkncf]='1' and [record-dag-name] <> 'uab',y,LV,,,, @NONEOFABOVE = '777'
+sumrjceddur,substance_use_survey,,dropdown,How many total years have you used marijuana?,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|13, 13|14, 14|15, 15|16, 16|17, 17|18, 18|19, 19|20, 20|21, 21|22, 22|23, 23|24, 24|25, 25|26, 26|27, 27|28, 28|29, 29|30, 30|31, 31|32, 32|33, 33|34, 34|35, 35|36, 36|37, 37|38, 38|39, 39|40, 40|41, 41|42, 42|43, 43|44, 44|45, 45|46, 46|47, 47|48, 48|49, 49|50, 50|98, More than 50 years|999, Prefer not to say",,,,,,[sumrjkncf] = '1',y,LV,,,,
+sumrjfr,substance_use_survey,,dropdown,"When you used marijuana, approximately how many days in a typical week would you use it?","1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|777, Prefer not to say",,,,,,[sumrjkncf]='1',y,LV,,,,
+sustartts,substance_use_survey,,text,Substance Use Survey Started Timestamp (from REDCap),,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-started:substance_use_survey]<> '', [survey-time-started:substance_use_survey],''))"
+sucmpts,substance_use_survey,,text,Substance Use Survey Completed Timestamp (from REDCap),,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-completed:substance_use_survey]<> '', [survey-time-completed:substance_use_survey],''))"
+cesmpdat,cesd10_survey,,text,CES-D-10 survey date,,,date_mdy,,,,,,LV,,,, @TODAY @HIDDEN-SURVEY
+ces_nd,cesd10_survey,,checkbox,No participant response,"999, Recruitment survey not done",,,,,,[survey-time-completed:cesd10_survey] = '',,LV,,,, @HIDDEN-SURVEY
+ces1,cesd10_survey,,radio,I was bothered by things that usually don't bother me,"0, Rarely or none of the time (< 1 day)|1, Some or a little of the time (1-2 days)|2, Occasionally or a moderate amount of time (3-4 days)|3, All of the time (5-7 days)",,,,,,,,LV,,,,
+ces2,cesd10_survey,,radio,I had trouble keeping my mind on what I was doing,"0, Rarely or none of the time (< 1 day)|1, Some or a little of the time (1-2 days)|2, Occasionally or a moderate amount of time (3-4 days)|3, All of the time (5-7 days)",,,,,,,,LV,,,,
+ces3,cesd10_survey,,radio,I felt depressed,"0, Rarely or none of the time (< 1 day)|1, Some or a little of the time (1-2 days)|2, Occasionally or a moderate amount of time (3-4 days)|3, All of the time (5-7 days)",,,,,,,,LV,,,,
+ces4,cesd10_survey,,radio,I felt that everything I did was an effort,"0, Rarely or none of the time (< 1 day)|1, Some or a little of the time (1-2 days)|2, Occasionally or a moderate amount of time (3-4 days)|3, All of the time (5-7 days)",,,,,,,,LV,,,,
+ces5,cesd10_survey,,radio,I felt hopeful about the future,"3, Rarely or none of the time (< 1 day)|2, Some or a little of the time (1-2 days)|1, Occasionally or a moderate amount of time (3-4 days)|0, All of the time (5-7 days)",,,,,,,,LV,,,,
+ces6,cesd10_survey,,radio,I felt fearful,"0, Rarely or none of the time (< 1 day)|1, Some or a little of the time (1-2 days)|2, Occasionally or a moderate amount of time (3-4 days)|3, All of the time (5-7 days)",,,,,,,,LV,,,,
+ces7,cesd10_survey,,radio,My sleep was restless,"0, Rarely or none of the time (< 1 day)|1, Some or a little of the time (1-2 days)|2, Occasionally or a moderate amount of time (3-4 days)|3, All of the time (5-7 days)",,,,,,,,LV,,,,
+ces8,cesd10_survey,,radio,I was happy,"3, Rarely or none of the time (< 1 day)|2, Some or a little of the time (1-2 days)|1, Occasionally or a moderate amount of time (3-4 days)|0, All of the time (5-7 days)",,,,,,,,LV,,,,
+ces9,cesd10_survey,,radio,I felt lonely,"0, Rarely or none of the time (< 1 day)|1, Some or a little of the time (1-2 days)|2, Occasionally or a moderate amount of time (3-4 days)|3, All of the time (5-7 days)",,,,,,,,LV,,,,
+ces10,cesd10_survey,,radio,"I could not ""get going""","0, Rarely or none of the time (< 1 day)|1, Some or a little of the time (1-2 days)|2, Occasionally or a moderate amount of time (3-4 days)|3, All of the time (5-7 days)",,,,,,,,LV,,,,
+cesstartts,cesd10_survey,,text,CES-D-10 Survey Started Timestamp (from REDCap),,,datetime_mdy,,,,,,,,,,
+cestl,cesd10_survey,,calc,CESD-10 Score,"if(sum(if([ces1] <> '', 1, 0), if([ces2] <> '', 1, 0), if([ces3] <> '', 1, 0), if([ces4] <> '', 1, 0), if([ces5] <> '', 1, 0), if([ces6] <> '', 1, 0), if([ces7] <> '', 1, 0), if([ces8] <> '', 1, 0), if([ces9] <> '', 1, 0), if([ces10] <> '', 1, 0)) >= 8, sum([ces1],[ces2],[ces3],[ces4],[ces5],[ces6],[ces7],[ces8],[ces9],[ces10]), '')",,,,,,,,LV,,,, @HIDDEN-SURVEY
+paid_nd,paid5_dm_survey,,checkbox,No participant response,"999, Recruitment survey not done",,,,,,[survey-time-completed:paid5_dm_survey] = '',,LV,,,, @HIDDEN-SURVEY
+paid_scrd,paid5_dm_survey,,radio,Feeling scared when you think about living with diabetes,"0, Not a problem|1, Minor problem|2, Moderate problem|3, Somewhat serious problem|4, Serious problem",,,,,,[paid_nd(999)] = '0',,LV,,,,
+paid_dpr,paid5_dm_survey,,radio,Feeling depressed when you think about living with diabetes,"0, Not a problem|1, Minor problem|2, Moderate problem|3, Somewhat serious problem|4, Serious problem",,,,,,[paid_nd(999)] = '0',,LV,,,,
+paid_wr,paid5_dm_survey,,radio,Worrying about the future and the possibility of serious complications,"0, Not a problem|1, Minor problem|2, Moderate problem|3, Somewhat serious problem|4, Serious problem",,,,,,[paid_nd(999)] = '0',,LV,,,,
+paid_eng,paid5_dm_survey,,radio,Feeling that diabetes is taking up too much of your mental and physical energy every day,"0, Not a problem|1, Minor problem|2, Moderate problem|3, Somewhat serious problem|4, Serious problem",,,,,,[paid_nd(999)] = '0',,LV,,,,
+paid_cml,paid5_dm_survey,,radio,Coping with complications of diabetes,"0, Not a problem|1, Minor problem|2, Moderate problem|3, Somewhat serious problem|4, Serious problem",,,,,,[paid_nd(999)] = '0',,LV,,,,
+paidstartts,paid5_dm_survey,,text,PAID-5 DM Survey Start Timestamp (from REDCap),,,datetime_mdy,,,,,,,,,,
+paidcmpts,paid5_dm_survey,,text,PAID-5 DM Survey Completed Timestamp (from REDCap),,,datetime_mdy,,,,,,,,,,
+paidscore,paid5_dm_survey,,calc,PAID score,"sum([paid_scrd],[paid_dpr],[paid_wr],[paid_eng],[paid_cml])",,,,,,,,LV,,,, @HIDDEN-SURVEY
+dmlcmpdat,diabetes_survey,,text,Diabetes survey date,,,date_mdy,,,,,,LV,,,, @HIDDEN-SURVEY @TODAY
+dml_nd,diabetes_survey,,checkbox,No participant response,"999, Recruitment survey not done",,,,,,[survey-time-completed:sdsca_dm_survey] = '',,LV,,,, @HIDDEN-SURVEY
+dmlvex,diabetes_survey,,radio,"In a typical week, how often do you engage in vigorous exercise? (Examples: hiking, jogging at 6 mph, shoveling, carrying heavy loads, bicycling fast (14-16 mph), playing basketball, playing soccer, playing tennis, or any activity during which you cannot say more than a few words without taking a breath)","10, At least 30 minutes daily 3 or more days a week|5, Less than 30 minutes daily less than 3 days a week|0, Rarely or none|777, Prefer not to say",,,,,,[dml_nd(999)] = '0',y,LV,,,,
+dmlact,diabetes_survey,,radio,What would you consider your typical activity level to be?,"10, Active (stairs, walks, housework)|5, Somewhat active|0, Not Active (TV, computer, phone, use lifts)|777, Prefer not to say",,,,,,[dml_nd(999)] = '0',y,LV,,,,
+dmlhex,diabetes_survey,,radio,"How often would you say that you engage in daily home exercise? (Examples: stretching, calisthenics, or yoga)","10, Doing daily or almost daily|5, Irregular; once or twice a week|0, Rarely or none|777, Prefer not to say",,,,,,[dml_nd(999)] = '0',y,LV,,,,
+dmlsugar,diabetes_survey,,radio,"When reflecting on your typical eating habits, which of the following options best describes how often you consume simple sugars?","10, Rarely eat sweets|5, Occasionally eat sweets|0, Frequently eat sweets|777, Prefer not to say",,,,,,[dml_nd(999)] = '0',y,LV,,,,
+dmlgrain,diabetes_survey,,radio,"In a typical day, how often do you consume whole grains? (Examples: include whole wheat, brown bread, or brown rice).","10, Usually eat whole grain|5, Rarely eat whole grain|0, Usually eat white bread or white rice|777, Prefer not to say",,,,,,[dml_nd(999)] = '0',y,LV,,,,
+dmlpor,diabetes_survey,,radio,"When reflecting on your typical eating habits, which of the following best describes your approach to portion control?","10, Eat small portions and avoid second servings|5, Occasionally limit portions|0, Rarely or none; eat at buffets and restaurants with large portions|777, Prefer not to say",,,,,,[dml_nd(999)] = '0',y,LV,,,,
+dmlfrveg,diabetes_survey,,radio,"In a typical day, how many servings of fruits and vegetables do you consume?","10, 4-5 servings or pieces of fruits and raw vegetables per day|5, 1-3 servings or pieces per day|0, Rarely or none|777, Prefer not to say",,,,,,[dml_nd(999)] = '0',y,LV,,,,
+dmledu,diabetes_survey,,radio,"How often would you say that you engage in diabetes health education? (Examples:  consulting with a dietician, attending support groups, reading books on diabetes, using diabetes-focused websites, watching TV shows on health, or using health-focused apps on your phone or tablet)","10, Regularly; at least monthly (dietician, support groups, books, websites, apps)|5, Occasionally; every 2-3 months|0, Rarely or none|777, Prefer not to say",,,,,,[dml_nd(999)] = '0',y,LV,,,,
+dmlfeet,diabetes_survey,,radio,How often do you inspect your feet?,"10, Daily or weekly|5, Monthly|0, Rarely or none|777, Prefer not to say",,,,,,[dml_nd(999)] = '0',y,LV,,,,
+dmlmd,diabetes_survey,,radio,Which of the following options best describes you with respect to physician care and medications?,"10, 3 or more visits a year to the same doctor. Regular with medicines.|5, 1-2 visits a year. Forgetting medicines frequently.|0, Rarely or none. Not taking 1 or more recommended medicines|777, Prefer not to say",,,,,,[dml_nd(999)] = '0',y,LV,,,,
+dmlstartts,diabetes_survey,,text,Diabetes Survey Started Timestamp (from REDCap),,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-started:diabetes_survey]<> '', [survey-time-started:diabetes_survey],''))"
+dmlcmpts,diabetes_survey,,text,Diabetes Survey Completed Timestamp (from REDCap),,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-completed:sdsca_dm_survey]<> '', [survey-time-completed:sdsca_dm_survey],''))"
+diet_nd,dietary_survey,,checkbox,No participant response,"999, Diet survey not done",,,,,,[survey-time-completed:dietary_survey] = '',,LV,,,, @HIDDEN-SURVEY
+diet1,dietary_survey,,radio,How many times a week did you eat fast food meals or snacks?,"0, Less than 1 time|1, 1 - 3 times|2, 4 or more times|777, Prefer not to say",,,,,,[diet_nd(999)] = '0',y,LV,,,,
+diet2,dietary_survey,,radio,How many servings of fruit did you eat each day?,"0, 5 or more|1, 3 - 4|2, 2 or less|777, Prefer not to say",,,,,,[diet_nd(999)] = '0',,LV,,,,
+diet3,dietary_survey,,radio,How many servings of vegetables did you eat each day?,"0, 5 or more|1, 3 - 4|2, 2 or less|777, Prefer not to say",,,,,,[diet_nd(999)] = '0',y,LV,,,,
+diet4,dietary_survey,,radio,How many regular sodas or glasses of sweet tea did you drink each day?,"0, Less than 1|1, 1 - 2|2, 3 or more|777, Prefer not to say",,,,,,[diet_nd(999)] = '0',y,LV,,,,
+diet5,dietary_survey,,radio,"How many times a week did you eat beans (like pinto or black beans), chicken, or fish?","0, 3 or more times|1, 1 - 2 times|2, Less than 1 time|777, Prefer not to say",,,,,,[diet_nd(999)] = '0',y,LV,,,,
+diet6,dietary_survey,,radio,How many times a week did you eat regular snack chips or crackers (not low-fat)?,"0, 1 time or less|1, 2 - 3 times|2, 4 or more times|777, Prefer not to say",,,,,,[diet_nd(999)] = '0',y,LV,,,,
+diet7,dietary_survey,,radio,How many times a week did you eat desserts and other sweets (not the low-fat kind)?,"0, 1 time or less|1, 2 - 3 times|2, 4 or more times|777, Prefer not to say",,,,,,[diet_nd(999)] = '0',y,LV,,,,
+diet8,dietary_survey,,radio,"How much margarine, butter, or meat fat do you use to season vegetables or put on potatoes, bread or corn?","0, Very little|1, Some|2, A lot|777, Prefer not to say",,,,,,[diet_nd(999)] = '0',y,LV,,,,
+diet9,dietary_survey,,radio,How many servings of fruit juice did you drink each day?,"0, Less than 1|1, 1 - 2|2, 3 or more|777, Prefer not to say",,,,,,[diet_nd(999)] = '0',y,LV,,,,
+dietstartts,dietary_survey,,text,Dietary Survey Start Timestamp (from REDCap),,,datetime_mdy,,,,,,,,,,
+dietscore,dietary_survey,,calc,Diet score,"if([diet1] <> '777' and [diet2] <> '777' and [diet3] <> '777' and [diet4] <> '777' and [diet5] <> '777' and [diet6] <> '777' and [diet7] <> '777' and [diet8] <> '777' and [diet9] <> '777', sum([diet1],[diet2],[diet3],[diet4],[diet5],[diet6],[diet7],[diet8],[diet9]) - (if([susmkcdur]='1' OR [subrkncf]='1' OR [suwnkncf]='1' OR [sulqkncf]='1' OR [suvpkncf1]='1', 20, 0)),'')",,,,,,,,LV,,,, @HIDDEN-SURVEY
+viacmpdat,ophthalmic_survey,,text,Ophthalmic survey date,,,date_mdy,,,,,,LV,,,, @TODAY @HIDDEN-SURVEY
+via_nd,ophthalmic_survey,,checkbox,No participant response,"999, Recruitment survey not done",,,,,,[survey-time-completed:ophthalmic_survey] = '',,LV,,,, @HIDDEN-SURVEY
+via1,ophthalmic_survey,,radio,"How much difficulty, if any, do you have in recognizing a friend across the street? Would you say:","1, No difficulty|2, A little difficulty|3, Moderate difficulty|4, Extreme difficulty|5, Unable to do because of eyesight|777, Prefer not to say",,,,,,[via_nd(999)] = '0',y,LV,,,,
+via2,ophthalmic_survey,,radio,"How much difficulty, if any, do you have reading print in newspapers, magazines, recipes, menus, or numbers on the telephone? Would you say:","1, No difficulty|2, A little difficulty|3, Moderate difficulty|4, Extreme difficulty|5, Unable to do because of eyesight|777, Prefer not to say",,,,,,[via_nd(999)] = '0',y,LV,,,,
+via3,ophthalmic_survey,,radio,"Because of your eyesight, how much difficulty do you have noticing objects off to the side while you are walking along? Would you say:","1, No difficulty|2, A little difficulty|3, Moderate difficulty|4, Extreme difficulty|5, Unable to do because of eyesight|777, Prefer not to say",,,,,,[via_nd(999)] = '0',y,LV,,,,
+via4,ophthalmic_survey,,radio,When was the last time you had your eyes examined by an eye care provider (ophthalmologist or optometrist)?ÿ,"1, Within the past month (anytime less than 1 month ago)|2, Within the past year (1 month but less than 12 months ago)|3, Within the past 2 years (1 year but less than 2 years ago)|4, 2 or more years ago|777, Prefer not to say",,,,,,[via_nd(999)] = '0',y,LV,,,,
+via5,ophthalmic_survey,,radio,You have indicated that you have not seen an eye care professional in the past 12 months. What is the main reason you have not visited an eye care professional in the past 12 months?,"1, Cost/Insurance|2, Do not have/know an eye doctor|3, Cannot get to the office/clinic (too far away, no transportation)|4, Could not get an appointment|5, No reason to go (no problem)|6, Have not thought of it|7, Other|777, Prefer not to say",,,,,,[via_nd(999)] = '0' and ([via4] = '3' or [via4] = '4'),y,LV,,,,
+via6,ophthalmic_survey,,radio,When was the last time you had an eye exam in which the pupils were dilated? (This would have made you temporarily sensitive to bright light),"1, Within the past month (anytime less than 1 month ago)|2, Within the past year (1 month but less than 12 months ago)|3, Within the past 2 years (1 year but less than 2 years ago)|4, 2 or more years ago|5, Never|777, Prefer not to say",,,,,,[via_nd(999)] = '0',y,LV,,,,
+viastartts,ophthalmic_survey,,text,Ophthalmic Survey Started Timestamp (from REDCap),,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-started:ophthalmic_survey]<> '', [survey-time-completed:ophthalmic_survey],''))"
+viacmpts,ophthalmic_survey,,text,Ophthalmic Survey Completed Timestamp (from REDCap),,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-completed:ophthalmic_survey]<> '', [survey-time-completed:ophthalmic_survey],''))"
+pxsdohstartts,px_sdoh_combined_survey,,text,PhenX SDOH Survey Started Timestamp (from REDCap),,,datetime_mdy,,,,,,,,,,
+pxsdohcmpdat,px_sdoh_combined_survey,,text,PhenX SDOH survey date,,,date_mdy,,,,,,LV,,,, @TODAY @HIDDEN-SURVEY
+pxsdoh_nd,px_sdoh_combined_survey,,checkbox,No participant response,"999, Recruitment survey not done",,,,,,[survey-time-completed:px_sdoh_combined_survey] = '',,LV,,,, @HIDDEN-SURVEY
+pxep1,px_sdoh_combined_survey,,radio,Is English your first language?,"1, Yes|0, No|777, Prefer not to say",,,,,,,y,LV,,,,PX270201
+pxep2,px_sdoh_combined_survey,,radio,Do you speak another language at home?,"1, Yes|0, No|777, Prefer not to say",,,,,,[pxep1] = '0',y,LV,,,,PX270201
+pxep3,px_sdoh_combined_survey,,radio,"Since you speak a language other than English at home, we are interested in your own opinion of how well you speak English. Would you say you speak English...?","1, Very well,|2, Well,|3, Not well|0, Not at all|777, Prefer not to say|555, Don't know",,,,,,[pxep2] = '1',y,LV,,,,PX270201
+pxed1,px_sdoh_combined_survey,,dropdown,What is the highest grade or level of school you have completed or the highest degree you have received? ,"0, NEVER ATTENDED/KINDERGARTEN ONLY|1, 1ST Grade|2, 2ND Grade|3, 3RD Grade|4, 4TH Grade|5, 5TH Grade|6, 6TH Grade|7, 7TH Grade|8, 8TH Grade|9, 9TH Grade|10, 10TH Grade|11, 11TH Grade|12, 12TH Grade, No diploma|13, High School Graduate|14, GED or Equivalent|15, Some College, No degree|16, Associate Degree: Occupational, Technical, or Vocational Program|17, Associate Degree: Academic Program|18, Bachelor's Degree (Example: BA, AB, BS, BBA)|19, Master's Degree (Example: MA, MS, MEng, MEd, MBA)|20, Professional School Degree (Example: MD, DDS, DVM, JD)|21, Doctoral Degree (Example: PhD, EdD)|777, Prefer not to say|555, Don't Know",,,,,,,y,LV,,,,PX011002
+pxji1,px_sdoh_combined_survey,,radio,"Thinking about the next 12 months, how likely do you think it is that you will lose your job or be laid off?","1, Very likely|2, Fairly likely|3, Not too likely|4, Not at all likely|5, Will be leaving labor force voluntarily|555, Don't know|777, Prefer not to say|0, Not applicable",,,,,,,y,LV,,,,PX280301
+pxji2,px_sdoh_combined_survey,,radio,"About how easy would it be for you to find a job with another employer with approximately the same income and fringe benefits you now have? Would you say very easy, somewhat easy, or not easy at all?","1, Very easy|2, Somewhat easy|3, Not easy at all|555, Don't know|777, Prefer not to say|0, Not applicable",,,,,,,y,LV,,,,PX280301
+pxhi1,px_sdoh_combined_survey,,radio,What is your living situation today?,"1, I have a steady place to live|2, I have a place to live today, but I am worried about losing it in the future|0, I do not have a steady place to live (I am temporarily staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)|777, Prefer not to say",,,,,,,y,LV,,,,PX281401
+pxhi2,px_sdoh_combined_survey,,checkbox,Think about the place you live. Do you have problems with any of the following? CHOOSE ALL THAT APPLY ,"1, Pests such as bugs, ants, or mice|2, Mold|3, Lead paint or pipes|4, Lack of heat|5, Oven or stove not working|6, Smoke detectors missing or not working|7, Water leaks|8, None of the above|777, Prefer not to say",,,,,,,y,LV,,,," @NONEOFTHEABOVE='8,777' PX281401"
+pxpa1,px_sdoh_combined_survey,,radio,"In the last 12 months, have you delayed getting prescription medicines because of worry about the cost?","1, Yes|0, No|777, Prefer not to say|555, Don't know",,,,,,,y,LV,,,,PX280801
+pxpa2,px_sdoh_combined_survey,,radio,Did any other person in your household delay getting prescription medicines because of worry about the cost? ,"1, Yes|0, No|777, Prefer not to say|555, Don't know",,,,,,,y,LV,,,,PX280801
+pxpa3,px_sdoh_combined_survey,,radio,"In the last 12 months, was there any time when you needed prescription medicines, but did not get them because you  couldn't afford it?","1, Yes|0, No|777, Prefer not to say|555, Don't know",,,,,,,y,LV,,,,PX280801
+pxpa4,px_sdoh_combined_survey,,radio,"In the last 12 months, was there any time when anyone else in your household needed prescription medicines, but did not get them because you/they couldn't afford it?","1, Yes|0, No|777, Prefer not to say|555, Don't know",,,,,,,y,LV,,,,PX280801
+pxhic1,px_sdoh_combined_survey,,radio,Insurance through a current or former employer or union (of yours or another family member's). This would include COBRA coverage.,"1, Covered|0, Not Covered|999, Not Sure|777, Prefer not to say",,,,,,,y,LV,,,,PX011502
+pxhic2,px_sdoh_combined_survey,,radio,"Insurance purchased directly from an insurance company (by you or another family member). This would include coverage purchased through an exchange or marketplace, such as HealthCare.gov","1, Covered|0, Not Covered|999, Not Sure|777, Prefer not to say",,,,,,,y,LV,,,,PX011502
+pxhic3,px_sdoh_combined_survey,,radio,"Medicare, for people 65 and older, or people with certain disabilities.","1, Covered|0, Not Covered|999, Not Sure|777, Prefer not to say",,,,,,,y,LV,,,,PX011502
+pxhic4,px_sdoh_combined_survey,,radio,"Medicaid, Medical Assistance (MA), the Children's Health Insurance Program (CHIP), or any kind of state or government-sponsored assistance. plan based on income or a disability.","1, Covered|0, Not Covered|999, Not Sure|777, Prefer not to say",,,,,,,y,LV,,,,PX011502
+pxhic5,px_sdoh_combined_survey,,radio,"TRICARE or other military health care, including VA health care.","1, Covered|0, Not Covered|999, Not Sure|777, Prefer not to say",,,,,,,y,LV,,,,PX011502
+pxhic7,px_sdoh_combined_survey,,radio,Any other type of health insurance coverage or health coverage plan,"1, Covered|0, Not Covered|999, Not Sure|777, Prefer not to say",,,,,,,y,LV,,,,PX011502
+pxhic8,px_sdoh_combined_survey,,radio,"Does this mean you currently have no health insurance or health coverage plan? In answering this question, please exclude plans that pay for only one type of service(such as, nursing home care, accidents, family planning, or dental care) and plans that only provide extra cash when hospitalized).","0, I do NOT have health insurance|1, I HAVE some kind of health insurance|777, Prefer not to say",,,,,,[pxhic1] = '0' and [pxhic2] = '0' and [pxhic3] = '0' and [pxhic4] = '0' and [pxhic5] = '0' and [pxhic6] = '0' and [pxhic7] = '0',y,LV,,,,PX011502
+pxahc1,px_sdoh_combined_survey,,radio,About how long has it been since you last saw a doctor or other health care professional about your health?,"0, Never|1, Within the past year (anytime less than 12 months ago)|2, Within the last 2 years (1 year but less than 2 years ago)|3, Within the last 3 years (2 years but less than 3 years ago)|4, Within the last 5 years (3 years but less than 5 years ago)|5, Within the last 10 years (5 years but less than 10 years ago)|6, 10 years ago or more|777, Prefer not to say|555, Don't know",,,,,,,y,LV,,,,PX270101
+pxahc2,px_sdoh_combined_survey,,radio,"Was this a wellness visit, physical, or general purpose check-up?","1, Yes|0, No|555, Don't know|777, Prefer not to say",,,,,,[pxahc1] <> '' and [pxahc1] <> '0' and [pxahc1] <> '777' and [pxahc1] <> '555',y,LV,,,,PX270101
+pxahc3,px_sdoh_combined_survey,,radio,"About how long has it been since you last saw a doctor or other health professional for a wellness visit, physical, or general purpose check-up?","0, Never|1, Within the past year (anytime less than 12 months ago)|2, Within the last 2 years (1 year but less than 2 years ago)|3, Within the last 3 years (2 years but less than 3 years ago)|4, Within the last 5 years (3 years but less than 5 years ago)|5, Within the last 10 years (5 years but less than 10 years ago)|6, 10 years ago or more|777, Prefer not to say|555, Don't know",,,,,,"[pxahc2] = '0' or 
+[pxahc2] = '555' or 
+[pxahc2] = '777'",y,LV,,,,PX270101
+pxahc4,px_sdoh_combined_survey,,radio,Is there a place that you USUALLY go to if you are sick and need health care?ÿ,"1, Yes|0, There is NO place|2, There is MORE THAN ONE place|777, Prefer not to say|555, Don't know",,,,,,[pxahc1] = '0' or [pxahc1] = '777' or [pxahc1] = '555' or [pxahc2] = '1',y,LV,,,,PX270101
+pxahc5,px_sdoh_combined_survey,,radio,"What kind of place is it/do you go to most often? A doctor's office or health center is a place where you see the same doctor or the same group of doctors every visit, where you usually need to make an appointment ahead of time, and where your medical records are on file.Urgent care centers and clinics in a drug store or grocery store are places where you do not need to make an appointment ahead of time, and do not usually see the same health care provider at each visit.","1, A doctor's office or health center|2, Walk-in clinic, urgent care center, or retail clinic in a pharmacy or grocery store|3, Emergency room|4, A VA Medical Center or VA outpatient clinic|5, Some other place|6, Does not go to one place most often|777, Prefer not to say|555, Don't know",,,,,,[pxahc4] <> '0',y,LV,,,,PX270101
+pxahc6,px_sdoh_combined_survey,,dropdown,"During the past 12 months, how many times have you gone to an urgent care center or a clinic in a drug store or grocery store about your health?Urgent care centers and clinics in drug stores or grocery stores are places where you do not need to make an appointment ahead of time, and do not usually see the same health care provider at each visit.This is different from a hospital emergency room.","0, None|1, 1 - 10 times|2, 11 - 19 times|3, 20 - 29 times|4, 30 - 39 times|5, 40 - 49 times|6, 50 or more times|777, Prefer not to say|555, Don't know",,,,,,[pxahc4] = '0',y,LV,,,,PX270101
+pxahc7,px_sdoh_combined_survey,,dropdown,"During the past 12 months, how many times have you gone to a hospital emergency room about your health?ÿ *This includes emergency room visits that resulted in a hospital admission.","0, None|1, 1 - 10 times|2, 11 - 19 times|3, 20 - 29 times|4, 30 - 39 times|5, 40 - 49 times|6, 50 or more times|777, Prefer not to say|555, Don't know",,,,,,[pxahc6] <> '5' and  [pxahc6] <> '6',y,LV,,,,PX270101
+pxahc8,px_sdoh_combined_survey,,radio,"During the past 12 months, have you been hospitalized overnight?(Do not include an overnight stay in the emergency room)","1, Yes|0, No|777, Prefer not to say|555, Don't know",,,,,,[pxahc7] <> '5' and  [pxahc7] <> '6',y,LV,,,,PX270101
+pxahc9,px_sdoh_combined_survey,,radio,"During the past 12 months, have you DELAYED getting medical care because of the cost?","1, Yes|0, No|777, Prefer not to say|555, Don't know",,,,,,,y,LV,,,,PX270101
+pxahc10,px_sdoh_combined_survey,,radio,"During the past 12 months, was there any time when you needed medical care, but DID NOT GET IT because of the cost?","1, Yes|0, No|777, Prefer not to say|555, Don't know",,,,,,,y,LV,,,,PX270101
+pxdhc1,px_sdoh_combined_survey,,radio,You are treated with less courtesy than other people.,"1, Never | 2, Rarely | 3, Sometimes | 4, Most of the time | 5, Always | 777, Prefer not to say",,,,,,,y,LV,,,,PX280901
+pxdhc2,px_sdoh_combined_survey,,radio,You are treated with less respect than other people.,"1, Never|2, Rarely|3, Sometimes|4, Most of the time|5, Always|777, Prefer not to say",,,,,,,y,LV,,,,PX280901
+pxdhc3,px_sdoh_combined_survey,,radio,You receive poorer service than others.,"1, Never|2, Rarely|3, Sometimes|4, Most of the time|5, Always|777, Prefer not to say",,,,,,,y,LV,,,,PX280901
+pxdhc4,px_sdoh_combined_survey,,radio,A doctor or nurse acts as if he or she thinks you are not smart.,"1, Never|2, Rarely|3, Sometimes|4, Most of the time|5, Always|777, Prefer not to say",,,,,,,y,LV,,,,PX280901
+pxdhc5,px_sdoh_combined_survey,,radio,A doctor or nurse acts as if he or she is afraid of you.,"1, Never|2, Rarely|3, Sometimes|4, Most of the time|5, Always|777, Prefer not to say",,,,,,,y,LV,,,,PX280901
+pxdhc6,px_sdoh_combined_survey,,radio,A doctor or nurse acts as if he or she is better than you.,"1, Never|2, Rarely|3, Sometimes|4, Most of the time|5, Always|777, Prefer not to say",,,,,,,y,LV,,,,PX280901
+pxdhc7,px_sdoh_combined_survey,,radio,You feel like a doctor or nurse is not listening to what you were saying,"1, Never|2, Rarely|3, Sometimes|4, Most of the time|5, Always|777, Prefer not to say",,,,,,,y,LV,,,,PX280901
+pxsficmpdat,px_food_insecurity_survey,,text,PhenX Food Insecurity survey date,,,date_mdy,,,,,,LV,,,, @TODAY @HIDDEN-SURVEY
+pxfi_nd,px_food_insecurity_survey,,checkbox,No participant response,"999, Recruitment survey not done",,,,,,[survey-time-completed:px_food_insecurity_survey] = '',,LV,,,, @HIDDEN-SURVEY
+pxfi1,px_food_insecurity_survey,,radio,"The first statement is, ""The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more."" Was that often, sometimes, or never true for (you/your household) in the last 12 months?","1, Often true|2, Sometimes true|0, Never true|555, Don't know|777, Prefer not to say",,,,,,,y,LV,,,,PX270301
+pxfi2,px_food_insecurity_survey,,radio,"""(I/we) couldn't afford to eat balanced meals."" Was that often, sometimes, or never true for (you/your household) in the last 12 months?","1, Often true|2, Sometimes true|0, Never true|555, Don't know|777, Prefer not to say",,,,,,,y,LV,,,,PX270301
+pxfi3,px_food_insecurity_survey,,radio,"In the last year, did you and/or other adults in your household ever cut the size of your meals or skip meals because there wasn't enough money for food?","1, Yes|0, No|555, Don't know|777, Prefer not to say",,,,,,,y,LV,,,,PX270301
+food_insecurity_change_diet_frequency,px_food_insecurity_survey,,radio,"How often did this happen - almost every month, some months but not every month, or in only 1 or 2 months?","1, Almost every month|2, Some months but not every month|3, Only 1 or 2 months|555, Don't know|777, Prefer not to say",,,,,,[pxfi3] = '1',y,LV,,,,PX270301
+pxfi4,px_food_insecurity_survey,,radio,"In the last 12 months, did you ever eat less than you felt you should because there wasn't enough money to buy food?","1, Yes|0, No|555, Don't know|777, Prefer not to say",,,,,,,y,LV,,,,PX270301
+pxfi5,px_food_insecurity_survey,,radio,"In the last 12 months, were you ever hungry but didn't eat because you couldn't afford enough food?","1, Yes|0, No|555, Don't know|777, Prefer not to say",,,,,,,y,LV,,,,PX270301
+pxfistartts,px_food_insecurity_survey,,text,PhenX Food Insecurity Survey Started Timestamp (from REDCap),,,datetime_mdy,,,,,,,,,,
+pxsficmpts,px_food_insecurity_survey,,text,PhenX Food Insecurity Survey Completed Timestamp (from REDCap),,,datetime_mdy,,,,,,,,,,
+px270301_metadata,px_food_insecurity_survey,,text,PhenX MetaData,,,,,,,,,,,,,
+pxne_nd,px_neighborhood_environment_survey,,checkbox,No participant response,"999, Recruitment survey not done",,,,,,[survey-time-completed:px_neighborhood_environment_survey] = '',,LV,,,, @HIDDEN-SURVEY
+pxne1,px_neighborhood_environment_survey,,radio,What is the main type of housing in your neighborhood?,"1, Detached single-family housing|2, Townhouses, row houses, apartments, or condos of 2-3 stories|3, Mix of single-family residences and townhouses, row houses, apartments or condos|4, Apartments or condos of 4-12 stories|5, Apartments or condos of more than 12 stories|555, Don't know/Not sure|777, Prefer not to say",,,,,,,y,LV,,,,PX291201
+pxne2,px_neighborhood_environment_survey,,radio,"Many shops, stores, markets or other places to buy things I need are within easy walking distance of my home. Would you say that you...","1, Strongly disagree|2, Somewhat disagree|3, Somewhat agree|4, Strongly agree|555, Don't know/Not sure|777, Prefer not to say",,,,,,,y,LV,,,,PX291201
+pxne3,px_neighborhood_environment_survey,,radio,"It is within a 10-15 minute walk to a transit stop (such as bus, train, trolley, or tram) from my home. Would you say that you...","1, Strongly disagree|2, Somewhat disagree|3, Somewhat agree|4, Strongly agree|555, Don't know/Not sure|777, Prefer not to say",,,,,,,y,LV,,,,PX291201
+pxne4,px_neighborhood_environment_survey,,radio,There are sidewalks on most of the streets in my neighborhood. Would you say that you...,"1, Strongly disagree|2, Somewhat disagree|3, Somewhat agree|4, Strongly agree|88, Does not apply to my neighborhood|555, Don't know/Not sure|777, Prefer not to say",,,,,,,y,LV,,,,PX291201
+pxne5,px_neighborhood_environment_survey,,radio,"There are facilities to bicycle in or near my neighborhood, such as special lanes, separate paths or trails, shared use paths for cycles and pedestrians. Would you say that you...","1, Strongly disagree|2, Somewhat disagree|3, Somewhat agree|4, Strongly agree|88, Does not apply to my neighborhood|555, Don't know/Not sure|777, Prefer not to say",,,,,,,y,LV,,,,PX291201
+pxne6,px_neighborhood_environment_survey,,radio,"My neighborhood has several free or low cost recreation facilities, such as parks, walking trails, bike paths, recreation centers, playgrounds, public swimming pools, etc. Would you say that you...","1, Strongly disagree|2, Somewhat disagree|3, Somewhat agree|4, Strongly agree|555, Don't know/Not sure|777, Prefer not to say",,,,,,,y,LV,,,,PX291201
+pxne7,px_neighborhood_environment_survey,,radio,The crime rate in my neighborhood makes it unsafe to go on walks at night. Would you say that you...,"1, Strongly disagree|2, Somewhat disagree|3, Somewhat agree|4, Strongly agree|555, Don't know/Not sure|777, Prefer not to say",,,,,,,y,LV,,,,PX291201
+pxne8,px_neighborhood_environment_survey,,radio,There is so much traffic on the streets that it makes it difficult or unpleasant to walk in my neighborhood. Would you say that you...,"1, Strongly disagree|2, Somewhat disagree|3, Somewhat agree|4, Strongly agree|88, There are no streets or roads in my neighborhood|555, Don't know/Not sure|777, Prefer not to say",,,,,,,y,LV,,,,PX291201
+pxne9,px_neighborhood_environment_survey,,radio,"I see many people being physically active in my neighborhood doing things like walking, jogging, cycling, or playing sports and active games. Would you say that you...","1, Strongly disagree|2, Somewhat disagree|3, Somewhat agree|4, Strongly agree|555, Don't know/Not sure|777, Prefer not to say",,,,,,,y,LV,,,,PX291201
+pxne10,px_neighborhood_environment_survey,,radio,There are many interesting things to look at while walking in my neighborhood. Would you say you...,"1, Strongly disagree|2, Somewhat disagree|3, Somewhat agree|4, Strongly agree|555, Don't know/Not sure|777, Prefer not to say",,,,,,,y,LV,,,,PX291201
+pxne11,px_neighborhood_environment_survey,,dropdown,"How many motor vehicles in working order(e.g., cars, trucks, motorcycles) are there at your household?","0, None|1, 1|2, 2|3, 3|4, 4|5, 5|6, 6 or more|555, Don't know / unsure|777, Prefer not to say",,,,,,,y,LV,,,,PX291201
+pxne12,px_neighborhood_environment_survey,,radio,There are many four-way intersections in my neighborhood. Would you say that you...,"1, Strongly disagree|2, Somewhat disagree|3, Somewhat agree|4, Strongly agree|88, There are no streets or roads in my neighborhood|555, Don't know/Not sure|777, Prefer not to say",,,,,,,y,LV,,,,PX291201
+pxne13,px_neighborhood_environment_survey,,radio,"The sidewalks in my neighborhood are well maintained (paved, with few cracks) and not obstructed. Would you say that you...","1, Strongly disagree|2, Somewhat disagree|3, Somewhat agree|4, Strongly agree|555, Don't know/Not sure|777, Prefer not to say",,,,,,,y,LV,,,,PX291201
+pxne14,px_neighborhood_environment_survey,,radio,Places for bicycling (such as bike paths) in and around my neighborhood are well maintained and not obstructed. Would you say that you...,"1, Strongly disagree|2, Somewhat disagree|3, Somewhat agree|4, Strongly agree|555, Don't know/Not sure|777, Prefer not to say",,,,,,,y,LV,,,,PX291201
+pxne15,px_neighborhood_environment_survey,,radio,There is so much traffic on the streets that it makes it difficult or unpleasant to ride a bicycle in my neighborhood. Would you say that you...,"1, Strongly disagree|2, Somewhat disagree|3, Somewhat agree|4, Strongly agree|555, Don't know/Not sure|777, Prefer not to say",,,,,,,y,LV,,,,PX291201
+pxne16,px_neighborhood_environment_survey,,radio,The crime rate in my neighborhood makes it unsafe to go on walks during the day. Would you say that you...,"1, Strongly disagree|2, Somewhat disagree|3, Somewhat agree|4, Strongly agree|555, Don't know/Not sure|777, Prefer not to say",,,,,,,y,LV,,,,PX291201
+pxne17,px_neighborhood_environment_survey,,radio,There are many places to go within easy walking distance of my home. Would you say that you...,"1, Strongly disagree|2, Somewhat disagree|3, Somewhat agree|4, Strongly agree|555, Don't know/Not sure|777, Prefer not to say",,,,,,,y,LV,,,,PX291201
+pxnestartts,px_neighborhood_environment_survey,,text,PhenX Neighborhood Enviroment Survey Started Timestamp (from REDCap),,,datetime_mdy,,,,,,,,,,
+pxnecmpts,px_neighborhood_environment_survey,,text,PhenX Neighborhood Environment Survey Completed Timestamp (from REDCap,,,datetime_mdy,,,,,,,,,,
+pxrdcmpdat,px_racial_ethnic_discrimination_survey,,text,PhenX Racial/Ethnic Discrimination survey date,,,date_mdy,,,,,,LV,,,, @TODAY @HIDDEN-SURVEY
+pxrd_nd,px_racial_ethnic_discrimination_survey,,checkbox,No participant response,"999, Recruitment survey not done",,,,,,[survey-time-completed:px_racial_ethnic_discrimination_survey] = '',,LV,,,, @HIDDEN-SURVEY
+pxrd1,px_racial_ethnic_discrimination_survey,,radio,How often in the past year?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd2,px_racial_ethnic_discrimination_survey,,radio,How often in your entire life?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd3,px_racial_ethnic_discrimination_survey,,radio,"On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful","1, 1 - Not at all stressful|2, 2|3, 3|4, 4|5, 5|6, 6 - Extremely stressful|777, Prefer not to say",,,,,,[pxrd1] = '2' or [pxrd1] = '3' or [pxrd1] = '4' or [pxrd1] = '5' or [pxrd1] = '6' or [pxrd2] = '2' or [pxrd2] = '3' or [pxrd2] = '4' or [pxrd2] = '5' or [pxrd2] = '6',y,LV,,,,PX281501
+pxrd4,px_racial_ethnic_discrimination_survey,,radio,How often in the past year?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd5,px_racial_ethnic_discrimination_survey,,radio,How often in your entire life?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd6,px_racial_ethnic_discrimination_survey,,radio,"On a scale of 1-6, how stressful was this for you?ÿ1= Not at all stressful; 6 = Extremely stressful","1, 1 - Not at all stressful|2, 2|3, 3|4, 4|5, 5|6, 6 - Extremely stressful|777, Prefer not to say",,,,,,[pxrd4] = '2' or [pxrd4] = '3' or [pxrd4] = '4' or [pxrd4] = '5' or [pxrd4] = '6' or [pxrd5] = '2' or [pxrd5] = '3' or [pxrd5] = '4' or [pxrd5] = '5' or [pxrd5] = '6',y,LV,,,,PX281501
+pxrd7,px_racial_ethnic_discrimination_survey,,radio,How often in the past year?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd8,px_racial_ethnic_discrimination_survey,,radio,How often in your entire life?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pdrx9,px_racial_ethnic_discrimination_survey,,radio,"On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful","1, 1 - Not at all stressful|2, 2|3, 3|4, 4|5, 5|6, 6 - Extremely stressful|777, Prefer not to say",,,,,,[pxrd7] = '2' or [pxrd7] = '3' or [pxrd7] = '4' or [pxrd7] = '5' or [pxrd7] = '6' or [pxrd8] = '2' or [pxrd8] = '3' or [pxrd8] = '4' or [pxrd8] = '5' or [pxrd8] = '6',y,LV,,,,PX281501
+pxrd10,px_racial_ethnic_discrimination_survey,,radio,How often in the past year?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd11,px_racial_ethnic_discrimination_survey,,radio,How often in your entire life?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd12,px_racial_ethnic_discrimination_survey,,radio,"On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful","1, 1 - Not at all stressful|2, 2|3, 3|4, 4|5, 5|6, 6 - Extremely stressful|777, Prefer not to say",,,,,,[pxrd10] = '2' or [pxrd10] = '3' or [pxrd10] = '4' or [pxrd10] = '5' or [pxrd10] = '6' or [pxrd11] = '2' or [pxrd11] = '3' or [pxrd11] = '4' or [pxrd11] = '5' or [pxrd11] = '6',y,LV,,,,PX281501
+pxrd13,px_racial_ethnic_discrimination_survey,,radio,How often in the past year?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd14,px_racial_ethnic_discrimination_survey,,radio,How often in your entire life?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd15,px_racial_ethnic_discrimination_survey,,radio,"On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful","1, 1 - Not at all stressful|2, 2|3, 3|4, 4|5, 5|6, 6 - Extremely stressful|777, Prefer not to say",,,,,,[pxrd13] = '2' or [pxrd13] = '3' or [pxrd13] = '4' or [pxrd13] = '5' or [pxrd13] = '6' or [pxrd14] = '2' or [pxrd14] = '3' or [pxrd14] = '4' or [pxrd14] = '5' or [pxrd14] = '6',y,LV,,,,PX281501
+pxrd16,px_racial_ethnic_discrimination_survey,,radio,How often in the past year?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd17,px_racial_ethnic_discrimination_survey,,radio,How often in your entire life?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd18,px_racial_ethnic_discrimination_survey,,radio,"On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful","1, 1 - Not at all stressful|2, 2|3, 3|4, 4|5, 5|6, 6 - Extremely stressful|777, Prefer not to say",,,,,,[pxrd16] = '2' or [pxrd16] = '3' or [pxrd16] = '4' or [pxrd16] = '5' or [pxrd16] = '6' or [pxrd17] = '2' or [pxrd17] = '3' or [pxrd17] = '4' or [pxrd17] = '5' or [pxrd17] = '6',y,LV,,,,PX281501
+pxrd19,px_racial_ethnic_discrimination_survey,,radio,How often in the past year?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd20,px_racial_ethnic_discrimination_survey,,radio,How often in your entire life?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd21,px_racial_ethnic_discrimination_survey,,radio,"On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful","1, 1 - Not at all stressful|2, 2|3, 3|4, 4|5, 5|6, 6 - Extremely stressful|777, Prefer not to say",,,,,,[pxrd19] = '2' or [pxrd19] = '3' or [pxrd19] = '4' or [pxrd19] = '5' or [pxrd19] = '6' or [pxrd20] = '2' or [pxrd20] = '3' or [pxrd20] = '4' or [pxrd20] = '5' or [pxrd20] = '6',y,LV,,,,PX281501
+pxrd22,px_racial_ethnic_discrimination_survey,,radio,How often in the past year?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd23,px_racial_ethnic_discrimination_survey,,radio,How often in your entire life?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd24,px_racial_ethnic_discrimination_survey,,radio,"On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful","1, 1 - Not at all stressful|2, 2|3, 3|4, 4|5, 5|6, 6 - Extremely stressful|777, Prefer not to say",,,,,,[pxrd22] = '2' or [pxrd22] = '3' or [pxrd22] = '4' or [pxrd22] = '5' or [pxrd22] = '6' or [pxrd23] = '2' or [pxrd23] = '3' or [pxrd23] = '4' or [pxrd23] = '5' or [pxrd23] = '6',y,LV,,,,PX281501
+pxrd25,px_racial_ethnic_discrimination_survey,,radio,How often in the past year?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd26,px_racial_ethnic_discrimination_survey,,radio,How often in your entire life?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd27,px_racial_ethnic_discrimination_survey,,radio,"On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful","1, 1 - Not at all stressful|2, 2|3, 3|4, 4|5, 5|6, 6 - Extremely stressful|777, Prefer not to say",,,,,,[pxrd25] = '2' or [pxrd25] = '3' or [pxrd25] = '4' or [pxrd25] = '5' or [pxrd25] = '6' or [pxrd26] = '2' or [pxrd26] = '3' or [pxrd26] = '4' or [pxrd26] = '5' or [pxrd26] = '6',y,LV,,,,PX281501
+pxrd28,px_racial_ethnic_discrimination_survey,,radio,How often in the past year?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd29,px_racial_ethnic_discrimination_survey,,radio,How often in your entire life?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd30,px_racial_ethnic_discrimination_survey,,radio,"On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful","1, 1 - Not at all stressful|2, 2|3, 3|4, 4|5, 5|6, 6 - Extremely stressful|777, Prefer not to say",,,,,,[pxrd28] = '2' or [pxrd28] = '3' or [pxrd28] = '4' or [pxrd28] = '5' or [pxrd28] = '6' or [pxrd29] = '2' or [pxrd29] = '3' or [pxrd29] = '4' or [pxrd29] = '5' or [pxrd29] = '6',y,LV,,,,PX281501
+pxrd31,px_racial_ethnic_discrimination_survey,,radio,How often in the past year?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd32,px_racial_ethnic_discrimination_survey,,radio,How often in your entire life?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd33,px_racial_ethnic_discrimination_survey,,radio,"On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful","1, 1 - Not at all stressful|2, 2|3, 3|4, 4|5, 5|6, 6 - Extremely stressful|777, Prefer not to say",,,,,,[pxrd31] = '2' or [pxrd31] = '3' or [pxrd31] = '4' or [pxrd31] = '5' or [pxrd31] = '6' or [pxrd32] = '2' or [pxrd32] = '3' or [pxrd32] = '4' or [pxrd32] = '5' or [pxrd32] = '6',y,LV,,,,PX281501
+pxrd34,px_racial_ethnic_discrimination_survey,,radio,How often in the past year?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd35,px_racial_ethnic_discrimination_survey,,radio,How often in your entire life?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd36,px_racial_ethnic_discrimination_survey,,radio,"On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful","1, 1 - Not at all stressful|2, 2|3, 3|4, 4|5, 5|6, 6 - Extremely stressful|777, Prefer not to say",,,,,,[pxrd34] = '2' or [pxrd34] = '3' or [pxrd34] = '4' or [pxrd34] = '5' or [pxrd34] = '6' or [pxrd35] = '2' or [pxrd35] = '3' or [pxrd35] = '4' or [pxrd35] = '5' or [pxrd35] = '6',y,LV,,,,PX281501
+pxrd37,px_racial_ethnic_discrimination_survey,,radio,How often in the past year?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd38,px_racial_ethnic_discrimination_survey,,radio,How often in your entire life?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd39,px_racial_ethnic_discrimination_survey,,radio,"On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful","1, 1 - Not at all stressful|2, 2|3, 3|4, 4|5, 5|6, 6 - Extremely stressful|777, Prefer not to say",,,,,,[pxrd37] = '2' or [pxrd37] = '3' or [pxrd37] = '4' or [pxrd37] = '5' or [pxrd37] = '6' or [pxrd38] = '2' or [pxrd38] = '3' or [pxrd38] = '4' or [pxrd38] = '5' or [pxrd38] = '6',y,LV,,,,PX281501
+pxrd40,px_racial_ethnic_discrimination_survey,,radio,How often in the past year?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd41,px_racial_ethnic_discrimination_survey,,radio,How often in your entire life?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd42,px_racial_ethnic_discrimination_survey,,radio,"On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful","1, 1 - Not at all stressful|2, 2|3, 3|4, 4|5, 5|6, 6 - Extremely stressful|777, Prefer not to say",,,,,,[pxrd40] = '2' or [pxrd40] = '3' or [pxrd40] = '4' or [pxrd40] = '5' or [pxrd40] = '6' or [pxrd41] = '2' or [pxrd41] = '3' or [pxrd41] = '4' or [pxrd41] = '5' or [pxrd41] = '6',y,LV,,,,PX281501
+pxrd43,px_racial_ethnic_discrimination_survey,,radio,How often in the past year?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd44,px_racial_ethnic_discrimination_survey,,radio,How often in your entire life?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd45,px_racial_ethnic_discrimination_survey,,radio,"On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful","1, 1 - Not at all stressful|2, 2|3, 3|4, 4|5, 5|6, 6 - Extremely stressful|777, Prefer not to say",,,,,,[pxrd43] = '2' or [pxrd43] = '3' or [pxrd43] = '4' or [pxrd43] = '5' or [pxrd43] = '6' or [pxrd44] = '2' or [pxrd44] = '3' or [pxrd44] = '4' or [pxrd44] = '5' or [pxrd44] = '6',y,LV,,,,PX281501
+pxrd46,px_racial_ethnic_discrimination_survey,,radio,How often in the past year?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd47,px_racial_ethnic_discrimination_survey,,radio,How often in your entire life?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd48,px_racial_ethnic_discrimination_survey,,radio,"On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful","1, 1 - Not at all stressful|2, 2|3, 3|4, 4|5, 5|6, 6 - Extremely stressful|777, Prefer not to say",,,,,,[pxrd46] = '2' or [pxrd46] = '3' or [pxrd46] = '4' or [pxrd46] = '5' or [pxrd46] = '6' or [pxrd47] = '2' or [pxrd47] = '3' or [pxrd47] = '4' or [pxrd47] = '5' or [pxrd47] = '6',y,LV,,,,PX281501
+pxrd49,px_racial_ethnic_discrimination_survey,,radio,How often in the past year?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd50,px_racial_ethnic_discrimination_survey,,radio,How often in your entire life?,"1, Never|2, Once in a while|3, Sometimes|4, A lot|5, Most of the time|6, Almost all the time|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd51,px_racial_ethnic_discrimination_survey,,radio,"On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful","1, 1 - Not at all stressful|2, 2|3, 3|4, 4|5, 5|6, 6 - Extremely stressful|777, Prefer not to say",,,,,,[pxrd49] = '2' or [pxrd49] = '3' or [pxrd49] = '4' or [pxrd49] = '5' or [pxrd49] = '6' or [pxrd50] = '2' or [pxrd50] = '3' or [pxrd50] = '4' or [pxrd50] = '5' or [pxrd50] = '6',y,LV,,,,PX281501
+pxrd52,px_racial_ethnic_discrimination_survey,,radio,In the Past Year?,"1, The Same as it is now|2, A little different|3, Different in a few ways|4, Different in a lot of ways|5, Different in most ways|6, Totally different|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd53,px_racial_ethnic_discrimination_survey,,radio,In your entire life?,"1, The Same as it is now|2, A little different|3, Different in a few ways|4, Different in a lot of ways|5, Different in most ways|6, Totally different|777, Prefer not to say",,,,,,,y,LV,,,,PX281501
+pxrd54,px_racial_ethnic_discrimination_survey,,radio,"On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful","1, 1 - Not at all stressful|2, 2|3, 3|4, 4|5, 5|6, 6 - Extremely stressful|777, Prefer not to say",,,,,,[pxrd52] = '2' or [pxrd52] = '3' or [pxrd52] = '4' or [pxrd52] = '5' or [pxrd52] = '6' or [pxrd53] = '2' or [pxrd53] = '3' or [pxrd53] = '4' or [pxrd53] = '5' or [pxrd53] = '6',y,LV,,,,PX281501
+pxrdcmpts,px_racial_ethnic_discrimination_survey,,text,PhenX Racial/Ethnic Discrimination Survey Completed Timestamp (from REDCap),,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-completed:px_racial_ethnic_discrimination_survey]<> '', [survey-time-completed:px_racial_ethnic_discrimination_survey],''))"
+pxrdstartts,px_racial_ethnic_discrimination_survey,,text,PhenX Racial/Ethnic Discrimination Survey Started Timestamp (from REDCap),,,datetime_mdy,,,,,,LV,,,," @HIDDEN-SURVEY @CALCTEXT(if([survey-time-started:px_racial_ethnic_discrimination_survey]<> '', [survey-time-completed:px_racial_ethnic_discrimination_survey],''))"
+px281501_metadata,px_racial_ethnic_discrimination_survey,,text,PhenX Racial/Ethnic MetaData,,,,,,,,,LV,,,, @HIDDEN @SETVALUE='self-administered questionnaire'
+px270201_metadata,px_sdoh_combined_survey,,text,PhenX English Proficiency MetaData,,,,,,,,,,,,,
+px011002_metadata,px_sdoh_combined_survey,,text,PhenX Education Attainment MetaData,,,,,,,,,,,,,
+px280301_metadata,px_sdoh_combined_survey,,text,PhenX Job Security MetaData,,,,,,,,,,,,,
+px281401_metadata,px_sdoh_combined_survey,,text,PhenX Housing Insecurity MetaData,,,,,,,,,,,,,
+px280801_metadata,px_sdoh_combined_survey,,text,PhenX Prescriptions Affordability MetaData ,,,,,,,,,,,,,
+px11502_metadata,px_sdoh_combined_survey,,text,PhenX Health Insurance MetaData,,,,,,,,,,,,,
+px270101_metadata,px_sdoh_combined_survey,,text,PhenX Health Care Access MetaData,,,,,,,,,,,,,
+px280901_metadata,px_sdoh_combined_survey,,text,PhenX Healthcare Discrimination MetaData,,,,,,,,,,,,,
+visdat,study_enrollment,,text,Planned date & time of in-person visit,,,datetime_mdy,,,,,,LV,,,, @HIDEBUTTON
+dricmpdat,driving_record,,text,Date driving record assessment conducted,,,date_mdy,,,,[dricmpyn(999)] = '0',,LV,,,,
+dricmpyn,driving_record,,checkbox,,"999, Driving assessment NOT done",,,,,,[dricmpdat]  = '',,LV,,,,
+dri1,driving_record,,text,"In an average week, how many days per week do you normally drive? (number of days)",,,integer,0,7,,[dricmpyn(999)] = '0',,LV,,,,
+dri2,driving_record,,radio,About how many miles did you personally drive during the past 12 months in all motorized vehicles?,"1, 5000 miles or less|2, 5001 to 10,000 miles|3, 10,001 to 15.000 miles|4, 15,001 to 20,000 miles|5, More than 20,000 miles|99, Don't know",,,,,,[dricmpyn(999)] = '0',,LV,,,,
+dvamwyn,device_distribution,"<div class=""rich-text-field-label""><div class=""rich-text-field-label""> <div class=""alert alert-warning mb-0"" style=""padding-top: 0 !important; padding-bottom: 0 !important;"" role=""alert""> <h6 class=""mt-2""><strong>Physical Activity Monitor</strong></h6> </div> </div></div>",yesno,Was the activity monitor/watch sent home with the participant?,,,,,,,,y,LV,,,,
+dvamwinstr,device_distribution,,yesno,Did you provide printed instructions to the participant for this device?,,,,,,,[dvamwyn] = '1',y,LV,,,,
+dvamwstdat,device_distribution,,text,Date device given to participant,,,date_mdy,,,,[dvamwyn] = '1',,LV,,,,
+dvcgmyn,device_distribution,"<div class=""rich-text-field-label""><div class=""rich-text-field-label""> <div class=""alert alert-warning mb-0"" style=""padding-top: 0 !important; padding-bottom: 0 !important;"" role=""alert""> <h6 class=""mt-2""><strong>Continuous Glucose Monitor - Dexcom G6</strong></h6> </div> </div></div>",yesno,Was the sensor inserted?,,,,,,,,y,LV,,,,
+dvcgmendat,device_distribution,,text,Date device received back from participant (Dexcom G6 transmitter ),,,date_mdy,,,,,,,,,,
+dvcgminstr,device_distribution,,yesno,Did you provide printed instructions to the participant for this device?,,,,,,,[dvcgmyn] = '1',y,LV,,,,
+dvcgmvrfy,device_distribution,,yesno,Did you verify that the Dexcom sensor was initialized and recording?,,,,,,,[dvcgmyn] = '1',,LV,,,,
+dvenvyn,device_distribution,,yesno,Was the environmental sensor sent home with the participant?,,,,,,,,y,LV,,,,
+dvenvinstr,device_distribution,,yesno,Did you provide printed instructions to the participant for this device?,,,,,,,[dvenvyn] = '1',y,LV,,,,
+dvenvstdat,device_distribution,,text,Date device given to participant,,,date_mdy,,,,[dvenvyn] = '1',,LV,,,,
+dvenvcrcid,device_distribution,,radio,Environmental Sensor,"1, Demonstration of use performed|2, Demonstration of use NOT performed",,,,,,[dvenvyn] = '1',,LV,,,,
+dvrtmthd,device_distribution,,radio,Planned method of device return,"1, Direct to clinic|2, Ship",,,,,,[dvamwyn] = '1' or [dvcgmyn] = '1' or [dvenvyn] = '1',,LV,,,,
+dvrtnyn,device_distribution,,yesno,Was the participant given return instructions sheet and shipping box?,,,,,,,[dvrtmthd] = '2',,LV,,,,
+cmcmpdat,meds_assessment,,text,Date medications assessment conducted,,,date_mdy,,,,[cmcmpyn(999)] = '0',,LV,,,,
+cmcmpyn,meds_assessment,,checkbox,,"999, Medications assessment not done",,,,,,[cmcmpdat] = '',,LV,,,,
+cmyn,meds_assessment,,yesno,"Are you currently taking any medications, including prescription, over-the-counter, and supplements?",,,,,,,[cmcmpyn(999)] = '0',y,LV,,,,
+cm_asp,meds_assessment,,radio,Have you taken aspirin in the past 2 weeks?,"0, No|1, Every day|2, A few days (<1 day/week)|3, Some days (1-2 days/week)|4, Most days (3-4 days/week)|99, Don't know/not sure|777, Decline to answer",,,,,,[cmyn]='1',,LV,,,,
+cm_act,meds_assessment,,radio,"Have you taken acetaminophen medicines, such as Tylenol, in the past 2 weeks?","0, No|1, Every day|2, A few days (<1 day/week)|3, Some days (1-2 days/week)|4, Most days (3-4 days/week)|99, Don't know/not sure|777, Decline to answer",,,,,,[cmyn]='1',,LV,,,,
+cm_ibp,meds_assessment,,radio,Have you taken ibuprofen or ibuprofen-containing medicines such as Advil or Motrin in the past 2 weeks?,"0, No|1, Every day|2, A few days (<1 day/week)|3, Some days (1-2 days/week)|4, Most days (3-4 days/week)|99, Don't know/not sure|777, Decline to answer",,,,,,[cmyn]='1',,LV,,,,
+cm_ant,meds_assessment,,radio,"Have you taken antihistamines, such as cold pills or allergy pills, in the past 2 weeks?","0, No|1, Every day|2, A few days (<1 day/week)|3, Some days (1-2 days/week)|4, Most days (3-4 days/week)|99, Don't know/not sure|777, Decline to answer",,,,,,[cmyn]='1',,LV,,,,
+cm_dcg,meds_assessment,,radio,"Have you taken decongestants, such as cold pills or allergy pills, in the past 2 weeks?","0, No|1, Every day|2, A few days (<1 day/week)|3, Some days (1-2 days/week)|4, Most days (3-4 days/week)|99, Don't know/not sure|777, Decline to answer",,,,,,[cmyn]='1',,LV,,,,
+cm_slp,meds_assessment,,radio,Have you taken sleeping pills in the past 2 weeks?,"0, No|1, Every day|2, A few days (<1 day/week)|3, Some days (1-2 days/week)|4, Most days (3-4 days/week)|99, Don't know/not sure|777, Decline to answer",,,,,,[cmyn]='1',,LV,,,,
+cmotyn,meds_assessment,,radio,"Are there any other medications that you are currently taking that are not included here? This includes prescription or over-the-counter medications, vitamins and herbal supplements.","1, Yes|0, No",,,,,,[cmyn]='1',,LV,,,,
+pacmpdat,physical_assessment,,text,Date Assessment Preformed,,,date_mdy,,,,,,LV,,,,
+pacmpyn,physical_assessment,,checkbox,,"999, Physical assessment was not done",,,,,,,,LV,,,,
+paate,physical_assessment,,text,How many hours since you last ate? (number of hours),,,integer,0,96,,[pacmpyn(999)] = '0',,LV,,,,
+height_vsorres,physical_assessment,,text,Height (cm),,,number,80,200,,[pacmpyn(999)] = '0',,LV,,,,
+weight_vsorres,physical_assessment,,text,Weight (kilograms),,,number,35,165,,[pacmpyn(999)] = '0',,LV,,,,
+bmi_vsorres,physical_assessment,,calc,BMI,"if([pacmpyn(999)] = '0', ([weight_vsorres]*10000/([height_vsorres]*[height_vsorres])), '')",,,,,,[pacmpyn(999)] = '0',,LV,,,,
+waist_vsorres,physical_assessment,,text,Waist Circumference (cm),,,number,40,170,,[pacmpyn(999)] = '0',,LV,,,,
+hip_vsorres,physical_assessment,,text,Hip Circumference (cm),,,number,70,210,,[pacmpyn(999)] = '0',,LV,,,,
+whr_vsorres,physical_assessment,,calc,Waist to Hip Ratio (WHR),"if([pacmpyn(999)] = '0', [waist_vsorres]/[hip_vsorres], '')",,,,,,[pacmpyn(999)] = '0',,LV,,,,
+bp1_sysbp_vsorres,physical_assessment,,text,Systolic (mmHg),,,integer,80,180,,[pacmpyn(999)] = '0',,LV,,,,
+bp1_diabp_vsorres,physical_assessment,,text,Diastolic (mmHg),,,integer,60,120,,[pacmpyn(999)] = '0',,LV,,,,
+pulse_vsorres,physical_assessment,,text,Heart Rate (bpm),,,integer,50,140,,[pacmpyn(999)] = '0',,LV,,,,
+bp2_sysbp_vsorres,physical_assessment,,text,Systolic (mmHg),,,integer,80,180,,[pacmpyn(999)] = '0',,LV,,,,
+bp2_diabp_vsorres,physical_assessment,,text,Diastolic (mmHg),,,integer,60,120,,[pacmpyn(999)] = '0',,LV,,,,
+pulse_vsorres_2,physical_assessment,,text,Heart Rate (bpm),,,integer,50,140,,[pacmpyn(999)] = '0',,LV,,,,
+viaocmpdat,bcva,,text,Date BCVA performed,,,datetime,,,,,,LV,,,,
+viaocmpyn,bcva,,checkbox,,"999, BCVA was not done",,,,,,[viaocmpdat] = '',,LV,,,,
+viaomthd,bcva,,radio,Method used to complete form,"1, EVA|2, ETDRS",,,,,,[viaocmpyn(999)] = '0',,LV,,,,
+viaodsph,bcva,,text,OD - Autorefractor - Sphere,,,number,,,,[viaocmpyn(999)] = '0',,LV,,,,
+viaodcyl,bcva,,text,OD - Autorefractor - Cylinder,,,number,,,,[viaocmpyn(999)] = '0',,LV,,,,
+viaodaxi,bcva,,text,OD - Autorefractor - Axis,,,number,,,,[viaocmpyn(999)] = '0',,LV,,,,
+viaossph,bcva,,text,OS - Autorefractor - Sphere,,,number,,,,[viaocmpyn(999)] = '0',,LV,,,,
+viaoscyl,bcva,,text,OS - Autorefractor - Cylinder,,,number,,,,[viaocmpyn(999)] = '0',,LV,,,,
+viaosaxi,bcva,,text,OS - Autorefractor - Axis,,,number,,,,[viaocmpyn(999)] = '0',,LV,,,,
+viaodpsf,bcva,,text,Snellen fraction - Photopic VA - OD,,,integer,12,800,,[viaocmpyn(999)] = '0',,LV,,,,
+viaospsf,bcva,,text,Snellen fraction - Photopic VA - OS,,,integer,12,800,,[viaocmpyn(999)] = '0',,LV,,,,
+viaodplog,bcva,,text,VA Letter Score - Photopic VA - OD,,,integer,5,95,,[viaocmpyn(999)] = '0',,LV,,,,
+viaosplog,bcva,,text,VA Letter Score - Photopic VA - OS,,,integer,5,95,,[viaocmpyn(999)] = '0',,LV,,,,
+viaodpscore,bcva,,calc,Photopic LogMAR OD Score,"if([viaocmpyn(999)] = '0',(-0.02 * [viaodplog]) + 1.7,'')",,,,,,[viaocmpyn(999)] = '0',,LV,,,,
+viaospscore,bcva,,calc,Photopic LogMAR OS Score,"if([viaocmpyn(999)] = '0',(-0.02 * [viaosplog]) + 1.7,'')",,,,,,[viaocmpyn(999)] = '0',,LV,,,,
+viaodmsf,bcva,,text,Snellen fraction - Mesopic VA - OD,,,integer,12,800,,[viaocmpyn(999)] = '0',,LV,,,,
+viaosmsf,bcva,,text,Snellen fraction - Mesopic VA - OS,,,integer,12,800,,[viaocmpyn(999)] = '0',,LV,,,,
+viaodmlog,bcva,,text,LLVA Letter Score - Mesopic VA - OD,,,integer,5,95,,[viaocmpyn(999)] = '0',,LV,,,,
+viaosmlog,bcva,,text,LLVA Letter Score - Mesopic VA - OS,,,integer,5,95,,[viaocmpyn(999)] = '0',,LV,,,,
+viaodmscore,bcva,,calc,Mesopic LogMAR OD Score,"if([viaocmpyn(999)] = '0',(-0.02 * [viaodmlog]) + 1.7,'')",,,,,,[viaocmpyn(999)] = '0',,LV,,,,
+viaosmscore,bcva,,calc,Mesopic LogMAR OS Score,"if([viaocmpyn(999)] = '0',(-0.02 * [viaosmlog]) + 1.7,'')",,,,,,[viaocmpyn(999)] = '0',,LV,,,,
+plcscmpdat,photopic_mars,,text,Date procedure performed,,,date_mdy,,,,[plcscmpyn(999)] = '0',,LV,,,,
+plcscmpyn,photopic_mars,,checkbox,,"999, Photopic mars not done",,,,,,,,LV,,,,
+plcsodeye,photopic_mars,,radio,OD Form 1 (eye),"R, Right eye",,,,,,[plcscmpyn(999)] = '0',,LH,,,,
+plcsodfcl,photopic_mars,,text,OD: Value of final correct letter,,,number,0.04,1.92,,[plcscmpyn(999)] = '0',,LV,,,,
+plcsodmiss,photopic_mars,,text,OD: Number of misses prior to stopping,,,integer,0,9,,[plcscmpyn(999)] = '0',,LV,,,,
+plcsodlog,photopic_mars,,calc,OD: Log Contrast Sensitivity,"if([plcscmpyn(999)] = '0', [plcsodfcl] - ([plcsodmiss] * 0.04), '')",,,,,,[plcscmpyn(999)] = '0',,LV,,,,
+plcsoseye,photopic_mars,,radio,OS Form 2 (eye),"L, Left eye",,,,,,[plcscmpyn(999)] = '0',,LH,,,,
+plcsosfcl,photopic_mars,,text,OS: Value of final correct letter,,,number,0.04,1.92,,[plcscmpyn(999)] = '0',,LV,,,,
+plcsosmiss,photopic_mars,,text,OS: Number of misses prior to stopping,,,integer,0,9,,[plcscmpyn(999)] = '0',,LV,,,,
+plcsoslog,photopic_mars,,calc,OS: Log Contrast Sensitivity,"if([plcscmpyn(999)] = '0', [plcsosfcl] - ([plcsosmiss] * 0.04), '')",,,,,,[plcscmpyn(999)] = '0',,LV,,,,
+mlcscmpdat,mesopic_mars,,text,Date procedure performed,,,date_mdy,,,,[mlcscmpyn(999)] = '0',,LV,,,,
+mlcscmpyn,mesopic_mars,,checkbox,,"999, Mesopic Mars not done",,,,,,[mlcscmpdat]='',,LV,,,,
+mlcsodeye,mesopic_mars,,radio,OD Form 2 (eye),"R, Right eye",,,,,,[mlcscmpyn(999)] = '0',,LH,,,,
+mlcsodfcl,mesopic_mars,,text,OD: Value of final correct letter,,,number,0.04,1.92,,[mlcscmpyn(999)] = '0',,LV,,,,
+mlcsodmiss,mesopic_mars,,text,OD: Number of misses prior to stopping,,,integer,0,9,,[mlcscmpyn(999)] = '0',,LV,,,,
+mlcsodlog,mesopic_mars,,calc,OD: Log Contrast Sensitivity,"if([mlcscmpyn(999)] = '0', [mlcsodfcl] - ([mlcsodmiss] * 0.04), '')",,,,,,[mlcscmpyn(999)] = '0',,LV,,,,
+mlcsoseye,mesopic_mars,,radio,OS Form 1 (eye),"L, Left eye",,,,,,[mlcscmpyn(999)] = '0',,LH,,,,
+mlcsosfcl,mesopic_mars,,text,OS: Value of final correct letter,,,number,0.04,1.92,,[mlcscmpyn(999)] = '0',,LV,,,,
+mlcsosmiss,mesopic_mars,,text,OS: Number of misses prior to stopping,,,integer,0,9,,[mlcscmpyn(999)] = '0',,LV,,,,
+mlcsoslog,mesopic_mars,,calc,OS: Log Contrast Sensitivity,"if([mlcscmpyn(999)] = '0', [mlcsosfcl] - ([mlcsosmiss] * 0.04), '')",,,,,,[mlcscmpyn(999)] = '0',,LV,,,,
+msscmpdat,monofilament,,text,Date monofilament performed,,,date_mdy,,,,[msscmpyn(999)]= '0',,LV,,,,
+msscmpyn,monofilament,,checkbox,,"999, Monofilament not done",,,,,,[msscmpdat] = '',,LV,,,,
+mssrf1,monofilament,"<h6 class=""mt-2""><strong>Right Foot</strong></h6>",radio,Site 1,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,right_foot,,
+mssrf2,monofilament,,radio,Site 2,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,right_foot,,
+mssrf3,monofilament,,radio,Site 3,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,right_foot,,
+mssrf4,monofilament,,radio,Site 4,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,right_foot,,
+mssrf5,monofilament,,radio,Site 5,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,right_foot,,
+mssrf6,monofilament,,radio,Site 6,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,right_foot,,
+mssrf7,monofilament,,radio,Site 7,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,right_foot,,
+mssrf8,monofilament,,radio,Site 8,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,right_foot,,
+mssrf9,monofilament,,radio,Site 9,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,right_foot,,
+mssrf10,monofilament,,radio,Site 10,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,right_foot,,
+mssrffl,monofilament,,calc,Right Foot - Felt:,"if([msscmpyn(999)]= '0',sum(if([mssrf1]<>'99',[mssrf1],''), if([mssrf2]<>'99',[mssrf2],''), if([mssrf3]<>'99',[mssrf3],''), if([mssrf4]<>'99',[mssrf4],''), if([mssrf5]<>'99',[mssrf5],0),if([mssrf6]<>'99',[mssrf6],''), if([mssrf7]<>'99',[mssrf7],''), if([mssrf8]<>'99',[mssrf8],''), if([mssrf9]<>'99',[mssrf9],''), if([mssrf10]<>'99',[mssrf10],'')),'')",Sum of all yes responses,,,,,[msscmpyn(999)]= '0',,LV,,,,
+mssrftt,monofilament,,calc,Right Foot - Tested:,"if([msscmpyn(999)]= '0',10 - (sum(if([mssrf1]='99',1,0), if([mssrf2]='99',1,0), if([mssrf3]='99',1,0), if([mssrf4]='99',1,0), if([mssrf5]='99',1,0),if([mssrf6]='99',1,0), if([mssrf7]='99',1,0), if([mssrf8]='99',1,0), if([mssrf9]='99',1,0), if([mssrf10]='99',1,0))),'')",10 minus sum of sum of not applicable responses,,,,,[msscmpyn(999)]= '0',,LV,,,,
+msslf1,monofilament,"<h6 class=""mt-2""><strong>Left Foot</strong></h6>",radio,Site 1,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,left_foot,,
+msslf2,monofilament,,radio,Site 2,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,left_foot,,
+msslf3,monofilament,,radio,Site 3,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,left_foot,,
+msslf4,monofilament,,radio,Site 4,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,left_foot,,
+msslf5,monofilament,,radio,Site 5,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,left_foot,,
+msslf6,monofilament,,radio,Site 6,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,left_foot,,
+msslf7,monofilament,,radio,Site 7,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,left_foot,,
+msslf8,monofilament,,radio,Site 8,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,left_foot,,
+msslf9,monofilament,,radio,Site 9,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,left_foot,,
+msslf10,monofilament,,radio,Site 10,"1, Yes|0, No|99, Not applicable",,,,,,[msscmpyn(999)]= '0',,,,left_foot,,
+msslffl,monofilament,,calc,Left Foot - Felt:,"if([msscmpyn(999)]= '0', sum(if([msslf1]<>'99',[msslf1],''), if([msslf2]<>'99',[msslf2],''), if([msslf3]<>'99',[msslf3],''), if([msslf4]<>'99',[msslf4],''), if([msslf5]<>'99',[msslf5],0),if([msslf6]<>'99',[msslf6],''), if([msslf7]<>'99',[msslf7],''), if([msslf8]<>'99',[msslf8],''), if([msslf9]<>'99',[msslf9],''), if([msslf10]<>'99',[msslf10],'')),'')",Sum of all yes responses,,,,,[msscmpyn(999)]= '0',,LV,,,,
+msslftt,monofilament,,calc,Left Foot - Tested:,"if([msscmpyn(999)]= '0',10 - (sum(if([msslf1]='99',1,0), if([msslf2]='99',1,0), if([msslf3]='99',1,0), if([msslf4]='99',1,0), if([msslf5]='99',1,0),if([msslf6]='99',1,0), if([msslf7]='99',1,0), if([msslf8]='99',1,0), if([msslf9]='99',1,0), if([msslf10]='99',1,0))),'')",10 minus sum of sum of not applicable responses,,,,,[msscmpyn(999)]= '0',,LV,,,,
+mocacmpdattim,moca,,text,Date time MoCA performed,,,datetime_mdy,,,,[mocacmpyn(999)] = '0',,LV,,,,
+mocacmpyn,moca,,checkbox,,"999, MoCA not done",,,,,,[mocacmpdattim] = '',,LV,,,,
+rtekgcmpdattim,ecg,,text,Date & time Cardiology - EKG - Pagewriter TC30 Cardiograp performed,,,datetime_mdy,,,,[rtekgcmpyn(999)] = '0',,LV,,,,
+rtekgcmpyn,ecg,,checkbox,,"999, Cardiology - EKG - Pagewriter TC30 Cardiograp not done",,,,,,[rtekgcmpdattim] = '',,LV,,,,
+rtop_odd,retinal_imaging_v2,"<div class=""rich-text-field-label""><div class=""alert alert-warning mb-0"" style=""padding-top: 0 !important; padding-bottom: 0 !important;"" role=""alert""> <h6 class=""mt-2""><strong>OD</strong></h6> </div></div>",yesno,OptoMed-Disc centered-CFP,,,,,,,,,LV,,,,
+rtop_odm,retinal_imaging_v2,,yesno,OptoMed-Mac centered-CFP,,,,,,,,,LV,,,,
+rtei_odir,retinal_imaging_v2,,yesno,Eidon-UWF Central-IR,,,,,,,,,LV,,,,
+rtei_odfaf,retinal_imaging_v2,,yesno,Eidon-UWF Central-FAF,,,,,,,,,LV,,,,
+rtsm_odc,retinal_imaging_v2,,yesno,Eidon-UWF Central-CFP,,,,,,,,,LV,,,,
+rtsm_odn,retinal_imaging_v2,,yesno,Eidon-UWF Nasal-CFP,,,,,,,,,LV,,,,
+rtsm_odt,retinal_imaging_v2,,yesno,Eidon-UWF Temporal-CFP,,,,,,,,,LV,,,,
+rtsm_odm,retinal_imaging_v2,,yesno,Eidon-Create Mosaic Image-CFP,,,,,,,,,LV,,,,
+rtso_odo,retinal_imaging_v2,,yesno,Spec-ONH-RC-HR-OCT,,,,,,,,,LV,,,,
+rtso_odp,retinal_imaging_v2,,yesno,Spec-PPole Mac-HR-61 lines-OCT,,,,,,,,,LV,,,,
+rtso_odm,retinal_imaging_v2,,yesno,Spec-Mac-20x20-HS-512 lines-OCTA,,,,,,,,,LV,,,,
+rtci_odm1,retinal_imaging_v2,,yesno,Cirrus-Mac Cube-512x128-OCT,,,,,,,,,LV,,,,
+rtci_odd1,retinal_imaging_v2,,yesno,Cirrus-Disc Cube-200x200-OCT,,,,,,,,,LV,,,,
+rtci_odm2,retinal_imaging_v2,,yesno,Cirrus-Macula 6x6-OCTA,,,,,,,,,LV,,,,
+rtci_odd2,retinal_imaging_v2,,yesno,Cirrus-Disc 6x6-OCTA,,,,,,,,,LV,,,,
+rtma_odw,retinal_imaging_v2,,yesno,M2-3D Wide(H) 12x9-OCT,,,,,,,,,LV,,,,
+rtma_odm,retinal_imaging_v2,,yesno,M2-3D Macula 6x6-OCT,,,,,,,,,LV,,,,
+rtma_odm1,retinal_imaging_v2,,yesno,M2-Mac 6x6-360x360-(rep3)-OCTA,,,,,,,,,LV,,,,
+rttr_odr,retinal_imaging_v2,,yesno,Triton-3D(H)+Radial 12x9-OCT,,,,,,,,,LV,,,,
+rttr_odm1,retinal_imaging_v2,,yesno,Triton-Macula 6x6-OCTA,,,,,,,,,LV,,,,
+rttr_odm2,retinal_imaging_v2,,yesno,Triton-Macula 12x12-OCTA,,,,,,,,,LV,,,,
+rtfl_od,retinal_imaging_v2,,yesno,FLIO-Mac-HS,,,,,,,,,LV,,,,
+rtop_osd,retinal_imaging_v2,"<div class=""rich-text-field-label""><div class=""alert alert-warning mb-0"" style=""padding-top: 0 !important; padding-bottom: 0 !important;"" role=""alert""> <h6 class=""mt-2""><strong>OS</strong></h6> </div></div>",yesno,OptoMed-Disc centered-CFP,,,,,,,,,LV,,,,
+rtop_osm,retinal_imaging_v2,,yesno,OptoMed-Mac centered-CFP,,,,,,,,,LV,,,,
+rtei_osir,retinal_imaging_v2,,yesno,Eidon-UWF Central-IR,,,,,,,,,LV,,,,
+rtei_osfaf,retinal_imaging_v2,,yesno,Eidon-UWF Central-FAF,,,,,,,,,LV,,,,
+rtsm_osc,retinal_imaging_v2,,yesno,Eidon-UWF Central-CFP,,,,,,,,,LV,,,,
+rtsm_osn,retinal_imaging_v2,,yesno,Eidon-UWF Nasal-CFP,,,,,,,,,LV,,,,
+rtsm_ost,retinal_imaging_v2,,yesno,Eidon-UWF temporal-CFP,,,,,,,,,LV,,,,
+rtsm_osm,retinal_imaging_v2,,yesno,Eidon- Create Mosaic Image-CFP,,,,,,,,,LV,,,,
+rtso_oso,retinal_imaging_v2,,yesno,Spec-ONH-RC-HR-OCT,,,,,,,,,LV,,,,
+rtso_osp,retinal_imaging_v2,,yesno,Spec-PPole Mac-HR-61 lines-OCT,,,,,,,,,LV,,,,
+rtso_osm,retinal_imaging_v2,,yesno,Spec-Mac-20x20-HS-512 lines-OCTA,,,,,,,,,LV,,,,
+rtci_osm1,retinal_imaging_v2,,yesno,Cirrus-Mac Cube-512x128-OCT,,,,,,,,,LV,,,,
+rtci_osd1,retinal_imaging_v2,,yesno,Cirrus-Disc Cube-200x200-OCT,,,,,,,,,LV,,,,
+rtci_osm2,retinal_imaging_v2,,yesno,Cirrus-Macula 6x6-OCTA,,,,,,,,,LV,,,,
+rtci_osd2,retinal_imaging_v2,,yesno,Cirrus-Disc 6x6-OCTA,,,,,,,,,LV,,,,
+rtma_osw,retinal_imaging_v2,,yesno,M2-3D Wide(H) 12x9-OCT,,,,,,,,,LV,,,,
+rtma_osm,retinal_imaging_v2,,yesno,M2-3D Macula 6x6-OCT,,,,,,,,,LV,,,,
+rtma_osm1,retinal_imaging_v2,,yesno,M2-Mac 6x6-360x360-(rep3)-OCTA,,,,,,,,,LV,,,,
+rttr_osr,retinal_imaging_v2,,yesno,Triton-3D(H)+Radial 12x9-OCT,,,,,,,,,LV,,,,
+rttr_osm1,retinal_imaging_v2,,yesno,Triton-Macula 6x6-OCTA,,,,,,,,,LV,,,,
+rttr_osm2,retinal_imaging_v2,,yesno,Triton-Macula 12x12-OCTA,,,,,,,,,LV,,,,
+rtfl_os,retinal_imaging_v2,,yesno,FLIO-Mac-HS,,,,,,,,,LV,,,,
+lbdattim1,lab_results,,text,Date & time clinical labs performed,,,datetime_mdy,,,,[lbperfyn1(999)] = '0',,LV,,,,
+lbperfyn1,lab_results,,checkbox,,"999, Clinical labs not done",,,,,,,,LV,,,,
+lbscat_wbc,lab_results,,text,White Blood Cells (WBC) - x10E3/æL,,,,,,,[lbperfyn1(999)] = '0',,LV,,,,
+lbscat_rbc,lab_results,,text,Red Blood Cells (RBC) - x10E6/æL,,,,,,,[lbperfyn1(999)] = '0',,LV,,,,
+lbscat_a1c,lab_results,,text,Hemoglobin - g/dL,,,,,,,[lbperfyn1(999)] = '0',,LV,,,,
+lbscat_hct,lab_results,,text,Hematocritÿ - %,,,,,,,[lbperfyn1(999)] = '0',,LV,,,,
+lbscat_mcv,lab_results,,text,MCV - fL,,,,,,,[lbperfyn1(999)] = '0',,LV,,,,
+lbscat_mch,lab_results,,text,MCH - pg,,,,,,,[lbperfyn1(999)] = '0',,LV,,,,
+lbscat_mchc,lab_results,,text,MCHC - g/dL,,,,,,,[lbperfyn1(999)] = '0',,LV,,,,
+lbscat_rdw,lab_results,,text,RDW - %,,,,,,,[lbperfyn1(999)] = '0',,LV,,,,
+lbscat_plt,lab_results,,text,Platelets - x10E3/æL,,,,,,,[lbperfyn1(999)] = '0',,LV,,,,
+lbdattim2,specimen_management,"<div class=""rich-text-field-label""><div class=""alert alert-warning mb-0"" style=""padding-top: 0 !important; padding-bottom: 0 !important;"" role=""alert""> <h6 class=""mt-2""><strong>Blood</strong></h6> </div></div>",text,Date & Time Draw Performed,,,datetime_mdy,,,,[lbperf2(999)]='0',,LV,,,,
+lbperf2,specimen_management,,checkbox,,"999, Blood draw not done",,,,,,[lbdattim2]='',,LV,,,,
+lbproc_vac,specimen_management,,yesno,Were all vacutainers filled according to protocol?,,,,,,,[lbperf2(999)]='0',,LV,,,, @HIDDEN
+lbproc_bl1,specimen_management,,yesno,One 3ml EDTA tube collected,,,,,,,[lbperf2(999)]='0',,LV,,,,
+lbproc_bl2,specimen_management,,yesno,Two 6ml EDTA tubes collected,,,,,,,[lbperf2(999)]='0',,LV,,,,
+lbproc_bl3,specimen_management,,yesno,Two 5.0 ml Serum SST/Gold Top tubes collected,,,,,,,[lbperf2(999)]='0',,LV,,,,
+lbproc_bl4,specimen_management,,yesno,One PAXgene RNA tube collected,,,,,,,[lbperf2(999)]='0',,LV,,,,
+lbproc_bl5,specimen_management,,yesno,Two CPT tubes collected,,,,,,,[lbperf2(999)]='0',,LV,,,,
+lbproc_bl,specimen_management,,yesno,Were all blood samples processed according to protocol?,,,,,,,[lbperf2(999)]='0',,LV,,,,
+lbperf_ua,specimen_management,"<div class=""rich-text-field-label""><div class=""alert alert-warning mb-0"" style=""padding-top: 0 !important; padding-bottom: 0 !important;"" role=""alert""> <h6 class=""mt-2""><strong>Urine</strong></h6> </div></div>",yesno,Was urine collected as per protocol?,,,,,,,,,LV,,,,
+lbproc_ua,specimen_management,,yesno,Was urine processed according to protocol?,,,,,,,[lbperf_ua]='1',,LV,,,,
+lbproc,specimen_management,"<div class=""rich-text-field-label""><div class=""alert alert-warning mb-0"" style=""padding-top: 0 !important; padding-bottom: 0 !important;"" role=""alert""> <h6 class=""mt-2""><strong>NORC Clinical Lab Samples</strong></h6> </div></div>",yesno,"Were all samples processed, labeled, scanned, and added to the inventory spreadsheet as per protocol?",,,,,,,[lbperf2(999)]='0' or [lbperf_ua] = '1',,LV,,,,
+lbfrz,specimen_management,,yesno,"Were serum, plasma, blood, and urine samples placed in -80C storage?",,,,,,,[lbperf2(999)]='0' or [lbperf_ua] = '1',,LV,,,,
+lbrslt,specimen_management,,yesno,Results received,,,,,,,[lbperf2(999)]='0' or [lbperf_ua] = '1',,LV,,,, @HIDDEN
+lbupld,specimen_management,,yesno,Were lab results uploaded to database?,,,,,,,[lbrslt]='1',,LV,,,, @HIDDEN
+lbbio,specimen_management,"<div class=""rich-text-field-label""><div class=""alert alert-warning mb-0"" style=""padding-top: 0 !important; padding-bottom: 0 !important;"" role=""alert""> <h6 class=""mt-2""><strong>Biorepository Shipments for UAB</strong></h6> </div></div>",yesno,Were all biorepository samples processed as per protocol?,,,,,,,[lbperf2(999)]='0',,LV,,,,
+lbshp2yn,specimen_management,,yesno,Were CPT and PAXgene tubes shipped for next day air delivery to UAB?,,,,,,,[lbbio] = '1',,LV,,,,
+lbfrz3,specimen_management,,yesno,"Were all other biorepository samples scanned, added to spreadsheet, and stored at -80C?",,,,,,,[lbbio] = '1',,LV,,,,
+dvamwdeactv,device_return,,yesno,"After Day 10, did you exit the participant in Study Pal?",,,,,,,[dvamwyn] = '1',,LV,,,, @HIDDEN
+dvamwenyn,device_return,,yesno,Activity monitor returned?,,,,,,,[dvamwyn] = '1',,LV,,,,
+dvamwendwnd,device_return,,yesno,Was data downloaded from the physical activity monitor?,,,,,,,[dvamwyn] = '1',,LV,,,,
+dvamwenhand,device_return,,radio,Physical Activity Monitor was worn on which wrist?,"1, Right | 2, Left | 3, Not Provided",,,,,,[dvamwyn] = '1',,LV,,,,
+dvamwendhand,device_return,,radio,Participant's dominant hand,"1, Right hand | 2, Left hand | 4, Neither (ambidextrous) | 3, Not Provided",,,,,,[dvamwyn] = '1',,LV,,,,
+dcvgmenyn,device_return,,yesno,Dexcom G6 transmitter returned?,,,,,,,[dvcgmyn] ='1',,LV,,,,
+dcgemclarityyn,device_return,,yesno,Was participant data downloaded from Clarity?(.csv file format),,,,,,,[dcvgmenyn] = '1',,LV,,,,
+dvenvenyn,device_return,,yesno,Environmental sensor returned?,,,,,,,[dvenvyn] = '1',,LV,,,,
+dvenvdwnd,device_return,,yesno,Data downloaded from device?,,,,,,,[dvenvenyn] = '1',,LV,,,,
+dvenvendat,device_return,,text,Date device received back from participant (Environmental Sensor),,,date_mdy,,,,,,,,,,
+uppdae,disposition,,yesno,"Was there any Unanticipated Problems, Protocol Deviations or Adverse Event's that occurred or were associated with this participant?",,,,,,,,,LV,,,,
+uppdaeot2,disposition,,radio,"If this was an adverse event, was your site PI notified?","1, Yes|0, No|999, Not an Adverse Event",,,,,,[uppdae] = '1',,LV,,,,
+eos_ds,disposition,,yesno,Did the subject complete the study?,,,,,,,([icf_consent]='1' OR [c184390(1)]='1') AND [consent_survey_complete]='2',,LV,,,,
+eos_compen,disposition,,yesno,Was the participant compensated?,,,,,,,[eos_ds]='1',,LV,,,,
+eos_dsdecod,disposition,,radio,What was the primary reason the subject discontinued?,"1, Did not meet Inclusion/Exclusion criteria|2, Lost to Follow-up|3, Withdrawal by Subject|4, Geographic Inaccessibility|5, Investigator deemed not appropriate for study|6, Currently enrolled in a conflicting study|7, Death|8, Adverse Event|9, Protocol Deviation|888, Other {eos_dsterm}",,,,,,[eos_ds] = '0',,LV,,,,
+eos_dsstdat,disposition,,text,What was the study discontinuation or completion date?,,,date_mdy,,,,,,LV,,,,
+eos_dsdecodie,disposition,,checkbox,Mark questions from Inclusion/Exclusion that were not met.,"1, Individual was under age 40|2, Individual is pregnant|3, Individual is not needed at this time for recruitment goals|4, Individual had Type 1 Diabetes|888, Other",,,,,,[eos_dsdecod] = '1',,LV,,,,
+eos_dsvst,disposition,,radio,Provide the last study visit/stage completed:,"0, Signed Consent|1, Pre-Visit|2, In Person (Baseline)|3, Devices Returned",If a stage was started but NOT completed then <u><b>indicate the prior stage that was completed.</b></u>,,,,,[eos_ds]='0',,LV,,,,
+dm,data_management,,checkbox,Click here to indicate which data is approved for sending to Fairhub.io: ,"I, All data collected and validated through In-Person Visit | D, All device data entered and validated",,,,,,,,LV,,,,
+rt_dat,retinal_imaging_v2,,text,Assessment Date,,,date_mdy,,,,,,,,,,
