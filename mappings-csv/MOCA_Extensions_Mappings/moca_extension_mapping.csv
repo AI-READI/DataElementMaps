@@ -1,0 +1,43 @@
+Map_to_OMOP,Protected_or_open-source,SRC_CODE,Data_Type,Value_Range,TARGET_CONCEPT_ID,TARGET_CONCEPT_NAME,TARGET_DOMAIN_ID
+No,locked (unavailable),Rater Name,String,,,,
+No,locked (unavailable),Moca File Number,String,,,,
+No,open-source,Institute File number,Integer,,,,
+Yes,open-source,test_upload_date,Datetime,,3006440,Date form completed,Observation
+No,locked (unavailable),Certificate Id,String,,,,
+Yes,open-source,trails_visuospatial_executive,Integer,0-1,4165596,Trail making test,Measurement
+Yes,open-source,trails_visuospatial_executive_time,Integer,,2005200344,Time taken to do trails in seconds,Measurement
+Yes,open-source,cube_visuospatial_executive,Integer,0-1,2005200345,Cube drawings score,Measurement
+Yes,open-source,cube_visuospatial_executive_time,Integer,,2005200346,Time taken to do cube in seconds,Measurement
+Yes,open-source,clock_visuospatial_executive,Integer,0-1,21492218,Clock drawing panel [GPCOG],Observation
+Yes,open-source,clock_visuospatial_executive_time,Integer,,2005200347,Time taken to do clock in seconds,Measurement
+Yes,open-source,naming,Integer,0-3,2005200348,Animal name recall task score,Measurement
+Yes,open-source,naming_time,Integer,,2005200349,Time in seconds to perform the animal name recall task,Measurement
+Yes,open-source,memory_trial1,Integer,0-5,2005200350,Words correctly repeated (1st trial) score,Measurement
+Yes,open-source,memory_trial1_time,Integer,,2005200351,Time in seconds to perform the words correctly repeated (1st trial),Measurement
+Yes,open-source,memory_trial2,Integer,0-5,2005200352,Words correctly repeated (2nd trial) score,Measurement
+Yes,open-source,memory_trial2_time,Integer,,2005200353,Time in seconds to perform the words correctly repeated (2nd trial),Measurement
+Yes,open-source,digitspan,Integer,0-2,4153980,Digit span performance,Observation
+Yes,open-source,digitspan_time,Integer,,2005200354,Time in seconds to perform the repeating digits task,Measurement
+Yes,open-source,lettera,Integer,0-1,2005200355,Letter tapping score,Measurement
+Yes,open-source,lettera_time,Integer,,2005200356,Time in seconds to perform the letter tapping task,Measurement
+Yes,open-source,subtraction,Integer,0-3,2005200357,Serial 7 subtraction score,Measurement
+Yes,open-source,subtraction_time,Integer,,2005200358,Time in seconds to perform the serial 7 subtraction task,Measurement
+Yes,open-source,repetition,Integer,0-2,2005200359,Repeats sentences II score,Measurement
+Yes,open-source,repetition_time,Integer,,2005200360,Time in seconds to perform repeats sentences II task,Measurement
+Yes,open-source,fluency_language,Integer,0-1,2005200361,Maximal one-minute recall of words beginning with 'F' score,Measurement
+Yes,open-source,fluency_language_time,Integer,,2005200362,Time in seconds to perform the words beginning with 'F' recall task,Measurement
+Yes,open-source,moca_abstraction,Integer,0-2,2005200363,MOCA abstraction score,Measurement
+Yes,open-source,moca_abstraction_time,Integer,,2005200364,Time in seconds to perform MOCA abstraction task,Measurement
+Yes,open-source,delayed_recall_with_no_clue,Integer,0-5,2005200365,MOCA delayed recall with no cue score,Measurement
+Yes,open-source,delayed_recall_with_no_clue_time,Integer,,2005200366,Time in seconds to perform the MOCA delayed recall with no cue task,Measurement
+Yes,open-source,moca_orientation,Integer,0-6,2005200367,"MOCA orientation date, month, year, day, place, city score",Measurement
+Yes,open-source,moca_orientation_time,Integer,,2005200368,"Time in seconds to perform the MOCA orientation date, month, year, day, place, city task",Measurement
+No,protected,sex_at_birth,String,,46235213,Sex assigned at birth,Observation
+Yes,open-source,years_of_education,Integer,,42528764,Years of education in number - Reported,Observation
+Yes,open-source,age_years_at_interview,Integer Range,,2005200369,Age in years (3-4 year span),Observation
+Yes,open-source,moca_combined_mis_score,Integer,0-15,2005200370,"MOCA delayed recall with no cue, cue, and multiple choice cue (Combined score)",Measurement
+Yes,open-source,moca_total_score_time,Time Duration,,1988422,Time to complete survey,Observation
+Yes,open-source,moca_total_score,Integer,0-30,37174522,Montreal cognitive assessment score,Measurement
+Yes,open-source,app_generated,,,37161935,Application Generated Data,Type Concept
+Yes,open-source,manually_entered_from_paper,,,37161934,Information gathering from maual entry from a paper form,Type Concept
+Yes,open-source,sec,string,,8555,second UCUM unit in second,
