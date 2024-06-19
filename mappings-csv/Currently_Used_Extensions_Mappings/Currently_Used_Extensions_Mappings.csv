@@ -1,0 +1,497 @@
+Ext_concept_id,Ext_concept_name,Ext_domain_id,Ext_vocabulary_id,Ext_concept_class_ID,Ext_STANDARD_CONCEPT
+2005200000,Recruitment Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200001,Recruitment Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200002,FAQ Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200003,FAQ Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200004,"Do you use lifestyle changes to control your A1C and blood glucose levels? Examples: regular exercise, avoiding sugary foods and beverages, eating a balanced diet with lots of vegetables, sticking to a consistent eating schedule",Observation,AIREADI,Survey,S
+2005200006, Screening Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200007, Screening Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200008, Pre-consent Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200009, Pre-consent Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200010,BCVA was not done,Procedure,AIREADI,Procedure,S
+2005200011,Method used to complete form,Observation,AIREADI,Attribute,S
+2005200012,Snellen fraction - Photopic VA - OD,Measurement,AIREADI,Clinical Observation,S
+2005200013,Snellen fraction - Photopic VA - OS,Measurement,AIREADI,Clinical Observation,S
+2005200014,"Has a doctor or other healthcare professional ever told you that you have/had Circulation problems (Examples: arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins)",Observation,AIREADI,Survey,S
+2005200016,"Has a doctor or other healthcare professional ever told you that you have/had Urinary problems (Examples: urinary tract infections, incontinence, prostate problems)",Observation,AIREADI,Survey,S
+2005200017,Has a doctor or other healthcare professional ever told you that you have/had Kidney problems,Observation,AIREADI,Survey,S
+2005200018,Were either of your parents diagnosed with Type II Diabetes?,Observation,AIREADI,Survey,S
+2005200019,Has a sibling been diagnosed with Type II Diabetes?,Observation,AIREADI,Survey,S
+2005200020,Cataracts (in one or both eyes),Observation,AIREADI,Survey,S
+2005200021, Health Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200022, Heath Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200023,How many total years have you smoked?,Observation,AIREADI,Survey,S
+2005200024,Have you had any beer or ale in the past year?,Observation,AIREADI,Survey,S
+2005200025,"During the average week, how many 12 oz. bottles or cans of beer do you usually drink? (Number of bottles or cans per week)",Observation,AIREADI,Survey,S
+2005200026,Have you had any wine in the past year?,Observation,AIREADI,Survey,S
+2005200027,"During the average week, how many 5 oz. glasses of wine do you usually drink?  The average wine bottle has 5 servings. (Number of glasses per week)",Observation,AIREADI,Survey,S
+2005200028,"Have you had any liquor in the past year, such as brandy, whiskey, vodka, gin, schnapps, cocktails, or liqueurs?",Observation,AIREADI,Survey,S
+2005200029,"During the average week, how many 1.5 oz. of liquor do you usually drink, either as shots or in mixed cocktails? (Number of drinks per week)",Observation,AIREADI,Survey,S
+2005200030,"Do you drive after having a drink, even if it is only one drink?",Observation,AIREADI,Survey,S
+2005200031,Have you ever vaped or used e-cigarettes?,Observation,AIREADI,Survey,S
+2005200032,At what age did you start vaping or using e-cigarettes? (Age started - years old),Observation,AIREADI,Survey,S
+2005200033,Do you vape or use e-cigarettes now?,Observation,AIREADI,Survey,S
+2005200034,How many total years have you vaped or used e-cigarettes?,Observation,AIREADI,Survey,S
+2005200035,"When you vaped or used e-cigarettes, approximately how many days in a typical week would you use it?",Observation,AIREADI,Survey,S
+2005200036,"Have you ever used marijuana (cannabis)? (This includes smoking marijuana, using cannabis concentrates, and edibles.)",Observation,AIREADI,Survey,S
+2005200037,In what form do you usually use marijuana?  (check all that apply),Observation,AIREADI,Survey,S
+2005200038,How many total years have you used marijuana?,Observation,AIREADI,Survey,S
+2005200039,"When you used marijuana, approximately how many days in a typical week would you use it?",Observation,AIREADI,Survey,S
+2005200040, Substance Use Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200041, Substance Use Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200042,VA Letter Score - Photopic VA - OD,Measurement,AIREADI,Clinical Observation,S
+2005200043,VA Letter Score - Photopic VA - OS,Measurement,AIREADI,Clinical Observation,S
+2005200044,Feeling scared when you think about living with diabetes,Observation,AIREADI,Survey,S
+2005200045,Feeling depressed when you think about living with diabetes,Observation,AIREADI,Survey,S
+2005200046,Worrying about the future and the possibility of serious complications,Observation,AIREADI,Survey,S
+2005200047,Feeling that diabetes is taking up too much of your mental and physical energy every day,Observation,AIREADI,Survey,S
+2005200048,Coping with complications of diabetes,Observation,AIREADI,Survey,S
+2005200049, PAID score,Observation,AIREADI,Survey,S
+2005200050, PAID-5 DM Survey Start Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200051, PAID-5 DM Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200052,Photopic LogMAR OD Score,Measurement,AIREADI,Clinical Observation,S
+2005200053,Photopic LogMAR OS Score,Measurement,AIREADI,Clinical Observation,S
+2005200054,Snellen fraction - Mesopic VA - OD,Measurement,AIREADI,Clinical Observation,S
+2005200055,Snellen fraction - Mesopic VA - OS,Measurement,AIREADI,Clinical Observation,S
+2005200056,LLVA Letter Score - Mesopic VA - OD,Measurement,AIREADI,Clinical Observation,S
+2005200057,LLVA Letter Score - Mesopic VA - OS,Measurement,AIREADI,Clinical Observation,S
+2005200058,EVA,Measurement,AIREADI,Clinical Observation,S
+2005200059,"How many times a week did you eat beans (like pinto or black beans), chicken, or fish?",Observation,AIREADI,Survey,S
+2005200060,How many times a week did you eat regular snack chips or crackers (not low-fat)?,Observation,AIREADI,Survey,S
+2005200061,How many times a week did you eat desserts and other sweets (not the low-fat kind)?,Observation,AIREADI,Survey,S
+2005200062,"How much margarine, butter, or meat fat do you use to season vegetables or put on potatoes, bread or corn?",Observation,AIREADI,Survey,S
+2005200063,How many servings of fruit juice did you drink each day?,Observation,AIREADI,Survey,S
+2005200064, Diet score,Observation,AIREADI,Survey,S
+2005200065, Dietary Survey Start Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200066, Dietary Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200067,"How much difficulty, if any, do you have in recognizing a friend across the street? Would you say:",Observation,AIREADI,Survey,S
+2005200068,"How much difficulty, if any, do you have reading print in newspapers, magazines, recipes, menus, or numbers on the telephone? Would you say:",Observation,AIREADI,Survey,S
+2005200069,You have indicated that you have not seen an eye care professional in the past 12 months. What is the main reason you have not visited an eye care professional in the past 12 months?,Observation,AIREADI,Survey,S
+2005200070,When was the last time you had an eye exam in which the pupils were dilated? (This would have made you temporarily sensitive to bright light),Observation,AIREADI,Survey,S
+2005200071, Ophthalmic Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200072, Ophthalmic Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200073,"Thinking about the next 12 months, how likely do you think it is that you will lose your job or be laid off?",Observation,AIREADI,Survey,S
+2005200074,"About how easy would it be for you to find a job with another employer with approximately the same income and fringe benefits you now have? Would you say very easy, somewhat easy, or not easy at all?",Observation,AIREADI,Survey,S
+2005200075,What is your living situation today?,Observation,AIREADI,Survey,S
+2005200076,Think about the place you live. Do you have problems with any of the following? CHOOSE ALL THAT APPLY ,Observation,AIREADI,Survey,S
+2005200077,"In the last 12 months, have you delayed getting prescription medicines because of worry about the cost?",Observation,AIREADI,Survey,S
+2005200078,Did any other person in your household delay getting prescription medicines because of worry about the cost? ,Observation,AIREADI,Survey,S
+2005200079,"In the last 12 months, was there any time when you needed prescription medicines, but did not get them because you  couldn't afford it?",Observation,AIREADI,Survey,S
+2005200080,"In the last 12 months, was there any time when anyone else in your household needed prescription medicines, but did not get them because you/they couldn't afford it?",Observation,AIREADI,Survey,S
+2005200081,Insurance through a current or former employer or union (of yours or another family member's). This would include COBRA coverage.,Observation,AIREADI,Survey,S
+2005200082,"Insurance purchased directly from an insurance company (by you or another family member). This would include coverage purchased through an exchange or marketplace, such as HealthCare.gov",Observation,AIREADI,Survey,S
+2005200083,"Medicare, for people 65 and older, or people with certain disabilities.",Observation,AIREADI,Survey,S
+2005200084,"Medicaid, Medical Assistance (MA), the Children's Health Insurance Program (CHIP), or any kind of state or government-sponsored assistance. plan based on income or a disability.",Observation,AIREADI,Survey,S
+2005200085,"TRICARE or other military health care, including VA health care.",Observation,AIREADI,Survey,S
+2005200086,Indian Health Service.,Observation,AIREADI,Survey,S
+2005200087,Any other type of health insurance coverage or health coverage plan,Observation,AIREADI,Survey,S
+2005200088,"Does this mean you currently have no health insurance or health coverage plan? In answering this question, please exclude plans that pay for only one type of service (such as, nursing home care, accidents, family planning, or dental care) and plans that only provide extra cash when hospitalized).",Observation,AIREADI,Survey,S
+2005200089,What type of health insurance do you have?,Observation,AIREADI,Survey,S
+2005200090,About how long has it been since you last saw a doctor or other health care professional about your health?,Observation,AIREADI,Survey,S
+2005200091,"Was this a wellness visit, physical, or general purpose check-up?",Observation,AIREADI,Survey,S
+2005200092,"About how long has it been since you last saw a doctor or other health professional for a wellness visit, physical, or general purpose check-up?",Observation,AIREADI,Survey,S
+2005200093,Is there a place that you USUALLY go to if you are sick and need health care? ,Observation,AIREADI,Survey,S
+2005200094,"What kind of place is it/do you go to most often? A doctor's office or health center is a place where you see the same doctor or the same group of doctors every visit, where you usually need to make an appointment ahead of time, and where your medical records are on file.Urgent care centers and clinics in a drug store or grocery store are places where you do not need to make an appointment ahead of time, and do not usually see the same health care provider at each visit.",Observation,AIREADI,Survey,S
+2005200095,"During the past 12 months, how many times have you gone to an urgent care center or a clinic in a drug store or grocery store about your health?Urgent care centers and clinics in drug stores or grocery stores are places where you do not need to make an appointment ahead of time, and do not usually see the same health care provider at each visit. This is different from a hospital emergency room.",Observation,AIREADI,Survey,S
+2005200096,"During the past 12 months, how many times have you gone to a hospital emergency room about your health?  *This includes emergency room visits that resulted in a hospital admission.",Observation,AIREADI,Survey,S
+2005200097,"During the past 12 months, have you been hospitalized overnight? (Do not include an overnight stay in the emergency room)",Observation,AIREADI,Survey,S
+2005200098,"During the past 12 months, have you DELAYED getting medical care because of the cost?",Observation,AIREADI,Survey,S
+2005200099,"During the past 12 months, was there any time when you needed medical care, but DID NOT GET IT because of the cost?",Observation,AIREADI,Survey,S
+2005200100, PhenX SDOH Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200101, PhenX SDOH Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200102, PhenX English Proficiency MetaData,Observation,AIREADI,Survey,S
+2005200103, PhenX Education Attainment MetaData,Observation,AIREADI,Survey,S
+2005200104, PhenX Job Security MetaData ,Observation,AIREADI,Survey,S
+2005200105, PhenX Housing Insecurity MetaData ,Observation,AIREADI,Survey,S
+2005200106, PhenX Prescriptions Affordability MetaData ,Observation,AIREADI,Survey,S
+2005200107, PhenX Health Insurance MetaData,Observation,AIREADI,Survey,S
+2005200108, PhenX Health Care Access MetaData,Observation,AIREADI,Survey,S
+2005200109, PhenX Healthcare Discrimination MetaData,Observation,AIREADI,Survey,S
+2005200110, PhenX Food Insecurity Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200111, PhenX Food Insecurity Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200112, PhenX MetaData,Observation,AIREADI,Survey,S
+2005200113,There is so much traffic on the streets that it makes it difficult or unpleasant to walk in my neighborhood. Would you say that you...,Observation,AIREADI,Survey,S
+2005200114,"I see many people being physically active in my neighborhood doing things like walking, jogging, cycling, or playing sports and active games. Would you say that you...",Observation,AIREADI,Survey,S
+2005200115,There are many interesting things to look at while walking in my neighborhood. Would you say you...,Observation,AIREADI,Survey,S
+2005200116,"How many motor vehicles in working order (e.g., cars, trucks, motorcycles) are there at your household?",Observation,AIREADI,Survey,S
+2005200117,There are many four-way intersections in my neighborhood. Would you say that you...,Observation,AIREADI,Survey,S
+2005200118,"The sidewalks in my neighborhood are well maintained (paved, with few cracks) and not obstructed. Would you say that you...",Observation,AIREADI,Survey,S
+2005200119,Places for bicycling (such as bike paths) in and around my neighborhood are well maintained and not obstructed. Would you say that you...,Observation,AIREADI,Survey,S
+2005200120,There is so much traffic on the streets that it makes it difficult or unpleasant to ride a bicycle in my neighborhood. Would you say that you...,Observation,AIREADI,Survey,S
+2005200121,The crime rate in my neighborhood makes it unsafe to go on walks during the day. Would you say that you...,Observation,AIREADI,Survey,S
+2005200122,There are many places to go within easy walking distance of my home. Would you say that you...,Observation,AIREADI,Survey,S
+2005200123, PhenX Neighborhood Enviroment Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200124, PhenX Neighborhood Environment Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200125, PhenX Neighborhood Environment MetaData,Observation,AIREADI,Survey,S
+2005200126,How often have you been treated unfairly by teachers and professors because of your race/ethnic group? How often in the past year?,Observation,AIREADI,Survey,S
+2005200127,How often have you been treated unfairly by teachers and professors because of your race/ethnic group? How often in your entire life?,Observation,AIREADI,Survey,S
+2005200128,"How often have you been treated unfairly by teachers and professors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S
+2005200131, PhenX Racial/Ethnic Discrimination Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200132, PhenX Racial/Ethnic Discrimination Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200133, PhenX Racial/Ethnic MetaData,Observation,AIREADI,Survey,S
+2005200134,Planned date & time of in-person visit,Observation,AIREADI,Observation,S
+2005200135,Date driving record assessment conducted,Observation,AIREADI,Observation,S
+2005200136,"In an average week, how many days per week do you normally drive? (number of days)",Observation,AIREADI,Survey,S
+2005200137,About how many miles did you personally drive during the past 12 months in all motorized vehicles?,Observation,AIREADI,Survey,S
+2005200138,Drivers license state,Observation,AIREADI,Location,S
+2005200139, CES-D-10 Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200140, CES-D-10 Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200141,Rarely or none of the time (< 1 day),Meas Value,AIREADI,Answer,S
+2005200142,Some or a little of the time (1-2 days) ,Meas Value,AIREADI,Answer,S
+2005200143,Occasionally or a moderate amount of time (3-4 days),Meas Value,AIREADI,Answer,S
+2005200144,All of the time (5-7 days),Meas Value,AIREADI,Answer,S
+2005200145,Have you taken aspirin in the past 2 weeks?,Observation,AIREADI,Survey,S
+2005200146,"Have you taken acetaminophen medicines, such as Tylenol, in the past 2 weeks?",Observation,AIREADI,Survey,S
+2005200147,Have you taken ibuprofen or ibuprofen-containing medicines such as Advil or Motrin in the past 2 weeks?,Observation,AIREADI,Survey,S
+2005200148,"Have you taken antihistamines, such as cold pills or allergy pills, in the past 2 weeks?",Observation,AIREADI,Survey,S
+2005200149,"Have you taken decongestants, such as cold pills or allergy pills, in the past 2 weeks?",Observation,AIREADI,Survey,S
+2005200150,Have you taken sleeping pills in the past 2 weeks?,Observation,AIREADI,Survey,S
+2005200151,How many hours since you last ate? (number of hours),Observation,AIREADI,Survey,S
+2005200152,Waist Circumference (cm),Measurement,AIREADI,Observable Entity,S
+2005200153,Hip Circumference (cm),Measurement,AIREADI,Observable Entity,S
+2005200154,Photopic mars not done,Procedure,AIREADI,Procedure,S
+2005200155,"OD: Log Contrast Sensitivity - Photopic, right eye",Measurement,AIREADI,Measurement,S
+2005200156,"OS: Log Contrast Sensitivity - Photopic, left eye",Measurement,AIREADI,Measurement,S
+2005200158,Mesopic Mars not done,Procedure,AIREADI,Procedure,S
+2005200159,Right Foot - Felt:,Measurement,AIREADI,Measurement,S
+2005200160,Right Foot - Tested:,Procedure,AIREADI,Procedure,S
+2005200161,Left Foot - Felt:,Measurement,AIREADI,Measurement,S
+2005200162,Left Foot - Tested:,Procedure,AIREADI,Procedure,S
+2005200163,"If not performed, please explain why:",Observation,AIREADI,Survey,S
+2005200164,Date & time Fundus - Edion performed,Observation,AIREADI,Survey,S
+2005200165,Fundus - Edion not done,Observation,AIREADI,Survey,S
+2005200166,Date & time Fundus -  Optomed performed,Observation,AIREADI,Survey,S
+2005200167,Fundus - Optomed not done,Observation,AIREADI,Survey,S
+2005200168,Date & time OCT & OCTA - Spectralis HRA OCT performed,Observation,AIREADI,Survey,S
+2005200169,OCT & OCTA - Spectralis HRA OCT not done,Observation,AIREADI,Survey,S
+2005200170,Date & time OCT - Triton OCT performed,Observation,AIREADI,Survey,S
+2005200171,OCT - Triton OCT not done,Observation,AIREADI,Survey,S
+2005200172,Date & time OCT & OCTA - Maestro2 performed,Observation,AIREADI,Survey,S
+2005200173,OCT & OCTA - Maestro2 not done,Observation,AIREADI,Survey,S
+2005200174,Date & time FLIO performed,Observation,AIREADI,Survey,S
+2005200175,FLIO not done,Observation,AIREADI,Survey,S
+2005200176,Date & time Angioplex - Cirrus 5000 performed,Observation,AIREADI,Survey,S
+2005200177,Angioplex - Cirrus 5000 not done,Observation,AIREADI,Survey,S
+2005200178,Date & time Cardiology - EKG - Pagewriter TC30 Cardiograp performed,Observation,AIREADI,Survey,S
+2005200179,Cardiology - EKG - Pagewriter TC30 Cardiograp not done,Observation,AIREADI,Survey,S
+2005200180,Date & time clinical labs performed,Observation,AIREADI,Clinical Observation,S
+2005200181,Clinical labs not done,Observation,AIREADI,Context-dependent,S
+2005200182,White Blood Cells (WBC) - x10E3/µL,Measurement,AIREADI,Procedure,S
+2005200183,Red Blood Cells (RBC) - x10E6/µL,Measurement,AIREADI,Procedure,S
+2005200184,Hemoglobin - g/dL,Measurement,AIREADI,Lab Test,S
+2005200190,Date results were uploaded,Observation,AIREADI,Observation,S
+2005200191,"Was there any Unanticipated Problems, Protocol Deviations or Adverse Event's that occurred or were associated with this participant?",Observation,AIREADI,Event,S
+2005200192,Did the subject complete the study?,Observation,AIREADI,Clinical Finding,S
+2005200193,What was the study discontinuation or completion date?,Observation,AIREADI,Observation,S
+2005200194,41-50 (up to 2.5 packs) ,Meas Value,AIREADI,Answer,S
+2005200195,More than 50 (3 or more packs),Meas Value,AIREADI,Answer,S
+2005200196,22 to 28,Meas Value,AIREADI,Answer,S
+2005200197,29 to 35,Meas Value,AIREADI,Answer,S
+2005200198,36 or more,Meas Value,AIREADI,Answer,S
+2005200199,21-25 (5 bottles),Meas Value,AIREADI,Answer,S
+2005200200,M2-3D Wide(H) 12x9-OCT,Observation,AIREADI,Observable Entity,S
+2005200201,M2-3D Macula 6x6-OCT,Observation,AIREADI,Observable Entity,S
+2005200202,M2-Mac 6x6-360x360-(rep3)-OCTA,Observation,AIREADI,Observable Entity,S
+2005200203,Triton-3D(H)+Radial 12x9-OCT,Observation,AIREADI,Observable Entity,S
+2005200204,Triton-Macula 6x6-OCTA,Observation,AIREADI,Observable Entity,S
+2005200205,Triton-Macula 12x12-OCTA,Observation,AIREADI,Observable Entity,S
+2005200206,Physical Activity Monitor was worn on which wrist?,Observation,AIREADI,Clinical Observation,S
+2005200207,Physical assessment was not done,Procedure,AIREADI,Procedure,S
+2005200208,26-30 (6 bottles),Meas Value,AIREADI,Answer,S
+2005200209,31-35 (7 bottles),Meas Value,AIREADI,Answer,S
+2005200210,More than 36 (greater than 7 bottles),Meas Value,AIREADI,Answer,S
+2005200211,More than 20 years,Meas Value,AIREADI,Answer,S
+2005200212,More than 50 years,Meas Value,AIREADI,Answer,S
+2005200213,Not a problem,Meas Value,AIREADI,Answer,S
+2005200214,Minor problem,Meas Value,AIREADI,Answer,S
+2005200215,Moderate problem,Meas Value,AIREADI,Answer,S
+2005200216,Somewhat serious problem,Meas Value,AIREADI,Answer,S
+2005200217,Serious problem,Meas Value,AIREADI,Answer,S
+2005200218, Consent Survey Start Timestamp,Observation,AIREADI,Survey,S
+2005200219,Consent Survey Completed Timestamp,Observation,AIREADI,Survey,S
+2005200220,RxNorm (assign after visit),Observation,AIREADI,Survey,S
+2005200221,"Unit (Record the dose unit of the dose of concomitant medication/treatment/therapy taken (e.g., mg.)).",Observation,AIREADI,Clinical Observation,S
+2005200222,Puff,Device,AIREADI,Physical Object,S
+2005200223,Demographics Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200224,Demograhics Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200225,Was the activity monitor/watch sent home with the participant?,Observation,AIREADI,Observation,S
+2005200226,"If participant did not receive a device , please explain why:",Observation,AIREADI,Observation,S
+2005200227,Was the sensor inserted?,Observation,AIREADI,Observation,S
+2005200228,"If sensor was not inserted, please explain why:",Observation,AIREADI,Observation,S
+2005200230,Did you verify that the Dexcom sensor was initialized and recording?,Observation,AIREADI,Observation,S
+2005200231,Was the environmental sensor sent home with the participant?,Observation,AIREADI,Observation,S
+2005200232,Planned method of device return,Observation,AIREADI,Attribute,S
+2005200233,Was the participant given return instructions sheet and shipping box?,Procedure,AIREADI,Procedure,S
+2005200234,Demonstration of use performed,Procedure,AIREADI,Procedure,S
+2005200235,Demonstration of use NOT performed,Procedure,AIREADI,Procedure,S
+2005200236,Date device received back from participant,Observation,AIREADI,Observation,S
+2005200237,Data downloaded from transmitter?   Data downloaded/retrieved from device?,Observation,AIREADI,Clinical Observation,S
+2005200238,Less than 1 time,Meas Value,AIREADI,Answer,S
+2005200239,1 - 3 times,Meas Value,AIREADI,Answer,S
+2005200240,5 or more,Meas Value,AIREADI,Answer,S
+2005200241,2 or less,Meas Value,AIREADI,Answer,S
+2005200242,Less than 1,Meas Value,AIREADI,Answer,S
+2005200243,1 time or less,Meas Value,AIREADI,Answer,S
+2005200244,Within the past 2 years (1 year but less than 2 years ago),Meas Value,AIREADI,Answer,S
+2005200245,Cost/Insurance,Meas Value,AIREADI,Answer,S
+2005200246,Do not have/know an eye doctor,Meas Value,AIREADI,Answer,S
+2005200247,"Cannot get to the office/clinic (too far away, no transportation)",Meas Value,AIREADI,Answer,S
+2005200248,Could not get an appointment,Meas Value,AIREADI,Answer,S
+2005200249,No reason to go (no problem),Meas Value,AIREADI,Answer,S
+2005200250,Have not thought of it,Meas Value,AIREADI,Answer,S
+2005200251,Will be leaving labor force voluntarily,Meas Value,AIREADI,Answer,S
+2005200252,Covered,Meas Value,AIREADI,Answer,S
+2005200253,I do NOT have health insurance,Meas Value,AIREADI,Answer,S
+2005200254,I HAVE some kind of health insurance,Meas Value,AIREADI,Answer,S
+2005200255,Within the last 10 years (5 years but less than 10 years ago),Meas Value,AIREADI,Answer,S
+2005200256,There is NO place,Meas Value,AIREADI,Answer,S
+2005200257,There is MORE THAN ONE place,Meas Value,AIREADI,Answer,S
+2005200258,A doctor's office or health center,Meas Value,AIREADI,Answer,S
+2005200259,"Walk-in clinic, urgent care center, or retail clinic in a pharmacy or grocery store",Meas Value,AIREADI,Answer,S
+2005200260,A VA Medical Center or VA outpatient clinic,Meas Value,AIREADI,Answer,S
+2005200261,Does not go to one place most often,Meas Value,AIREADI,Answer,S
+2005200262,1 - 10 times,Meas Value,AIREADI,Answer,S
+2005200263,11 - 19 times,Meas Value,AIREADI,Answer,S
+2005200264,20 - 29 times,Meas Value,AIREADI,Answer,S
+2005200265,30 - 39 times,Meas Value,AIREADI,Answer,S
+2005200266,40 - 49 times,Meas Value,AIREADI,Answer,S
+2005200267,50 or more times,Meas Value,AIREADI,Answer,S
+2005200268,Does not apply to my neighborhood,Meas Value,AIREADI,Answer,S
+2005200269,There are no streets or roads in my neighborhood,Meas Value,AIREADI,Answer,S
+2005200270,6 or more,Meas Value,AIREADI,Answer,S
+2005200271,5000 miles or less,Meas Value,AIREADI,Answer,S
+2005200272,"5001 to 10,000 miles",Meas Value,AIREADI,Answer,S
+2005200273,"10,001 to 15.000 miles",Meas Value,AIREADI,Answer,S
+2005200274,"15,001 to 20,000 miles",Meas Value,AIREADI,Answer,S
+2005200275,"More than 20,000 miles",Meas Value,AIREADI,Answer,S
+2005200276,Data downloaded from device?,Observation,AIREADI,Clinical Observation,S
+2005200277,"In a typical week, how often do you engage in vigorous exercise? (Examples: hiking, jogging at 6 mph, shoveling, carrying heavy loads, bicycling fast (14-16 mph), playing basketball, playing soccer, playing tennis, or any activity during which you cannot say more than a few words without taking a breath)",Observation,AIREADI,Clinical Finding,S
+2005200278,"How often would you say that you engage in daily home exercise? (Examples: stretching, calisthenics, or yoga)",Observation,AIREADI,Procedure,S
+2005200279,Not an Adverse Event,Meas Value,AIREADI,Answer,S
+2005200280,Did not meet Inclusion/Exclusion criteria,Meas Value,AIREADI,Answer,S
+2005200281,Withdrawal by Subject,Meas Value,AIREADI,Answer,S
+2005200282,Geographic Inaccessibility,Observation,AIREADI,Context-dependent,S
+2005200283,Currently enrolled in a conflicting study,Observation,AIREADI,Clinical Finding,S
+2005200284,Protocol Deviation,Observation,AIREADI,Clinical Finding,S
+2005200285,Individual was under age 40,Meas Value,AIREADI,Answer,S
+2005200286,Individual is not needed at this time for recruitment goals,Observation,AIREADI,Clinical Finding,S
+2005200287,Individual had Type 1 Diabetes,Meas Value,AIREADI,Answer,S
+2005200288,In Person (Baseline),Observation,AIREADI,Procedure,S
+2005200289,OptoMed-Disc centered-CFP,Observation,AIREADI,Observable Entity,S
+2005200290,OptoMed-Mac centered-CFP,Observation,AIREADI,Observable Entity,S
+2005200291,Eidon-UWF Central-IR,Observation,AIREADI,Observable Entity,S
+2005200292,Eidon-UWF Central-FAF,Observation,AIREADI,Observable Entity,S
+2005200293,Eidon-UWF Central-CFP,Observation,AIREADI,Observable Entity,S
+2005200294,Eidon-UWF Nasal-CFP,Observation,AIREADI,Observable Entity,S
+2005200295,Eidon-UWF Temporal-CFP,Observation,AIREADI,Observable Entity,S
+2005200296,Eidon- Create Mosaic Image-CFP,Observation,AIREADI,Observable Entity,S
+2005200297,Spec-ONH-RC-HR-OCT,Observation,AIREADI,Observable Entity,S
+2005200298,Spec-PPole Mac-HR-61 lines-OCT,Observation,AIREADI,Observable Entity,S
+2005200299,Spec-Mac-20x20-HS-512 lines-OCTA,Observation,AIREADI,Observable Entity,S
+2005200300,Cirrus-Mac Cube-512x128-OCT,Observation,AIREADI,Observable Entity,S
+2005200301,Cirrus-Disc Cube-200x200-OCT,Observation,AIREADI,Observable Entity,S
+2005200302,Cirrus-Macula 6x6-OCTA,Observation,AIREADI,Observable Entity,S
+2005200303,Cirrus-Disc 6x6-OCTA,Observation,AIREADI,Observable Entity,S
+2005200304,FLIO-Mac-HS,Observation,AIREADI,Observable Entity,S
+2005200305,"When reflecting on your typical eating habits, which of the following options best describes how often you consume simple sugars?",Observation,AIREADI,Procedure,S
+2005200306,"In a typical day, how often do you consume whole grains? (Examples: include whole wheat, brown bread, or brown rice).",Observation,AIREADI,Procedure,S
+2005200307,"How often would you say that you engage in diabetes health education? (Examples:  consulting with a dietician, attending support groups, reading books on diabetes, using diabetes-focused websites, watching TV shows on health, or using health-focused apps on your phone or tablet)",Observation,AIREADI,Survey,S
+2005200308,How often do you inspect your feet?,Observation,AIREADI,Survey,S
+2005200309,Which of the following options best describes you with respect to physician care and medications?,Procedure,AIREADI,Survey,S
+2005200310, Diabetes Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200311, Diabetes Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S
+2005200312,At least 30 minutes daily 3 or more days a week,Meas Value,AIREADI,Answer,S
+2005200313,Less than 30 minutes daily less than 3 days a week,Meas Value,AIREADI,Answer,S
+2005200314,"Active (stairs, walks, housework)",Meas Value,AIREADI,Answer,S
+2005200315,Somewhat active,Meas Value,AIREADI,Answer,S
+2005200316,"Not Active (TV, computer, phone, use lifts)",Meas Value,AIREADI,Answer,S
+2005200317,Doing daily or almost daily,Meas Value,AIREADI,Answer,S
+2005200318,Irregular; once or twice a week,Meas Value,AIREADI,Answer,S
+2005200319,Rarely eat sweets,Meas Value,AIREADI,Answer,S
+2005200320,Occasionally eat sweets,Meas Value,AIREADI,Answer,S
+2005200321,Frequently eat sweets,Meas Value,AIREADI,Answer,S
+2005200322,Usually eat whole grain,Meas Value,AIREADI,Answer,S
+2005200323,Rarely eat whole grain,Meas Value,AIREADI,Answer,S
+2005200324,Usually eat white bread or white rice,Meas Value,AIREADI,Answer,S
+2005200325,Eat small portions and avoid second servings,Meas Value,AIREADI,Answer,S
+2005200326,Occasionally limit portions,Meas Value,AIREADI,Answer,S
+2005200327,Rarely or none; eat at buffets and restaurants with large portions,Meas Value,AIREADI,Answer,S
+2005200328,4-5 servings or pieces of fruits and raw vegetables per day,Meas Value,AIREADI,Answer,S
+2005200329,1-3 servings or pieces per day,Meas Value,AIREADI,Answer,S
+2005200330,"Regularly; at least monthly (dietician, support groups, books, websites, apps)",Meas Value,AIREADI,Answer,S
+2005200331,Occasionally; every 2-3 months,Meas Value,AIREADI,Answer,S
+2005200332,3 or more visits a year to the same doctor. Regular with medicines.,Meas Value,AIREADI,Answer,S
+2005200333,1-2 visits a year. Forgetting medicines frequently.,Meas Value,AIREADI,Answer,S
+2005200334,Rarely or none. Not taking 1 or more recommended medicines ,Meas Value,AIREADI,Answer,S
+2005200336,Mesopic LogMAR OD Score,Measurement,AIREADI,Clinical Observation,S
+2005200337,Mesopic LogMAR OS Score,Measurement,AIREADI,Clinical Observation,S
+2005200338,"OD: Value of final correct letter - Photopic, right eye",Measurement,AIREADI,Measurement,S
+2005200339,"OD: Number of misses prior to stopping - Photopic, right eye",Measurement,AIREADI,Measurement,S
+2005200340,"OS: Value of final correct letter - Photopic, left eye",Measurement,AIREADI,Measurement,S
+2005200341,"OS: Number of misses prior to stopping - Photopic, left eye",Measurement,AIREADI,Measurement,S
+2005200417,One 3ml EDTA tube collected,Observation,AIREADI,Observation,S
+2005200418,Two 6ml EDTA tubes collected,Observation,AIREADI,Observation,S
+2005200419,Two 5.0 ml Serum SST/Gold Top tubes collected,Observation,AIREADI,Observation,S
+2005200420,One PAXgene RNA tube collected,Observation,AIREADI,Observation,S
+2005200421,Two CPT tubes collected,Observation,AIREADI,Observation,S
+2005200422,Performed date of Pre-consent survey/form,Observation,AIREADI,Survey,S
+2005200423,Performed date of Consent survey/form ,Observation,AIREADI,Survey,S
+2005200424,Performed date of  paper consent,Observation,AIREADI,Survey,S
+2005200425,Performed date of  Consent Attestation,Observation,AIREADI,Survey,S
+2005200426,Performed date of  Participant contact survey/form,Observation,AIREADI,Survey,S
+2005200427,Performed date of  Demographic survey date ,Observation,AIREADI,Survey,S
+2005200428,Performed date of  Health survey ,Observation,AIREADI,Survey,S
+2005200429,Performed date of  Substance use survey ,Observation,AIREADI,Survey,S
+2005200430,Performed date of  CES-D-10 survey ,Observation,AIREADI,Survey,S
+2005200431,Performed date of PAID-5 DM survey ,Observation,AIREADI,Survey,S
+2005200432,Performed date of Diabetes survey,Observation,AIREADI,Survey,S
+2005200433,Performed date of Dietary survey,Observation,AIREADI,Survey,S
+2005200434,Performed date of Ophthalmic survey ,Observation,AIREADI,Survey,S
+2005200435,Performed date of PhenX SDOH survey,Observation,AIREADI,Survey,S
+2005200436,Performed date of PhenX Food Insecurity survey,Observation,AIREADI,Survey,S
+2005200437,Performed date of  PhenX Neighborhood Enviroment survey ,Observation,AIREADI,Survey,S
+2005200438,Performed date of PhenX Racial/Ethnic Discrimination survey ,Observation,AIREADI,Survey,S
+2005200439,Performed date of  medications assessment,Observation,AIREADI,Survey,S
+2005200440,Performed date of physical assessment,Observation,AIREADI,Procedure,S
+2005200441,Performed date of BCVA,Observation,AIREADI,Procedure,S
+2005200442,Performed date of photopic mars,Observation,AIREADI,Procedure,S
+2005200443,Performed date of Mesopic Mars,Observation,AIREADI,Procedure,S
+2005200444,Performed date of monofilament,Observation,AIREADI,Procedure,S
+2005200445,Performed date of MoCA,Observation,AIREADI,Procedure,S
+2005200446,Performed date of retinal imaging assessment,Observation,AIREADI,Procedure,S
+2005200447,Has a doctor or other healthcare professional ever told you that you have/had low blood pressure,Observation,AIREADI,Survey,S
+2005200448,Has a doctor or other healthcare professional ever told you that you have/had Parkinson's disease,Observation,AIREADI,Survey,S
+2005200449,Has a doctor or other healthcare professional ever told you that you have/had Dementia,Observation,AIREADI,Survey,S
+2005200450,Has a doctor or other healthcare professional ever told you that you have/had Alzheimer's disease,Observation,AIREADI,Survey,S
+2005200451,Has a doctor or other healthcare professional ever told you that you have other types of Dementia  or Alzheimer's Disease,Observation,AIREADI,Survey,S
+2005200452,Has a doctor or other healthcare professional ever told you that you have/had a mild cognitive impairment,Observation,AIREADI,Survey,S
+2005200453,Has a doctor or other healthcare professional ever told you that you have/had multiple sclerosis,Observation,AIREADI,Survey,S
+2005200454,Has a doctor or other healthcare professional ever told you that you have/had neurocognitive disorder,Observation,AIREADI,Survey,S
+2005200455,Neurocognitive disorder please specify,Observation,AIREADI,Survey,S
+2005200456,Has a doctor or other healthcare professional ever told you that you have/had arthritis,Observation,AIREADI,Survey,S
+2005200457,Has a doctor or other healthcare professional ever told you that you have/had osteoporosis,Observation,AIREADI,Survey,S
+2005200458,Has a doctor or other healthcare professional ever told you that you have/had cancer,Observation,AIREADI,Survey,S
+2005200459,Other cancer type please (specify),Observation,AIREADI,Survey,S
+2005200460,Has a doctor or other healthcare professional ever told you that you have/had chronic pulmonary (lung) disease,Observation,AIREADI,Survey,S
+2005200461,Has a doctor or other healthcare professional ever told you that you have/had digestive disease,Observation,AIREADI,Survey,S
+2005200462,Has a doctor or other healthcare professional ever told you that you have/had hearing impairment,Observation,AIREADI,Survey,S
+2005200463,Was your mother or father diagnosed with Type II Diabetes?,Observation,AIREADI,Survey,S
+2005200464,"If yes, please check all that apply: brother, sister, half-sister, half-brother",Observation,AIREADI,Survey,S
+2005200465,Glaucoma (in one or both eyes),Observation,AIREADI,Survey,S
+2005200466,Age related macular degeneration,Observation,AIREADI,Survey,S
+2005200467,Diabetic retinopathy (in one or both eyes),Observation,AIREADI,Survey,S
+2005200468,"Retinal vascular occlusion (""stroke in the eye or eye vessels"" - in one or both eyes)",Observation,AIREADI,Survey,S
+2005200469,Dry eye (in one or both eyes),Observation,AIREADI,Survey,S
+2005200470,"Have you been diagnosed with any conditions not listed above? (any condition, not just eyes)",Observation,AIREADI,Survey,S
+2005200471,Has a doctor or other healthcare professional ever told you that you have/had obesity,Observation,AIREADI,Survey,S
+2005200472,Other (specify),Observation,AIREADI,Survey,S
+2005200473,Do you use marijuana now?,Observation,AIREADI,Survey,S
+2005200474,Date when physical activity monitor was given to patient,Observation,AIREADI,Observation,S
+2005200475,Date sensor inserted,Observation,AIREADI,Observation,S
+2005200476,Date when continuous glucose monitor was given to participant,Observation,AIREADI,Observation,S
+2005200477,Performed date of FAQ survey,Observation,AIREADI,Survey,S
+2005200478,Date when current medication was collected,Observation,AIREADI,Survey,S
+2005200479,Performed date of screening survey,Observation,AIREADI,Survey,S
+2005200480,Do you speak another language at home?,Observation,AIREADI,Survey,S
+2005200481,Medication Name,Observation,AIREADI,Survey,S
+2005200482,"If Other, please specify:",Observation,AIREADI,Survey,S
+2005200483,Environmental sensor returned?,Observation,AIREADI,Survey,S
+2005200484,"If Other, please specify:",Observation,AIREADI,Survey,S
+2005200485,Specify other,Observation,AIREADI,Survey,S
+2005200486,"OD: Value of final correct letter - Mesopic, right eye",Measurement,AIREADI,Measurement,S
+2005200487,"OD: Number of misses prior to stopping - Mesopic, right eye",Measurement,AIREADI,Measurement,S
+2005200488,"OS: Value of final correct letter - Mesopic, left eye",Measurement,AIREADI,Measurement,S
+2005200489,"OS: Number of misses prior to stopping - Mesopic, left eye",Measurement,AIREADI,Measurement,S
+2005200493,"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S
+2005200494,"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S
+2005200495,"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S
+2005200496,"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S
+2005200497,"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S
+2005200498,"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S
+2005200499,"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S
+2005200500,"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S
+2005200501,"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S
+2005200502,How often have you been treated unfairly by strangers because of your race/ethnic group? How often in the past year?,Observation,AIREADI,Survey,S
+2005200503,How often have you been treated unfairly by strangers because of your race/ethnic group? How often in your entire life?,Observation,AIREADI,Survey,S
+2005200504,"How often have you been treated unfairly by strangers because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S
+2005200505,"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S
+2005200506,"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S
+2005200507,"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S
+2005200508,How often have you been treated unfairly by neighbors because of your race/ethnic group? How often in the past year?,Observation,AIREADI,Survey,S
+2005200509,How often have you been treated unfairly by neighbors because of your race/ethnic group? How often in your entire life?,Observation,AIREADI,Survey,S
+2005200510,"How often have you been treated unfairly by neighbors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S
+2005200511,"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S
+2005200512,"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S
+2005200513,"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S
+2005200514,How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? How often in the past year?,Observation,AIREADI,Survey,S
+2005200515,How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? How often in your entire life?,Observation,AIREADI,Survey,S
+2005200516,"How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S
+2005200517,"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S
+2005200518,"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S
+2005200519,"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S
+2005200520,How often have people misunderstood your intentions and motives because of your race/ethnic group? How often in the past year?,Observation,AIREADI,Survey,S
+2005200521,How often have people misunderstood your intentions and motives because of your race/ethnic group? How often in your entire life?,Observation,AIREADI,Survey,S
+2005200522,"How often have people misunderstood your intentions and motives because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S
+2005200523,How often did you want to tell someone off for being racist towards you but didn't say anything? How often in the past year?,Observation,AIREADI,Survey,S
+2005200524,How often did you want to tell someone off for being racist towards you but didn't say anything? How often in your entire life?,Observation,AIREADI,Survey,S
+2005200525,"How often did you want to tell someone off for being racist towards you but didn't say anything? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S
+2005200526,How often have you been really angry about something racist that was done to you? How often in the past year?,Observation,AIREADI,Survey,S
+2005200527,How often have you been really angry about something racist that was done to you? How often in your entire life?,Observation,AIREADI,Survey,S
+2005200528,"How often have you been really angry about something racist that was done to you? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S
+2005200529,"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? How often in the past year?",Observation,AIREADI,Survey,S
+2005200530,"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? How often in your entire life?",Observation,AIREADI,Survey,S
+2005200531,"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S
+2005200532,How often have you been called a racist name? How often in the past year?,Observation,AIREADI,Survey,S
+2005200533,How often have you been called a racist name? How often in your entire life?,Observation,AIREADI,Survey,S
+2005200534,"How often have you been called a racist name? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S
+2005200535,How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? How often in the past year?,Observation,AIREADI,Survey,S
+2005200536,How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? How often in your entire life?,Observation,AIREADI,Survey,S
+2005200537,"How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S
+2005200538,"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S
+2005200539,"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S
+2005200540,"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S
+2005200541,How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In the Past Year?,Observation,AIREADI,Survey,S
+2005200542,How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In your entire life?,Observation,AIREADI,Survey,S
+2005200543,"How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S
+2005200544,Has your doctor or other health care provider ever told you that you have Type 1 diabetes mellitus,Observation,AIREADI,Survey,S
+2005200545,Has your doctor or other health care provider ever told you that you have Type 2 diabetes mellitus,Observation,AIREADI,Survey,S
+2005200546,Has your doctor or other health care provider ever told you that you have Prediabetes,Observation,AIREADI,Survey,S
+2005200547,Has your doctor or other health care provider ever told you that you have Elevated A1C levels (elevated blood sugars),Observation,AIREADI,Survey,S
+2005200548,"Do you take pills to control your A1C and blood glucose levels? Examples: Metformin (Glucophage, Glumetza, Fortamet, Riomet), Glucotrol, Amaryl, DiaBeta, Blynase PresTab, Micronase, Actos, Avandia, Precose, Glyset, Prandin, Starlix, Januvia, Onglyza, Tradjenta, Nesina, Invokana, Farxiga, Jardiance, Welchol, and Cyclocet",Observation,AIREADI,Survey,S
+2005200549,Do you inject insulin to control your blood glucose levels?,Observation,AIREADI,Survey,S
+2005200550,"Do you use other injections to control your blood glucose levels?  Examples: Victoza, Ozempic, Symlin, Tanzeum, and Trulicity",Observation,AIREADI,Survey,S
+2005200551,At what age did you start drinking alcohol? (Age started - years old),Observation,AIREADI,Survey,S
+2005200552,"OD: Log Contrast Sensitivity - Mesopic, right eye",Measurement,AIREADI,Measurement,S
+2005200553,"OS: Log Contrast Sensitivity - Mesopic, left eye",Measurement,AIREADI,Measurement,S
+2005200555,Activity monitor returned?,Observation,AIREADI,Survey,S
+2005200556,Dexcom G6 transmitter returned?,Observation,AIREADI,Survey,S
+2005200557,"What is your ancestry or ethnic origin?(Examples: Italian, Jamaican, African American, Cambodian, Cape Verdean, Cherokee, Navajo, Nez Pearce, Norwegian, Dominican, French Canadian, Haitian, Korean, Lebanese, Polish, Nigerian, Mexican, Taiwanese, Ukrainian, and so on.)",Observation,AIREADI,Survey,S
+2005200558,"If this was an adverse event, was your site PI notified?",Observation,AIREADI,Event,S
+2005200559,"If yes, please give a brief description along with the type(s) of events",Observation,AIREADI,Observation,S
+2005200344,Time taken to do trails in seconds,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200345,Cube drawings score,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200346,Time taken to do cube in seconds,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200347,Time taken to do clock in seconds,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200348,Animal name recall task score,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200349,Time in seconds to perform the animal name recall task,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200350,Words correctly repeated (1st trial) score,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200351,Time in seconds to perform the words correctly repeated (1st trial),Measurement,AIREADI-MOCA,Observable Entity,S
+2005200352,Words correctly repeated (2nd trial) score,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200353,Time in seconds to perform the words correctly repeated (2nd trial),Measurement,AIREADI-MOCA,Observable Entity,S
+2005200354,Time in seconds to perform the repeating digits task,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200355,Letter tapping score,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200356,Time in seconds to perform the letter tapping task,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200357,Serial 7 subtraction score,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200358,Time in seconds to perform the serial 7 subtraction task,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200359,Repeats sentences II score,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200360,Time in seconds to perform repeats sentences II task,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200361,Maximal one-minute recall of words beginning with 'F' score,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200362,Time in seconds to perform the words beginning with 'F' recall task,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200363,MOCA abstraction score,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200364,Time in seconds to perform MOCA abstraction task,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200365,MOCA delayed recall with no cue score,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200366,Time in seconds to perform the MOCA delayed recall with no cue task,Measurement,AIREADI-MOCA,Observable Entity,S
+2005200367,"MOCA orientation date, month, year, day, place, city score",Measurement,AIREADI-MOCA,Observable Entity,S
+2005200368,"Time in seconds to perform the MOCA orientation date, month, year, day, place, city task",Measurement,AIREADI-MOCA,Observable Entity,S
+2005200369,Age in years (3-4 year span),Observation,AIREADI-MOCA,Observable Entity,S
+2005200370,"MOCA delayed recall with no cue, cue, and multiple choice cue (Combined score)",Measurement,AIREADI-MOCA,Observable Entity,S
