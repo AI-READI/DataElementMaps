@@ -1,100 +1,94 @@
 FORM_NAME,FIELD_ID,SRC_CODE,SRC_CODE_ID,TARGET_CONCEPT_ID,LOCAL_CONCEPT_ID,TARGET_CONCEPT_NAME,TARGET_DOMAIN_ID,TARGET_VOCABULARY_ID,TARGET_CONCEPT_CLASS_ID,TARGET_STANDARD_CONCEPT,TARGET_CONCEPT_CODE,PREDICATE_ID,CONFIDENCE,MODIFIER,NOTES
-ehr_information,,record_id,,none - OPS,,,,,,,N/A - operational variable,,,,
-ehr_information,,mrn,,0,,Medical record number [Identifier],Observation,LOINC,Clinical Observation,S,46106-1,skos:exactMatch,1,,3043495
-ehr_information,,brthdat,,0,,Birth date,Observation,LOINC,Clinical Observation,S,21112-8,skos:exactMatch,1,,Prev ID: 3022007
-ehr_information,,sex,,0,,Sex assigned at birth,Observation,LOINC,Clinical Observation,S,76689-9,skos:exactMatch,1,,46235213
-ehr_information,,language,,0,,Language.primary,Observation,LOINC,Clinical Observation,S,45402-5,skos:exactMatch,1,,3043205
-ehr_information,,race_ehr,,0,,Race,Observation,LOINC,Clinical Observation,S,32624-9,skos:exactMatch,1,,3046853
-ehr_information,,ethnic_ehr,,0,,Ethnicity,Observation,SNOMED,Qualifier Value,S,7.23621E+14,skos:exactMatch,1,,44803968
-ehr_information,,fname,,0,,First (Given) name Person,Observation,LOINC,Clinical Observation,S,97848-6,skos:narrowMatch,1,,1617559
-ehr_information,,lname,,0,,Last (Family) name Person,Observation,LOINC,Clinical Observation,S,97847-8,skos:narrowMatch,1,,1617135
-ehr_information,,home_ph,,0,,Contact Phone number,Observation,LOINC,Clinical Observation,S,89060-8,skos:broadMatch,0.75,Home,"1 = Home, 2 = Cell, 3 = Alternate, 4 = Alternate Cell"
-ehr_information,,cell_ph,,0,,Contact Phone number,Observation,LOINC,Clinical Observation,S,89060-8,skos:broadMatch,0.75,Cell,"1 = Home, 2 = Cell, 3 = Alternate, 4 = Alternate Cell"
-ehr_information,,email,,0,,Contact email address,Observation,LOINC,Clinical Observation,S,89058-2,skos:closeMatch,1,,36303592
-mailing_information,,street,,0,,Street,Meas Value,LOINC,Answer,S,LA28897-9,skos:broadMatch,0.75,,36309067
-mailing_information,,city,,0,,City,Observation,LOINC,Survey,S,68997-6,skos:exactMatch,1,,40771522
-mailing_information,,state,,0,,State of residence,Observation,LOINC,Survey,S,46499-0,skos:exactMatch,1,,3052558
-mailing_information,,zip,,0,,Postal code [Location],Observation,LOINC,Clinical Observation,S,45401-7,skos:closeMatch,1,,3043579
-recruitment_survey_management,,siteid,,0,,Site,Observation,SNOMED,Attribute,S,10546003,skos:exactMatch,1,,4022057
-recruitment_survey_management,,age,,0,,Age,Observation,SNOMED,Qualifier Value,S,397669002,skos:exactMatch,1,,4265453
-recruitment_survey,,reccmpdat,,3039611,,Survey reporting period start date,Observation,LOINC,Survey,S,52832-3,skos:closeMatch,0.75,,Performed on value_as_concept_id = 1035260
-recruitment_survey,,recruit_nd,,915709,,Patient survey results not available,Observation,HCPCS,HCPCS,S,G9604,skos:closeMatch,0.75,,LA10996-9
 recruitment_survey,,recstartts,,2005200000,2005200000,Recruitment Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
 recruitment_survey,,reccmpts,,2005200001,2005200001,Recruitment Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
+faq_survey,,faqcmpdat,,2005200477,2005200477,Performed date of FAQ survey,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 faq_survey,,faqstartts,,2005200002,2005200002,FAQ Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 faq_survey,,faqcmpts,,2005200003,2005200003,FAQ Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+screening_survey,,scrcmpdat,,2005200479,2005200479,Performed date of screening survey,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+screening_survey,,mhterm_dm1,,2005200544,2005200544,Has your doctor or other health care provider ever told you that you have Type 1 diabetes mellitus,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+screening_survey,,mh_a1c,,2005200547,2005200547,Has your doctor or other health care provider ever told you that you have Elevated A1C levels (elevated blood sugars),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,269823000
+screening_survey,,mhterm_dm2,,2005200545,2005200545,Has your doctor or other health care provider ever told you that you have Type 2 diabetes mellitus,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA10552-0 | 44054006
+screening_survey,,mhterm_predm,,2005200546,2005200546,Has your doctor or other health care provider ever told you that you have Prediabetes,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,714628002
+screening_survey,,cmtrt_a1c,,2005200548,2005200548,"Do you take pills to control your A1C and blood glucose levels? Examples: Metformin (Glucophage, Glumetza, Fortamet, Riomet), Glucotrol, Amaryl, DiaBeta, Blynase PresTab, Micronase, Actos, Avandia, Precose, Glyset, Prandin, Starlix, Januvia, Onglyza, Tradjenta, Nesina, Invokana, Farxiga, Jardiance, Welchol, and Cyclocet",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,4016042 | 170746002
+screening_survey,,cmtrt_insln,,2005200549,2005200549,Do you inject insulin to control your blood glucose levels?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,440922 | 170747006
+screening_survey,,cmtrt_glcs,,2005200550,2005200550,"Do you use other injections to control your blood glucose levels?  Examples: Victoza, Ozempic, Symlin, Tanzeum, and Trulicity",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,36714369 | 719566006
 screening_survey,,cmtrt_lfst,,2005200004,2005200004,"Do you use lifestyle changes to control your A1C and blood glucose levels? Examples: regular exercise, avoiding sugary foods and beverages, eating a balanced diet with lots of vegetables, sticking to a consistent eating schedule",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,1148971005
+screening_survey,,ancestry,,2005200557,2005200557,"What is your ancestry or ethnic origin?(Examples: Italian, Jamaican, African American, Cambodian, Cape Verdean, Cherokee, Navajo, Nez Pearce, Norwegian, Dominican, French Canadian, Haitian, Korean, Lebanese, Polish, Nigerian, Mexican, Taiwanese, Ukrainian, and so on.)",Observation,AIREADI,Survey,S,cope_a_11,skos:exactMatch,1,,Removed local extension code 2005200005
 screening_survey,,scrstartts,,2005200006,2005200006, Screening Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
-screening_survey,,rp_childpot,,40768856,,Are you currently pregnant [PhenX],Observation,LOINC,Clinical Observation,S,66174-4,skos:exactMatch,1,,LA14670-6
 screening_survey,,scrcmpts,,2005200007,2005200007, Screening Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
+preconsent_survey,,preconcmpdat,,2005200422,2005200422,Performed date of Pre-consent survey/form,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
 preconsent_survey,,preconstartts,,2005200008,2005200008, Pre-consent Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
 preconsent_survey,,preconcmpts,,2005200009,2005200009, Pre-consent Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
-screening_survey,mhterm_dm2,mh_dm_age,,4307859,,Age at diagnosis,Observation,SNOMED,Observable Entity,S,423493009,skos:closeMatch,0.75,,
+consent_survey,,icf_dat,,2005200423,2005200423,Performed date of Consent survey/form ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
+consent_survey,,c184390_dat,,2005200424,2005200424,Performed date of  paper consent,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
+consent_survey,,icfsvyts,,2005200218,2005200218, Consent Survey Start Timestamp,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
+consent_survey,,icfcmpts,,2005200219,2005200219,Consent Survey Completed Timestamp,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
+staff_consent_attestation_survey,,icfa_dat,,2005200425,2005200425,Performed date of  Consent Attestation,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
+participant_contact_information_survey,,prtcmpdat,,2005200426,2005200426,Performed date of  Participant contact survey/form,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
+demographics_survey,,dmgcmpdat,,2005200427,2005200427,Performed date of  Demographic survey date ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
+demographics_survey,,dmgstartts,,2005200223,2005200223,Demographics Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
+demographics_survey,,dmgcmpts,,2005200224,2005200224,Demograhics Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
+health_survey,,mhcmpdat,,2005200428,2005200428,Performed date of  Health survey ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
 health_survey,,mhoccur_circ,,2005200014,2005200014,"Has a doctor or other healthcare professional ever told you that you have/had Circulation problems (Examples: arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins)",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,67434-1
+health_survey,,mhoccur_lbp,,2005200447,2005200447,Has a doctor or other healthcare professional ever told you that you have/had low blood pressure,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Creating local code
+health_survey,,mhoccur_pd,,2005200448,2005200448,Has a doctor or other healthcare professional ever told you that you have/had Parkinson's disease,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA27533-1
+health_survey,,mhoccur_ad,,2005200449,2005200449,Has a doctor or other healthcare professional ever told you that you have/had Dementia,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Removed local code 2005200015
+health_survey,,mhcat_adot,,2005200450,2005200450,Has a doctor or other healthcare professional ever told you that you have/had Alzheimer's disease,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+health_survey,,mhcat_dmtaot,,2005200451,2005200451,Has a doctor or other healthcare professional ever told you that you have other types of Dementia  or Alzheimer's Disease,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA6310-2
+health_survey,,mhoccur_cogn,,2005200452,2005200452,Has a doctor or other healthcare professional ever told you that you have/had a mild cognitive impairment,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+health_survey,,mhoccur_ms,,2005200453,2005200453,Has a doctor or other healthcare professional ever told you that you have/had multiple sclerosis,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,use 374919 for yes
+health_survey,,mhoccur_cns,,2005200454,2005200454,Has a doctor or other healthcare professional ever told you that you have/had neurocognitive disorder,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,use 46271045 for yes
+health_survey,,mhoccur_cnsot,,2005200455,2005200455,Neurocognitive disorder please specify,Observation,AIREADI,Survey,S,,skos:exactMatch,1,value_as_concept_id|36309562 ,LA28880-5
+health_survey,,mhoccur_ra,,2005200456,2005200456,Has a doctor or other healthcare professional ever told you that you have/had arthritis,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,use 4291025 for yes
+health_survey,,mhoccur_oa,,2005200457,2005200457,Has a doctor or other healthcare professional ever told you that you have/had osteoporosis,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA10527-2
+health_survey,,mhoccur_ca,,2005200458,2005200458,Has a doctor or other healthcare professional ever told you that you have/had cancer,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+health_survey,,mhoccur_cnrot,,2005200459,2005200459,Other cancer type please (specify),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+health_survey,,mhoccur_plm,,2005200460,2005200460,Has a doctor or other healthcare professional ever told you that you have/had chronic pulmonary (lung) disease,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+health_survey,,mhoccur_gi,,2005200461,2005200461,Has a doctor or other healthcare professional ever told you that you have/had digestive disease,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 health_survey,,mhoccur_ua,,2005200016,2005200016,"Has a doctor or other healthcare professional ever told you that you have/had Urinary problems (Examples: urinary tract infections, incontinence, prostate problems)",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA17005-2
 health_survey,,mhoccur_rnl,,2005200017,2005200017,Has a doctor or other healthcare professional ever told you that you have/had Kidney problems,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA4591-9
+health_survey,,mhoccur_ear,,2005200462,2005200462,Has a doctor or other healthcare professional ever told you that you have/had hearing impairment,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+health_survey,,mhoccur_obs,,2005200471,2005200471,Has a doctor or other healthcare professional ever told you that you have/had obesity,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 health_survey,,fh_dm2pt,,2005200018,2005200018,Were either of your parents diagnosed with Type II Diabetes?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,160303001
+health_survey,,fh_dm2ptsp,,2005200463,2005200463,Was your mother or father diagnosed with Type II Diabetes?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 health_survey,,fh_dm2sb,,2005200019,2005200019,Has a sibling been diagnosed with Type II Diabetes?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,430679000
-screening_survey,,scrsex,,46235213,,Sex assigned at birth,Observation,LOINC,Clinical Observation,S,76689-9,skos:closeMatch,1,,
-screening_survey,,scrsexot,,46235213,,Sex assigned at birth,Observation,LOINC,Clinical Observation,S,76689-9,skos:exactMatch,1,,LA6310-2
-screening_survey,,ethnic,,42868351,,"Hispanic, latino-a, or spanish origin",Observation,LOINC,Clinical Observation,S,69854-8,skos:exactMatch,1,,
-screening_survey,,ethnicot,,42868351,,"Hispanic, latino-a, or spanish origin",Observation,LOINC,Clinical Observation,S,69854-8,skos:exactMatch,1,,LA6310-2
-screening_survey,,ethnicscore,,42868351,,"Hispanic, latino-a, or spanish origin",Observation,LOINC,Clinical Observation,S,69854-8,skos:closeMatch,1,,
-screening_survey,,race,,3050381,,Race or ethnicity,Observation,LOINC,Clinical Observation,S,46463-6,skos:closeMatch,1,,
-screening_survey,,raceot,,3050381,,Race or ethnicity,Observation,LOINC,Clinical Observation,S,46463-6,skos:closeMatch,1,,LA6310-2
-screening_survey,,racetrib,,36660477,,Tribal affiliation,Observation,LOINC,Clinical Observation,S,95370-3,skos:closeMatch,1,,
-screening_survey,,race2,,3046853,,Race,Observation,LOINC,Clinical Observation,S,32624-9,skos:closeMatch,1,,
+health_survey,,fh_dm2sbsp,,2005200464,2005200464,"If yes, please check all that apply: brother, sister, half-sister, half-brother",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,each answer options are mapped based on each checkboxes clicked
+health_survey,,mhoccur_glc,,2005200465,2005200465,Glaucoma (in one or both eyes),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,23986001
+health_survey,,mhoccur_amd,,2005200466,2005200466,Age related macular degeneration,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,267718000
 health_survey,,mhoccur_crt,,2005200020,2005200020,Cataracts (in one or both eyes),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA16306-5
+health_survey,,mhoccur_pdr,,2005200467,2005200467,Diabetic retinopathy (in one or both eyes),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,45672-3
+health_survey,,mhoccur_rvo,,2005200468,2005200468,"Retinal vascular occlusion (""stroke in the eye or eye vessels"" - in one or both eyes)",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,73757007
+health_survey,,mhoccur_ded,,2005200469,2005200469,Dry eye (in one or both eyes),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,162290004
+health_survey,,mhoccur_yn,,2005200470,2005200470,"Have you been diagnosed with any conditions not listed above? (any condition, not just eyes)",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,76472-0
+health_survey,,mhoccur_ot,,2005200472,2005200472,Other (specify),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA6310-2
 health_survey,,mhstartts,,2005200021,2005200021, Health Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
 health_survey,,mhcmpts,,2005200022,2005200022, Heath Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
-screening_survey,,racescore,,none - OPS,,,,,,,,,,,
+substance_use_survey,,sucmpdat,,2005200429,2005200429,Performed date of  Substance use survey ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
 substance_use_survey,,susmkstoage,,2005200023,2005200023,How many total years have you smoked?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,88029-4
+substance_use_survey,,sualcage,,2005200551,2005200551,At what age did you start drinking alcohol? (Age started - years old),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 substance_use_survey,,subrkncf,,2005200024,2005200024,Have you had any beer or ale in the past year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,363905002
 substance_use_survey,,subrdosfr,,2005200025,2005200025,"During the average week, how many 12 oz. bottles or cans of beer do you usually drink? (Number of bottles or cans per week)",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,363905002
 substance_use_survey,,suwnkncf,,2005200026,2005200026,Have you had any wine in the past year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,363905002
-consent_survey,,c184390,,3018196,,Informed consent obtained,Observation,LOINC,Clinical Observation,S,19826-7,skos:closeMatch,1,,
 substance_use_survey,,suwndosfr,,2005200027,2005200027,"During the average week, how many 5 oz. glasses of wine do you usually drink?  The average wine bottle has 5 servings. (Number of glasses per week)",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,363905002
-consent_survey,,icf_version,,0,,Form version,Observation,LOINC,Survey,S,68356-5,skos:closeMatch,0.75,,40770946
-consent_survey,,icf_consent,,0,,Informed consent obtained,Observation,LOINC,Clinical Observation,S,19826-7,skos:closeMatch,0.75,,3018196
-consent_survey,,icf_fname,,0,,First (Given) name Person,Observation,LOINC,Clinical Observation,S,97848-6,skos:closeMatch,1,,1617559
-consent_survey,,icf_lname,,0,,Last (Family) name Person,Observation,LOINC,Clinical Observation,S,97847-8,skos:closeMatch,1,,1617135
-consent_survey,,icf_sign,,0,,Consent given for observational study participation,Observation,SNOMED,Clinical Finding,S,736814000,skos:relatedMatch,0.5,,42537431
 substance_use_survey,,sulqkncf,,2005200028,2005200028,"Have you had any liquor in the past year, such as brandy, whiskey, vodka, gin, schnapps, cocktails, or liqueurs?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,363905002
 substance_use_survey,,sulqdosfr,,2005200029,2005200029,"During the average week, how many 1.5 oz. of liquor do you usually drink, either as shots or in mixed cocktails? (Number of drinks per week)",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,363905002
-staff_consent_attestation_survey,,icfa_attestation,,0,,Written consent completed,Observation,SNOMED,Clinical Finding,S,5.821E+12,skos:closeMatch,0.75,,765499
 substance_use_survey,,sualcdrv,,2005200030,2005200030,"Do you drive after having a drink, even if it is only one drink?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,405137009
-staff_consent_attestation_survey,,icfa_fname,,0,,Personnel First (Given) name,Observation,LOINC,Clinical Observation,S,71739-7,skos:closeMatch,1,,42869495
-staff_consent_attestation_survey,,icfa_lname,,0,,Personnel Last (Family) name,Observation,LOINC,Clinical Observation,S,71740-5,skos:closeMatch,1,,42869496
 substance_use_survey,,suvpkncf1,,2005200031,2005200031,Have you ever vaped or used e-cigarettes?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,OMOP5181836
-participant_contact_information_survey,,parcon_nd,,0,,No response,Observation,HCPCS,HCPCS,S,G9604,skos:closeMatch,1,,45877597
-participant_contact_information_survey,,prt_phone,,0,,Contact Phone number,Observation,LOINC,Clinical Observation,S,89060-8,skos:broadMatch,1,,36303303
-participant_contact_information_survey,,prt_phone_2,,0,,Contact Phone number,Observation,LOINC,Clinical Observation,S,89060-8,skos:broadMatch,0.75,Alternate,"1 = Home, 2 = Cell, 3 = Alternate, 4 = Alternate Cell"
-participant_contact_information_survey,,prt_cell_phone_2,,0,,Contact Phone number,Observation,LOINC,Clinical Observation,S,89060-8,skos:broadMatch,0.75,Alternate Cell,"1 = Home, 2 = Cell, 3 = Alternate, 4 = Alternate Cell"
-participant_contact_information_survey,,prefmthd,,0,,Preferred mode of communication,Observation,SNOMED,Observable Entity,S,428330008,skos:closeMatch,1,,4177227
-participant_contact_information_survey,,prtstartts,,0,,Time to complete survey,Observation,LOINC,Survey,S,99423-6,skos:relatedMatch,0.5,,1988422
 substance_use_survey,,suvpstage,,2005200032,2005200032,At what age did you start vaping or using e-cigarettes? (Age started - years old),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,OMOP5181836
-demographics_survey,,brthmm,,0,,Month,Meas Value,LOINC,Answer,S,LA14217-6,skos:closeMatch,1,,45881910
-demographics_survey,,brthdd,,0,,Day,Meas Value,LOINC,Answer,S,LA15804-0,skos:closeMatch,1,,45881908
-demographics_survey,,brthyy,,4078999,,Calendar year,Observation,SNOMED,Qualifier Value,S,277267003,skos:closeMatch,1,,
-demographics_survey,,cage,,4265453,,Age,Observation,SNOMED,Qualifier Value,S,397669002,skos:exactMatch,1,,
-demographics_survey,,cl_maristat,,4053609,,Marital status,Observation,SNOMED,Observable Entity,S,125680007,skos:exactMatch,1,,
-demographics_survey,,cl_maristatot,,4053609,,Marital status,Observation,SNOMED,Observable Entity,S,125680007,skos:exactMatch,1,,LA6310-2
-demographics_survey,,genderid,,46235215,,Gender identity,Observation,LOINC,Clinical Observation,S,76691-5,skos:exactMatch,1,,
-demographics_survey,,genderidot,,46235215,,Gender identity,Observation,LOINC,Clinical Observation,S,76691-5,skos:exactMatch,1,,LA6310-2
 substance_use_survey,,suvpcdur,,2005200033,2005200033,Do you vape or use e-cigarettes now?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,OMOP5181836
 substance_use_survey,,suvptoage,,2005200034,2005200034,How many total years have you vaped or used e-cigarettes?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,OMOP5181836
 substance_use_survey,,suvpdosfr,,2005200035,2005200035,"When you vaped or used e-cigarettes, approximately how many days in a typical week would you use it?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,103335007
-health_survey,,mhoccur_mi,,40761439,,Ever told by doctor that you had a myocardial infarction or heart attack,Observation,LOINC,Survey,S,58338-5,skos:exactMatch,1,,
-health_survey,,mhoccur_cvdot,,40766916,,Has doctor ever told you that you had heart trouble [PhenX],Observation,LOINC,Survey,S,64204-1,skos:exactMatch,1,,
-health_survey,,mhoccur_strk,,40768407,,Have you ever been told by a physician that you had a stroke [PhenX],Observation,LOINC,Survey,S,65718-9,skos:exactMatch,1,,
 substance_use_survey,,sumrjkncf,,2005200036,2005200036,"Have you ever used marijuana (cannabis)? (This includes smoking marijuana, using cannabis concentrates, and edibles.)",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,733460004
-health_survey,,mhoccur_clsh,,40761393,,Ever told by doctor or nurse that you have high blood cholesterol,Observation,LOINC,Clinical Observation,S,58292-4,skos:exactMatch,1,,
-health_survey,,mhoccur_hbp,,40761396,,Ever told by doctor or nurse that you have high blood pressure,Observation,LOINC,Survey,S,58295-7,skos:exactMatch,1,,
+substance_use_survey,,sumrjcdur,,2005200473,2005200473,Do you use marijuana now?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,2005200473
 substance_use_survey,,sumrjtrt,,2005200037,2005200037,In what form do you usually use marijuana?  (check all that apply),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,733460004
 substance_use_survey,,sumrjceddur,,2005200038,2005200038,How many total years have you used marijuana?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,733460004
 substance_use_survey,,sumrjfr,,2005200039,2005200039,"When you used marijuana, approximately how many days in a typical week would you use it?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,733460004
 substance_use_survey,,sustartts,,2005200040,2005200040, Substance Use Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
 substance_use_survey,,sucmpts,,2005200041,2005200041, Substance Use Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
+cesd10_survey,,cesmpdat,,2005200430,2005200430,Performed date of  CES-D-10 survey ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
+cesd10_survey,,cesstartts,,2005200139,2005200139, CES-D-10 Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
+cesd10_survey,,cescmpts,,2005200140,2005200140, CES-D-10 Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
+paid5_dm_survey,,paidcmpdat,,2005200431,2005200431,Performed date of PAID-5 DM survey ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
 paid5_dm_survey,,paid_scrd,,2005200044,2005200044,Feeling scared when you think about living with diabetes,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,723113005
 paid5_dm_survey,,paid_dpr,,2005200045,2005200045,Feeling depressed when you think about living with diabetes,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,366979004
 paid5_dm_survey,,paid_wr,,2005200046,2005200046,Worrying about the future and the possibility of serious complications,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,247808006
@@ -103,6 +97,17 @@ paid5_dm_survey,,paid_cml,,2005200048,2005200048,Coping with complications of di
 paid5_dm_survey,,paidscore,,2005200049,2005200049, PAID score,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,710834001
 paid5_dm_survey,,paidstartts,,2005200050,2005200050, PAID-5 DM Survey Start Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
 paid5_dm_survey,,paidcmpts,,2005200051,2005200051, PAID-5 DM Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
+diabetes_survey,,dmlcmpdat,,2005200432,2005200432,Performed date of Diabetes survey,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
+diabetes_survey,,dmlvex,,2005200277,2005200277,"In a typical week, how often do you engage in vigorous exercise? (Examples: hiking, jogging at 6 mph, shoveling, carrying heavy loads, bicycling fast (14-16 mph), playing basketball, playing soccer, playing tennis, or any activity during which you cannot say more than a few words without taking a breath)",Observation,AIREADI,Clinical Finding,S,,skos:exactMatch,1,,408579009
+diabetes_survey,,dmlhex,,2005200278,2005200278,"How often would you say that you engage in daily home exercise? (Examples: stretching, calisthenics, or yoga)",Observation,AIREADI,Procedure,S,,skos:exactMatch,1,,229075007
+diabetes_survey,,dmlsugar,,2005200305,2005200305,"When reflecting on your typical eating habits, which of the following options best describes how often you consume simple sugars?",Observation,AIREADI,Procedure,S,,skos:exactMatch,1,,710848001
+diabetes_survey,,dmlgrain,,2005200306,2005200306,"In a typical day, how often do you consume whole grains? (Examples: include whole wheat, brown bread, or brown rice).",Observation,AIREADI,Procedure,S,,skos:exactMatch,1,,710848001
+diabetes_survey,,dmledu,,2005200307,2005200307,"How often would you say that you engage in diabetes health education? (Examples:  consulting with a dietician, attending support groups, reading books on diabetes, using diabetes-focused websites, watching TV shows on health, or using health-focused apps on your phone or tablet)",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,398773005
+diabetes_survey,,dmlfeet,,2005200308,2005200308,How often do you inspect your feet?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,4.7251E+13
+diabetes_survey,,dmlmd,,2005200309,2005200309,Which of the following options best describes you with respect to physician care and medications?,Procedure,AIREADI,Survey,S,,skos:exactMatch,1,,410119004
+diabetes_survey,,dmlstartts,,2005200310,2005200310, Diabetes Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
+diabetes_survey,,dmlcmpts,,2005200311,2005200311, Diabetes Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
+dietary_survey,,dietcmpdat,,2005200433,2005200433,Performed date of Dietary survey,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
 dietary_survey,,diet5,,2005200059,2005200059,"How many times a week did you eat beans (like pinto or black beans), chicken, or fish?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,870690008
 dietary_survey,,diet6,,2005200060,2005200060,How many times a week did you eat regular snack chips or crackers (not low-fat)?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,230079003
 dietary_survey,,diet7,,2005200061,2005200061,How many times a week did you eat desserts and other sweets (not the low-fat kind)?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,226463006
@@ -111,29 +116,24 @@ dietary_survey,,diet9,,2005200063,2005200063,How many servings of fruit juice di
 dietary_survey,,dietscore,,2005200064,2005200064, Diet score,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,225388007
 dietary_survey,,dietstartts,,2005200065,2005200065, Dietary Survey Start Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
 dietary_survey,,dietcmpts,,2005200066,2005200066, Dietary Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
+ophthalmic_survey,,viacmpdat,,2005200434,2005200434,Performed date of Ophthalmic survey ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
 ophthalmic_survey,,via1,,2005200067,2005200067,"How much difficulty, if any, do you have in recognizing a friend across the street? Would you say:",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,424348007
 ophthalmic_survey,,via2,,2005200068,2005200068,"How much difficulty, if any, do you have reading print in newspapers, magazines, recipes, menus, or numbers on the telephone? Would you say:",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,66077-9
 ophthalmic_survey,,via5,,2005200069,2005200069,You have indicated that you have not seen an eye care professional in the past 12 months. What is the main reason you have not visited an eye care professional in the past 12 months?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,410666004
 ophthalmic_survey,,via6,,2005200070,2005200070,When was the last time you had an eye exam in which the pupils were dilated? (This would have made you temporarily sensitive to bright light),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,424986007
 ophthalmic_survey,,viastartts,,2005200071,2005200071, Ophthalmic Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
 ophthalmic_survey,,viacmpts,,2005200072,2005200072, Ophthalmic Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
+px_sdoh_combined_survey,,pxsdohcmpdat,,2005200435,2005200435,Performed date of PhenX SDOH survey,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
+px_sdoh_combined_survey,,pxep2,,2005200480,2005200480,Do you speak another language at home?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA30188-9
 px_sdoh_combined_survey,,pxji1,,2005200073,2005200073,"Thinking about the next 12 months, how likely do you think it is that you will lose your job or be laid off?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,PX280301010000
 px_sdoh_combined_survey,,pxji2,,2005200074,2005200074,"About how easy would it be for you to find a job with another employer with approximately the same income and fringe benefits you now have? Would you say very easy, somewhat easy, or not easy at all?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,PX280301020000
 px_sdoh_combined_survey,,pxhi1,,2005200075,2005200075,What is your living situation today?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,71802-3
 px_sdoh_combined_survey,,pxhi2,,2005200076,2005200076,Think about the place you live. Do you have problems with any of the following? CHOOSE ALL THAT APPLY ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-health_survey,,mhoccur_fall,,40757198,,Falls in the past year,Observation,LOINC,Survey,S,52552-7,skos:closeMatch,1,,
-health_survey,,mhoccur_fallot,,4310026,,Number of falls in last year,Observation,SNOMED,Observable Entity,S,391002003,skos:closeMatch,1,,
 px_sdoh_combined_survey,,pxpa1,,2005200077,2005200077,"In the last 12 months, have you delayed getting prescription medicines because of worry about the cost?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_sdoh_combined_survey,,pxpa2,,2005200078,2005200078,Did any other person in your household delay getting prescription medicines because of worry about the cost? ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_sdoh_combined_survey,,pxpa3,,2005200079,2005200079,"In the last 12 months, was there any time when you needed prescription medicines, but did not get them because you  couldn't afford it?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-substance_use_survey,,susmkncf,,40766306,,Smoked at least 100 cigarettes in entire life,Observation,LOINC,Clinical Observation,S,63581-3,skos:exactMatch,1,,
-substance_use_survey,,susmkstaage,,40770348,,At which age did you start smoking [PhenX],Observation,LOINC,Clinical Observation,S,67740-1,skos:exactMatch,1,,
-substance_use_survey,,susmkcdur,,40766945,,Current smoker,Observation,LOINC,Clinical Observation,S,64234-8,skos:exactMatch,1,,
 px_sdoh_combined_survey,,pxpa4,,2005200080,2005200080,"In the last 12 months, was there any time when anyone else in your household needed prescription medicines, but did not get them because you/they couldn't afford it?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-substance_use_survey,,susmkdosfr,,40769208,,How many of these do you smoke per day [#] [PhenX],Observation,LOINC,Clinical Observation,S,66548-9,skos:closeMatch,1,,
-substance_use_survey,,sualckncf,,40772145,,Do you ever drink alcohol - including beer or wine [Reported.PHQ],Observation,LOINC,Survey,S,69721-9,skos:closeMatch,0.75,,
 px_sdoh_combined_survey,,pxhic1,,2005200081,2005200081,Insurance through a current or former employer or union (of yours or another family member's). This would include COBRA coverage.,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,63066-5
-substance_use_survey,,suvptoyr,,44786670,,Number of years alcohol consumed [Time],Observation,LOINC,Clinical Observation,S,74012-6,skos:closeMatch,0.75,,
 px_sdoh_combined_survey,,pxhic2,,2005200082,2005200082,"Insurance purchased directly from an insurance company (by you or another family member). This would include coverage purchased through an exchange or marketplace, such as HealthCare.gov",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,63066-5
 px_sdoh_combined_survey,,pxhic3,,2005200083,2005200083,"Medicare, for people 65 and older, or people with certain disabilities.",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,63066-5
 px_sdoh_combined_survey,,pxhic4,,2005200084,2005200084,"Medicaid, Medical Assistance (MA), the Children's Health Insurance Program (CHIP), or any kind of state or government-sponsored assistance. plan based on income or a disability.",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,63066-5
@@ -147,7 +147,6 @@ px_sdoh_combined_survey,,pxahc2,,2005200091,2005200091,"Was this a wellness visi
 px_sdoh_combined_survey,,pxahc3,,2005200092,2005200092,"About how long has it been since you last saw a doctor or other health professional for a wellness visit, physical, or general purpose check-up?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_sdoh_combined_survey,,pxahc4,,2005200093,2005200093,Is there a place that you USUALLY go to if you are sick and need health care? ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_sdoh_combined_survey,,pxahc5,,2005200094,2005200094,"What kind of place is it/do you go to most often? A doctor's office or health center is a place where you see the same doctor or the same group of doctors every visit, where you usually need to make an appointment ahead of time, and where your medical records are on file.Urgent care centers and clinics in a drug store or grocery store are places where you do not need to make an appointment ahead of time, and do not usually see the same health care provider at each visit.",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-substance_use_survey,,sumrjstage,,37020592,,Age when first used marijuana,Observation,LOINC,Clinical Observation,S,91384-8,skos:exactMatch,1,,
 px_sdoh_combined_survey,,pxahc6,,2005200095,2005200095,"During the past 12 months, how many times have you gone to an urgent care center or a clinic in a drug store or grocery store about your health?Urgent care centers and clinics in drug stores or grocery stores are places where you do not need to make an appointment ahead of time, and do not usually see the same health care provider at each visit. This is different from a hospital emergency room.",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_sdoh_combined_survey,,pxahc7,,2005200096,2005200096,"During the past 12 months, how many times have you gone to a hospital emergency room about your health?  *This includes emergency room visits that resulted in a hospital admission.",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_sdoh_combined_survey,,pxahc8,,2005200097,2005200097,"During the past 12 months, have you been hospitalized overnight? (Do not include an overnight stay in the emergency room)",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
@@ -155,17 +154,6 @@ px_sdoh_combined_survey,,pxahc9,,2005200098,2005200098,"During the past 12 month
 px_sdoh_combined_survey,,pxahc10,,2005200099,2005200099,"During the past 12 months, was there any time when you needed medical care, but DID NOT GET IT because of the cost?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_sdoh_combined_survey,,pxsdohstartts,,2005200100,2005200100, PhenX SDOH Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
 px_sdoh_combined_survey,,pxsdohcmpts,,2005200101,2005200101, PhenX SDOH Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
-cesd10_survey,,ces1,,1761605,,Bothered by things that are not usually bothersome,Observation,LOINC,Survey,S,100767-3,skos:exactMatch,1,,
-cesd10_survey,,ces2,,1761791,,Trouble focusing,Observation,LOINC,Survey,S,100771-5,skos:exactMatch,1,,
-cesd10_survey,,ces3,,1761895,,Feeling depressed,Observation,LOINC,Survey,S,100772-3,skos:exactMatch,1,,
-cesd10_survey,,ces4,,1761503,,Feeling everything is too much of an effort,Observation,LOINC,Survey,S,100773-1,skos:exactMatch,1,,
-cesd10_survey,,ces5,,1761675,,Feeling hopeful about the future,Observation,LOINC,Survey,S,100774-9,skos:exactMatch,1,,
-cesd10_survey,,ces6,,1761739,,Feeling fearful,Observation,LOINC,Survey,S,100776-4,skos:exactMatch,1,,
-cesd10_survey,,ces7,,1761695,,Restless sleep,Observation,LOINC,Survey,S,100777-2,skos:exactMatch,1,,
-cesd10_survey,,ces8,,1761700,,Feeling happy,Observation,LOINC,Survey,S,100778-0,skos:exactMatch,1,,
-cesd10_survey,,ces9,,1761319,,Feeling lonely,Observation,LOINC,Survey,S,100780-6,skos:exactMatch,1,,
-cesd10_survey,,ces10,,1761073,,Lack of energy,Observation,LOINC,Survey,S,100786-3,skos:exactMatch,1,,
-cesd10_survey,,cestl,,1761347,,Total Score CES-D,Observation,LOINC,Survey,S,100787-1,skos:exactMatch,1,,
 px_sdoh_combined_survey,,px270201_metadata,,2005200102,2005200102, PhenX English Proficiency MetaData,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_sdoh_combined_survey,,px011002_metadata,,2005200103,2005200103, PhenX Education Attainment MetaData,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_sdoh_combined_survey,,px280301_metadata,,2005200104,2005200104, PhenX Job Security MetaData ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
@@ -174,84 +162,110 @@ px_sdoh_combined_survey,,px280801_metadata,,2005200106,2005200106, PhenX Prescri
 px_sdoh_combined_survey,,px11502_metadata,,2005200107,2005200107, PhenX Health Insurance MetaData,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_sdoh_combined_survey,,px270101_metadata,,2005200108,2005200108, PhenX Health Care Access MetaData,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_sdoh_combined_survey,,px280901_metadata,,2005200109,2005200109, PhenX Healthcare Discrimination MetaData,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_food_insecurity_survey,,pxsficmpdat,,2005200436,2005200436,Performed date of PhenX Food Insecurity survey,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
 px_food_insecurity_survey,,pxfistartts,,2005200110,2005200110, PhenX Food Insecurity Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
 px_food_insecurity_survey,,pxsficmpts,,2005200111,2005200111, PhenX Food Insecurity Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
 px_food_insecurity_survey,,px270301_metadata,,2005200112,2005200112, PhenX MetaData,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_neighborhood_environment_survey,,pxnecmpdat,,2005200437,2005200437,Performed date of  PhenX Neighborhood Enviroment survey ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
 px_neighborhood_environment_survey,,pxne8,,2005200113,2005200113,There is so much traffic on the streets that it makes it difficult or unpleasant to walk in my neighborhood. Would you say that you...,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_neighborhood_environment_survey,,pxne9,,2005200114,2005200114,"I see many people being physically active in my neighborhood doing things like walking, jogging, cycling, or playing sports and active games. Would you say that you...",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-diabetes_survey,,dmlact,,44808782,,Level of physical activity,Observation,SNOMED,Observable Entity,S,8.59981E+14,skos:closeMatch,1,,
 px_neighborhood_environment_survey,,pxne10,,2005200115,2005200115,There are many interesting things to look at while walking in my neighborhood. Would you say you...,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_neighborhood_environment_survey,,pxne11,,2005200116,2005200116,"How many motor vehicles in working order (e.g., cars, trucks, motorcycles) are there at your household?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_neighborhood_environment_survey,,pxne12,,2005200117,2005200117,There are many four-way intersections in my neighborhood. Would you say that you...,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-diabetes_survey,,dmlpor,,764035,,Able to control portion size,Observation,SNOMED,Clinical Finding,S,4.49921E+14,skos:closeMatch,0.75,,
-diabetes_survey,,dmlfrveg,,4295005,,Number of portions of fruit and vegetables daily,Observation,SNOMED,Observable Entity,S,401070008,skos:closeMatch,0.75,,
 px_neighborhood_environment_survey,,pxne13,,2005200118,2005200118,"The sidewalks in my neighborhood are well maintained (paved, with few cracks) and not obstructed. Would you say that you...",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_neighborhood_environment_survey,,pxne14,,2005200119,2005200119,Places for bicycling (such as bike paths) in and around my neighborhood are well maintained and not obstructed. Would you say that you...,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_neighborhood_environment_survey,,pxne15,,2005200120,2005200120,There is so much traffic on the streets that it makes it difficult or unpleasant to ride a bicycle in my neighborhood. Would you say that you...,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_neighborhood_environment_survey,,pxne16,,2005200121,2005200121,The crime rate in my neighborhood makes it unsafe to go on walks during the day. Would you say that you...,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_neighborhood_environment_survey,,pxne17,,2005200122,2005200122,There are many places to go within easy walking distance of my home. Would you say that you...,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_neighborhood_environment_survey,,pxnestartts,,2005200123,2005200123, PhenX Neighborhood Enviroment Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
-dietary_survey,,diet1,,40771095,,How many times a week did you eat fast food or snacks or pizza in past 7 days [SAMHSA],Observation,LOINC,Survey,S,68510-7,skos:exactMatch,1,,
-dietary_survey,,diet2,,21493059,,Fruit servings 24 hour Estimated,Observation,LOINC,Clinical Observation,S,80457-5,skos:exactMatch,1,,
-dietary_survey,,diet3,,21493061,,Vegetable servings 24 hour Estimated,Observation,LOINC,Clinical Observation,S,80459-1,skos:exactMatch,1,,
-dietary_survey,,diet4,,37311745,,Estimated oral intake of sugar sweetened drinks in 24 hours,Observation,SNOMED,Observable Entity,S,818990008,skos:closeMatch,0.75,,
 px_neighborhood_environment_survey,,pxnecmpts,,2005200124,2005200124, PhenX Neighborhood Environment Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
 px_neighborhood_environment_survey,,px291201_metadata,,2005200125,2005200125, PhenX Neighborhood Environment MetaData,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrdcmpdat,,2005200438,2005200438,Performed date of PhenX Racial/Ethnic Discrimination survey ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
 px_racial_ethnic_discrimination_survey,,pxrd1,,2005200126,2005200126,How often have you been treated unfairly by teachers and professors because of your race/ethnic group? How often in the past year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_racial_ethnic_discrimination_survey,,pxrd2,,2005200127,2005200127,How often have you been treated unfairly by teachers and professors because of your race/ethnic group? How often in your entire life?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_racial_ethnic_discrimination_survey,,pxrd3,,2005200128,2005200128,"How often have you been treated unfairly by teachers and professors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd4,,2005200493,2005200493,"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd5,,2005200494,2005200494,"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd6,,2005200495,2005200495,"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd7,,2005200496,2005200496,"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd8,,2005200497,2005200497,"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pdrx9,,2005200498,2005200498,"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd10,,2005200499,2005200499,"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd11,,2005200500,2005200500,"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd12,,2005200501,2005200501,"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd13,,2005200502,2005200502,How often have you been treated unfairly by strangers because of your race/ethnic group? How often in the past year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd14,,2005200503,2005200503,How often have you been treated unfairly by strangers because of your race/ethnic group? How often in your entire life?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd15,,2005200504,2005200504,"How often have you been treated unfairly by strangers because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd16,,2005200505,2005200505,"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd17,,2005200506,2005200506,"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd18,,2005200507,2005200507,"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd19,,2005200508,2005200508,How often have you been treated unfairly by neighbors because of your race/ethnic group? How often in the past year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd20,,2005200509,2005200509,How often have you been treated unfairly by neighbors because of your race/ethnic group? How often in your entire life?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd21,,2005200510,2005200510,"How often have you been treated unfairly by neighbors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd22,,2005200511,2005200511,"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd23,,2005200512,2005200512,"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd24,,2005200513,2005200513,"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd25,,2005200514,2005200514,How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? How often in the past year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd26,,2005200515,2005200515,How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? How often in your entire life?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd27,,2005200516,2005200516,"How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd28,,2005200517,2005200517,"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd29,,2005200518,2005200518,"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd30,,2005200519,2005200519,"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd31,,2005200520,2005200520,How often have people misunderstood your intentions and motives because of your race/ethnic group? How often in the past year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd32,,2005200521,2005200521,How often have people misunderstood your intentions and motives because of your race/ethnic group? How often in your entire life?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd33,,2005200522,2005200522,"How often have people misunderstood your intentions and motives because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd34,,2005200523,2005200523,How often did you want to tell someone off for being racist towards you but didn't say anything? How often in the past year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd35,,2005200524,2005200524,How often did you want to tell someone off for being racist towards you but didn't say anything? How often in your entire life?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd36,,2005200525,2005200525,"How often did you want to tell someone off for being racist towards you but didn't say anything? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd37,,2005200526,2005200526,How often have you been really angry about something racist that was done to you? How often in the past year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd38,,2005200527,2005200527,How often have you been really angry about something racist that was done to you? How often in your entire life?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd39,,2005200528,2005200528,"How often have you been really angry about something racist that was done to you? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd40,,2005200529,2005200529,"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? How often in the past year?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd41,,2005200530,2005200530,"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? How often in your entire life?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd42,,2005200531,2005200531,"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd43,,2005200532,2005200532,How often have you been called a racist name? How often in the past year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd44,,2005200533,2005200533,How often have you been called a racist name? How often in your entire life?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd45,,2005200534,2005200534,"How often have you been called a racist name? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd46,,2005200535,2005200535,How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? How often in the past year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd47,,2005200536,2005200536,How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? How often in your entire life?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd48,,2005200537,2005200537,"How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd49,,2005200538,2005200538,"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd50,,2005200539,2005200539,"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd51,,2005200540,2005200540,"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd52,,2005200541,2005200541,How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In the Past Year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd53,,2005200542,2005200542,How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In your entire life?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+px_racial_ethnic_discrimination_survey,,pxrd54,,2005200543,2005200543,"How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 px_racial_ethnic_discrimination_survey,,pxrdcmpts,,2005200131,2005200131, PhenX Racial/Ethnic Discrimination Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
 px_racial_ethnic_discrimination_survey,,pxrdstartts,,2005200132,2005200132, PhenX Racial/Ethnic Discrimination Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
 px_racial_ethnic_discrimination_survey,,px281501_metadata,,2005200133,2005200133, PhenX Racial/Ethnic MetaData,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 study_enrollment,,visdat,,2005200134,2005200134,Planned date & time of in-person visit,Observation,AIREADI,Observation,S,,skos:exactMatch,1,,185353001
 driving_record,,dricmpdat,,2005200135,2005200135,Date driving record assessment conducted,Observation,AIREADI,Observation,S,,skos:exactMatch,1,,90118-1
 driving_record,,dri1,,2005200136,2005200136,"In an average week, how many days per week do you normally drive? (number of days)",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-ophthalmic_survey,,via3,,40768765,,Level of difficulty seeing objects off to the side,Observation,LOINC,Clinical Observation,S,66082-9,skos:closeMatch,0.75,,
-ophthalmic_survey,,via4,,40758529,,Date of last eye examination,Observation,LOINC,Clinical Observation,S,55400-6,skos:closeMatch,0.75,,
 driving_record,,dri2,,2005200137,2005200137,About how many miles did you personally drive during the past 12 months in all motorized vehicles?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-driving_record,,dristate,,2005200138,2005200138,Drivers license state,Observation,AIREADI,Location,S,,skos:exactMatch,1,,398070004
-cesd10_survey,,cesstartts,,2005200139,2005200139, CES-D-10 Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
-cesd10_survey,,cescmpts,,2005200140,2005200140, CES-D-10 Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
-cesd10_survey,ces1,0,ces1_0,2005200141,2005200141,Rarely or none of the time (< 1 day),Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA15665-5
-px_sdoh_combined_survey,,pxep1,,40757199,,Language.primary is English,Observation,LOINC,Survey,S,52553-5,skos:exactMatch,0.75,,
-px_sdoh_combined_survey,,pxep3,,40769340,,How well do you speak English [NLAAS],Observation,LOINC,Clinical Observation,S,66680-0,skos:closeMatch,1,,
-px_sdoh_combined_survey,,pxed1,,40766232,,What is the highest grade or level of school you have completed or the highest degree you have received [NHANES],Observation,LOINC,Clinical Observation,S,63504-5,skos:closeMatch,1,,
-cesd10_survey,ces1,1,ces1_1,2005200142,2005200142,Some or a little of the time (1-2 days) ,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14733-2
-cesd10_survey,ces1,2,ces1_2,2005200143,2005200143,Occasionally or a moderate amount of time (3-4 days),Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA6483-7
-px_sdoh_combined_survey,,pxdhc1,,40770200,,You have been treated with less courtesy than other people [PhenX],Observation,LOINC,Clinical Observation,S,67586-8,skos:closeMatch,0.75,,
-px_sdoh_combined_survey,,pxdhc2,,40770201,,You have been treated with less respect than other people [PhenX],Observation,LOINC,Clinical Observation,S,67587-6,skos:closeMatch,0.75,,
-px_sdoh_combined_survey,,pxdhc3,,40192503,,How often do you receive poorer service than others when you go to a doctor's office or other health care provider?,Observation,PPI,Question,S,sdoh_dms_3,skos:closeMatch,0.75,,
-px_sdoh_combined_survey,,pxdhc4,,40192505,,How often does a doctor or nurse act as if he or she thinks you are not smart when you go to a doctor's office or other health care provider?,Observation,PPI,Question,S,sdoh_dms_4,skos:closeMatch,0.75,,
-px_sdoh_combined_survey,,pxdhc5,,40192423,,How often does a doctor or nurse act as if he or she is afraid of you when you go to a doctor's office or other health care provider?,Observation,PPI,Question,S,sdoh_dms_5,skos:closeMatch,0.75,,
-px_sdoh_combined_survey,,pxdhc6,,40192383,,How often does a doctor or nurse act as if he or she is better than you when you go to a doctor's office or other health care provider?,Observation,PPI,Question,S,sdoh_dms_7,skos:closeMatch,0.75,,
-px_sdoh_combined_survey,,pxdhc7,,40192394,,How often do you feel like a doctor or nurse is not listening to what you were saying. when you go to a doctor's office or other health care provider?,Observation,PPI,Question,S,sdoh_dms_6,skos:closeMatch,0.75,,
-cesd10_survey,ces1,3,ces1_3,2005200144,2005200144,All of the time (5-7 days),Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14734-0
-px_food_insecurity_survey,,pxfi1,,36306143,,Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS],Observation,LOINC,Survey,S,88123-5,skos:exactMatch,1,,
-px_food_insecurity_survey,,pxfi2,,36660487,,"In the last 12 months, we couldn't afford to eat balanced meals [U.S. FSS]",Observation,LOINC,Survey,S,95248-1,skos:exactMatch,1,,
-px_food_insecurity_survey,,pxfi3,,36660433,,"In the last 12 months, did you ever cut the size of your meals or skip meals because there wasn't enough money for food [U.S. FSS]",Observation,LOINC,Survey,S,95249-9,skos:exactMatch,1,,
-px_food_insecurity_survey,,food_insecurity_change_diet_frequency,,36660018,,"In the last 12 months, how often did you cut the size of your meals or skip meals because there wasn't enough money for food [U.S. FSS]",Observation,LOINC,Survey,S,95250-7,skos:closeMatch,1,,
-px_food_insecurity_survey,,pxfi4,,36659800,,"In the last 12 months, did you ever eat less than you felt you should because there wasn't enough money for food [U.S. FSS]",Observation,LOINC,Survey,S,95251-5,skos:exactMatch,1,,
-px_food_insecurity_survey,,pxfi5,,36660509,,"In the last 12 months, were you ever hungry but didn't eat because there wasn't enough money for food [U.S. FSS]",Observation,LOINC,Survey,S,95252-3,skos:exactMatch,1,,
+device_distribution,,dvamwstdat,,2005200474,2005200474,Date when physical activity monitor was given to patient,Observation,AIREADI,Observation,S,,skos:exactMatch,1,,LA30233-3
+device_distribution,,dvcgmstdat,,2005200475,2005200475,Date sensor inserted,Observation,AIREADI,Observation,S,,skos:exactMatch,1,,LA30233-3
+device_distribution,,dvenvstdat,,2005200476,2005200476,Date when continuous glucose monitor was given to participant,Observation,AIREADI,Observation,S,,skos:exactMatch,1,,LA30233-3
+meds_assessment,,cmcmpdat,,2005200439,2005200439,Performed date of  medications assessment,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
 meds_assessment,,cm_asp,,2005200145,2005200145,Have you taken aspirin in the past 2 weeks?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 meds_assessment,,cm_act,,2005200146,2005200146,"Have you taken acetaminophen medicines, such as Tylenol, in the past 2 weeks?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 meds_assessment,,cm_ibp,,2005200147,2005200147,Have you taken ibuprofen or ibuprofen-containing medicines such as Advil or Motrin in the past 2 weeks?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 meds_assessment,,cm_ant,,2005200148,2005200148,"Have you taken antihistamines, such as cold pills or allergy pills, in the past 2 weeks?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_neighborhood_environment_survey,,pxne1,,40769029,,What is the main type of housing in your neighborhood [PhenX],Observation,LOINC,Clinical Observation,S,66356-7,skos:exactMatch,1,,
-px_neighborhood_environment_survey,,pxne2,,40769030,,"Many shops, stores, markets, or other places to buy things I need are within easy walking distance of my home [PhenX]",Observation,LOINC,Clinical Observation,S,66357-5,skos:exactMatch,1,,
-px_neighborhood_environment_survey,,pxne3,,40769031,,"It is within a 10-15 minute walk to a transit stop, such as bus, train, trolley, or tram, from my home [PhenX]",Observation,LOINC,Clinical Observation,S,66358-3,skos:exactMatch,1,,
-px_neighborhood_environment_survey,,pxne4,,40769032,,There are sidewalks on most of the streets in my neighborhood [PhenX],Observation,LOINC,Clinical Observation,S,66359-1,skos:exactMatch,1,,
-px_neighborhood_environment_survey,,pxne5,,40769033,,"There are facilities to bicycle in or near my neighborhood, such as special lanes, separate paths or trails, shared use paths for cycles and pedestrians [PhenX]",Observation,LOINC,Clinical Observation,S,66360-9,skos:exactMatch,1,,
-px_neighborhood_environment_survey,,pxne6,,40769034,,"My neighborhood has several free or low-cost recreation facilities, such as parks, walking trails, bike paths, recreation centers, playgrounds, public swimming pools, etc [PhenX]",Observation,LOINC,Clinical Observation,S,66361-7,skos:exactMatch,1,,
-px_neighborhood_environment_survey,,pxne7,,40769035,,The crime rate in my neighborhood makes it unsafe to go on walks at night [PhenX],Observation,LOINC,Clinical Observation,S,66362-5,skos:exactMatch,1,,
 meds_assessment,,cm_dcg,,2005200149,2005200149,"Have you taken decongestants, such as cold pills or allergy pills, in the past 2 weeks?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
 meds_assessment,,cm_slp,,2005200150,2005200150,Have you taken sleeping pills in the past 2 weeks?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+current_medications,,cmcmpdat2,,2005200478,2005200478,Date when current medication was collected,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA30233-3
+current_medications,,cmname,,2005200481,2005200481,Medication Name,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA22650-8
+current_medications,,cmrouteot,,2005200482,2005200482,"If Other, please specify:",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA6310-2
+current_medications,,cmtrt,,2005200220,2005200220,RxNorm (assign after visit),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
+physical_assessment,,pacmpdat,,2005200440,2005200440,Performed date of physical assessment,Observation,AIREADI,Procedure,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
 physical_assessment,,paate,,2005200151,2005200151,How many hours since you last ate? (number of hours),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,301897001
 physical_assessment,,waist_vsorres,,2005200152,2005200152,Waist Circumference (cm),Measurement,AIREADI,Observable Entity,S,,skos:exactMatch,1,,276361009
 physical_assessment,,hip_vsorres,,2005200153,2005200153,Hip Circumference (cm),Measurement,AIREADI,Observable Entity,S,,skos:exactMatch,1,,284472007
+monofilament,,msscmpdat,,2005200444,2005200444,Performed date of monofilament,Observation,AIREADI,Procedure,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
 monofilament,,mssrffl,,2005200159,2005200159,Right Foot - Felt:,Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,right foot | 45882337,value_as_concept_id =45882337
 monofilament,,mssrftt,,2005200160,2005200160,Right Foot - Tested:,Procedure,AIREADI,Procedure,S,,skos:exactMatch,1,right foot | 45882337,modifier_concept_id =45882337
 monofilament,,msslffl,,2005200161,2005200161,Left Foot - Felt:,Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,left foot | 4300877,value_as_concept_id =  4300877
 monofilament,,msslftt,,2005200162,2005200162,Left Foot - Tested:,Procedure,AIREADI,Procedure,S,,skos:exactMatch,1,left foot | 4300877,modifier_concept_id =4300877
+moca,,mocacmpdattim,,2005200445,2005200445,Performed date of MoCA,Observation,AIREADI,Procedure,S,,skos:exactMatch,1,1035260,Performed on value_as_concept_id = 1035260 | LA30233-3
 procedures,,rtfncmpdattim,,2005200164,2005200164,Date & time Fundus - Edion performed,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,90118-1
 procedures,,rtfnocmpdattim,,2005200166,2005200166,Date & time Fundus -  Optomed performed,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,90118-1
 procedures,,rthracmpdattim,,2005200168,2005200168,Date & time OCT & OCTA - Spectralis HRA OCT performed,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,90118-1
@@ -264,354 +278,36 @@ lab_results,,lbdattim1,,2005200180,2005200180,Date & time clinical labs performe
 lab_results,,lbscat_wbc,,2005200182,2005200182,White Blood Cells (WBC) - x10E3/µL,Measurement,AIREADI,Procedure,S,,skos:exactMatch,1,,767002
 lab_results,,lbscat_rbc,,2005200183,2005200183,Red Blood Cells (RBC) - x10E6/µL,Measurement,AIREADI,Procedure,S,,skos:exactMatch,1,,14089001
 lab_results,,lbscat_a1c,,2005200184,2005200184,Hemoglobin - g/dL,Measurement,AIREADI,Lab Test,S,,skos:exactMatch,1,,718-7
+device_return,,dvamwenyn,,2005200555,2005200555,Activity monitor returned?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,42528781 removed in favor of local code
+device_return,,dvamwendat,,2005200236,2005200236,Date device received back from participant,Observation,AIREADI,Observation,S,,skos:exactMatch,1,,410671006
+device_return,,dcvgmenyn,,2005200556,2005200556,Dexcom G6 transmitter returned?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,2005200237 removed in favor of local code
+device_return,,dvenvenyn,,2005200483,2005200483,Environmental sensor returned?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,82611-5
 disposition,,eos_ds,,2005200192,2005200192,Did the subject complete the study?,Observation,AIREADI,Clinical Finding,S,,skos:exactMatch,1,,443729008
 disposition,,eos_dsstdat,,2005200193,2005200193,What was the study discontinuation or completion date?,Observation,AIREADI,Observation,S,,skos:exactMatch,1,,8.71441E+14
+driving_record,,dristate,,2005200138,2005200138,Drivers license state,Observation,AIREADI,Location,S,,skos:exactMatch,1,,398070004
+driving_record,,odristate,,2005200485,2005200485,Specify other,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA6310-2
+device_return,dvamwenhand,dvamwenhand,,2005200206,2005200206,Physical Activity Monitor was worn on which wrist?,Observation,AIREADI,Clinical Observation,S,,skos:exactMatch,1,,66226-2
+current_medications,,cmdosu,,2005200221,2005200221,"Unit (Record the dose unit of the dose of concomitant medication/treatment/therapy taken (e.g., mg.)).",Observation,AIREADI,Clinical Observation,S,,skos:exactMatch,1,,
 substance_use_survey,susmkdosfr,41,susmkdosfr_41,2005200194,2005200194,41-50 (up to 2.5 packs) ,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA15915-4
 substance_use_survey,susmkdosfr,51,susmkdosfr_51,2005200195,2005200195,More than 50 (3 or more packs),Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA15915-4
 substance_use_survey,subrdosfr,22,subrdosfr_22,2005200196,2005200196,22 to 28,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14679-7
 substance_use_survey,subrdosfr,29,subrdosfr_29,2005200197,2005200197,29 to 35,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14679-7
 substance_use_survey,subrdosfr,36,subrdosfr_36,2005200198,2005200198,36 or more,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14679-7
 substance_use_survey,suwndosfr,21,suwndosfr_21,2005200199,2005200199,21-25 (5 bottles),Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14679-7
-device_return,dvamwenhand,dvamwenhand,,2005200206,2005200206,Physical Activity Monitor was worn on which wrist?,Observation,AIREADI,Clinical Observation,S,,skos:exactMatch,1,,66226-2
 substance_use_survey,suwndosfr,26,suwndosfr_26,2005200208,2005200208,26-30 (6 bottles),Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14679-7
 substance_use_survey,suwndosfr,31,suwndosfr_31,2005200209,2005200209,31-35 (7 bottles),Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14679-7
 substance_use_survey,suwndosfr,35,suwndosfr_35,2005200210,2005200210,More than 36 (greater than 7 bottles),Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14679-7
 substance_use_survey,suvptoage,98,suvptoage_98,2005200211,2005200211,More than 20 years,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,OMOP5181836
 substance_use_survey,sumrjceddur,98,sumrjceddur_98,2005200212,2005200212,More than 50 years,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,102524005
+cesd10_survey,ces1,0,ces1_0,2005200141,2005200141,Rarely or none of the time (< 1 day),Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA15665-5
+cesd10_survey,ces1,1,ces1_1,2005200142,2005200142,Some or a little of the time (1-2 days) ,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14733-2
+cesd10_survey,ces1,2,ces1_2,2005200143,2005200143,Occasionally or a moderate amount of time (3-4 days),Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA6483-7
+cesd10_survey,ces1,3,ces1_3,2005200144,2005200144,All of the time (5-7 days),Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14734-0
 paid5_dm_survey,paid_scrd,0,paid_scrd_0,2005200213,2005200213,Not a problem,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA9619-3
 paid5_dm_survey,paid_scrd,1,paid_scrd_1,2005200214,2005200214,Minor problem,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA9618-5
 paid5_dm_survey,paid_scrd,2,paid_scrd_2,2005200215,2005200215,Moderate problem,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA9618-5
 paid5_dm_survey,paid_scrd,3,paid_scrd_3,2005200216,2005200216,Somewhat serious problem,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA9617-7
 paid5_dm_survey,paid_scrd,4,paid_scrd_4,2005200217,2005200217,Serious problem,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA9617-7
-consent_survey,,icfsvyts,,2005200218,2005200218, Consent Survey Start Timestamp,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
-consent_survey,,icfcmpts,,2005200219,2005200219,Consent Survey Completed Timestamp,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
-current_medications,,cmtrt,,2005200220,2005200220,RxNorm (assign after visit),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-current_medications,,cmdosu,,2005200221,2005200221,"Unit (Record the dose unit of the dose of concomitant medication/treatment/therapy taken (e.g., mg.)).",Observation,AIREADI,Clinical Observation,S,,skos:exactMatch,1,,
-current_medications,cmdosu,13,cmdosu_13,2005200222,2005200222,Puff,Device,AIREADI,Physical Object,S,,skos:exactMatch,1,,463710006
-demographics_survey,,dmgstartts,,2005200223,2005200223,Demographics Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
-demographics_survey,,dmgcmpts,,2005200224,2005200224,Demograhics Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
-device_return,,dvamwendat,,2005200236,2005200236,Date device received back from participant,Observation,AIREADI,Observation,S,,skos:exactMatch,1,,410671006
-decline_participation_survey,,deccmpdat,,0,,Date recorded,Observation,LOINC,Clinical Observation,S,74015-9,skos:closeMatch,0.5,,44786673
-decline_participation_survey,,dec_nd,,0,,Patient survey results not available,Observation,LOINC,Survey,S,G9604,skos:closeMatch,1,,915709
-decline_participation_survey,,scrn_out,,0,0,"If you're not interested, can you tell us why?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-decline_participation_survey,,scrn_outrsn,,0,,Reason for,Observation,SNOMED,Attribute,S,410666004,skos:relatedMatch,0.5,,4260904
-study_enrollment,,studyid,,44786673,,Participant identifier,Observation,LOINC,Clinical Observation,S,74015-9,skos:exactMatch,1,,
-contact_log,,cnct_dattim,,0,,Date and time of scheduled task,Observation,LOINC,Clinical Observation,S,90118-1,skos:relatedMatch,0.5,,1176381
-contact_log,,cnct_type,,0,,Initial contact type,Observation,SNOMED,Observable Entity,S,405750004,skos:narrowMatch,0.75,,4236882
-contact_log,,cnct_prp,,0,,Purpose,Observation,SNOMED,Attribute,S,246099003,skos:broadMatch,0.75,,4077557
-contact_log,,cnct_nt,,0,,Note,Note,LOINC,Clinical Observation,S,34109-9,skos:exactMatch,1,,3030653
-driving_record,,dricmpyn,,4123211,,Review procedure,Observation,SNOMED,Qualifier Value,S,288564002,skos:broadMatch,0.25,,
-driving_record,,drireasn,,44788487,,Procedure not completed,Observation,OMOP,Context-dependent,S,1.78291E+14,skos:relatedMatch,0.5,,
-dietary_survey,diet1,0,diet1_0,2005200238,2005200238,Less than 1 time,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA13829-9
-driving_record,,dri3,,0,,Has driver's license,Observation,SNOMED,Clinical Finding,S,446497005,skos:relatedMatch,0.75,,Prev ID: 40487918
-driving_record,,driot,,0,,Procedure not completed,Observation,OMOP,Context-dependent,S,1.78291E+14,skos:relatedMatch,0.5,,Prev ID: 44788487
-device_distribution,,dvamwyn,,2005200225,2005200225,Was the activity monitor/watch sent home with the participant?,Observation,AIREADI,Observation,S,,skos:exactMatch,1,,82611-5
-device_distribution,,dvamwinstr,,4180631,,Medical equipment or device education,Procedure,SNOMED,Procedure,S,362978005,skos:closeMatch,0.75,,
-dietary_survey,diet1,1,diet1_1,2005200239,2005200239,1 - 3 times,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA23695-2
-device_distribution,,dvamwreasn,,2005200226,2005200226,"If participant did not receive a device , please explain why:",Observation,AIREADI,Observation,S,,skos:exactMatch,1,,1.78291E+14
-device_distribution,,dvamwsn,,0,,Serial number,Device,LOINC,Answer,S,LA20885-2,skos:exactMatch,1,,45885177
-device_distribution,,dvcgmyn,,2005200227,2005200227,Was the sensor inserted?,Observation,AIREADI,Observation,S,,skos:exactMatch,1,,82611-5
-dietary_survey,diet2,0,diet2_0,2005200240,2005200240,5 or more,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA26057-2
-device_distribution,,dvcgmreasn,,2005200228,2005200228,"If sensor was not inserted, please explain why:",Observation,AIREADI,Observation,S,,skos:exactMatch,1,,1.78291E+14
-device_distribution,,dvcgmvrfy,,2005200230,2005200230,Did you verify that the Dexcom sensor was initialized and recording?,Observation,AIREADI,Observation,S,,skos:exactMatch,1,,82611-5
-device_distribution,,dvenvyn,,2005200231,2005200231,Was the environmental sensor sent home with the participant?,Observation,AIREADI,Observation,S,,skos:exactMatch,1,,82611-5
-device_distribution,,dvenvstcrcid,,0,,,,,,,N/A - operational variable,,,,
-device_distribution,,dvenvsn,,0,,Serial number,Meas Value,LOINC,Answer,S,LA20885-2,skos:exactMatch,1,,45885177
-device_distribution,,dvenvcrcid,,45762337,,Environmental sensor,Device,SNOMED,Physical Object,S,468916005,skos:exactMatch,1,,
-device_distribution,,dvrtmthd,,2005200232,2005200232,Planned method of device return,Observation,AIREADI,Attribute,S,,skos:exactMatch,1,,260686004
-device_distribution,,dvrtnyn,,2005200233,2005200233,Was the participant given return instructions sheet and shipping box?,Procedure,AIREADI,Procedure,S,,skos:exactMatch,1,,362978005
-dietary_survey,diet2,2,diet2_2,2005200241,2005200241,2 or less,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14352-1
-meds_assessment,,cmcmpyn,,4237617,,Medication monitoring assessment,Procedure,SNOMED,Procedure,S,4237617,skos:closeMatch,0.75,,
-meds_assessment,,cmyn,,0,,,,,,,,,,,
-dietary_survey,diet4,0,diet4_0,2005200242,2005200242,Less than 1,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA13829-9
-dietary_survey,diet6,0,diet6_0,2005200243,2005200243,1 time or less,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA13829-9
-ophthalmic_survey,via4,3,via4_3,2005200244,2005200244,Within the past 2 years (1 year but less than 2 years ago),Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA15790-1
-meds_assessment,,cmotyn,,0,0,"Are there any other medications that you are currently taking that are not included here? This includes prescription or over-the-counter medications, vitamins and herbal supplements.",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-ophthalmic_survey,via5,1,via5_1,2005200245,2005200245,Cost/Insurance,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA21462-9
-current_medications,,cmroute,,44786711,,Dose form - RxNorm RXCUI of Medication,Measurement,LOINC,Clinical Observation,S,74054-8,skos:closeMatch,0.75,,
-ophthalmic_survey,via5,2,via5_2,2005200246,2005200246,Do not have/know an eye doctor,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14426-3
-current_medications,,cmdos,,4162374,,Drug dose,Observation,SNOMED,Clinical Finding,S,398232005,skos:closeMatch,1,,
-current_medications,,cmdosfrq,,4126015,,Frequency,Observation,SNOMED,Attribute,S,260864003,skos:closeMatch,1,,
-ophthalmic_survey,via5,3,via5_3,2005200247,2005200247,"Cannot get to the office/clinic (too far away, no transportation)",Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA28319-4
-ophthalmic_survey,via5,4,via5_4,2005200248,2005200248,Could not get an appointment,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,98867-5
-physical_assessment,,pacmpyn,,2005200207,2005200207,Physical assessment was not done,Procedure,AIREADI,Procedure,S,,skos:exactMatch,1,,81375008
-ophthalmic_survey,via5,5,via5_5,2005200249,2005200249,No reason to go (no problem),Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA9619-3
-physical_assessment,,height_vsorres,,3036277,,Body height,Measurement,LOINC,Clinical Observation,S,8302-2,skos:exactMatch,1,,
-physical_assessment,,weight_vsorres,,3025315,,Body weight,Measurement,LOINC,Clinical Observation,S,29463-7,skos:exactMatch,1,,
-physical_assessment,,bmi_vsorres,,4245997,,Body mass index,Measurement,SNOMED,Observable Entity,S,60621009,skos:exactMatch,1,,
-ophthalmic_survey,via5,6,via5_6,2005200250,2005200250,Have not thought of it,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA9619-3
-px_sdoh_combined_survey,pxji1,5,pxji1_5,2005200251,2005200251,Will be leaving labor force voluntarily,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA17956-6
-physical_assessment,,whr_vsorres,,44809433,,Waist to height ratio,Measurement,SNOMED,Observable Entity,S,8.45541E+14,skos:exactMatch,1,,
-physical_assessment,,bp1_sysbp_vsorres,,3004249,,Systolic blood pressure,Measurement,LOINC,Clinical Observation,S,2403450,skos:exactMatch,1,,
-physical_assessment,,bp1_diabp_vsorres,,3012888,,Diastolic blood pressure,Measurement,LOINC,Clinical Observation,S,2396814,skos:exactMatch,1,,
-physical_assessment,,pulse_vsorres,,4239408,,Heart rate,Measurement,SNOMED,Observable Entity,S,364075005,skos:closeMatch,1,,
-px_sdoh_combined_survey,pxhic1,1,pxhic1_1,2005200252,2005200252,Covered,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA21462-9
-monofilament,,msscmpyn,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,,
-monofilament,,mssrf1,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,right | site 1,
-monofilament,,mssrf2,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,right | site 2,
-monofilament,,mssrf3,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,right | site 3,
-monofilament,,mssrf4,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,right | site 4,
-monofilament,,mssrf5,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,right | site 5,
-monofilament,,mssrf6,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,right | site 6,
-monofilament,,mssrf7,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,right | site 7,
-monofilament,,mssrf8,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,right | site 8,
-monofilament,,mssrf9,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,right | site 9,
-monofilament,,mssrf10,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,right | site 10,
-monofilament,,msslf1,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,left | site 1,
-monofilament,,msslf2,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,left | site 2,
-monofilament,,msslf3,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,left | site 3,
-monofilament,,msslf4,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,left | site 4,
-monofilament,,msslf5,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,left | site 5,
-monofilament,,msslf6,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,left | site 6,
-monofilament,,msslf7,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,left | site 7,
-monofilament,,msslf8,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,left | site 8,
-monofilament,,msslf9,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,left | site 9,
-monofilament,,msslf10,,4047085,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:exactMatch,1,left | site 10,
-moca,,mocacmpyn,,2005200560,2005200560,MoCA not done,Observation,SNOMED,Survey,S,4.59661E+14,skos:exactMatch,1,,Prev ID: ?
-moca,,mocareasn,,2005200163,2005200163,"If not performed, please explain why:",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,1.78291E+14
-procedures,,rtfncmpyn,,2005200165,2005200165,Fundus - Edion not done,Observation,AIREADI,Survey,S,,skos:exactMatch,1,4301433,not done | 4301433
-px_sdoh_combined_survey,pxhic8,0,pxhic8_0,2005200253,2005200253,I do NOT have health insurance,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA10041-4
-procedures,,rtfnocmpyn,,2005200167,2005200167,Fundus - Optomed not done,Observation,AIREADI,Survey,S,,skos:exactMatch,1,4301433,not done | 4301433
-px_sdoh_combined_survey,pxhic8,1,pxhic8_1,2005200254,2005200254,I HAVE some kind of health insurance,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA21462-9
-procedures,,rthracmpyn,,2005200169,2005200169,OCT & OCTA - Spectralis HRA OCT not done,Observation,AIREADI,Survey,S,,skos:exactMatch,1,4301433,not done | 4301433
-px_sdoh_combined_survey,pxahc1,5,pxahc1_5,2005200255,2005200255,Within the last 10 years (5 years but less than 10 years ago),Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14769-6
-procedures,,rtoctcmpyn,,2005200171,2005200171,OCT - Triton OCT not done,Observation,AIREADI,Survey,S,,skos:exactMatch,1,4301433,not done | 4301433
-procedures,,rtm2cmpyn,,2005200173,2005200173,OCT & OCTA - Maestro2 not done,Observation,AIREADI,Survey,S,,skos:exactMatch,1,4301433,not done | 4301433
-procedures,,rtm2reasn,,2005200163,2005200163,"If not performed, please explain why:",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxahc4,0,pxahc4_0,2005200256,2005200256,There is NO place,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,394777002
-procedures,,rtfliocmpyn,,2005200175,2005200175,FLIO not done,Observation,AIREADI,Survey,S,,skos:exactMatch,1,4301433,not done | 4301433
-px_sdoh_combined_survey,pxahc4,2,pxahc4_2,2005200257,2005200257,There is MORE THAN ONE place,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,394777002
-procedures,,rtaccmpyn,,2005200177,2005200177,Angioplex - Cirrus 5000 not done,Observation,AIREADI,Survey,S,,skos:exactMatch,1,4301433,not done | 4301433
-px_sdoh_combined_survey,pxahc5,1,pxahc5_1,2005200258,2005200258,A doctor's office or health center,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA26177-8
-procedures,,rtekgcmpyn,,2005200179,2005200179,Cardiology - EKG - Pagewriter TC30 Cardiograp not done,Observation,AIREADI,Survey,S,,skos:exactMatch,1,4301433,not done | 4301433
-px_sdoh_combined_survey,pxahc5,2,pxahc5_2,2005200259,2005200259,"Walk-in clinic, urgent care center, or retail clinic in a pharmacy or grocery store",Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA24179-6
-lab_results,,lbperfyn1,,2005200181,2005200181,Clinical labs not done,Observation,AIREADI,Context-dependent,S,,skos:exactMatch,1,4301433,not done | 4301433
-lab_results,,lbreasn1,,2005200163,2005200163,"If not performed, please explain why:",Observation,AIREADI,Survey,S,,skos:exactMatch,1,4301433,not done | 4301433
-px_sdoh_combined_survey,pxahc5,4,pxahc5_4,2005200260,2005200260,A VA Medical Center or VA outpatient clinic,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA26180-2
-px_sdoh_combined_survey,pxahc5,6,pxahc5_6,2005200261,2005200261,Does not go to one place most often,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,394777002
-px_sdoh_combined_survey,pxahc6,1,pxahc6_1,2005200262,2005200262,1 - 10 times,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14422-2
-lab_results,,lbscat_hct,,3009542,,Hematocrit [Volume Fraction] of Blood,Measurement,LOINC,Lab Test,S,20570-8,skos:exactMatch,1,,
-lab_results,,lbscat_mcv,,3024731,,MCV [Entitic volume],Measurement,LOINC,Lab Test,S,30428-7,skos:exactMatch,1,,
-lab_results,,lbscat_mch,,3035941,,MCH [Entitic mass],Measurement,LOINC,Lab Test,S,28539-5,skos:closeMatch,0.75,,
-lab_results,,lbscat_mchc,,3003338,,MCHC [Mass/volume],Measurement,LOINC,Lab Test,S,28540-3,skos:exactMatch,1,,
-lab_results,,lbscat_rdw,,3002385,,Erythrocyte distribution width [Ratio],Measurement,LOINC,Lab Test,S,30385-9,skos:exactMatch,1,,
-lab_results,,lbscat_plt,,3007461,,Platelets [#/volume] in Blood,Measurement,LOINC,Lab Test,S,26515-7,skos:closeMatch,0.75,,
-specimen_management,,lbdattim2,,40771497,,Collection date and time of Specimen,Observation,LOINC,Clinical Observation,S,68963-8,skos:closeMatch,1,,
-specimen_management,,lbperf2,,4132152,,Complete blood count,Measurement,SNOMED,Procedure,S,26604007,skos:closeMatch,0.75,,
-specimen_management,,lbreasn,,44788487,,Procedure not completed,Observation,SNOMED,Context-dependent,S,1.78291E+14,skos:relatedMatch,0.5,,
-specimen_management,,lbproc_vac,,4078754,,Test protocol used,Observation,SNOMED,Attribute,S,246423001,skos:relatedMatch,0.5,,
-specimen_management,,lbshp1dat,,1616668,,Shipping Date,Observation,LOINC,Clinical Observation,S,97208-3,skos:closeMatch,0.75,,
-specimen_management,,lbshp1,,1616343,,Shipment tracking number [Identifier],Observation,LOINC,Clinical Observation,S,97209-1,skos:closeMatch,1,,
-specimen_management,,lbrslt,,3017575,,Referral lab test results,Measurement,LOINC,Lab Test,S,19146-0,skos:closeMatch,0.75,,
-specimen_management,,lbreasn3,,44788487,,Procedure not completed,Observation,SNOMED,Context-dependent,S,1.78291E+14,skos:broadMatch,0.25,,
-specimen_management,,lbuplddat,,2005200190,2005200190,Date results were uploaded,Observation,AIREADI,Observation,S,,skos:exactMatch,1,,410671006
-specimen_management,,lbshp3dat,,0,,Shipping Date,Observation,LOINC,Clinical Observation,S,97208-3,skos:narrowMatch,0.5,,1616668
-specimen_management,,lbshp2,,0,,Shipment tracking number [Identifier],Observation,LOINC,Clinical Observation,S,97209-1,skos:closeMatch,1,,1616343
-px_sdoh_combined_survey,pxahc6,2,pxahc6_2,2005200263,2005200263,11 - 19 times,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA23703-4
-device_return,,dvamwdwnd,,0,,,Observation,LOINC,Clinical Observation,S,82611-5,skos:exactMatch,1,,Prev ID: ?
-px_sdoh_combined_survey,pxahc6,3,pxahc6_3,2005200264,2005200264,20 - 29 times,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA23703-4
-device_return,,dvcgmdwnd,,2005200237,2005200237,Data downloaded from transmitter?   Data downloaded/retrieved from device?,Observation,AIREADI,Clinical Observation,S,,skos:exactMatch,1,,82611-5
-px_sdoh_combined_survey,pxahc6,4,pxahc6_4,2005200265,2005200265,30 - 39 times,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA23703-4
-device_return,,dvenvlocn,,4109238,,Location within home premises,Observation,SNOMED,Location,S,284349006,skos:closeMatch,0.75,,
-device_return,,dvenvdwnd,,2005200276,2005200276,Data downloaded from device?,Observation,AIREADI,Clinical Observation,S,,skos:exactMatch,1,,82611-5
-disposition,,uppdae,,2005200191,2005200191,"Was there any Unanticipated Problems, Protocol Deviations or Adverse Event's that occurred or were associated with this participant?",Observation,AIREADI,Event,S,,skos:exactMatch,1,,370894009
-disposition,,uppdaeot2,,2005200558,2005200558,"If this was an adverse event, was your site PI notified?",Observation,AIREADI,Event,S,,skos:exactMatch,1,,
-disposition,,uppdaeot,,2005200559,2005200559,"If yes, please give a brief description along with the type(s) of events",Observation,AIREADI,Observation,S,,skos:exactMatch,1,,
-disposition,,eos_compen,,4242890,,Compensation,Observation,SNOMED,Clinical Finding,S,59811005,skos:closeMatch,0.75,,
-disposition,,eos_compenref,,0,,Reference documentation,Observation,SNOMED,Qualifier Value,S,308910008,skos:closeMatch,0.75,,4205679
-disposition,,eos_dsdecod,,4260904,,Reason for,Observation,SNOMED,Attribute,S,410666004,skos:relatedMatch,0.5,,
-disposition,,eos_dsterm,,2005200482,2005200482,"If Other, please specify:",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA6310-2
-px_sdoh_combined_survey,pxahc6,5,pxahc6_5,2005200266,2005200266,40 - 49 times,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA23703-4
-disposition,,eos_dsdecodie,,44811374,,Not eligible for participation in research study,Observation,SNOMED,Clinical Finding,S,8.73751E+14,skos:relatedMatch,0.75,,
-disposition,,eos_dsvst,,3655035,,Date of last examination,Observation,SNOMED,Observable Entity,S,840643003,skos:relatedMatch,0.5,,
-disposition,,exportzip,,3043579,,Postal code [Location],Observation,LOINC,Clinical Observation,S,ValidityValid,skos:closeMatch,1,,
-px_sdoh_combined_survey,pxahc6,6,pxahc6_6,2005200267,2005200267,50 or more times,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA15343-9
-specimen_management,,lbproc_bl1,,2005200417,2005200417,One 3ml EDTA tube collected,Observation,AIREADI,Observation,S,66240-3,skos:exactMatch,1,3ml EDTA,removed 2005200185 
-specimen_management,,lbproc_blreasn1,,0,,,Observation,,,,,,,,
-specimen_management,,lbproc_bl2,,2005200418,2005200418,Two 6ml EDTA tubes collected,Observation,AIREADI,Observation,S,66240-3,skos:exactMatch,1,6ml EDTA,removed 2005200186
-specimen_management,,lbproc_bl3,,2005200419,2005200419,Two 5.0 ml Serum SST/Gold Top tubes collected,Observation,AIREADI,Observation,S,,skos:exactMatch,1,Two 5.0 ml Serum SST,removed 2005200187 removed
-specimen_management,,lbproc_bl4,,2005200420,2005200420,One PAXgene RNA tube collected,Observation,AIREADI,Observation,S,66240-3,skos:exactMatch,1,One PAXgene RNA tube,removed 2005200188
-specimen_management,,lbproc_bl5,,2005200421,2005200421,Two CPT tubes collected,Observation,AIREADI,Observation,S,66240-3,skos:exactMatch,1,Two CPT tubes,removed 2005200189
-device_return,dvamwenhand,dvamwenhand_1,,45881626,,Right,Meas Value,LOINC,Answer,S,LA4306-2,skos:exactMatch,1,,
-device_return,dvamwenhand,dvamwenhand_2,,45883143,,Left,Meas Value,LOINC,Answer,S,LA4585-1,skos:exactMatch,1,,
-device_return,dvamwenhand,dvamwenhand_3,,763013,,Not Provided,Meas Value,SNOMED,Qualifier Value,S,4.34941E+14,skos:exactMatch,1,,
-device_return,,dvamwendhand,,40768726,,Dominant hand [PhenX],Observation,LOINC,Clinical Observation,S,66042-3,skos:exactMatch,1,,
-device_return,dvamwendhand,dvamwendhand_4,,4045863,,Ambidextrous,Observation,SNOMED,Clinical Finding,S,23088002,skos:exactMatch,1,,
-ehr_information,,mname,,0,,Middle name,Observation,SNOMED,Observable Entity,S,716057004,skos:exactMatch,1,,37396297
-px_neighborhood_environment_survey,pxne4,88,pxne4_88,2005200268,2005200268,Does not apply to my neighborhood,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14452-9
-ehr_information,sex,F,sex_F,0,,Female,Meas Value,LOINC,Answer,S,LA3-6,skos:exactMatch,1,,45878463
-ehr_information,sex,M,sex_M,0,,Male,Meas Value,LOINC,Answer,S,LA2-8,skos:exactMatch,1,,45880669
-ehr_information,sex,I,sex_I,0,,Intersex,Condition,SNOMED,Clinical Finding,S,46273637,skos:exactMatch,1,,46273637
-ehr_information,sex,99,sex_99,0,,Unknown,Meas Value,LOINC,Answer,S,LA4489-6,skos:exactMatch,1,,45877986
-mailing_information,state,AL,state_AL ,0,,Alabama,Meas Value,LOINC,Answer,S,LA3904-5,skos:exactMatch,1,,45878464
-mailing_information,state,AK,state_AK,0,,Alaska,Meas Value,LOINC,Answer,S,LA3903-7,skos:exactMatch,1,,45880671
-mailing_information,state,AZ,state_AZ,0,,Arizona,Meas Value,LOINC,Answer,S,LA3895-5,skos:exactMatch,1,,45878479
-mailing_information,state,AR,state_AR,0,,Arkansas,Meas Value,LOINC,Answer,S,LA3894-8,skos:exactMatch,1,,45878333
-mailing_information,state,CA,state_CA,0,,California,Meas Value,LOINC,Answer,S,LA3875-7,skos:exactMatch,1,,45884249
-mailing_information,state,CO,state_CO,0,,Colorado,Meas Value,LOINC,Answer,S,LA3862-5,skos:exactMatch,1,,45880672
-mailing_information,state,CT,state_CT,0,,Connecticut,Meas Value,LOINC,Answer,S,LA3859-1,skos:exactMatch,1,,45878329
-mailing_information,state,DE,state_DE,0,,Delaware,Meas Value,LOINC,Answer,S,LA3851-8,skos:exactMatch,1,,45878330
-mailing_information,state,FL,state_FL,0,,Florida,Meas Value,LOINC,Answer,S,LA3834-4,skos:exactMatch,1,,45878466
-mailing_information,state,GA,state_GA,0,,Georgia,Meas Value,LOINC,Answer,S,LA3830-2,skos:exactMatch,1,,45880064
-mailing_information,state,HI,state_HI,0,,Hawaii,Meas Value,LOINC,Answer,S,LA3820-3,skos:exactMatch,1,,45884232
-mailing_information,state,ID,state_ID,0,,Idaho,Meas Value,LOINC,Answer,S,LA3815-3,skos:exactMatch,1,,45882202
-mailing_information,state,IL,state_IL,0,,Illinois,Meas Value,LOINC,Answer,S,LA3814-6,skos:exactMatch,1,,45878323
-mailing_information,state,IN,state_IN,0,,Indiana,Meas Value,LOINC,Answer,S,LA3812-0,skos:exactMatch,1,,45878468
-mailing_information,state,IA,state_IA,0,,Iowa,Meas Value,LOINC,Answer,S,LA3809-6,skos:exactMatch,1,,45881554
-mailing_information,state,KS,state_KS,0,,Kansas,Meas Value,LOINC,Answer,S,LA3799-9,skos:exactMatch,1,,45882433
-mailing_information,state,KY,state_KY,0,,Kentucky,Meas Value,LOINC,Answer,S,LA3798-1,skos:exactMatch,1,,45884238
-mailing_information,state,LA,state_LA,0,,Louisiana,Meas Value,LOINC,Answer,S,LA3786-6,skos:exactMatch,1,,45880678
-mailing_information,state,ME,state_ME,0,,Maine,Meas Value,LOINC,Answer,S,LA3782-5,skos:exactMatch,1,,45884239
-mailing_information,state,MD,state_MD,0,,Maryland,Meas Value,LOINC,Answer,S,LA3775-9,skos:exactMatch,1,,45881556
-mailing_information,state,MA,state_MA,0,,Massachusetts,Meas Value,LOINC,Answer,S,LA33036-7,skos:exactMatch,1,,1990218
-mailing_information,state,MI,state_MI,0,,Michigan,Meas Value,LOINC,Answer,S,LA3771-8,skos:exactMatch,1,,45881558
-mailing_information,state,MN,state_MN,0,,Minnesota,Meas Value,LOINC,Answer,S,LA3766-8,skos:exactMatch,1,,45881574
-mailing_information,state,MS,state_MS,0,,Mississippi,Meas Value,LOINC,Answer,S,LA3765-0,skos:exactMatch,1,,45878353
-mailing_information,state,MO,state_MO,0,,Missouri,Meas Value,LOINC,Answer,S,LA3764-3,skos:exactMatch,1,,45881575
-mailing_information,state,MT,state_MT,0,,Montana,Meas Value,LOINC,Answer,S,LA3762-7,skos:exactMatch,1,,45876289
-mailing_information,state,NE,state_NE,0,,Nebraska,Meas Value,LOINC,Answer,S,LA3756-9,skos:exactMatch,1,,45878354
-mailing_information,state,NV,state_NV,0,,Nevada,Meas Value,LOINC,Answer,S,LA3753-6,skos:exactMatch,1,,45881577
-mailing_information,state,NH,state_NH,0,,New Hampshire,Meas Value,LOINC,Answer,S,LA3751-0,skos:exactMatch,1,,45878613
-mailing_information,state,NJ,state_NJ,0,,New Jersey,Meas Value,LOINC,Answer,S,LA3750-2,skos:exactMatch,1,,45881578
-mailing_information,state,NM,state_NM,0,,New Mexico,Meas Value,LOINC,Answer,S,LA3749-4,skos:exactMatch,1,,45882462
-mailing_information,state,NY,state_NY,0,,New York,Meas Value,LOINC,Answer,S,LA3748-6,skos:exactMatch,1,,45878614
-mailing_information,state,NC,state_NC,0,,North Carolina,Meas Value,LOINC,Answer,S,LA3736-1,skos:exactMatch,1,,45876291
-mailing_information,state,ND,state_ND,0,,North Dakota,Meas Value,LOINC,Answer,S,LA3734-6,skos:exactMatch,1,,45880946
-mailing_information,state,OH,state_OH,0,,Ohio,Meas Value,LOINC,Answer,S,LA3726-2,skos:exactMatch,1,,45878349
-mailing_information,state,OK,state_OK,0,,Oklahoma,Meas Value,LOINC,Answer,S,LA3725-4,skos:exactMatch,1,,45878350
-mailing_information,state,OR,state_OR,0,,Oregon,Meas Value,LOINC,Answer,S,LA3722-1,skos:exactMatch,1,,45882457
-mailing_information,state,PA,state_PA,0,,Pennsylvania,Meas Value,LOINC,Answer,S,LA3708-0,skos:exactMatch,1,,45880943
-mailing_information,state,PR,state_PR,0,,Puerto Rico,Meas Value,LOINC,Answer,S,LA3700-7,skos:exactMatch,1,,45880941
-mailing_information,state,RI,state_RI,0,,Rhode Island,Meas Value,LOINC,Answer,S,LA3692-6,skos:exactMatch,1,,45880936
-mailing_information,state,SC,state_SC,0,,South Carolina,Meas Value,LOINC,Answer,S,LA3677-7,skos:exactMatch,1,,45884254
-mailing_information,state,SD,state_SD,0,,South Dakota,Meas Value,LOINC,Answer,S,LA3676-9,skos:exactMatch,1,,45881568
-mailing_information,state,TN,state_TN,0,,Tennessee,Meas Value,LOINC,Answer,S,LA3612-4,skos:exactMatch,1,,45880931
-mailing_information,state,TX,state_TX,0,,Texas,Meas Value,LOINC,Answer,S,LA3611-6,skos:exactMatch,1,,45880690
-mailing_information,state,UT,state_UT,0,,Utah,Meas Value,LOINC,Answer,S,LA3587-8,skos:exactMatch,1,,45880934
-mailing_information,state,VT,state_VT,0,,Vermont,Meas Value,LOINC,Answer,S,LA3585-2,skos:exactMatch,1,,45878341
-mailing_information,state,VA,state_VA,0,,Virginia,Meas Value,LOINC,Answer,S,LA3583-7,skos:exactMatch,1,,45881563
-mailing_information,state,WA,state_WA,0,,Washington,Meas Value,LOINC,Answer,S,LA3580-3,skos:exactMatch,1,,45880935
-mailing_information,state,WV,state_WV,0,,West Virginia,Meas Value,LOINC,Answer,S,LA3578-7,skos:exactMatch,1,,45884251
-mailing_information,state,WI,state_WI,0,,Wisconsin,Meas Value,LOINC,Answer,S,LA3577-9,skos:exactMatch,1,,45878484
-mailing_information,state,WY,state_WY,0,,Wyoming,Meas Value,LOINC,Answer,S,LA3576-1,skos:exactMatch,1,,45878342
-screening_survey,rp_childpot,rp_childpot_yes,rp_childpot_yes,45884583,,Currently pregnant,Meas Value,LOINC,Answer,S,LA14670-6,skos:exactMatch,1,,
-screening_survey,mhterm_dm1,1,mhterm_dm1_1,45883360,,Diabetes Type 1,Meas Value,LOINC,Answer,S,LA10551-2,skos:exactMatch,1,,
-screening_survey,mh_a1c,1,mh_a1c_1,1620380,,Elevated,Meas Value,LOINC,Answer,S,LA32146-5,skos:exactMatch,1,,
-screening_survey,mh_a1c,0,mh_a1c_0,1620550,,Not elevated,Meas Value,LOINC,Answer,S,LA32147-3,skos:exactMatch,1,,
-screening_survey,mhterm_dm2,1,mhterm_dm2_1,201826,,Type 2 diabetes mellitus,Condition,SNOMED,Disorder,S,44054006,skos:exactMatch,1,,
-screening_survey,mhterm_dm2,0,mhterm_dm2_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,,
-screening_survey,mhterm_predm,1,mhterm_predm_1,37018196,,Prediabetes,Condition,SNOMED,Clinical Finding,S,,skos:exactMatch,1,,
-screening_survey,cmtrt_a1c,1,cmtrt_a1c_1,4016042,,Diabetic on oral treatment,Observation,SNOMED,Clinical Finding,S,170746002,skos:exactMatch,1,,
-screening_survey,cmtrt_insln,1,cmtrt_insln_1,440922,,Diabetic on insulin,Observation,SNOMED,Clinical Finding,S,170747006,skos:closeMatch,0.75,,
-screening_survey,cmtrt_glcs,1,cmtrt_glcs_1,36714369,,Diabetic on non-insulin injectable medication,Observation,SNOMED,Clinical Finding,S,719566006,skos:exactMatch,1,,
-screening_survey,cmtrt_lfst,1,cmtrt_lfst_1,607008,,Able to modify behavior and lifestyle to support health improvement,Observation,SNOMED,Clinical Finding,S,1148971005,skos:exactMatch,1,,
-screening_survey,scrsex,F,scrsex_F,45878463,,Female,Meas Value,LOINC,Answer,S,LA3-6,skos:exactMatch,1,,
-screening_survey,scrsex,M,scrsex_M,45880669,,Male,Meas Value,LOINC,Answer,S,LA2-8,skos:exactMatch,1,,
-screening_survey,scrsex,I,scrsex_I,46273637,,Intersex,Condition,SNOMED,Clinical Finding,S,46273637,skos:exactMatch,1,,
-screening_survey,scrsex,888,scrsex_888,45878142,,Other,Meas Value,LOINC,Answer,S,LA46-8,skos:exactMatch,1,,
-screening_survey,scrsex,777,scrsex_777,36311156,,Prefer not to say,Meas Value,LOINC,Answer,S,LA28803-7,skos:exactMatch,1,,
-screening_survey,ethnic,C67113,ethnic_C67113,45878460,,Mexican,Meas Value,LOINC,Answer,S,LA4611-5,skos:exactMatch,1,,
-screening_survey,ethnic,C67112,ethnic_C67112,45878458,,Puerto Rican,Meas Value,LOINC,Answer,S,LA4364-1,skos:exactMatch,1,,
-screening_survey,ethnic,C107608,ethnic_C107608,45880060,,Cuban,Meas Value,LOINC,Answer,S,LA4190-0,skos:exactMatch,1,,
-screening_survey,ethnic,C67117,ethnic_C67117,45884241,,Dominican Republic,Meas Value,LOINC,Answer,S,LA3847-6,skos:exactMatch,1,,
-screening_survey,ethnic,C67118,ethnic_C67118,45884898,,Central American,Meas Value,LOINC,Answer,S,LA10599-1,skos:exactMatch,1,,
-screening_survey,ethnic,C126532,ethnic_C126532,45880479,,South American,Meas Value,LOINC,Answer,S,LA10606-4,skos:exactMatch,1,,
-screening_survey,ethnic,C999,ethnic_C999,45884418,,Chicano,Meas Value,LOINC,Answer,S,LA14052-7,skos:exactMatch,1,,
-screening_survey,race,C17459,race_C17459,45877442,,American Indian or Alaska Native,Meas Value,LOINC,Answer,S,LA6155-1,skos:exactMatch,1,,
-screening_survey,race,C41260,race_C41260,45879439,,Asian,Meas Value,LOINC,Answer,S,LA6156-9,skos:exactMatch,1,,
-screening_survey,race,C16352,race_C16352,45877988,,Black or African American,Meas Value,LOINC,Answer,S,LA10610-6,skos:exactMatch,1,,
-screening_survey,race,C77820,race_C77820,45877987,,White,Meas Value,LOINC,Answer,S,LA4457-3,skos:exactMatch,1,,
-screening_survey,race,C41219,race_C41219,45878240,,Native Hawaiian or Other Pacific Islander,Meas Value,LOINC,Answer,S,LA10611-4,skos:exactMatch,1,,
-participant_contact_information_survey,prefmthd,1,prefmthd_1,0,,Phone Call,Meas Value,LOINC,Answer,S,LA4688-3,skos:exactMatch,1,,36309019
-participant_contact_information_survey,prefmthd,2,prefmthd_2,0,,Text message,Meas Value,LOINC,Answer,S,LA29798-8,skos:exactMatch,1,,37079157
-participant_contact_information_survey,prefmthd,3,prefmthd_3,0,,E-mail,Meas Value,LOINC,Answer,S,LA29799-6,skos:exactMatch,1,,37079112
-participant_contact_information_survey,prefmthd,4,prefmthd_4,0,,Contact Letter,Meas Value,LOINC,Answer,S,LA4215-5,skos:exactMatch,1,,36307651
-demographics_survey,cl_maristat,C51773,cl_maristat_C51773,45876756,,Married,Meas Value,LOINC,Answer,S,LA48-4,skos:exactMatch,1,,
-demographics_survey,cl_maristat,C51774,cl_maristat_C51774,45879879,,Single,Meas Value,LOINC,Answer,S,LA17717-2,skos:exactMatch,1,,
-demographics_survey,cl_maristat,C51776,cl_maristat_C51776,45883375,,Divorced,Meas Value,LOINC,Answer,S,LA51-8,skos:exactMatch,1,,
-demographics_survey,cl_maristat,C51775,cl_maristat_C51775,45883711,,Widowed,Meas Value,LOINC,Answer,S,LA49-2,skos:exactMatch,1,,
-demographics_survey,cl_maristat,C53262,cl_maristat_C53262,21499180,,Domestic partner,Meas Value,LOINC,Answer,S,LA22700-1,skos:exactMatch,1,,
-demographics_survey,cl_maristat,C51777,cl_maristat_C51777,45884459,,Separated,Meas Value,LOINC,Answer,S,LA4288-2,skos:exactMatch,1,,
-demographics_survey,genderid,1,genderid_1,36308665,,Identifies as male,Meas Value,LOINC,Answer,S,LA22878-5,skos:exactMatch,1,,
-demographics_survey,genderid,2,genderid_2,36307702,,Identifies as female,Meas Value,LOINC,Answer,S,LA22879-3,skos:exactMatch,1,,
-demographics_survey,genderid,3,genderid_3,36309864,,Identifies as non-conforming,Meas Value,LOINC,Answer,S,LA22882-7,skos:exactMatch,1,,
-health_survey,mhoccur_mi,1,mhoccur_mi_1,4329847,,Myocardial infarction,Condition,SNOMED,Disorder,S,22298006,skos:exactMatch,1,,
-health_survey,mhoccur_cvdot,1,mhoccur_cvdot_1,40770062,,History of Problems with your heart or circulation,Observation,LOINC,Clinical Observation,S,67434-1,skos:exactMatch,1,,
-health_survey,mhoccur_clsh,1,mhoccur_clsh_1,4159131,,Dyslipidemia,Condition,SNOMED,Disorder,S,370992007,skos:exactMatch,1,,
-health_survey,mhoccur_hbp,1,mhoccur_hbp_1,316866,,Hypertensive Disorder,Condition,SNOMED,Disorder,S,38341003,skos:exactMatch,1,,
-health_survey,mhoccur_lbp,1,mhoccur_lbp_1,317002,,Low blood pressure,Condition,SNOMED,Disorder,S,45007003,skos:exactMatch,1,,
-health_survey,mhoccur_pd,1,mhoccur_pd_1,381270,,Parkinson's disease,Condition,SNOMED,Disorder,S,49049000,skos:exactMatch,1,,
-health_survey,mhoccur_ad,1,mhoccur_ad_1,4182210,,Dementia ,Condition,SNOMED,Disorder,S,52448006,skos:exactMatch,1,,
-health_survey,mhcat_adot,1,mhcat_adot_1,378419,,Alzheimer's disease,Condition,SNOMED,Disorder,S,26929004,skos:exactMatch,1,,
-health_survey,mhcat_adot,999,mhcat_adot_999,45882025,,Unsure,Meas Value,LOINC,Answer,S,LA14072-5,skos:exactMatch,1,,
-health_survey,mhoccur_cogn,1,mhoccur_cogn_1,439795,,Minimal cognitive impairment,Condition,SNOMED,Clinical Finding,S,110352000,skos:exactMatch,1,,
-health_survey,mhoccur_ms,1,mhoccur_ms_1,374919,,Multiple sclerosis,Condition,SNOMED,Disorder,S,24700007,skos:exactMatch,1,,
-health_survey,mhoccur_cns,1,mhoccur_cns_1,46271045,,Neurocognitive disorder,Condition,SNOMED,Disorder,S,709073001,skos:exactMatch,1,,
-health_survey,mhoccur_ra,1,mhoccur_ra_1,4291025,,Arthritis,Condition,SNOMED,Disorder,S,3723001,skos:exactMatch,1,,
-health_survey,mhoccur_oa,1,mhoccur_oa_1,80502,,Osteoporosis,Condition,SNOMED,Disorder,S,64859006,skos:exactMatch,1,,
-health_survey,mhoccur_ca,1,mhoccur_ca_1,45877275,,Cancer,Meas Value,LOINC,Answer,S,LA10524-9,skos:exactMatch,1,,
-health_survey,mhoccur_plm,1,mhoccur_plm_1,4186898,,Chronic lung disease,Condition,SNOMED,Disorder,S,413839001,skos:exactMatch,1,,
-health_survey,mhoccur_gi,1,mhoccur_gi_1,192731,,Digestive symptom,Condition,SNOMED,Clinical Finding,S,308925008,skos:closeMatch,0.75,,
-health_survey,mhoccur_ua,1,mhoccur_ua_1,81902,,Urinary tract infectious disease,Condition,SNOMED,Disorder,S,68566005,skos:exactMatch,1,,
-health_survey,mhoccur_rnl,1,mhoccur_rnl_1,198124,,Kidney disease,Condition,SNOMED,Disorder,S,90708001,skos:exactMatch,1,,
-health_survey,mhoccur_ear,1,mhoccur_ear_1,45882741,,Hearing impairment,Meas Value,LOINC,Answer,S,LA16989-8,skos:exactMatch,1,,
-health_survey,mhoccur_obs,1,mhoccur_obs_1,433736,,Obesity,Condition,SNOMED,Disorder,S,414916001,skos:exactMatch,1,,
-health_survey,fh_dm2pt,1,fh_dm2pt_1,4334340,,Family history of diabetes mellitus type 2,Observation,SNOMED ,Context-dependent,S,430679000,skos:exactMatch,1,,
-health_survey,fh_dm2pt,555,fh_dm2pt_555,45877986,,Unknown,Meas Value,LOINC,Answer,S,LA4489-6,skos:exactMatch,1,,
-health_survey,fh_dm2ptsp,1,fh_dm2ptsp_1,45883183,,Mother,Meas Value,LOINC,Answer,S,LA10417-6,skos:exactMatch,1,,
-health_survey,fh_dm2ptsp,2,fh_dm2ptsp_2,45883182,,Father,Meas Value,LOINC,Answer,S,LA10416-8,skos:exactMatch,1,,
-health_survey,fh_dm2sbsp,1,fh_dm2sbsp_1,45883436,,Sister,Meas Value,LOINC,Answer,S,LA10418-4,skos:exactMatch,1,,
-health_survey,fh_dm2sbsp,2,fh_dm2sbsp_2,45883765,,Brother,Meas Value,LOINC,Answer,S,LA10415-0,skos:exactMatch,1,,
-health_survey,fh_dm2sbsp,3,fh_dm2sbsp_3,45882597,,Half-sister,Meas Value,LOINC,Answer,S,LA10409-3,skos:exactMatch,1,,
-health_survey,fh_dm2sbsp,4,fh_dm2sbsp_4,45877612,,Half-brother,Meas Value,LOINC,Answer,S,LA10408-5,skos:exactMatch,1,,
-health_survey,mhoccur_glc,1,mhoccur_glc_1,437541,,Glaucoma,Condition,SNOMED,Disorder,S,23986001,skos:exactMatch,1,,
-health_survey,mhoccur_amd,1,mhoccur_amd_1,374028,,Age related macular degeneration,Condition,SNOMED,Disorder,S,267718000,skos:exactMatch,1,,
-health_survey,mhoccur_crt,1,mhoccur_crt_1,45876993,,Cataracts,Meas Value,LOINC,Answer,S,LA16306-5,skos:exactMatch,1,,
-health_survey,mhoccur_pdr,1,mhoccur_pdr_1,3043772,,Diabetic retinopathy [Minimum Data Set],Observation,LOINC,Survey,S,45672-3,skos:exactMatch,1,,
-health_survey,mhoccur_rvo,1,mhoccur_rvo_1,440392,,Retinal vascular occlusion,Condition,SNOMED,Disorder,S,73757007,skos:exactMatch,1,,
-health_survey,mhoccur_ded,1,mhoccur_ded_1,4036620,,Dry eyes,Condition,SNOMED,Clinical Finding,S,162290004,skos:exactMatch,1,,
-health_survey,mhoccur_yn,1,mhoccur_yn_1,46234759,,Other health condition,Observation,LOINC,Clinical Observation,S,76472-0,skos:exactMatch,1,,
-health_survey,mhoccur_fall,1,mhoccur_fall_1,40757198,,Falls in the past year,Observation,LOINC,Survey,S,52552-7,skos:exactMatch,1,,
-substance_use_survey,susmkstaage,98,susmkstaage_98,45882614,,60 or older,Meas Value,LOINC,Answer,S,LA16058-2,skos:exactMatch,1,,
-substance_use_survey,susmkdosfr,21,susmkdosfr_21,45881687,,21-30 (2 points),Meas Value,LOINC,Answer,S,LA15914-7,skos:closeMatch,1,,
-substance_use_survey,susmkdosfr,31,susmkdosfr_31,45884478,,31 or more (3 points),Meas Value,LOINC,Answer,S,LA15915-4,skos:closeMatch,1,,
-px_neighborhood_environment_survey,pxne8,88,pxne8_88,2005200269,2005200269,There are no streets or roads in my neighborhood,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,129685008
-substance_use_survey,sualckncf,1,sualckncf_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,,
-substance_use_survey,subrdosfr,0,subrdosfr_0,45882032,,Less than 1 drink a week,Meas Value,LOINC,Answer,S,LA14683-9,skos:exactMatch,1,,
-px_neighborhood_environment_survey,pxne11,6,pxne11_6,2005200270,2005200270,6 or more,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14674-8
-driving_record,dri2,1,dri2_1,2005200271,2005200271,5000 miles or less,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,310859004
-driving_record,dri2,2,dri2_2,2005200272,2005200272,"5001 to 10,000 miles",Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,310859004
-driving_record,dri2,3,dri2_3,2005200273,2005200273,"10,001 to 15.000 miles",Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,310859004
-driving_record,dri2,4,dri2_4,2005200274,2005200274,"15,001 to 20,000 miles",Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,310859004
-driving_record,dri2,5,dri2_5,2005200275,2005200275,"More than 20,000 miles",Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,310859004
-diabetes_survey,,dmlvex,,2005200277,2005200277,"In a typical week, how often do you engage in vigorous exercise? (Examples: hiking, jogging at 6 mph, shoveling, carrying heavy loads, bicycling fast (14-16 mph), playing basketball, playing soccer, playing tennis, or any activity during which you cannot say more than a few words without taking a breath)",Observation,AIREADI,Clinical Finding,S,,skos:exactMatch,1,,408579009
-diabetes_survey,,dmlhex,,2005200278,2005200278,"How often would you say that you engage in daily home exercise? (Examples: stretching, calisthenics, or yoga)",Observation,AIREADI,Procedure,S,,skos:exactMatch,1,,229075007
-disposition,eos_dsdecod,1,eos_dsdecod_1,2005200280,2005200280,Did not meet Inclusion/Exclusion criteria,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA24349-5
-substance_use_survey,sualcdrv,0,sualcdrv_0,45876662,,Never,Meas Value,LOINC,Answer,S,LA6270-8,skos:exactMatch,1,,
-substance_use_survey,sualcdrv,1,sualcdrv_1,45876672,,Rarely,Meas Value,LOINC,Answer,S,LA10066-1,skos:exactMatch,1,,
-substance_use_survey,sualcdrv,2,sualcdrv_2,45882528,,Sometimes,Meas Value,LOINC,Answer,S,LA10082-8,skos:exactMatch,1,,
-substance_use_survey,sualcdrv,3,sualcdrv_3,45884455,,Often,Meas Value,LOINC,Answer,S,LA10044-8,skos:exactMatch,1,,
-substance_use_survey,sualcdrv,4,sualcdrv_4,45882536,,Always,Meas Value,LOINC,Answer,S,LA9933-8,skos:exactMatch,1,,
-substance_use_survey,suvpcdur,1,suvpcdur_1,903655,,Electronic cigarette smoker,Observation,OMOP Extension,Clinical Finding,S,OMOP5181836,skos:exactMatch,1,,
-disposition,eos_dsdecod,3,eos_dsdecod_3,2005200281,2005200281,Withdrawal by Subject,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA30915-5
-substance_use_survey,sumrjcdur,1,sumrjcdur_1,37116660,,Marijuana user,Condition,SNOMED,Clinical Finding,S,733460004,skos:exactMatch,1,,
-substance_use_survey,sumrjtrt,1,sumrjtrt_1,45877637,,"Inhalation, respiratory",Meas Value,LOINC,Answer,S,LA11273-2,skos:exactMatch,1,,
-substance_use_survey,sumrjtrt,2,sumrjtrt_2,45878097,,Oral,Meas Value,LOINC,Answer,S,LA9367-9,skos:exactMatch,1,,
-substance_use_survey,sumrjtrt,3,sumrjtrt_3,45877645,,Topical,Meas Value,LOINC,Answer,S,LA9456-0,skos:exactMatch,1,,
-disposition,eos_dsdecod,4,eos_dsdecod_4,2005200282,2005200282,Geographic Inaccessibility,Observation,AIREADI,Context-dependent,S,,skos:exactMatch,1,,183928007
-disposition,eos_dsdecod,6,eos_dsdecod_6,2005200283,2005200283,Currently enrolled in a conflicting study,Observation,AIREADI,Clinical Finding,S,,skos:exactMatch,1,,309032007
-disposition,eos_dsdecod,9,eos_dsdecod_9,2005200284,2005200284,Protocol Deviation,Observation,AIREADI,Clinical Finding,S,,skos:exactMatch,1,,309032007
-disposition,eos_dsdecodie,1,eos_dsdecodie_1,2005200285,2005200285,Individual was under age 40,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA31987-3
-disposition,eos_dsdecodie,3,eos_dsdecodie_3,2005200286,2005200286,Individual is not needed at this time for recruitment goals,Observation,AIREADI,Clinical Finding,S,,skos:exactMatch,1,,444734003
-disposition,eos_dsdecodie,4,eos_dsdecodie_4,2005200287,2005200287,Individual had Type 1 Diabetes,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA10551-2
-disposition,eos_dsvst,2,eos_dsvst_2,2005200288,2005200288,In Person (Baseline),Observation,AIREADI,Procedure,S,,skos:exactMatch,1,,4.53701E+14
-diabetes_survey,,dmlsugar,,2005200305,2005200305,"When reflecting on your typical eating habits, which of the following options best describes how often you consume simple sugars?",Observation,AIREADI,Procedure,S,,skos:exactMatch,1,,710848001
-diabetes_survey,,dmlgrain,,2005200306,2005200306,"In a typical day, how often do you consume whole grains? (Examples: include whole wheat, brown bread, or brown rice).",Observation,AIREADI,Procedure,S,,skos:exactMatch,1,,710848001
-diabetes_survey,,dmledu,,2005200307,2005200307,"How often would you say that you engage in diabetes health education? (Examples:  consulting with a dietician, attending support groups, reading books on diabetes, using diabetes-focused websites, watching TV shows on health, or using health-focused apps on your phone or tablet)",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,398773005
-diabetes_survey,,dmlfeet,,2005200308,2005200308,How often do you inspect your feet?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,4.7251E+13
-diabetes_survey,,dmlmd,,2005200309,2005200309,Which of the following options best describes you with respect to physician care and medications?,Procedure,AIREADI,Survey,S,,skos:exactMatch,1,,410119004
-diabetes_survey,,dmlstartts,,2005200310,2005200310, Diabetes Survey Started Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
-diabetes_survey,,dmlcmpts,,2005200311,2005200311, Diabetes Survey Completed Timestamp (from REDCap),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,99423-6
 diabetes_survey,dmlvex,10,dmlvex_10,2005200312,2005200312,At least 30 minutes daily 3 or more days a week,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14480-0
 diabetes_survey,dmlvex,5,dmlvex_5,2005200313,2005200313,Less than 30 minutes daily less than 3 days a week,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,27789000
 diabetes_survey,dmlact,10,dmlact_10,2005200314,2005200314,"Active (stairs, walks, housework)",Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA16666-2
@@ -635,327 +331,51 @@ diabetes_survey,dmledu,5,dmledu_5,2005200331,2005200331,Occasionally; every 2-3 
 diabetes_survey,dmlmd,10,dmlmd_10,2005200332,2005200332,3 or more visits a year to the same doctor. Regular with medicines.,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA19812-9
 diabetes_survey,dmlmd,5,dmlmd_5,2005200333,2005200333,1-2 visits a year. Forgetting medicines frequently.,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA23695-2
 diabetes_survey,dmlmd,0,dmlmd_0,2005200334,2005200334,Rarely or none. Not taking 1 or more recommended medicines ,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA15665-5
-preconsent_survey,,preconcmpdat,,2005200422,2005200422,Performed date of Pre-consent survey/form,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-consent_survey,,icf_dat,,2005200423,2005200423,Performed date of Consent survey/form ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-consent_survey,,c184390_dat,,2005200424,2005200424,Performed date of  paper consent,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-staff_consent_attestation_survey,,icfa_dat,,2005200425,2005200425,Performed date of  Consent Attestation,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-participant_contact_information_survey,,prtcmpdat,,2005200426,2005200426,Performed date of  Participant contact survey/form,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-demographics_survey,,dmgcmpdat,,2005200427,2005200427,Performed date of  Demographic survey date ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-health_survey,,mhcmpdat,,2005200428,2005200428,Performed date of  Health survey ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-substance_use_survey,,sucmpdat,,2005200429,2005200429,Performed date of  Substance use survey ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-cesd10_survey,,cesmpdat,,2005200430,2005200430,Performed date of  CES-D-10 survey ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-paid5_dm_survey,,paidcmpdat,,2005200431,2005200431,Performed date of PAID-5 DM survey ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-diabetes_survey,,dmlcmpdat,,2005200432,2005200432,Performed date of Diabetes survey,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-dietary_survey,,dietcmpdat,,2005200433,2005200433,Performed date of Dietary survey,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-ophthalmic_survey,,viacmpdat,,2005200434,2005200434,Performed date of Ophthalmic survey ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-px_sdoh_combined_survey,,pxsdohcmpdat,,2005200435,2005200435,Performed date of PhenX SDOH survey,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-px_food_insecurity_survey,,pxsficmpdat,,2005200436,2005200436,Performed date of PhenX Food Insecurity survey,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-px_neighborhood_environment_survey,,pxnecmpdat,,2005200437,2005200437,Performed date of  PhenX Neighborhood Enviroment survey ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-px_racial_ethnic_discrimination_survey,,pxrdcmpdat,,2005200438,2005200438,Performed date of PhenX Racial/Ethnic Discrimination survey ,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-meds_assessment,,cmcmpdat,,2005200439,2005200439,Performed date of  medications assessment,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-physical_assessment,,pacmpdat,,2005200440,2005200440,Performed date of physical assessment,Observation,AIREADI,Procedure,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-monofilament,,msscmpdat,,2005200444,2005200444,Performed date of monofilament,Observation,AIREADI,Procedure,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
-moca,,mocacmpdattim,,2005200445,2005200445,Performed date of MoCA,Observation,AIREADI,Procedure,S,,skos:exactMatch,1,1035260,Performed on value_as_concept_id = 1035260 | LA30233-3
-health_survey,,mhoccur_lbp,,2005200447,2005200447,Has a doctor or other healthcare professional ever told you that you have/had low blood pressure,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Creating local code
-health_survey,,mhoccur_pd,,2005200448,2005200448,Has a doctor or other healthcare professional ever told you that you have/had Parkinson's disease,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA27533-1
-health_survey,,mhoccur_ad,,2005200449,2005200449,Has a doctor or other healthcare professional ever told you that you have/had Dementia,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,Removed local code 2005200015
-health_survey,,mhcat_adot,,2005200450,2005200450,Has a doctor or other healthcare professional ever told you that you have/had Alzheimer's disease,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-health_survey,,mhcat_dmtaot,,2005200451,2005200451,Has a doctor or other healthcare professional ever told you that you have other types of Dementia  or Alzheimer's Disease,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA6310-2
-health_survey,,mhoccur_cogn,,2005200452,2005200452,Has a doctor or other healthcare professional ever told you that you have/had a mild cognitive impairment,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-health_survey,,mhoccur_ms,,2005200453,2005200453,Has a doctor or other healthcare professional ever told you that you have/had multiple sclerosis,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,use 374919 for yes
-health_survey,,mhoccur_cns,,2005200454,2005200454,Has a doctor or other healthcare professional ever told you that you have/had neurocognitive disorder,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,use 46271045 for yes
-health_survey,,mhoccur_cnsot,,2005200455,2005200455,Neurocognitive disorder please specify,Observation,AIREADI,Survey,S,,skos:exactMatch,1,value_as_concept_id|36309562 ,LA28880-5
-health_survey,,mhoccur_ra,,2005200456,2005200456,Has a doctor or other healthcare professional ever told you that you have/had arthritis,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,use 4291025 for yes
-diabetes_survey,dmlvex,0,dmlvex_0,45883771,,Rarely or never,Meas Value,LOINC,Answer,S,LA15665-5,skos:exactMatch,1,,
-health_survey,,mhoccur_oa,,2005200457,2005200457,Has a doctor or other healthcare professional ever told you that you have/had osteoporosis,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA10527-2
-health_survey,,mhoccur_ca,,2005200458,2005200458,Has a doctor or other healthcare professional ever told you that you have/had cancer,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-health_survey,,mhoccur_cnrot,,2005200459,2005200459,Other cancer type please (specify),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-health_survey,,mhoccur_plm,,2005200460,2005200460,Has a doctor or other healthcare professional ever told you that you have/had chronic pulmonary (lung) disease,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-health_survey,,mhoccur_gi,,2005200461,2005200461,Has a doctor or other healthcare professional ever told you that you have/had digestive disease,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-health_survey,,mhoccur_ear,,2005200462,2005200462,Has a doctor or other healthcare professional ever told you that you have/had hearing impairment,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-health_survey,,fh_dm2ptsp,,2005200463,2005200463,Was your mother or father diagnosed with Type II Diabetes?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-health_survey,,fh_dm2sbsp,,2005200464,2005200464,"If yes, please check all that apply: brother, sister, half-sister, half-brother",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,each answer options are mapped based on each checkboxes clicked
-health_survey,,mhoccur_glc,,2005200465,2005200465,Glaucoma (in one or both eyes),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,23986001
-health_survey,,mhoccur_amd,,2005200466,2005200466,Age related macular degeneration,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,267718000
-health_survey,,mhoccur_pdr,,2005200467,2005200467,Diabetic retinopathy (in one or both eyes),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,45672-3
-health_survey,,mhoccur_rvo,,2005200468,2005200468,"Retinal vascular occlusion (""stroke in the eye or eye vessels"" - in one or both eyes)",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,73757007
-health_survey,,mhoccur_ded,,2005200469,2005200469,Dry eye (in one or both eyes),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,162290004
-health_survey,,mhoccur_yn,,2005200470,2005200470,"Have you been diagnosed with any conditions not listed above? (any condition, not just eyes)",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,76472-0
-health_survey,,mhoccur_obs,,2005200471,2005200471,Has a doctor or other healthcare professional ever told you that you have/had obesity,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-health_survey,,mhoccur_ot,,2005200472,2005200472,Other (specify),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA6310-2
-substance_use_survey,,sumrjcdur,,2005200473,2005200473,Do you use marijuana now?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,2005200473
-device_distribution,,dvamwstdat,,2005200474,2005200474,Date when physical activity monitor was given to patient,Observation,AIREADI,Observation,S,,skos:exactMatch,1,,LA30233-3
-diabetes_survey,dmlfeet,10,dmlfeet_10,45879676,,Daily or almost daily,Meas Value,LOINC,Answer,S,LA18934-2,skos:closeMatch,1,,
-diabetes_survey,dmlfeet,5,dmlfeet_5,45879060,,Monthly,Meas Value,LOINC,Answer,S,LA18876-5,skos:exactMatch,1,,
-device_distribution,,dvcgmstdat,,2005200475,2005200475,Date sensor inserted,Observation,AIREADI,Observation,S,,skos:exactMatch,1,,LA30233-3
-device_distribution,,dvenvstdat,,2005200476,2005200476,Date when continuous glucose monitor was given to participant,Observation,AIREADI,Observation,S,,skos:exactMatch,1,,LA30233-3
-faq_survey,,faqcmpdat,,2005200477,2005200477,Performed date of FAQ survey,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-current_medications,,cmcmpdat2,,2005200478,2005200478,Date when current medication was collected,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA30233-3
-screening_survey,,scrcmpdat,,2005200479,2005200479,Performed date of screening survey,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-dietary_survey,diet1,2,diet1_2,46238128,,4 or more times,Meas Value,LOINC,Answer,S,LA23713-3,skos:exactMatch,1,,
-px_sdoh_combined_survey,,pxep2,,2005200480,2005200480,Do you speak another language at home?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA30188-9
-dietary_survey,diet2,1,diet2_1,45882611,,4-Mar,Meas Value,LOINC,Answer,S,LA14353-9,skos:exactMatch,1,,
-current_medications,,cmname,,2005200481,2005200481,Medication Name,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA22650-8
-device_return,,dvenvenyn,,2005200483,2005200483,Environmental sensor returned?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,82611-5
-driving_record,,odristate,,2005200485,2005200485,Specify other,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA6310-2
-dietary_survey,diet4,1,diet4_1,45884526,,2-Jan,Meas Value,LOINC,Answer,S,LA14352-1,skos:exactMatch,1,,
-dietary_survey,diet4,2,diet4_2,45878438,,3 or more,Meas Value,LOINC,Answer,S,LA19812-9,skos:exactMatch,1,,
-dietary_survey,diet5,0,diet5_0,45882029,,3 or more times,Meas Value,LOINC,Answer,S,LA14665-6,skos:exactMatch,1,,
-dietary_survey,diet5,1,diet5_1,46237352,,1-2 times,Meas Value,LOINC,Answer,S,LA23695-2,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd4,,2005200493,2005200493,"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd5,,2005200494,2005200494,"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-dietary_survey,diet6,1,diet6_1,36308308,,2-3 times,Meas Value,LOINC,Answer,S,LA28443-2,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd6,,2005200495,2005200495,"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-dietary_survey,diet8,0,diet8_0,45877927,,Very little,Meas Value,LOINC,Answer,S,LA13947-9,skos:exactMatch,1,,
-dietary_survey,diet8,1,diet8_1,45876729,,Some,Meas Value,LOINC,Answer,S,LA14973-4,skos:exactMatch,1,,
-dietary_survey,diet8,2,diet8_2,45883539,,A lot,Meas Value,LOINC,Answer,S,LA14468-5,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd7,,2005200496,2005200496,"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-ophthalmic_survey,via1,1,via1_1,45878948,,No difficulty,Meas Value,LOINC,Answer,S,LA15227-4,skos:exactMatch,1,,
-ophthalmic_survey,via1,2,via1_2,45883842,,A little difficulty,Meas Value,LOINC,Answer,S,LA15725-7,skos:exactMatch,1,,
-ophthalmic_survey,via1,3,via1_3,45879201,,Moderate difficulty,Meas Value,LOINC,Answer,S,LA15726-5,skos:exactMatch,1,,
-ophthalmic_survey,via1,4,via1_4,45880767,,Extreme difficulty,Meas Value,LOINC,Answer,S,LA15727-3,skos:exactMatch,1,,
-ophthalmic_survey,via1,5,via1_5,45879202,,Stopped doing this because of your eyesight,Meas Value,LOINC,Answer,S,LA14735-7,skos:exactMatch,1,,
-ophthalmic_survey,via4,1,via4_1,45882114,,Within 30 days,Meas Value,LOINC,Answer,S,LA160-4,skos:closeMatch,1,,
-ophthalmic_survey,via4,2,via4_2,45883457,,More than 30 days ago but within the past 12 months,Meas Value,LOINC,Answer,S,LA15789-3,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd8,,2005200497,2005200497,"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-ophthalmic_survey,via4,4,via4_4,1990160,,More than 2 years ago (more than 105 weeks ago),Meas Value,LOINC,Answer,S,LA32867-6,skos:closeMatch,1,,
-px_racial_ethnic_discrimination_survey,,pdrx9,,2005200498,2005200498,"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd10,,2005200499,2005200499,"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd11,,2005200500,2005200500,"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd12,,2005200501,2005200501,"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd13,,2005200502,2005200502,How often have you been treated unfairly by strangers because of your race/ethnic group? How often in the past year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd14,,2005200503,2005200503,How often have you been treated unfairly by strangers because of your race/ethnic group? How often in your entire life?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd15,,2005200504,2005200504,"How often have you been treated unfairly by strangers because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxep2,1,pxep2_1,37079013,,Language other than English,Meas Value,LOINC,Answer,S,LA30188-9,skos:closeMatch,1,,
-px_sdoh_combined_survey,pxep3,1,pxep3_1,45877707,,Very well,Meas Value,LOINC,Answer,S,LA15367-8,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxep3,2,pxep3_2,45877705,,Well,Meas Value,LOINC,Answer,S,LA18365-9,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxep3,3,pxep3_3,45877706,,Not well,Meas Value,LOINC,Answer,S,LA18366-7,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxep3,0,pxep3_0,45883172,,Not at all,Meas Value,LOINC,Answer,S,LA6568-5,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxep3,555,pxep3_555,45876636,,Don't know,Meas Value,LOINC,Answer,S,LA12688-0,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,0,pxed1_0,45883712,,Never attended/kindergarten only,Meas Value,LOINC,Answer,S,LA15606-9,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,1,pxed1_1,45876757,,1st grade,Meas Value,LOINC,Answer,S,LA15607-7,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,2,pxed1_2,45876392,,2nd grade,Meas Value,LOINC,Answer,S,LA15608-5,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,3,pxed1_3,45883376,,3rd grade,Meas Value,LOINC,Answer,S,LA15609-3,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,4,pxed1_4,45881672,,4th grade,Meas Value,LOINC,Answer,S,LA15610-1,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,5,pxed1_5,45876758,,5th grade,Meas Value,LOINC,Answer,S,LA15611-9,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,6,pxed1_6,45883377,,6th grade,Meas Value,LOINC,Answer,S,LA15612-7,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,7,pxed1_7,45883713,,7th grade,Meas Value,LOINC,Answer,S,LA15613-5,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,8,pxed1_8,45876759,,8th grade,Meas Value,LOINC,Answer,S,LA15614-3,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,9,pxed1_9,45884460,,9th grade,Meas Value,LOINC,Answer,S,LA15615-0,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,10,pxed1_10,45876393,,10th grade,Meas Value,LOINC,Answer,S,LA15616-8,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,11,pxed1_11,45883714,,11th grade,Meas Value,LOINC,Answer,S,LA15617-6,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,12,pxed1_12,45884461,,"12th grade, no diploma",Meas Value,LOINC,Answer,S,LA15618-4,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,13,pxed1_13,45884464,,High school graduate,Meas Value,LOINC,Answer,S,LA15564-0,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,14,pxed1_14,45881673,,GED or equivalent,Meas Value,LOINC,Answer,S,LA15619-2,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,15,pxed1_15,45882538,,"Some college, no degree",Meas Value,LOINC,Answer,S,LA15620-0,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,16,pxed1_16,45881674,,"Associate degree: occupational, technical, or vocational program",Meas Value,LOINC,Answer,S,LA15621-8,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,17,pxed1_17,45884462,,Associate degree: academic program,Meas Value,LOINC,Answer,S,LA15622-6,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,18,pxed1_18,45884155,,"Bachelor's degree (e.g., BA, AB, BS)",Meas Value,LOINC,Answer,S,LA12460-4,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,19,pxed1_19,45878298,,"Master's degree (e.g., MA, MS, MEng, MEd, MSW, MBA)",Meas Value,LOINC,Answer,S,LA12461-2,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,20,pxed1_20,45883176,,"Professional school degree (example: MD, DDS, DVM, JD)",Meas Value,LOINC,Answer,S,LA15625-9,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxed1,21,pxed1_21,45884463,,"Doctoral degree (example: PhD, EdD)",Meas Value,LOINC,Answer,S,LA15626-7,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxji1,1,pxji1_1,45880190,,Very likely,Meas Value,LOINC,Answer,S,LA15586-3,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxji1,2,pxji1_2,1989775,,Somewhat likely,Meas Value,LOINC,Answer,S,LA33145-6,skos:closeMatch,1,,
-px_sdoh_combined_survey,pxji1,3,pxji1_3,1990595,,Somewhat unlikely,Meas Value,LOINC,Answer,S,LA33144-9,skos:closeMatch,1,,
-px_sdoh_combined_survey,pxji1,4,pxji1_4,45877240,,Very unlikely,Meas Value,LOINC,Answer,S,LA15589-7,skos:closeMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd16,,2005200505,2005200505,"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxji1,0,pxji1_0,45882470,,Not applicable,Meas Value,LOINC,Answer,S,LA4720-4,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxji2,1,pxji2_1,1989852,,Very easy,Meas Value,LOINC,Answer,S,LA33160-5,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxji2,2,pxji2_2,1989725,,Somewhat easy,Meas Value,LOINC,Answer,S,LA33161-3,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxji2,3,pxji2_3,45884578,,Very difficult,Meas Value,LOINC,Answer,S,LA6575-0,skos:closeMatch,1,,
-px_sdoh_combined_survey,pxhi1,1,pxhi1_1,1620541,,I have a steady place to live,Meas Value,LOINC,Answer,S,LA31993-1,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxhi1,2,pxhi1_2,1620991,,"I have a place to live today, but I am worried about losing it in the future",Meas Value,LOINC,Answer,S,LA31994-9,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxhi1,0,pxhi1_0,1621285,,"I do not have a steady place to live (I am temporarily staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)",Meas Value,LOINC,Answer,S,LA31995-6,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxhi2,1,pxhi2_1,1621241,,"Pests such as bugs, ants, or mice",Meas Value,LOINC,Answer,S,LA31996-4,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxhi2,2,pxhi2_2,36307605,,Mold,Meas Value,LOINC,Answer,S,LA28580-1,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxhi2,3,pxhi2_3,1621120,,Lead paint or pipes,Meas Value,LOINC,Answer,S,LA31997-2,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxhi2,4,pxhi2_4,1620632,,Lack of heat,Meas Value,LOINC,Answer,S,LA31998-0,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxhi2,5,pxhi2_5,1620572,,Oven or stove not working,Meas Value,LOINC,Answer,S,LA31999-8,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxhi2,6,pxhi2_6,1620304,,Smoke detectors missing or not working,Meas Value,LOINC,Answer,S,LA32000-4,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxhi2,7,pxhi2_7,1620583,,Water leaks,Meas Value,LOINC,Answer,S,LA32001-2,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxhi2,8,pxhi2_8,45878802,,None of the above,Meas Value,LOINC,Answer,S,LA9-3,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd17,,2005200506,2005200506,"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxhic1,0,pxhic1_0,45881114,,Not Covered by Insurance,Meas Value,LOINC,Answer,S,LA10041-4,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxhic1,999,pxhic1_999,45884425,,Not sure,Meas Value,LOINC,Answer,S,LA12693-0,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd18,,2005200507,2005200507,"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd19,,2005200508,2005200508,How often have you been treated unfairly by neighbors because of your race/ethnic group? How often in the past year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd20,,2005200509,2005200509,How often have you been treated unfairly by neighbors because of your race/ethnic group? How often in your entire life?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd21,,2005200510,2005200510,"How often have you been treated unfairly by neighbors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd22,,2005200511,2005200511,"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd23,,2005200512,2005200512,"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd24,,2005200513,2005200513,"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd25,,2005200514,2005200514,How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? How often in the past year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxahc1,1,pxahc1_1,45876704,,Within the past 12 months,Meas Value,LOINC,Answer,S,LA14700-1,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxahc1,2,pxahc1_2,45876577,,"More than 1 year, but not more than 2 years ago",Meas Value,LOINC,Answer,S,LA14438-8,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxahc1,3,pxahc1_3,45876578,,"More than 2 years, but not more than 3 years ago",Meas Value,LOINC,Answer,S,LA14439-6,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxahc1,4,pxahc1_4,45880702,,"More than 3 years, but not more than 5 years ago",Meas Value,LOINC,Answer,S,LA14440-4,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd26,,2005200515,2005200515,How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? How often in your entire life?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxahc1,6,pxahc1_6,45881663,,10 years or more,Meas Value,LOINC,Answer,S,LA13833-1,skos:closeMatch,0.75,,
-px_racial_ethnic_discrimination_survey,,pxrd27,,2005200516,2005200516,"How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd28,,2005200517,2005200517,"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd29,,2005200518,2005200518,"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd30,,2005200519,2005200519,"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd31,,2005200520,2005200520,How often have people misunderstood your intentions and motives because of your race/ethnic group? How often in the past year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxahc5,3,pxahc5_3,45884373,,Emergency room,Meas Value,LOINC,Answer,S,LA7172-5,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd32,,2005200521,2005200521,How often have people misunderstood your intentions and motives because of your race/ethnic group? How often in your entire life?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxahc5,5,pxahc5_5,45878142,,Other,Meas Value,LOINC,Answer,S,LA46-8,skos:closeMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd33,,2005200522,2005200522,"How often have people misunderstood your intentions and motives because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxahc6,0,pxahc6_0,45878582,,None,Meas Value,LOINC,Answer,S,LA137-2,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd34,,2005200523,2005200523,How often did you want to tell someone off for being racist towards you but didn't say anything? How often in the past year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd35,,2005200524,2005200524,How often did you want to tell someone off for being racist towards you but didn't say anything? How often in your entire life?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd36,,2005200525,2005200525,"How often did you want to tell someone off for being racist towards you but didn't say anything? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd37,,2005200526,2005200526,How often have you been really angry about something racist that was done to you? How often in the past year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd38,,2005200527,2005200527,How often have you been really angry about something racist that was done to you? How often in your entire life?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd39,,2005200528,2005200528,"How often have you been really angry about something racist that was done to you? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd40,,2005200529,2005200529,"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? How often in the past year?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd41,,2005200530,2005200530,"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? How often in your entire life?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd42,,2005200531,2005200531,"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd43,,2005200532,2005200532,How often have you been called a racist name? How often in the past year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd44,,2005200533,2005200533,How often have you been called a racist name? How often in your entire life?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd45,,2005200534,2005200534,"How often have you been called a racist name? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_sdoh_combined_survey,pxdhc1,4,pxdhc1_4,45879199,,Most of the time,Meas Value,LOINC,Answer,S,LA14734-0,skos:exactMatch,1,,
-px_food_insecurity_survey,pxfi1,1,pxfi1_1,36309834,,Often true,Meas Value,LOINC,Answer,S,LA28397-0,skos:exactMatch,1,,
-px_food_insecurity_survey,pxfi1,2,pxfi1_2,45877955,,Sometimes true,Meas Value,LOINC,Answer,S,LA6729-3,skos:exactMatch,1,,
-px_food_insecurity_survey,pxfi1,0,pxfi1_0,36309869,,Never true,Meas Value,LOINC,Answer,S,LA28398-8,skos:exactMatch,1,,
-px_food_insecurity_survey,food_insecurity_change_diet_frequency,1,food_insecurity_change_diet_frequency_1,36662470,,Almost every month,Meas Value,LOINC,Answer,S,LA30970-0,skos:exactMatch,1,,
-px_food_insecurity_survey,food_insecurity_change_diet_frequency,2,food_insecurity_change_diet_frequency_2,36662449,,Some months but not every month,Meas Value,LOINC,Answer,S,LA30971-8,skos:exactMatch,1,,
-px_food_insecurity_survey,food_insecurity_change_diet_frequency,3,food_insecurity_change_diet_frequency_3,36662545,,Only 1 or 2 months,Meas Value,LOINC,Answer,S,LA30972-6,skos:exactMatch,1,,
-px_neighborhood_environment_survey,pxne1,1,pxne1_1,45877171,,Detached single-family housing,Meas Value,LOINC,Answer,S,LA15229-0,skos:exactMatch,1,,
-px_neighborhood_environment_survey,pxne1,2,pxne1_2,45876908,,"Townhouses, row houses, apartments, or condos of two-three stories",Meas Value,LOINC,Answer,S,LA15230-8,skos:exactMatch,1,,
-px_neighborhood_environment_survey,pxne1,3,pxne1_3,45878935,,"Mix of single-family residences and townhouses, row houses, apartments, or condos",Meas Value,LOINC,Answer,S,LA15231-6,skos:exactMatch,1,,
-px_neighborhood_environment_survey,pxne1,4,pxne1_4,45883274,,Apartments or condos of 4-12 stories,Meas Value,LOINC,Answer,S,LA15232-4,skos:exactMatch,1,,
-px_neighborhood_environment_survey,pxne1,5,pxne1_5,45879538,,Apartments or condos of more than 12 stories,Meas Value,LOINC,Answer,S,LA15233-2,skos:exactMatch,1,,
-px_neighborhood_environment_survey,pxne2,1,pxne2_1,45882953,,Strongly disagree,Meas Value,LOINC,Answer,S,LA15236-5,skos:exactMatch,1,,
-px_neighborhood_environment_survey,pxne2,2,pxne2_2,45879539,,Somewhat disagree,Meas Value,LOINC,Answer,S,LA15234-0,skos:exactMatch,1,,
-px_neighborhood_environment_survey,pxne2,3,pxne2_3,45884684,,Somewhat agree,Meas Value,LOINC,Answer,S,LA15235-7,skos:exactMatch,1,,
-px_neighborhood_environment_survey,pxne2,4,pxne2_4,45879208,,Strongly agree,Meas Value,LOINC,Answer,S,LA15237-3,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd46,,2005200535,2005200535,How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? How often in the past year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd47,,2005200536,2005200536,How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? How often in your entire life?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd48,,2005200537,2005200537,"How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd49,,2005200538,2005200538,"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? How often in the past year?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd50,,2005200539,2005200539,"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? How often in your entire life?",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,pxrd1,2,pxrd1_2,45879593,,Occasionally,Meas Value,LOINC,Answer,S,LA6483-7,skos:closeMatch,1,,
-px_racial_ethnic_discrimination_survey,pxrd1,6,pxrd1_6,45883838,,All the time,Meas Value,LOINC,Answer,S,LA14726-6,skos:closeMatch,1,,
-px_racial_ethnic_discrimination_survey,pxrd3,1,pxrd3_1,36210226,,Not at all bothersome,Meas Value,LOINC,Answer,S,LA24969-0,skos:closeMatch,1,,
-px_racial_ethnic_discrimination_survey,pxrd3,6,pxrd3_6,36210124,,Extremely bothersome,Meas Value,LOINC,Answer,S,LA27766-7,skos:closeMatch,1,,
-px_racial_ethnic_discrimination_survey,pxrd52,1,pxrd52_1,45879534,,About the same,Meas Value,LOINC,Answer,S,LA18129-9,skos:closeMatch,0.75,,
-px_racial_ethnic_discrimination_survey,pxrd52,2,pxrd52_2,45880786,,Slight change,Meas Value,LOINC,Answer,S,LA155-4,skos:closeMatch,0.75,,
-px_racial_ethnic_discrimination_survey,pxrd52,4,pxrd52_4,45877440,,Major change,Meas Value,LOINC,Answer,S,LA156-2,skos:closeMatch,0.75,,
-decline_participation_survey,scrn_out,1,scrn_out_1,0,,Lack of opportunity for privacy,Observation,SNOMED,Clinical Finding,S,42536429,skos:relatedMatch,0.5,,42536429
-decline_participation_survey,scrn_out,2,scrn_out_2,0,,Risk benefit ratio assessment,Procedure,SNOMED,Procedure,S,425152008,skos:relatedMatch,0.5,,4312135
-decline_participation_survey,scrn_out,3,scrn_out_3,0,,Financial concerns,Meas Value,LOINC,Answer,S,LA28316-0,skos:relatedMatch,0.5,,36311124
-decline_participation_survey,scrn_out,4,scrn_out_4,0,,Anxiety about treatment,Condition,SNOMED,Clinical Finding,S,,skos:relatedMatch,0.5,,4021501
-decline_participation_survey,scrn_out,5,scrn_out_5,0,,Schedule/time challenges,Meas Value,LOINC,Answer,S,225635005,skos:relatedMatch,0.75,,36311020
-decline_participation_survey,scrn_out,6,scrn_out_6,0,,Transportation limitations,Meas Value,LOINC,Answer,S,LA28319-4,skos:relatedMatch,0.75,,36309220
-decline_participation_survey,scrn_out,888,scrn_out_888,0,,Other,Meas Value,LOINC,Answer,S,LA46-8,skos:closeMatch,1,,45878142
-contact_log,cnct_sccs,1,cnct_sccs_1,0,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,,45877994
-contact_log,cnct_sccs,0,cnct_sccs_0,0,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,,45878245
-contact_log,cnct_type,1,cnct_type_1,0,,Phone Call,Meas Value,LOINC,Answer,S,LA4688-3,skos:broadMatch,1,,36309019
-contact_log,cnct_type,5,cnct_type_5,0,,E-mail,Meas Value,LOINC,Answer,S,LA29799-6,skos:broadMatch,1,,37079112
-contact_log,cnct_type,7,cnct_type_7,0,,Text message,Meas Value,LOINC,Answer,S,LA29798-8,skos:broadMatch,1,,37079157
-contact_log,cnct_type,8,cnct_type_8,0,,Contact Letter,Meas Value,LOINC,Answer,S,LA4215-5,skos:exactMatch,0.75,,36307651
-contact_log,cnct_prp,1,cnct_prp_1,0,,Problem with consent,Meas Value,LOINC,Answer,S,LA7303-6,skos:relatedMatch,0.75,,45884391
-contact_log,cnct_prp,2,cnct_prp_2,0,,Revised - a change in client-provided information,Meas Value,LOINC,Answer,S,LA29729-3,skos:relatedMatch,0.5,,37079318
-contact_log,cnct_prp,3,cnct_prp_3,0,,Device related,Meas Value,LOINC,Answer,S,LA28743-5,skos:broadMatch,0.75,,36309707
-contact_log,cnct_prp,8,cnct_prp_8,0,,Adverse event,Meas Value,LOINC,Answer,S,LA7266-5,skos:relatedMatch,0.75,,45884383
-contact_log,cnct_prp,888,cnct_prp_888,0,,Other,Meas Value,LOINC,Answer,S,LA46-8,skos:exactMatch,1,,45878142
-px_racial_ethnic_discrimination_survey,,pxrd51,,2005200540,2005200540,"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd52,,2005200541,2005200541,How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In the Past Year?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd53,,2005200542,2005200542,How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In your entire life?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-px_racial_ethnic_discrimination_survey,,pxrd54,,2005200543,2005200543,"How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-screening_survey,,mhterm_dm1,,2005200544,2005200544,Has your doctor or other health care provider ever told you that you have Type 1 diabetes mellitus,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-device_distribution,dvenvcrcid,1,dvenvcrcid_1,2005200234,2005200234,Demonstration of use performed,Procedure,AIREADI,Procedure,S,,skos:exactMatch,1,,409073007
-device_distribution,dvenvcrcid,2,dvenvcrcid_2,2005200235,2005200235,Demonstration of use NOT performed,Procedure,AIREADI,Procedure,S,,skos:exactMatch,1,,409073007
-meds_assessment,cm_asp,1,cm_asp_1,45881677,,Every day,Meas Value,LOINC,Answer,S,LA14799-3,skos:exactMatch,1,,
-meds_assessment,cm_asp,2,cm_asp_2,45884557,,Less than a day,Meas Value,LOINC,Answer,S,LA14482-6,skos:closeMatch,0.75,,
-meds_assessment,cm_asp,3,cm_asp_3,1620467,,A few days (1-2 days),Meas Value,LOINC,Answer,S,LA31669-7,skos:closeMatch,1,,
-meds_assessment,cm_asp,4,cm_asp_4,1620862,,Most days (3-4 days),Meas Value,LOINC,Answer,S,LA31670-5,skos:closeMatch,1,,
-current_medications,cmroute,1,cmroute_1,4157758,,Intralesional route,Route,SNOMED,Qualifier Value,S,372466002,skos:exactMatch,1,,
-current_medications,cmroute,2,cmroute_2,45881508,,Intramuscular,Meas Value,LOINC,Answer,S,LA9429-7,skos:exactMatch,1,,
-current_medications,cmroute,3,cmroute_3,36309506,,Intraocular,Meas Value,LOINC,Answer,S,LA9432-1,skos:exactMatch,1,,
-current_medications,cmroute,4,cmroute_4,36308860,,Intraperitoneal,Meas Value,LOINC,Answer,S,LA9433-9,skos:exactMatch,1,,
-current_medications,cmroute,5,cmroute_5,45881525,,Nasal,Meas Value,LOINC,Answer,S,LA9263-0,skos:exactMatch,1,,
-current_medications,cmroute,6,cmroute_6,45881524,,"Oral, including sublingual or buccal",Meas Value,LOINC,Answer,S,LA20324-2,skos:exactMatch,1,,
-current_medications,cmroute,7,cmroute_7,45884045,,Rectal,Meas Value,LOINC,Answer,S,LA9369-5,skos:exactMatch,1,,
-current_medications,cmroute,8,cmroute_8,45880877,,Inhalation,Meas Value,LOINC,Answer,S,LA9427-1,skos:exactMatch,1,,
-current_medications,cmroute,9,cmroute_9,45878096,,Subcutaneous,Meas Value,LOINC,Answer,S,LA9451-1,skos:exactMatch,1,,
-current_medications,cmroute,11,cmroute_11,45877646,,Transdermal,Meas Value,LOINC,Answer,S,LA9454-5,skos:exactMatch,1,,
-current_medications,cmroute,12,cmroute_12,45876972,,Vaginal,Meas Value,LOINC,Answer,S,LA9459-4,skos:exactMatch,1,,
-current_medications,cmdosu,1,cmdosu_1,45891010,,volume percent volume,Unit,UCUM,Unit,S,{vol}%{vol},skos:exactMatch,0.75,,
-current_medications,cmdosu,2,cmdosu_2,46237103,,Capsule,Meas Value,LOINC,Answer,S,LA21907-3,skos:exactMatch,1,,
-current_medications,cmdosu,3,cmdosu_3,8504,,gram,Unit,UCUM,Unit,S,g,skos:exactMatch,1,,
-current_medications,cmdosu,5,cmdosu_5,8718,,international unit,Unit,UCUM,Unit,S,[iU],skos:closeMatch,0.75,,
-current_medications,cmdosu,6,cmdosu_6,44777603,,liter per hour,Unit,UCUM,Unit,S,L/h,skos:exactMatch,1,,
-current_medications,cmdosu,7,cmdosu_7,8698,,liter per minute,Unit,UCUM,Unit,S,L/min,skos:exactMatch,1,,
-current_medications,cmdosu,8,cmdosu_8,8576,,milligram,Unit,UCUM,Unit,S,mg,skos:exactMatch,1,,
-current_medications,cmdosu,9,cmdosu_9,9562,,milligram per kilogram,Unit,UCUM,Unit,S,mg/kg,skos:exactMatch,1,,
-current_medications,cmdosu,10,cmdosu_10,8587,,milliliter,Unit,UCUM,Unit,S,mL,skos:exactMatch,1,,
-current_medications,cmdosu,11,cmdosu_11,44777613,,milliliter per hour,Unit,UCUM,Unit,S,mL/h,skos:exactMatch,1,,
-current_medications,cmdosu,12,cmdosu_12,9571,,milliliter per kilogram,Unit,UCUM,Unit,S,mL/kg,skos:exactMatch,1,,
-screening_survey,,mhterm_dm2,,2005200545,2005200545,Has your doctor or other health care provider ever told you that you have Type 2 diabetes mellitus,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,LA10552-0 | 44054006
-current_medications,cmdosu,14,cmdosu_14,46237551,,Spray,Meas Value,LOINC,Answer,S,LA21919-8,skos:exactMatch,1,,
-current_medications,cmdosu,15,cmdosu_15,46237517,,Tablet,Meas Value,LOINC,Answer,S,LA21908-1,skos:exactMatch,1,,
-current_medications,cmdosu,16,cmdosu_16,9655,,microgram,Unit,UCUM,Unit,S,ug,skos:exactMatch,1,,
-current_medications,cmdosu,17,cmdosu_17,9662,,microgram per kilogram,Unit,UCUM,Unit,S,ug/kg,skos:exactMatch,1,,
-current_medications,cmdosfrq,ONCE,cmdosfrq_ONCE,45882928,,Once,Meas Value,LOINC,Answer,S,LA14312-5,skos:exactMatch,1,,
-current_medications,cmdosfrq,PRN,cmdosfrq_PRN,45881909,,As needed,Meas Value,LOINC,Answer,S,LA14060-0,skos:exactMatch,1,,
-current_medications,cmdosfrq,QD,cmdosfrq_QD,45885250,,1 time per day,Meas Value,LOINC,Answer,S,LA13827-3,skos:exactMatch,1,,
-current_medications,cmdosfrq,BID,cmdosfrq_BID,45883167,,2 times per day,Meas Value,LOINC,Answer,S,LA13840-6,skos:exactMatch,1,,
-current_medications,cmdosfrq,TID,cmdosfrq_TID,45883169,,3 times per day,Meas Value,LOINC,Answer,S,LA13851-3,skos:exactMatch,1,,
-current_medications,cmdosfrq,QID,cmdosfrq_QID,45882529,,4 times per day,Meas Value,LOINC,Answer,S,LA13854-7,skos:exactMatch,1,,
-current_medications,cmdosfrq,QOD,cmdosfrq_QOD,21499397,,Every other day,Meas Value,LOINC,Answer,S,LA24997-1,skos:exactMatch,1,,
-current_medications,cmdosfrq,QW,cmdosfrq_QW,45877713,,Weekly,Meas Value,LOINC,Answer,S,LA18891-4,skos:exactMatch,1,,
-disposition,uppdaeot2,999,uppdaeot2_999,2005200279,2005200279,Not an Adverse Event,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA7266-5
-screening_survey,,mhterm_predm,,2005200546,2005200546,Has your doctor or other health care provider ever told you that you have Prediabetes,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,714628002
-disposition,eos_dsdecod,2,eos_dsdecod_2,4163894,,Lost to follow-up,Observation,SNOMED,Clinical Finding,S,399307001,skos:exactMatch,1,,
-screening_survey,,mh_a1c,,2005200547,2005200547,Has your doctor or other health care provider ever told you that you have Elevated A1C levels (elevated blood sugars),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,269823000
-screening_survey,,cmtrt_a1c,,2005200548,2005200548,"Do you take pills to control your A1C and blood glucose levels? Examples: Metformin (Glucophage, Glumetza, Fortamet, Riomet), Glucotrol, Amaryl, DiaBeta, Blynase PresTab, Micronase, Actos, Avandia, Precose, Glyset, Prandin, Starlix, Januvia, Onglyza, Tradjenta, Nesina, Invokana, Farxiga, Jardiance, Welchol, and Cyclocet",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,4016042 | 170746002
-disposition,eos_dsdecod,5,eos_dsdecod_5,40480675,,Does not meet eligibility criteria for clinical trial,Observation,SNOMED,Clinical Finding,S,444734003,skos:closeMatch,0.75,,
-screening_survey,,cmtrt_insln,,2005200549,2005200549,Do you inject insulin to control your blood glucose levels?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,440922 | 170747006
-disposition,eos_dsdecod,7,eos_dsdecod_7,45881348,,Death,Meas Value,LOINC,Answer,S,LA7424-0,skos:exactMatch,1,,
-disposition,eos_dsdecod,8,eos_dsdecod_8,45884383,,Adverse event,Meas Value,LOINC,Answer,S,LA7266-5,skos:exactMatch,1,,
-screening_survey,,cmtrt_glcs,,2005200550,2005200550,"Do you use other injections to control your blood glucose levels?  Examples: Victoza, Ozempic, Symlin, Tanzeum, and Trulicity",Observation,AIREADI,Survey,S,,skos:exactMatch,1,,36714369 | 719566006
-substance_use_survey,,sualcage,,2005200551,2005200551,At what age did you start drinking alcohol? (Age started - years old),Observation,AIREADI,Survey,S,,skos:exactMatch,1,,
-disposition,eos_dsdecodie,2,eos_dsdecodie_2,45884583,,Currently pregnant,Meas Value,LOINC,Answer,S,LA14670-6,skos:closeMatch,1,,
-device_return,,dvamwenyn,,2005200555,2005200555,Activity monitor returned?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,42528781 removed in favor of local code
-device_return,,dcvgmenyn,,2005200556,2005200556,Dexcom G6 transmitter returned?,Observation,AIREADI,Survey,S,,skos:exactMatch,1,,2005200237 removed in favor of local code
-disposition,eos_dsvst,1,eos_dsvst_1,35626257,,Before appointment,Observation,SNOMED,Qualifier Value,S,769562006,skos:closeMatch,0.75,,
-screening_survey,,ancestry,,2005200557,2005200557,"What is your ancestry or ethnic origin?(Examples: Italian, Jamaican, African American, Cambodian, Cape Verdean, Cherokee, Navajo, Nez Pearce, Norwegian, Dominican, French Canadian, Haitian, Korean, Lebanese, Polish, Nigerian, Mexican, Taiwanese, Ukrainian, and so on.)",Observation,AIREADI,Survey,S,cope_a_11,skos:exactMatch,1,,Removed local extension code 2005200005
-data_management,dm,S,dm_S,0,,Screening,Meas Value,LOINC,Answer,S,LA21591-5,skos:exactMatch,0.5,,Prev ID: 36307891
-data_management,dm,C,dm_C,0,,Informed consent obtained,Observation,LOINC,Clinical Observation,S,19826-7,skos:closeMatch,1,,Prev ID: 3018196
-data_management,dm,I,dm_I,0,,In-person encounter,Observation,SNOMED,Procedure,S,4.53701E+14,skos:closeMatch,0.75,,Prev ID: 764337
-data_management,dm,D,dm_D,0,,Device related,Meas Value,LOINC,Answer,S,LA28743-5,skos:relatedMatch,0.5,,Prev ID: 36309707
-data_management,fairhub,1,fairhub_1,0,,Montreal Cognitive Assessment [MoCA],Observation,LOINC,Survey,S,72133-2,skos:exactMatch,1,,Prev ID: 43054876
-data_management,fairhub,2,fairhub_2,0,,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,S,LA20770-6,skos:relatedMatch,0.5,,Prev ID: 45885156
-data_management,fairhub,12,fairhub_12,0,,Environmental sensor,Device,SNOMED,Physical Object,S,468916005,skos:exactMatch,1,,Prev ID: 45762337
-comments,,cmt_form,,0,,Form,Meas Value,LOINC,Doc Kind,S,LP181112-6,skos:broadMatch,0.75,,706299
-comments,,cmt_cmt,,0,,Result comments,Observation,SNOMED,Qualifier Value,S,281296001,skos:closeMatch,0.75,,4083205
-comments,cmt_form,ehr,cmt_form_ehr,0,,Electronic health record (EHR) or component of EHR,Meas Value,LOINC,Answer,S,LA20894-4,skos:closeMatch,1,,45880904
-comments,cmt_form,mail,cmt_form_mail,0,,Mailing,Meas Value,LOINC,Answer,S,LA30093-1,skos:broadMatch,1,,37079288
-comments,cmt_form,svy,cmt_form_svy,0,,Management,Meas Value,LOINC,Answer,S,LA20391-1,skos:broadMatch,0.75,,45885153
-comments,cmt_form,rec,cmt_form_rec,0,,Recruitment,Condition,SNOMED,Clinical Finding,S,2724004,skos:broadMatch,0.75,,139830
-comments,cmt_form,faq,cmt_form_faq,0,,Survey,Observation,SNOMED,Qualifier Value,S,7.25111E+14,skos:broadMatch,1,,44804317
-comments,cmt_form,scr,cmt_form_scr,0,,Screening,Observation,SNOMED,Qualifier Value,S,7.22021E+14,skos:broadMatch,1,,44803659
-comments,cmt_form,ces,cmt_form_ces,0,,Center for Epidemiologic Studies Depression Scale panel [CES-D],Observation,LOINC,Survey,S,100766-5,skos:exactMatch,1,,1761569
-comments,cmt_form,diet,cmt_form_diet,0,,Dietary behavior,Observation,LOINC,Survey,S,77243-4,skos:closeMatch,1,,46235932
-comments,cmt_form,pxfi,cmt_form_pxfi,0,,U.S. Adult Food Security Survey [U.S. FSS],Observation,LOINC,Survey,S,95353-9,skos:closeMatch,1,,36660038
-comments,cmt_form,pxne,cmt_form_pxne,0,,PhenX - physical activity - neighborhood environment protocol 151201,Measurement,LOINC,Clinical Observation,S,62842-0,skos:exactMatch,1,,40765574
-comments,cmt_form,pxrd,cmt_form_pxrd,0,,PhenX - discrimination protocol 210301,Measurement,LOINC,Clinical Observation,S,63015-2,skos:exactMatch,0.75,,40765747
-comments,cmt_form,enrl,cmt_form_enrl,0,,Enrollment in clinical trial,Observation,SNOMED,Procedure,S,709491003,skos:relatedMatch,0.5,,46271379
-comments,cmt_form,dri,cmt_form_dri,0,,Driving,Observation,SNOMED,Observable Entity,S,129060000,skos:broadMatch,0.75,,4044725
-comments,cmt_form,dv,cmt_form_dv,0,,Distribution,Observation,SNOMED,Attribute,S,246457009,skos:broadMatch,1,,4077868
-comments,cmt_form,cma,cmt_form_cma,0,,Medications,Meas Value,LOINC,Answer,S,LA20271-5,skos:broadMatch,1,,45880025
-comments,cmt_form,cm,cmt_form_cm,0,,Medications Current medication,Measurement,LOINC,Clinical Observation,S,66423-5,skos:closeMatch,1,,40769096
-comments,cmt_form,pa,cmt_form_pa,0,,Physical assessment,Procedure,SNOMED,Procedure,S,81375008,skos:exactMatch,1,,4216060
-comments,cmt_form,bcva,cmt_form_bcva,0,,Best corrected visual acuity,Observation,SNOMED,Observable Entity,S,419775003,skos:exactMatch,0.75,,4303261
-comments,cmt_form,plcs,cmt_form_plcs,0,,Contrast sensitivity test,Procedure,SNOMED,Procedure,S,410566008,skos:broadMatch,0.75,,4256483
-comments,cmt_form,mss,cmt_form_mss,0,,Monofilament foot sensation test,Procedure,SNOMED,Procedure,S,134388005,skos:narrowMatch,1,,4047085
-comments,cmt_form,moca,cmt_form_moca,0,,Montreal Cognitive Assessment [MoCA],Observation,LOINC,Survey,S,72133-2,skos:exactMatch,1,,43054876
-comments,cmt_form,ekg,cmt_form_ekg,0,,ECG analysis,Observation,SNOMED,Qualifier Value,S,258181008,skos:narrowMatch,1,,4120042
-comments,cmt_form,rt,cmt_form_rt,0,,Retinal photography,Procedure,SNOMED,Procedure,S,282096008,skos:closeMatch,1,,4107003
-comments,cmt_form,lbr,cmt_form_lbr,0,,Laboratory procedure,Procedure,SNOMED,Procedure,S,108252007,skos:closeMatch,0.75,,4028908
-comments,cmt_form,lb,cmt_form_lb,0,,Specimen care management,Procedure,SNOMED,Procedure,S,385832000,skos:narrowMatch,0.75,,4301544
-comments,cmt_form,dc,cmt_form_dc,0,,,Observation,,,S,,,,,Device Return
-comments,cmt_form,cnct,cmt_form_cnct,0,,,Observation,,,S,,,,,
-comments,cmt_form,eos,cmt_form_eos,0,,Disposition,Observation,SNOMED,Disposition,S,726711005,skos:exactMatch,1,,37111655
-comments,cmt_form,dmt,cmt_form_dmt,0,,Management,Observation,SNOMED,Qualifier Value,S,7.19891E+14,skos:broadMatch,1,,44804304
+dietary_survey,diet1,0,diet1_0,2005200238,2005200238,Less than 1 time,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA13829-9
+dietary_survey,diet1,1,diet1_1,2005200239,2005200239,1 - 3 times,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA23695-2
+dietary_survey,diet2,0,diet2_0,2005200240,2005200240,5 or more,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA26057-2
+dietary_survey,diet2,2,diet2_2,2005200241,2005200241,2 or less,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14352-1
+dietary_survey,diet4,0,diet4_0,2005200242,2005200242,Less than 1,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA13829-9
+dietary_survey,diet6,0,diet6_0,2005200243,2005200243,1 time or less,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA13829-9
+ophthalmic_survey,via4,3,via4_3,2005200244,2005200244,Within the past 2 years (1 year but less than 2 years ago),Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA15790-1
+ophthalmic_survey,via5,1,via5_1,2005200245,2005200245,Cost/Insurance,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA21462-9
+ophthalmic_survey,via5,2,via5_2,2005200246,2005200246,Do not have/know an eye doctor,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14426-3
+ophthalmic_survey,via5,3,via5_3,2005200247,2005200247,"Cannot get to the office/clinic (too far away, no transportation)",Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA28319-4
+ophthalmic_survey,via5,4,via5_4,2005200248,2005200248,Could not get an appointment,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,98867-5
+ophthalmic_survey,via5,5,via5_5,2005200249,2005200249,No reason to go (no problem),Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA9619-3
+ophthalmic_survey,via5,6,via5_6,2005200250,2005200250,Have not thought of it,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA9619-3
+px_sdoh_combined_survey,pxji1,5,pxji1_5,2005200251,2005200251,Will be leaving labor force voluntarily,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA17956-6
+px_sdoh_combined_survey,pxhic1,1,pxhic1_1,2005200252,2005200252,Covered,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA21462-9
+px_sdoh_combined_survey,pxhic8,0,pxhic8_0,2005200253,2005200253,I do NOT have health insurance,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA10041-4
+px_sdoh_combined_survey,pxhic8,1,pxhic8_1,2005200254,2005200254,I HAVE some kind of health insurance,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA21462-9
+px_sdoh_combined_survey,pxahc1,5,pxahc1_5,2005200255,2005200255,Within the last 10 years (5 years but less than 10 years ago),Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14769-6
+px_sdoh_combined_survey,pxahc4,0,pxahc4_0,2005200256,2005200256,There is NO place,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,394777002
+px_sdoh_combined_survey,pxahc4,2,pxahc4_2,2005200257,2005200257,There is MORE THAN ONE place,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,394777002
+px_sdoh_combined_survey,pxahc5,1,pxahc5_1,2005200258,2005200258,A doctor's office or health center,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA26177-8
+px_sdoh_combined_survey,pxahc5,2,pxahc5_2,2005200259,2005200259,"Walk-in clinic, urgent care center, or retail clinic in a pharmacy or grocery store",Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA24179-6
+px_sdoh_combined_survey,pxahc5,4,pxahc5_4,2005200260,2005200260,A VA Medical Center or VA outpatient clinic,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA26180-2
+px_sdoh_combined_survey,pxahc5,6,pxahc5_6,2005200261,2005200261,Does not go to one place most often,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,394777002
+px_sdoh_combined_survey,pxahc6,1,pxahc6_1,2005200262,2005200262,1 - 10 times,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14422-2
+px_sdoh_combined_survey,pxahc6,2,pxahc6_2,2005200263,2005200263,11 - 19 times,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA23703-4
+px_sdoh_combined_survey,pxahc6,3,pxahc6_3,2005200264,2005200264,20 - 29 times,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA23703-4
+px_sdoh_combined_survey,pxahc6,4,pxahc6_4,2005200265,2005200265,30 - 39 times,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA23703-4
+px_sdoh_combined_survey,pxahc6,5,pxahc6_5,2005200266,2005200266,40 - 49 times,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA23703-4
+px_sdoh_combined_survey,pxahc6,6,pxahc6_6,2005200267,2005200267,50 or more times,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA15343-9
+px_neighborhood_environment_survey,pxne4,88,pxne4_88,2005200268,2005200268,Does not apply to my neighborhood,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14452-9
+px_neighborhood_environment_survey,pxne8,88,pxne8_88,2005200269,2005200269,There are no streets or roads in my neighborhood,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,129685008
+px_neighborhood_environment_survey,pxne11,6,pxne11_6,2005200270,2005200270,6 or more,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA14674-8
+driving_record,dri2,1,dri2_1,2005200271,2005200271,5000 miles or less,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,310859004
+driving_record,dri2,2,dri2_2,2005200272,2005200272,"5001 to 10,000 miles",Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,310859004
+driving_record,dri2,3,dri2_3,2005200273,2005200273,"10,001 to 15.000 miles",Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,310859004
+driving_record,dri2,4,dri2_4,2005200274,2005200274,"15,001 to 20,000 miles",Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,310859004
+driving_record,dri2,5,dri2_5,2005200275,2005200275,"More than 20,000 miles",Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,310859004
+current_medications,cmdosu,13,cmdosu_13,2005200222,2005200222,Puff,Device,AIREADI,Physical Object,S,,skos:exactMatch,1,,463710006
+disposition,eos_dsdecod,1,eos_dsdecod_1,2005200280,2005200280,Did not meet Inclusion/Exclusion criteria,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA24349-5
+disposition,eos_dsdecod,3,eos_dsdecod_3,2005200281,2005200281,Withdrawal by Subject,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA30915-5
+disposition,eos_dsdecod,4,eos_dsdecod_4,2005200282,2005200282,Geographic Inaccessibility,Observation,AIREADI,Context-dependent,S,,skos:exactMatch,1,,183928007
+disposition,eos_dsdecod,6,eos_dsdecod_6,2005200283,2005200283,Currently enrolled in a conflicting study,Observation,AIREADI,Clinical Finding,S,,skos:exactMatch,1,,309032007
+disposition,eos_dsdecod,9,eos_dsdecod_9,2005200284,2005200284,Protocol Deviation,Observation,AIREADI,Clinical Finding,S,,skos:exactMatch,1,,309032007
+disposition,eos_dsdecodie,1,eos_dsdecodie_1,2005200285,2005200285,Individual was under age 40,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA31987-3
+disposition,eos_dsdecodie,3,eos_dsdecodie_3,2005200286,2005200286,Individual is not needed at this time for recruitment goals,Observation,AIREADI,Clinical Finding,S,,skos:exactMatch,1,,444734003
+disposition,eos_dsdecodie,4,eos_dsdecodie_4,2005200287,2005200287,Individual had Type 1 Diabetes,Meas Value,AIREADI,Answer,S,,skos:exactMatch,1,,LA10551-2
+disposition,eos_dsvst,2,eos_dsvst_2,2005200288,2005200288,In Person (Baseline),Observation,AIREADI,Procedure,S,,skos:exactMatch,1,,4.53701E+14
