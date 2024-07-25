@@ -1,0 +1,548 @@
+FORM_NAME,FIELD_ID,SRC_CODE,SRC_CODE_ID,TARGET_CONCEPT_ID,LOCAL_CONCEPT_ID,TARGET_CONCEPT_NAME,TARGET_DOMAIN_ID,TARGET_VOCABULARY_ID,TARGET_CONCEPT_CLASS_ID,TARGET_STANDARD_CONCEPT,TARGET_CONCEPT_CODE,PREDICATE_ID,CONFIDENCE,MODIFIER,NOTES
+bcva,,viaocmpyn,,2005200010,2005200010,BCVA was not done,Procedure,AIREADI,Procedure,S,,skos:exactMatch,1,,
+bcva,,viaomthd,,2005200011,2005200011,Method used to complete form,Observation,AIREADI,Attribute,S,,skos:exactMatch,1,,260686004
+bcva,,viao_crcid,,none - OPS,,,,,,,N/A - operational variable,,,,
+bcva,,viaoreasn,,44788487,,Procedure not completed,Observation,OMOP,Context-dependent,S,1.78291E+14,skos:relatedMatch,0.5,,
+bcva,,viaodpsf,,2005200012,2005200012,Snellen fraction - Photopic VA - OD,Measurement,AIREADI,Clinical Observation,S,,skos:exactMatch,1,,79880-1
+bcva,,viaodsph,,3000744,,Right eye Sphere Autorefractor.auto,Measurement,LOINC,Clinical Observation,S,28687-2,skos:closeMatch,1,,
+bcva,,viaodcyl,,3033346,,Right eye Cylinder Autorefractor.auto,Measurement,LOINC,Clinical Observation,S,28688-0,skos:closeMatch,1,,
+bcva,,viaodaxi,,3034190,,Right eye Axis Autorefractor.auto,Measurement,LOINC,Clinical Observation,S,28689-8,skos:closeMatch,1,,
+bcva,,viaossph,,3003500,,Left eye Sphere Autorefractor.auto,Measurement,LOINC,Clinical Observation,S,28691-4,skos:closeMatch,1,,
+bcva,,viaoscyl,,3002343,,Left eye Cylinder Autorefractor.auto,Measurement,LOINC,Clinical Observation,S,28692-2,skos:closeMatch,1,,
+bcva,,viaosaxi,,3001254,,Left eye Axis Autorefractor.auto,Measurement,LOINC,Clinical Observation,S,28693-0,skos:closeMatch,1,,
+bcva,,viaospsf,,2005200013,2005200013,Snellen fraction - Photopic VA - OS,Measurement,AIREADI,Clinical Observation,S,,skos:exactMatch,1,,79881-9
+bcva,,viaodplog,,2005200042,2005200042,VA Letter Score - Photopic VA - OD,Measurement,AIREADI,Clinical Observation,S,,skos:exactMatch,1,VA Letter Score - Photopic VA,"1=VA Letter Score - Photopic VA, 2=LLVA Letter Score - Mesopic VA | 79876-9"
+bcva,,viaosplog,,2005200043,2005200043,VA Letter Score - Photopic VA - OS,Measurement,AIREADI,Clinical Observation,S,,skos:exactMatch,1,VA Letter Score - Photopic VA,"1=VA Letter Score - Photopic VA, 2=LLVA Letter Score - Mesopic VA | 79877-7"
+bcva,,viaodpscore,,2005200052,2005200052,Photopic LogMAR OD Score,Measurement,AIREADI,Clinical Observation,S,,skos:exactMatch,1,Photopic,"1=Photopic, 2=Mesopic | 6616-7"
+bcva,,viaospscore,,2005200053,2005200053,Photopic LogMAR OS Score,Measurement,AIREADI,Clinical Observation,S,,skos:exactMatch,1,Photopic,"1=Photopic, 2=Mesopic | 6617-5"
+bcva,,viaodmsf,,2005200054,2005200054,Snellen fraction - Mesopic VA - OD,Measurement,AIREADI,Clinical Observation,S,,skos:exactMatch,1,,79880-1
+bcva,,viaosmsf,,2005200055,2005200055,Snellen fraction - Mesopic VA - OS,Measurement,AIREADI,Clinical Observation,S,,skos:exactMatch,1,,79881-9
+bcva,,viaodmlog,,2005200056,2005200056,LLVA Letter Score - Mesopic VA - OD,Measurement,AIREADI,Clinical Observation,S,,skos:exactMatch,1,LLVA Letter Score - Mesopic VA,"1=VA Letter Score - Photopic VA, 2=LLVA Letter Score - Mesopic VA | 79876-9"
+bcva,,viaosmlog,,2005200057,2005200057,LLVA Letter Score - Mesopic VA - OS,Measurement,AIREADI,Clinical Observation,S,,skos:exactMatch,1,LLVA Letter Score - Mesopic VA,"1=VA Letter Score - Photopic VA, 2=LLVA Letter Score - Mesopic VA | 79877-7"
+bcva,viaomthd,1,viaomthd_1,2005200058,2005200058,EVA,Measurement,AIREADI,Clinical Observation,S,,skos:exactMatch,1,,79908-0
+photopic_mars,,plcscmpyn,,2005200154,2005200154,Photopic mars not done,Procedure,AIREADI,Procedure,S,,skos:exactMatch,1,NO=45880480 ,410566008
+photopic_mars,,plcsodlog,,2005200155,2005200155,"OD: Log Contrast Sensitivity - Photopic, right eye",Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,right,"1=Photopic, left eye; 2=Photopic, right eye, 3=Photopic, binocular | 251686008"
+photopic_mars,,plcsoslog,,2005200156,2005200156,"OS: Log Contrast Sensitivity - Photopic, left eye",Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,left,"1=Photopic, left eye; 2=Photopic, right eye, 3=Photopic, binocular | 251686008"
+mesopic_mars,,mlcscmpyn,,2005200158,2005200158,Mesopic Mars not done,Procedure,AIREADI,Procedure,S,,skos:exactMatch,1,,410566008
+photopic_mars,,plsc_crcid,,none - OPS,,,,,,,N/A - operational variable,,,,
+photopic_mars,,plcsreasn,,44788487,,Procedure not completed,Observation,OMOP,Context-dependent,S,1.78291E+14,skos:relatedMatch,0.5,,
+photopic_mars,,plcsodeye,,0,,Which eye [PhenX],Observation,LOINC,Clinical Observation,S,64747-9,skos:closeMatch,1,,Operational - not mapping to OMOP
+photopic_mars,,plcsodeyev_rw1,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+photopic_mars,,plcsodeyev_rw2,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+photopic_mars,,plcsodeyev_rw3,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+photopic_mars,,plcsodeyev_rw4,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+photopic_mars,,plcsodeyev_rw5,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+photopic_mars,,plcsodeyev_rw6,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+photopic_mars,,plcsodeyev_rw7,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+photopic_mars,,plcsodeyev_rw8,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+retinal_imaging_v2,,rtma_odw,,2005200200,2005200200,M2-3D Wide(H) 12x9-OCT,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+retinal_imaging_v2,,rtma_osw,,2005200200,2005200200,M2-3D Wide(H) 12x9-OCT,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+retinal_imaging_v2,,rtma_odm,,2005200201,2005200201,M2-3D Macula 6x6-OCT,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+photopic_mars,,plcsoseye,,0,,Which eye [PhenX],Observation,LOINC,Clinical Observation,S,64747-9,skos:closeMatch,1,,Operational - not mapping to OMOP
+photopic_mars,,plcsoseyev_rw1,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+photopic_mars,,plcsoseyev_rw2,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+photopic_mars,,plcsoseyev_rw3,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+photopic_mars,,plcsoseyev_rw4,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+photopic_mars,,plcsoseyev_rw5,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+photopic_mars,,plcsoseyev_rw6,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+photopic_mars,,plcsoseyev_rw7,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+photopic_mars,,plcsoseyev_rw8,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+retinal_imaging_v2,,rtma_osm,,2005200201,2005200201,M2-3D Macula 6x6-OCT,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+retinal_imaging_v2,,rtma_odm1,,2005200202,2005200202,M2-Mac 6x6-360x360-(rep3)-OCTA,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+retinal_imaging_v2,,rtma_osm1,,2005200202,2005200202,M2-Mac 6x6-360x360-(rep3)-OCTA,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+photopic_mars,,plcsoueye,,0,,Which eye [PhenX],Observation,LOINC,Clinical Observation,S,64747-9,skos:closeMatch,1,,Prev ID: 40767451; Operational - not mapping to OMOP
+photopic_mars,,plcsoueyev_rw1,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,Prev ID: 40767545
+photopic_mars,,plcsoueyev_rw2,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,Prev ID: 40767545
+photopic_mars,,plcsoueyev_rw3,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,Prev ID: 40767545
+photopic_mars,,plcsoueyev_rw4,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,Prev ID: 40767545
+photopic_mars,,plcsoueyev_rw5,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,Prev ID: 40767545
+photopic_mars,,plcsoueyev_rw6,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,Prev ID: 40767545
+photopic_mars,,plcsoueyev_rw7,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,Prev ID: 40767545
+photopic_mars,,plcsoueyev_rw8,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,Prev ID: 40767545
+photopic_mars,,plcsoufcl,,0,0,"OU: Value of final correct letter - Photopic, binocular",Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,"Photopic, binocular","Prev ID:  Local Code | 1=Photopic, left eye; 2=Photopic, right eye; 3=Photopic, binocular | 410566008 | This row was marked as deleted in column A, so we changed this to ""no"" in the map to OMOP column"
+photopic_mars,,plcsoumiss,,0,0,"OU: Number of misses prior to stopping - Photopic, binocular",Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,"Photopic, binocular","Prev ID:  Local Code | 1=Photopic, left eye; 2=Photopic, right eye; 3=Photopic, binocular | 410566008 | This row was marked as deleted in column A, so we changed this to ""no"" in the map to OMOP column"
+photopic_mars,,plcsoulog,,0,0,"OU: Log Contrast Sensitivity - Photopic, binocular",Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,"Photopic, binocular","Prev ID:  Local Code | 1=Photopic, left eye; 2=Photopic, right eye; 3=Photopic, binocular | 251686008 | This row was marked as deleted in column A, so we changed this to ""no"" in the map to OMOP column"
+retinal_imaging_v2,,rttr_odr,,2005200203,2005200203,Triton-3D(H)+Radial 12x9-OCT,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+retinal_imaging_v2,,rttr_osr,,2005200203,2005200203,Triton-3D(H)+Radial 12x9-OCT,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+mesopic_mars,,mlcs_crcid,,none - OPS,,,,,,,N/A - operational variable,,,,
+mesopic_mars,,mlcsreasn,,44788487,,Procedure not completed,Observation,OMOP,Context-dependent,S,1.78291E+14,skos:relatedMatch,0.5,,
+mesopic_mars,,mlcsodeye,,0,,Which eye [PhenX],Observation,LOINC,Clinical Observation,S,64747-9,skos:closeMatch,1,"Mesopic, right eye",Operational - not mapping to OMOP
+mesopic_mars,,mlcsodeyev_rw1,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+mesopic_mars,,mlcsodeyev_rw2,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+mesopic_mars,,mlcsodeyev_rw3,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+mesopic_mars,,mlcsodeyev_rw4,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+mesopic_mars,,mlcsodeyev_rw5,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+mesopic_mars,,mlcsodeyev_rw6,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+mesopic_mars,,mlcsodeyev_rw7,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+mesopic_mars,,mlcsodeyev_rw8,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+retinal_imaging_v2,,rttr_odm1,,2005200204,2005200204,Triton-Macula 6x6-OCTA,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+retinal_imaging_v2,,rttr_osm1,,2005200204,2005200204,Triton-Macula 6x6-OCTA,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+retinal_imaging_v2,,rttr_odm2,,2005200205,2005200205,Triton-Macula 12x12-OCTA,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+mesopic_mars,,mlcsoseye,,0,,Which eye [PhenX],Observation,LOINC,Clinical Observation,S,64747-9,skos:closeMatch,1,"Mesopic, left eye",Operational - not mapping to OMOP
+mesopic_mars,,mlcsoseyev_rw1,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+mesopic_mars,,mlcsoseyev_rw2,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+mesopic_mars,,mlcsoseyev_rw3,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+mesopic_mars,,mlcsoseyev_rw4,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+mesopic_mars,,mlcsoseyev_rw5,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+mesopic_mars,,mlcsoseyev_rw6,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+mesopic_mars,,mlcsoseyev_rw7,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+mesopic_mars,,mlcsoseyev_rw8,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,40767545
+retinal_imaging_v2,,rttr_osm2,,2005200205,2005200205,Triton-Macula 12x12-OCTA,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+retinal_imaging_v2,,rtop_odd,,2005200289,2005200289,OptoMed-Disc centered-CFP,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+retinal_imaging_v2,,rtop_osd,,2005200289,2005200289,OptoMed-Disc centered-CFP,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+mesopic_mars,,mlcsoueye,,0,,Which eye [PhenX],Observation,LOINC,Clinical Observation,S,64747-9,skos:closeMatch,1,,Prev ID: 40767451; Operational - not mapping to OMOP
+mesopic_mars,,mlcsoueyev_rw1,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,Prev ID: 40767545
+mesopic_mars,,mlcsoueyev_rw2,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,Prev ID: 40767545
+mesopic_mars,,mlcsoueyev_rw3,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,Prev ID: 40767545
+mesopic_mars,,mlcsoueyev_rw4,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,Prev ID: 40767545
+mesopic_mars,,mlcsoueyev_rw5,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,Prev ID: 40767545
+mesopic_mars,,mlcsoueyev_rw6,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,Prev ID: 40767545
+mesopic_mars,,mlcsoueyev_rw7,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,Prev ID: 40767545
+mesopic_mars,,mlcsoueyev_rw8,,0,,Letter on line read by the patient [PhenX],Observation,LOINC,Clinical Observation,S,64843-6,skos:broadMatch,0.5,,Prev ID: 40767545
+mesopic_mars,,mlcsoufcl,,0,0,"OU: Value of final correct letter - Mesopic, binocular",Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,"Mesopic, binocular","Prev ID:  Local Code | 1=Mesopic, left eye; 2=Mesopic, right eye; 3=Mesopic, binocular | 410566008  | This row was marked as deleted in column A, so we changed this to ""no"" in the map to OMOP column"
+mesopic_mars,,mlcsoumiss,,0,0,"OU: Number of misses prior to stopping - Mesopic, binocular",Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,"Mesopic, binocular","Prev ID:  Local Code | 1=Mesopic, left eye; 2=Mesopic, right eye; 3=Mesopic, binocular | 410566008 | This row was marked as deleted in column A, so we changed this to ""no"" in the map to OMOP column"
+mesopic_mars,,mlcsoulog,,0,0,"OU: Log Contrast Sensitivity - Mesopic, binocular",Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,"Mesopic, binocular","Prev ID:  Local Code | 1=Mesopic, left eye; 2=Mesopic, right eye; 3=Mesopic, binocular | 251686008 | This row was marked as deleted in column A, so we changed this to ""no"" in the map to OMOP column"
+retinal_imaging_v2,,rtop_odm,,2005200290,2005200290,OptoMed-Mac centered-CFP,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+bcva,viaomthd,2,viaomthd_2,4268147,,ETDRS visual acuity chart,Device,SNOMED,Physical Object,S,400914004,skos:exactMatch,1,,
+photopic_mars,plcsodeye,L,plcsodeye_L,0,,Left eye,Meas Value,LOINC,Answer,S,LA14704-3,skos:exactMatch,1,,Prev ID: 45883829; Operational - not mapping to OMOP
+photopic_mars,plcsodeye,R,plcsodeye_R,0,,Right eye,Meas Value,LOINC,Answer,S,LA14703-5,skos:exactMatch,1,,Operational - not mapping to OMOP
+photopic_mars,plcsodeye,B,plcsodeye_B,0,,Both eyes,Meas Value,LOINC,Answer,S,LA15091-4,skos:closeMatch,1,,Prev ID: 45878882; Operational - not mapping to OMOP
+photopic_mars,plcsodeyev_rw1,C,plcsodeyev_rw1_C,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw1,H,plcsodeyev_rw1_H,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw1,V,plcsodeyev_rw1_V,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw1,O,plcsodeyev_rw1_O,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw1,S,plcsodeyev_rw1_S,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw1,N,plcsodeyev_rw1_N,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw2,D,plcsodeyev_rw2_D,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw2,S,plcsodeyev_rw2_S,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw2,Z,plcsodeyev_rw2_Z,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw2,N,plcsodeyev_rw2_N,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw2,R,plcsodeyev_rw2_R,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw2,K,plcsodeyev_rw2_K,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw3,N,plcsodeyev_rw3_N,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw3,D,plcsodeyev_rw3_D,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw3,R,plcsodeyev_rw3_R,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw3,H,plcsodeyev_rw3_H,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw3,V,plcsodeyev_rw3_V,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw3,Z,plcsodeyev_rw3_Z,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw4,C,plcsodeyev_rw4_C,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw4,S,plcsodeyev_rw4_S,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw4,O,plcsodeyev_rw4_O,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw4,N,plcsodeyev_rw4_N,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw4,K,plcsodeyev_rw4_K,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw4,H,plcsodeyev_rw4_H,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw5,K,plcsodeyev_rw5_K,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw5,N,plcsodeyev_rw5_N,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw5,V,plcsodeyev_rw5_V,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw5,D,plcsodeyev_rw5_D,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw5,S,plcsodeyev_rw5_S,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw5,R,plcsodeyev_rw5_R,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw6,Z,plcsodeyev_rw6_Z,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw6,R,plcsodeyev_rw6_R,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw6,D,plcsodeyev_rw6_D,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw6,K,plcsodeyev_rw6_K,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw6,H,plcsodeyev_rw6_H,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw6,O,plcsodeyev_rw6_O,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw7,H,plcsodeyev_rw7_H,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw7,Z,plcsodeyev_rw7_Z,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw7,C,plcsodeyev_rw7_C,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw7,V,plcsodeyev_rw7_V,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw7,R,plcsodeyev_rw7_R,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw7,K,plcsodeyev_rw7_K,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw8,S,plcsodeyev_rw8_S,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw8,C,plcsodeyev_rw8_C,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw8,Z,plcsodeyev_rw8_Z,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw8,D,plcsodeyev_rw8_D,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw8,V,plcsodeyev_rw8_V,none - OPS,,,,,,,,,,,
+photopic_mars,plcsodeyev_rw8,O,plcsodeyev_rw8_O,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseye,L,plcsoseye_L,0,,Left eye,Meas Value,LOINC,Answer,S,LA14704-3,skos:exactMatch,1,,Operational - not mapping to OMOP
+photopic_mars,plcsoseye,R,plcsoseye_R,0,,Right eye,Meas Value,LOINC,Answer,S,LA14703-5,skos:exactMatch,1,,Prev ID: 45876703; Operational - not mapping to OMOP
+photopic_mars,plcsoseye,B,plcsoseye_B,0,,Both eyes,Meas Value,LOINC,Answer,S,LA15091-4,skos:closeMatch,1,,Prev ID: 45878882; Operational - not mapping to OMOP
+photopic_mars,plcsoseyev_rw1,C,plcsoseyev_rw1_C,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw1,H,plcsoseyev_rw1_H,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw1,V,plcsoseyev_rw1_V,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw1,O,plcsoseyev_rw1_O,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw1,S,plcsoseyev_rw1_S,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw1,N,plcsoseyev_rw1_N,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw2,D,plcsoseyev_rw2_D,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw2,S,plcsoseyev_rw2_S,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw2,Z,plcsoseyev_rw2_Z,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw2,N,plcsoseyev_rw2_N,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw2,R,plcsoseyev_rw2_R,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw2,K,plcsoseyev_rw2_K,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw3,N,plcsoseyev_rw3_N,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw3,D,plcsoseyev_rw3_D,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw3,R,plcsoseyev_rw3_R,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw3,H,plcsoseyev_rw3_H,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw3,V,plcsoseyev_rw3_V,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw3,Z,plcsoseyev_rw3_Z,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw4,C,plcsoseyev_rw4_C,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw4,S,plcsoseyev_rw4_S,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw4,O,plcsoseyev_rw4_O,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw4,N,plcsoseyev_rw4_N,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw4,K,plcsoseyev_rw4_K,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw4,H,plcsoseyev_rw4_H,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw5,K,plcsoseyev_rw5_K,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw5,N,plcsoseyev_rw5_N,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw5,V,plcsoseyev_rw5_V,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw5,D,plcsoseyev_rw5_D,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw5,S,plcsoseyev_rw5_S,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw5,R,plcsoseyev_rw5_R,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw6,Z,plcsoseyev_rw6_Z,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw6,R,plcsoseyev_rw6_R,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw6,D,plcsoseyev_rw6_D,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw6,K,plcsoseyev_rw6_K,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw6,H,plcsoseyev_rw6_H,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw6,O,plcsoseyev_rw6_O,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw7,H,plcsoseyev_rw7_H,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw7,Z,plcsoseyev_rw7_Z,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw7,C,plcsoseyev_rw7_C,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw7,V,plcsoseyev_rw7_V,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw7,R,plcsoseyev_rw7_R,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw7,K,plcsoseyev_rw7_K,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw8,S,plcsoseyev_rw8_S,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw8,C,plcsoseyev_rw8_C,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw8,Z,plcsoseyev_rw8_Z,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw8,D,plcsoseyev_rw8_D,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw8,V,plcsoseyev_rw8_V,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoseyev_rw8,O,plcsoseyev_rw8_O,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueye,L,plcsoueye_L,0,,Left eye,Meas Value,LOINC,Answer,S,LA14704-3,skos:exactMatch,1,,Prev ID: 45883829; Operational - not mapping to OMOP
+photopic_mars,plcsoueye,R,plcsoueye_R,0,,Right eye,Meas Value,LOINC,Answer,S,LA14703-5,skos:exactMatch,1,,Prev ID: 45876703; Operational - not mapping to OMOP
+photopic_mars,plcsoueye,B,plcsoueye_B,0,,Both eyes,Meas Value,LOINC,Answer,S,LA15091-4,skos:closeMatch,1,,Prev ID: 45878882; Operational - not mapping to OMOP
+photopic_mars,plcsoueyev_rw1,C,plcsoueyev_rw1_C,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw1,H,plcsoueyev_rw1_H,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw1,V,plcsoueyev_rw1_V,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw1,O,plcsoueyev_rw1_O,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw1,S,plcsoueyev_rw1_S,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw1,N,plcsoueyev_rw1_N,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw2,D,plcsoueyev_rw2_D,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw2,S,plcsoueyev_rw2_S,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw2,Z,plcsoueyev_rw2_Z,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw2,N,plcsoueyev_rw2_N,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw2,R,plcsoueyev_rw2_R,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw2,K,plcsoueyev_rw2_K,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw3,N,plcsoueyev_rw3_N,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw3,D,plcsoueyev_rw3_D,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw3,R,plcsoueyev_rw3_R,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw3,H,plcsoueyev_rw3_H,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw3,V,plcsoueyev_rw3_V,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw3,Z,plcsoueyev_rw3_Z,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw4,C,plcsoueyev_rw4_C,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw4,S,plcsoueyev_rw4_S,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw4,O,plcsoueyev_rw4_O,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw4,N,plcsoueyev_rw4_N,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw4,K,plcsoueyev_rw4_K,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw4,H,plcsoueyev_rw4_H,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw5,K,plcsoueyev_rw5_K,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw5,N,plcsoueyev_rw5_N,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw5,V,plcsoueyev_rw5_V,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw5,D,plcsoueyev_rw5_D,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw5,S,plcsoueyev_rw5_S,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw5,R,plcsoueyev_rw5_R,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw6,Z,plcsoueyev_rw6_Z,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw6,R,plcsoueyev_rw6_R,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw6,D,plcsoueyev_rw6_D,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw6,K,plcsoueyev_rw6_K,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw6,H,plcsoueyev_rw6_H,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw6,O,plcsoueyev_rw6_O,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw7,H,plcsoueyev_rw7_H,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw7,Z,plcsoueyev_rw7_Z,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw7,C,plcsoueyev_rw7_C,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw7,V,plcsoueyev_rw7_V,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw7,R,plcsoueyev_rw7_R,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw7,K,plcsoueyev_rw7_K,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw8,S,plcsoueyev_rw8_S,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw8,C,plcsoueyev_rw8_C,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw8,Z,plcsoueyev_rw8_Z,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw8,D,plcsoueyev_rw8_D,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw8,V,plcsoueyev_rw8_V,none - OPS,,,,,,,,,,,
+photopic_mars,plcsoueyev_rw8,O,plcsoueyev_rw8_O,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeye,L,mlcsodeye_L,0,,Left eye,Meas Value,LOINC,Answer,S,LA14704-3,skos:exactMatch,1,,Prev ID: 45883829; Operational - not mapping to OMOP
+mesopic_mars,mlcsodeye,R,mlcsodeye_R,0,,Right eye,Meas Value,LOINC,Answer,S,LA14703-5,skos:exactMatch,1,,os is for left eye only; Operational - not mapping to OMOP
+mesopic_mars,mlcsodeye,B,mlcsodeye_B,0,,Both eyes,Meas Value,LOINC,Answer,S,LA15091-4,skos:closeMatch,1,,Prev ID: 45878882; Operational - not mapping to OMOP
+mesopic_mars,mlcsodeyev_rw1,C,mlcsodeyev_rw1_C,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw1,H,mlcsodeyev_rw1_H,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw1,V,mlcsodeyev_rw1_V,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw1,O,mlcsodeyev_rw1_O,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw1,S,mlcsodeyev_rw1_S,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw1,N,mlcsodeyev_rw1_N,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw2,D,mlcsodeyev_rw2_D,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw2,S,mlcsodeyev_rw2_S,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw2,Z,mlcsodeyev_rw2_Z,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw2,N,mlcsodeyev_rw2_N,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw2,R,mlcsodeyev_rw2_R,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw2,K,mlcsodeyev_rw2_K,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw3,N,mlcsodeyev_rw3_N,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw3,D,mlcsodeyev_rw3_D,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw3,R,mlcsodeyev_rw3_R,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw3,H,mlcsodeyev_rw3_H,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw3,V,mlcsodeyev_rw3_V,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw3,Z,mlcsodeyev_rw3_Z,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw4,C,mlcsodeyev_rw4_C,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw4,S,mlcsodeyev_rw4_S,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw4,O,mlcsodeyev_rw4_O,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw4,N,mlcsodeyev_rw4_N,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw4,K,mlcsodeyev_rw4_K,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw4,H,mlcsodeyev_rw4_H,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw5,K,mlcsodeyev_rw5_K,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw5,N,mlcsodeyev_rw5_N,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw5,V,mlcsodeyev_rw5_V,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw5,D,mlcsodeyev_rw5_D,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw5,S,mlcsodeyev_rw5_S,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw5,R,mlcsodeyev_rw5_R,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw6,Z,mlcsodeyev_rw6_Z,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw6,R,mlcsodeyev_rw6_R,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw6,D,mlcsodeyev_rw6_D,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw6,K,mlcsodeyev_rw6_K,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw6,H,mlcsodeyev_rw6_H,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw6,O,mlcsodeyev_rw6_O,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw7,H,mlcsodeyev_rw7_H,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw7,Z,mlcsodeyev_rw7_Z,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw7,C,mlcsodeyev_rw7_C,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw7,V,mlcsodeyev_rw7_V,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw7,R,mlcsodeyev_rw7_R,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw7,K,mlcsodeyev_rw7_K,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw8,S,mlcsodeyev_rw8_S,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw8,C,mlcsodeyev_rw8_C,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw8,Z,mlcsodeyev_rw8_Z,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw8,D,mlcsodeyev_rw8_D,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw8,V,mlcsodeyev_rw8_V,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsodeyev_rw8,O,mlcsodeyev_rw8_O,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseye,L,mlcsoseye_L,0,,Left eye,Meas Value,LOINC,Answer,S,LA14704-3,skos:exactMatch,1,,Operational - not mapping to OMOP
+mesopic_mars,mlcsoseye,R,mlcsoseye_R,0,,Right eye,Meas Value,LOINC,Answer,S,LA14703-5,skos:exactMatch,1,,Prev ID: 45876703; Operational - not mapping to OMOP
+mesopic_mars,mlcsoseye,B,mlcsoseye_B,0,,Both eyes,Meas Value,LOINC,Answer,S,LA15091-4,skos:closeMatch,1,,Prev ID: 45878882; Operational - not mapping to OMOP
+mesopic_mars,mlcsoseyev_rw1,C,mlcsoseyev_rw1_C,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw1,H,mlcsoseyev_rw1_H,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw1,V,mlcsoseyev_rw1_V,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw1,O,mlcsoseyev_rw1_O,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw1,S,mlcsoseyev_rw1_S,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw1,N,mlcsoseyev_rw1_N,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw2,D,mlcsoseyev_rw2_D,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw2,S,mlcsoseyev_rw2_S,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw2,Z,mlcsoseyev_rw2_Z,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw2,N,mlcsoseyev_rw2_N,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw2,R,mlcsoseyev_rw2_R,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw2,K,mlcsoseyev_rw2_K,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw3,N,mlcsoseyev_rw3_N,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw3,D,mlcsoseyev_rw3_D,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw3,R,mlcsoseyev_rw3_R,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw3,H,mlcsoseyev_rw3_H,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw3,V,mlcsoseyev_rw3_V,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw3,Z,mlcsoseyev_rw3_Z,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw4,C,mlcsoseyev_rw4_C,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw4,S,mlcsoseyev_rw4_S,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw4,O,mlcsoseyev_rw4_O,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw4,N,mlcsoseyev_rw4_N,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw4,K,mlcsoseyev_rw4_K,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw4,H,mlcsoseyev_rw4_H,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw5,K,mlcsoseyev_rw5_K,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw5,N,mlcsoseyev_rw5_N,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw5,V,mlcsoseyev_rw5_V,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw5,D,mlcsoseyev_rw5_D,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw5,S,mlcsoseyev_rw5_S,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw5,R,mlcsoseyev_rw5_R,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw6,Z,mlcsoseyev_rw6_Z,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw6,R,mlcsoseyev_rw6_R,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw6,D,mlcsoseyev_rw6_D,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw6,K,mlcsoseyev_rw6_K,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw6,H,mlcsoseyev_rw6_H,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw6,O,mlcsoseyev_rw6_O,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw7,H,mlcsoseyev_rw7_H,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw7,Z,mlcsoseyev_rw7_Z,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw7,C,mlcsoseyev_rw7_C,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw7,V,mlcsoseyev_rw7_V,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw7,R,mlcsoseyev_rw7_R,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw7,K,mlcsoseyev_rw7_K,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw8,S,mlcsoseyev_rw8_S,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw8,C,mlcsoseyev_rw8_C,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw8,Z,mlcsoseyev_rw8_Z,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw8,D,mlcsoseyev_rw8_D,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw8,V,mlcsoseyev_rw8_V,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoseyev_rw8,O,mlcsoseyev_rw8_O,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueye,L,mlcsoueye_L,0,,Left eye,Meas Value,LOINC,Answer,S,LA14704-3,skos:exactMatch,1,,Prev ID: 45883829; Operational - not mapping to OMOP
+mesopic_mars,mlcsoueye,R,mlcsoueye_R,0,,Right eye,Meas Value,LOINC,Answer,S,LA14703-5,skos:exactMatch,1,,Prev ID: 45876703; Operational - not mapping to OMOP
+mesopic_mars,mlcsoueye,B,mlcsoueye_B,0,,Both eyes,Meas Value,LOINC,Answer,S,LA15091-4,skos:closeMatch,1,,Prev ID: 45878882; Operational - not mapping to OMOP
+mesopic_mars,mlcsoueyev_rw1,C,mlcsoueyev_rw1_C,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw1,H,mlcsoueyev_rw1_H,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw1,V,mlcsoueyev_rw1_V,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw1,O,mlcsoueyev_rw1_O,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw1,S,mlcsoueyev_rw1_S,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw1,N,mlcsoueyev_rw1_N,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw2,D,mlcsoueyev_rw2_D,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw2,S,mlcsoueyev_rw2_S,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw2,Z,mlcsoueyev_rw2_Z,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw2,N,mlcsoueyev_rw2_N,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw2,R,mlcsoueyev_rw2_R,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw2,K,mlcsoueyev_rw2_K,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw3,N,mlcsoueyev_rw3_N,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw3,D,mlcsoueyev_rw3_D,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw3,R,mlcsoueyev_rw3_R,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw3,H,mlcsoueyev_rw3_H,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw3,V,mlcsoueyev_rw3_V,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw3,Z,mlcsoueyev_rw3_Z,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw4,C,mlcsoueyev_rw4_C,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw4,S,mlcsoueyev_rw4_S,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw4,O,mlcsoueyev_rw4_O,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw4,N,mlcsoueyev_rw4_N,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw4,K,mlcsoueyev_rw4_K,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw4,H,mlcsoueyev_rw4_H,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw5,K,mlcsoueyev_rw5_K,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw5,N,mlcsoueyev_rw5_N,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw5,V,mlcsoueyev_rw5_V,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw5,D,mlcsoueyev_rw5_D,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw5,S,mlcsoueyev_rw5_S,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw5,R,mlcsoueyev_rw5_R,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw6,Z,mlcsoueyev_rw6_Z,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw6,R,mlcsoueyev_rw6_R,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw6,D,mlcsoueyev_rw6_D,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw6,K,mlcsoueyev_rw6_K,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw6,H,mlcsoueyev_rw6_H,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw6,O,mlcsoueyev_rw6_O,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw7,H,mlcsoueyev_rw7_H,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw7,Z,mlcsoueyev_rw7_Z,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw7,C,mlcsoueyev_rw7_C,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw7,V,mlcsoueyev_rw7_V,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw7,R,mlcsoueyev_rw7_R,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw7,K,mlcsoueyev_rw7_K,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw8,S,mlcsoueyev_rw8_S,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw8,C,mlcsoueyev_rw8_C,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw8,Z,mlcsoueyev_rw8_Z,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw8,D,mlcsoueyev_rw8_D,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw8,V,mlcsoueyev_rw8_V,none - OPS,,,,,,,,,,,
+mesopic_mars,mlcsoueyev_rw8,O,mlcsoueyev_rw8_O,none - OPS,,,,,,,,,,,
+retinal_imaging_v2,,rtop_osm,,2005200290,2005200290,OptoMed-Mac centered-CFP,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+retinal_imaging_v2,crcid_rt,crcid_rt,,0,,,Observation,,,,,,,,
+retinal_imaging_v2,yob,yob,,0,,,Observation,,,,,,,,
+retinal_imaging_v2,,rtei_odir,,2005200291,2005200291,Eidon-UWF Central-IR,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+retinal_imaging_v2,,rtei_osir,,2005200291,2005200291,Eidon-UWF Central-IR,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+retinal_imaging_v2,,rtei_odfaf,,2005200292,2005200292,Eidon-UWF Central-FAF,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+retinal_imaging_v2,,rtei_osfaf,,2005200292,2005200292,Eidon-UWF Central-FAF,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+retinal_imaging_v2,,rtsm_odc,,2005200293,2005200293,Eidon-UWF Central-CFP,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+retinal_imaging_v2,,rtsm_osc,,2005200293,2005200293,Eidon-UWF Central-CFP,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+retinal_imaging_v2,,rtsm_odn,,2005200294,2005200294,Eidon-UWF Nasal-CFP,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+retinal_imaging_v2,,rtsm_osn,,2005200294,2005200294,Eidon-UWF Nasal-CFP,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+retinal_imaging_v2,,rtsm_odt,,2005200295,2005200295,Eidon-UWF Temporal-CFP,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+retinal_imaging_v2,,rtsm_ost,,2005200295,2005200295,Eidon-UWF Temporal-CFP,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+retinal_imaging_v2,,rtsm_odm,,2005200296,2005200296,Eidon- Create Mosaic Image-CFP,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+retinal_imaging_v2,,rtsm_osm,,2005200296,2005200296,Eidon- Create Mosaic Image-CFP,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+retinal_imaging_v2,,rtso_odo,,2005200297,2005200297,Spec-ONH-RC-HR-OCT,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+retinal_imaging_v2,,rtso_oso,,2005200297,2005200297,Spec-ONH-RC-HR-OCT,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+retinal_imaging_v2,,rtso_odp,,2005200298,2005200298,Spec-PPole Mac-HR-61 lines-OCT,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+retinal_imaging_v2,,rtso_osp,,2005200298,2005200298,Spec-PPole Mac-HR-61 lines-OCT,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+retinal_imaging_v2,,rtso_odm,,2005200299,2005200299,Spec-Mac-20x20-HS-512 lines-OCTA,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+retinal_imaging_v2,,rtso_osm,,2005200299,2005200299,Spec-Mac-20x20-HS-512 lines-OCTA,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+retinal_imaging_v2,,rtci_odm1,,2005200300,2005200300,Cirrus-Mac Cube-512x128-OCT,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+retinal_imaging_v2,,rtci_osm1,,2005200300,2005200300,Cirrus-Mac Cube-512x128-OCT,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+retinal_imaging_v2,,rtci_odd1,,2005200301,2005200301,Cirrus-Disc Cube-200x200-OCT,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+retinal_imaging_v2,,rtci_osd1,,2005200301,2005200301,Cirrus-Disc Cube-200x200-OCT,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+retinal_imaging_v2,,rtci_odm2,,2005200302,2005200302,Cirrus-Macula 6x6-OCTA,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+retinal_imaging_v2,,rtci_osm2,,2005200302,2005200302,Cirrus-Macula 6x6-OCTA,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+retinal_imaging_v2,,rtci_odd2,,2005200303,2005200303,Cirrus-Disc 6x6-OCTA,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+retinal_imaging_v2,,rtci_osd2,,2005200303,2005200303,Cirrus-Disc 6x6-OCTA,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+retinal_imaging_v2,,rtfl_od,,2005200304,2005200304,FLIO-Mac-HS,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,right eye|45881626,LA20770-6
+retinal_imaging_v2,,rtfl_os,,2005200304,2005200304,FLIO-Mac-HS,Observation,AIREADI,Observable Entity,S,,skos:exactMatch,1,left eye|45883143,LA20770-6
+bcva,,viaodmscore,,2005200336,2005200336,Mesopic LogMAR OD Score,Measurement,AIREADI,Clinical Observation,S,,skos:exactMatch,1,Mesopic,"1=Photopic, 2=Mesopic | 6616-7"
+bcva,,viaosmscore,,2005200337,2005200337,Mesopic LogMAR OS Score,Measurement,AIREADI,Clinical Observation,S,,skos:exactMatch,1,Mesopic,"1=Photopic, 2=Mesopic | 6617-5"
+photopic_mars,,plcsodfcl,,2005200338,2005200338,"OD: Value of final correct letter - Photopic, right eye",Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,right,"1=Photopic, left eye; 2=Photopic, right eye; 3=Photopic, binocular | 410566008"
+photopic_mars,,plcsodmiss,,2005200339,2005200339,"OD: Number of misses prior to stopping - Photopic, right eye",Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,right,"1=Photopic, left eye; 2=Photopic, right eye; 3=Photopic, binocular | 410566008"
+photopic_mars,,plcsosfcl,,2005200340,2005200340,"OS: Value of final correct letter - Photopic, left eye",Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,left,"1=Photopic, left eye; 2=Photopic, right eye; 3=Photopic, binocular | 410566008"
+photopic_mars,,plcsosmiss,,2005200341,2005200341,"OS: Number of misses prior to stopping - Photopic, left eye",Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,left,"1=Photopic, left eye; 2=Photopic, right eye; 3=Photopic, binocular | 410566008"
+bcva,,viaocmpdat,,2005200441,2005200441,Performed date of BCVA,Observation,AIREADI,Procedure,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
+photopic_mars,,plcscmpdat,,2005200442,2005200442,Performed date of photopic mars,Observation,AIREADI,Procedure,S,,skos:exactMatch,1,1035260,Performed on value_as_concept_id = 1035260 | LA30233-3
+mesopic_mars,,mlcscmpdat,,2005200443,2005200443,Performed date of Mesopic Mars,Observation,AIREADI,Procedure,S,,skos:exactMatch,1,,Performed on value_as_concept_id = 1035260 | LA30233-3
+retinal_imaging_v2,rt_dat,rt_dat,,2005200446,2005200446,Performed date of retinal imaging assessment,Observation,AIREADI,Procedure,S,,skos:exactMatch,1,1035260,Performed on value_as_concept_id = 1035260 | LA30233-3
+mesopic_mars,,mlcsodfcl,,2005200486,2005200486,"OD: Value of final correct letter - Mesopic, right eye",Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,right,"1=Mesopic, left eye; 2=Mesopic, right eye; 3=Mesopic, binocular | 410566008"
+mesopic_mars,,mlcsodmiss,,2005200487,2005200487,"OD: Number of misses prior to stopping - Mesopic, right eye",Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,right,"1=Mesopic, left eye; 2=Mesopic, right eye; 3=Mesopic, binocular | 410566008"
+mesopic_mars,,mlcsosfcl,,2005200488,2005200488,"OS: Value of final correct letter - Mesopic, left eye",Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,left,"1=Mesopic, left eye; 2=Mesopic, right eye; 3=Mesopic, binocular | 410566008"
+mesopic_mars,,mlcsosmiss,,2005200489,2005200489,"OS: Number of misses prior to stopping - Mesopic, left eye",Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,left,"1=Mesopic, left eye; 2=Mesopic, right eye; 3=Mesopic, binocular | 410566008"
+mesopic_mars,,mlcsodlog,,2005200552,2005200552,"OD: Log Contrast Sensitivity - Mesopic, right eye",Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,right,"1=Mesopic, left eye; 2=Mesopic, right eye; 3=Mesopic, binocular | 251686008"
+mesopic_mars,,mlcsoslog,,2005200553,2005200553,"OS: Log Contrast Sensitivity - Mesopic, left eye",Measurement,AIREADI,Measurement,S,,skos:exactMatch,1,left,"1=Mesopic, left eye; 2=Mesopic, right eye; 3=Mesopic, binocular | 251686008"
+retinal_imaging_v2,rt_cmt,rt_cmt,,4083205,,Result comments,Observation,SNOMED,Qualifier Value,S,281296001,skos:closeMatch,0.75,,
+retinal_imaging_v2,rtop_odd,1,rtop_odd_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtop_odd,0,rtop_odd_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtop_odm,1,rtop_odm_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtop_odm,0,rtop_odm_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtei_odir,1,rtei_odir_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtei_odir,0,rtei_odir_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtei_odfaf,1,rtei_odfaf_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtei_odfaf,0,rtei_odfaf_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtsm_odc,1,rtsm_odc_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtsm_odc,0,rtsm_odc_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtsm_odn,1,rtsm_odn_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtsm_odn,0,rtsm_odn_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtsm_odt,1,rtsm_odt_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtsm_odt,0,rtsm_odt_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtsm_odm,1,rtsm_odm_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtsm_odm,0,rtsm_odm_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtso_odo,1,rtso_odo_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtso_odo,0,rtso_odo_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtso_odp,1,rtso_odp_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtso_odp,0,rtso_odp_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtso_odm,1,rtso_odm_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtso_odm,0,rtso_odm_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtci_odm1,1,rtci_odm1_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtci_odm1,0,rtci_odm1_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtci_odd1,1,rtci_odd1_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtci_odd1,0,rtci_odd1_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtci_odm2,1,rtci_odm2_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtci_odm2,0,rtci_odm2_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtci_odd2,1,rtci_odd2_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtci_odd2,0,rtci_odd2_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtma_odw,1,rtma_odw_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtma_odw,0,rtma_odw_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtma_odm,1,rtma_odm_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtma_odm,0,rtma_odm_2,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtma_odm1,1,rtma_odm1_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtma_odm1,0,rtma_odm1_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rttr_odr,1,rttr_odr_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rttr_odr,0,rttr_odr_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rttr_odm1,1,rttr_odm1_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rttr_odm1,0,rttr_odm1_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rttr_odm2,1,rttr_odm2_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rttr_odm2,0,rttr_odm2_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtfl_od,1,rtfl_od_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtfl_od,0,rtfl_od_2,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,right eye|45881626,
+retinal_imaging_v2,rtop_osd,1,rtop_osd_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtop_osd,0,rtop_osd_2,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtop_osm,1,rtop_osm_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtop_osm,0,rtop_osm_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtei_osir,1,rtei_osir_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtei_osir,0,rtei_osir_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtei_osfaf,1,rtei_osfaf_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtei_osfaf,0,rtei_osfaf_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtsm_osc,1,rtsm_osc_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtsm_osc,0,rtsm_osc_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtsm_osn,1,rtsm_osn_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtsm_osn,0,rtsm_osn_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtsm_ost,1,rtsm_ost_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtsm_ost,0,rtsm_ost_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtsm_osm,1,rtsm_osm_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtsm_osm,0,rtsm_osm_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtso_oso,1,rtso_oso_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtso_oso,0,rtso_oso_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtso_osp,1,rtso_osp_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtso_osp,0,rtso_osp_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtso_osm,1,rtso_osm_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtso_osm,0,rtso_osm_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtci_osm1,1,rtci_osm1_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtci_osm1,0,rtci_osm1_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtci_osd1,1,rtci_osd1_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtci_osd1,0,rtci_osd1_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtci_osm2,1,rtci_osm2_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtci_osm2,0,rtci_osm2_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtci_osd2,1,rtci_osd2_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtci_osd2,0,rtci_osd2_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtma_osw,1,rtma_osw_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtma_osw,0,rtma_osw_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtma_osm,1,rtma_osm_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtma_osm,0,rtma_osm_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtma_osm1,1,rtma_osm1_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtma_osm1,0,rtma_osm1_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rttr_osr,1,rttr_osr_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rttr_osr,0,rttr_osr_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rttr_osm1,1,rttr_osm1_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rttr_osm1,0,rttr_osm1_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rttr_osm2,1,rttr_osm2_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rttr_osm2,0,rttr_osm2_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtfl_os,1,rtfl_os_1,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
+retinal_imaging_v2,rtfl_os,0,rtfl_os_0,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
