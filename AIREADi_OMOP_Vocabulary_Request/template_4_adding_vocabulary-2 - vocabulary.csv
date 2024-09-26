@@ -1,0 +1,7 @@
+vocabulary_id,vocabulary_name,vocabulary_reference,vocabulary_version,description
+"short name (id) of your vocabulary
+max 1000 characters","full name of your vocabulary
+max 50 characters","link to your vocabulary if exists
+max 20 characters",version of the vocabulary if exists,brief description of the content of vocabulary
+AIREADI,Artificial Intelligence Ready and Equitable Atlas for Diabetes Insights (AI-READI),,1.0,Vocabulary for surveys and questionnaires utilized by the Artificial Intelligence Ready and Equitable Atlas for Diabetes Insights (AI-READI) project 
+AIREADI-MoCA,Montreal Cognitive Assessment (Version 8.1) as used by AI-READI,,1.0,Version 8.1 of the Montreal Cognitive Assessment utilized by the Artificial Intelligence Ready and Equitable Atlas for Diabetes Insights (AI-READI) project
