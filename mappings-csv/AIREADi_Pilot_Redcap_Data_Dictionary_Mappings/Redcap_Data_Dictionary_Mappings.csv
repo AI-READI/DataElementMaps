@@ -733,6 +733,7 @@ Yes,open-source,disposition,radio,,1732,eos_dsvst,,Provide the last study visit/
 Yes,protected,disposition,text,,1733,exportzip,,Zip Code for Export,3043579,,Postal code [Location],Observation,LOINC,Clinical Observation,S,ValidityValid,skos:closeMatch,1,,
 No,open-source,data_management,checkbox,,1734,dm,,Click here to indicate which data is approved for sending to Fairhub.io: (goal is that all data would become available),none - OPS,,,,,,,N/A - operational variable,,,,
 No,open-source,data_management,checkbox,,1735,fairhub,,Files verified in Fairhub,none - OPS,,,,,,,N/A - operational variable,,,,
+No,open-source,data_management,radio,,,group_export,,Study wave,,,,,,,,,,,,
 No,locked (unavailable),ehr_information,text,,,phone,,Phone,0,,,,,,,,,,,
 No,locked (unavailable),driving_record,text,,,drinum,,Drivers license number,0,,,,,,,,,,,
 Yes,protected,driving_record,dropdown,,,dristate,,Drivers license state,2005200138,2005200138,Drivers license state,Observation,AIREADI,Location,S,,skos:exactMatch,1,,398070004
@@ -2659,3 +2660,5 @@ Yes,open-source,retinal_imaging_v2,yesno,rttr_osm2,,1,rttr_osm2_1,Yes,45877994,,
 Yes,open-source,retinal_imaging_v2,yesno,rttr_osm2,,0,rttr_osm2_0,No,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
 Yes,open-source,retinal_imaging_v2,yesno,rtfl_os,,1,rtfl_os_1,Yes,45877994,,Yes,Meas Value,LOINC,Answer,S,LA33-6,skos:exactMatch,1,left eye|45883143,
 Yes,open-source,retinal_imaging_v2,yesno,rtfl_os,,0,rtfl_os_0,No,45878245,,No,Meas Value,LOINC,Answer,S,LA32-8,skos:exactMatch,1,left eye|45883143,
+No,open-source,data_management,radio,export_group,,pilot,export_group_pilot,Pilot,,,,,,,,,,,,
+No,open-source,data_management,radio,export_group,,yr2,export_group_yr2,Year 2,,,,,,,,,,,,
