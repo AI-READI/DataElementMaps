@@ -1,0 +1,31 @@
+Origin,Date_of_Variable_Modification,Map_to_OMOP,Protected_or_open-source,Name,Sample_Source,Example_Data,Data_Type,Reference_Interval,Units,Description,LOINC_code,TARGET_CONCEPT_ID,TARGET_CONCEPT_NAME,TARGET_DOMAIN_ID,TARGET_VOCABULARY_ID,TARGET_CONCEPT_CLASS_ID,TARGET_STANDARD_CONCEPT,TARGET_CONCEPT_CODE,PREDICATE_ID,CONFIDENCE
+,,No,open-source,Participant ID,,7092,Integer,,,partipant id,,,,,,,,,,
+,,Yes,open-source,NT-proBNP,EDTA Plasma,100,Float,See table below,pg/mL,,33762-6,3029187,Natriuretic peptide.B prohormone N-Terminal [Mass/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,33762-6,skos:exactMatch,1
+,,Yes,open-source,Troponin-T,EDTA Plasma,0.01,Float,Female: <11; Male <16,ng/L,,67151-1,40769783,Troponin T.cardiac [Mass/volume] in Serum or Plasma by High sensitivity method,Measurement,LOINC,Lab Test,S,67151-1,skos:exactMatch,1
+,,Yes,open-source,C-Peptide,EDTA Plasma,2,Float,1.1-4.4,ng/mL,,1986-9,3010084,C peptide [Mass/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,1986-9,skos:exactMatch,1
+,,Yes,open-source,Insulin,EDTA Plasma,,Float,0.0-24.9,ng/mL,,20448-7,3016244,Insulin [Units/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,20448-7,skos:exactMatch,1
+,,Yes,open-source,CRP-HS,Serum,5.5,Float,0.0-10.0,mg/L,,30522-7,3010156,C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method,Measurement,LOINC,Lab Test,S,30522-7,skos:exactMatch,1
+,,Yes,open-source,Total Cholesterol,Serum,150,Float,<200,mg/dL,,2093-3,3027114,Cholesterol [Mass/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,2093-3,skos:exactMatch,1
+,,Yes,open-source,Triglycerides,Serum,100,Float,<150,mg/dL,,2571-8,3022192,Triglyceride [Mass/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,2571-8,skos:exactMatch,1
+,,Yes,open-source,HDL Cholesterol,Serum,41,Float,>39,mg/dL,,2085-9,3007070,Cholesterol in HDL [Mass/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,2085-9,skos:exactMatch,1
+,,Yes,open-source,LDL Cholesterol (calculated field),Serum,120,Float,<130,mg/dL,,13457-7,3028288,Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation,Measurement,LOINC,Lab Test,S,13457-7,skos:exactMatch,1
+,,Yes,open-source,Glucose,Serum,70,Float,62-125,mg/dL,,2345-7,3004501,Glucose [Mass/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,2345-7,skos:exactMatch,1
+,,Yes,open-source,BUN,Serum,,Float,8.0-21.0,mg/dL,,3094-0,3013682,Urea nitrogen [Mass/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,3094-0,skos:exactMatch,1
+,,Yes,open-source,Creatinine,Serum,1,Float,"Female: 0.38-1.02, Male: 0.51-1.18",md/dL,,2160-0,3016723,Creatinine [Mass/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,2160-0,skos:exactMatch,1
+,,Yes,open-source,BUN/Creatinine ratio,Serum,,Float,,,,,4112223,BUN/Creatinine ratio,Measurement,SNOMED,Procedure,S,18207002,skos:exactMatch,1
+,,Yes,open-source,Sodium,Serum,140,Float,135-145,mEq/L,,2951-2,3019550,Sodium [Moles/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,2951-2,skos:exactMatch,1
+,,Yes,open-source,Potassium,Serum,4.2,Float,3.6-5.2,mEq/L,,2823-3,3023103,Potassium [Moles/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,2823-3,skos:exactMatch,1
+,,Yes,open-source,Chloride,Serum,99,Float,98-108,mEq/L,,2075-0,3014576,Chloride [Moles/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,2075-0,skos:exactMatch,1
+,,Yes,open-source,"Carbon Dioxide, Total",Serum,25,Float,22-32,mEq/L,,2028-9,3015632,"Carbon dioxide, total [Moles/volume] in Serum or Plasma",Measurement,LOINC,Lab Test,S,2028-9,skos:exactMatch,1
+,,Yes,open-source,Calcium,Serum,9.8,Float,8.9-10.2,mg/dL,,17861-6,3006906,Calcium [Mass/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,17861-6,skos:exactMatch,1
+,,Yes,open-source,"Protein, total",Serum,7.5,Float,6.0-8.2,g/dL,,2885-2,3020630,Protein [Mass/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,2885-2,skos:exactMatch,1
+,,Yes,open-source,Albumin,Serum,3.6,Float,3.5-5.2,g/dL,,1751-7,3024561,Albumin [Mass/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,1751-7,skos:exactMatch,1
+,,Yes,open-source,"Globulin, total (calculated field)",Serum,,Float,,g/dL,,2336-6,3021886,Globulin [Mass/volume] in Serum,Measurement,LOINC,Lab Test,S,2336-6,skos:exactMatch,1
+,,Yes,open-source,A/G Ratio (calculated field),Serum,,Float,,,,,4288601,Albumin/Globulin ratio,Measurement,SNOMED,Procedure,S,687005,skos:exactMatch,1
+,,Yes,open-source,"Bilirubin, Total",Serum,1,Float,0.2-1.3,mg/dL,,1975-2,3024128,Bilirubin.total [Mass/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,1975-2,skos:exactMatch,1
+,,Yes,open-source,Alkaline Phosphatase,Serum,101,Float,See table below,IU/L,,6768-6,3035995,Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,6768-6,skos:exactMatch,1
+,,Yes,open-source,AST (GOT),Serum,10.1,Float,">=9, <=38",IU/L,,1920-8,3013721,Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,1920-8,skos:exactMatch,1
+,,Yes,open-source,ALT (GPT),Serum,32.5,Float,"Female: 7-33, Male Age 0-49: 10-64, Male Age 50+: 10-48",IU/L,,1742-6,3006923,Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,1742-6,skos:exactMatch,1
+,,Yes,open-source,HbA1c,Whole Blood,5.5,Float,4.0-6.0,%,,4548-4,3004410,Hemoglobin A1c/Hemoglobin.total in Blood,Measurement,LOINC,Lab Test,S,4548-4,skos:exactMatch,1
+Changed,10/15/2024,Yes,open-source,Urine creatinine,Urine,,Float,N/A,ug/mL,,2161-8,3017250,Creatinine [Mass/volume] in Urine,Measurement,LOINC,Lab Test,S,2161-8,skos:exactMatch,1
+Changed,10/15/2024,Yes,open-source,Urine Albumin,Urine,,Float,N/A,ug/mL,,14959-1,3001802,Microalbumin/Creatinine [Mass Ratio] in Urine,Measurement,LOINC,Lab Test,S,14959-1,skos:exactMatch,1
