@@ -27,5 +27,14 @@ open-source,Alkaline Phosphatase,Serum,101,Float,See table below,IU/L,3035995,Al
 open-source,AST (GOT),Serum,10.1,Float,">=9, <=38",IU/L,3013721,Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,1920-8,skos:exactMatch,1
 open-source,ALT (GPT),Serum,32.5,Float,"Female: 7-33, Male Age 0-49: 10-64, Male Age 50+: 10-48",IU/L,3006923,Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,S,1742-6,skos:exactMatch,1
 open-source,HbA1c,Whole Blood,5.5,Float,4.0-6.0,%,3004410,Hemoglobin A1c/Hemoglobin.total in Blood,Measurement,LOINC,Lab Test,S,4548-4,skos:exactMatch,1
-open-source,Urine creatinine,Urine,,Float,N/A,ug/mL,3017250,Creatinine [Mass/volume] in Urine,Measurement,LOINC,Lab Test,S,2161-8,skos:exactMatch,1
-open-source,Urine Albumin,Urine,,Float,N/A,ug/mL,3001802,Microalbumin/Creatinine [Mass Ratio] in Urine,Measurement,LOINC,Lab Test,S,14959-1,skos:exactMatch,1
+open-source,Urine creatinine,Urine,,Float,N/A,mg/DL,3017250,Creatinine [Mass/volume] in Urine,Measurement,LOINC,Lab Test,S,2161-8,skos:exactMatch,1
+open-source,Urine Albumin,Urine,,Float,N/A,mg/DL,3001802,Microalbumin/Creatinine [Mass Ratio] in Urine,Measurement,LOINC,Lab Test,S,14959-1,skos:exactMatch,1
+open-source,pg/mL,pg/mL,pg/mL,String,pg/mL,pg/mL,8845,picogram per milliliter,Unit,UCUM,Unit,S,pg/mL,skos:exactMatch,1
+open-source,ng/L,ng/L,ng/L,String,ng/L,ng/L,8725,nanogram per liter,Unit,UCUM,Unit,S,ng/L,skos:exactMatch,1
+open-source,ng/mL,ng/mL,ng/mL,String,ng/mL,ng/mL,8842,nanogram per milliliter,Unit,UCUM,Unit,S,ng/mL,skos:exactMatch,1
+open-source,mg/L,mg/L,mg/L,String,mg/L,mg/L,8751,milligram per liter,Unit,UCUM,Unit,S,mg/L,skos:exactMatch,1
+open-source,mg/dL,mg/dL,mg/dL,String,mg/dL,mg/dL,8840,milligram per deciliter,Unit,UCUM,Unit,S,mg/dL,skos:exactMatch,1
+open-source,mEq/L,mEq/L,mEq/L,String,mEq/L,mEq/L,9557,milliequivalent per liter,Unit,UCUM,Unit,S,10*-3.eq/L,skos:exactMatch,1
+open-source,g/dL,g/dL,g/dL,String,g/dL,g/dL,8713,gram per deciliter,Unit,UCUM,Unit,S,g/dL,skos:exactMatch,1
+open-source,IU/L,IU/L,IU/L,String,IU/L,IU/L,8923,international unit per liter,Unit,UCUM,Unit,S,[iU]/L,skos:exactMatch,1
+open-source,%,%,%,String,%,%,8554,percent,Unit,UCUM,Unit,S,%,skos:exactMatch,1
