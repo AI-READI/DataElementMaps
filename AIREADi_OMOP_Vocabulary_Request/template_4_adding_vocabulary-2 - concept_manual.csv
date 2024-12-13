@@ -1,8 +1,8 @@
-concept_name,SRC CODE,concept_code,"short name (id) of your vocabulary
-max 20 characters",domain_id,v6_domain_id,concept_class_id,standard_concept,valid_start_date,valid_end_date,invalid_reason
+concept_name,SRC CODE,concept_code,vocabulary_id,domain_id,v6_domain_id,concept_class_id,standard_concept,valid_start_date,valid_end_date,invalid_reason
 "concept name of the code you want to add
 max 255 characters",,"concept code you want to add
-max 50 characters",,"domain of your source concept, has to be an exsting OHDSI domain
+max 50 characters","short name (id) of your vocabulary
+max 20 characters","domain of your source concept, has to be an exsting OHDSI domain
 max 20 characters",Flagging concepts that could be moved into the survey_conduct domain,"has to be an existing OHDSI class
 max 20 characters",empty only,date from the source or default (1/1/1970),12/31/2099,empty only
 "Do you use lifestyle changes to control your A1C and blood glucose levels? Examples: regular exercise, avoiding sugary foods and beverages, eating a balanced diet with lots of vegetables, sticking to a consistent eating schedule",cmtrt_lfst,2005200004,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,
@@ -10,8 +10,8 @@ Method used to complete form,viaomthd,2005200011,AIREADI,Observation,survey_cond
 Snellen fraction - Photopic VA - OD,viaodpsf,2005200012,AIREADI,Measurement,,Clinical Observation,,1/1/1970,,
 Snellen fraction - Photopic VA - OS,viaospsf,2005200013,AIREADI,Measurement,,Clinical Observation,,1/1/1970,,
 Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,
-"Circulation problems (Examples: arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins)",mhoccur_circ,2005200015,AIREADI,Observation,,Survey,,1/1/1970,,
-Kidney problems,mhoccur_rnl,2005200017,AIREADI,Observation,,Survey,,1/1/1970,,
+"Circulation problems (Examples: arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins)",mhoccur_circ,2005200015,AIREADI,Condition,,Disorder,,1/1/1970,,
+Kidney problems,mhoccur_rnl,2005200017,AIREADI,Condition,,Disorder,,1/1/1970,,
 Were either of your parents diagnosed with Type II Diabetes?,fh_dm2pt,2005200018,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,
 Has a sibling been diagnosed with Type II Diabetes?,fh_dm2sb,2005200019,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,
 Have you had any beer or ale in the past year?,subrkncf,2005200024,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,
@@ -339,7 +339,7 @@ How often have you gotten into an argument or a fight about something racist tha
 How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In the Past Year?,pxrd52,2005200541,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,
 How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In your entire life?,pxrd53,2005200542,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,
 "How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd54,2005200543,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,
-Elevated A1C levels (elevated blood sugars),mh_a1c,2005200547,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,
+Elevated A1C levels (elevated blood sugars),mh_a1c,2005200547,AIREADI,Condition,survey_conduct,Disorder,,1/1/1970,,
 "Do you take pills to control your A1C and blood glucose levels? Examples: Metformin (Glucophage, Glumetza, Fortamet, Riomet), Glucotrol, Amaryl, DiaBeta, Blynase PresTab, Micronase, Actos, Avandia, Precose, Glyset, Prandin, Starlix, Januvia, Onglyza, Tradjenta, Nesina, Invokana, Farxiga, Jardiance, Welchol, and Cyclocet",cmtrt_a1c,2005200548,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,
 Do you inject insulin to control your blood glucose levels?,cmtrt_insln,2005200549,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,
 "Do you use other injections to control your blood glucose levels?  Examples: Victoza, Ozempic, Symlin, Tanzeum, and Trulicity",cmtrt_glcs,2005200550,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,
@@ -416,3 +416,5 @@ Left foot - site 9,,2005200623,AIREADI,Observation,,Qualifier Value,,1/1/1970,,
 Left foot - site 10,,2005200624,AIREADI,Observation,,Qualifier Value,,1/1/1970,,
 AI-READI study discontinuation or completion,,2005200625,AIREADI,Observation,,Qualifier Value,,1/1/1970,,
 Assessment,,2005200626,AIREADI,Observation,,Qualifier Value,,1/1/1970,,
+"Other heart issues (Examples: pacemaker, heart valve disease, open heart surgery)",,2005200627,AIREADI,Condition,,Disorder,,1/1/1970,,
+Stroke,,2005200628,AIREADI,Condition,,Disorder,,1/1/1970,,

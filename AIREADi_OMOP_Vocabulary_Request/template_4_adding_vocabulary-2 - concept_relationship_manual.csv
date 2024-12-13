@@ -418,3 +418,5 @@ Left foot - site 9,2005200623,,AIREADI,,4047085,Monofilament foot sensation test
 Left foot - site 10,2005200624,,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,
 AI-READI study discontinuation or completion,2005200625,,AIREADI,,44810922,Participation in research study completed,Observation,SNOMED,Clinical Finding,871441000000107,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,
 Assessment,2005200626,,AIREADI,,44792407,Assessment,Type Concept,SNOMED,Record Artifact,325931000000109,N,,,,0.75,skos:exactMatch,ManualMapping,ManualMappingCuration,,
+"Other heart issues (Examples: pacemaker, heart valve disease, open heart surgery)",2005200627,,AIREADI,,40770062,History of Problems with your heart or circulation,Observation,LOINC,Clinical Observation,67434-1,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,
+Stroke,2005200628,,AIREADI,,40770062,History of Problems with your heart or circulation,Observation,LOINC,Clinical Observation,67434-1,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,
