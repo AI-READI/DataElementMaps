@@ -29,7 +29,6 @@ Origin,Date_of_Variable_Modification,Map_to_OMOP,Protected_or_open-source,Name,S
 ,,Yes,open-source,HbA1c,Whole Blood,5.5,Float,4.0-6.0,%,,4548-4,3004410,Hemoglobin A1c/Hemoglobin.total in Blood,Measurement,LOINC,Lab Test,S,4548-4,skos:exactMatch,1
 Changed,10/30/2024,Yes,open-source,Urine creatinine,Urine,,Float,N/A,mg/DL,,2161-8,3017250,Creatinine [Mass/volume] in Urine,Measurement,LOINC,Lab Test,S,2161-8,skos:exactMatch,1
 Changed,1/15/2025,Yes,open-source,Urine Albumin,Urine,,Float,N/A,mg/DL,,1754-1,3012516,Albumin [Mass/volume] in Urine,Measurement,LOINC,Lab Test,S,1754-1,skos:exactMatch,1
-Added,1/14/2025,Yes,open-source,uACR (urine albumin/urine creatinine),Urine,,Float,,,,,3020682,Albumin/Creatinine [Ratio] in Urine,Measurement,LOINC,Lab Test,S,32294-1,skos:exactMatch,1
 Added,10/31/2024,Yes,open-source,pg/mL,pg/mL,pg/mL,String,pg/mL,pg/mL,,pg/mL,8845,picogram per milliliter,Unit,UCUM,Unit,S,pg/mL,skos:exactMatch,1
 Added,10/31/2024,Yes,open-source,ng/L,ng/L,ng/L,String,ng/L,ng/L,,ng/L,8725,nanogram per liter,Unit,UCUM,Unit,S,ng/L,skos:exactMatch,1
 Added,10/31/2024,Yes,open-source,ng/mL,ng/mL,ng/mL,String,ng/mL,ng/mL,,ng/mL,8842,nanogram per milliliter,Unit,UCUM,Unit,S,ng/mL,skos:exactMatch,1
