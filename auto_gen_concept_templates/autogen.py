@@ -6,12 +6,14 @@ mapping_sources = [
     {
         'spreadsheet_name': 'AIREADI MOCA Data Dictionary and Mappings v0.3',
         'worksheet_name': 'MOCA Data Dictionary with Extensions',
+        'location': 'https://docs.google.com/spreadsheets/d/1knk4Qru9zhK0CePZ1rLNVMWsKEI4hQ4a8UqR5K9khXc/edit?gid=1779053680#gid=1779053680',
         'process': True,
         'tag': 'MOCA',
     },
     {
         'spreadsheet_name': 'REDCap Data Dictionary and OMOP Mappings',
         'worksheet_name': '_master REDCap Data Dictionary with Extensions',
+        'location': 'https://docs.google.com/spreadsheets/d/1hIP0lZc5fxl-4_KO_0J6EnYLecbarXq60UNey3sJ9es/edit?gid=1423561967#gid=1423561967',
         'process': True,
         'tag': 'RedCap',
     },
