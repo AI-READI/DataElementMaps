@@ -81,7 +81,9 @@ def main():
         df_all = get_as_dataframe(mapping)
         df_all['TARGET_CONCEPT_ID'] = pd.to_numeric(df_all['TARGET_CONCEPT_ID'], errors='coerce').fillna(0).astype(int)
         if 'Extension_Needed' in df_all.columns:
-            df = df_all[(df_all['TARGET_CONCEPT_ID'] > 2000000000) | (df_all['Extension_Needed'] == 'Yes')]
+            df = df_all[(df_all['TARGET_CONCEPT_ID'] > 2000000000) |
+                        (df_all['Extension_Needed'] == 'Yes') |
+                        (df_all['TARGET_VOCABULARY_ID'] == 'AIREADI-Vision') ]
         else:
             df = df_all[df_all['TARGET_CONCEPT_ID'] > 2000000000]
 
@@ -133,6 +135,8 @@ def main():
         filename = f'output/{fname}'
         df.to_csv(filename, index=False)
         print(f"Saved {filename} with {len(df)} rows")
+
+    pass
 
 if __name__ == "__main__":
     main()

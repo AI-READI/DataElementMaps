@@ -428,7 +428,6 @@ Were either of your parents diagnosed with Type II Diabetes?,fh_dm2pt,2005200018
 Has a sibling been diagnosed with Type II Diabetes?,fh_dm2sb,2005200019,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
 White Blood Cells (WBC) - x10E3/µL,lbscat_wbc,2005200182,AIREADI,Measurement,survey_conduct,Procedure,S,1/1/1970,,,RedCap
 Red Blood Cells (RBC) - x10E6/µL,lbscat_rbc,2005200183,AIREADI,Measurement,survey_conduct,Procedure,S,1/1/1970,,,RedCap
-Hemoglobin [Mass/volume] in Blood,lbscat_a1c,3000963,LOINC,Measurement,survey_conduct,Lab Test,S,1/1/1970,,,RedCap
 Have you taken aspirin in the past 2 weeks?,cm_asp,2005200145,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
 "Have you taken acetaminophen medicines, such as Tylenol, in the past 2 weeks?",cm_act,2005200146,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
 Have you taken ibuprofen or ibuprofen-containing medicines such as Advil or Motrin in the past 2 weeks?,cm_ibp,2005200147,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
