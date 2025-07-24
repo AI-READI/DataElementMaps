@@ -18,6 +18,11 @@ mapping_sources = [
         'tag': 'RedCap',
     },
 ]
+concept_rel_man_old = {
+        'spreadsheet_name': 'template_4_adding_vocabulary-2',
+        'worksheet_name': 'concept_relationship_manual',
+        'location': 'https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125',
+}
 outputs = [
     {
         'name': 'concept_manual.csv',
@@ -69,6 +74,15 @@ def main():
     output_dfs = {}
     gc = gspread.service_account()
 
+    crm_old_spreadsheet = gc.open(concept_rel_man_old['spreadsheet_name'])
+    crm_old_worksheet = crm_old_spreadsheet.worksheet(concept_rel_man_old['worksheet_name'])
+    crm_df = get_as_dataframe(crm_old_worksheet)
+    crm_df = crm_df.iloc[1:415] # THIS WILL BREAK IF WORKSHEET CHANGES, BUT IS NECESSARY FOR GETTING RID OF
+                                #   SUBTITLE ROW AND BLANK ROWS AT BOTTOM
+    crm_df = crm_df.fillna('')
+    # check_primary_keys(crm_df)
+    cid2 = {str(row['concept_id_1']): row['concept_id_2'] for index, row in crm_df.iterrows()}
+
     for source in mapping_sources:
         if not source['process']:
             continue
@@ -93,7 +107,12 @@ def main():
 
             # Process each column in the output specification
             for col_name, source_def in columns.items():
-                if tag in source_def or 'both' in source_def:
+                if col_name == 'concept_id_2' and  ofile['name'] == 'concept_relationship_manual.csv':
+                    if tag == 'MOCA':
+                        result_data['concept_id_2'] = df['TARGET_CONCEPT_ID'].apply(lambda x: cid2.get(str(x), source_def['defaultMOCA']))
+                    else:
+                        result_data['concept_id_2'] = df['TARGET_CONCEPT_ID'].apply(lambda x: cid2.get(str(x), ''))
+                elif tag in source_def or 'both' in source_def:
                     # Use the source column from the dataframe
                     source_col = source_def[tag] if tag in source_def else source_def['both']
                     if source_col in df.columns:
@@ -137,6 +156,105 @@ def main():
         print(f"Saved {filename} with {len(df)} rows")
 
     pass
+
+
+# Check if columns can serve as primary keys
+# A primary key must have unique values and no nulls
+
+def check_primary_key(df, column_name):
+    """
+    Check if a column can serve as a primary key
+    Returns a dictionary with validation results
+    """
+    total_rows = len(df)
+    unique_count = df[column_name].nunique()
+    null_count = df[column_name].isnull().sum()
+
+    is_unique = unique_count == total_rows
+    has_no_nulls = null_count == 0
+    can_be_primary_key = is_unique and has_no_nulls
+
+    return {
+        'column': column_name,
+        'total_rows': total_rows,
+        'unique_values': unique_count,
+        'null_values': null_count,
+        'is_unique': is_unique,
+        'has_no_nulls': has_no_nulls,
+        'can_be_primary_key': can_be_primary_key
+    }
+
+
+def check_composite_primary_key(df, columns):
+    """
+    Check if a combination of columns can serve as a composite primary key
+    """
+    total_rows = len(df)
+    # Create a tuple of the column values for uniqueness check
+    combined_values = df[columns].apply(tuple, axis=1)
+    unique_count = combined_values.nunique()
+
+    # Check for nulls in any of the columns
+    null_count = df[columns].isnull().any(axis=1).sum()
+
+    is_unique = unique_count == total_rows
+    has_no_nulls = null_count == 0
+    can_be_primary_key = is_unique and has_no_nulls
+
+    return {
+        'columns': columns,
+        'total_rows': total_rows,
+        'unique_combinations': unique_count,
+        'rows_with_nulls': null_count,
+        'is_unique': is_unique,
+        'has_no_nulls': has_no_nulls,
+        'can_be_primary_key': can_be_primary_key
+    }
+
+
+def check_primary_keys(df):
+    print("=== PRIMARY KEY VALIDATION ===\n")
+
+    # Check concept_id_1 as primary key
+    print("1. Checking concept_id_1 as primary key:")
+    result1 = check_primary_key(df, 'concept_id_1')
+    for key, value in result1.items():
+        print(f"   {key}: {value}")
+
+    print(f"\n✓ concept_id_1 CAN be primary key: {result1['can_be_primary_key']}\n")
+
+    # Check [concept_name, SRC_CODE] as composite primary key
+    print("2. Checking [concept_name, SRC_CODE] as composite primary key:")
+    result2 = check_composite_primary_key(df, ['concept_name', 'SRC_CODE'])
+    for key, value in result2.items():
+        print(f"   {key}: {value}")
+
+    print(f"\n✓ [concept_name, SRC_CODE] CAN be primary key: {result2['can_be_primary_key']}\n")
+
+    # Additional analysis: Check for duplicates if not unique
+    if not result1['is_unique']:
+        print("3. Duplicate analysis for concept_id_1:")
+        duplicates = df[df.duplicated('concept_id_1', keep=False)]['concept_id_1'].value_counts()
+        print(f"   Number of duplicate values: {len(duplicates)}")
+        if len(duplicates) > 0:
+            print(f"   Most frequent duplicate: {duplicates.index[0]} (appears {duplicates.iloc[0]} times)")
+        else:
+            print("   No duplicates found (this shouldn't happen if is_unique=False)")
+
+    if not result2['is_unique']:
+        print("4. Duplicate analysis for [concept_name, SRC_CODE]:")
+        duplicates = df[df.duplicated(['concept_name', 'SRC_CODE'], keep=False)]
+        duplicate_counts = duplicates.groupby(['concept_name', 'SRC_CODE']).size().sort_values(ascending=False)
+        print(f"   Number of duplicate combinations: {len(duplicate_counts)}")
+        if len(duplicate_counts) > 0:
+            top_duplicate = duplicate_counts.index[0]
+            print(f"   Most frequent duplicate: {top_duplicate} (appears {duplicate_counts.iloc[0]} times)")
+        else:
+            print("   No duplicates found (this shouldn't happen if is_unique=False)")
+
+    print("\n=== SUMMARY ===")
+    print(f"concept_id_1 as primary key: {'✓ VALID' if result1['can_be_primary_key'] else '✗ INVALID'}")
+    print(f"[concept_name, SRC_CODE] as primary key: {'✓ VALID' if result2['can_be_primary_key'] else '✗ INVALID'}")
 
 if __name__ == "__main__":
     main()

@@ -1,18 +1,18 @@
 concept_name,concept_id_1,SRC_CODE,vocabulary_id_1,relationship_id,concept_id_2,temp name,temp domain,vocabulary_id_2,temp class,concept_code_2,temp standard,relationship_valid_start_date,relationship_valid_end_date,invalid_reason,confidence,predicate_id,mapping_source,mapping_justification,mapping_tool,Notes,source
-Trail drawings score,2005200344,trails_visuospatial_executive,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
-Time taken to do trails in seconds,2005200345,trails_visuospatial_executive_time,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
+Trail drawings score,2005200344,trails_visuospatial_executive,AIREADI-MOCA,,4165596,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
+Time taken to do trails in seconds,2005200345,trails_visuospatial_executive_time,AIREADI-MOCA,,4165596,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
 Cube drawings score,2005200346,cube_visuospatial_executive,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
 Time taken to do cube in seconds,2005200347,cube_visuospatial_executive_time,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
-Clock drawings score,2005200348,clock_visuospatial_executive,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
-Time taken to do clock in seconds,2005200349,clock_visuospatial_executive_time,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
+Clock drawings score,2005200348,clock_visuospatial_executive,AIREADI-MOCA,,21492218,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
+Time taken to do clock in seconds,2005200349,clock_visuospatial_executive_time,AIREADI-MOCA,,21492218,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
 Animal name recall task score,2005200350,naming,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
 Time in seconds to perform the animal name recall task,2005200351,naming_time,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
 Words correctly repeated (1st trial) score,2005200352,memory_trial1,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
 Time in seconds to perform the words correctly repeated (1st trial),2005200353,memory_trial1_time,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
 Words correctly repeated (2nd trial) score,2005200354,memory_trial2,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
 Time in seconds to perform the words correctly repeated (2nd trial),2005200355,memory_trial2_time,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
-Repeating digits score,2005200356,digitspan,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
-Time in seconds to perform the repeating digits task,2005200357,digitspan_time,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
+Repeating digits score,2005200356,digitspan,AIREADI-MOCA,,4153980,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
+Time in seconds to perform the repeating digits task,2005200357,digitspan_time,AIREADI-MOCA,,4153980,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
 Letter tapping score,2005200358,lettera,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
 Time in seconds to perform the letter tapping task,2005200359,lettera_time,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
 Serial 7 subtraction score,2005200360,subtraction,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
@@ -27,81 +27,81 @@ MOCA delayed recall with no cue score,2005200368,delayed_recall_with_no_cue,AIRE
 Time in seconds to perform the MOCA delayed recall with no cue task,2005200369,delayed_recall_with_no_cue_time,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
 "MOCA orientation date, month, year, day, place, city score",2005200370,moca_orientation,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
 "Time in seconds to perform the MOCA orientation date, month, year, day, place, city task",2005200371,moca_orientation_time,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
-Age in years (3-4 year span),2005200372,age_years_at_interview,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
+Age in years (3-4 year span),2005200372,age_years_at_interview,AIREADI-MOCA,,3022304,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
 "MOCA delayed recall with no cue, cue, and multiple choice cue (Combined score)",2005200373,moca_combined_mis_score,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,MOCA
-VA Letter Score - Photopic VA - OD,2005200042,viaodplog,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-VA Letter Score - Photopic VA - OS,2005200043,viaosplog,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Photopic LogMAR OD Score,2005200052,viaodpscore,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Photopic LogMAR OS Score,2005200053,viaospscore,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-LLVA Letter Score - Mesopic VA - OD,2005200056,viaodmlog,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-LLVA Letter Score - Mesopic VA - OS,2005200057,viaosmlog,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Mesopic LogMAR OD Score,2005200336,viaodmscore,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Mesopic LogMAR OS Score,2005200337,viaosmscore,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Snellen fraction - Photopic VA - OD,2005200012,viaodpsf,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Snellen fraction - Photopic VA - OS,2005200013,viaospsf,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Snellen fraction - Mesopic VA - OD,2005200054,viaodmsf,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Snellen fraction - Mesopic VA - OS,2005200055,viaosmsf,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-EVA,2005200058,1,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-"OD: Value of final correct letter - Mesopic, right eye",2005200486,mlcsodfcl,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-"OD: Number of misses prior to stopping - Mesopic, right eye",2005200487,mlcsodmiss,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-"OD: Log Contrast Sensitivity - Mesopic, right eye",2005200552,mlcsodlog,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-"OS: Value of final correct letter - Mesopic, left eye",2005200488,mlcsosfcl,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-"OS: Number of misses prior to stopping - Mesopic, left eye",2005200489,mlcsosmiss,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-"OS: Log Contrast Sensitivity - Mesopic, left eye",2005200553,mlcsoslog,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-"OD: Value of final correct letter - Photopic, right eye",2005200338,plcsodfcl,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-"OD: Number of misses prior to stopping - Photopic, right eye",2005200339,plcsodmiss,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-"OD: Log Contrast Sensitivity - Photopic, right eye",2005200155,plcsodlog,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-"OS: Value of final correct letter - Photopic, left eye",2005200340,plcsosfcl,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-"OS: Number of misses prior to stopping - Photopic, left eye",2005200341,plcsosmiss,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-"OS: Log Contrast Sensitivity - Photopic, left eye",2005200156,plcsoslog,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-OptoMed-Disc centered-CFP,2005200289,rtop_odd,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-OptoMed-Mac centered-CFP,2005200290,rtop_odm,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Eidon-UWF Central-IR,2005200291,rtei_odir,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Eidon-UWF Central-FAF,2005200292,rtei_odfaf,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Eidon-UWF Central-CFP,2005200293,rtsm_odc,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Eidon-UWF Nasal-CFP,2005200294,rtsm_odn,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Eidon-UWF Temporal-CFP,2005200295,rtsm_odt,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Eidon- Create Mosaic Image-CFP,2005200296,rtsm_odm,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Spec-ONH-RC-HR-OCT,2005200297,rtso_odo,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Spec-PPole Mac-HR-61 lines-OCT,2005200298,rtso_odp,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Spec-Mac-20x20-HS-512 lines-OCTA,2005200299,rtso_odm,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Cirrus-Mac Cube-512x128-OCT,2005200300,rtci_odm1,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Cirrus-Disc Cube-200x200-OCT,2005200301,rtci_odd1,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Cirrus-Macula 6x6-OCTA,2005200302,rtci_odm2,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Cirrus-Disc 6x6-OCTA,2005200303,rtci_odd2,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-M2-3D Wide(H) 12x9-OCT,2005200200,rtma_odw,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-M2-3D Macula 6x6-OCT,2005200201,rtma_odm,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-M2-Mac 6x6-360x360-(rep3)-OCTA,2005200202,rtma_odm1,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Triton-3D(H)+Radial 12x9-OCT,2005200203,rttr_odr,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Triton-Macula 6x6-OCTA,2005200204,rttr_odm1,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Triton-Macula 12x12-OCTA,2005200205,rttr_odm2,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-FLIO-Mac-HS,2005200304,rtfl_od,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-OptoMed-Disc centered-CFP,2005200289,rtop_osd,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-OptoMed-Mac centered-CFP,2005200290,rtop_osm,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Eidon-UWF Central-IR,2005200291,rtei_osir,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Eidon-UWF Central-FAF,2005200292,rtei_osfaf,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Eidon-UWF Central-CFP,2005200293,rtsm_osc,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Eidon-UWF Nasal-CFP,2005200294,rtsm_osn,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Eidon-UWF Temporal-CFP,2005200295,rtsm_ost,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Eidon- Create Mosaic Image-CFP,2005200296,rtsm_osm,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Spec-ONH-RC-HR-OCT,2005200297,rtso_oso,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Spec-PPole Mac-HR-61 lines-OCT,2005200298,rtso_osp,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Spec-Mac-20x20-HS-512 lines-OCTA,2005200299,rtso_osm,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Cirrus-Mac Cube-512x128-OCT,2005200300,rtci_osm1,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Cirrus-Disc Cube-200x200-OCT,2005200301,rtci_osd1,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Cirrus-Macula 6x6-OCTA,2005200302,rtci_osm2,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Cirrus-Disc 6x6-OCTA,2005200303,rtci_osd2,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-M2-3D Wide(H) 12x9-OCT,2005200200,rtma_osw,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-M2-3D Macula 6x6-OCT,2005200201,rtma_osm,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-M2-Mac 6x6-360x360-(rep3)-OCTA,2005200202,rtma_osm1,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Triton-3D(H)+Radial 12x9-OCT,2005200203,rttr_osr,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Triton-Macula 6x6-OCTA,2005200204,rttr_osm1,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Triton-Macula 12x12-OCTA,2005200205,rttr_osm2,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-FLIO-Mac-HS,2005200304,rtfl_os,AIREADI-Vision,,,,,,,,,,,,,,,,,,RedCap
-Specify other,2005200485,cmrouteot,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Specify other,2005200485,mhoccur_ot,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+VA Letter Score - Photopic VA - OD,2005200042,viaodplog,AIREADI-Vision,,21491740,,,,,,,,,,,,,,,,RedCap
+VA Letter Score - Photopic VA - OS,2005200043,viaosplog,AIREADI-Vision,,21491741,,,,,,,,,,,,,,,,RedCap
+Photopic LogMAR OD Score,2005200052,viaodpscore,AIREADI-Vision,,3036966,,,,,,,,,,,,,,,,RedCap
+Photopic LogMAR OS Score,2005200053,viaospscore,AIREADI-Vision,,3037488,,,,,,,,,,,,,,,,RedCap
+LLVA Letter Score - Mesopic VA - OD,2005200056,viaodmlog,AIREADI-Vision,,21491740,,,,,,,,,,,,,,,,RedCap
+LLVA Letter Score - Mesopic VA - OS,2005200057,viaosmlog,AIREADI-Vision,,21491741,,,,,,,,,,,,,,,,RedCap
+Mesopic LogMAR OD Score,2005200336,viaodmscore,AIREADI-Vision,,3036966,,,,,,,,,,,,,,,,RedCap
+Mesopic LogMAR OS Score,2005200337,viaosmscore,AIREADI-Vision,,3037488,,,,,,,,,,,,,,,,RedCap
+Snellen fraction - Photopic VA - OD,2005200012,viaodpsf,AIREADI-Vision,,21491744,,,,,,,,,,,,,,,,RedCap
+Snellen fraction - Photopic VA - OS,2005200013,viaospsf,AIREADI-Vision,,21491745,,,,,,,,,,,,,,,,RedCap
+Snellen fraction - Mesopic VA - OD,2005200054,viaodmsf,AIREADI-Vision,,21491744,,,,,,,,,,,,,,,,RedCap
+Snellen fraction - Mesopic VA - OS,2005200055,viaosmsf,AIREADI-Vision,,21491745,,,,,,,,,,,,,,,,RedCap
+EVA,2005200058,1,AIREADI-Vision,,21495306,,,,,,,,,,,,,,,,RedCap
+"OD: Value of final correct letter - Mesopic, right eye",2005200486,mlcsodfcl,AIREADI-Vision,,4256483,,,,,,,,,,,,,,,,RedCap
+"OD: Number of misses prior to stopping - Mesopic, right eye",2005200487,mlcsodmiss,AIREADI-Vision,,4256483,,,,,,,,,,,,,,,,RedCap
+"OD: Log Contrast Sensitivity - Mesopic, right eye",2005200552,mlcsodlog,AIREADI-Vision,,4090077,,,,,,,,,,,,,,,,RedCap
+"OS: Value of final correct letter - Mesopic, left eye",2005200488,mlcsosfcl,AIREADI-Vision,,4256483,,,,,,,,,,,,,,,,RedCap
+"OS: Number of misses prior to stopping - Mesopic, left eye",2005200489,mlcsosmiss,AIREADI-Vision,,4256483,,,,,,,,,,,,,,,,RedCap
+"OS: Log Contrast Sensitivity - Mesopic, left eye",2005200553,mlcsoslog,AIREADI-Vision,,4090077,,,,,,,,,,,,,,,,RedCap
+"OD: Value of final correct letter - Photopic, right eye",2005200338,plcsodfcl,AIREADI-Vision,,4256483,,,,,,,,,,,,,,,,RedCap
+"OD: Number of misses prior to stopping - Photopic, right eye",2005200339,plcsodmiss,AIREADI-Vision,,4256483,,,,,,,,,,,,,,,,RedCap
+"OD: Log Contrast Sensitivity - Photopic, right eye",2005200155,plcsodlog,AIREADI-Vision,,4090077,,,,,,,,,,,,,,,,RedCap
+"OS: Value of final correct letter - Photopic, left eye",2005200340,plcsosfcl,AIREADI-Vision,,4256483,,,,,,,,,,,,,,,,RedCap
+"OS: Number of misses prior to stopping - Photopic, left eye",2005200341,plcsosmiss,AIREADI-Vision,,4256483,,,,,,,,,,,,,,,,RedCap
+"OS: Log Contrast Sensitivity - Photopic, left eye",2005200156,plcsoslog,AIREADI-Vision,,4090077,,,,,,,,,,,,,,,,RedCap
+OptoMed-Disc centered-CFP,2005200289,rtop_odd,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+OptoMed-Mac centered-CFP,2005200290,rtop_odm,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Eidon-UWF Central-IR,2005200291,rtei_odir,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Eidon-UWF Central-FAF,2005200292,rtei_odfaf,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Eidon-UWF Central-CFP,2005200293,rtsm_odc,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Eidon-UWF Nasal-CFP,2005200294,rtsm_odn,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Eidon-UWF Temporal-CFP,2005200295,rtsm_odt,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Eidon- Create Mosaic Image-CFP,2005200296,rtsm_odm,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Spec-ONH-RC-HR-OCT,2005200297,rtso_odo,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Spec-PPole Mac-HR-61 lines-OCT,2005200298,rtso_odp,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Spec-Mac-20x20-HS-512 lines-OCTA,2005200299,rtso_odm,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Cirrus-Mac Cube-512x128-OCT,2005200300,rtci_odm1,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Cirrus-Disc Cube-200x200-OCT,2005200301,rtci_odd1,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Cirrus-Macula 6x6-OCTA,2005200302,rtci_odm2,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Cirrus-Disc 6x6-OCTA,2005200303,rtci_odd2,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+M2-3D Wide(H) 12x9-OCT,2005200200,rtma_odw,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+M2-3D Macula 6x6-OCT,2005200201,rtma_odm,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+M2-Mac 6x6-360x360-(rep3)-OCTA,2005200202,rtma_odm1,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Triton-3D(H)+Radial 12x9-OCT,2005200203,rttr_odr,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Triton-Macula 6x6-OCTA,2005200204,rttr_odm1,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Triton-Macula 12x12-OCTA,2005200205,rttr_odm2,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+FLIO-Mac-HS,2005200304,rtfl_od,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+OptoMed-Disc centered-CFP,2005200289,rtop_osd,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+OptoMed-Mac centered-CFP,2005200290,rtop_osm,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Eidon-UWF Central-IR,2005200291,rtei_osir,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Eidon-UWF Central-FAF,2005200292,rtei_osfaf,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Eidon-UWF Central-CFP,2005200293,rtsm_osc,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Eidon-UWF Nasal-CFP,2005200294,rtsm_osn,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Eidon-UWF Temporal-CFP,2005200295,rtsm_ost,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Eidon- Create Mosaic Image-CFP,2005200296,rtsm_osm,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Spec-ONH-RC-HR-OCT,2005200297,rtso_oso,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Spec-PPole Mac-HR-61 lines-OCT,2005200298,rtso_osp,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Spec-Mac-20x20-HS-512 lines-OCTA,2005200299,rtso_osm,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Cirrus-Mac Cube-512x128-OCT,2005200300,rtci_osm1,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Cirrus-Disc Cube-200x200-OCT,2005200301,rtci_osd1,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Cirrus-Macula 6x6-OCTA,2005200302,rtci_osm2,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Cirrus-Disc 6x6-OCTA,2005200303,rtci_osd2,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+M2-3D Wide(H) 12x9-OCT,2005200200,rtma_osw,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+M2-3D Macula 6x6-OCT,2005200201,rtma_osm,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+M2-Mac 6x6-360x360-(rep3)-OCTA,2005200202,rtma_osm1,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Triton-3D(H)+Radial 12x9-OCT,2005200203,rttr_osr,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Triton-Macula 6x6-OCTA,2005200204,rttr_osm1,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Triton-Macula 12x12-OCTA,2005200205,rttr_osm2,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+FLIO-Mac-HS,2005200304,rtfl_os,AIREADI-Vision,,45885156,,,,,,,,,,,,,,,,RedCap
+Specify other,2005200485,cmrouteot,AIREADI,,"45883155",,,,,,,,,,,,,,,,RedCap
+Specify other,2005200485,mhoccur_ot,AIREADI,,"45883155",,,,,,,,,,,,,,,,RedCap
 "Have you had anything to eat or drink in the last six hours, including coffee or tea with milk or sugar or any other drink other than water?",2005200629,paate_6hr,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Physical Activity Monitor was worn on which wrist?,2005200206,dvamwenhand,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+Physical Activity Monitor was worn on which wrist?,2005200206,dvamwenhand,AIREADI,,40768904,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_mi,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_cvdot,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_strk,AIREADI,,,,,,,,,,,,,,,,,,RedCap
@@ -110,26 +110,26 @@ Has a doctor or other healthcare professional ever told you that you have/had...
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_ua,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_ear,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_pdr,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"Other heart issues (Examples: pacemaker, heart valve disease, open heart surgery)",2005200627,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Stroke,2005200628,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"Circulation problems (Examples: arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins)",2005200015,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Kidney problems,2005200017,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+"Other heart issues (Examples: pacemaker, heart valve disease, open heart surgery)",2005200627,1,AIREADI,,40770062,,,,,,,,,,,,,,,,RedCap
+Stroke,2005200628,1,AIREADI,,40770062,,,,,,,,,,,,,,,,RedCap
+"Circulation problems (Examples: arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins)",2005200015,1,AIREADI,,40770062,,,,,,,,,,,,,,,,RedCap
+Kidney problems,2005200017,1,AIREADI,,45881016,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhterm_dm1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Elevated A1C levels (elevated blood sugars),2005200547,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Started Timestamp,2005200558,cesstartts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Completed Timestamp,2005200559,cescmpts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Started Timestamp,2005200558,icfsvyts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Completed Timestamp,2005200559,icfcmpts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Started Timestamp,2005200558,dmgstartts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Completed Timestamp,2005200559,dmgcmpts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Device returned,2005200589,dcvgmenyn,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Device returned,2005200589,dvenvenyn,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Started Timestamp,2005200558,dmlstartts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Completed Timestamp,2005200559,dmlcmpts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Started Timestamp,2005200558,dietstartts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Completed Timestamp,2005200559,dietcmpts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Started Timestamp,2005200558,faqstartts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Completed Timestamp,2005200559,faqcmpts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+Elevated A1C levels (elevated blood sugars),2005200547,1,AIREADI,,4152671,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,cesstartts,AIREADI,,4294901,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,cescmpts,AIREADI,,44788181,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,icfsvyts,AIREADI,,4294901,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,icfcmpts,AIREADI,,44788181,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,dmgstartts,AIREADI,,4294901,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,dmgcmpts,AIREADI,,44788181,,,,,,,,,,,,,,,,RedCap
+Device returned,2005200589,dcvgmenyn,AIREADI,,44811193,,,,,,,,,,,,,,,,RedCap
+Device returned,2005200589,dvenvenyn,AIREADI,,44811193,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,dmlstartts,AIREADI,,4294901,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,dmlcmpts,AIREADI,,44788181,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,dietstartts,AIREADI,,4294901,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,dietcmpts,AIREADI,,44788181,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,faqstartts,AIREADI,,4294901,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,faqcmpts,AIREADI,,44788181,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_circ,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_lbp,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_pd,AIREADI,,,,,,,,,,,,,,,,,,RedCap
@@ -143,7 +143,7 @@ Neurocognitive disorder please specify,2005200455,mhoccur_cnsot,AIREADI,,,,,,,,,
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_ra,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_oa,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_ca,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Other cancer type please (specify),2005200459,mhoccur_cnrot,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+Other cancer type please (specify),2005200459,mhoccur_cnrot,AIREADI,,45884514,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_plm,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_gi,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_rnl,AIREADI,,,,,,,,,,,,,,,,,,RedCap
@@ -153,25 +153,25 @@ Has a doctor or other healthcare professional ever told you that you have/had...
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_crt,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_rvo,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_ded,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Started Timestamp,2005200558,mhstartts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Completed Timestamp,2005200559,mhcmpts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Started Timestamp,2005200558,viastartts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Completed Timestamp,2005200559,viacmpts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Started Timestamp,2005200558,paidstartts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Completed Timestamp,2005200559,paidcmpts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Started Timestamp,2005200558,preconstartts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Completed Timestamp,2005200559,preconcmpts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Started Timestamp,2005200558,pxfistartts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Completed Timestamp,2005200559,pxsficmpts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,mhstartts,AIREADI,,4294901,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,mhcmpts,AIREADI,,44788181,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,viastartts,AIREADI,,4294901,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,viacmpts,AIREADI,,44788181,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,paidstartts,AIREADI,,4294901,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,paidcmpts,AIREADI,,44788181,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,preconstartts,AIREADI,,4294901,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,preconcmpts,AIREADI,,44788181,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,pxfistartts,AIREADI,,4294901,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,pxsficmpts,AIREADI,,44788181,,,,,,,,,,,,,,,,RedCap
 PhenX MetaData,2005200102,px270301_metadata,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Started Timestamp,2005200558,pxnestartts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Completed Timestamp,2005200559,pxnecmpts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,pxnestartts,AIREADI,,4294901,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,pxnecmpts,AIREADI,,44788181,,,,,,,,,,,,,,,,RedCap
 PhenX MetaData,2005200102,px291201_metadata,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Started Timestamp,2005200558,pxrdcmpts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Completed Timestamp,2005200559,pxrdstartts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,pxrdcmpts,AIREADI,,4294901,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,pxrdstartts,AIREADI,,44788181,,,,,,,,,,,,,,,,RedCap
 PhenX MetaData,2005200102,px281501_metadata,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Started Timestamp,2005200558,pxsdohstartts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Completed Timestamp,2005200559,pxsdohcmpts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,pxsdohstartts,AIREADI,,4294901,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,pxsdohcmpts,AIREADI,,44788181,,,,,,,,,,,,,,,,RedCap
 PhenX MetaData,2005200102,px270201_metadata,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 PhenX MetaData,2005200102,px011002_metadata,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 PhenX MetaData,2005200102,px280301_metadata,AIREADI,,,,,,,,,,,,,,,,,,RedCap
@@ -180,45 +180,45 @@ PhenX MetaData,2005200102,px280801_metadata,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 PhenX MetaData,2005200102,px11502_metadata,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 PhenX MetaData,2005200102,px270101_metadata,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 PhenX MetaData,2005200102,px280901_metadata,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Started Timestamp,2005200558,recstartts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Completed Timestamp,2005200559,reccmpts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,recstartts,AIREADI,,4294901,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,reccmpts,AIREADI,,44788181,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mh_a1c,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhterm_dm2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhterm_predm,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Started Timestamp,2005200558,scrstartts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Completed Timestamp,2005200559,scrcmpts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Started Timestamp,2005200558,sustartts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Completed Timestamp,2005200559,sucmpts,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"What is your ancestry or ethnic origin?(Examples: Italian, Jamaican, African American, Cambodian, Cape Verdean, Cherokee, Navajo, Nez Pearce, Norwegian, Dominican, French Canadian, Haitian, Korean, Lebanese, Polish, Nigerian, Mexican, Taiwanese, Ukrainian, and so on.)",2005200557,ancestry,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Activity monitor returned?,2005200555,dvamwenyn,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Less than 30 minutes daily less than 3 days a week,2005200313,5,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-1 time or less,2005200243,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-5000 miles or less,2005200271,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"5001 to 10,000 miles",2005200272,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"10,001 to 15.000 miles",2005200273,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"15,001 to 20,000 miles",2005200274,4,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"More than 20,000 miles",2005200275,5,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Right Foot - Felt:,2005200159,mssrffl,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Right Foot - Tested:,2005200160,mssrftt,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Left Foot - Felt:,2005200161,msslffl,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Left Foot - Tested:,2005200162,msslftt,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Could not get an appointment,2005200248,4,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-How many hours since you last ate? (number of hours),2005200151,paate,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-There are no streets or roads in my neighborhood,2005200269,88,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-There are no streets or roads in my neighborhood,2005200269,88,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-There is NO place,2005200256,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-There is MORE THAN ONE place,2005200257,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Does not go to one place most often,2005200261,6,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Do you inject insulin to control your blood glucose levels?,2005200549,cmtrt_insln,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"Do you use lifestyle changes to control your A1C and blood glucose levels? Examples: regular exercise, avoiding sugary foods and beverages, eating a balanced diet with lots of vegetables, sticking to a consistent eating schedule",2005200004,cmtrt_lfst,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-More than 20 years,2005200211,98,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-More than 50 years,2005200212,98,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"How many times a week did you eat beans (like pinto or black beans), chicken, or fish?",2005200059,diet5,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-How many times a week did you eat regular snack chips or crackers (not low-fat)?,2005200060,diet6,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-How many times a week did you eat desserts and other sweets (not the low-fat kind)?,2005200061,diet7,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"How much margarine, butter, or meat fat do you use to season vegetables or put on potatoes, bread or corn?",2005200062,diet8,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-How many servings of fruit juice did you drink each day?,2005200063,diet9,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Diet score,2005200064,dietscore,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,scrstartts,AIREADI,,4294901,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,scrcmpts,AIREADI,,44788181,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,sustartts,AIREADI,,4294901,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,sucmpts,AIREADI,,44788181,,,,,,,,,,,,,,,,RedCap
+"What is your ancestry or ethnic origin?(Examples: Italian, Jamaican, African American, Cambodian, Cape Verdean, Cherokee, Navajo, Nez Pearce, Norwegian, Dominican, French Canadian, Haitian, Korean, Lebanese, Polish, Nigerian, Mexican, Taiwanese, Ukrainian, and so on.)",2005200557,ancestry,AIREADI,,45880188,,,,,,,,,,,,,,,,RedCap
+Activity monitor returned?,2005200555,dvamwenyn,AIREADI,,42528781,,,,,,,,,,,,,,,,RedCap
+Less than 30 minutes daily less than 3 days a week,2005200313,5,AIREADI,,27789000,,,,,,,,,,,,,,,,RedCap
+1 time or less,2005200243,0,AIREADI,,45882431,,,,,,,,,,,,,,,,RedCap
+5000 miles or less,2005200271,1,AIREADI,,4151655,,,,,,,,,,,,,,,,RedCap
+"5001 to 10,000 miles",2005200272,2,AIREADI,,4151655,,,,,,,,,,,,,,,,RedCap
+"10,001 to 15.000 miles",2005200273,3,AIREADI,,4151655,,,,,,,,,,,,,,,,RedCap
+"15,001 to 20,000 miles",2005200274,4,AIREADI,,4151655,,,,,,,,,,,,,,,,RedCap
+"More than 20,000 miles",2005200275,5,AIREADI,,4151655,,,,,,,,,,,,,,,,RedCap
+Right Foot - Felt:,2005200159,mssrffl,AIREADI,,45882337,,,,,,,,,,,,,,,,RedCap
+Right Foot - Tested:,2005200160,mssrftt,AIREADI,,45882337,,,,,,,,,,,,,,,,RedCap
+Left Foot - Felt:,2005200161,msslffl,AIREADI,,45876849,,,,,,,,,,,,,,,,RedCap
+Left Foot - Tested:,2005200162,msslftt,AIREADI,,45876849,,,,,,,,,,,,,,,,RedCap
+Could not get an appointment,2005200248,4,AIREADI,,1989310,,,,,,,,,,,,,,,,RedCap
+How many hours since you last ate? (number of hours),2005200151,paate,AIREADI,,4200039,,,,,,,,,,,,,,,,RedCap
+There are no streets or roads in my neighborhood,2005200269,88,AIREADI,,4030757        ,,,,,,,,,,,,,,,,RedCap
+There are no streets or roads in my neighborhood,2005200269,88,AIREADI,,4030757        ,,,,,,,,,,,,,,,,RedCap
+There is NO place,2005200256,0,AIREADI,,3198235,,,,,,,,,,,,,,,,RedCap
+There is MORE THAN ONE place,2005200257,2,AIREADI,,3198236,,,,,,,,,,,,,,,,RedCap
+Does not go to one place most often,2005200261,6,AIREADI,,4192764,,,,,,,,,,,,,,,,RedCap
+Do you inject insulin to control your blood glucose levels?,2005200549,cmtrt_insln,AIREADI,,440922,,,,,,,,,,,,,,,,RedCap
+"Do you use lifestyle changes to control your A1C and blood glucose levels? Examples: regular exercise, avoiding sugary foods and beverages, eating a balanced diet with lots of vegetables, sticking to a consistent eating schedule",2005200004,cmtrt_lfst,AIREADI,,607008,,,,,,,,,,,,,,,,RedCap
+More than 20 years,2005200211,98,AIREADI,,903655,,,,,,,,,,,,,,,,RedCap
+More than 50 years,2005200212,98,AIREADI,,4010847,,,,,,,,,,,,,,,,RedCap
+"How many times a week did you eat beans (like pinto or black beans), chicken, or fish?",2005200059,diet5,AIREADI,,4025583,,,,,,,,,,,,,,,,RedCap
+How many times a week did you eat regular snack chips or crackers (not low-fat)?,2005200060,diet6,AIREADI,,4044783,,,,,,,,,,,,,,,,RedCap
+How many times a week did you eat desserts and other sweets (not the low-fat kind)?,2005200061,diet7,AIREADI,,4025584,,,,,,,,,,,,,,,,RedCap
+"How much margarine, butter, or meat fat do you use to season vegetables or put on potatoes, bread or corn?",2005200062,diet8,AIREADI,,3663241,,,,,,,,,,,,,,,,RedCap
+How many servings of fruit juice did you drink each day?,2005200063,diet9,AIREADI,,4025566,,,,,,,,,,,,,,,,RedCap
+Diet score,2005200064,dietscore,AIREADI,,4021174,,,,,,,,,,,,,,,,RedCap
 "In an average week, how many days per week do you normally drive? (number of days)",2005200136,dri1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 About how many miles did you personally drive during the past 12 months in all motorized vehicles?,2005200137,dri2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 There is so much traffic on the streets that it makes it difficult or unpleasant to walk in my neighborhood. Would you say that you...,2005200113,pxne8,AIREADI,,,,,,,,,,,,,,,,,,RedCap
@@ -285,16 +285,16 @@ How often have you gotten into an argument or a fight about something racist tha
 How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In the Past Year?,2005200541,pxrd52,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In your entire life?,2005200542,pxrd53,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 "How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",2005200543,pxrd54,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Insurance through a current or former employer or union (of yours or another family member's). This would include COBRA coverage.,2005200081,pxhic1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"Insurance purchased directly from an insurance company (by you or another family member). This would include coverage purchased through an exchange or marketplace, such as HealthCare.gov",2005200082,pxhic2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"Medicare, for people 65 and older, or people with certain disabilities.",2005200083,pxhic3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"Medicaid, Medical Assistance (MA), the Children's Health Insurance Program (CHIP), or any kind of state or government-sponsored assistance. plan based on income or a disability.",2005200084,pxhic4,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"TRICARE or other military health care, including VA health care.",2005200085,pxhic5,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Indian Health Service.,2005200086,pxhic6,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Any other type of health insurance coverage or health coverage plan,2005200087,pxhic7,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"Does this mean you currently have no health insurance or health coverage plan? In answering this question, please exclude plans that pay for only one type of service (such as, nursing home care, accidents, family planning, or dental care) and plans that only provide extra cash when hospitalized).",2005200088,pxhic8,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-What type of health insurance do you have?,2005200089,pxhic9,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-About how long has it been since you last saw a doctor or other health care professional about your health?,2005200090,pxahc1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+Insurance through a current or former employer or union (of yours or another family member's). This would include COBRA coverage.,2005200081,pxhic1,AIREADI,,40765798,,,,,,,,,,,,,,,,RedCap
+"Insurance purchased directly from an insurance company (by you or another family member). This would include coverage purchased through an exchange or marketplace, such as HealthCare.gov",2005200082,pxhic2,AIREADI,,40765798,,,,,,,,,,,,,,,,RedCap
+"Medicare, for people 65 and older, or people with certain disabilities.",2005200083,pxhic3,AIREADI,,40765798,,,,,,,,,,,,,,,,RedCap
+"Medicaid, Medical Assistance (MA), the Children's Health Insurance Program (CHIP), or any kind of state or government-sponsored assistance. plan based on income or a disability.",2005200084,pxhic4,AIREADI,,40765798,,,,,,,,,,,,,,,,RedCap
+"TRICARE or other military health care, including VA health care.",2005200085,pxhic5,AIREADI,,40765798,,,,,,,,,,,,,,,,RedCap
+Indian Health Service.,2005200086,pxhic6,AIREADI,,40765798,,,,,,,,,,,,,,,,RedCap
+Any other type of health insurance coverage or health coverage plan,2005200087,pxhic7,AIREADI,,40765798,,,,,,,,,,,,,,,,RedCap
+"Does this mean you currently have no health insurance or health coverage plan? In answering this question, please exclude plans that pay for only one type of service (such as, nursing home care, accidents, family planning, or dental care) and plans that only provide extra cash when hospitalized).",2005200088,pxhic8,AIREADI,,40765798,,,,,,,,,,,,,,,,RedCap
+What type of health insurance do you have?,2005200089,pxhic9,AIREADI,,40765798,,,,,,,,,,,,,,,,RedCap
+About how long has it been since you last saw a doctor or other health care professional about your health?,2005200090,pxahc1,AIREADI,,3655035,,,,,,,,,,,,,,,,RedCap
 "Was this a wellness visit, physical, or general purpose check-up?",2005200091,pxahc2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 "About how long has it been since you last saw a doctor or other health professional for a wellness visit, physical, or general purpose check-up?",2005200092,pxahc3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Is there a place that you USUALLY go to if you are sick and need health care? ,2005200093,pxahc4,AIREADI,,,,,,,,,,,,,,,,,,RedCap
@@ -304,226 +304,226 @@ Is there a place that you USUALLY go to if you are sick and need health care? ,
 "During the past 12 months, have you been hospitalized overnight? (Do not include an overnight stay in the emergency room)",2005200097,pxahc8,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 "During the past 12 months, have you DELAYED getting medical care because of the cost?",2005200098,pxahc9,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 "During the past 12 months, was there any time when you needed medical care, but DID NOT GET IT because of the cost?",2005200099,pxahc10,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"Do you take pills to control your A1C and blood glucose levels? Examples: Metformin (Glucophage, Glumetza, Fortamet, Riomet), Glucotrol, Amaryl, DiaBeta, Blynase PresTab, Micronase, Actos, Avandia, Precose, Glyset, Prandin, Starlix, Januvia, Onglyza, Tradjenta, Nesina, Invokana, Farxiga, Jardiance, Welchol, and Cyclocet",2005200548,cmtrt_a1c,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"Do you use other injections to control your blood glucose levels?  Examples: Victoza, Ozempic, Symlin, Tanzeum, and Trulicity",2005200550,cmtrt_glcs,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Have you had any beer or ale in the past year?,2005200024,subrkncf,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"During the average week, how many 12 oz. bottles or cans of beer do you usually drink? (Number of bottles or cans per week)",2005200025,subrdosfr,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Have you had any wine in the past year?,2005200026,suwnkncf,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"During the average week, how many 5 oz. glasses of wine do you usually drink?  The average wine bottle has 5 servings. (Number of glasses per week)",2005200027,suwndosfr,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"Have you had any liquor in the past year, such as brandy, whiskey, vodka, gin, schnapps, cocktails, or liqueurs?",2005200028,sulqkncf,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"During the average week, how many 1.5 oz. of liquor do you usually drink, either as shots or in mixed cocktails? (Number of drinks per week)",2005200029,sulqdosfr,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"Do you drive after having a drink, even if it is only one drink?",2005200030,sualcdrv,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Have you ever vaped or used e-cigarettes?,2005200031,suvpkncf1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-At what age did you start vaping or using e-cigarettes? (Age started - years old),2005200032,suvpstage,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Do you vape or use e-cigarettes now?,2005200033,suvpcdur,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-How many total years have you vaped or used e-cigarettes?,2005200034,suvptoage,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+"Do you take pills to control your A1C and blood glucose levels? Examples: Metformin (Glucophage, Glumetza, Fortamet, Riomet), Glucotrol, Amaryl, DiaBeta, Blynase PresTab, Micronase, Actos, Avandia, Precose, Glyset, Prandin, Starlix, Januvia, Onglyza, Tradjenta, Nesina, Invokana, Farxiga, Jardiance, Welchol, and Cyclocet",2005200548,cmtrt_a1c,AIREADI,,4016042,,,,,,,,,,,,,,,,RedCap
+"Do you use other injections to control your blood glucose levels?  Examples: Victoza, Ozempic, Symlin, Tanzeum, and Trulicity",2005200550,cmtrt_glcs,AIREADI,,36714369,,,,,,,,,,,,,,,,RedCap
+Have you had any beer or ale in the past year?,2005200024,subrkncf,AIREADI,,4238768,,,,,,,,,,,,,,,,RedCap
+"During the average week, how many 12 oz. bottles or cans of beer do you usually drink? (Number of bottles or cans per week)",2005200025,subrdosfr,AIREADI,,40771103,,,,,,,,,,,,,,,,RedCap
+Have you had any wine in the past year?,2005200026,suwnkncf,AIREADI,,4238768,,,,,,,,,,,,,,,,RedCap
+"During the average week, how many 5 oz. glasses of wine do you usually drink?  The average wine bottle has 5 servings. (Number of glasses per week)",2005200027,suwndosfr,AIREADI,,40771103,,,,,,,,,,,,,,,,RedCap
+"Have you had any liquor in the past year, such as brandy, whiskey, vodka, gin, schnapps, cocktails, or liqueurs?",2005200028,sulqkncf,AIREADI,,4238768,,,,,,,,,,,,,,,,RedCap
+"During the average week, how many 1.5 oz. of liquor do you usually drink, either as shots or in mixed cocktails? (Number of drinks per week)",2005200029,sulqdosfr,AIREADI,,40771103,,,,,,,,,,,,,,,,RedCap
+"Do you drive after having a drink, even if it is only one drink?",2005200030,sualcdrv,AIREADI,,4038703,,,,,,,,,,,,,,,,RedCap
+Have you ever vaped or used e-cigarettes?,2005200031,suvpkncf1,AIREADI,,903655,,,,,,,,,,,,,,,,RedCap
+At what age did you start vaping or using e-cigarettes? (Age started - years old),2005200032,suvpstage,AIREADI,,903655,,,,,,,,,,,,,,,,RedCap
+Do you vape or use e-cigarettes now?,2005200033,suvpcdur,AIREADI,,903655,,,,,,,,,,,,,,,,RedCap
+How many total years have you vaped or used e-cigarettes?,2005200034,suvptoage,AIREADI,,903655,,,,,,,,,,,,,,,,RedCap
 "When you vaped or used e-cigarettes, approximately how many days in a typical week would you use it?",2005200035,suvpdosfr,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"Have you ever used marijuana (cannabis)? (This includes smoking marijuana, using cannabis concentrates, and edibles.)",2005200036,sumrjkncf,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+"Have you ever used marijuana (cannabis)? (This includes smoking marijuana, using cannabis concentrates, and edibles.)",2005200036,sumrjkncf,AIREADI,,37116660,,,,,,,,,,,,,,,,RedCap
 Do you use marijuana now?,2005200473,sumrjcdur,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-In what form do you usually use marijuana?  (check all that apply),2005200037,sumrjtrt,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-How many total years have you used marijuana?,2005200038,sumrjceddur,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"When you used marijuana, approximately how many days in a typical week would you use it?",2005200039,sumrjfr,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Medication Name,2005200481,cmname,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Specify other,2005200485,odristate,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Do you speak another language at home?,2005200480,pxep2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Was your mother or father diagnosed with Type II Diabetes?,2005200463,fh_dm2ptsp,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"If yes, please check all that apply: brother, sister, half-sister, half-brother",2005200464,fh_dm2sbsp,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"Have you been diagnosed with any conditions not listed above? (any condition, not just eyes)",2005200470,mhoccur_yn,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Feeling depressed when you think about living with diabetes,2005200045,paid_dpr,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Method used to complete form,2005200011,viaomthd,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Some or a little of the time (1-2 days),2005200142,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-All of the time (5-7 days),2005200144,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Some or a little of the time (1-2 days),2005200142,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-All of the time (5-7 days),2005200144,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Some or a little of the time (1-2 days),2005200142,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-All of the time (5-7 days),2005200144,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Some or a little of the time (1-2 days),2005200142,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-All of the time (5-7 days),2005200144,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Rarely or none of the time (< 1 day),2005200141,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Some or a little of the time (1-2 days),2005200142,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2005200143,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-All of the time (5-7 days),2005200144,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Some or a little of the time (1-2 days),2005200142,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-All of the time (5-7 days),2005200144,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Some or a little of the time (1-2 days),2005200142,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-All of the time (5-7 days),2005200144,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Rarely or none of the time (< 1 day),2005200141,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Some or a little of the time (1-2 days),2005200142,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2005200143,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-All of the time (5-7 days),2005200144,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Some or a little of the time (1-2 days),2005200142,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-All of the time (5-7 days),2005200144,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Some or a little of the time (1-2 days),2005200142,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-All of the time (5-7 days),2005200144,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-RxNorm (assign after visit),2005200220,cmtrt,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"Unit (Record the dose unit of the dose of concomitant medication/treatment/therapy taken (e.g., mg.)).",2005200221,cmdosu,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Puff,2005200222,13,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"In a typical week, how often do you engage in vigorous exercise? (Examples: hiking, jogging at 6 mph, shoveling, carrying heavy loads, bicycling fast (14-16 mph), playing basketball, playing soccer, playing tennis, or any activity during which you cannot say more than a few words without taking a breath)",2005200277,dmlvex,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"How often would you say that you engage in daily home exercise? (Examples: stretching, calisthenics, or yoga)",2005200278,dmlhex,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"When reflecting on your typical eating habits, which of the following options best describes how often you consume simple sugars?",2005200305,dmlsugar,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"In a typical day, how often do you consume whole grains? (Examples: include whole wheat, brown bread, or brown rice).",2005200306,dmlgrain,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"How often would you say that you engage in diabetes health education? (Examples: consulting with a dietician, attending support groups, reading books on diabetes, using diabetes-focused websites, watching TV shows on health, or using health-focused apps on your phone or tablet)",2005200307,dmledu,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-How often do you inspect your feet?,2005200308,dmlfeet,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Which of the following options best describes you with respect to physician care and medications?,2005200309,dmlmd,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-At least 30 minutes daily 3 or more days a week,2005200312,10,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"Active (stairs, walks, housework)",2005200314,10,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Somewhat active,2005200315,5,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"Not Active (TV, computer, phone, use lifts)",2005200316,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Doing daily or almost daily,2005200317,10,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Irregular; once or twice a week,2005200318,5,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Rarely eat sweets,2005200319,10,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Occasionally eat sweets,2005200320,5,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Frequently eat sweets,2005200321,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Usually eat whole grain,2005200322,10,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Rarely eat whole grain,2005200323,5,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Usually eat white bread or white rice,2005200324,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Eat small portions and avoid second servings,2005200325,10,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Occasionally limit portions,2005200326,5,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Rarely or none; eat at buffets and restaurants with large portions,2005200327,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-4-5 servings or pieces of fruits and raw vegetables per day,2005200328,10,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-1-3 servings or pieces per day,2005200329,5,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"Regularly; at least monthly (dietician, support groups, books, websites, apps)",2005200330,10,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Occasionally; every 2-3 months,2005200331,5,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-3 or more visits a year to the same doctor. Regular with medicines.,2005200332,10,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-1-2 visits a year. Forgetting medicines frequently.,2005200333,5,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Rarely or none. Not taking 1 or more recommended medicines,2005200334,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Less than 1 time,2005200238,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-1 - 3 times,2005200239,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-5 or more,2005200240,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-2 or less,2005200241,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-5 or more,2005200240,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-2 or less,2005200241,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Less than 1,2005200242,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Less than 1 time,2005200238,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-1 time or less,2005200243,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Less than 1,2005200242,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Did the subject complete the study?,2005200192,eos_ds,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Did not meet Inclusion/Exclusion criteria,2005200280,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Withdrawal by Subject,2005200281,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Geographic Inaccessibility,2005200282,4,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Currently enrolled in a conflicting study,2005200283,6,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Protocol Deviation,2005200284,9,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Individual was under age 40,2005200285,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Individual is not needed at this time for recruitment goals,2005200286,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Individual had Type 1 Diabetes,2005200287,4,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-In Person (Baseline),2005200288,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Drivers license state,2005200138,dristate,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Were either of your parents diagnosed with Type II Diabetes?,2005200018,fh_dm2pt,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a sibling been diagnosed with Type II Diabetes?,2005200019,fh_dm2sb,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-White Blood Cells (WBC) - x10E3/µL,2005200182,lbscat_wbc,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Red Blood Cells (RBC) - x10E6/µL,2005200183,lbscat_rbc,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+In what form do you usually use marijuana?  (check all that apply),2005200037,sumrjtrt,AIREADI,,37116660,,,,,,,,,,,,,,,,RedCap
+How many total years have you used marijuana?,2005200038,sumrjceddur,AIREADI,,37116660,,,,,,,,,,,,,,,,RedCap
+"When you used marijuana, approximately how many days in a typical week would you use it?",2005200039,sumrjfr,AIREADI,,37116660,,,,,,,,,,,,,,,,RedCap
+Medication Name,2005200481,cmname,AIREADI,,1031609,,,,,,,,,,,,,,,,RedCap
+Specify other,2005200485,odristate,AIREADI,,"45883155",,,,,,,,,,,,,,,,RedCap
+Do you speak another language at home?,2005200480,pxep2,AIREADI,,37079013,,,,,,,,,,,,,,,,RedCap
+Was your mother or father diagnosed with Type II Diabetes?,2005200463,fh_dm2ptsp,AIREADI,,4334340,,,,,,,,,,,,,,,,RedCap
+"If yes, please check all that apply: brother, sister, half-sister, half-brother",2005200464,fh_dm2sbsp,AIREADI,,45880130,,,,,,,,,,,,,,,,RedCap
+"Have you been diagnosed with any conditions not listed above? (any condition, not just eyes)",2005200470,mhoccur_yn,AIREADI,,46234759,,,,,,,,,,,,,,,,RedCap
+Feeling depressed when you think about living with diabetes,2005200045,paid_dpr,AIREADI,,40546087,,,,,,,,,,,,,,,,RedCap
+Method used to complete form,2005200011,viaomthd,AIREADI,,4129438,,,,,,,,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,45883771,,,,,,,,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),2005200142,1,AIREADI,,45879198,,,,,,,,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,45879593,,,,,,,,,,,,,,,,RedCap
+All of the time (5-7 days),2005200144,3,AIREADI,,45879199,,,,,,,,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,45883771,,,,,,,,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),2005200142,1,AIREADI,,45879198,,,,,,,,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,45879593,,,,,,,,,,,,,,,,RedCap
+All of the time (5-7 days),2005200144,3,AIREADI,,45879199,,,,,,,,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,45883771,,,,,,,,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),2005200142,1,AIREADI,,45879198,,,,,,,,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,45879593,,,,,,,,,,,,,,,,RedCap
+All of the time (5-7 days),2005200144,3,AIREADI,,45879199,,,,,,,,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,45883771,,,,,,,,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),2005200142,1,AIREADI,,45879198,,,,,,,,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,45879593,,,,,,,,,,,,,,,,RedCap
+All of the time (5-7 days),2005200144,3,AIREADI,,45879199,,,,,,,,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),2005200141,3,AIREADI,,45883771,,,,,,,,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),2005200142,2,AIREADI,,45879198,,,,,,,,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2005200143,1,AIREADI,,45879593,,,,,,,,,,,,,,,,RedCap
+All of the time (5-7 days),2005200144,0,AIREADI,,45879199,,,,,,,,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,45883771,,,,,,,,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),2005200142,1,AIREADI,,45879198,,,,,,,,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,45879593,,,,,,,,,,,,,,,,RedCap
+All of the time (5-7 days),2005200144,3,AIREADI,,45879199,,,,,,,,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,45883771,,,,,,,,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),2005200142,1,AIREADI,,45879198,,,,,,,,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,45879593,,,,,,,,,,,,,,,,RedCap
+All of the time (5-7 days),2005200144,3,AIREADI,,45879199,,,,,,,,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),2005200141,3,AIREADI,,45883771,,,,,,,,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),2005200142,2,AIREADI,,45879198,,,,,,,,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2005200143,1,AIREADI,,45879593,,,,,,,,,,,,,,,,RedCap
+All of the time (5-7 days),2005200144,0,AIREADI,,45879199,,,,,,,,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,45883771,,,,,,,,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),2005200142,1,AIREADI,,45879198,,,,,,,,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,45879593,,,,,,,,,,,,,,,,RedCap
+All of the time (5-7 days),2005200144,3,AIREADI,,45879199,,,,,,,,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,45883771,,,,,,,,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),2005200142,1,AIREADI,,45879198,,,,,,,,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,45879593,,,,,,,,,,,,,,,,RedCap
+All of the time (5-7 days),2005200144,3,AIREADI,,45879199,,,,,,,,,,,,,,,,RedCap
+RxNorm (assign after visit),2005200220,cmtrt,AIREADI,,19402933,,,,,,,,,,,,,,,,RedCap
+"Unit (Record the dose unit of the dose of concomitant medication/treatment/therapy taken (e.g., mg.)).",2005200221,cmdosu,AIREADI,,45890999,,,,,,,,,,,,,,,,RedCap
+Puff,2005200222,13,AIREADI,,45758813        ,,,,,,,,,,,,,,,,RedCap
+"In a typical week, how often do you engage in vigorous exercise? (Examples: hiking, jogging at 6 mph, shoveling, carrying heavy loads, bicycling fast (14-16 mph), playing basketball, playing soccer, playing tennis, or any activity during which you cannot say more than a few words without taking a breath)",2005200277,dmlvex,AIREADI,,4248672,,,,,,,,,,,,,,,,RedCap
+"How often would you say that you engage in daily home exercise? (Examples: stretching, calisthenics, or yoga)",2005200278,dmlhex,AIREADI,,4037807,,,,,,,,,,,,,,,,RedCap
+"When reflecting on your typical eating habits, which of the following options best describes how often you consume simple sugars?",2005200305,dmlsugar,AIREADI,,46272478,,,,,,,,,,,,,,,,RedCap
+"In a typical day, how often do you consume whole grains? (Examples: include whole wheat, brown bread, or brown rice).",2005200306,dmlgrain,AIREADI,,46272478,,,,,,,,,,,,,,,,RedCap
+"How often would you say that you engage in diabetes health education? (Examples: consulting with a dietician, attending support groups, reading books on diabetes, using diabetes-focused websites, watching TV shows on health, or using health-focused apps on your phone or tablet)",2005200307,dmledu,AIREADI,,4135171,,,,,,,,,,,,,,,,RedCap
+How often do you inspect your feet?,2005200308,dmlfeet,AIREADI,,608849,,,,,,,,,,,,,,,,RedCap
+Which of the following options best describes you with respect to physician care and medications?,2005200309,dmlmd,AIREADI,,4251597,,,,,,,,,,,,,,,,RedCap
+At least 30 minutes daily 3 or more days a week,2005200312,10,AIREADI,,45876950,,,,,,,,,,,,,,,,RedCap
+"Active (stairs, walks, housework)",2005200314,10,AIREADI,,45883573,,,,,,,,,,,,,,,,RedCap
+Somewhat active,2005200315,5,AIREADI,,1990229,,,,,,,,,,,,,,,,RedCap
+"Not Active (TV, computer, phone, use lifts)",2005200316,0,AIREADI,,1990276,,,,,,,,,,,,,,,,RedCap
+Doing daily or almost daily,2005200317,10,AIREADI,,45879676,,,,,,,,,,,,,,,,RedCap
+Irregular; once or twice a week,2005200318,5,AIREADI,,42530680,,,,,,,,,,,,,,,,RedCap
+Rarely eat sweets,2005200319,10,AIREADI,,45876672,,,,,,,,,,,,,,,,RedCap
+Occasionally eat sweets,2005200320,5,AIREADI,,45879593,,,,,,,,,,,,,,,,RedCap
+Frequently eat sweets,2005200321,0,AIREADI,,45883983        ,,,,,,,,,,,,,,,,RedCap
+Usually eat whole grain,2005200322,10,AIREADI,,45882948,,,,,,,,,,,,,,,,RedCap
+Rarely eat whole grain,2005200323,5,AIREADI,,45876672,,,,,,,,,,,,,,,,RedCap
+Usually eat white bread or white rice,2005200324,0,AIREADI,,45882948,,,,,,,,,,,,,,,,RedCap
+Eat small portions and avoid second servings,2005200325,10,AIREADI,,45879464,,,,,,,,,,,,,,,,RedCap
+Occasionally limit portions,2005200326,5,AIREADI,,45879593,,,,,,,,,,,,,,,,RedCap
+Rarely or none; eat at buffets and restaurants with large portions,2005200327,0,AIREADI,,45876672,,,,,,,,,,,,,,,,RedCap
+4-5 servings or pieces of fruits and raw vegetables per day,2005200328,10,AIREADI,,45882430        ,,,,,,,,,,,,,,,,RedCap
+1-3 servings or pieces per day,2005200329,5,AIREADI,,21498536,,,,,,,,,,,,,,,,RedCap
+"Regularly; at least monthly (dietician, support groups, books, websites, apps)",2005200330,10,AIREADI,,45879060,,,,,,,,,,,,,,,,RedCap
+Occasionally; every 2-3 months,2005200331,5,AIREADI,,45879593,,,,,,,,,,,,,,,,RedCap
+3 or more visits a year to the same doctor. Regular with medicines.,2005200332,10,AIREADI,,45878438,,,,,,,,,,,,,,,,RedCap
+1-2 visits a year. Forgetting medicines frequently.,2005200333,5,AIREADI,,46237352,,,,,,,,,,,,,,,,RedCap
+Rarely or none. Not taking 1 or more recommended medicines,2005200334,0,AIREADI,,45883771,,,,,,,,,,,,,,,,RedCap
+Less than 1 time,2005200238,0,AIREADI,,45882431,,,,,,,,,,,,,,,,RedCap
+1 - 3 times,2005200239,1,AIREADI,,45883428,,,,,,,,,,,,,,,,RedCap
+5 or more,2005200240,0,AIREADI,,21499051,,,,,,,,,,,,,,,,RedCap
+2 or less,2005200241,2,AIREADI,,45884526,,,,,,,,,,,,,,,,RedCap
+5 or more,2005200240,0,AIREADI,,21499051,,,,,,,,,,,,,,,,RedCap
+2 or less,2005200241,2,AIREADI,,45884526,,,,,,,,,,,,,,,,RedCap
+Less than 1,2005200242,0,AIREADI,,45882431,,,,,,,,,,,,,,,,RedCap
+Less than 1 time,2005200238,2,AIREADI,,45882431,,,,,,,,,,,,,,,,RedCap
+1 time or less,2005200243,0,AIREADI,,45882431,,,,,,,,,,,,,,,,RedCap
+Less than 1,2005200242,0,AIREADI,,45882431,,,,,,,,,,,,,,,,RedCap
+Did the subject complete the study?,2005200192,eos_ds,AIREADI,,40482840,,,,,,,,,,,,,,,,RedCap
+Did not meet Inclusion/Exclusion criteria,2005200280,1,AIREADI,,36310644,,,,,,,,,,,,,,,,RedCap
+Withdrawal by Subject,2005200281,3,AIREADI,,36662359,,,,,,,,,,,,,,,,RedCap
+Geographic Inaccessibility,2005200282,4,AIREADI,,4081426,,,,,,,,,,,,,,,,RedCap
+Currently enrolled in a conflicting study,2005200283,6,AIREADI,,4204933,,,,,,,,,,,,,,,,RedCap
+Protocol Deviation,2005200284,9,AIREADI,,=K189,,,,,,,,,,,,,,,,RedCap
+Individual was under age 40,2005200285,1,AIREADI,,1620925,,,,,,,,,,,,,,,,RedCap
+Individual is not needed at this time for recruitment goals,2005200286,3,AIREADI,,40480675,,,,,,,,,,,,,,,,RedCap
+Individual had Type 1 Diabetes,2005200287,4,AIREADI,,45883360,,,,,,,,,,,,,,,,RedCap
+In Person (Baseline),2005200288,2,AIREADI,,764337,,,,,,,,,,,,,,,,RedCap
+Drivers license state,2005200138,dristate,AIREADI,,4161694,,,,,,,,,,,,,,,,RedCap
+Were either of your parents diagnosed with Type II Diabetes?,2005200018,fh_dm2pt,AIREADI,,4334340,,,,,,,,,,,,,,,,RedCap
+Has a sibling been diagnosed with Type II Diabetes?,2005200019,fh_dm2sb,AIREADI,,4334340,,,,,,,,,,,,,,,,RedCap
+White Blood Cells (WBC) - x10E3/µL,2005200182,lbscat_wbc,AIREADI,,4016934,,,,,,,,,,,,,,,,RedCap
+Red Blood Cells (RBC) - x10E6/µL,2005200183,lbscat_rbc,AIREADI,,4030871,,,,,,,,,,,,,,,,RedCap
 Have you taken aspirin in the past 2 weeks?,2005200145,cm_asp,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 "Have you taken acetaminophen medicines, such as Tylenol, in the past 2 weeks?",2005200146,cm_act,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Have you taken ibuprofen or ibuprofen-containing medicines such as Advil or Motrin in the past 2 weeks?,2005200147,cm_ibp,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 "Have you taken antihistamines, such as cold pills or allergy pills, in the past 2 weeks?",2005200148,cm_ant,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 "Have you taken decongestants, such as cold pills or allergy pills, in the past 2 weeks?",2005200149,cm_dcg,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Have you taken sleeping pills in the past 2 weeks?,2005200150,cm_slp,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"How much difficulty, if any, do you have in recognizing a friend across the street? Would you say:",2005200067,via1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"How much difficulty, if any, do you have reading print in newspapers, magazines, recipes, menus, or numbers on the telephone? Would you say:",2005200068,via2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-You have indicated that you have not seen an eye care professional in the past 12 months. What is the main reason you have not visited an eye care professional in the past 12 months?,2005200069,via5,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-When was the last time you had an eye exam in which the pupils were dilated? (This would have made you temporarily sensitive to bright light),2005200070,via6,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Within the past 2 years (1 year but less than 2 years ago),2005200244,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Cost/Insurance,2005200245,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Do not have/know an eye doctor,2005200246,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"Cannot get to the office/clinic (too far away, no transportation)",2005200247,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-No reason to go (no problem),2005200249,5,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Have not thought of it,2005200250,6,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Within the past 2 years (1 year but less than 2 years ago),2005200244,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Feeling scared when you think about living with diabetes,2005200044,paid_scrd,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Worrying about the future and the possibility of serious complications,2005200046,paid_wr,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Feeling that diabetes is taking up too much of your mental and physical energy every day,2005200047,paid_eng,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Coping with complications of diabetes,2005200048,paid_cml,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-PAID score,2005200049,paidscore,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Not a problem,2005200213,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Minor problem,2005200214,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Moderate problem,2005200215,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Somewhat serious problem,2005200216,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Serious problem,2005200217,4,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Not a problem,2005200213,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Minor problem,2005200214,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Moderate problem,2005200215,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Somewhat serious problem,2005200216,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Serious problem,2005200217,4,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Not a problem,2005200213,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Minor problem,2005200214,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Moderate problem,2005200215,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Somewhat serious problem,2005200216,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Serious problem,2005200217,4,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Not a problem,2005200213,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Minor problem,2005200214,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Moderate problem,2005200215,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Somewhat serious problem,2005200216,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Serious problem,2005200217,4,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Not a problem,2005200213,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Minor problem,2005200214,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Moderate problem,2005200215,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Somewhat serious problem,2005200216,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Serious problem,2005200217,4,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+"How much difficulty, if any, do you have in recognizing a friend across the street? Would you say:",2005200067,via1,AIREADI,,4173597,,,,,,,,,,,,,,,,RedCap
+"How much difficulty, if any, do you have reading print in newspapers, magazines, recipes, menus, or numbers on the telephone? Would you say:",2005200068,via2,AIREADI,,40768760,,,,,,,,,,,,,,,,RedCap
+You have indicated that you have not seen an eye care professional in the past 12 months. What is the main reason you have not visited an eye care professional in the past 12 months?,2005200069,via5,AIREADI,,4260904,,,,,,,,,,,,,,,,RedCap
+When was the last time you had an eye exam in which the pupils were dilated? (This would have made you temporarily sensitive to bright light),2005200070,via6,AIREADI,,4312773,,,,,,,,,,,,,,,,RedCap
+Within the past 2 years (1 year but less than 2 years ago),2005200244,3,AIREADI,,45876410,,,,,,,,,,,,,,,,RedCap
+Cost/Insurance,2005200245,1,AIREADI,,46237671,,,,,,,,,,,,,,,,RedCap
+Do not have/know an eye doctor,2005200246,2,AIREADI,,45883792,,,,,,,,,,,,,,,,RedCap
+"Cannot get to the office/clinic (too far away, no transportation)",2005200247,3,AIREADI,,36309220,,,,,,,,,,,,,,,,RedCap
+No reason to go (no problem),2005200249,5,AIREADI,,45878810,,,,,,,,,,,,,,,,RedCap
+Have not thought of it,2005200250,6,AIREADI,,45878810,,,,,,,,,,,,,,,,RedCap
+Within the past 2 years (1 year but less than 2 years ago),2005200244,3,AIREADI,,45876410,,,,,,,,,,,,,,,,RedCap
+Feeling scared when you think about living with diabetes,2005200044,paid_scrd,AIREADI,,36716888,,,,,,,,,,,,,,,,RedCap
+Worrying about the future and the possibility of serious complications,2005200046,paid_wr,AIREADI,,4084699,,,,,,,,,,,,,,,,RedCap
+Feeling that diabetes is taking up too much of your mental and physical energy every day,2005200047,paid_eng,AIREADI,,4265571,,,,,,,,,,,,,,,,RedCap
+Coping with complications of diabetes,2005200048,paid_cml,AIREADI,,4262172,,,,,,,,,,,,,,,,RedCap
+PAID score,2005200049,paidscore,AIREADI,,46273583,,,,,,,,,,,,,,,,RedCap
+Not a problem,2005200213,0,AIREADI,,45878810,,,,,,,,,,,,,,,,RedCap
+Minor problem,2005200214,1,AIREADI,,45881304,,,,,,,,,,,,,,,,RedCap
+Moderate problem,2005200215,2,AIREADI,,45881304,,,,,,,,,,,,,,,,RedCap
+Somewhat serious problem,2005200216,3,AIREADI,,45884351,,,,,,,,,,,,,,,,RedCap
+Serious problem,2005200217,4,AIREADI,,45884351,,,,,,,,,,,,,,,,RedCap
+Not a problem,2005200213,0,AIREADI,,45878810,,,,,,,,,,,,,,,,RedCap
+Minor problem,2005200214,1,AIREADI,,45881304,,,,,,,,,,,,,,,,RedCap
+Moderate problem,2005200215,2,AIREADI,,45881304,,,,,,,,,,,,,,,,RedCap
+Somewhat serious problem,2005200216,3,AIREADI,,45884351,,,,,,,,,,,,,,,,RedCap
+Serious problem,2005200217,4,AIREADI,,45884351,,,,,,,,,,,,,,,,RedCap
+Not a problem,2005200213,0,AIREADI,,45878810,,,,,,,,,,,,,,,,RedCap
+Minor problem,2005200214,1,AIREADI,,45881304,,,,,,,,,,,,,,,,RedCap
+Moderate problem,2005200215,2,AIREADI,,45881304,,,,,,,,,,,,,,,,RedCap
+Somewhat serious problem,2005200216,3,AIREADI,,45884351,,,,,,,,,,,,,,,,RedCap
+Serious problem,2005200217,4,AIREADI,,45884351,,,,,,,,,,,,,,,,RedCap
+Not a problem,2005200213,0,AIREADI,,45878810,,,,,,,,,,,,,,,,RedCap
+Minor problem,2005200214,1,AIREADI,,45881304,,,,,,,,,,,,,,,,RedCap
+Moderate problem,2005200215,2,AIREADI,,45881304,,,,,,,,,,,,,,,,RedCap
+Somewhat serious problem,2005200216,3,AIREADI,,45884351,,,,,,,,,,,,,,,,RedCap
+Serious problem,2005200217,4,AIREADI,,45884351,,,,,,,,,,,,,,,,RedCap
+Not a problem,2005200213,0,AIREADI,,45878810,,,,,,,,,,,,,,,,RedCap
+Minor problem,2005200214,1,AIREADI,,45881304,,,,,,,,,,,,,,,,RedCap
+Moderate problem,2005200215,2,AIREADI,,45881304,,,,,,,,,,,,,,,,RedCap
+Somewhat serious problem,2005200216,3,AIREADI,,45884351,,,,,,,,,,,,,,,,RedCap
+Serious problem,2005200217,4,AIREADI,,45884351,,,,,,,,,,,,,,,,RedCap
 Waist Circumference (cm),2005200152,waist_vsorres,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Hip Circumference (cm),2005200153,hip_vsorres,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Does not apply to my neighborhood,2005200268,88,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Does not apply to my neighborhood,2005200268,88,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-6 or more,2005200270,6,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+Does not apply to my neighborhood,2005200268,88,AIREADI,,45879145,,,,,,,,,,,,,,,,RedCap
+Does not apply to my neighborhood,2005200268,88,AIREADI,,45879145,,,,,,,,,,,,,,,,RedCap
+6 or more,2005200270,6,AIREADI,,45879188,,,,,,,,,,,,,,,,RedCap
 "Thinking about the next 12 months, how likely do you think it is that you will lose your job or be laid off?",2005200073,pxji1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 "About how easy would it be for you to find a job with another employer with approximately the same income and fringe benefits you now have? Would you say very easy, somewhat easy, or not easy at all?",2005200074,pxji2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-What is your living situation today?,2005200075,pxhi1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+What is your living situation today?,2005200075,pxhi1,AIREADI,,42869557,,,,,,,,,,,,,,,,RedCap
 Think about the place you live. Do you have problems with any of the following? CHOOSE ALL THAT APPLY,2005200076,pxhi2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 "In the last 12 months, have you delayed getting prescription medicines because of worry about the cost?",2005200077,pxpa1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Did any other person in your household delay getting prescription medicines because of worry about the cost?,2005200078,pxpa2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 "In the last 12 months, was there any time when you needed prescription medicines, but did not get them because you couldn't afford it?",2005200079,pxpa3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 "In the last 12 months, was there any time when anyone else in your household needed prescription medicines, but did not get them because you/they couldn't afford it?",2005200080,pxpa4,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Will be leaving labor force voluntarily,2005200251,5,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Covered,2005200252,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Covered,2005200252,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Covered,2005200252,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Covered,2005200252,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Covered,2005200252,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Covered,2005200252,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Covered,2005200252,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-I do NOT have health insurance,2005200253,0,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-I HAVE some kind of health insurance,2005200254,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Within the last 10 years (5 years but less than 10 years ago),2005200255,5,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Within the last 10 years (5 years but less than 10 years ago),2005200255,5,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-A doctor's office or health center,2005200258,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-"Walk-in clinic, urgent care center, or retail clinic in a pharmacy or grocery store",2005200259,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-A VA Medical Center or VA outpatient clinic,2005200260,4,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-1 - 10 times,2005200262,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-11 - 19 times,2005200263,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-20 - 29 times,2005200264,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-30 - 39 times,2005200265,4,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-40 - 49 times,2005200266,5,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-50 or more times,2005200267,6,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-1 - 10 times,2005200262,1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-11 - 19 times,2005200263,2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-20 - 29 times,2005200264,3,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-30 - 39 times,2005200265,4,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-40 - 49 times,2005200266,5,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-50 or more times,2005200267,6,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-41-50 (up to 2.5 packs),2005200194,41,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-More than 50 (3 or more packs),2005200195,51,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-22 to 28,2005200196,22,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-29 to 35,2005200197,29,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-36 or more,2005200198,36,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-21-25 (5 bottles),2005200199,21,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-26-30 (6 bottles),2005200208,26,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-31-35 (7 bottles),2005200209,31,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-More than 36 (greater than 7 bottles),2005200210,35,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-22 to 28,2005200196,22,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-29 to 35,2005200197,29,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-36 or more,2005200198,36,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+Will be leaving labor force voluntarily,2005200251,5,AIREADI,,45877709,,,,,,,,,,,,,,,,RedCap
+Covered,2005200252,1,AIREADI,,46237671,,,,,,,,,,,,,,,,RedCap
+Covered,2005200252,1,AIREADI,,46237671,,,,,,,,,,,,,,,,RedCap
+Covered,2005200252,1,AIREADI,,46237671,,,,,,,,,,,,,,,,RedCap
+Covered,2005200252,1,AIREADI,,46237671,,,,,,,,,,,,,,,,RedCap
+Covered,2005200252,1,AIREADI,,46237671,,,,,,,,,,,,,,,,RedCap
+Covered,2005200252,1,AIREADI,,46237671,,,,,,,,,,,,,,,,RedCap
+Covered,2005200252,1,AIREADI,,46237671,,,,,,,,,,,,,,,,RedCap
+I do NOT have health insurance,2005200253,0,AIREADI,,45881114,,,,,,,,,,,,,,,,RedCap
+I HAVE some kind of health insurance,2005200254,1,AIREADI,,46237671,,,,,,,,,,,,,,,,RedCap
+Within the last 10 years (5 years but less than 10 years ago),2005200255,5,AIREADI,,45884538,,,,,,,,,,,,,,,,RedCap
+Within the last 10 years (5 years but less than 10 years ago),2005200255,5,AIREADI,,45884538,,,,,,,,,,,,,,,,RedCap
+A doctor's office or health center,2005200258,1,AIREADI,,36309375,,,,,,,,,,,,,,,,RedCap
+"Walk-in clinic, urgent care center, or retail clinic in a pharmacy or grocery store",2005200259,2,AIREADI,,1990187,,,,,,,,,,,,,,,,RedCap
+A VA Medical Center or VA outpatient clinic,2005200260,4,AIREADI,,36309555,,,,,,,,,,,,,,,,RedCap
+1 - 10 times,2005200262,1,AIREADI,,45876834,,,,,,,,,,,,,,,,RedCap
+11 - 19 times,2005200263,2,AIREADI,,46237301,,,,,,,,,,,,,,,,RedCap
+20 - 29 times,2005200264,3,AIREADI,,46237301,,,,,,,,,,,,,,,,RedCap
+30 - 39 times,2005200265,4,AIREADI,,46237301,,,,,,,,,,,,,,,,RedCap
+40 - 49 times,2005200266,5,AIREADI,,46237301,,,,,,,,,,,,,,,,RedCap
+50 or more times,2005200267,6,AIREADI,,45884714,,,,,,,,,,,,,,,,RedCap
+1 - 10 times,2005200262,1,AIREADI,,45876834,,,,,,,,,,,,,,,,RedCap
+11 - 19 times,2005200263,2,AIREADI,,46237301,,,,,,,,,,,,,,,,RedCap
+20 - 29 times,2005200264,3,AIREADI,,46237301,,,,,,,,,,,,,,,,RedCap
+30 - 39 times,2005200265,4,AIREADI,,46237301,,,,,,,,,,,,,,,,RedCap
+40 - 49 times,2005200266,5,AIREADI,,46237301,,,,,,,,,,,,,,,,RedCap
+50 or more times,2005200267,6,AIREADI,,45884714,,,,,,,,,,,,,,,,RedCap
+41-50 (up to 2.5 packs),2005200194,41,AIREADI,,45884478,,,,,,,,,,,,,,,,RedCap
+More than 50 (3 or more packs),2005200195,51,AIREADI,,45884478,,,,,,,,,,,,,,,,RedCap
+22 to 28,2005200196,22,AIREADI,,45876700,,,,,,,,,,,,,,,,RedCap
+29 to 35,2005200197,29,AIREADI,,45876770,,,,,,,,,,,,,,,,RedCap
+36 or more,2005200198,36,AIREADI,,45876700,,,,,,,,,,,,,,,,RedCap
+21-25 (5 bottles),2005200199,21,AIREADI,,45876700,,,,,,,,,,,,,,,,RedCap
+26-30 (6 bottles),2005200208,26,AIREADI,,45876700,,,,,,,,,,,,,,,,RedCap
+31-35 (7 bottles),2005200209,31,AIREADI,,45876700,,,,,,,,,,,,,,,,RedCap
+More than 36 (greater than 7 bottles),2005200210,35,AIREADI,,45876700,,,,,,,,,,,,,,,,RedCap
+22 to 28,2005200196,22,AIREADI,,45876700,,,,,,,,,,,,,,,,RedCap
+29 to 35,2005200197,29,AIREADI,,45876770,,,,,,,,,,,,,,,,RedCap
+36 or more,2005200198,36,AIREADI,,45876700,,,,,,,,,,,,,,,,RedCap
