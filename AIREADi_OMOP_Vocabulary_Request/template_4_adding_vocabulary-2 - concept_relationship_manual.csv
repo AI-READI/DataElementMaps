@@ -1,4 +1,4 @@
-concept_name,concept_id_1,SRC CODE,vocabulary_id_1,relationship_id,concept_id_2,temp name,temp domain,vocabulary_id_2,temp class,concept_code_2,temp standard,relationship_valid_start_date,relationship_valid_end_date,invalid_reason,confidence,predicate_id,mapping_source,mapping_justification,mapping_tool,Notes
+concept_name,concept_id_1,SRC_CODE,vocabulary_id_1,relationship_id,concept_id_2,temp name,temp domain,vocabulary_id_2,temp class,concept_code_2,temp standard,relationship_valid_start_date,relationship_valid_end_date,invalid_reason,confidence,predicate_id,mapping_source,mapping_justification,mapping_tool,Notes
 "concept name of the code you want to add
 max 255 characters","codes you want to add
 max 50 characters",,"short name (id) of your vocabulary
@@ -149,7 +149,7 @@ Somewhat serious problem,2005200216,paid_scrd_3,AIREADI,,45884351,Problem,Meas V
 Serious problem,2005200217,paid_scrd_4,AIREADI,,45884351,Problem,Meas Value,LOINC,Answer,LA9617-7,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,
 RxNorm (assign after visit),2005200220,cmtrt,AIREADI,,19402933,RxNorm,Observation,MeSH,Main Heading,D062245,N,,,,1,skos:exactMatch,ManualMapping,ManualMappingCuration,,
 "Unit (Record the dose unit of the dose of concomitant medication/treatment/therapy taken (e.g., mg.)).",2005200221,cmdosu,AIREADI,,45890999,unit per dose,Unit,UCUM,Unit,[U]/[dose],S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,
-Puff,2005200222,cmdosu_13,AIREADI,,45758813        ,Metered dose inhaler,Device,SNOMED ,Physical Object,463710006,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,
+Puff,2005200222,cmdosu_13,AIREADI,,45758813,Metered dose inhaler,Device,SNOMED ,Physical Object,463710006,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,
 Date device received back from participant,2005200236,dvamwendat,AIREADI,,1030395,Date received,Observation,LOINC,LOINC Component,LP72379-8,N,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,
 Less than 1 time,2005200238,diet1_0,AIREADI,,45882431,1 time per week,Meas Value,LOINC,Answer,LA13829-9,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,
 1 - 3 times,2005200239,diet1_1,AIREADI,,45883428,3 or 4 ,Meas Value,LOINC,Answer,LA23695-2,S,,,,1,skos:relatedMatch,ManualMapping,ManualMappingCuration,,
@@ -182,7 +182,7 @@ Does not go to one place most often,2005200261,pxahc5_6,AIREADI,,4192764,Health 
 40 - 49 times,2005200266,pxahc6_5,AIREADI,,46237301,More than 10 times,Meas Value,LOINC,Answer,LA23703-4,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,
 50 or more times,2005200267,pxahc6_6,AIREADI,,45884714,More than 50,Meas Value,LOINC,Answer,LA15343-9,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,
 Does not apply to my neighborhood,2005200268,pxne4_88,AIREADI,,45879145,Does not apply,Meas Value,LOINC,Answer,LA14452-9,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,
-There are no streets or roads in my neighborhood,2005200269,pxne8_88,AIREADI,,4030757        ,Neighborhood / workplace safety finding,Observation,SNOMED ,Clinical Finding,129685008,S,,,,0.25,skos:broadMatch,ManualMapping,ManualMappingCuration,,
+There are no streets or roads in my neighborhood,2005200269,pxne8_88,AIREADI,,4030757,Neighborhood / workplace safety finding,Observation,SNOMED ,Clinical Finding,129685008,S,,,,0.25,skos:broadMatch,ManualMapping,ManualMappingCuration,,
 6 or more,2005200270,pxne11_6,AIREADI,,45879188,6 or more times,Meas Value,LOINC,Answer,LA14674-8,S,,,,0.75,skos:narrowMatch,ManualMapping,ManualMappingCuration,,
 5000 miles or less,2005200271,dri2_1,AIREADI,,4151655,Driving assessment,Procedure ,SNOMED ,Procedure ,310859004,S,,,,0.25,skos:broadMatch,ManualMapping,ManualMappingCuration,,
 "5001 to 10,000 miles",2005200272,dri2_2,AIREADI,,4151655,Driving assessment,Procedure ,SNOMED ,Procedure ,310859004,S,,,,0.25,skos:broadMatch,ManualMapping,ManualMappingCuration,,
@@ -230,14 +230,14 @@ Doing daily or almost daily,2005200317,dmlhex_10,AIREADI,,45879676,Doing daily o
 Irregular; once or twice a week,2005200318,dmlhex_5,AIREADI,,42530680,Once or twice a week,Meas Value,LOINC,Answer,LA26457-4,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,
 Rarely eat sweets,2005200319,dmlsugar_10,AIREADI,,45876672,Rarely ,Meas Value,LOINC,Answer,LA10066-1,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,
 Occasionally eat sweets,2005200320,dmlsugar_5,AIREADI,,45879593,Occasionally ,Meas Value,LOINC,Answer,LA6483-7,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,
-Frequently eat sweets,2005200321,dmlsugar_0,AIREADI,,45883983        ,Frequently ,Meas Value,LOINC,Answer,LA6482-9,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,
+Frequently eat sweets,2005200321,dmlsugar_0,AIREADI,,45883983,Frequently ,Meas Value,LOINC,Answer,LA6482-9,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,
 Usually eat whole grain,2005200322,dmlgrain_10,AIREADI,,45882948,Usually ,Meas Value,LOINC,Answer,LA14747-2,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,
 Rarely eat whole grain,2005200323,dmlgrain_5,AIREADI,,45876672,Rarely ,Meas Value,LOINC,Answer,LA10066-1,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,
 Usually eat white bread or white rice,2005200324,dmlgrain_0,AIREADI,,45882948,Usually,Meas Value,LOINC,Answer,LA14747-2,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,
 Eat small portions and avoid second servings,2005200325,dmlpor_10,AIREADI,,45879464,I eat much less than usual and only with personal effort,Meas Value,LOINC,Answer,LA14830-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,
 Occasionally limit portions,2005200326,dmlpor_5,AIREADI,,45879593,Occasionally,Meas Value,LOINC,Answer,LA6483-7,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,
 Rarely or none; eat at buffets and restaurants with large portions,2005200327,dmlpor_0,AIREADI,,45876672,Rarely ,Meas Value,LOINC,Answer,LA10066-1,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,
-4-5 servings or pieces of fruits and raw vegetables per day,2005200328,dmlfrveg_10,AIREADI,,45882430        ,4-5 times per day,Meas Value,LOINC,Answer,LA13856-2,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,
+4-5 servings or pieces of fruits and raw vegetables per day,2005200328,dmlfrveg_10,AIREADI,,45882430,4-5 times per day,Meas Value,LOINC,Answer,LA13856-2,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,
 1-3 servings or pieces per day,2005200329,dmlfrveg_5,AIREADI,,21498536,1-3 times per day,Meas Value,LOINC,Answer,LA25000-3,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,
 "Regularly; at least monthly (dietician, support groups, books, websites, apps)",2005200330,dmledu_10,AIREADI,,45879060,Monthly,Meas Value,LOINC,Answer,LA18876-5,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,
 Occasionally; every 2-3 months,2005200331,dmledu_5,AIREADI,,45879593,Occasionally,Meas Value,LOINC,Answer,LA6483-7,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,
@@ -281,6 +281,7 @@ Time in seconds to perform the MOCA delayed recall with no cue task,2005200369,d
 Age in years (3-4 year span),2005200372,age_years_at_interview,AIREADI-MOCA,,3022304,Age,Observation,LOINC,Clinical Observation,30525-0,S,,,,1,skos:relatedMatch,ManualMapping,ManualMappingCuration,,
 "MOCA delayed recall with no cue, cue, and multiple choice cue (Combined score)",2005200373,moca_combined_mis_score,AIREADI-MOCA,,606671,Montreal Cognitive Assessment version 8.1,Measurement,SNOMED,Staging / Scales,1148423001,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,
 Other types of Dementia or Alzheimer's Disease,2005200451,mhcat_dmtaot,AIREADI,,35207358,Other Alzheimer's disease,Condition,ICD10CM,4-char billing code,G30.8,N,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,
+Neurocognitive disorder please specify,2005200455,mhoccur_cnsot,AIREADI,,36309562,Other neurological conditions,Meas Value,LOINC,Answer,LA28880-5,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,
 Other cancer type please (specify),2005200459,mhoccur_cnrot,AIREADI,,45884514,Other cancer,Meas Value,LOINC,Answer,LA14284-6,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,
 Was your mother or father diagnosed with Type II Diabetes?,2005200463,fh_dm2ptsp,AIREADI,,4334340,Family history of diabetes mellitus type 2,Observation,SNOMED,Context-dependent,430679000,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,
 "If yes, please check all that apply: brother, sister, half-sister, half-brother",2005200464,fh_dm2sbsp,AIREADI,,45880130,Family member,Meas Value,LOINC,Answer,LA9277-0,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,
@@ -288,7 +289,7 @@ Have you been diagnosed with any conditions not listed above?,2005200470,mhoccur
 Do you use marijuana now?,2005200473,sumrjcdur,AIREADI,,,,,,,,,,,,,,ManualMapping,ManualMappingCuration,,
 Do you speak another language at home?,2005200480,pxep2,AIREADI,,37079013,Language other than English,Meas Value,LOINC,Answer,LA30188-9,S,,,,1,skos:relatedMatch,ManualMapping,ManualMappingCuration,,
 Medication Name,2005200481,cmname,AIREADI,,1031609,Medication name,Observation,LOINC,LOINC Component,LP74144-4,N,,,,1,skos:exactMatch,ManualMapping,ManualMappingCuration,,
-Specify other,2005200485,odristate,AIREADI,,"45883155",Other (specify),Meas Value ,LOINC,Answer,LA6310-2,S,,,,1,skos:closeMatch,ManualMapping,ManualMappingCuration,,
+Specify other,2005200485,odristate,AIREADI,,45883155,Other (specify),Meas Value ,LOINC,Answer,LA6310-2,S,,,,1,skos:closeMatch,ManualMapping,ManualMappingCuration,,
 "OD: Value of final correct letter - Mesopic, right eye",2005200486,mlcsodfcl,AIREADI-Vision,,4256483,Contrast sensitivity test,Procedure,SNOMED,Procedure,410566008,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,
 "OD: Number of misses prior to stopping - Mesopic, right eye",2005200487,mlcsodmiss,AIREADI-Vision,,4256483,Contrast sensitivity test,Procedure,SNOMED,Procedure,410566008,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,
 "OS: Value of final correct letter - Mesopic, left eye",2005200488,mlcsosfcl,AIREADI-Vision,,4256483,Contrast sensitivity test,Procedure,SNOMED,Procedure,410566008,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,
