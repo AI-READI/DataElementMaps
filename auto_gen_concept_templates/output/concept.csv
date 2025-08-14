@@ -475,8 +475,6 @@ Minor problem,1,2005200214,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,
 Moderate problem,2,2005200215,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
 Somewhat serious problem,3,2005200216,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
 Serious problem,4,2005200217,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Waist Circumference (cm),waist_vsorres,2005200152,AIREADI,Measurement,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Hip Circumference (cm),hip_vsorres,2005200153,AIREADI,Measurement,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
 Does not apply to my neighborhood,88,2005200268,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
 Does not apply to my neighborhood,88,2005200268,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
 6 or more,6,2005200270,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap

@@ -281,18 +281,14 @@ Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
         # Unmatched rows details
         if result['unmatched_manual']:
             report += f"### Unmatched Manual Rows ({len(result['unmatched_manual'])})\n\n"
-            for row_id in result['unmatched_manual'][:10]:  # Limit to first 10
+            for row_id in result['unmatched_manual']:
                 report += f"- {row_id}\n"
-            if len(result['unmatched_manual']) > 10:
-                report += f"- ... and {len(result['unmatched_manual']) - 10} more\n"
             report += "\n"
         
         if result['unmatched_generated']:
             report += f"### Unmatched Generated Rows ({len(result['unmatched_generated'])})\n\n"
-            for row_id in result['unmatched_generated'][:10]:  # Limit to first 10
+            for row_id in result['unmatched_generated']:
                 report += f"- {row_id}\n"
-            if len(result['unmatched_generated']) > 10:
-                report += f"- ... and {len(result['unmatched_generated']) - 10} more\n"
             report += "\n"
         
         # Row differences details

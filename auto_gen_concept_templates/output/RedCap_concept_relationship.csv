@@ -109,7 +109,7 @@ Has a doctor or other healthcare professional ever told you that you have/had...
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_cogn,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_ms,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_cns,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Neurocognitive disorder please specify,2005200455,mhoccur_cnsot,AIREADI,,,,,,,,,,,,,,,,,,RedCap
+Neurocognitive disorder please specify,2005200455,mhoccur_cnsot,AIREADI,,36309562,Other neurological conditions,Meas Value,LOINC,Answer,LA28880-5,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_ra,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_oa,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_ca,AIREADI,,,,,,,,,,,,,,,,,,RedCap
@@ -445,8 +445,6 @@ Minor problem,2005200214,1,AIREADI,,45881304,Potential problem,Meas Value,LOINC,
 Moderate problem,2005200215,2,AIREADI,,45881304,Potential problem,Meas Value,LOINC,Answer,LA9618-5,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Somewhat serious problem,2005200216,3,AIREADI,,45884351,Problem,Meas Value,LOINC,Answer,LA9617-7,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Serious problem,2005200217,4,AIREADI,,45884351,Problem,Meas Value,LOINC,Answer,LA9617-7,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Waist Circumference (cm),2005200152,waist_vsorres,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Hip Circumference (cm),2005200153,hip_vsorres,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Does not apply to my neighborhood,2005200268,88,AIREADI,,45879145,PEFR 1,Meas Value,LOINC,Answer,LA16616-7,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Does not apply to my neighborhood,2005200268,88,AIREADI,,45879145,PEFR 1,Meas Value,LOINC,Answer,LA16616-7,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 6 or more,2005200270,6,AIREADI,,45879188,6 or more times,Meas Value,LOINC,Answer,LA14674-8,S,,,,0.75,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
