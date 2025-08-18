@@ -352,7 +352,10 @@ Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
             report += "| Concept ID | Concept Name |\n"
             report += "|------------|--------------|\n"
             
-            for row_info in result['unmatched_manual']:
+            # Sort unmatched manual concepts alphabetically by concept name
+            sorted_unmatched_manual = sorted(result['unmatched_manual'], key=lambda x: x['concept_name'])
+            
+            for row_info in sorted_unmatched_manual:
                 concept_id = row_info['id']
                 concept_name = row_info['concept_name']
                 
@@ -373,7 +376,10 @@ Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
             report += "| Concept ID | Concept Name |\n"
             report += "|------------|--------------|\n"
             
-            for row_info in result['unmatched_generated']:
+            # Sort unmatched generated concepts alphabetically by concept name
+            sorted_unmatched_generated = sorted(result['unmatched_generated'], key=lambda x: x['concept_name'])
+            
+            for row_info in sorted_unmatched_generated:
                 concept_id = row_info['id']
                 concept_name = row_info['concept_name']
                 
@@ -410,7 +416,10 @@ Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
                 report += "| Column | Matching | Total | Match Rate |\n"
                 report += "|--------|----------|-------|------------|\n"
                 
-                for col, stats in result['column_differences'].items():
+                # Sort columns by match rate (ascending, so worst matches appear first)
+                sorted_columns = sorted(result['column_differences'].items(), key=lambda x: x[1]['match_rate'])
+                
+                for col, stats in sorted_columns:
                     match_rate = stats['match_rate'] * 100
                     report += f"| {col} | {stats['matching']} | {stats['total']} | {match_rate:.1f}% |\n"
                 report += "\n"
@@ -456,8 +465,11 @@ Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
                     except ValueError:
                         return 'A'  # fallback
                 
+                # Sort discrepancies by concept name, then by column name within each concept
+                sorted_discrepancies = sorted(result['discrepancies'], key=lambda x: (x['concept_name_manual'], x['id']))
+                
                 # Group by concept using nested lists
-                for row_diff in result['discrepancies']:
+                for row_diff in sorted_discrepancies:
                     concept_id = row_diff['id']
                     concept_name_manual = row_diff['concept_name_manual']
                     
@@ -484,35 +496,37 @@ Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
                     concept_has_details = False
                     concept_details = []
                     
-                    for col, diff in row_diff['differences'].items():
-                        if col in detailed_columns:  # Only show detailed entries for non-high-blank columns
-                            concept_has_details = True
-                            
-                            # Create linked values with proper column references
-                            manual_val = diff['manual'] if diff['manual'] else 'blank'
-                            generated_val = diff['generated'] if diff['generated'] else 'blank'
-                            
-                            # Create manual link with correct column
-                            manual_val_link = manual_val
-                            if result.get('target_info') and result['target_info'].get('worksheet_url') and manual_row_num:
-                                col_letter = get_column_letter(col, result['manual_df'])
-                                base_url = result['target_info']['worksheet_url']
-                                manual_url = f"{base_url}&range={col_letter}{manual_row_num}"
-                                manual_val_link = f"[{manual_val}]({manual_url})"
-                            
-                            # Create generated link with line number
-                            generated_val_link = generated_val
-                            if generated_row_num:
-                                csv_path = f"output/{result['name']}.csv"
-                                generated_url = f"{csv_path}#L{generated_row_num}"
-                                generated_val_link = f"[{generated_val}]({generated_url})"
-                            
-                            # Add to concept details
-                            concept_details.append(f"  - **{col}**: 🔴 {manual_val_link} vs 🔵 {generated_val_link}")
+                    # Sort columns within each concept
+                    sorted_columns_for_concept = sorted([(col, diff) for col, diff in row_diff['differences'].items() if col in detailed_columns])
+                    
+                    for col, diff in sorted_columns_for_concept:
+                        concept_has_details = True
+                        
+                        # Create linked values with proper column references
+                        manual_val = diff['manual'] if diff['manual'] else 'blank'
+                        generated_val = diff['generated'] if diff['generated'] else 'blank'
+                        
+                        # Create manual link with correct column
+                        manual_val_link = manual_val
+                        if result.get('target_info') and result['target_info'].get('worksheet_url') and manual_row_num:
+                            col_letter = get_column_letter(col, result['manual_df'])
+                            base_url = result['target_info']['worksheet_url']
+                            manual_url = f"{base_url}&range={col_letter}{manual_row_num}"
+                            manual_val_link = f"[{manual_val}]({manual_url})"
+                        
+                        # Create generated link with line number
+                        generated_val_link = generated_val
+                        if generated_row_num:
+                            csv_path = f"output/{result['name']}.csv"
+                            generated_url = f"{csv_path}#L{generated_row_num}"
+                            generated_val_link = f"[{generated_val}]({generated_url})"
+                        
+                        # Add to concept details
+                        concept_details.append(f"  - {col}: 🔴 {manual_val_link} vs 🔵 {generated_val_link}")
                     
                     # Only show concept if it has details
                     if concept_has_details:
-                        report += f"- **{concept_id}**: {concept_name_manual}\n"
+                        report += f"- **{concept_name_manual}** ({concept_id})\n"
                         for detail in concept_details:
                             report += f"{detail}\n"
                         report += "\n"
