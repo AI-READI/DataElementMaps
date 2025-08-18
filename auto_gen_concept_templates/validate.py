@@ -354,14 +354,13 @@ Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
             
             for row_info in result['unmatched_manual']:
                 concept_id = row_info['id']
-                concept_name = row_info['concept_name'][:50] + ('...' if len(row_info['concept_name']) > 50 else '')
+                concept_name = row_info['concept_name']
                 
                 # Create proper Google Sheets URL with range
                 if result.get('target_info') and result['target_info'].get('worksheet_url') and row_info.get('row_num'):
                     base_url = result['target_info']['worksheet_url']
                     row_num = row_info['row_num']
-                    # Use column B for the range (assuming concept_id is in column B)
-                    url_with_range = f"{base_url}&range=B{row_num}"
+                    url_with_range = f"{base_url}&range=A{row_num}"
                     concept_id_link = f"[{concept_id}]({url_with_range})"
                 else:
                     concept_id_link = concept_id
@@ -376,7 +375,7 @@ Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
             
             for row_info in result['unmatched_generated']:
                 concept_id = row_info['id']
-                concept_name = row_info['concept_name'][:50] + ('...' if len(row_info['concept_name']) > 50 else '')
+                concept_name = row_info['concept_name']
                 
                 # Create relative link to CSV file
                 csv_filename = f"output/{result['name']}.csv"
@@ -396,8 +395,8 @@ Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
                 report += "|--------|--------|----------|\n"
                 
                 for col, diff in row_diff['differences'].items():
-                    manual_val = diff['manual'][:50] + ('...' if len(diff['manual']) > 50 else '')
-                    generated_val = diff['generated'][:50] + ('...' if len(diff['generated']) > 50 else '')
+                    manual_val = diff['manual']
+                    generated_val = diff['generated']
                     report += f"| {col} | {manual_val} | {generated_val} |\n"
                 report += "\n"
         
