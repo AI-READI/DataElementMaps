@@ -1,6 +1,6 @@
 # Validation Report
 
-Generated on: 2025-08-18 18:05:43
+Generated on: 2025-08-18 18:09:32
 
 ## Summary
 
@@ -105,14 +105,14 @@ Generated on: 2025-08-18 18:05:43
 |--------|----------|-------|------------|
 | standard_concept | 0 | 346 | 0.0% |
 | v6_domain_id | 166 | 346 | 48.0% |
-| valid_start_date | 345 | 346 | 99.7% |
 | vocabulary_id | 345 | 346 | 99.7% |
+| valid_start_date | 345 | 346 | 99.7% |
 | concept_class_id | 345 | 346 | 99.7% |
-| concept_name | 346 | 346 | 100.0% |
-| invalid_reason | 346 | 346 | 100.0% |
-| domain_id | 346 | 346 | 100.0% |
 | valid_end_date | 346 | 346 | 100.0% |
+| domain_id | 346 | 346 | 100.0% |
+| concept_name | 346 | 346 | 100.0% |
 | concept_id | 346 | 346 | 100.0% |
+| invalid_reason | 346 | 346 | 100.0% |
 
 #### All Discrepancies
 
@@ -123,13 +123,10 @@ Generated on: 2025-08-18 18:05:43
 
 - **Animal name recall task score** (2005200350)
   - concept_class_id: 🔴 [Assessment Item](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=535320917#gid=535320917&range=G251) vs 🔵 [Observable Entity](output/concept.csv#L8)
-
 - **FLIO-Mac-HS** (2005200304)
   - vocabulary_id: 🔴 [AIREADI](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=535320917#gid=535320917&range=D210) vs 🔵 [AIREADI-Vision](output/concept.csv#L78)
-
 - **Neurocognitive disorder please specify** (2005200455)
   - valid_start_date: 🔴 [blank](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=535320917#gid=535320917&range=I276) vs 🔵 [1/1/1970](output/concept.csv#L142)
-
 
 ## Concept_Relationship Validation
 
@@ -232,19 +229,19 @@ Generated on: 2025-08-18 18:05:43
 | vocabulary_id_2 | 341 | 346 | 98.6% |
 | temp class | 341 | 346 | 98.6% |
 | temp domain | 342 | 346 | 98.8% |
-| concept_name | 345 | 346 | 99.7% |
 | vocabulary_id_1 | 345 | 346 | 99.7% |
-| invalid_reason | 346 | 346 | 100.0% |
+| concept_name | 345 | 346 | 99.7% |
+| predicate_id | 346 | 346 | 100.0% |
+| mapping_tool | 346 | 346 | 100.0% |
 | confidence | 346 | 346 | 100.0% |
+| concept_id_2 | 346 | 346 | 100.0% |
+| mapping_source | 346 | 346 | 100.0% |
+| mapping_justification | 346 | 346 | 100.0% |
+| relationship_valid_start_date | 346 | 346 | 100.0% |
+| invalid_reason | 346 | 346 | 100.0% |
+| concept_id_1 | 346 | 346 | 100.0% |
 | relationship_valid_end_date | 346 | 346 | 100.0% |
 | relationship_id | 346 | 346 | 100.0% |
-| mapping_justification | 346 | 346 | 100.0% |
-| mapping_source | 346 | 346 | 100.0% |
-| relationship_valid_start_date | 346 | 346 | 100.0% |
-| mapping_tool | 346 | 346 | 100.0% |
-| concept_id_1 | 346 | 346 | 100.0% |
-| predicate_id | 346 | 346 | 100.0% |
-| concept_id_2 | 346 | 346 | 100.0% |
 
 #### All Discrepancies
 
@@ -253,83 +250,62 @@ Generated on: 2025-08-18 18:05:43
 
 - **1 - 10 times** (2005200262)
   - temp name: 🔴 [1 - 10 ](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G170) vs 🔵 [1-10](output/concept_relationship.csv#L504)
-
 - **1 - 3 times** (2005200239)
   - concept_code_2: 🔴 [LA23695-2](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=K147) vs 🔵 [LA15695-2](output/concept_relationship.csv#L407)
-
 - **29 to 35** (2005200197)
   - concept_code_2: 🔴 [LA14679-7](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=K122) vs 🔵 [LA15787-7](output/concept_relationship.csv#L519)
-
 - **Activity monitor returned?** (2005200555)
   - concept_code_2: 🔴 [42528781](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=K346) vs 🔵 [82611-5](output/concept_relationship.csv#L193)
-
 - **Covered** (2005200252)
   - temp name: 🔴 [Covered](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G160) vs 🔵 [Insurance](output/concept_relationship.csv#L490)
-
 - **Does not apply to my neighborhood** (2005200268)
   - concept_code_2: 🔴 [LA14452-9](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=K176) vs 🔵 [LA16616-7](output/concept_relationship.csv#L478)
   - temp name: 🔴 [Does not apply](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G176) vs 🔵 [PEFR 1](output/concept_relationship.csv#L478)
-
 - **Doing daily or almost daily** (2005200317)
   - temp name: 🔴 [Doing daily or almost daily](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G221) vs 🔵 [Daily or almost daily](output/concept_relationship.csv#L388)
-
 - **FLIO-Mac-HS** (2005200304)
   - vocabulary_id_1: 🔴 [AIREADI](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=D210) vs 🔵 [AIREADI-Vision](output/concept_relationship.csv#L78)
-
 - **Have you been diagnosed with any conditions not listed above?** (2005200470)
   - concept_name: 🔴 [Have you been diagnosed with any conditions not listed above?](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=A280) vs 🔵 [Have you been diagnosed with any conditions not listed above? (any condition, not just eyes)](output/concept_relationship.csv#L331)
-
 - **I HAVE some kind of health insurance** (2005200254)
   - temp name: 🔴 [I HAVE some kind of health insurance](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G162) vs 🔵 [Insurance](output/concept_relationship.csv#L498)
-
 - **I do NOT have health insurance** (2005200253)
   - temp name: 🔴 [I do NOT have health insurance](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G161) vs 🔵 [Not Covered by Insurance](output/concept_relationship.csv#L497)
-
 - **Less than 30 minutes daily less than 3 days a week** (2005200313)
   - concept_code_2: 🔴 [27789000](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=K217) vs 🔵 [blank](output/concept_relationship.csv#L194)
   - temp class: 🔴 [Qualifier Value](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=J217) vs 🔵 [blank](output/concept_relationship.csv#L194)
   - temp domain: 🔴 [Meas Value](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=H217) vs 🔵 [blank](output/concept_relationship.csv#L194)
   - temp name: 🔴 [Infrequent](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G217) vs 🔵 [blank](output/concept_relationship.csv#L194)
   - vocabulary_id_2: 🔴 [SNOMED ](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=I217) vs 🔵 [blank](output/concept_relationship.csv#L194)
-
 - **More than 20 years** (2005200211)
   - temp name: 🔴 [More than 20 years](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G135) vs 🔵 [Electronic cigarette smoker](output/concept_relationship.csv#L214)
-
 - **Other heart issues (Examples: pacemaker, heart valve disease, open heart surgery)** (2005200627)
   - temp name: 🔴 [History of Problems with your heart or circulation](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G417) vs 🔵 [History of Problems with your heart or circulation [PhenX]](output/concept_relationship.csv#L113)
-
 - **Protocol Deviation** (2005200284)
   - concept_code_2: 🔴 [309032007](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=K190) vs 🔵 [blank](output/concept_relationship.csv#L421)
   - temp class: 🔴 [Clinical Finding](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=J190) vs 🔵 [blank](output/concept_relationship.csv#L421)
   - temp domain: 🔴 [Observation](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=H190) vs 🔵 [blank](output/concept_relationship.csv#L421)
   - temp name: 🔴 [Protocol Deviation](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G190) vs 🔵 [blank](output/concept_relationship.csv#L421)
   - vocabulary_id_2: 🔴 [SNOMED ](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=I190) vs 🔵 [blank](output/concept_relationship.csv#L421)
-
 - **Red Blood Cells (RBC) - x10E6/µL** (2005200183)
   - temp name: 🔴 [RBC - Red blood cell count](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G116) vs 🔵 [Red blood cell count](output/concept_relationship.csv#L430)
-
 - **Stroke** (2005200628)
   - temp name: 🔴 [History of Problems with your heart or circulation](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G418) vs 🔵 [History of Problems with your heart or circulation [PhenX]](output/concept_relationship.csv#L114)
-
 - **There is MORE THAN ONE place** (2005200257)
   - concept_code_2: 🔴 [394777002](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=K165) vs 🔵 [65123005](output/concept_relationship.csv#L210)
   - temp class: 🔴 [Answer](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=J165) vs 🔵 [Substance](output/concept_relationship.csv#L210)
   - temp domain: 🔴 [Observation](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=H165) vs 🔵 [Drug](output/concept_relationship.csv#L210)
   - temp name: 🔴 [There is MORE THAN ONE place](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G165) vs 🔵 [Choline](output/concept_relationship.csv#L210)
   - vocabulary_id_2: 🔴 [SNOMED ](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=I165) vs 🔵 [Nebraska Lexicon](output/concept_relationship.csv#L210)
-
 - **There is NO place** (2005200256)
   - temp class: 🔴 [Answer](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=J164) vs 🔵 [Location](output/concept_relationship.csv#L209)
   - temp domain: 🔴 [Observation](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=H164) vs 🔵 [Place of Service](output/concept_relationship.csv#L209)
   - temp name: 🔴 [There is NO place](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G164) vs 🔵 [Health encounter sites](output/concept_relationship.csv#L209)
   - vocabulary_id_2: 🔴 [SNOMED ](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=I164) vs 🔵 [Nebraska Lexicon](output/concept_relationship.csv#L209)
-
 - **When you used marijuana, approximately how many days in a typical week would you use it?** (2005200039)
   - concept_code_2: 🔴 [1333013](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=K28) vs 🔵 [733460004](output/concept_relationship.csv#L325)
   - temp class: 🔴 [Question](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=J28) vs 🔵 [Clinical Finding](output/concept_relationship.csv#L325)
   - temp name: 🔴 [How often did you use cannabis?](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G28) vs 🔵 [Marijuana user](output/concept_relationship.csv#L325)
   - vocabulary_id_2: 🔴 [PPI](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=I28) vs 🔵 [SNOMED](output/concept_relationship.csv#L325)
-
 - **White Blood Cells (WBC) - x10E3/µL** (2005200182)
   - concept_code_2: 🔴 [767002](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=K115) vs 🔵 [104128002](output/concept_relationship.csv#L429)
-

@@ -529,7 +529,7 @@ Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
                         report += f"- **{concept_name_manual}** ({concept_id})\n"
                         for detail in concept_details:
                             report += f"{detail}\n"
-                        report += "\n"
+                        # report += "\n"
     
     return report
 
