@@ -66,7 +66,7 @@ outputs = [
             'concept_id':       {'both': 'TARGET_CONCEPT_ID'},
             'vocabulary_id':    {'both': 'TARGET_VOCABULARY_ID'},
             'domain_id':        {'both': 'TARGET_DOMAIN_ID'},
-            'v6_domain_id':     {'default': 'survey_conduct'},
+            # 'v6_domain_id':     {'default': 'survey_conduct'},
             'concept_class_id': {'both': 'TARGET_CONCEPT_CLASS_ID'},
             'standard_concept': {'both': 'TARGET_STANDARD_CONCEPT'},
             'valid_start_date': {'default': '1/1/1970'},
@@ -241,6 +241,10 @@ def process_source_data(gc: gspread.Client, source: Dict[str, Any], crm_df: pd.D
     # Convert TARGET_CONCEPT_ID to numeric
     df_all['TARGET_CONCEPT_ID'] = pd.to_numeric(df_all['TARGET_CONCEPT_ID'], errors='coerce').fillna(0).astype(int)
     
+    # Convert qualifier_concept_id to numeric if it exists
+    if 'qualifier_concept_id' in df_all.columns:
+        df_all['qualifier_concept_id'] = pd.to_numeric(df_all['qualifier_concept_id'], errors='coerce').fillna(0).astype(int)
+    
     # Filter for new concepts (ID > 2000000000) or those needing extensions
     if 'Extension_Needed' in df_all.columns:
         df = df_all[(df_all['TARGET_CONCEPT_ID'] > 2000000000) |
@@ -248,6 +252,21 @@ def process_source_data(gc: gspread.Client, source: Dict[str, Any], crm_df: pd.D
                     (df_all['TARGET_VOCABULARY_ID'] == 'AIREADI-Vision')]
     else:
         df = df_all[df_all['TARGET_CONCEPT_ID'] > 2000000000]
+    
+    # Add rows where qualifier_concept_id > 2000000000 if the column exists
+    if 'qualifier_concept_id' in df_all.columns:
+        qualifier_df = df_all[df_all['qualifier_concept_id'] > 2000000000]
+        if not qualifier_df.empty:
+            # For qualifier concept rows, treat qualifier_concept_id as the main concept
+            # Create a copy and swap the values
+            qualifier_rows = qualifier_df.copy()
+            qualifier_rows['TARGET_CONCEPT_ID'] = qualifier_df['qualifier_concept_id']
+            # Set qualifier_concept_id to 0 to avoid double processing
+            qualifier_rows['qualifier_concept_id'] = 0
+            
+            # Combine with existing df, removing duplicates based on TARGET_CONCEPT_ID
+            df = pd.concat([df, qualifier_rows], ignore_index=True)
+            df = df.drop_duplicates(subset=['TARGET_CONCEPT_ID'], keep='first')
     
     # Process each output file specification
     for output_spec in outputs:
@@ -351,6 +370,12 @@ def process_output_file(df: pd.DataFrame, output_spec: Dict[str, Any], tag: str,
                 result_df[col] = result_df['concept_id_1'].apply(
                     lambda x: crm_mapping.get(str(x), {}).get(col, '') if str(x) in crm_mapping else ''
                 )
+        
+        # Fill vocabulary_id_1 from crm_df or leave blank
+        if 'vocabulary_id_1' in crm_df.columns:
+            result_df['vocabulary_id_1'] = result_df['concept_id_1'].apply(
+                lambda x: crm_mapping.get(str(x), {}).get('vocabulary_id_1', '') if str(x) in crm_mapping else ''
+            )
     
     return result_df
 

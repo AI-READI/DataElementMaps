@@ -76,7 +76,7 @@ def normalize_value(value: Any) -> str:
     return str_value
 
 
-def load_worksheet_data(gc: gspread.Client, spreadsheet_name: str, worksheet_name: str) -> pd.DataFrame:
+def load_worksheet_data(gc: gspread.Client, spreadsheet_name: str, worksheet_name: str) -> Tuple[pd.DataFrame, int]:
     """
     Load data from a Google Sheets worksheet.
     
@@ -86,7 +86,7 @@ def load_worksheet_data(gc: gspread.Client, spreadsheet_name: str, worksheet_nam
         worksheet_name: Name of the worksheet
         
     Returns:
-        DataFrame with worksheet data
+        Tuple of (DataFrame with worksheet data, number of rows skipped from top)
     """
     try:
         spreadsheet = gc.open(spreadsheet_name)
@@ -94,23 +94,25 @@ def load_worksheet_data(gc: gspread.Client, spreadsheet_name: str, worksheet_nam
         df = get_as_dataframe(worksheet)
         
         # Clean the dataframe similar to autogen.py
-        # Skip row 2 (index 1) which contains column descriptions
-        # Find first and last valid rows, but start from index 2 (row 3)
-        start_idx = 2  # Skip header (0) and descriptions (1)
+        # Dynamically detect where data starts, similar to clean_dataframe in autogen.py
+        start_idx = 0
+        id_column = 'concept_id_1' if 'concept_id_1' in df.columns else 'concept_id'
+        if pd.isna(pd.to_numeric(df.iloc[0][id_column], errors='coerce')):
+            start_idx = 1
         end_idx = len(df)
         
-        # Find the last row with meaningful data
+        # Find the last row with meaningful data (using the same logic as autogen.py)
         for idx in range(len(df) - 1, -1, -1):
-            if not df.iloc[idx].isna().all():
+            if pd.notna(df.iloc[idx][id_column]) and str(df.iloc[idx][id_column]).strip() != '':
                 end_idx = idx + 1
                 break
         
         df = df.iloc[start_idx:end_idx].fillna('')
-        return df
+        return df, start_idx
         
     except Exception as e:
         print(f"Error loading worksheet {worksheet_name}: {e}")
-        return pd.DataFrame()
+        return pd.DataFrame(), 0
 
 
 def load_csv_data(csv_path: str) -> pd.DataFrame:
@@ -137,7 +139,8 @@ def load_csv_data(csv_path: str) -> pd.DataFrame:
 
 
 def compare_dataframes(df_manual: pd.DataFrame, df_generated: pd.DataFrame, 
-                      id_column: str, name: str, target_info: Dict[str, Any] = None) -> Dict[str, Any]:
+                      id_column: str, name: str, target_info: Dict[str, Any] = None, 
+                      manual_rows_skipped: int = 0) -> Dict[str, Any]:
     """
     Compare two dataframes and generate detailed comparison results.
     
@@ -162,7 +165,8 @@ def compare_dataframes(df_manual: pd.DataFrame, df_generated: pd.DataFrame,
         'discrepancies': [],  # For other differences
         'manual_df': df_manual,  # Store for link generation
         'generated_df': df_generated,  # Store for link generation
-        'target_info': target_info  # Store target info for URL generation
+        'target_info': target_info,  # Store target info for URL generation
+        'manual_rows_skipped': manual_rows_skipped  # Store for row number calculation
     }
     
     if df_manual.empty or df_generated.empty:
@@ -199,11 +203,13 @@ def compare_dataframes(df_manual: pd.DataFrame, df_generated: pd.DataFrame,
     for row_id in manual_ids - generated_ids:
         row = manual_dict[row_id]
         concept_name = row.get('concept_name', '')
-        # Find the actual row number in the dataframe (add 3 for header, descriptions, + 1-indexed)
+        # Find the actual row number in the dataframe
         row_num = None
         for idx, df_row in df_manual.iterrows():
             if str(df_row[id_column]) == str(row_id):
-                row_num = idx + 3  # +3 for header, descriptions, and 1-indexed
+                # Calculate actual Google Sheets row number
+                # Add 1 for 1-indexed, then add 1 for header row, then add rows_skipped
+                row_num = idx + 1 + 1 + manual_rows_skipped
                 break
         results['unmatched_manual'].append({
             'id': row_id,
@@ -483,7 +489,8 @@ Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
                         # Find row number in manual dataframe
                         for idx, df_row in result['manual_df'].iterrows():
                             if str(df_row[id_column]) == str(concept_id):
-                                manual_row_num = idx + 3  # +3 for header, descriptions, and 1-indexed
+                                # Calculate actual Google Sheets row number 
+                                manual_row_num = idx + 1 + 1 + result['manual_rows_skipped']  # +1 for 1-indexed, +1 for header, +rows_skipped
                                 break
                         
                         # Find row number in generated dataframe  
@@ -551,7 +558,7 @@ def main():
             
             # Load manual worksheet data
             print(f"  Loading manual data from {target['worksheet_name']}...")
-            df_manual = load_worksheet_data(gc, target['spreadsheet_name'], target['worksheet_name'])
+            df_manual, manual_rows_skipped = load_worksheet_data(gc, target['spreadsheet_name'], target['worksheet_name'])
             
             # Load generated CSV data
             print(f"  Loading generated data from {target['csv_path']}...")
@@ -559,7 +566,7 @@ def main():
             
             # Compare the data
             print("  Comparing data...")
-            results = compare_dataframes(df_manual, df_generated, target['id_column'], target['name'], target)
+            results = compare_dataframes(df_manual, df_generated, target['id_column'], target['name'], target, manual_rows_skipped)
             all_results.append(results)
             
             if 'error' not in results:
@@ -571,12 +578,18 @@ def main():
         print("\nGenerating validation report...")
         report = generate_markdown_report(all_results)
         
-        # Save report to file
-        report_path = f"validation_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
-        with open(report_path, 'w', encoding='utf-8') as f:
+        # Save timestamped report
+        timestamped_report_path = f"old_validation_reports/validation_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
+        with open(timestamped_report_path, 'w', encoding='utf-8') as f:
             f.write(report)
         
-        print(f"Validation report saved to: {report_path}")
+        # Save generic report (for git tracking)
+        generic_report_path = "validation_report.md"
+        with open(generic_report_path, 'w', encoding='utf-8') as f:
+            f.write(report)
+        
+        print(f"Validation report saved to: {timestamped_report_path}")
+        print(f"Generic validation report saved to: {generic_report_path}")
         
         # Also print summary to console
         print("\n" + "="*50)

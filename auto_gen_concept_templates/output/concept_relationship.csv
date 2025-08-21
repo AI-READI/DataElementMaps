@@ -75,120 +75,22 @@ M2-Mac 6x6-360x360-(rep3)-OCTA,2005200202,rtma_odm1,AIREADI-Vision,,45885156,"De
 Triton-3D(H)+Radial 12x9-OCT,2005200203,rttr_odr,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Triton-Macula 6x6-OCTA,2005200204,rttr_odm1,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Triton-Macula 12x12-OCTA,2005200205,rttr_odm2,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-FLIO-Mac-HS,2005200304,rtfl_od,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-OptoMed-Disc centered-CFP,2005200289,rtop_osd,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-OptoMed-Mac centered-CFP,2005200290,rtop_osm,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Eidon-UWF Central-IR,2005200291,rtei_osir,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Eidon-UWF Central-FAF,2005200292,rtei_osfaf,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Eidon-UWF Central-CFP,2005200293,rtsm_osc,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Eidon-UWF Nasal-CFP,2005200294,rtsm_osn,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Eidon-UWF Temporal-CFP,2005200295,rtsm_ost,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Eidon- Create Mosaic Image-CFP,2005200296,rtsm_osm,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Spec-ONH-RC-HR-OCT,2005200297,rtso_oso,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Spec-PPole Mac-HR-61 lines-OCT,2005200298,rtso_osp,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Spec-Mac-20x20-HS-512 lines-OCTA,2005200299,rtso_osm,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Cirrus-Mac Cube-512x128-OCT,2005200300,rtci_osm1,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Cirrus-Disc Cube-200x200-OCT,2005200301,rtci_osd1,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Cirrus-Macula 6x6-OCTA,2005200302,rtci_osm2,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Cirrus-Disc 6x6-OCTA,2005200303,rtci_osd2,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-M2-3D Wide(H) 12x9-OCT,2005200200,rtma_osw,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-M2-3D Macula 6x6-OCT,2005200201,rtma_osm,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-M2-Mac 6x6-360x360-(rep3)-OCTA,2005200202,rtma_osm1,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Triton-3D(H)+Radial 12x9-OCT,2005200203,rttr_osr,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Triton-Macula 6x6-OCTA,2005200204,rttr_osm1,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Triton-Macula 12x12-OCTA,2005200205,rttr_osm2,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-FLIO-Mac-HS,2005200304,rtfl_os,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+FLIO-Mac-HS,2005200304,rtfl_od,AIREADI,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Specify other,2005200485,cmrouteot,AIREADI,,45883155,Other (specify),Meas Value,LOINC,Answer,LA6310-2,S,,,,1,skos:closeMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Specify other,2005200485,mhoccur_ot,AIREADI,,45883155,Other (specify),Meas Value,LOINC,Answer,LA6310-2,S,,,,1,skos:closeMatch,ManualMapping,ManualMappingCuration,,,RedCap
 "Have you had anything to eat or drink in the last six hours, including coffee or tea with milk or sugar or any other drink other than water?",2005200629,paate_6hr,AIREADI,,4060364,Fasting,Observation,SNOMED,Clinical Finding,16985007,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Physical Activity Monitor was worn on which wrist?,2005200206,dvamwenhand,AIREADI,,40768904,Which hand [PhenX],Observation,LOINC,Clinical Observation,66226-2,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_mi,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_cvdot,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_strk,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_clsh,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_hbp,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_ua,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_ear,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_pdr,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 "Other heart issues (Examples: pacemaker, heart valve disease, open heart surgery)",2005200627,1,AIREADI,,40770062,History of Problems with your heart or circulation [PhenX],Observation,LOINC,Clinical Observation,67434-1,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Stroke,2005200628,1,AIREADI,,40770062,History of Problems with your heart or circulation [PhenX],Observation,LOINC,Clinical Observation,67434-1,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 "Circulation problems (Examples: arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins)",2005200015,1,AIREADI,,40770062,History of Problems with your heart or circulation [PhenX],Observation,LOINC,Clinical Observation,67434-1,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Kidney problems,2005200017,1,AIREADI,,45881016,Kidney,Meas Value,LOINC,Answer,LA4591-9,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhterm_dm1,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Elevated A1C levels (elevated blood sugars),2005200547,1,AIREADI,,4152671,Hemoglobin A1C - diabetic control interpretation,Measurement,SNOMED,Observable Entity,269823000,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Survey Started Timestamp,2005200558,cesstartts,AIREADI,,4294901,Started,Observation,SNOMED,Qualifier Value,385652002,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Survey Completed Timestamp,2005200559,cescmpts,AIREADI,,44788181,Completed successfully,Observation,SNOMED,Qualifier Value,15501000000100,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Started Timestamp,2005200558,icfsvyts,AIREADI,,4294901,Started,Observation,SNOMED,Qualifier Value,385652002,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Completed Timestamp,2005200559,icfcmpts,AIREADI,,44788181,Completed successfully,Observation,SNOMED,Qualifier Value,15501000000100,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Started Timestamp,2005200558,dmgstartts,AIREADI,,4294901,Started,Observation,SNOMED,Qualifier Value,385652002,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Completed Timestamp,2005200559,dmgcmpts,AIREADI,,44788181,Completed successfully,Observation,SNOMED,Qualifier Value,15501000000100,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Device returned,2005200589,dcvgmenyn,AIREADI,,44811193,Loan equipment returned,Observation,SNOMED,Clinical Finding,892231000000100,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Device returned,2005200589,dvenvenyn,AIREADI,,44811193,Loan equipment returned,Observation,SNOMED,Clinical Finding,892231000000100,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Started Timestamp,2005200558,dmlstartts,AIREADI,,4294901,Started,Observation,SNOMED,Qualifier Value,385652002,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Completed Timestamp,2005200559,dmlcmpts,AIREADI,,44788181,Completed successfully,Observation,SNOMED,Qualifier Value,15501000000100,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Started Timestamp,2005200558,dietstartts,AIREADI,,4294901,Started,Observation,SNOMED,Qualifier Value,385652002,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Completed Timestamp,2005200559,dietcmpts,AIREADI,,44788181,Completed successfully,Observation,SNOMED,Qualifier Value,15501000000100,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Started Timestamp,2005200558,faqstartts,AIREADI,,4294901,Started,Observation,SNOMED,Qualifier Value,385652002,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Completed Timestamp,2005200559,faqcmpts,AIREADI,,44788181,Completed successfully,Observation,SNOMED,Qualifier Value,15501000000100,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_circ,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_lbp,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_pd,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_ad,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhcat_adot,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhcat_dmtaot,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_cogn,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_ms,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_cns,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Neurocognitive disorder please specify,2005200455,mhoccur_cnsot,AIREADI,,36309562,Other neurological conditions,Meas Value,LOINC,Answer,LA28880-5,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_ra,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_oa,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_ca,AIREADI,,,,,,,,,,,,,,,,,,RedCap
 Other cancer type please (specify),2005200459,mhoccur_cnrot,AIREADI,,45884514,Other cancer,Meas Value,LOINC,Answer,LA14284-6,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_plm,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_gi,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_rnl,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_obs,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_glc,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_amd,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_crt,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_rvo,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhoccur_ded,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Started Timestamp,2005200558,mhstartts,AIREADI,,4294901,Started,Observation,SNOMED,Qualifier Value,385652002,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Completed Timestamp,2005200559,mhcmpts,AIREADI,,44788181,Completed successfully,Observation,SNOMED,Qualifier Value,15501000000100,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Started Timestamp,2005200558,viastartts,AIREADI,,4294901,Started,Observation,SNOMED,Qualifier Value,385652002,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Completed Timestamp,2005200559,viacmpts,AIREADI,,44788181,Completed successfully,Observation,SNOMED,Qualifier Value,15501000000100,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Started Timestamp,2005200558,paidstartts,AIREADI,,4294901,Started,Observation,SNOMED,Qualifier Value,385652002,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Completed Timestamp,2005200559,paidcmpts,AIREADI,,44788181,Completed successfully,Observation,SNOMED,Qualifier Value,15501000000100,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Started Timestamp,2005200558,preconstartts,AIREADI,,4294901,Started,Observation,SNOMED,Qualifier Value,385652002,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Completed Timestamp,2005200559,preconcmpts,AIREADI,,44788181,Completed successfully,Observation,SNOMED,Qualifier Value,15501000000100,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Started Timestamp,2005200558,pxfistartts,AIREADI,,4294901,Started,Observation,SNOMED,Qualifier Value,385652002,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Completed Timestamp,2005200559,pxsficmpts,AIREADI,,44788181,Completed successfully,Observation,SNOMED,Qualifier Value,15501000000100,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 PhenX MetaData,2005200102,px270301_metadata,AIREADI,,,,,,,,,,,,,,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Started Timestamp,2005200558,pxnestartts,AIREADI,,4294901,Started,Observation,SNOMED,Qualifier Value,385652002,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Completed Timestamp,2005200559,pxnecmpts,AIREADI,,44788181,Completed successfully,Observation,SNOMED,Qualifier Value,15501000000100,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-PhenX MetaData,2005200102,px291201_metadata,AIREADI,,,,,,,,,,,,,,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Started Timestamp,2005200558,pxrdcmpts,AIREADI,,4294901,Started,Observation,SNOMED,Qualifier Value,385652002,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Completed Timestamp,2005200559,pxrdstartts,AIREADI,,44788181,Completed successfully,Observation,SNOMED,Qualifier Value,15501000000100,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-PhenX MetaData,2005200102,px281501_metadata,AIREADI,,,,,,,,,,,,,,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Started Timestamp,2005200558,pxsdohstartts,AIREADI,,4294901,Started,Observation,SNOMED,Qualifier Value,385652002,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Completed Timestamp,2005200559,pxsdohcmpts,AIREADI,,44788181,Completed successfully,Observation,SNOMED,Qualifier Value,15501000000100,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-PhenX MetaData,2005200102,px270201_metadata,AIREADI,,,,,,,,,,,,,,ManualMapping,ManualMappingCuration,,,RedCap
-PhenX MetaData,2005200102,px011002_metadata,AIREADI,,,,,,,,,,,,,,ManualMapping,ManualMappingCuration,,,RedCap
-PhenX MetaData,2005200102,px280301_metadata,AIREADI,,,,,,,,,,,,,,ManualMapping,ManualMappingCuration,,,RedCap
-PhenX MetaData,2005200102,px281401_metadata,AIREADI,,,,,,,,,,,,,,ManualMapping,ManualMappingCuration,,,RedCap
-PhenX MetaData,2005200102,px280801_metadata,AIREADI,,,,,,,,,,,,,,ManualMapping,ManualMappingCuration,,,RedCap
-PhenX MetaData,2005200102,px11502_metadata,AIREADI,,,,,,,,,,,,,,ManualMapping,ManualMappingCuration,,,RedCap
-PhenX MetaData,2005200102,px270101_metadata,AIREADI,,,,,,,,,,,,,,ManualMapping,ManualMappingCuration,,,RedCap
-PhenX MetaData,2005200102,px280901_metadata,AIREADI,,,,,,,,,,,,,,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Started Timestamp,2005200558,recstartts,AIREADI,,4294901,Started,Observation,SNOMED,Qualifier Value,385652002,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Completed Timestamp,2005200559,reccmpts,AIREADI,,44788181,Completed successfully,Observation,SNOMED,Qualifier Value,15501000000100,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mh_a1c,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhterm_dm2,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,mhterm_predm,AIREADI,,,,,,,,,,,,,,,,,,RedCap
-Survey Started Timestamp,2005200558,scrstartts,AIREADI,,4294901,Started,Observation,SNOMED,Qualifier Value,385652002,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Completed Timestamp,2005200559,scrcmpts,AIREADI,,44788181,Completed successfully,Observation,SNOMED,Qualifier Value,15501000000100,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Started Timestamp,2005200558,sustartts,AIREADI,,4294901,Started,Observation,SNOMED,Qualifier Value,385652002,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Completed Timestamp,2005200559,sucmpts,AIREADI,,44788181,Completed successfully,Observation,SNOMED,Qualifier Value,15501000000100,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 "What is your ancestry or ethnic origin?(Examples: Italian, Jamaican, African American, Cambodian, Cape Verdean, Cherokee, Navajo, Nez Pearce, Norwegian, Dominican, French Canadian, Haitian, Korean, Lebanese, Polish, Nigerian, Mexican, Taiwanese, Ukrainian, and so on.)",2005200557,ancestry,AIREADI,,45880188,Your ancestry or national origin,Meas Value,LOINC,Answer,LA15574-9,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Activity monitor returned?,2005200555,dvamwenyn,AIREADI,,42528781,Wearable device external physiologic monitoring panel,Measurement,LOINC,Clinical Observation,82611-5,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Less than 30 minutes daily less than 3 days a week,2005200313,5,AIREADI,,27789000,,,,,,,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
@@ -204,7 +106,6 @@ Left Foot - Felt:,2005200161,msslffl,AIREADI,,45876849,Left leg or foot,Meas Val
 Left Foot - Tested:,2005200162,msslftt,AIREADI,,45876849,Left leg or foot,Meas Value,LOINC,Answer,LA16378-4,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Could not get an appointment,2005200248,4,AIREADI,,1989310,Missed scheduled appointment with healthcare provider in past Mo,Observation,LOINC,Clinical Observation,98867-5,S,,,,0,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 How many hours since you last ate? (number of hours),2005200151,paate,AIREADI,,4200039,Time of last food intake,Observation,SNOMED,Observable Entity,301897001,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-There are no streets or roads in my neighborhood,2005200269,88,AIREADI,,4030757,Neighborhood / workplace safety finding,Observation,SNOMED,Clinical Finding,129685008,S,,,,0.25,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 There are no streets or roads in my neighborhood,2005200269,88,AIREADI,,4030757,Neighborhood / workplace safety finding,Observation,SNOMED,Clinical Finding,129685008,S,,,,0.25,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 There is NO place,2005200256,0,AIREADI,,3198235,Health encounter sites,Place of Service,Nebraska Lexicon,Location,394777002,,,,,0.25,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 There is MORE THAN ONE place,2005200257,2,AIREADI,,3198236,Choline,Drug,Nebraska Lexicon,Substance,65123005,,,,,0.25,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
@@ -324,49 +225,12 @@ In what form do you usually use marijuana?  (check all that apply),2005200037,s
 How many total years have you used marijuana?,2005200038,sumrjceddur,AIREADI,,37116660,Marijuana user,Observation,SNOMED,Clinical Finding,733460004,S,,,,0.5,skos:closeMatch,ManualMapping,ManualMappingCuration,,,RedCap
 "When you used marijuana, approximately how many days in a typical week would you use it?",2005200039,sumrjfr,AIREADI,,37116660,Marijuana user,Observation,SNOMED,Clinical Finding,733460004,S,,,,0.75,skos:closeMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Medication Name,2005200481,cmname,AIREADI,,1031609,Medication name,Observation,LOINC,LOINC Component,LP74144-4,,,,,1,skos:exactMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Specify other,2005200485,odristate,AIREADI,,45883155,Other (specify),Meas Value,LOINC,Answer,LA6310-2,S,,,,1,skos:closeMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Do you speak another language at home?,2005200480,pxep2,AIREADI,,37079013,Language other than English,Meas Value,LOINC,Answer,LA30188-9,S,,,,1,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Was your mother or father diagnosed with Type II Diabetes?,2005200463,fh_dm2ptsp,AIREADI,,4334340,Family history of diabetes mellitus type 2,Observation,SNOMED,Context-dependent,430679000,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 "If yes, please check all that apply: brother, sister, half-sister, half-brother",2005200464,fh_dm2sbsp,AIREADI,,45880130,Family member,Meas Value,LOINC,Answer,LA9277-0,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 "Have you been diagnosed with any conditions not listed above? (any condition, not just eyes)",2005200470,mhoccur_yn,AIREADI,,46234759,Other health condition,Observation,LOINC,Clinical Observation,76472-0,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Feeling depressed when you think about living with diabetes,2005200045,paid_dpr,AIREADI,,40546087,Depressed mood,Observation,SNOMED,Clinical Finding,366979004,S,,,,0.25,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Method used to complete form,2005200011,viaomthd,AIREADI,,4129438,Method,Observation,SNOMED,Attribute,260686004,,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,45883771,Rarely or never,Meas Value,LOINC,Answer,LA15665-5,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Some or a little of the time (1-2 days),2005200142,1,AIREADI,,45879198,Some of the time,Meas Value,LOINC,Answer,LA14733-2,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,45879593,Occasionally,Meas Value,LOINC,Answer,LA6483-7,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-All of the time (5-7 days),2005200144,3,AIREADI,,45879199,Most of the time,Meas Value,LOINC,Answer,LA14734-0,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,45883771,Rarely or never,Meas Value,LOINC,Answer,LA15665-5,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Some or a little of the time (1-2 days),2005200142,1,AIREADI,,45879198,Some of the time,Meas Value,LOINC,Answer,LA14733-2,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,45879593,Occasionally,Meas Value,LOINC,Answer,LA6483-7,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-All of the time (5-7 days),2005200144,3,AIREADI,,45879199,Most of the time,Meas Value,LOINC,Answer,LA14734-0,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,45883771,Rarely or never,Meas Value,LOINC,Answer,LA15665-5,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Some or a little of the time (1-2 days),2005200142,1,AIREADI,,45879198,Some of the time,Meas Value,LOINC,Answer,LA14733-2,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,45879593,Occasionally,Meas Value,LOINC,Answer,LA6483-7,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-All of the time (5-7 days),2005200144,3,AIREADI,,45879199,Most of the time,Meas Value,LOINC,Answer,LA14734-0,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,45883771,Rarely or never,Meas Value,LOINC,Answer,LA15665-5,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Some or a little of the time (1-2 days),2005200142,1,AIREADI,,45879198,Some of the time,Meas Value,LOINC,Answer,LA14733-2,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,45879593,Occasionally,Meas Value,LOINC,Answer,LA6483-7,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-All of the time (5-7 days),2005200144,3,AIREADI,,45879199,Most of the time,Meas Value,LOINC,Answer,LA14734-0,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Rarely or none of the time (< 1 day),2005200141,3,AIREADI,,45883771,Rarely or never,Meas Value,LOINC,Answer,LA15665-5,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Some or a little of the time (1-2 days),2005200142,2,AIREADI,,45879198,Some of the time,Meas Value,LOINC,Answer,LA14733-2,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2005200143,1,AIREADI,,45879593,Occasionally,Meas Value,LOINC,Answer,LA6483-7,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-All of the time (5-7 days),2005200144,0,AIREADI,,45879199,Most of the time,Meas Value,LOINC,Answer,LA14734-0,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,45883771,Rarely or never,Meas Value,LOINC,Answer,LA15665-5,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Some or a little of the time (1-2 days),2005200142,1,AIREADI,,45879198,Some of the time,Meas Value,LOINC,Answer,LA14733-2,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,45879593,Occasionally,Meas Value,LOINC,Answer,LA6483-7,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-All of the time (5-7 days),2005200144,3,AIREADI,,45879199,Most of the time,Meas Value,LOINC,Answer,LA14734-0,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,45883771,Rarely or never,Meas Value,LOINC,Answer,LA15665-5,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Some or a little of the time (1-2 days),2005200142,1,AIREADI,,45879198,Some of the time,Meas Value,LOINC,Answer,LA14733-2,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,45879593,Occasionally,Meas Value,LOINC,Answer,LA6483-7,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-All of the time (5-7 days),2005200144,3,AIREADI,,45879199,Most of the time,Meas Value,LOINC,Answer,LA14734-0,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Rarely or none of the time (< 1 day),2005200141,3,AIREADI,,45883771,Rarely or never,Meas Value,LOINC,Answer,LA15665-5,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Some or a little of the time (1-2 days),2005200142,2,AIREADI,,45879198,Some of the time,Meas Value,LOINC,Answer,LA14733-2,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2005200143,1,AIREADI,,45879593,Occasionally,Meas Value,LOINC,Answer,LA6483-7,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-All of the time (5-7 days),2005200144,0,AIREADI,,45879199,Most of the time,Meas Value,LOINC,Answer,LA14734-0,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,45883771,Rarely or never,Meas Value,LOINC,Answer,LA15665-5,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Some or a little of the time (1-2 days),2005200142,1,AIREADI,,45879198,Some of the time,Meas Value,LOINC,Answer,LA14733-2,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,45879593,Occasionally,Meas Value,LOINC,Answer,LA6483-7,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-All of the time (5-7 days),2005200144,3,AIREADI,,45879199,Most of the time,Meas Value,LOINC,Answer,LA14734-0,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Rarely or none of the time (< 1 day),2005200141,0,AIREADI,,45883771,Rarely or never,Meas Value,LOINC,Answer,LA15665-5,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Some or a little of the time (1-2 days),2005200142,1,AIREADI,,45879198,Some of the time,Meas Value,LOINC,Answer,LA14733-2,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Occasionally or a moderate amount of time (3-4 days),2005200143,2,AIREADI,,45879593,Occasionally,Meas Value,LOINC,Answer,LA6483-7,S,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
@@ -407,11 +271,6 @@ Less than 1 time,2005200238,0,AIREADI,,45882431,1 time per week,Meas Value,LOINC
 1 - 3 times,2005200239,1,AIREADI,,45883428,3 or 4,Meas Value,LOINC,Answer,LA15695-2,S,,,,1,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 5 or more,2005200240,0,AIREADI,,21499051,5 or more times,Meas Value,LOINC,Answer,LA26057-2,S,,,,0.75,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
 2 or less,2005200241,2,AIREADI,,45884526,1-2,Meas Value,LOINC,Answer,LA14352-1,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-5 or more,2005200240,0,AIREADI,,21499051,5 or more times,Meas Value,LOINC,Answer,LA26057-2,S,,,,0.75,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-2 or less,2005200241,2,AIREADI,,45884526,1-2,Meas Value,LOINC,Answer,LA14352-1,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Less than 1,2005200242,0,AIREADI,,45882431,1 time per week,Meas Value,LOINC,Answer,LA13829-9,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Less than 1 time,2005200238,2,AIREADI,,45882431,1 time per week,Meas Value,LOINC,Answer,LA13829-9,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-1 time or less,2005200243,0,AIREADI,,45882431,1 time per week,Meas Value,LOINC,Answer,LA13829-9,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Less than 1,2005200242,0,AIREADI,,45882431,1 time per week,Meas Value,LOINC,Answer,LA13829-9,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Did the subject complete the study?,2005200192,eos_ds,AIREADI,,40482840,Completion of clinical trial,Observation,SNOMED,Clinical Finding,443729008,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Did not meet Inclusion/Exclusion criteria,2005200280,1,AIREADI,,36310644,Does not meet diagnostic threshold,Meas Value,LOINC,Answer,LA24349-5,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
@@ -444,7 +303,6 @@ Do not have/know an eye doctor,2005200246,2,AIREADI,,45883792,Do not,Meas Value,
 "Cannot get to the office/clinic (too far away, no transportation)",2005200247,3,AIREADI,,36309220,Transportation limitations,Meas Value,LOINC,Answer,LA28319-4,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 No reason to go (no problem),2005200249,5,AIREADI,,45878810,No apparent problem,Meas Value,LOINC,Answer,LA9619-3,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Have not thought of it,2005200250,6,AIREADI,,45878810,No apparent problem,Meas Value,LOINC,Answer,LA9619-3,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Within the past 2 years (1 year but less than 2 years ago),2005200244,3,AIREADI,,45876410,More than 12 months ago but within the past 3 years,Meas Value,LOINC,Answer,LA15790-1,S,,,,1,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Feeling scared when you think about living with diabetes,2005200044,paid_scrd,AIREADI,,36716888,Fear of metabolic disease,Condition,SNOMED,Clinical Finding,723113005,S,,,,0.25,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Worrying about the future and the possibility of serious complications,2005200046,paid_wr,AIREADI,,4084699,Anxiety about body function or health,Observation,SNOMED,Clinical Finding,247808006,S,,,,0.25,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Feeling that diabetes is taking up too much of your mental and physical energy every day,2005200047,paid_eng,AIREADI,,4265571,Finding related to ability to comply with treatment,Observation,SNOMED,Clinical Finding,397695000,S,,,,0.25,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
@@ -455,27 +313,6 @@ Minor problem,2005200214,1,AIREADI,,45881304,Potential problem,Meas Value,LOINC,
 Moderate problem,2005200215,2,AIREADI,,45881304,Potential problem,Meas Value,LOINC,Answer,LA9618-5,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Somewhat serious problem,2005200216,3,AIREADI,,45884351,Problem,Meas Value,LOINC,Answer,LA9617-7,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Serious problem,2005200217,4,AIREADI,,45884351,Problem,Meas Value,LOINC,Answer,LA9617-7,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Not a problem,2005200213,0,AIREADI,,45878810,No apparent problem,Meas Value,LOINC,Answer,LA9619-3,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Minor problem,2005200214,1,AIREADI,,45881304,Potential problem,Meas Value,LOINC,Answer,LA9618-5,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Moderate problem,2005200215,2,AIREADI,,45881304,Potential problem,Meas Value,LOINC,Answer,LA9618-5,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Somewhat serious problem,2005200216,3,AIREADI,,45884351,Problem,Meas Value,LOINC,Answer,LA9617-7,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Serious problem,2005200217,4,AIREADI,,45884351,Problem,Meas Value,LOINC,Answer,LA9617-7,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Not a problem,2005200213,0,AIREADI,,45878810,No apparent problem,Meas Value,LOINC,Answer,LA9619-3,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Minor problem,2005200214,1,AIREADI,,45881304,Potential problem,Meas Value,LOINC,Answer,LA9618-5,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Moderate problem,2005200215,2,AIREADI,,45881304,Potential problem,Meas Value,LOINC,Answer,LA9618-5,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Somewhat serious problem,2005200216,3,AIREADI,,45884351,Problem,Meas Value,LOINC,Answer,LA9617-7,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Serious problem,2005200217,4,AIREADI,,45884351,Problem,Meas Value,LOINC,Answer,LA9617-7,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Not a problem,2005200213,0,AIREADI,,45878810,No apparent problem,Meas Value,LOINC,Answer,LA9619-3,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Minor problem,2005200214,1,AIREADI,,45881304,Potential problem,Meas Value,LOINC,Answer,LA9618-5,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Moderate problem,2005200215,2,AIREADI,,45881304,Potential problem,Meas Value,LOINC,Answer,LA9618-5,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Somewhat serious problem,2005200216,3,AIREADI,,45884351,Problem,Meas Value,LOINC,Answer,LA9617-7,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Serious problem,2005200217,4,AIREADI,,45884351,Problem,Meas Value,LOINC,Answer,LA9617-7,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Not a problem,2005200213,0,AIREADI,,45878810,No apparent problem,Meas Value,LOINC,Answer,LA9619-3,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Minor problem,2005200214,1,AIREADI,,45881304,Potential problem,Meas Value,LOINC,Answer,LA9618-5,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Moderate problem,2005200215,2,AIREADI,,45881304,Potential problem,Meas Value,LOINC,Answer,LA9618-5,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Somewhat serious problem,2005200216,3,AIREADI,,45884351,Problem,Meas Value,LOINC,Answer,LA9617-7,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Serious problem,2005200217,4,AIREADI,,45884351,Problem,Meas Value,LOINC,Answer,LA9617-7,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Does not apply to my neighborhood,2005200268,88,AIREADI,,45879145,PEFR 1,Meas Value,LOINC,Answer,LA16616-7,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Does not apply to my neighborhood,2005200268,88,AIREADI,,45879145,PEFR 1,Meas Value,LOINC,Answer,LA16616-7,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 6 or more,2005200270,6,AIREADI,,45879188,6 or more times,Meas Value,LOINC,Answer,LA14674-8,S,,,,0.75,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
 "Thinking about the next 12 months, how likely do you think it is that you will lose your job or be laid off?",2005200073,pxji1,AIREADI,,,,,,,,,,,,,,ManualMapping,ManualMappingCuration,,,RedCap
@@ -488,25 +325,12 @@ Did any other person in your household delay getting prescription medicines beca
 "In the last 12 months, was there any time when anyone else in your household needed prescription medicines, but did not get them because you/they couldn't afford it?",2005200080,pxpa4,AIREADI,,,,,,,,,,,,,,ManualMapping,ManualMappingCuration,,,RedCap
 Will be leaving labor force voluntarily,2005200251,5,AIREADI,,45877709,Unemployed,Meas Value,LOINC,Answer,LA17956-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Covered,2005200252,1,AIREADI,,46237671,Insurance,Meas Value,LOINC,Answer,LA21462-9,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Covered,2005200252,1,AIREADI,,46237671,Insurance,Meas Value,LOINC,Answer,LA21462-9,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Covered,2005200252,1,AIREADI,,46237671,Insurance,Meas Value,LOINC,Answer,LA21462-9,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Covered,2005200252,1,AIREADI,,46237671,Insurance,Meas Value,LOINC,Answer,LA21462-9,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Covered,2005200252,1,AIREADI,,46237671,Insurance,Meas Value,LOINC,Answer,LA21462-9,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Covered,2005200252,1,AIREADI,,46237671,Insurance,Meas Value,LOINC,Answer,LA21462-9,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Covered,2005200252,1,AIREADI,,46237671,Insurance,Meas Value,LOINC,Answer,LA21462-9,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 I do NOT have health insurance,2005200253,0,AIREADI,,45881114,Not Covered by Insurance,Meas Value,LOINC,Answer,LA10041-4,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 I HAVE some kind of health insurance,2005200254,1,AIREADI,,46237671,Insurance,Meas Value,LOINC,Answer,LA21462-9,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Within the last 10 years (5 years but less than 10 years ago),2005200255,5,AIREADI,,45884538,More than 5 years,Meas Value,LOINC,Answer,LA14769-6,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 Within the last 10 years (5 years but less than 10 years ago),2005200255,5,AIREADI,,45884538,More than 5 years,Meas Value,LOINC,Answer,LA14769-6,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 A doctor's office or health center,2005200258,1,AIREADI,,36309375,Doctor's office,Meas Value,LOINC,Answer,LA26177-8,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 "Walk-in clinic, urgent care center, or retail clinic in a pharmacy or grocery store",2005200259,2,AIREADI,,1990187,Urgent Care Center,Meas Value,LOINC,Answer,LA24179-6,S,,,,1,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
 A VA Medical Center or VA outpatient clinic,2005200260,4,AIREADI,,36309555,Hospital outpatient clinic,Meas Value,LOINC,Answer,LA26180-2,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-1 - 10 times,2005200262,1,AIREADI,,45876834,1-10,Meas Value,LOINC,Answer,LA14422-2,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-11 - 19 times,2005200263,2,AIREADI,,46237301,More than 10 times,Meas Value,LOINC,Answer,LA23703-4,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-20 - 29 times,2005200264,3,AIREADI,,46237301,More than 10 times,Meas Value,LOINC,Answer,LA23703-4,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-30 - 39 times,2005200265,4,AIREADI,,46237301,More than 10 times,Meas Value,LOINC,Answer,LA23703-4,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-40 - 49 times,2005200266,5,AIREADI,,46237301,More than 10 times,Meas Value,LOINC,Answer,LA23703-4,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-50 or more times,2005200267,6,AIREADI,,45884714,More than 50,Meas Value,LOINC,Answer,LA15343-9,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 1 - 10 times,2005200262,1,AIREADI,,45876834,1-10,Meas Value,LOINC,Answer,LA14422-2,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 11 - 19 times,2005200263,2,AIREADI,,46237301,More than 10 times,Meas Value,LOINC,Answer,LA23703-4,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 20 - 29 times,2005200264,3,AIREADI,,46237301,More than 10 times,Meas Value,LOINC,Answer,LA23703-4,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
@@ -522,6 +346,69 @@ More than 50 (3 or more packs),2005200195,51,AIREADI,,45884478,31 or more (3 poi
 26-30 (6 bottles),2005200208,26,AIREADI,,45876700,14 drinks or more a week,Meas Value,LOINC,Answer,LA14679-7,S,,,,1,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 31-35 (7 bottles),2005200209,31,AIREADI,,45876700,14 drinks or more a week,Meas Value,LOINC,Answer,LA14679-7,S,,,,1,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 More than 36 (greater than 7 bottles),2005200210,35,AIREADI,,45876700,14 drinks or more a week,Meas Value,LOINC,Answer,LA14679-7,S,,,,1,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-22 to 28,2005200196,22,AIREADI,,45876700,14 drinks or more a week,Meas Value,LOINC,Answer,LA14679-7,S,,,,1,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-29 to 35,2005200197,29,AIREADI,,45876770,26 to 35 cigarettes per day (about 1 1/2 packs),Meas Value,LOINC,Answer,LA15787-7,S,,,,1,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-36 or more,2005200198,36,AIREADI,,45876700,14 drinks or more a week,Meas Value,LOINC,Answer,LA14679-7,S,,,,1,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200605,mssrf1,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200606,mssrf2,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200607,mssrf3,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200608,mssrf4,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200609,mssrf5,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200610,mssrf6,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200611,mssrf7,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200612,mssrf8,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200613,mssrf9,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200614,mssrf10,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200615,msslf1,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200616,msslf2,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200617,msslf3,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200618,msslf4,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200619,msslf5,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200620,msslf6,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200621,msslf7,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200622,msslf8,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200623,msslf9,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Monofilament foot sensation test,2005200624,msslf10,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200570,cesmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200565,icf_dat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200587,c184390_dat,AIREADI,,765499,Written consent completed,Observation,SNOMED,Clinical Finding,5821000175103,S,,,,0.75,skos:closeMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Date,2005200594,cmcmpdat2,AIREADI,,764170,Gathering of current medication list,Observation,SNOMED,Procedure,451581000124104,S,,,,0.75,skos:closeMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200567,dmgcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Date,2005200591,dvamwstdat,AIREADI,,4169265,Device,Device,SNOMED,Physical Object,49062001,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Date,2005200592,dvcgmstdat,AIREADI,,4254068,Sensor device,Device,SNOMED,Physical Object,408746007,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Date,2005200604,dvamwendat,AIREADI,,4256607,Date,Observation,SNOMED,Attribute,410671006,,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200572,dmlcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200573,dietcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Date,2005200625,eos_dsstdat,AIREADI,,44810922,Participation in research study completed,Observation,SNOMED,Clinical Finding,871441000000107,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Date,2005200590,dricmpdat,AIREADI,,4151655,Driving assessment,Procedure,SNOMED,Procedure,310859004,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200562,faqcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200568,mhcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200451,mhcat_dmtaot,AIREADI,,35207358,Other Alzheimer's disease,Condition,ICD10CM,4-char billing code,G30.8,,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200603,lbdattim1,AIREADI,,45947519,LABORATORY RESULTS,Measurement,CIEL,LabSet,1361,,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Date,2005200593,cmcmpdat,AIREADI,,45880025,Medications,Meas Value,LOINC,Answer,LA20271-5,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200574,viacmpdat,AIREADI-Vision,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200571,paidcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200566,prtcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200564,preconcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200595,rtfncmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200596,rtfnocmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200597,rthracmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200598,rtoctcmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200599,rtm2cmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200600,rtfliocmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200601,rtaccmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200602,rtekgcmpdattim,AIREADI,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200584,pxsficmpdat,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200585,pxnecmpdat,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200586,pxrdcmpdat,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200575,pxsdohcmpdat,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX MetaData,2005200576,px270201_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX MetaData,2005200577,px011002_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX MetaData,2005200578,px280301_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX MetaData,2005200579,px281401_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX MetaData,2005200580,px280801_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX MetaData,2005200581,px11502_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX MetaData,2005200582,px270101_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX MetaData,2005200583,px280901_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Survey Started Timestamp,2005200561,recstartts,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Date,2005200626,rt_dat,AIREADI,,44792407,Assessment,Type Concept,SNOMED,Record Artifact,325931000000109,,,,,0.75,skos:exactMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200563,scrcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200588,icfa_dat,AIREADI,,3018196,Informed consent obtained,Observation,LOINC,Clinical Observation,19826-7,S,,,,0.75,skos:closeMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Performed,2005200569,sucmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap

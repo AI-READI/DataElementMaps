@@ -1,2 +1,5 @@
 .DS_Store
 .env
+validation_report_*.md
+.idea
+__pycache__

@@ -1,497 +1,384 @@
-concept_name,SRC_CODE,concept_id,vocabulary_id,domain_id,v6_domain_id,concept_class_id,standard_concept,valid_start_date,valid_end_date,invalid_reason,source
-VA Letter Score - Photopic VA - OD,viaodplog,2005200042,AIREADI-Vision,Measurement,survey_conduct,Clinical Observation,S,1/1/1970,,,RedCap
-VA Letter Score - Photopic VA - OS,viaosplog,2005200043,AIREADI-Vision,Measurement,survey_conduct,Clinical Observation,S,1/1/1970,,,RedCap
-Photopic LogMAR OD Score,viaodpscore,2005200052,AIREADI-Vision,Measurement,survey_conduct,Clinical Observation,S,1/1/1970,,,RedCap
-Photopic LogMAR OS Score,viaospscore,2005200053,AIREADI-Vision,Measurement,survey_conduct,Clinical Observation,S,1/1/1970,,,RedCap
-LLVA Letter Score - Mesopic VA - OD,viaodmlog,2005200056,AIREADI-Vision,Measurement,survey_conduct,Clinical Observation,S,1/1/1970,,,RedCap
-LLVA Letter Score - Mesopic VA - OS,viaosmlog,2005200057,AIREADI-Vision,Measurement,survey_conduct,Clinical Observation,S,1/1/1970,,,RedCap
-Mesopic LogMAR OD Score,viaodmscore,2005200336,AIREADI-Vision,Measurement,survey_conduct,Clinical Observation,S,1/1/1970,,,RedCap
-Mesopic LogMAR OS Score,viaosmscore,2005200337,AIREADI-Vision,Measurement,survey_conduct,Clinical Observation,S,1/1/1970,,,RedCap
-Snellen fraction - Photopic VA - OD,viaodpsf,2005200012,AIREADI-Vision,Measurement,survey_conduct,Clinical Observation,S,1/1/1970,,,RedCap
-Snellen fraction - Photopic VA - OS,viaospsf,2005200013,AIREADI-Vision,Measurement,survey_conduct,Clinical Observation,S,1/1/1970,,,RedCap
-Snellen fraction - Mesopic VA - OD,viaodmsf,2005200054,AIREADI-Vision,Measurement,survey_conduct,Clinical Observation,S,1/1/1970,,,RedCap
-Snellen fraction - Mesopic VA - OS,viaosmsf,2005200055,AIREADI-Vision,Measurement,survey_conduct,Clinical Observation,S,1/1/1970,,,RedCap
-EVA,1,2005200058,AIREADI-Vision,Measurement,survey_conduct,Clinical Observation,S,1/1/1970,,,RedCap
-"OD: Value of final correct letter - Mesopic, right eye",mlcsodfcl,2005200486,AIREADI-Vision,Measurement,survey_conduct,Measurement,S,1/1/1970,,,RedCap
-"OD: Number of misses prior to stopping - Mesopic, right eye",mlcsodmiss,2005200487,AIREADI-Vision,Measurement,survey_conduct,Measurement,S,1/1/1970,,,RedCap
-"OD: Log Contrast Sensitivity - Mesopic, right eye",mlcsodlog,2005200552,AIREADI-Vision,Measurement,survey_conduct,Measurement,S,1/1/1970,,,RedCap
-"OS: Value of final correct letter - Mesopic, left eye",mlcsosfcl,2005200488,AIREADI-Vision,Measurement,survey_conduct,Measurement,S,1/1/1970,,,RedCap
-"OS: Number of misses prior to stopping - Mesopic, left eye",mlcsosmiss,2005200489,AIREADI-Vision,Measurement,survey_conduct,Measurement,S,1/1/1970,,,RedCap
-"OS: Log Contrast Sensitivity - Mesopic, left eye",mlcsoslog,2005200553,AIREADI-Vision,Measurement,survey_conduct,Measurement,S,1/1/1970,,,RedCap
-"OD: Value of final correct letter - Photopic, right eye",plcsodfcl,2005200338,AIREADI-Vision,Measurement,survey_conduct,Measurement,S,1/1/1970,,,RedCap
-"OD: Number of misses prior to stopping - Photopic, right eye",plcsodmiss,2005200339,AIREADI-Vision,Measurement,survey_conduct,Measurement,S,1/1/1970,,,RedCap
-"OD: Log Contrast Sensitivity - Photopic, right eye",plcsodlog,2005200155,AIREADI-Vision,Measurement,survey_conduct,Measurement,S,1/1/1970,,,RedCap
-"OS: Value of final correct letter - Photopic, left eye",plcsosfcl,2005200340,AIREADI-Vision,Measurement,survey_conduct,Measurement,S,1/1/1970,,,RedCap
-"OS: Number of misses prior to stopping - Photopic, left eye",plcsosmiss,2005200341,AIREADI-Vision,Measurement,survey_conduct,Measurement,S,1/1/1970,,,RedCap
-"OS: Log Contrast Sensitivity - Photopic, left eye",plcsoslog,2005200156,AIREADI-Vision,Measurement,survey_conduct,Measurement,S,1/1/1970,,,RedCap
-OptoMed-Disc centered-CFP,rtop_odd,2005200289,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-OptoMed-Mac centered-CFP,rtop_odm,2005200290,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Eidon-UWF Central-IR,rtei_odir,2005200291,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Eidon-UWF Central-FAF,rtei_odfaf,2005200292,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Eidon-UWF Central-CFP,rtsm_odc,2005200293,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Eidon-UWF Nasal-CFP,rtsm_odn,2005200294,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Eidon-UWF Temporal-CFP,rtsm_odt,2005200295,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Eidon- Create Mosaic Image-CFP,rtsm_odm,2005200296,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Spec-ONH-RC-HR-OCT,rtso_odo,2005200297,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Spec-PPole Mac-HR-61 lines-OCT,rtso_odp,2005200298,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Spec-Mac-20x20-HS-512 lines-OCTA,rtso_odm,2005200299,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Cirrus-Mac Cube-512x128-OCT,rtci_odm1,2005200300,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Cirrus-Disc Cube-200x200-OCT,rtci_odd1,2005200301,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Cirrus-Macula 6x6-OCTA,rtci_odm2,2005200302,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Cirrus-Disc 6x6-OCTA,rtci_odd2,2005200303,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-M2-3D Wide(H) 12x9-OCT,rtma_odw,2005200200,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-M2-3D Macula 6x6-OCT,rtma_odm,2005200201,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-M2-Mac 6x6-360x360-(rep3)-OCTA,rtma_odm1,2005200202,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Triton-3D(H)+Radial 12x9-OCT,rttr_odr,2005200203,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Triton-Macula 6x6-OCTA,rttr_odm1,2005200204,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Triton-Macula 12x12-OCTA,rttr_odm2,2005200205,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-FLIO-Mac-HS,rtfl_od,2005200304,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-OptoMed-Disc centered-CFP,rtop_osd,2005200289,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-OptoMed-Mac centered-CFP,rtop_osm,2005200290,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Eidon-UWF Central-IR,rtei_osir,2005200291,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Eidon-UWF Central-FAF,rtei_osfaf,2005200292,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Eidon-UWF Central-CFP,rtsm_osc,2005200293,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Eidon-UWF Nasal-CFP,rtsm_osn,2005200294,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Eidon-UWF Temporal-CFP,rtsm_ost,2005200295,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Eidon- Create Mosaic Image-CFP,rtsm_osm,2005200296,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Spec-ONH-RC-HR-OCT,rtso_oso,2005200297,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Spec-PPole Mac-HR-61 lines-OCT,rtso_osp,2005200298,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Spec-Mac-20x20-HS-512 lines-OCTA,rtso_osm,2005200299,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Cirrus-Mac Cube-512x128-OCT,rtci_osm1,2005200300,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Cirrus-Disc Cube-200x200-OCT,rtci_osd1,2005200301,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Cirrus-Macula 6x6-OCTA,rtci_osm2,2005200302,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Cirrus-Disc 6x6-OCTA,rtci_osd2,2005200303,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-M2-3D Wide(H) 12x9-OCT,rtma_osw,2005200200,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-M2-3D Macula 6x6-OCT,rtma_osm,2005200201,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-M2-Mac 6x6-360x360-(rep3)-OCTA,rtma_osm1,2005200202,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Triton-3D(H)+Radial 12x9-OCT,rttr_osr,2005200203,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Triton-Macula 6x6-OCTA,rttr_osm1,2005200204,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Triton-Macula 12x12-OCTA,rttr_osm2,2005200205,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-FLIO-Mac-HS,rtfl_os,2005200304,AIREADI-Vision,Observation,survey_conduct,Observable Entity,S,1/1/1970,,,RedCap
-Specify other,cmrouteot,2005200485,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Specify other,mhoccur_ot,2005200485,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"Have you had anything to eat or drink in the last six hours, including coffee or tea with milk or sugar or any other drink other than water?",paate_6hr,2005200629,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Physical Activity Monitor was worn on which wrist?,dvamwenhand,2005200206,AIREADI,Observation,survey_conduct,Clinical Observation,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_mi,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_cvdot,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_strk,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_clsh,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_hbp,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_ua,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_ear,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_pdr,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"Other heart issues (Examples: pacemaker, heart valve disease, open heart surgery)",1,2005200627,AIREADI,Condition,survey_conduct,Disorder,S,1/1/1970,,,RedCap
-Stroke,1,2005200628,AIREADI,Condition,survey_conduct,Disorder,S,1/1/1970,,,RedCap
-"Circulation problems (Examples: arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins)",1,2005200015,AIREADI,Condition,survey_conduct,Disorder,S,1/1/1970,,,RedCap
-Kidney problems,1,2005200017,AIREADI,Condition,survey_conduct,Disorder,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhterm_dm1,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Elevated A1C levels (elevated blood sugars),1,2005200547,AIREADI,Condition,survey_conduct,Disorder,S,1/1/1970,,,RedCap
-Survey Started Timestamp,cesstartts,2005200558,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Completed Timestamp,cescmpts,2005200559,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Started Timestamp,icfsvyts,2005200558,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Completed Timestamp,icfcmpts,2005200559,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Started Timestamp,dmgstartts,2005200558,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Completed Timestamp,dmgcmpts,2005200559,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Device returned,dcvgmenyn,2005200589,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Device returned,dvenvenyn,2005200589,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Started Timestamp,dmlstartts,2005200558,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Completed Timestamp,dmlcmpts,2005200559,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Started Timestamp,dietstartts,2005200558,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Completed Timestamp,dietcmpts,2005200559,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Started Timestamp,faqstartts,2005200558,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Completed Timestamp,faqcmpts,2005200559,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_circ,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_lbp,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_pd,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_ad,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhcat_adot,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhcat_dmtaot,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_cogn,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_ms,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_cns,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Neurocognitive disorder please specify,mhoccur_cnsot,2005200455,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_ra,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_oa,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_ca,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Other cancer type please (specify),mhoccur_cnrot,2005200459,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_plm,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_gi,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_rnl,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_obs,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_glc,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_amd,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_crt,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_rvo,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_ded,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Survey Started Timestamp,mhstartts,2005200558,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Completed Timestamp,mhcmpts,2005200559,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Started Timestamp,viastartts,2005200558,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Completed Timestamp,viacmpts,2005200559,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Started Timestamp,paidstartts,2005200558,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Completed Timestamp,paidcmpts,2005200559,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Started Timestamp,preconstartts,2005200558,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Completed Timestamp,preconcmpts,2005200559,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Started Timestamp,pxfistartts,2005200558,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Completed Timestamp,pxsficmpts,2005200559,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-PhenX MetaData,px270301_metadata,2005200102,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Survey Started Timestamp,pxnestartts,2005200558,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Completed Timestamp,pxnecmpts,2005200559,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-PhenX MetaData,px291201_metadata,2005200102,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Survey Started Timestamp,pxrdcmpts,2005200558,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Completed Timestamp,pxrdstartts,2005200559,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-PhenX MetaData,px281501_metadata,2005200102,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Survey Started Timestamp,pxsdohstartts,2005200558,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Completed Timestamp,pxsdohcmpts,2005200559,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-PhenX MetaData,px270201_metadata,2005200102,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-PhenX MetaData,px011002_metadata,2005200102,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-PhenX MetaData,px280301_metadata,2005200102,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-PhenX MetaData,px281401_metadata,2005200102,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-PhenX MetaData,px280801_metadata,2005200102,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-PhenX MetaData,px11502_metadata,2005200102,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-PhenX MetaData,px270101_metadata,2005200102,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-PhenX MetaData,px280901_metadata,2005200102,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Survey Started Timestamp,recstartts,2005200558,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Completed Timestamp,reccmpts,2005200559,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mh_a1c,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhterm_dm2,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,mhterm_predm,2005200014,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Survey Started Timestamp,scrstartts,2005200558,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Completed Timestamp,scrcmpts,2005200559,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Started Timestamp,sustartts,2005200558,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-Survey Completed Timestamp,sucmpts,2005200559,AIREADI,Observation,survey_conduct,Qualifier Value,S,1/1/1970,,,RedCap
-"What is your ancestry or ethnic origin?(Examples: Italian, Jamaican, African American, Cambodian, Cape Verdean, Cherokee, Navajo, Nez Pearce, Norwegian, Dominican, French Canadian, Haitian, Korean, Lebanese, Polish, Nigerian, Mexican, Taiwanese, Ukrainian, and so on.)",ancestry,2005200557,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Activity monitor returned?,dvamwenyn,2005200555,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Less than 30 minutes daily less than 3 days a week,5,2005200313,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-1 time or less,0,2005200243,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-5000 miles or less,1,2005200271,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-"5001 to 10,000 miles",2,2005200272,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-"10,001 to 15.000 miles",3,2005200273,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-"15,001 to 20,000 miles",4,2005200274,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-"More than 20,000 miles",5,2005200275,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Right Foot - Felt:,mssrffl,2005200159,AIREADI,Measurement,survey_conduct,Measurement,S,1/1/1970,,,RedCap
-Right Foot - Tested:,mssrftt,2005200160,AIREADI,Procedure,survey_conduct,Procedure,S,1/1/1970,,,RedCap
-Left Foot - Felt:,msslffl,2005200161,AIREADI,Measurement,survey_conduct,Measurement,S,1/1/1970,,,RedCap
-Left Foot - Tested:,msslftt,2005200162,AIREADI,Procedure,survey_conduct,Procedure,S,1/1/1970,,,RedCap
-Could not get an appointment,4,2005200248,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-How many hours since you last ate? (number of hours),paate,2005200151,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-There are no streets or roads in my neighborhood,88,2005200269,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-There are no streets or roads in my neighborhood,88,2005200269,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-There is NO place,0,2005200256,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-There is MORE THAN ONE place,2,2005200257,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Does not go to one place most often,6,2005200261,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Do you inject insulin to control your blood glucose levels?,cmtrt_insln,2005200549,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"Do you use lifestyle changes to control your A1C and blood glucose levels? Examples: regular exercise, avoiding sugary foods and beverages, eating a balanced diet with lots of vegetables, sticking to a consistent eating schedule",cmtrt_lfst,2005200004,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-More than 20 years,98,2005200211,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-More than 50 years,98,2005200212,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-"How many times a week did you eat beans (like pinto or black beans), chicken, or fish?",diet5,2005200059,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How many times a week did you eat regular snack chips or crackers (not low-fat)?,diet6,2005200060,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How many times a week did you eat desserts and other sweets (not the low-fat kind)?,diet7,2005200061,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How much margarine, butter, or meat fat do you use to season vegetables or put on potatoes, bread or corn?",diet8,2005200062,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How many servings of fruit juice did you drink each day?,diet9,2005200063,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Diet score,dietscore,2005200064,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"In an average week, how many days per week do you normally drive? (number of days)",dri1,2005200136,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-About how many miles did you personally drive during the past 12 months in all motorized vehicles?,dri2,2005200137,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-There is so much traffic on the streets that it makes it difficult or unpleasant to walk in my neighborhood. Would you say that you...,pxne8,2005200113,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"I see many people being physically active in my neighborhood doing things like walking, jogging, cycling, or playing sports and active games. Would you say that you...",pxne9,2005200114,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-There are many interesting things to look at while walking in my neighborhood. Would you say you...,pxne10,2005200115,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How many motor vehicles in working order (e.g., cars, trucks, motorcycles) are there at your household?",pxne11,2005200116,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-There are many four-way intersections in my neighborhood. Would you say that you...,pxne12,2005200117,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"The sidewalks in my neighborhood are well maintained (paved, with few cracks) and not obstructed. Would you say that you...",pxne13,2005200118,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Places for bicycling (such as bike paths) in and around my neighborhood are well maintained and not obstructed. Would you say that you...,pxne14,2005200119,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-There is so much traffic on the streets that it makes it difficult or unpleasant to ride a bicycle in my neighborhood. Would you say that you...,pxne15,2005200120,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-The crime rate in my neighborhood makes it unsafe to go on walks during the day. Would you say that you...,pxne16,2005200121,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-There are many places to go within easy walking distance of my home. Would you say that you...,pxne17,2005200122,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How often have you been treated unfairly by teachers and professors because of your race/ethnic group? How often in the past year?,pxrd1,2005200126,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How often have you been treated unfairly by teachers and professors because of your race/ethnic group? How often in your entire life?,pxrd2,2005200127,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been treated unfairly by teachers and professors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd3,2005200128,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? How often in the past year?",pxrd4,2005200493,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? How often in your entire life?",pxrd5,2005200494,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd6,2005200495,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? How often in the past year?",pxrd7,2005200496,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? How often in your entire life?",pxrd8,2005200497,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pdrx9,2005200498,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? How often in the past year?",pxrd10,2005200499,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? How often in your entire life?",pxrd11,2005200500,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd12,2005200501,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How often have you been treated unfairly by strangers because of your race/ethnic group? How often in the past year?,pxrd13,2005200502,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How often have you been treated unfairly by strangers because of your race/ethnic group? How often in your entire life?,pxrd14,2005200503,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been treated unfairly by strangers because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd15,2005200504,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? How often in the past year?",pxrd16,2005200505,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? How often in your entire life?",pxrd17,2005200506,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd18,2005200507,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How often have you been treated unfairly by neighbors because of your race/ethnic group? How often in the past year?,pxrd19,2005200508,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How often have you been treated unfairly by neighbors because of your race/ethnic group? How often in your entire life?,pxrd20,2005200509,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been treated unfairly by neighbors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd21,2005200510,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? How often in the past year?",pxrd22,2005200511,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? How often in your entire life?",pxrd23,2005200512,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd24,2005200513,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? How often in the past year?,pxrd25,2005200514,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? How often in your entire life?,pxrd26,2005200515,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd27,2005200516,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? How often in the past year?",pxrd28,2005200517,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? How often in your entire life?",pxrd29,2005200518,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd30,2005200519,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How often have people misunderstood your intentions and motives because of your race/ethnic group? How often in the past year?,pxrd31,2005200520,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How often have people misunderstood your intentions and motives because of your race/ethnic group? How often in your entire life?,pxrd32,2005200521,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have people misunderstood your intentions and motives because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd33,2005200522,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How often did you want to tell someone off for being racist towards you but didn't say anything? How often in the past year?,pxrd34,2005200523,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How often did you want to tell someone off for being racist towards you but didn't say anything? How often in your entire life?,pxrd35,2005200524,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often did you want to tell someone off for being racist towards you but didn't say anything? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd36,2005200525,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How often have you been really angry about something racist that was done to you? How often in the past year?,pxrd37,2005200526,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How often have you been really angry about something racist that was done to you? How often in your entire life?,pxrd38,2005200527,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been really angry about something racist that was done to you? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd39,2005200528,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? How often in the past year?",pxrd40,2005200529,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? How often in your entire life?",pxrd41,2005200530,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd42,2005200531,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How often have you been called a racist name? How often in the past year?,pxrd43,2005200532,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How often have you been called a racist name? How often in your entire life?,pxrd44,2005200533,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been called a racist name? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd45,2005200534,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? How often in the past year?,pxrd46,2005200535,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? How often in your entire life?,pxrd47,2005200536,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd48,2005200537,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? How often in the past year?",pxrd49,2005200538,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? How often in your entire life?",pxrd50,2005200539,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd51,2005200540,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In the Past Year?,pxrd52,2005200541,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In your entire life?,pxrd53,2005200542,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd54,2005200543,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Insurance through a current or former employer or union (of yours or another family member's). This would include COBRA coverage.,pxhic1,2005200081,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"Insurance purchased directly from an insurance company (by you or another family member). This would include coverage purchased through an exchange or marketplace, such as HealthCare.gov",pxhic2,2005200082,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"Medicare, for people 65 and older, or people with certain disabilities.",pxhic3,2005200083,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"Medicaid, Medical Assistance (MA), the Children's Health Insurance Program (CHIP), or any kind of state or government-sponsored assistance. plan based on income or a disability.",pxhic4,2005200084,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"TRICARE or other military health care, including VA health care.",pxhic5,2005200085,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Indian Health Service.,pxhic6,2005200086,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Any other type of health insurance coverage or health coverage plan,pxhic7,2005200087,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"Does this mean you currently have no health insurance or health coverage plan? In answering this question, please exclude plans that pay for only one type of service (such as, nursing home care, accidents, family planning, or dental care) and plans that only provide extra cash when hospitalized).",pxhic8,2005200088,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-What type of health insurance do you have?,pxhic9,2005200089,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-About how long has it been since you last saw a doctor or other health care professional about your health?,pxahc1,2005200090,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"Was this a wellness visit, physical, or general purpose check-up?",pxahc2,2005200091,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"About how long has it been since you last saw a doctor or other health professional for a wellness visit, physical, or general purpose check-up?",pxahc3,2005200092,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Is there a place that you USUALLY go to if you are sick and need health care? ,pxahc4,2005200093,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"What kind of place is it/do you go to most often? A doctor's office or health center is a place where you see the same doctor or the same group of doctors every visit, where you usually need to make an appointment ahead of time, and where your medical records are on file.Urgent care centers and clinics in a drug store or grocery store are places where you do not need to make an appointment ahead of time, and do not usually see the same health care provider at each visit.",pxahc5,2005200094,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"During the past 12 months, how many times have you gone to an urgent care center or a clinic in a drug store or grocery store about your health?Urgent care centers and clinics in drug stores or grocery stores are places where you do not need to make an appointment ahead of time, and do not usually see the same health care provider at each visit. This is different from a hospital emergency room.",pxahc6,2005200095,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"During the past 12 months, how many times have you gone to a hospital emergency room about your health?  *This includes emergency room visits that resulted in a hospital admission.",pxahc7,2005200096,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"During the past 12 months, have you been hospitalized overnight? (Do not include an overnight stay in the emergency room)",pxahc8,2005200097,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"During the past 12 months, have you DELAYED getting medical care because of the cost?",pxahc9,2005200098,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"During the past 12 months, was there any time when you needed medical care, but DID NOT GET IT because of the cost?",pxahc10,2005200099,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"Do you take pills to control your A1C and blood glucose levels? Examples: Metformin (Glucophage, Glumetza, Fortamet, Riomet), Glucotrol, Amaryl, DiaBeta, Blynase PresTab, Micronase, Actos, Avandia, Precose, Glyset, Prandin, Starlix, Januvia, Onglyza, Tradjenta, Nesina, Invokana, Farxiga, Jardiance, Welchol, and Cyclocet",cmtrt_a1c,2005200548,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"Do you use other injections to control your blood glucose levels?  Examples: Victoza, Ozempic, Symlin, Tanzeum, and Trulicity",cmtrt_glcs,2005200550,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Have you had any beer or ale in the past year?,subrkncf,2005200024,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"During the average week, how many 12 oz. bottles or cans of beer do you usually drink? (Number of bottles or cans per week)",subrdosfr,2005200025,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Have you had any wine in the past year?,suwnkncf,2005200026,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"During the average week, how many 5 oz. glasses of wine do you usually drink?  The average wine bottle has 5 servings. (Number of glasses per week)",suwndosfr,2005200027,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"Have you had any liquor in the past year, such as brandy, whiskey, vodka, gin, schnapps, cocktails, or liqueurs?",sulqkncf,2005200028,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"During the average week, how many 1.5 oz. of liquor do you usually drink, either as shots or in mixed cocktails? (Number of drinks per week)",sulqdosfr,2005200029,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"Do you drive after having a drink, even if it is only one drink?",sualcdrv,2005200030,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Have you ever vaped or used e-cigarettes?,suvpkncf1,2005200031,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-At what age did you start vaping or using e-cigarettes? (Age started - years old),suvpstage,2005200032,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Do you vape or use e-cigarettes now?,suvpcdur,2005200033,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How many total years have you vaped or used e-cigarettes?,suvptoage,2005200034,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"When you vaped or used e-cigarettes, approximately how many days in a typical week would you use it?",suvpdosfr,2005200035,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"Have you ever used marijuana (cannabis)? (This includes smoking marijuana, using cannabis concentrates, and edibles.)",sumrjkncf,2005200036,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Do you use marijuana now?,sumrjcdur,2005200473,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-In what form do you usually use marijuana?  (check all that apply),sumrjtrt,2005200037,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How many total years have you used marijuana?,sumrjceddur,2005200038,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"When you used marijuana, approximately how many days in a typical week would you use it?",sumrjfr,2005200039,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Medication Name,cmname,2005200481,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Specify other,odristate,2005200485,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Do you speak another language at home?,pxep2,2005200480,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Was your mother or father diagnosed with Type II Diabetes?,fh_dm2ptsp,2005200463,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"If yes, please check all that apply: brother, sister, half-sister, half-brother",fh_dm2sbsp,2005200464,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"Have you been diagnosed with any conditions not listed above? (any condition, not just eyes)",mhoccur_yn,2005200470,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Feeling depressed when you think about living with diabetes,paid_dpr,2005200045,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Method used to complete form,viaomthd,2005200011,AIREADI,Observation,survey_conduct,Attribute,S,1/1/1970,,,RedCap
-Rarely or none of the time (< 1 day),0,2005200141,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Some or a little of the time (1-2 days),1,2005200142,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2,2005200143,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-All of the time (5-7 days),3,2005200144,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Rarely or none of the time (< 1 day),0,2005200141,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Some or a little of the time (1-2 days),1,2005200142,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2,2005200143,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-All of the time (5-7 days),3,2005200144,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Rarely or none of the time (< 1 day),0,2005200141,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Some or a little of the time (1-2 days),1,2005200142,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2,2005200143,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-All of the time (5-7 days),3,2005200144,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Rarely or none of the time (< 1 day),0,2005200141,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Some or a little of the time (1-2 days),1,2005200142,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2,2005200143,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-All of the time (5-7 days),3,2005200144,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Rarely or none of the time (< 1 day),3,2005200141,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Some or a little of the time (1-2 days),2,2005200142,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),1,2005200143,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-All of the time (5-7 days),0,2005200144,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Rarely or none of the time (< 1 day),0,2005200141,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Some or a little of the time (1-2 days),1,2005200142,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2,2005200143,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-All of the time (5-7 days),3,2005200144,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Rarely or none of the time (< 1 day),0,2005200141,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Some or a little of the time (1-2 days),1,2005200142,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2,2005200143,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-All of the time (5-7 days),3,2005200144,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Rarely or none of the time (< 1 day),3,2005200141,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Some or a little of the time (1-2 days),2,2005200142,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),1,2005200143,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-All of the time (5-7 days),0,2005200144,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Rarely or none of the time (< 1 day),0,2005200141,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Some or a little of the time (1-2 days),1,2005200142,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2,2005200143,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-All of the time (5-7 days),3,2005200144,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Rarely or none of the time (< 1 day),0,2005200141,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Some or a little of the time (1-2 days),1,2005200142,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Occasionally or a moderate amount of time (3-4 days),2,2005200143,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-All of the time (5-7 days),3,2005200144,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-RxNorm (assign after visit),cmtrt,2005200220,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"Unit (Record the dose unit of the dose of concomitant medication/treatment/therapy taken (e.g., mg.)).",cmdosu,2005200221,AIREADI,Observation,survey_conduct,Clinical Observation,S,1/1/1970,,,RedCap
-Puff,13,2005200222,AIREADI,Device,survey_conduct,Physical Object,S,1/1/1970,,,RedCap
-"In a typical week, how often do you engage in vigorous exercise? (Examples: hiking, jogging at 6 mph, shoveling, carrying heavy loads, bicycling fast (14-16 mph), playing basketball, playing soccer, playing tennis, or any activity during which you cannot say more than a few words without taking a breath)",dmlvex,2005200277,AIREADI,Observation,survey_conduct,Clinical Finding,S,1/1/1970,,,RedCap
-"How often would you say that you engage in daily home exercise? (Examples: stretching, calisthenics, or yoga)",dmlhex,2005200278,AIREADI,Observation,survey_conduct,Procedure,S,1/1/1970,,,RedCap
-"When reflecting on your typical eating habits, which of the following options best describes how often you consume simple sugars?",dmlsugar,2005200305,AIREADI,Observation,survey_conduct,Procedure,S,1/1/1970,,,RedCap
-"In a typical day, how often do you consume whole grains? (Examples: include whole wheat, brown bread, or brown rice).",dmlgrain,2005200306,AIREADI,Observation,survey_conduct,Procedure,S,1/1/1970,,,RedCap
-"How often would you say that you engage in diabetes health education? (Examples: consulting with a dietician, attending support groups, reading books on diabetes, using diabetes-focused websites, watching TV shows on health, or using health-focused apps on your phone or tablet)",dmledu,2005200307,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-How often do you inspect your feet?,dmlfeet,2005200308,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Which of the following options best describes you with respect to physician care and medications?,dmlmd,2005200309,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-At least 30 minutes daily 3 or more days a week,10,2005200312,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-"Active (stairs, walks, housework)",10,2005200314,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Somewhat active,5,2005200315,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-"Not Active (TV, computer, phone, use lifts)",0,2005200316,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Doing daily or almost daily,10,2005200317,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Irregular; once or twice a week,5,2005200318,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Rarely eat sweets,10,2005200319,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Occasionally eat sweets,5,2005200320,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Frequently eat sweets,0,2005200321,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Usually eat whole grain,10,2005200322,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Rarely eat whole grain,5,2005200323,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Usually eat white bread or white rice,0,2005200324,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Eat small portions and avoid second servings,10,2005200325,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Occasionally limit portions,5,2005200326,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Rarely or none; eat at buffets and restaurants with large portions,0,2005200327,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-4-5 servings or pieces of fruits and raw vegetables per day,10,2005200328,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-1-3 servings or pieces per day,5,2005200329,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-"Regularly; at least monthly (dietician, support groups, books, websites, apps)",10,2005200330,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Occasionally; every 2-3 months,5,2005200331,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-3 or more visits a year to the same doctor. Regular with medicines.,10,2005200332,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-1-2 visits a year. Forgetting medicines frequently.,5,2005200333,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Rarely or none. Not taking 1 or more recommended medicines,0,2005200334,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Less than 1 time,0,2005200238,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-1 - 3 times,1,2005200239,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-5 or more,0,2005200240,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-2 or less,2,2005200241,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-5 or more,0,2005200240,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-2 or less,2,2005200241,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Less than 1,0,2005200242,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Less than 1 time,2,2005200238,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-1 time or less,0,2005200243,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Less than 1,0,2005200242,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Did the subject complete the study?,eos_ds,2005200192,AIREADI,Observation,survey_conduct,Clinical Finding,S,1/1/1970,,,RedCap
-Did not meet Inclusion/Exclusion criteria,1,2005200280,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Withdrawal by Subject,3,2005200281,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Geographic Inaccessibility,4,2005200282,AIREADI,Observation,survey_conduct,Context-dependent,S,1/1/1970,,,RedCap
-Currently enrolled in a conflicting study,6,2005200283,AIREADI,Observation,survey_conduct,Clinical Finding,S,1/1/1970,,,RedCap
-Protocol Deviation,9,2005200284,AIREADI,Observation,survey_conduct,Clinical Finding,S,1/1/1970,,,RedCap
-Individual was under age 40,1,2005200285,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Individual is not needed at this time for recruitment goals,3,2005200286,AIREADI,Observation,survey_conduct,Clinical Finding,S,1/1/1970,,,RedCap
-Individual had Type 1 Diabetes,4,2005200287,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-In Person (Baseline),2,2005200288,AIREADI,Observation,survey_conduct,Procedure,S,1/1/1970,,,RedCap
-Drivers license state,dristate,2005200138,AIREADI,Observation,survey_conduct,Location,S,1/1/1970,,,RedCap
-Were either of your parents diagnosed with Type II Diabetes?,fh_dm2pt,2005200018,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Has a sibling been diagnosed with Type II Diabetes?,fh_dm2sb,2005200019,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-White Blood Cells (WBC) - x10E3/µL,lbscat_wbc,2005200182,AIREADI,Measurement,survey_conduct,Procedure,S,1/1/1970,,,RedCap
-Red Blood Cells (RBC) - x10E6/µL,lbscat_rbc,2005200183,AIREADI,Measurement,survey_conduct,Procedure,S,1/1/1970,,,RedCap
-Have you taken aspirin in the past 2 weeks?,cm_asp,2005200145,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"Have you taken acetaminophen medicines, such as Tylenol, in the past 2 weeks?",cm_act,2005200146,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Have you taken ibuprofen or ibuprofen-containing medicines such as Advil or Motrin in the past 2 weeks?,cm_ibp,2005200147,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"Have you taken antihistamines, such as cold pills or allergy pills, in the past 2 weeks?",cm_ant,2005200148,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"Have you taken decongestants, such as cold pills or allergy pills, in the past 2 weeks?",cm_dcg,2005200149,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Have you taken sleeping pills in the past 2 weeks?,cm_slp,2005200150,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How much difficulty, if any, do you have in recognizing a friend across the street? Would you say:",via1,2005200067,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"How much difficulty, if any, do you have reading print in newspapers, magazines, recipes, menus, or numbers on the telephone? Would you say:",via2,2005200068,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-You have indicated that you have not seen an eye care professional in the past 12 months. What is the main reason you have not visited an eye care professional in the past 12 months?,via5,2005200069,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-When was the last time you had an eye exam in which the pupils were dilated? (This would have made you temporarily sensitive to bright light),via6,2005200070,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Within the past 2 years (1 year but less than 2 years ago),3,2005200244,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Cost/Insurance,1,2005200245,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Do not have/know an eye doctor,2,2005200246,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-"Cannot get to the office/clinic (too far away, no transportation)",3,2005200247,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-No reason to go (no problem),5,2005200249,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Have not thought of it,6,2005200250,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Within the past 2 years (1 year but less than 2 years ago),3,2005200244,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Feeling scared when you think about living with diabetes,paid_scrd,2005200044,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Worrying about the future and the possibility of serious complications,paid_wr,2005200046,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Feeling that diabetes is taking up too much of your mental and physical energy every day,paid_eng,2005200047,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Coping with complications of diabetes,paid_cml,2005200048,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-PAID score,paidscore,2005200049,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Not a problem,0,2005200213,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Minor problem,1,2005200214,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Moderate problem,2,2005200215,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Somewhat serious problem,3,2005200216,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Serious problem,4,2005200217,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Not a problem,0,2005200213,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Minor problem,1,2005200214,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Moderate problem,2,2005200215,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Somewhat serious problem,3,2005200216,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Serious problem,4,2005200217,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Not a problem,0,2005200213,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Minor problem,1,2005200214,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Moderate problem,2,2005200215,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Somewhat serious problem,3,2005200216,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Serious problem,4,2005200217,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Not a problem,0,2005200213,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Minor problem,1,2005200214,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Moderate problem,2,2005200215,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Somewhat serious problem,3,2005200216,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Serious problem,4,2005200217,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Not a problem,0,2005200213,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Minor problem,1,2005200214,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Moderate problem,2,2005200215,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Somewhat serious problem,3,2005200216,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Serious problem,4,2005200217,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Does not apply to my neighborhood,88,2005200268,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Does not apply to my neighborhood,88,2005200268,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-6 or more,6,2005200270,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-"Thinking about the next 12 months, how likely do you think it is that you will lose your job or be laid off?",pxji1,2005200073,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"About how easy would it be for you to find a job with another employer with approximately the same income and fringe benefits you now have? Would you say very easy, somewhat easy, or not easy at all?",pxji2,2005200074,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-What is your living situation today?,pxhi1,2005200075,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Think about the place you live. Do you have problems with any of the following? CHOOSE ALL THAT APPLY,pxhi2,2005200076,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"In the last 12 months, have you delayed getting prescription medicines because of worry about the cost?",pxpa1,2005200077,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Did any other person in your household delay getting prescription medicines because of worry about the cost?,pxpa2,2005200078,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"In the last 12 months, was there any time when you needed prescription medicines, but did not get them because you couldn't afford it?",pxpa3,2005200079,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-"In the last 12 months, was there any time when anyone else in your household needed prescription medicines, but did not get them because you/they couldn't afford it?",pxpa4,2005200080,AIREADI,Observation,survey_conduct,Survey,S,1/1/1970,,,RedCap
-Will be leaving labor force voluntarily,5,2005200251,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Covered,1,2005200252,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Covered,1,2005200252,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Covered,1,2005200252,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Covered,1,2005200252,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Covered,1,2005200252,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Covered,1,2005200252,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Covered,1,2005200252,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-I do NOT have health insurance,0,2005200253,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-I HAVE some kind of health insurance,1,2005200254,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Within the last 10 years (5 years but less than 10 years ago),5,2005200255,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-Within the last 10 years (5 years but less than 10 years ago),5,2005200255,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-A doctor's office or health center,1,2005200258,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-"Walk-in clinic, urgent care center, or retail clinic in a pharmacy or grocery store",2,2005200259,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-A VA Medical Center or VA outpatient clinic,4,2005200260,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-1 - 10 times,1,2005200262,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-11 - 19 times,2,2005200263,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-20 - 29 times,3,2005200264,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-30 - 39 times,4,2005200265,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-40 - 49 times,5,2005200266,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-50 or more times,6,2005200267,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-1 - 10 times,1,2005200262,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-11 - 19 times,2,2005200263,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-20 - 29 times,3,2005200264,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-30 - 39 times,4,2005200265,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-40 - 49 times,5,2005200266,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-50 or more times,6,2005200267,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-41-50 (up to 2.5 packs),41,2005200194,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-More than 50 (3 or more packs),51,2005200195,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-22 to 28,22,2005200196,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-29 to 35,29,2005200197,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-36 or more,36,2005200198,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-21-25 (5 bottles),21,2005200199,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-26-30 (6 bottles),26,2005200208,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-31-35 (7 bottles),31,2005200209,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-More than 36 (greater than 7 bottles),35,2005200210,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-22 to 28,22,2005200196,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-29 to 35,29,2005200197,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
-36 or more,36,2005200198,AIREADI,Meas Value,survey_conduct,Answer,S,1/1/1970,,,RedCap
+concept_name,SRC_CODE,concept_id,vocabulary_id,domain_id,concept_class_id,standard_concept,valid_start_date,valid_end_date,invalid_reason,source
+VA Letter Score - Photopic VA - OD,viaodplog,2005200042,AIREADI-Vision,Measurement,Clinical Observation,S,1/1/1970,,,RedCap
+VA Letter Score - Photopic VA - OS,viaosplog,2005200043,AIREADI-Vision,Measurement,Clinical Observation,S,1/1/1970,,,RedCap
+Photopic LogMAR OD Score,viaodpscore,2005200052,AIREADI-Vision,Measurement,Clinical Observation,S,1/1/1970,,,RedCap
+Photopic LogMAR OS Score,viaospscore,2005200053,AIREADI-Vision,Measurement,Clinical Observation,S,1/1/1970,,,RedCap
+LLVA Letter Score - Mesopic VA - OD,viaodmlog,2005200056,AIREADI-Vision,Measurement,Clinical Observation,S,1/1/1970,,,RedCap
+LLVA Letter Score - Mesopic VA - OS,viaosmlog,2005200057,AIREADI-Vision,Measurement,Clinical Observation,S,1/1/1970,,,RedCap
+Mesopic LogMAR OD Score,viaodmscore,2005200336,AIREADI-Vision,Measurement,Clinical Observation,S,1/1/1970,,,RedCap
+Mesopic LogMAR OS Score,viaosmscore,2005200337,AIREADI-Vision,Measurement,Clinical Observation,S,1/1/1970,,,RedCap
+Snellen fraction - Photopic VA - OD,viaodpsf,2005200012,AIREADI-Vision,Measurement,Clinical Observation,S,1/1/1970,,,RedCap
+Snellen fraction - Photopic VA - OS,viaospsf,2005200013,AIREADI-Vision,Measurement,Clinical Observation,S,1/1/1970,,,RedCap
+Snellen fraction - Mesopic VA - OD,viaodmsf,2005200054,AIREADI-Vision,Measurement,Clinical Observation,S,1/1/1970,,,RedCap
+Snellen fraction - Mesopic VA - OS,viaosmsf,2005200055,AIREADI-Vision,Measurement,Clinical Observation,S,1/1/1970,,,RedCap
+EVA,1,2005200058,AIREADI-Vision,Measurement,Clinical Observation,S,1/1/1970,,,RedCap
+"OD: Value of final correct letter - Mesopic, right eye",mlcsodfcl,2005200486,AIREADI-Vision,Measurement,Measurement,S,1/1/1970,,,RedCap
+"OD: Number of misses prior to stopping - Mesopic, right eye",mlcsodmiss,2005200487,AIREADI-Vision,Measurement,Measurement,S,1/1/1970,,,RedCap
+"OD: Log Contrast Sensitivity - Mesopic, right eye",mlcsodlog,2005200552,AIREADI-Vision,Measurement,Measurement,S,1/1/1970,,,RedCap
+"OS: Value of final correct letter - Mesopic, left eye",mlcsosfcl,2005200488,AIREADI-Vision,Measurement,Measurement,S,1/1/1970,,,RedCap
+"OS: Number of misses prior to stopping - Mesopic, left eye",mlcsosmiss,2005200489,AIREADI-Vision,Measurement,Measurement,S,1/1/1970,,,RedCap
+"OS: Log Contrast Sensitivity - Mesopic, left eye",mlcsoslog,2005200553,AIREADI-Vision,Measurement,Measurement,S,1/1/1970,,,RedCap
+"OD: Value of final correct letter - Photopic, right eye",plcsodfcl,2005200338,AIREADI-Vision,Measurement,Measurement,S,1/1/1970,,,RedCap
+"OD: Number of misses prior to stopping - Photopic, right eye",plcsodmiss,2005200339,AIREADI-Vision,Measurement,Measurement,S,1/1/1970,,,RedCap
+"OD: Log Contrast Sensitivity - Photopic, right eye",plcsodlog,2005200155,AIREADI-Vision,Measurement,Measurement,S,1/1/1970,,,RedCap
+"OS: Value of final correct letter - Photopic, left eye",plcsosfcl,2005200340,AIREADI-Vision,Measurement,Measurement,S,1/1/1970,,,RedCap
+"OS: Number of misses prior to stopping - Photopic, left eye",plcsosmiss,2005200341,AIREADI-Vision,Measurement,Measurement,S,1/1/1970,,,RedCap
+"OS: Log Contrast Sensitivity - Photopic, left eye",plcsoslog,2005200156,AIREADI-Vision,Measurement,Measurement,S,1/1/1970,,,RedCap
+OptoMed-Disc centered-CFP,rtop_odd,2005200289,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+OptoMed-Mac centered-CFP,rtop_odm,2005200290,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+Eidon-UWF Central-IR,rtei_odir,2005200291,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+Eidon-UWF Central-FAF,rtei_odfaf,2005200292,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+Eidon-UWF Central-CFP,rtsm_odc,2005200293,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+Eidon-UWF Nasal-CFP,rtsm_odn,2005200294,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+Eidon-UWF Temporal-CFP,rtsm_odt,2005200295,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+Eidon- Create Mosaic Image-CFP,rtsm_odm,2005200296,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+Spec-ONH-RC-HR-OCT,rtso_odo,2005200297,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+Spec-PPole Mac-HR-61 lines-OCT,rtso_odp,2005200298,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+Spec-Mac-20x20-HS-512 lines-OCTA,rtso_odm,2005200299,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+Cirrus-Mac Cube-512x128-OCT,rtci_odm1,2005200300,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+Cirrus-Disc Cube-200x200-OCT,rtci_odd1,2005200301,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+Cirrus-Macula 6x6-OCTA,rtci_odm2,2005200302,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+Cirrus-Disc 6x6-OCTA,rtci_odd2,2005200303,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+M2-3D Wide(H) 12x9-OCT,rtma_odw,2005200200,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+M2-3D Macula 6x6-OCT,rtma_odm,2005200201,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+M2-Mac 6x6-360x360-(rep3)-OCTA,rtma_odm1,2005200202,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+Triton-3D(H)+Radial 12x9-OCT,rttr_odr,2005200203,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+Triton-Macula 6x6-OCTA,rttr_odm1,2005200204,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+Triton-Macula 12x12-OCTA,rttr_odm2,2005200205,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+FLIO-Mac-HS,rtfl_od,2005200304,AIREADI-Vision,Observation,Observable Entity,S,1/1/1970,,,RedCap
+Specify other,cmrouteot,2005200485,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"Have you had anything to eat or drink in the last six hours, including coffee or tea with milk or sugar or any other drink other than water?",paate_6hr,2005200629,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Physical Activity Monitor was worn on which wrist?,dvamwenhand,2005200206,AIREADI,Observation,Clinical Observation,S,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,mhoccur_mi,2005200014,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"Other heart issues (Examples: pacemaker, heart valve disease, open heart surgery)",1,2005200627,AIREADI,Condition,Disorder,S,1/1/1970,,,RedCap
+Stroke,1,2005200628,AIREADI,Condition,Disorder,S,1/1/1970,,,RedCap
+"Circulation problems (Examples: arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins)",1,2005200015,AIREADI,Condition,Disorder,S,1/1/1970,,,RedCap
+Kidney problems,1,2005200017,AIREADI,Condition,Disorder,S,1/1/1970,,,RedCap
+Elevated A1C levels (elevated blood sugars),1,2005200547,AIREADI,Condition,Disorder,S,1/1/1970,,,RedCap
+Survey Started Timestamp,cesstartts,2005200558,AIREADI,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Survey Completed Timestamp,cescmpts,2005200559,AIREADI,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Device returned,dcvgmenyn,2005200589,AIREADI,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Neurocognitive disorder please specify,mhoccur_cnsot,2005200455,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Other cancer type please (specify),mhoccur_cnrot,2005200459,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+PhenX MetaData,px270301_metadata,2005200102,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"What is your ancestry or ethnic origin?(Examples: Italian, Jamaican, African American, Cambodian, Cape Verdean, Cherokee, Navajo, Nez Pearce, Norwegian, Dominican, French Canadian, Haitian, Korean, Lebanese, Polish, Nigerian, Mexican, Taiwanese, Ukrainian, and so on.)",ancestry,2005200557,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Activity monitor returned?,dvamwenyn,2005200555,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Less than 30 minutes daily less than 3 days a week,5,2005200313,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+1 time or less,0,2005200243,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+5000 miles or less,1,2005200271,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+"5001 to 10,000 miles",2,2005200272,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+"10,001 to 15.000 miles",3,2005200273,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+"15,001 to 20,000 miles",4,2005200274,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+"More than 20,000 miles",5,2005200275,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Right Foot - Felt:,mssrffl,2005200159,AIREADI,Measurement,Measurement,S,1/1/1970,,,RedCap
+Right Foot - Tested:,mssrftt,2005200160,AIREADI,Procedure,Procedure,S,1/1/1970,,,RedCap
+Left Foot - Felt:,msslffl,2005200161,AIREADI,Measurement,Measurement,S,1/1/1970,,,RedCap
+Left Foot - Tested:,msslftt,2005200162,AIREADI,Procedure,Procedure,S,1/1/1970,,,RedCap
+Could not get an appointment,4,2005200248,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+How many hours since you last ate? (number of hours),paate,2005200151,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+There are no streets or roads in my neighborhood,88,2005200269,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+There is NO place,0,2005200256,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+There is MORE THAN ONE place,2,2005200257,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Does not go to one place most often,6,2005200261,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Do you inject insulin to control your blood glucose levels?,cmtrt_insln,2005200549,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"Do you use lifestyle changes to control your A1C and blood glucose levels? Examples: regular exercise, avoiding sugary foods and beverages, eating a balanced diet with lots of vegetables, sticking to a consistent eating schedule",cmtrt_lfst,2005200004,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+More than 20 years,98,2005200211,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+More than 50 years,98,2005200212,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+"How many times a week did you eat beans (like pinto or black beans), chicken, or fish?",diet5,2005200059,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How many times a week did you eat regular snack chips or crackers (not low-fat)?,diet6,2005200060,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How many times a week did you eat desserts and other sweets (not the low-fat kind)?,diet7,2005200061,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How much margarine, butter, or meat fat do you use to season vegetables or put on potatoes, bread or corn?",diet8,2005200062,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How many servings of fruit juice did you drink each day?,diet9,2005200063,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Diet score,dietscore,2005200064,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"In an average week, how many days per week do you normally drive? (number of days)",dri1,2005200136,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+About how many miles did you personally drive during the past 12 months in all motorized vehicles?,dri2,2005200137,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+There is so much traffic on the streets that it makes it difficult or unpleasant to walk in my neighborhood. Would you say that you...,pxne8,2005200113,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"I see many people being physically active in my neighborhood doing things like walking, jogging, cycling, or playing sports and active games. Would you say that you...",pxne9,2005200114,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+There are many interesting things to look at while walking in my neighborhood. Would you say you...,pxne10,2005200115,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How many motor vehicles in working order (e.g., cars, trucks, motorcycles) are there at your household?",pxne11,2005200116,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+There are many four-way intersections in my neighborhood. Would you say that you...,pxne12,2005200117,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"The sidewalks in my neighborhood are well maintained (paved, with few cracks) and not obstructed. Would you say that you...",pxne13,2005200118,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Places for bicycling (such as bike paths) in and around my neighborhood are well maintained and not obstructed. Would you say that you...,pxne14,2005200119,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+There is so much traffic on the streets that it makes it difficult or unpleasant to ride a bicycle in my neighborhood. Would you say that you...,pxne15,2005200120,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+The crime rate in my neighborhood makes it unsafe to go on walks during the day. Would you say that you...,pxne16,2005200121,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+There are many places to go within easy walking distance of my home. Would you say that you...,pxne17,2005200122,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How often have you been treated unfairly by teachers and professors because of your race/ethnic group? How often in the past year?,pxrd1,2005200126,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How often have you been treated unfairly by teachers and professors because of your race/ethnic group? How often in your entire life?,pxrd2,2005200127,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been treated unfairly by teachers and professors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd3,2005200128,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? How often in the past year?",pxrd4,2005200493,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? How often in your entire life?",pxrd5,2005200494,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd6,2005200495,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? How often in the past year?",pxrd7,2005200496,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? How often in your entire life?",pxrd8,2005200497,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pdrx9,2005200498,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? How often in the past year?",pxrd10,2005200499,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? How often in your entire life?",pxrd11,2005200500,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd12,2005200501,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How often have you been treated unfairly by strangers because of your race/ethnic group? How often in the past year?,pxrd13,2005200502,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How often have you been treated unfairly by strangers because of your race/ethnic group? How often in your entire life?,pxrd14,2005200503,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been treated unfairly by strangers because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd15,2005200504,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? How often in the past year?",pxrd16,2005200505,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? How often in your entire life?",pxrd17,2005200506,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd18,2005200507,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How often have you been treated unfairly by neighbors because of your race/ethnic group? How often in the past year?,pxrd19,2005200508,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How often have you been treated unfairly by neighbors because of your race/ethnic group? How often in your entire life?,pxrd20,2005200509,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been treated unfairly by neighbors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd21,2005200510,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? How often in the past year?",pxrd22,2005200511,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? How often in your entire life?",pxrd23,2005200512,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd24,2005200513,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? How often in the past year?,pxrd25,2005200514,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? How often in your entire life?,pxrd26,2005200515,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd27,2005200516,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? How often in the past year?",pxrd28,2005200517,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? How often in your entire life?",pxrd29,2005200518,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd30,2005200519,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How often have people misunderstood your intentions and motives because of your race/ethnic group? How often in the past year?,pxrd31,2005200520,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How often have people misunderstood your intentions and motives because of your race/ethnic group? How often in your entire life?,pxrd32,2005200521,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have people misunderstood your intentions and motives because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd33,2005200522,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How often did you want to tell someone off for being racist towards you but didn't say anything? How often in the past year?,pxrd34,2005200523,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How often did you want to tell someone off for being racist towards you but didn't say anything? How often in your entire life?,pxrd35,2005200524,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often did you want to tell someone off for being racist towards you but didn't say anything? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd36,2005200525,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How often have you been really angry about something racist that was done to you? How often in the past year?,pxrd37,2005200526,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How often have you been really angry about something racist that was done to you? How often in your entire life?,pxrd38,2005200527,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been really angry about something racist that was done to you? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd39,2005200528,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? How often in the past year?",pxrd40,2005200529,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? How often in your entire life?",pxrd41,2005200530,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd42,2005200531,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How often have you been called a racist name? How often in the past year?,pxrd43,2005200532,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How often have you been called a racist name? How often in your entire life?,pxrd44,2005200533,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been called a racist name? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd45,2005200534,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? How often in the past year?,pxrd46,2005200535,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? How often in your entire life?,pxrd47,2005200536,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd48,2005200537,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? How often in the past year?",pxrd49,2005200538,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? How often in your entire life?",pxrd50,2005200539,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd51,2005200540,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In the Past Year?,pxrd52,2005200541,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In your entire life?,pxrd53,2005200542,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd54,2005200543,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Insurance through a current or former employer or union (of yours or another family member's). This would include COBRA coverage.,pxhic1,2005200081,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"Insurance purchased directly from an insurance company (by you or another family member). This would include coverage purchased through an exchange or marketplace, such as HealthCare.gov",pxhic2,2005200082,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"Medicare, for people 65 and older, or people with certain disabilities.",pxhic3,2005200083,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"Medicaid, Medical Assistance (MA), the Children's Health Insurance Program (CHIP), or any kind of state or government-sponsored assistance. plan based on income or a disability.",pxhic4,2005200084,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"TRICARE or other military health care, including VA health care.",pxhic5,2005200085,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Indian Health Service.,pxhic6,2005200086,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Any other type of health insurance coverage or health coverage plan,pxhic7,2005200087,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"Does this mean you currently have no health insurance or health coverage plan? In answering this question, please exclude plans that pay for only one type of service (such as, nursing home care, accidents, family planning, or dental care) and plans that only provide extra cash when hospitalized).",pxhic8,2005200088,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+What type of health insurance do you have?,pxhic9,2005200089,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+About how long has it been since you last saw a doctor or other health care professional about your health?,pxahc1,2005200090,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"Was this a wellness visit, physical, or general purpose check-up?",pxahc2,2005200091,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"About how long has it been since you last saw a doctor or other health professional for a wellness visit, physical, or general purpose check-up?",pxahc3,2005200092,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Is there a place that you USUALLY go to if you are sick and need health care? ,pxahc4,2005200093,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"What kind of place is it/do you go to most often? A doctor's office or health center is a place where you see the same doctor or the same group of doctors every visit, where you usually need to make an appointment ahead of time, and where your medical records are on file.Urgent care centers and clinics in a drug store or grocery store are places where you do not need to make an appointment ahead of time, and do not usually see the same health care provider at each visit.",pxahc5,2005200094,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"During the past 12 months, how many times have you gone to an urgent care center or a clinic in a drug store or grocery store about your health?Urgent care centers and clinics in drug stores or grocery stores are places where you do not need to make an appointment ahead of time, and do not usually see the same health care provider at each visit. This is different from a hospital emergency room.",pxahc6,2005200095,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"During the past 12 months, how many times have you gone to a hospital emergency room about your health?  *This includes emergency room visits that resulted in a hospital admission.",pxahc7,2005200096,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"During the past 12 months, have you been hospitalized overnight? (Do not include an overnight stay in the emergency room)",pxahc8,2005200097,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"During the past 12 months, have you DELAYED getting medical care because of the cost?",pxahc9,2005200098,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"During the past 12 months, was there any time when you needed medical care, but DID NOT GET IT because of the cost?",pxahc10,2005200099,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"Do you take pills to control your A1C and blood glucose levels? Examples: Metformin (Glucophage, Glumetza, Fortamet, Riomet), Glucotrol, Amaryl, DiaBeta, Blynase PresTab, Micronase, Actos, Avandia, Precose, Glyset, Prandin, Starlix, Januvia, Onglyza, Tradjenta, Nesina, Invokana, Farxiga, Jardiance, Welchol, and Cyclocet",cmtrt_a1c,2005200548,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"Do you use other injections to control your blood glucose levels?  Examples: Victoza, Ozempic, Symlin, Tanzeum, and Trulicity",cmtrt_glcs,2005200550,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Have you had any beer or ale in the past year?,subrkncf,2005200024,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"During the average week, how many 12 oz. bottles or cans of beer do you usually drink? (Number of bottles or cans per week)",subrdosfr,2005200025,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Have you had any wine in the past year?,suwnkncf,2005200026,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"During the average week, how many 5 oz. glasses of wine do you usually drink?  The average wine bottle has 5 servings. (Number of glasses per week)",suwndosfr,2005200027,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"Have you had any liquor in the past year, such as brandy, whiskey, vodka, gin, schnapps, cocktails, or liqueurs?",sulqkncf,2005200028,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"During the average week, how many 1.5 oz. of liquor do you usually drink, either as shots or in mixed cocktails? (Number of drinks per week)",sulqdosfr,2005200029,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"Do you drive after having a drink, even if it is only one drink?",sualcdrv,2005200030,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Have you ever vaped or used e-cigarettes?,suvpkncf1,2005200031,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+At what age did you start vaping or using e-cigarettes? (Age started - years old),suvpstage,2005200032,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Do you vape or use e-cigarettes now?,suvpcdur,2005200033,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How many total years have you vaped or used e-cigarettes?,suvptoage,2005200034,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"When you vaped or used e-cigarettes, approximately how many days in a typical week would you use it?",suvpdosfr,2005200035,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"Have you ever used marijuana (cannabis)? (This includes smoking marijuana, using cannabis concentrates, and edibles.)",sumrjkncf,2005200036,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Do you use marijuana now?,sumrjcdur,2005200473,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+In what form do you usually use marijuana?  (check all that apply),sumrjtrt,2005200037,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How many total years have you used marijuana?,sumrjceddur,2005200038,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"When you used marijuana, approximately how many days in a typical week would you use it?",sumrjfr,2005200039,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Medication Name,cmname,2005200481,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Do you speak another language at home?,pxep2,2005200480,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Was your mother or father diagnosed with Type II Diabetes?,fh_dm2ptsp,2005200463,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"If yes, please check all that apply: brother, sister, half-sister, half-brother",fh_dm2sbsp,2005200464,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"Have you been diagnosed with any conditions not listed above? (any condition, not just eyes)",mhoccur_yn,2005200470,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Feeling depressed when you think about living with diabetes,paid_dpr,2005200045,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Method used to complete form,viaomthd,2005200011,AIREADI,Observation,Attribute,S,1/1/1970,,,RedCap
+Rarely or none of the time (< 1 day),0,2005200141,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Some or a little of the time (1-2 days),1,2005200142,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2,2005200143,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+All of the time (5-7 days),3,2005200144,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+RxNorm (assign after visit),cmtrt,2005200220,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"Unit (Record the dose unit of the dose of concomitant medication/treatment/therapy taken (e.g., mg.)).",cmdosu,2005200221,AIREADI,Observation,Clinical Observation,S,1/1/1970,,,RedCap
+Puff,13,2005200222,AIREADI,Device,Physical Object,S,1/1/1970,,,RedCap
+"In a typical week, how often do you engage in vigorous exercise? (Examples: hiking, jogging at 6 mph, shoveling, carrying heavy loads, bicycling fast (14-16 mph), playing basketball, playing soccer, playing tennis, or any activity during which you cannot say more than a few words without taking a breath)",dmlvex,2005200277,AIREADI,Observation,Clinical Finding,S,1/1/1970,,,RedCap
+"How often would you say that you engage in daily home exercise? (Examples: stretching, calisthenics, or yoga)",dmlhex,2005200278,AIREADI,Observation,Procedure,S,1/1/1970,,,RedCap
+"When reflecting on your typical eating habits, which of the following options best describes how often you consume simple sugars?",dmlsugar,2005200305,AIREADI,Observation,Procedure,S,1/1/1970,,,RedCap
+"In a typical day, how often do you consume whole grains? (Examples: include whole wheat, brown bread, or brown rice).",dmlgrain,2005200306,AIREADI,Observation,Procedure,S,1/1/1970,,,RedCap
+"How often would you say that you engage in diabetes health education? (Examples: consulting with a dietician, attending support groups, reading books on diabetes, using diabetes-focused websites, watching TV shows on health, or using health-focused apps on your phone or tablet)",dmledu,2005200307,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+How often do you inspect your feet?,dmlfeet,2005200308,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Which of the following options best describes you with respect to physician care and medications?,dmlmd,2005200309,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+At least 30 minutes daily 3 or more days a week,10,2005200312,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+"Active (stairs, walks, housework)",10,2005200314,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Somewhat active,5,2005200315,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+"Not Active (TV, computer, phone, use lifts)",0,2005200316,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Doing daily or almost daily,10,2005200317,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Irregular; once or twice a week,5,2005200318,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Rarely eat sweets,10,2005200319,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Occasionally eat sweets,5,2005200320,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Frequently eat sweets,0,2005200321,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Usually eat whole grain,10,2005200322,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Rarely eat whole grain,5,2005200323,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Usually eat white bread or white rice,0,2005200324,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Eat small portions and avoid second servings,10,2005200325,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Occasionally limit portions,5,2005200326,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Rarely or none; eat at buffets and restaurants with large portions,0,2005200327,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+4-5 servings or pieces of fruits and raw vegetables per day,10,2005200328,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+1-3 servings or pieces per day,5,2005200329,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+"Regularly; at least monthly (dietician, support groups, books, websites, apps)",10,2005200330,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Occasionally; every 2-3 months,5,2005200331,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+3 or more visits a year to the same doctor. Regular with medicines.,10,2005200332,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+1-2 visits a year. Forgetting medicines frequently.,5,2005200333,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Rarely or none. Not taking 1 or more recommended medicines,0,2005200334,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Less than 1 time,0,2005200238,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+1 - 3 times,1,2005200239,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+5 or more,0,2005200240,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+2 or less,2,2005200241,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Less than 1,0,2005200242,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Did the subject complete the study?,eos_ds,2005200192,AIREADI,Observation,Clinical Finding,S,1/1/1970,,,RedCap
+Did not meet Inclusion/Exclusion criteria,1,2005200280,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Withdrawal by Subject,3,2005200281,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Geographic Inaccessibility,4,2005200282,AIREADI,Observation,Context-dependent,S,1/1/1970,,,RedCap
+Currently enrolled in a conflicting study,6,2005200283,AIREADI,Observation,Clinical Finding,S,1/1/1970,,,RedCap
+Protocol Deviation,9,2005200284,AIREADI,Observation,Clinical Finding,S,1/1/1970,,,RedCap
+Individual was under age 40,1,2005200285,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Individual is not needed at this time for recruitment goals,3,2005200286,AIREADI,Observation,Clinical Finding,S,1/1/1970,,,RedCap
+Individual had Type 1 Diabetes,4,2005200287,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+In Person (Baseline),2,2005200288,AIREADI,Observation,Procedure,S,1/1/1970,,,RedCap
+Drivers license state,dristate,2005200138,AIREADI,Observation,Location,S,1/1/1970,,,RedCap
+Were either of your parents diagnosed with Type II Diabetes?,fh_dm2pt,2005200018,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Has a sibling been diagnosed with Type II Diabetes?,fh_dm2sb,2005200019,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+White Blood Cells (WBC) - x10E3/µL,lbscat_wbc,2005200182,AIREADI,Measurement,Procedure,S,1/1/1970,,,RedCap
+Red Blood Cells (RBC) - x10E6/µL,lbscat_rbc,2005200183,AIREADI,Measurement,Procedure,S,1/1/1970,,,RedCap
+Have you taken aspirin in the past 2 weeks?,cm_asp,2005200145,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"Have you taken acetaminophen medicines, such as Tylenol, in the past 2 weeks?",cm_act,2005200146,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Have you taken ibuprofen or ibuprofen-containing medicines such as Advil or Motrin in the past 2 weeks?,cm_ibp,2005200147,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"Have you taken antihistamines, such as cold pills or allergy pills, in the past 2 weeks?",cm_ant,2005200148,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"Have you taken decongestants, such as cold pills or allergy pills, in the past 2 weeks?",cm_dcg,2005200149,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Have you taken sleeping pills in the past 2 weeks?,cm_slp,2005200150,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How much difficulty, if any, do you have in recognizing a friend across the street? Would you say:",via1,2005200067,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"How much difficulty, if any, do you have reading print in newspapers, magazines, recipes, menus, or numbers on the telephone? Would you say:",via2,2005200068,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+You have indicated that you have not seen an eye care professional in the past 12 months. What is the main reason you have not visited an eye care professional in the past 12 months?,via5,2005200069,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+When was the last time you had an eye exam in which the pupils were dilated? (This would have made you temporarily sensitive to bright light),via6,2005200070,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Within the past 2 years (1 year but less than 2 years ago),3,2005200244,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Cost/Insurance,1,2005200245,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Do not have/know an eye doctor,2,2005200246,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+"Cannot get to the office/clinic (too far away, no transportation)",3,2005200247,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+No reason to go (no problem),5,2005200249,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Have not thought of it,6,2005200250,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Feeling scared when you think about living with diabetes,paid_scrd,2005200044,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Worrying about the future and the possibility of serious complications,paid_wr,2005200046,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Feeling that diabetes is taking up too much of your mental and physical energy every day,paid_eng,2005200047,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Coping with complications of diabetes,paid_cml,2005200048,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+PAID score,paidscore,2005200049,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Not a problem,0,2005200213,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Minor problem,1,2005200214,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Moderate problem,2,2005200215,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Somewhat serious problem,3,2005200216,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Serious problem,4,2005200217,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Does not apply to my neighborhood,88,2005200268,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+6 or more,6,2005200270,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+"Thinking about the next 12 months, how likely do you think it is that you will lose your job or be laid off?",pxji1,2005200073,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"About how easy would it be for you to find a job with another employer with approximately the same income and fringe benefits you now have? Would you say very easy, somewhat easy, or not easy at all?",pxji2,2005200074,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+What is your living situation today?,pxhi1,2005200075,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Think about the place you live. Do you have problems with any of the following? CHOOSE ALL THAT APPLY,pxhi2,2005200076,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"In the last 12 months, have you delayed getting prescription medicines because of worry about the cost?",pxpa1,2005200077,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Did any other person in your household delay getting prescription medicines because of worry about the cost?,pxpa2,2005200078,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"In the last 12 months, was there any time when you needed prescription medicines, but did not get them because you couldn't afford it?",pxpa3,2005200079,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+"In the last 12 months, was there any time when anyone else in your household needed prescription medicines, but did not get them because you/they couldn't afford it?",pxpa4,2005200080,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Will be leaving labor force voluntarily,5,2005200251,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Covered,1,2005200252,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+I do NOT have health insurance,0,2005200253,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+I HAVE some kind of health insurance,1,2005200254,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Within the last 10 years (5 years but less than 10 years ago),5,2005200255,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+A doctor's office or health center,1,2005200258,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+"Walk-in clinic, urgent care center, or retail clinic in a pharmacy or grocery store",2,2005200259,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+A VA Medical Center or VA outpatient clinic,4,2005200260,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+1 - 10 times,1,2005200262,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+11 - 19 times,2,2005200263,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+20 - 29 times,3,2005200264,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+30 - 39 times,4,2005200265,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+40 - 49 times,5,2005200266,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+50 or more times,6,2005200267,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+41-50 (up to 2.5 packs),41,2005200194,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+More than 50 (3 or more packs),51,2005200195,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+22 to 28,22,2005200196,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+29 to 35,29,2005200197,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+36 or more,36,2005200198,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+21-25 (5 bottles),21,2005200199,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+26-30 (6 bottles),26,2005200208,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+31-35 (7 bottles),31,2005200209,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+More than 36 (greater than 7 bottles),35,2005200210,AIREADI,Meas Value,Answer,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,mssrf1,2005200605,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,mssrf2,2005200606,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,mssrf3,2005200607,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,mssrf4,2005200608,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,mssrf5,2005200609,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,mssrf6,2005200610,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,mssrf7,2005200611,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,mssrf8,2005200612,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,mssrf9,2005200613,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,mssrf10,2005200614,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,msslf1,2005200615,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,msslf2,2005200616,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,msslf3,2005200617,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,msslf4,2005200618,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,msslf5,2005200619,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,msslf6,2005200620,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,msslf7,2005200621,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,msslf8,2005200622,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,msslf9,2005200623,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Monofilament foot sensation test,msslf10,2005200624,SNOMED,Procedure,Procedure,S,1/1/1970,,,RedCap
+Performed,cesmpdat,2005200570,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,icf_dat,2005200565,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,c184390_dat,2005200587,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Date,cmcmpdat2,2005200594,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,dmgcmpdat,2005200567,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Date,dvamwstdat,2005200591,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Date,dvcgmstdat,2005200592,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Date,dvamwendat,2005200604,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,dmlcmpdat,2005200572,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,dietcmpdat,2005200573,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Date,eos_dsstdat,2005200625,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Date,dricmpdat,2005200590,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,faqcmpdat,2005200562,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,mhcmpdat,2005200568,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,mhcat_dmtaot,2005200451,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Performed,lbdattim1,2005200603,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Date,cmcmpdat,2005200593,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,viacmpdat,2005200574,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,paidcmpdat,2005200571,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,prtcmpdat,2005200566,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,preconcmpdat,2005200564,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,rtfncmpdattim,2005200595,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,rtfnocmpdattim,2005200596,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,rthracmpdattim,2005200597,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,rtoctcmpdattim,2005200598,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,rtm2cmpdattim,2005200599,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,rtfliocmpdattim,2005200600,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,rtaccmpdattim,2005200601,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,rtekgcmpdattim,2005200602,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,pxsficmpdat,2005200584,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,pxnecmpdat,2005200585,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,pxrdcmpdat,2005200586,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,pxsdohcmpdat,2005200575,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+PhenX MetaData,px270201_metadata,2005200576,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+PhenX MetaData,px011002_metadata,2005200577,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+PhenX MetaData,px280301_metadata,2005200578,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+PhenX MetaData,px281401_metadata,2005200579,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+PhenX MetaData,px280801_metadata,2005200580,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+PhenX MetaData,px11502_metadata,2005200581,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+PhenX MetaData,px270101_metadata,2005200582,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+PhenX MetaData,px280901_metadata,2005200583,AIREADI,Observation,Survey,S,1/1/1970,,,RedCap
+Survey Started Timestamp,recstartts,2005200561,AIREADI,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Date,rt_dat,2005200626,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,scrcmpdat,2005200563,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,icfa_dat,2005200588,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
+Performed,sucmpdat,2005200569,SNOMED,Observation,Qualifier Value,S,1/1/1970,,,RedCap
