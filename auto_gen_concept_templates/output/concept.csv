@@ -1,639 +1,414 @@
-concept_id,SRC_CODE,concept_name,vocabulary_id,domain_id,concept_class_id,standard_concept,valid_start_date,valid_end_date,invalid_reason,source
-2005200344,trails_visuospatial_executive,Trail drawings score,,,,,1/1/1970,,,MOCA
-2005200345,trails_visuospatial_executive_time,Time taken to do trails in seconds,,,,,1/1/1970,,,MOCA
-2005200346,cube_visuospatial_executive,Cube drawings score,,,,,1/1/1970,,,MOCA
-2005200347,cube_visuospatial_executive_time,Time taken to do cube in seconds,,,,,1/1/1970,,,MOCA
-2005200348,clock_visuospatial_executive,Clock drawings score,,,,,1/1/1970,,,MOCA
-2005200349,clock_visuospatial_executive_time,Time taken to do clock in seconds,,,,,1/1/1970,,,MOCA
-2005200350,naming,Animal name recall task score,,,,,1/1/1970,,,MOCA
-2005200351,naming_time,Time in seconds to perform the animal name recall task,,,,,1/1/1970,,,MOCA
-2005200352,memory_trial1,Words correctly repeated (1st trial) score,,,,,1/1/1970,,,MOCA
-2005200353,memory_trial1_time,Time in seconds to perform the words correctly repeated (1st trial),,,,,1/1/1970,,,MOCA
-2005200354,memory_trial2,Words correctly repeated (2nd trial) score,,,,,1/1/1970,,,MOCA
-2005200355,memory_trial2_time,Time in seconds to perform the words correctly repeated (2nd trial),,,,,1/1/1970,,,MOCA
-2005200356,digitspan,Repeating digits score,,,,,1/1/1970,,,MOCA
-2005200357,digitspan_time,Time in seconds to perform the repeating digits task,,,,,1/1/1970,,,MOCA
-2005200358,lettera,Letter tapping score,,,,,1/1/1970,,,MOCA
-2005200359,lettera_time,Time in seconds to perform the letter tapping task,,,,,1/1/1970,,,MOCA
-2005200360,subtraction,Serial 7 subtraction score,,,,,1/1/1970,,,MOCA
-2005200361,subtraction_time,Time in seconds to perform the serial 7 subtraction task,,,,,1/1/1970,,,MOCA
-2005200362,repetition,Repeats sentences II score,,,,,1/1/1970,,,MOCA
-2005200363,repetition_time,Time in seconds to perform repeats sentences II task,,,,,1/1/1970,,,MOCA
-2005200364,verbal_fluency_language,Maximal one-minute recall of words beginning with 'F' score,,,,,1/1/1970,,,MOCA
-2005200365,verbal_fluency_language_time,Time in seconds to perform the words beginning with 'F' recall task,,,,,1/1/1970,,,MOCA
-2005200366,moca_abstraction,MOCA abstraction score,,,,,1/1/1970,,,MOCA
-2005200367,moca_abstraction_time,Time in seconds to perform MOCA abstraction task,,,,,1/1/1970,,,MOCA
-2005200368,delayed_recall_with_no_cue,MOCA delayed recall with no cue score,,,,,1/1/1970,,,MOCA
-2005200369,delayed_recall_with_no_cue_time,Time in seconds to perform the MOCA delayed recall with no cue task,,,,,1/1/1970,,,MOCA
-2005200370,moca_orientation,"MOCA orientation date, month, year, day, place, city score",,,,,1/1/1970,,,MOCA
-2005200371,moca_orientation_time,"Time in seconds to perform the MOCA orientation date, month, year, day, place, city task",,,,,1/1/1970,,,MOCA
-2005200372,age_years_at_interview,Age in years (3-4 year span),,,,,1/1/1970,,,MOCA
-2005200373,moca_combined_mis_score,"MOCA delayed recall with no cue, cue, and multiple choice cue (Combined score)",,,,,1/1/1970,,,MOCA
-2005200042,viaodplog,VA Letter Score - Photopic VA - OD,,,,,1/1/1970,,,RedCap
-2005200043,viaosplog,VA Letter Score - Photopic VA - OS,,,,,1/1/1970,,,RedCap
-2005200052,viaodpscore,Photopic LogMAR OD Score,,,,,1/1/1970,,,RedCap
-2005200053,viaospscore,Photopic LogMAR OS Score,,,,,1/1/1970,,,RedCap
-2005200056,viaodmlog,LLVA Letter Score - Mesopic VA - OD,,,,,1/1/1970,,,RedCap
-2005200057,viaosmlog,LLVA Letter Score - Mesopic VA - OS,,,,,1/1/1970,,,RedCap
-2005200336,viaodmscore,Mesopic LogMAR OD Score,,,,,1/1/1970,,,RedCap
-2005200337,viaosmscore,Mesopic LogMAR OS Score,,,,,1/1/1970,,,RedCap
-2005200012,viaodpsf,Snellen fraction - Photopic VA - OD,,,,,1/1/1970,,,RedCap
-2005200013,viaospsf,Snellen fraction - Photopic VA - OS,,,,,1/1/1970,,,RedCap
-2005200054,viaodmsf,Snellen fraction - Mesopic VA - OD,,,,,1/1/1970,,,RedCap
-2005200055,viaosmsf,Snellen fraction - Mesopic VA - OS,,,,,1/1/1970,,,RedCap
-2005200058,1,EVA,,,,,1/1/1970,,,RedCap
-2005200486,mlcsodfcl,"OD: Value of final correct letter - Mesopic, right eye",,,,,1/1/1970,,,RedCap
-2005200487,mlcsodmiss,"OD: Number of misses prior to stopping - Mesopic, right eye",,,,,1/1/1970,,,RedCap
-2005200552,mlcsodlog,"OD: Log Contrast Sensitivity - Mesopic, right eye",,,,,1/1/1970,,,RedCap
-2005200488,mlcsosfcl,"OS: Value of final correct letter - Mesopic, left eye",,,,,1/1/1970,,,RedCap
-2005200489,mlcsosmiss,"OS: Number of misses prior to stopping - Mesopic, left eye",,,,,1/1/1970,,,RedCap
-2005200553,mlcsoslog,"OS: Log Contrast Sensitivity - Mesopic, left eye",,,,,1/1/1970,,,RedCap
-2005200338,plcsodfcl,"OD: Value of final correct letter - Photopic, right eye",,,,,1/1/1970,,,RedCap
-2005200339,plcsodmiss,"OD: Number of misses prior to stopping - Photopic, right eye",,,,,1/1/1970,,,RedCap
-2005200155,plcsodlog,"OD: Log Contrast Sensitivity - Photopic, right eye",,,,,1/1/1970,,,RedCap
-2005200340,plcsosfcl,"OS: Value of final correct letter - Photopic, left eye",,,,,1/1/1970,,,RedCap
-2005200341,plcsosmiss,"OS: Number of misses prior to stopping - Photopic, left eye",,,,,1/1/1970,,,RedCap
-2005200156,plcsoslog,"OS: Log Contrast Sensitivity - Photopic, left eye",,,,,1/1/1970,,,RedCap
-2005200289,rtop_odd,OptoMed-Disc centered-CFP,,,,,1/1/1970,,,RedCap
-2005200290,rtop_odm,OptoMed-Mac centered-CFP,,,,,1/1/1970,,,RedCap
-2005200291,rtei_odir,Eidon-UWF Central-IR,,,,,1/1/1970,,,RedCap
-2005200292,rtei_odfaf,Eidon-UWF Central-FAF,,,,,1/1/1970,,,RedCap
-2005200293,rtsm_odc,Eidon-UWF Central-CFP,,,,,1/1/1970,,,RedCap
-2005200294,rtsm_odn,Eidon-UWF Nasal-CFP,,,,,1/1/1970,,,RedCap
-2005200295,rtsm_odt,Eidon-UWF Temporal-CFP,,,,,1/1/1970,,,RedCap
-2005200296,rtsm_odm,Eidon- Create Mosaic Image-CFP,,,,,1/1/1970,,,RedCap
-2005200297,rtso_odo,Spec-ONH-RC-HR-OCT,,,,,1/1/1970,,,RedCap
-2005200298,rtso_odp,Spec-PPole Mac-HR-61 lines-OCT,,,,,1/1/1970,,,RedCap
-2005200299,rtso_odm,Spec-Mac-20x20-HS-512 lines-OCTA,,,,,1/1/1970,,,RedCap
-2005200300,rtci_odm1,Cirrus-Mac Cube-512x128-OCT,,,,,1/1/1970,,,RedCap
-2005200301,rtci_odd1,Cirrus-Disc Cube-200x200-OCT,,,,,1/1/1970,,,RedCap
-2005200302,rtci_odm2,Cirrus-Macula 6x6-OCTA,,,,,1/1/1970,,,RedCap
-2005200303,rtci_odd2,Cirrus-Disc 6x6-OCTA,,,,,1/1/1970,,,RedCap
-2005200200,rtma_odw,M2-3D Wide(H) 12x9-OCT,,,,,1/1/1970,,,RedCap
-2005200201,rtma_odm,M2-3D Macula 6x6-OCT,,,,,1/1/1970,,,RedCap
-2005200202,rtma_odm1,M2-Mac 6x6-360x360-(rep3)-OCTA,,,,,1/1/1970,,,RedCap
-2005200203,rttr_odr,Triton-3D(H)+Radial 12x9-OCT,,,,,1/1/1970,,,RedCap
-2005200204,rttr_odm1,Triton-Macula 6x6-OCTA,,,,,1/1/1970,,,RedCap
-2005200205,rttr_odm2,Triton-Macula 12x12-OCTA,,,,,1/1/1970,,,RedCap
-2005200304,rtfl_od,FLIO-Mac-HS,,,,,1/1/1970,,,RedCap
-2005200289,rtop_osd,OptoMed-Disc centered-CFP,,,,,1/1/1970,,,RedCap
-2005200290,rtop_osm,OptoMed-Mac centered-CFP,,,,,1/1/1970,,,RedCap
-2005200291,rtei_osir,Eidon-UWF Central-IR,,,,,1/1/1970,,,RedCap
-2005200292,rtei_osfaf,Eidon-UWF Central-FAF,,,,,1/1/1970,,,RedCap
-2005200293,rtsm_osc,Eidon-UWF Central-CFP,,,,,1/1/1970,,,RedCap
-2005200294,rtsm_osn,Eidon-UWF Nasal-CFP,,,,,1/1/1970,,,RedCap
-2005200295,rtsm_ost,Eidon-UWF Temporal-CFP,,,,,1/1/1970,,,RedCap
-2005200296,rtsm_osm,Eidon- Create Mosaic Image-CFP,,,,,1/1/1970,,,RedCap
-2005200297,rtso_oso,Spec-ONH-RC-HR-OCT,,,,,1/1/1970,,,RedCap
-2005200298,rtso_osp,Spec-PPole Mac-HR-61 lines-OCT,,,,,1/1/1970,,,RedCap
-2005200299,rtso_osm,Spec-Mac-20x20-HS-512 lines-OCTA,,,,,1/1/1970,,,RedCap
-2005200300,rtci_osm1,Cirrus-Mac Cube-512x128-OCT,,,,,1/1/1970,,,RedCap
-2005200301,rtci_osd1,Cirrus-Disc Cube-200x200-OCT,,,,,1/1/1970,,,RedCap
-2005200302,rtci_osm2,Cirrus-Macula 6x6-OCTA,,,,,1/1/1970,,,RedCap
-2005200303,rtci_osd2,Cirrus-Disc 6x6-OCTA,,,,,1/1/1970,,,RedCap
-2005200200,rtma_osw,M2-3D Wide(H) 12x9-OCT,,,,,1/1/1970,,,RedCap
-2005200201,rtma_osm,M2-3D Macula 6x6-OCT,,,,,1/1/1970,,,RedCap
-2005200202,rtma_osm1,M2-Mac 6x6-360x360-(rep3)-OCTA,,,,,1/1/1970,,,RedCap
-2005200203,rttr_osr,Triton-3D(H)+Radial 12x9-OCT,,,,,1/1/1970,,,RedCap
-2005200204,rttr_osm1,Triton-Macula 6x6-OCTA,,,,,1/1/1970,,,RedCap
-2005200205,rttr_osm2,Triton-Macula 12x12-OCTA,,,,,1/1/1970,,,RedCap
-2005200304,rtfl_os,FLIO-Mac-HS,,,,,1/1/1970,,,RedCap
-2005200485,cmrouteot,Specify other,,,,,1/1/1970,,,RedCap
-2005200485,mhoccur_ot,Specify other,,,,,1/1/1970,,,RedCap
-2005200629,paate_6hr,"Have you had anything to eat or drink in the last six hours, including coffee or tea with milk or sugar or any other drink other than water?",,,,,1/1/1970,,,RedCap
-2005200206,dvamwenhand,Physical Activity Monitor was worn on which wrist?,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_mi,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_cvdot,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_strk,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_clsh,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_hbp,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_ua,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_ear,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_pdr,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200627,1,"Other heart issues (Examples: pacemaker, heart valve disease, open heart surgery)",,,,,1/1/1970,,,RedCap
-2005200628,1,Stroke,,,,,1/1/1970,,,RedCap
-2005200015,1,"Circulation problems (Examples: arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins)",,,,,1/1/1970,,,RedCap
-2005200017,1,Kidney problems,,,,,1/1/1970,,,RedCap
-2005200014,mhterm_dm1,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200547,1,Elevated A1C levels (elevated blood sugars),,,,,1/1/1970,,,RedCap
-2005200558,cesstartts,Survey Started Timestamp,,,,,1/1/1970,,,RedCap
-2005200559,cescmpts,Survey Completed Timestamp,,,,,1/1/1970,,,RedCap
-2005200558,icfsvyts,Survey Started Timestamp,,,,,1/1/1970,,,RedCap
-2005200559,icfcmpts,Survey Completed Timestamp,,,,,1/1/1970,,,RedCap
-2005200558,dmgstartts,Survey Started Timestamp,,,,,1/1/1970,,,RedCap
-2005200559,dmgcmpts,Survey Completed Timestamp,,,,,1/1/1970,,,RedCap
-2005200589,dcvgmenyn,Device returned,,,,,1/1/1970,,,RedCap
-2005200589,dvenvenyn,Device returned,,,,,1/1/1970,,,RedCap
-2005200558,dmlstartts,Survey Started Timestamp,,,,,1/1/1970,,,RedCap
-2005200559,dmlcmpts,Survey Completed Timestamp,,,,,1/1/1970,,,RedCap
-2005200558,dietstartts,Survey Started Timestamp,,,,,1/1/1970,,,RedCap
-2005200559,dietcmpts,Survey Completed Timestamp,,,,,1/1/1970,,,RedCap
-2005200558,faqstartts,Survey Started Timestamp,,,,,1/1/1970,,,RedCap
-2005200559,faqcmpts,Survey Completed Timestamp,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_circ,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_lbp,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_pd,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_ad,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhcat_adot,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhcat_dmtaot,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_cogn,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_ms,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_cns,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200455,mhoccur_cnsot,Neurocognitive disorder please specify,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_ra,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_oa,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_ca,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200459,mhoccur_cnrot,Other cancer type please (specify),,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_plm,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_gi,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_rnl,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_obs,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_glc,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_amd,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_crt,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_rvo,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhoccur_ded,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200558,mhstartts,Survey Started Timestamp,,,,,1/1/1970,,,RedCap
-2005200559,mhcmpts,Survey Completed Timestamp,,,,,1/1/1970,,,RedCap
-2005200558,viastartts,Survey Started Timestamp,,,,,1/1/1970,,,RedCap
-2005200559,viacmpts,Survey Completed Timestamp,,,,,1/1/1970,,,RedCap
-2005200558,paidstartts,Survey Started Timestamp,,,,,1/1/1970,,,RedCap
-2005200559,paidcmpts,Survey Completed Timestamp,,,,,1/1/1970,,,RedCap
-2005200558,preconstartts,Survey Started Timestamp,,,,,1/1/1970,,,RedCap
-2005200559,preconcmpts,Survey Completed Timestamp,,,,,1/1/1970,,,RedCap
-2005200558,pxfistartts,Survey Started Timestamp,,,,,1/1/1970,,,RedCap
-2005200559,pxsficmpts,Survey Completed Timestamp,,,,,1/1/1970,,,RedCap
-2005200102,px270301_metadata,PhenX MetaData,,,,,1/1/1970,,,RedCap
-2005200558,pxnestartts,Survey Started Timestamp,,,,,1/1/1970,,,RedCap
-2005200559,pxnecmpts,Survey Completed Timestamp,,,,,1/1/1970,,,RedCap
-2005200102,px291201_metadata,PhenX MetaData,,,,,1/1/1970,,,RedCap
-2005200558,pxrdcmpts,Survey Started Timestamp,,,,,1/1/1970,,,RedCap
-2005200559,pxrdstartts,Survey Completed Timestamp,,,,,1/1/1970,,,RedCap
-2005200102,px281501_metadata,PhenX MetaData,,,,,1/1/1970,,,RedCap
-2005200558,pxsdohstartts,Survey Started Timestamp,,,,,1/1/1970,,,RedCap
-2005200559,pxsdohcmpts,Survey Completed Timestamp,,,,,1/1/1970,,,RedCap
-2005200102,px270201_metadata,PhenX MetaData,,,,,1/1/1970,,,RedCap
-2005200102,px011002_metadata,PhenX MetaData,,,,,1/1/1970,,,RedCap
-2005200102,px280301_metadata,PhenX MetaData,,,,,1/1/1970,,,RedCap
-2005200102,px281401_metadata,PhenX MetaData,,,,,1/1/1970,,,RedCap
-2005200102,px280801_metadata,PhenX MetaData,,,,,1/1/1970,,,RedCap
-2005200102,px11502_metadata,PhenX MetaData,,,,,1/1/1970,,,RedCap
-2005200102,px270101_metadata,PhenX MetaData,,,,,1/1/1970,,,RedCap
-2005200102,px280901_metadata,PhenX MetaData,,,,,1/1/1970,,,RedCap
-2005200558,recstartts,Survey Started Timestamp,,,,,1/1/1970,,,RedCap
-2005200559,reccmpts,Survey Completed Timestamp,,,,,1/1/1970,,,RedCap
-2005200014,mh_a1c,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhterm_dm2,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200014,mhterm_predm,Has a doctor or other healthcare professional ever told you that you have/had...,,,,,1/1/1970,,,RedCap
-2005200558,scrstartts,Survey Started Timestamp,,,,,1/1/1970,,,RedCap
-2005200559,scrcmpts,Survey Completed Timestamp,,,,,1/1/1970,,,RedCap
-2005200558,sustartts,Survey Started Timestamp,,,,,1/1/1970,,,RedCap
-2005200559,sucmpts,Survey Completed Timestamp,,,,,1/1/1970,,,RedCap
-2005200557,ancestry,"What is your ancestry or ethnic origin?(Examples: Italian, Jamaican, African American, Cambodian, Cape Verdean, Cherokee, Navajo, Nez Pearce, Norwegian, Dominican, French Canadian, Haitian, Korean, Lebanese, Polish, Nigerian, Mexican, Taiwanese, Ukrainian, and so on.)",,,,,1/1/1970,,,RedCap
-2005200555,dvamwenyn,Activity monitor returned?,,,,,1/1/1970,,,RedCap
-2005200313,5,Less than 30 minutes daily less than 3 days a week,,,,,1/1/1970,,,RedCap
-2005200243,0,1 time or less,,,,,1/1/1970,,,RedCap
-2005200271,1,5000 miles or less,,,,,1/1/1970,,,RedCap
-2005200272,2,"5001 to 10,000 miles",,,,,1/1/1970,,,RedCap
-2005200273,3,"10,001 to 15.000 miles",,,,,1/1/1970,,,RedCap
-2005200274,4,"15,001 to 20,000 miles",,,,,1/1/1970,,,RedCap
-2005200275,5,"More than 20,000 miles",,,,,1/1/1970,,,RedCap
-2005200159,mssrffl,Right Foot - Felt:,,,,,1/1/1970,,,RedCap
-2005200160,mssrftt,Right Foot - Tested:,,,,,1/1/1970,,,RedCap
-2005200161,msslffl,Left Foot - Felt:,,,,,1/1/1970,,,RedCap
-2005200162,msslftt,Left Foot - Tested:,,,,,1/1/1970,,,RedCap
-2005200248,4,Could not get an appointment,,,,,1/1/1970,,,RedCap
-2005200151,paate,How many hours since you last ate? (number of hours),,,,,1/1/1970,,,RedCap
-2005200269,88,There are no streets or roads in my neighborhood,,,,,1/1/1970,,,RedCap
-2005200269,88,There are no streets or roads in my neighborhood,,,,,1/1/1970,,,RedCap
-2005200256,0,There is NO place,,,,,1/1/1970,,,RedCap
-2005200257,2,There is MORE THAN ONE place,,,,,1/1/1970,,,RedCap
-2005200261,6,Does not go to one place most often,,,,,1/1/1970,,,RedCap
-2005200549,cmtrt_insln,Do you inject insulin to control your blood glucose levels?,,,,,1/1/1970,,,RedCap
-2005200004,cmtrt_lfst,"Do you use lifestyle changes to control your A1C and blood glucose levels? Examples: regular exercise, avoiding sugary foods and beverages, eating a balanced diet with lots of vegetables, sticking to a consistent eating schedule",,,,,1/1/1970,,,RedCap
-2005200211,98,More than 20 years,,,,,1/1/1970,,,RedCap
-2005200212,98,More than 50 years,,,,,1/1/1970,,,RedCap
-2005200059,diet5,"How many times a week did you eat beans (like pinto or black beans), chicken, or fish?",,,,,1/1/1970,,,RedCap
-2005200060,diet6,How many times a week did you eat regular snack chips or crackers (not low-fat)?,,,,,1/1/1970,,,RedCap
-2005200061,diet7,How many times a week did you eat desserts and other sweets (not the low-fat kind)?,,,,,1/1/1970,,,RedCap
-2005200062,diet8,"How much margarine, butter, or meat fat do you use to season vegetables or put on potatoes, bread or corn?",,,,,1/1/1970,,,RedCap
-2005200063,diet9,How many servings of fruit juice did you drink each day?,,,,,1/1/1970,,,RedCap
-2005200064,dietscore,Diet score,,,,,1/1/1970,,,RedCap
-2005200136,dri1,"In an average week, how many days per week do you normally drive? (number of days)",,,,,1/1/1970,,,RedCap
-2005200137,dri2,About how many miles did you personally drive during the past 12 months in all motorized vehicles?,,,,,1/1/1970,,,RedCap
-2005200113,pxne8,There is so much traffic on the streets that it makes it difficult or unpleasant to walk in my neighborhood. Would you say that you...,,,,,1/1/1970,,,RedCap
-2005200114,pxne9,"I see many people being physically active in my neighborhood doing things like walking, jogging, cycling, or playing sports and active games. Would you say that you...",,,,,1/1/1970,,,RedCap
-2005200115,pxne10,There are many interesting things to look at while walking in my neighborhood. Would you say you...,,,,,1/1/1970,,,RedCap
-2005200116,pxne11,"How many motor vehicles in working order (e.g., cars, trucks, motorcycles) are there at your household?",,,,,1/1/1970,,,RedCap
-2005200117,pxne12,There are many four-way intersections in my neighborhood. Would you say that you...,,,,,1/1/1970,,,RedCap
-2005200118,pxne13,"The sidewalks in my neighborhood are well maintained (paved, with few cracks) and not obstructed. Would you say that you...",,,,,1/1/1970,,,RedCap
-2005200119,pxne14,Places for bicycling (such as bike paths) in and around my neighborhood are well maintained and not obstructed. Would you say that you...,,,,,1/1/1970,,,RedCap
-2005200120,pxne15,There is so much traffic on the streets that it makes it difficult or unpleasant to ride a bicycle in my neighborhood. Would you say that you...,,,,,1/1/1970,,,RedCap
-2005200121,pxne16,The crime rate in my neighborhood makes it unsafe to go on walks during the day. Would you say that you...,,,,,1/1/1970,,,RedCap
-2005200122,pxne17,There are many places to go within easy walking distance of my home. Would you say that you...,,,,,1/1/1970,,,RedCap
-2005200126,pxrd1,How often have you been treated unfairly by teachers and professors because of your race/ethnic group? How often in the past year?,,,,,1/1/1970,,,RedCap
-2005200127,pxrd2,How often have you been treated unfairly by teachers and professors because of your race/ethnic group? How often in your entire life?,,,,,1/1/1970,,,RedCap
-2005200128,pxrd3,"How often have you been treated unfairly by teachers and professors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",,,,,1/1/1970,,,RedCap
-2005200493,pxrd4,"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? How often in the past year?",,,,,1/1/1970,,,RedCap
-2005200494,pxrd5,"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? How often in your entire life?",,,,,1/1/1970,,,RedCap
-2005200495,pxrd6,"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",,,,,1/1/1970,,,RedCap
-2005200496,pxrd7,"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? How often in the past year?",,,,,1/1/1970,,,RedCap
-2005200497,pxrd8,"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? How often in your entire life?",,,,,1/1/1970,,,RedCap
-2005200498,pdrx9,"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",,,,,1/1/1970,,,RedCap
-2005200499,pxrd10,"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? How often in the past year?",,,,,1/1/1970,,,RedCap
-2005200500,pxrd11,"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? How often in your entire life?",,,,,1/1/1970,,,RedCap
-2005200501,pxrd12,"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",,,,,1/1/1970,,,RedCap
-2005200502,pxrd13,How often have you been treated unfairly by strangers because of your race/ethnic group? How often in the past year?,,,,,1/1/1970,,,RedCap
-2005200503,pxrd14,How often have you been treated unfairly by strangers because of your race/ethnic group? How often in your entire life?,,,,,1/1/1970,,,RedCap
-2005200504,pxrd15,"How often have you been treated unfairly by strangers because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",,,,,1/1/1970,,,RedCap
-2005200505,pxrd16,"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? How often in the past year?",,,,,1/1/1970,,,RedCap
-2005200506,pxrd17,"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? How often in your entire life?",,,,,1/1/1970,,,RedCap
-2005200507,pxrd18,"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",,,,,1/1/1970,,,RedCap
-2005200508,pxrd19,How often have you been treated unfairly by neighbors because of your race/ethnic group? How often in the past year?,,,,,1/1/1970,,,RedCap
-2005200509,pxrd20,How often have you been treated unfairly by neighbors because of your race/ethnic group? How often in your entire life?,,,,,1/1/1970,,,RedCap
-2005200510,pxrd21,"How often have you been treated unfairly by neighbors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",,,,,1/1/1970,,,RedCap
-2005200511,pxrd22,"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? How often in the past year?",,,,,1/1/1970,,,RedCap
-2005200512,pxrd23,"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? How often in your entire life?",,,,,1/1/1970,,,RedCap
-2005200513,pxrd24,"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",,,,,1/1/1970,,,RedCap
-2005200514,pxrd25,How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? How often in the past year?,,,,,1/1/1970,,,RedCap
-2005200515,pxrd26,How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? How often in your entire life?,,,,,1/1/1970,,,RedCap
-2005200516,pxrd27,"How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",,,,,1/1/1970,,,RedCap
-2005200517,pxrd28,"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? How often in the past year?",,,,,1/1/1970,,,RedCap
-2005200518,pxrd29,"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? How often in your entire life?",,,,,1/1/1970,,,RedCap
-2005200519,pxrd30,"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",,,,,1/1/1970,,,RedCap
-2005200520,pxrd31,How often have people misunderstood your intentions and motives because of your race/ethnic group? How often in the past year?,,,,,1/1/1970,,,RedCap
-2005200521,pxrd32,How often have people misunderstood your intentions and motives because of your race/ethnic group? How often in your entire life?,,,,,1/1/1970,,,RedCap
-2005200522,pxrd33,"How often have people misunderstood your intentions and motives because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",,,,,1/1/1970,,,RedCap
-2005200523,pxrd34,How often did you want to tell someone off for being racist towards you but didn't say anything? How often in the past year?,,,,,1/1/1970,,,RedCap
-2005200524,pxrd35,How often did you want to tell someone off for being racist towards you but didn't say anything? How often in your entire life?,,,,,1/1/1970,,,RedCap
-2005200525,pxrd36,"How often did you want to tell someone off for being racist towards you but didn't say anything? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",,,,,1/1/1970,,,RedCap
-2005200526,pxrd37,How often have you been really angry about something racist that was done to you? How often in the past year?,,,,,1/1/1970,,,RedCap
-2005200527,pxrd38,How often have you been really angry about something racist that was done to you? How often in your entire life?,,,,,1/1/1970,,,RedCap
-2005200528,pxrd39,"How often have you been really angry about something racist that was done to you? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",,,,,1/1/1970,,,RedCap
-2005200529,pxrd40,"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? How often in the past year?",,,,,1/1/1970,,,RedCap
-2005200530,pxrd41,"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? How often in your entire life?",,,,,1/1/1970,,,RedCap
-2005200531,pxrd42,"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",,,,,1/1/1970,,,RedCap
-2005200532,pxrd43,How often have you been called a racist name? How often in the past year?,,,,,1/1/1970,,,RedCap
-2005200533,pxrd44,How often have you been called a racist name? How often in your entire life?,,,,,1/1/1970,,,RedCap
-2005200534,pxrd45,"How often have you been called a racist name? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",,,,,1/1/1970,,,RedCap
-2005200535,pxrd46,How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? How often in the past year?,,,,,1/1/1970,,,RedCap
-2005200536,pxrd47,How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? How often in your entire life?,,,,,1/1/1970,,,RedCap
-2005200537,pxrd48,"How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",,,,,1/1/1970,,,RedCap
-2005200538,pxrd49,"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? How often in the past year?",,,,,1/1/1970,,,RedCap
-2005200539,pxrd50,"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? How often in your entire life?",,,,,1/1/1970,,,RedCap
-2005200540,pxrd51,"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",,,,,1/1/1970,,,RedCap
-2005200541,pxrd52,How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In the Past Year?,,,,,1/1/1970,,,RedCap
-2005200542,pxrd53,How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In your entire life?,,,,,1/1/1970,,,RedCap
-2005200543,pxrd54,"How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",,,,,1/1/1970,,,RedCap
-2005200081,pxhic1,Insurance through a current or former employer or union (of yours or another family member's). This would include COBRA coverage.,,,,,1/1/1970,,,RedCap
-2005200082,pxhic2,"Insurance purchased directly from an insurance company (by you or another family member). This would include coverage purchased through an exchange or marketplace, such as HealthCare.gov",,,,,1/1/1970,,,RedCap
-2005200083,pxhic3,"Medicare, for people 65 and older, or people with certain disabilities.",,,,,1/1/1970,,,RedCap
-2005200084,pxhic4,"Medicaid, Medical Assistance (MA), the Children's Health Insurance Program (CHIP), or any kind of state or government-sponsored assistance. plan based on income or a disability.",,,,,1/1/1970,,,RedCap
-2005200085,pxhic5,"TRICARE or other military health care, including VA health care.",,,,,1/1/1970,,,RedCap
-2005200086,pxhic6,Indian Health Service.,,,,,1/1/1970,,,RedCap
-2005200087,pxhic7,Any other type of health insurance coverage or health coverage plan,,,,,1/1/1970,,,RedCap
-2005200088,pxhic8,"Does this mean you currently have no health insurance or health coverage plan? In answering this question, please exclude plans that pay for only one type of service (such as, nursing home care, accidents, family planning, or dental care) and plans that only provide extra cash when hospitalized).",,,,,1/1/1970,,,RedCap
-2005200089,pxhic9,What type of health insurance do you have?,,,,,1/1/1970,,,RedCap
-2005200090,pxahc1,About how long has it been since you last saw a doctor or other health care professional about your health?,,,,,1/1/1970,,,RedCap
-2005200091,pxahc2,"Was this a wellness visit, physical, or general purpose check-up?",,,,,1/1/1970,,,RedCap
-2005200092,pxahc3,"About how long has it been since you last saw a doctor or other health professional for a wellness visit, physical, or general purpose check-up?",,,,,1/1/1970,,,RedCap
-2005200093,pxahc4,Is there a place that you USUALLY go to if you are sick and need health care? ,,,,,1/1/1970,,,RedCap
-2005200094,pxahc5,"What kind of place is it/do you go to most often? A doctor's office or health center is a place where you see the same doctor or the same group of doctors every visit, where you usually need to make an appointment ahead of time, and where your medical records are on file.Urgent care centers and clinics in a drug store or grocery store are places where you do not need to make an appointment ahead of time, and do not usually see the same health care provider at each visit.",,,,,1/1/1970,,,RedCap
-2005200095,pxahc6,"During the past 12 months, how many times have you gone to an urgent care center or a clinic in a drug store or grocery store about your health?Urgent care centers and clinics in drug stores or grocery stores are places where you do not need to make an appointment ahead of time, and do not usually see the same health care provider at each visit. This is different from a hospital emergency room.",,,,,1/1/1970,,,RedCap
-2005200096,pxahc7,"During the past 12 months, how many times have you gone to a hospital emergency room about your health?  *This includes emergency room visits that resulted in a hospital admission.",,,,,1/1/1970,,,RedCap
-2005200097,pxahc8,"During the past 12 months, have you been hospitalized overnight? (Do not include an overnight stay in the emergency room)",,,,,1/1/1970,,,RedCap
-2005200098,pxahc9,"During the past 12 months, have you DELAYED getting medical care because of the cost?",,,,,1/1/1970,,,RedCap
-2005200099,pxahc10,"During the past 12 months, was there any time when you needed medical care, but DID NOT GET IT because of the cost?",,,,,1/1/1970,,,RedCap
-2005200548,cmtrt_a1c,"Do you take pills to control your A1C and blood glucose levels? Examples: Metformin (Glucophage, Glumetza, Fortamet, Riomet), Glucotrol, Amaryl, DiaBeta, Blynase PresTab, Micronase, Actos, Avandia, Precose, Glyset, Prandin, Starlix, Januvia, Onglyza, Tradjenta, Nesina, Invokana, Farxiga, Jardiance, Welchol, and Cyclocet",,,,,1/1/1970,,,RedCap
-2005200550,cmtrt_glcs,"Do you use other injections to control your blood glucose levels?  Examples: Victoza, Ozempic, Symlin, Tanzeum, and Trulicity",,,,,1/1/1970,,,RedCap
-2005200024,subrkncf,Have you had any beer or ale in the past year?,,,,,1/1/1970,,,RedCap
-2005200025,subrdosfr,"During the average week, how many 12 oz. bottles or cans of beer do you usually drink? (Number of bottles or cans per week)",,,,,1/1/1970,,,RedCap
-2005200026,suwnkncf,Have you had any wine in the past year?,,,,,1/1/1970,,,RedCap
-2005200027,suwndosfr,"During the average week, how many 5 oz. glasses of wine do you usually drink?  The average wine bottle has 5 servings. (Number of glasses per week)",,,,,1/1/1970,,,RedCap
-2005200028,sulqkncf,"Have you had any liquor in the past year, such as brandy, whiskey, vodka, gin, schnapps, cocktails, or liqueurs?",,,,,1/1/1970,,,RedCap
-2005200029,sulqdosfr,"During the average week, how many 1.5 oz. of liquor do you usually drink, either as shots or in mixed cocktails? (Number of drinks per week)",,,,,1/1/1970,,,RedCap
-2005200030,sualcdrv,"Do you drive after having a drink, even if it is only one drink?",,,,,1/1/1970,,,RedCap
-2005200031,suvpkncf1,Have you ever vaped or used e-cigarettes?,,,,,1/1/1970,,,RedCap
-2005200032,suvpstage,At what age did you start vaping or using e-cigarettes? (Age started - years old),,,,,1/1/1970,,,RedCap
-2005200033,suvpcdur,Do you vape or use e-cigarettes now?,,,,,1/1/1970,,,RedCap
-2005200034,suvptoage,How many total years have you vaped or used e-cigarettes?,,,,,1/1/1970,,,RedCap
-2005200035,suvpdosfr,"When you vaped or used e-cigarettes, approximately how many days in a typical week would you use it?",,,,,1/1/1970,,,RedCap
-2005200036,sumrjkncf,"Have you ever used marijuana (cannabis)? (This includes smoking marijuana, using cannabis concentrates, and edibles.)",,,,,1/1/1970,,,RedCap
-2005200473,sumrjcdur,Do you use marijuana now?,,,,,1/1/1970,,,RedCap
-2005200037,sumrjtrt,In what form do you usually use marijuana?  (check all that apply),,,,,1/1/1970,,,RedCap
-2005200038,sumrjceddur,How many total years have you used marijuana?,,,,,1/1/1970,,,RedCap
-2005200039,sumrjfr,"When you used marijuana, approximately how many days in a typical week would you use it?",,,,,1/1/1970,,,RedCap
-2005200481,cmname,Medication Name,,,,,1/1/1970,,,RedCap
-2005200485,odristate,Specify other,,,,,1/1/1970,,,RedCap
-2005200480,pxep2,Do you speak another language at home?,,,,,1/1/1970,,,RedCap
-2005200463,fh_dm2ptsp,Was your mother or father diagnosed with Type II Diabetes?,,,,,1/1/1970,,,RedCap
-2005200464,fh_dm2sbsp,"If yes, please check all that apply: brother, sister, half-sister, half-brother",,,,,1/1/1970,,,RedCap
-2005200470,mhoccur_yn,Have you been diagnosed with any conditions not listed above?,,,,,1/1/1970,,,RedCap
-2005200045,paid_dpr,Feeling depressed when you think about living with diabetes,,,,,1/1/1970,,,RedCap
-2005200011,viaomthd,Method used to complete form,,,,,1/1/1970,,,RedCap
-2005200141,0,Rarely or none of the time (< 1 day),,,,,1/1/1970,,,RedCap
-2005200142,1,Some or a little of the time (1-2 days),,,,,1/1/1970,,,RedCap
-2005200143,2,Occasionally or a moderate amount of time (3-4 days),,,,,1/1/1970,,,RedCap
-2005200144,3,All of the time (5-7 days),,,,,1/1/1970,,,RedCap
-2005200141,0,Rarely or none of the time (< 1 day),,,,,1/1/1970,,,RedCap
-2005200142,1,Some or a little of the time (1-2 days),,,,,1/1/1970,,,RedCap
-2005200143,2,Occasionally or a moderate amount of time (3-4 days),,,,,1/1/1970,,,RedCap
-2005200144,3,All of the time (5-7 days),,,,,1/1/1970,,,RedCap
-2005200141,0,Rarely or none of the time (< 1 day),,,,,1/1/1970,,,RedCap
-2005200142,1,Some or a little of the time (1-2 days),,,,,1/1/1970,,,RedCap
-2005200143,2,Occasionally or a moderate amount of time (3-4 days),,,,,1/1/1970,,,RedCap
-2005200144,3,All of the time (5-7 days),,,,,1/1/1970,,,RedCap
-2005200141,0,Rarely or none of the time (< 1 day),,,,,1/1/1970,,,RedCap
-2005200142,1,Some or a little of the time (1-2 days),,,,,1/1/1970,,,RedCap
-2005200143,2,Occasionally or a moderate amount of time (3-4 days),,,,,1/1/1970,,,RedCap
-2005200144,3,All of the time (5-7 days),,,,,1/1/1970,,,RedCap
-2005200141,3,Rarely or none of the time (< 1 day),,,,,1/1/1970,,,RedCap
-2005200142,2,Some or a little of the time (1-2 days),,,,,1/1/1970,,,RedCap
-2005200143,1,Occasionally or a moderate amount of time (3-4 days),,,,,1/1/1970,,,RedCap
-2005200144,0,All of the time (5-7 days),,,,,1/1/1970,,,RedCap
-2005200141,0,Rarely or none of the time (< 1 day),,,,,1/1/1970,,,RedCap
-2005200142,1,Some or a little of the time (1-2 days),,,,,1/1/1970,,,RedCap
-2005200143,2,Occasionally or a moderate amount of time (3-4 days),,,,,1/1/1970,,,RedCap
-2005200144,3,All of the time (5-7 days),,,,,1/1/1970,,,RedCap
-2005200141,0,Rarely or none of the time (< 1 day),,,,,1/1/1970,,,RedCap
-2005200142,1,Some or a little of the time (1-2 days),,,,,1/1/1970,,,RedCap
-2005200143,2,Occasionally or a moderate amount of time (3-4 days),,,,,1/1/1970,,,RedCap
-2005200144,3,All of the time (5-7 days),,,,,1/1/1970,,,RedCap
-2005200141,3,Rarely or none of the time (< 1 day),,,,,1/1/1970,,,RedCap
-2005200142,2,Some or a little of the time (1-2 days),,,,,1/1/1970,,,RedCap
-2005200143,1,Occasionally or a moderate amount of time (3-4 days),,,,,1/1/1970,,,RedCap
-2005200144,0,All of the time (5-7 days),,,,,1/1/1970,,,RedCap
-2005200141,0,Rarely or none of the time (< 1 day),,,,,1/1/1970,,,RedCap
-2005200142,1,Some or a little of the time (1-2 days),,,,,1/1/1970,,,RedCap
-2005200143,2,Occasionally or a moderate amount of time (3-4 days),,,,,1/1/1970,,,RedCap
-2005200144,3,All of the time (5-7 days),,,,,1/1/1970,,,RedCap
-2005200141,0,Rarely or none of the time (< 1 day),,,,,1/1/1970,,,RedCap
-2005200142,1,Some or a little of the time (1-2 days),,,,,1/1/1970,,,RedCap
-2005200143,2,Occasionally or a moderate amount of time (3-4 days),,,,,1/1/1970,,,RedCap
-2005200144,3,All of the time (5-7 days),,,,,1/1/1970,,,RedCap
-2005200220,cmtrt,RxNorm (assign after visit),,,,,1/1/1970,,,RedCap
-2005200221,cmdosu,"Unit (Record the dose unit of the dose of concomitant medication/treatment/therapy taken (e.g., mg.)).",,,,,1/1/1970,,,RedCap
-2005200222,13,Puff,,,,,1/1/1970,,,RedCap
-2005200277,dmlvex,"In a typical week, how often do you engage in vigorous exercise? (Examples: hiking, jogging at 6 mph, shoveling, carrying heavy loads, bicycling fast (14-16 mph), playing basketball, playing soccer, playing tennis, or any activity during which you cannot say more than a few words without taking a breath)",,,,,1/1/1970,,,RedCap
-2005200278,dmlhex,"How often would you say that you engage in daily home exercise? (Examples: stretching, calisthenics, or yoga)",,,,,1/1/1970,,,RedCap
-2005200305,dmlsugar,"When reflecting on your typical eating habits, which of the following options best describes how often you consume simple sugars?",,,,,1/1/1970,,,RedCap
-2005200306,dmlgrain,"In a typical day, how often do you consume whole grains? (Examples: include whole wheat, brown bread, or brown rice).",,,,,1/1/1970,,,RedCap
-2005200307,dmledu,"How often would you say that you engage in diabetes health education? (Examples: consulting with a dietician, attending support groups, reading books on diabetes, using diabetes-focused websites, watching TV shows on health, or using health-focused apps on your phone or tablet)",,,,,1/1/1970,,,RedCap
-2005200308,dmlfeet,How often do you inspect your feet?,,,,,1/1/1970,,,RedCap
-2005200309,dmlmd,Which of the following options best describes you with respect to physician care and medications?,,,,,1/1/1970,,,RedCap
-2005200312,10,At least 30 minutes daily 3 or more days a week,,,,,1/1/1970,,,RedCap
-2005200314,10,"Active (stairs, walks, housework)",,,,,1/1/1970,,,RedCap
-2005200315,5,Somewhat active,,,,,1/1/1970,,,RedCap
-2005200316,0,"Not Active (TV, computer, phone, use lifts)",,,,,1/1/1970,,,RedCap
-2005200317,10,Doing daily or almost daily,,,,,1/1/1970,,,RedCap
-2005200318,5,Irregular; once or twice a week,,,,,1/1/1970,,,RedCap
-2005200319,10,Rarely eat sweets,,,,,1/1/1970,,,RedCap
-2005200320,5,Occasionally eat sweets,,,,,1/1/1970,,,RedCap
-2005200321,0,Frequently eat sweets,,,,,1/1/1970,,,RedCap
-2005200322,10,Usually eat whole grain,,,,,1/1/1970,,,RedCap
-2005200323,5,Rarely eat whole grain,,,,,1/1/1970,,,RedCap
-2005200324,0,Usually eat white bread or white rice,,,,,1/1/1970,,,RedCap
-2005200325,10,Eat small portions and avoid second servings,,,,,1/1/1970,,,RedCap
-2005200326,5,Occasionally limit portions,,,,,1/1/1970,,,RedCap
-2005200327,0,Rarely or none; eat at buffets and restaurants with large portions,,,,,1/1/1970,,,RedCap
-2005200328,10,4-5 servings or pieces of fruits and raw vegetables per day,,,,,1/1/1970,,,RedCap
-2005200329,5,1-3 servings or pieces per day,,,,,1/1/1970,,,RedCap
-2005200330,10,"Regularly; at least monthly (dietician, support groups, books, websites, apps)",,,,,1/1/1970,,,RedCap
-2005200331,5,Occasionally; every 2-3 months,,,,,1/1/1970,,,RedCap
-2005200332,10,3 or more visits a year to the same doctor. Regular with medicines.,,,,,1/1/1970,,,RedCap
-2005200333,5,1-2 visits a year. Forgetting medicines frequently.,,,,,1/1/1970,,,RedCap
-2005200334,0,Rarely or none. Not taking 1 or more recommended medicines,,,,,1/1/1970,,,RedCap
-2005200238,0,Less than 1 time,,,,,1/1/1970,,,RedCap
-2005200239,1,1 - 3 times,,,,,1/1/1970,,,RedCap
-2005200240,0,5 or more,,,,,1/1/1970,,,RedCap
-2005200241,2,2 or less,,,,,1/1/1970,,,RedCap
-2005200240,0,5 or more,,,,,1/1/1970,,,RedCap
-2005200241,2,2 or less,,,,,1/1/1970,,,RedCap
-2005200242,0,Less than 1,,,,,1/1/1970,,,RedCap
-2005200238,2,Less than 1 time,,,,,1/1/1970,,,RedCap
-2005200243,0,1 time or less,,,,,1/1/1970,,,RedCap
-2005200242,0,Less than 1,,,,,1/1/1970,,,RedCap
-2005200192,eos_ds,Did the subject complete the study?,,,,,1/1/1970,,,RedCap
-2005200280,1,Did not meet Inclusion/Exclusion criteria,,,,,1/1/1970,,,RedCap
-2005200281,3,Withdrawal by Subject,,,,,1/1/1970,,,RedCap
-2005200282,4,Geographic Inaccessibility,,,,,1/1/1970,,,RedCap
-2005200283,6,Currently enrolled in a conflicting study,,,,,1/1/1970,,,RedCap
-2005200284,9,Protocol Deviation,,,,,1/1/1970,,,RedCap
-2005200285,1,Individual was under age 40,,,,,1/1/1970,,,RedCap
-2005200286,3,Individual is not needed at this time for recruitment goals,,,,,1/1/1970,,,RedCap
-2005200287,4,Individual had Type 1 Diabetes,,,,,1/1/1970,,,RedCap
-2005200288,2,In Person (Baseline),,,,,1/1/1970,,,RedCap
-2005200138,dristate,Drivers license state,,,,,1/1/1970,,,RedCap
-2005200018,fh_dm2pt,Were either of your parents diagnosed with Type II Diabetes?,,,,,1/1/1970,,,RedCap
-2005200019,fh_dm2sb,Has a sibling been diagnosed with Type II Diabetes?,,,,,1/1/1970,,,RedCap
-2005200182,lbscat_wbc,White Blood Cells (WBC) - x10E3/µL,,,,,1/1/1970,,,RedCap
-2005200183,lbscat_rbc,Red Blood Cells (RBC) - x10E6/µL,,,,,1/1/1970,,,RedCap
-2005200145,cm_asp,Have you taken aspirin in the past 2 weeks?,,,,,1/1/1970,,,RedCap
-2005200146,cm_act,"Have you taken acetaminophen medicines, such as Tylenol, in the past 2 weeks?",,,,,1/1/1970,,,RedCap
-2005200147,cm_ibp,Have you taken ibuprofen or ibuprofen-containing medicines such as Advil or Motrin in the past 2 weeks?,,,,,1/1/1970,,,RedCap
-2005200148,cm_ant,"Have you taken antihistamines, such as cold pills or allergy pills, in the past 2 weeks?",,,,,1/1/1970,,,RedCap
-2005200149,cm_dcg,"Have you taken decongestants, such as cold pills or allergy pills, in the past 2 weeks?",,,,,1/1/1970,,,RedCap
-2005200150,cm_slp,Have you taken sleeping pills in the past 2 weeks?,,,,,1/1/1970,,,RedCap
-2005200067,via1,"How much difficulty, if any, do you have in recognizing a friend across the street? Would you say:",,,,,1/1/1970,,,RedCap
-2005200068,via2,"How much difficulty, if any, do you have reading print in newspapers, magazines, recipes, menus, or numbers on the telephone? Would you say:",,,,,1/1/1970,,,RedCap
-2005200069,via5,You have indicated that you have not seen an eye care professional in the past 12 months. What is the main reason you have not visited an eye care professional in the past 12 months?,,,,,1/1/1970,,,RedCap
-2005200070,via6,When was the last time you had an eye exam in which the pupils were dilated? (This would have made you temporarily sensitive to bright light),,,,,1/1/1970,,,RedCap
-2005200244,3,Within the past 2 years (1 year but less than 2 years ago),,,,,1/1/1970,,,RedCap
-2005200245,1,Cost/Insurance,,,,,1/1/1970,,,RedCap
-2005200246,2,Do not have/know an eye doctor,,,,,1/1/1970,,,RedCap
-2005200247,3,"Cannot get to the office/clinic (too far away, no transportation)",,,,,1/1/1970,,,RedCap
-2005200249,5,No reason to go (no problem),,,,,1/1/1970,,,RedCap
-2005200250,6,Have not thought of it,,,,,1/1/1970,,,RedCap
-2005200244,3,Within the past 2 years (1 year but less than 2 years ago),,,,,1/1/1970,,,RedCap
-2005200044,paid_scrd,Feeling scared when you think about living with diabetes,,,,,1/1/1970,,,RedCap
-2005200046,paid_wr,Worrying about the future and the possibility of serious complications,,,,,1/1/1970,,,RedCap
-2005200047,paid_eng,Feeling that diabetes is taking up too much of your mental and physical energy every day,,,,,1/1/1970,,,RedCap
-2005200048,paid_cml,Coping with complications of diabetes,,,,,1/1/1970,,,RedCap
-2005200049,paidscore,PAID score,,,,,1/1/1970,,,RedCap
-2005200213,0,Not a problem,,,,,1/1/1970,,,RedCap
-2005200214,1,Minor problem,,,,,1/1/1970,,,RedCap
-2005200215,2,Moderate problem,,,,,1/1/1970,,,RedCap
-2005200216,3,Somewhat serious problem,,,,,1/1/1970,,,RedCap
-2005200217,4,Serious problem,,,,,1/1/1970,,,RedCap
-2005200213,0,Not a problem,,,,,1/1/1970,,,RedCap
-2005200214,1,Minor problem,,,,,1/1/1970,,,RedCap
-2005200215,2,Moderate problem,,,,,1/1/1970,,,RedCap
-2005200216,3,Somewhat serious problem,,,,,1/1/1970,,,RedCap
-2005200217,4,Serious problem,,,,,1/1/1970,,,RedCap
-2005200213,0,Not a problem,,,,,1/1/1970,,,RedCap
-2005200214,1,Minor problem,,,,,1/1/1970,,,RedCap
-2005200215,2,Moderate problem,,,,,1/1/1970,,,RedCap
-2005200216,3,Somewhat serious problem,,,,,1/1/1970,,,RedCap
-2005200217,4,Serious problem,,,,,1/1/1970,,,RedCap
-2005200213,0,Not a problem,,,,,1/1/1970,,,RedCap
-2005200214,1,Minor problem,,,,,1/1/1970,,,RedCap
-2005200215,2,Moderate problem,,,,,1/1/1970,,,RedCap
-2005200216,3,Somewhat serious problem,,,,,1/1/1970,,,RedCap
-2005200217,4,Serious problem,,,,,1/1/1970,,,RedCap
-2005200213,0,Not a problem,,,,,1/1/1970,,,RedCap
-2005200214,1,Minor problem,,,,,1/1/1970,,,RedCap
-2005200215,2,Moderate problem,,,,,1/1/1970,,,RedCap
-2005200216,3,Somewhat serious problem,,,,,1/1/1970,,,RedCap
-2005200217,4,Serious problem,,,,,1/1/1970,,,RedCap
-2005200268,88,Does not apply to my neighborhood,,,,,1/1/1970,,,RedCap
-2005200268,88,Does not apply to my neighborhood,,,,,1/1/1970,,,RedCap
-2005200270,6,6 or more,,,,,1/1/1970,,,RedCap
-2005200073,pxji1,"Thinking about the next 12 months, how likely do you think it is that you will lose your job or be laid off?",,,,,1/1/1970,,,RedCap
-2005200074,pxji2,"About how easy would it be for you to find a job with another employer with approximately the same income and fringe benefits you now have? Would you say very easy, somewhat easy, or not easy at all?",,,,,1/1/1970,,,RedCap
-2005200075,pxhi1,What is your living situation today?,,,,,1/1/1970,,,RedCap
-2005200076,pxhi2,Think about the place you live. Do you have problems with any of the following? CHOOSE ALL THAT APPLY,,,,,1/1/1970,,,RedCap
-2005200077,pxpa1,"In the last 12 months, have you delayed getting prescription medicines because of worry about the cost?",,,,,1/1/1970,,,RedCap
-2005200078,pxpa2,Did any other person in your household delay getting prescription medicines because of worry about the cost?,,,,,1/1/1970,,,RedCap
-2005200079,pxpa3,"In the last 12 months, was there any time when you needed prescription medicines, but did not get them because you couldn't afford it?",,,,,1/1/1970,,,RedCap
-2005200080,pxpa4,"In the last 12 months, was there any time when anyone else in your household needed prescription medicines, but did not get them because you/they couldn't afford it?",,,,,1/1/1970,,,RedCap
-2005200251,5,Will be leaving labor force voluntarily,,,,,1/1/1970,,,RedCap
-2005200252,1,Covered,,,,,1/1/1970,,,RedCap
-2005200252,1,Covered,,,,,1/1/1970,,,RedCap
-2005200252,1,Covered,,,,,1/1/1970,,,RedCap
-2005200252,1,Covered,,,,,1/1/1970,,,RedCap
-2005200252,1,Covered,,,,,1/1/1970,,,RedCap
-2005200252,1,Covered,,,,,1/1/1970,,,RedCap
-2005200252,1,Covered,,,,,1/1/1970,,,RedCap
-2005200253,0,I do NOT have health insurance,,,,,1/1/1970,,,RedCap
-2005200254,1,I HAVE some kind of health insurance,,,,,1/1/1970,,,RedCap
-2005200255,5,Within the last 10 years (5 years but less than 10 years ago),,,,,1/1/1970,,,RedCap
-2005200255,5,Within the last 10 years (5 years but less than 10 years ago),,,,,1/1/1970,,,RedCap
-2005200258,1,A doctor's office or health center,,,,,1/1/1970,,,RedCap
-2005200259,2,"Walk-in clinic, urgent care center, or retail clinic in a pharmacy or grocery store",,,,,1/1/1970,,,RedCap
-2005200260,4,A VA Medical Center or VA outpatient clinic,,,,,1/1/1970,,,RedCap
-2005200262,1,1 - 10 times,,,,,1/1/1970,,,RedCap
-2005200263,2,11 - 19 times,,,,,1/1/1970,,,RedCap
-2005200264,3,20 - 29 times,,,,,1/1/1970,,,RedCap
-2005200265,4,30 - 39 times,,,,,1/1/1970,,,RedCap
-2005200266,5,40 - 49 times,,,,,1/1/1970,,,RedCap
-2005200267,6,50 or more times,,,,,1/1/1970,,,RedCap
-2005200262,1,1 - 10 times,,,,,1/1/1970,,,RedCap
-2005200263,2,11 - 19 times,,,,,1/1/1970,,,RedCap
-2005200264,3,20 - 29 times,,,,,1/1/1970,,,RedCap
-2005200265,4,30 - 39 times,,,,,1/1/1970,,,RedCap
-2005200266,5,40 - 49 times,,,,,1/1/1970,,,RedCap
-2005200267,6,50 or more times,,,,,1/1/1970,,,RedCap
-2005200194,41,41-50 (up to 2.5 packs),,,,,1/1/1970,,,RedCap
-2005200195,51,More than 50 (3 or more packs),,,,,1/1/1970,,,RedCap
-2005200196,22,22 to 28,,,,,1/1/1970,,,RedCap
-2005200197,29,29 to 35,,,,,1/1/1970,,,RedCap
-2005200198,36,36 or more,,,,,1/1/1970,,,RedCap
-2005200199,21,21-25 (5 bottles),,,,,1/1/1970,,,RedCap
-2005200208,26,26-30 (6 bottles),,,,,1/1/1970,,,RedCap
-2005200209,31,31-35 (7 bottles),,,,,1/1/1970,,,RedCap
-2005200210,35,More than 36 (greater than 7 bottles),,,,,1/1/1970,,,RedCap
-2005200196,22,22 to 28,,,,,1/1/1970,,,RedCap
-2005200197,29,29 to 35,,,,,1/1/1970,,,RedCap
-2005200198,36,36 or more,,,,,1/1/1970,,,RedCap
-2005200605,mssrf1,Right foot - site 1,,,,,1/1/1970,,,RedCap
-2005200606,mssrf2,Right foot - site 2,,,,,1/1/1970,,,RedCap
-2005200607,mssrf3,Right foot - site 3,,,,,1/1/1970,,,RedCap
-2005200608,mssrf4,Right foot - site 4,,,,,1/1/1970,,,RedCap
-2005200609,mssrf5,Right foot - site 5,,,,,1/1/1970,,,RedCap
-2005200610,mssrf6,Right foot - site 6,,,,,1/1/1970,,,RedCap
-2005200611,mssrf7,Right foot - site 7,,,,,1/1/1970,,,RedCap
-2005200612,mssrf8,Right foot - site 8,,,,,1/1/1970,,,RedCap
-2005200613,mssrf9,Right foot - site 9,,,,,1/1/1970,,,RedCap
-2005200614,mssrf10,Right foot - site 10,,,,,1/1/1970,,,RedCap
-2005200615,msslf1,Left foot - site 1,,,,,1/1/1970,,,RedCap
-2005200616,msslf2,Left foot - site 2,,,,,1/1/1970,,,RedCap
-2005200617,msslf3,Left foot - site 3,,,,,1/1/1970,,,RedCap
-2005200618,msslf4,Left foot - site 4,,,,,1/1/1970,,,RedCap
-2005200619,msslf5,Left foot - site 5,,,,,1/1/1970,,,RedCap
-2005200620,msslf6,Left foot - site 6,,,,,1/1/1970,,,RedCap
-2005200621,msslf7,Left foot - site 7,,,,,1/1/1970,,,RedCap
-2005200622,msslf8,Left foot - site 8,,,,,1/1/1970,,,RedCap
-2005200623,msslf9,Left foot - site 9,,,,,1/1/1970,,,RedCap
-2005200624,msslf10,Left foot - site 10,,,,,1/1/1970,,,RedCap
-2005200627,mhoccur_cvdot,"Other heart issues (Examples: pacemaker, heart valve disease, open heart surgery)",,,,,1/1/1970,,,RedCap
-2005200628,mhoccur_strk,Stroke,,,,,1/1/1970,,,RedCap
-2005200570,cesmpdat,CES-D-10 Survey,,,,,1/1/1970,,,RedCap
-2005200570,cesstartts,CES-D-10 Survey,,,,,1/1/1970,,,RedCap
-2005200570,cescmpts,CES-D-10 Survey,,,,,1/1/1970,,,RedCap
-2005200565,icf_dat,Consent Survey,,,,,1/1/1970,,,RedCap
-2005200587,c184390_dat,Paper Consent Completed,,,,,1/1/1970,,,RedCap
-2005200565,icfsvyts,Consent Survey,,,,,1/1/1970,,,RedCap
-2005200565,icfcmpts,Consent Survey,,,,,1/1/1970,,,RedCap
-2005200594,cmcmpdat2,Current medication collected,,,,,1/1/1970,,,RedCap
-2005200567,dmgcmpdat,Demographic Survey,,,,,1/1/1970,,,RedCap
-2005200567,dmgstartts,Demographic Survey,,,,,1/1/1970,,,RedCap
-2005200567,dmgcmpts,Demographic Survey,,,,,1/1/1970,,,RedCap
-2005200591,dvamwstdat,Device given to participant,,,,,1/1/1970,,,RedCap
-2005200592,dvcgmstdat,Sensor inserted,,,,,1/1/1970,,,RedCap
-2005200591,dvenvstdat,Device given to participant,,,,,1/1/1970,,,RedCap
-2005200604,dvamwendat,device received back from participant,,,,,1/1/1970,,,RedCap
-2005200604,dvcgmendat,device received back from participant,,,,,1/1/1970,,,RedCap
-2005200604,dvenvendat,device received back from participant,,,,,1/1/1970,,,RedCap
-2005200572,dmlcmpdat,Diabetes Survey,,,,,1/1/1970,,,RedCap
-2005200572,dmlstartts,Diabetes Survey,,,,,1/1/1970,,,RedCap
-2005200572,dmlcmpts,Diabetes Survey,,,,,1/1/1970,,,RedCap
-2005200573,dietcmpdat,Dietary Survey,,,,,1/1/1970,,,RedCap
-2005200573,dietstartts,Dietary Survey,,,,,1/1/1970,,,RedCap
-2005200573,dietcmpts,Dietary Survey,,,,,1/1/1970,,,RedCap
-2005200625,eos_dsstdat,AI-READI study discontinuation or completion,,,,,1/1/1970,,,RedCap
-2005200590,dricmpdat,Driving record assessment conducted,,,,,1/1/1970,,,RedCap
-2005200562,faqcmpdat,FAQ Survey,,,,,1/1/1970,,,RedCap
-2005200562,faqstartts,FAQ Survey,,,,,1/1/1970,,,RedCap
-2005200562,faqcmpts,FAQ Survey,,,,,1/1/1970,,,RedCap
-2005200568,mhcmpdat,Health Survey,,,,,1/1/1970,,,RedCap
-2005200015,mhoccur_circ,"Circulation problems (Examples: arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins)",,,,,1/1/1970,,,RedCap
-2005200451,mhcat_dmtaot,Other types of Dementia or Alzheimer's Disease,,,,,1/1/1970,,,RedCap
-2005200459,mhoccur_cnrot,Other cancer type please (specify),,,,,1/1/1970,,,RedCap
-2005200017,mhoccur_rnl,Kidney problems,,,,,1/1/1970,,,RedCap
-2005200568,mhstartts,Health Survey,,,,,1/1/1970,,,RedCap
-2005200568,mhcmpts,Health Survey,,,,,1/1/1970,,,RedCap
-2005200603,lbdattim1,clinical labs,,,,,1/1/1970,,,RedCap
-2005200593,cmcmpdat,Medications assessment conducted,,,,,1/1/1970,,,RedCap
-2005200574,viacmpdat,Ophthalmic Survey,,,,,1/1/1970,,,RedCap
-2005200574,viastartts,Ophthalmic Survey,,,,,1/1/1970,,,RedCap
-2005200574,viacmpts,Ophthalmic Survey,,,,,1/1/1970,,,RedCap
-2005200571,paidcmpdat,PAID-5 DM Survey,,,,,1/1/1970,,,RedCap
-2005200571,paidstartts,PAID-5 DM Survey,,,,,1/1/1970,,,RedCap
-2005200571,paidcmpts,PAID-5 DM Survey,,,,,1/1/1970,,,RedCap
-2005200566,prtcmpdat,Participant Contact Survey,,,,,1/1/1970,,,RedCap
-2005200564,preconcmpdat,Pre-consent Survey,,,,,1/1/1970,,,RedCap
-2005200564,preconstartts,Pre-consent Survey,,,,,1/1/1970,,,RedCap
-2005200564,preconcmpts,Pre-consent Survey,,,,,1/1/1970,,,RedCap
-2005200595,rtfncmpdattim,Fundus - Edion,,,,,1/1/1970,,,RedCap
-2005200596,rtfnocmpdattim,Fundus - Optomed,,,,,1/1/1970,,,RedCap
-2005200597,rthracmpdattim,OCT & OCTA - Spectralis HRA OCT,,,,,1/1/1970,,,RedCap
-2005200598,rtoctcmpdattim,OCT - Triton OCT,,,,,1/1/1970,,,RedCap
-2005200599,rtm2cmpdattim,OCT & OCTA - Maestro2,,,,,1/1/1970,,,RedCap
-2005200600,rtfliocmpdattim,FLIO,,,,,1/1/1970,,,RedCap
-2005200601,rtaccmpdattim,Angioplex - Cirrus 5000,,,,,1/1/1970,,,RedCap
-2005200602,rtekgcmpdattim,Cardiology - EKG - Pagewriter TC30 Cardiograp,,,,,1/1/1970,,,RedCap
-2005200584,pxsficmpdat,PhenX Food Insecurity Survey,,,,,1/1/1970,,,RedCap
-2005200584,pxfistartts,PhenX Food Insecurity Survey,,,,,1/1/1970,,,RedCap
-2005200584,pxsficmpts,PhenX Food Insecurity Survey,,,,,1/1/1970,,,RedCap
-2005200584,px270301_metadata,PhenX Food Insecurity Survey,,,,,1/1/1970,,,RedCap
-2005200585,pxnecmpdat,PhenX Neighborhood Environment Survey,,,,,1/1/1970,,,RedCap
-2005200585,pxnestartts,PhenX Neighborhood Environment Survey,,,,,1/1/1970,,,RedCap
-2005200585,pxnecmpts,PhenX Neighborhood Environment Survey,,,,,1/1/1970,,,RedCap
-2005200585,px291201_metadata,PhenX Neighborhood Environment Survey,,,,,1/1/1970,,,RedCap
-2005200586,pxrdcmpdat,PhenX Racial/Ethnic Survey,,,,,1/1/1970,,,RedCap
-2005200586,pxrdcmpts,PhenX Racial/Ethnic Survey,,,,,1/1/1970,,,RedCap
-2005200586,pxrdstartts,PhenX Racial/Ethnic Survey,,,,,1/1/1970,,,RedCap
-2005200586,px281501_metadata,PhenX Racial/Ethnic Survey,,,,,1/1/1970,,,RedCap
-2005200575,pxsdohcmpdat,PhenX SDOH Survey,,,,,1/1/1970,,,RedCap
-2005200575,pxsdohstartts,PhenX SDOH Survey,,,,,1/1/1970,,,RedCap
-2005200575,pxsdohcmpts,PhenX SDOH Survey,,,,,1/1/1970,,,RedCap
-2005200576,px270201_metadata,PhenX English Proficiency Survey,,,,,1/1/1970,,,RedCap
-2005200577,px011002_metadata,PhenX Education Attainment Survey,,,,,1/1/1970,,,RedCap
-2005200578,px280301_metadata,PhenX Job Security Survey,,,,,1/1/1970,,,RedCap
-2005200579,px281401_metadata,PhenX Housing Insecurity Survey,,,,,1/1/1970,,,RedCap
-2005200580,px280801_metadata,PhenX Prescriptions Affordability Survey,,,,,1/1/1970,,,RedCap
-2005200581,px11502_metadata,PhenX Health Insurance Survey,,,,,1/1/1970,,,RedCap
-2005200582,px270101_metadata,PhenX Health Care Access Survey,,,,,1/1/1970,,,RedCap
-2005200583,px280901_metadata,PhenX Healthcare Discrimination Survey,,,,,1/1/1970,,,RedCap
-2005200561,recstartts,Recruitment Survey,,,,,1/1/1970,,,RedCap
-2005200561,reccmpts,Recruitment Survey,,,,,1/1/1970,,,RedCap
-2005200626,rt_dat,Assessment,,,,,1/1/1970,,,RedCap
-2005200563,scrcmpdat,Screening Survey,,,,,1/1/1970,,,RedCap
-2005200547,mh_a1c,Elevated A1C levels (elevated blood sugars),,,,,1/1/1970,,,RedCap
-2005200563,scrstartts,Screening Survey,,,,,1/1/1970,,,RedCap
-2005200563,scrcmpts,Screening Survey,,,,,1/1/1970,,,RedCap
-2005200588,icfa_dat,Consent Attestation,,,,,1/1/1970,,,RedCap
-2005200569,sucmpdat,Substance Use Survey,,,,,1/1/1970,,,RedCap
-2005200569,sustartts,Substance Use Survey,,,,,1/1/1970,,,RedCap
-2005200569,sucmpts,Substance Use Survey,,,,,1/1/1970,,,RedCap
-2005200561,reccmpdat,Recruitment Survey,,,,,1/1/1970,,,RedCap
+concept_name,SRC CODE,concept_id,vocabulary_id,domain_id,v6_domain_id,concept_class_id,standard_concept,valid_start_date,valid_end_date,invalid_reason,source
+Trail drawings score,trails_visuospatial_executive,2005200344,,,,,,,,,MOCA
+Time taken to do trails in seconds,trails_visuospatial_executive_time,2005200345,,,,,,,,,MOCA
+Cube drawings score,cube_visuospatial_executive,2005200346,,,,,,,,,MOCA
+Time taken to do cube in seconds,cube_visuospatial_executive_time,2005200347,,,,,,,,,MOCA
+Clock drawings score,clock_visuospatial_executive,2005200348,,,,,,,,,MOCA
+Time taken to do clock in seconds,clock_visuospatial_executive_time,2005200349,,,,,,,,,MOCA
+Animal name recall task score,naming,2005200350,,,,,,,,,MOCA
+Time in seconds to perform the animal name recall task,naming_time,2005200351,,,,,,,,,MOCA
+Words correctly repeated (1st trial) score,memory_trial1,2005200352,,,,,,,,,MOCA
+Time in seconds to perform the words correctly repeated (1st trial),memory_trial1_time,2005200353,,,,,,,,,MOCA
+Words correctly repeated (2nd trial) score,memory_trial2,2005200354,,,,,,,,,MOCA
+Time in seconds to perform the words correctly repeated (2nd trial),memory_trial2_time,2005200355,,,,,,,,,MOCA
+Repeating digits score,digitspan,2005200356,,,,,,,,,MOCA
+Time in seconds to perform the repeating digits task,digitspan_time,2005200357,,,,,,,,,MOCA
+Letter tapping score,lettera,2005200358,,,,,,,,,MOCA
+Time in seconds to perform the letter tapping task,lettera_time,2005200359,,,,,,,,,MOCA
+Serial 7 subtraction score,subtraction,2005200360,,,,,,,,,MOCA
+Time in seconds to perform the serial 7 subtraction task,subtraction_time,2005200361,,,,,,,,,MOCA
+Repeats sentences II score,repetition,2005200362,,,,,,,,,MOCA
+Time in seconds to perform repeats sentences II task,repetition_time,2005200363,,,,,,,,,MOCA
+Maximal one-minute recall of words beginning with 'F' score,verbal_fluency_language,2005200364,,,,,,,,,MOCA
+Time in seconds to perform the words beginning with 'F' recall task,verbal_fluency_language_time,2005200365,,,,,,,,,MOCA
+MOCA abstraction score,moca_abstraction,2005200366,,,,,,,,,MOCA
+Time in seconds to perform MOCA abstraction task,moca_abstraction_time,2005200367,,,,,,,,,MOCA
+MOCA delayed recall with no cue score,delayed_recall_with_no_cue,2005200368,,,,,,,,,MOCA
+Time in seconds to perform the MOCA delayed recall with no cue task,delayed_recall_with_no_cue_time,2005200369,,,,,,,,,MOCA
+"MOCA orientation date, month, year, day, place, city score",moca_orientation,2005200370,,,,,,,,,MOCA
+"Time in seconds to perform the MOCA orientation date, month, year, day, place, city task",moca_orientation_time,2005200371,,,,,,,,,MOCA
+Age in years (3-4 year span),age_years_at_interview,2005200372,,,,,,,,,MOCA
+"MOCA delayed recall with no cue, cue, and multiple choice cue (Combined score)",moca_combined_mis_score,2005200373,,,,,,,,,MOCA
+"Do you use lifestyle changes to control your A1C and blood glucose levels? Examples: regular exercise, avoiding sugary foods and beverages, eating a balanced diet with lots of vegetables, sticking to a consistent eating schedule",cmtrt_lfst,2005200004,,,,,,,,,RedCap
+Method used to complete form,viaomthd,2005200011,,,,,,,,,RedCap
+Snellen fraction - Photopic VA - OD,viaodpsf,2005200012,,,,,,,,,RedCap
+Snellen fraction - Photopic VA - OS,viaospsf,2005200013,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,mhterm_predm,2005200014,,,,,,,,,RedCap
+"Circulation problems (Examples: arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins)",mhoccur_circ,2005200015,,,,,,,,,RedCap
+Kidney problems,mhoccur_rnl,2005200017,,,,,,,,,RedCap
+Were either of your parents diagnosed with Type II Diabetes?,fh_dm2pt,2005200018,,,,,,,,,RedCap
+Has a sibling been diagnosed with Type II Diabetes?,fh_dm2sb,2005200019,,,,,,,,,RedCap
+Have you had any beer or ale in the past year?,subrkncf,2005200024,,,,,,,,,RedCap
+"During the average week, how many 12 oz. bottles or cans of beer do you usually drink? (Number of bottles or cans per week)",subrdosfr,2005200025,,,,,,,,,RedCap
+Have you had any wine in the past year?,suwnkncf,2005200026,,,,,,,,,RedCap
+"During the average week, how many 5 oz. glasses of wine do you usually drink?  The average wine bottle has 5 servings. (Number of glasses per week)",suwndosfr,2005200027,,,,,,,,,RedCap
+"Have you had any liquor in the past year, such as brandy, whiskey, vodka, gin, schnapps, cocktails, or liqueurs?",sulqkncf,2005200028,,,,,,,,,RedCap
+"During the average week, how many 1.5 oz. of liquor do you usually drink, either as shots or in mixed cocktails? (Number of drinks per week)",sulqdosfr,2005200029,,,,,,,,,RedCap
+"Do you drive after having a drink, even if it is only one drink?",sualcdrv,2005200030,,,,,,,,,RedCap
+Have you ever vaped or used e-cigarettes?,suvpkncf1,2005200031,,,,,,,,,RedCap
+At what age did you start vaping or using e-cigarettes? (Age started - years old),suvpstage,2005200032,,,,,,,,,RedCap
+Do you vape or use e-cigarettes now?,suvpcdur,2005200033,,,,,,,,,RedCap
+How many total years have you vaped or used e-cigarettes?,suvptoage,2005200034,,,,,,,,,RedCap
+"When you vaped or used e-cigarettes, approximately how many days in a typical week would you use it?",suvpdosfr,2005200035,,,,,,,,,RedCap
+"Have you ever used marijuana (cannabis)? (This includes smoking marijuana, using cannabis concentrates, and edibles.)",sumrjkncf,2005200036,,,,,,,,,RedCap
+In what form do you usually use marijuana?  (check all that apply),sumrjtrt,2005200037,,,,,,,,,RedCap
+How many total years have you used marijuana?,sumrjceddur,2005200038,,,,,,,,,RedCap
+"When you used marijuana, approximately how many days in a typical week would you use it?",sumrjfr,2005200039,,,,,,,,,RedCap
+VA Letter Score - Photopic VA - OD,viaodplog,2005200042,,,,,,,,,RedCap
+VA Letter Score - Photopic VA - OS,viaosplog,2005200043,,,,,,,,,RedCap
+Feeling scared when you think about living with diabetes,paid_scrd,2005200044,,,,,,,,,RedCap
+Feeling depressed when you think about living with diabetes,paid_dpr,2005200045,,,,,,,,,RedCap
+Worrying about the future and the possibility of serious complications,paid_wr,2005200046,,,,,,,,,RedCap
+Feeling that diabetes is taking up too much of your mental and physical energy every day,paid_eng,2005200047,,,,,,,,,RedCap
+Coping with complications of diabetes,paid_cml,2005200048,,,,,,,,,RedCap
+PAID score,paidscore,2005200049,,,,,,,,,RedCap
+Photopic LogMAR OD Score,viaodpscore,2005200052,,,,,,,,,RedCap
+Photopic LogMAR OS Score,viaospscore,2005200053,,,,,,,,,RedCap
+Snellen fraction - Mesopic VA - OD,viaodmsf,2005200054,,,,,,,,,RedCap
+Snellen fraction - Mesopic VA - OS,viaosmsf,2005200055,,,,,,,,,RedCap
+LLVA Letter Score - Mesopic VA - OD,viaodmlog,2005200056,,,,,,,,,RedCap
+LLVA Letter Score - Mesopic VA - OS,viaosmlog,2005200057,,,,,,,,,RedCap
+EVA,1,2005200058,,,,,,,,,RedCap
+"How many times a week did you eat beans (like pinto or black beans), chicken, or fish?",diet5,2005200059,,,,,,,,,RedCap
+How many times a week did you eat regular snack chips or crackers (not low-fat)?,diet6,2005200060,,,,,,,,,RedCap
+How many times a week did you eat desserts and other sweets (not the low-fat kind)?,diet7,2005200061,,,,,,,,,RedCap
+"How much margarine, butter, or meat fat do you use to season vegetables or put on potatoes, bread or corn?",diet8,2005200062,,,,,,,,,RedCap
+How many servings of fruit juice did you drink each day?,diet9,2005200063,,,,,,,,,RedCap
+Diet score,dietscore,2005200064,,,,,,,,,RedCap
+"How much difficulty, if any, do you have in recognizing a friend across the street? Would you say:",via1,2005200067,,,,,,,,,RedCap
+"How much difficulty, if any, do you have reading print in newspapers, magazines, recipes, menus, or numbers on the telephone? Would you say:",via2,2005200068,,,,,,,,,RedCap
+You have indicated that you have not seen an eye care professional in the past 12 months. What is the main reason you have not visited an eye care professional in the past 12 months?,via5,2005200069,,,,,,,,,RedCap
+When was the last time you had an eye exam in which the pupils were dilated? (This would have made you temporarily sensitive to bright light),via6,2005200070,,,,,,,,,RedCap
+"Thinking about the next 12 months, how likely do you think it is that you will lose your job or be laid off?",pxji1,2005200073,,,,,,,,,RedCap
+"About how easy would it be for you to find a job with another employer with approximately the same income and fringe benefits you now have? Would you say very easy, somewhat easy, or not easy at all?",pxji2,2005200074,,,,,,,,,RedCap
+What is your living situation today?,pxhi1,2005200075,,,,,,,,,RedCap
+Think about the place you live. Do you have problems with any of the following? CHOOSE ALL THAT APPLY,pxhi2,2005200076,,,,,,,,,RedCap
+"In the last 12 months, have you delayed getting prescription medicines because of worry about the cost?",pxpa1,2005200077,,,,,,,,,RedCap
+Did any other person in your household delay getting prescription medicines because of worry about the cost?,pxpa2,2005200078,,,,,,,,,RedCap
+"In the last 12 months, was there any time when you needed prescription medicines, but did not get them because you couldn't afford it?",pxpa3,2005200079,,,,,,,,,RedCap
+"In the last 12 months, was there any time when anyone else in your household needed prescription medicines, but did not get them because you/they couldn't afford it?",pxpa4,2005200080,,,,,,,,,RedCap
+Insurance through a current or former employer or union (of yours or another family member's). This would include COBRA coverage.,pxhic1,2005200081,,,,,,,,,RedCap
+"Insurance purchased directly from an insurance company (by you or another family member). This would include coverage purchased through an exchange or marketplace, such as HealthCare.gov",pxhic2,2005200082,,,,,,,,,RedCap
+"Medicare, for people 65 and older, or people with certain disabilities.",pxhic3,2005200083,,,,,,,,,RedCap
+"Medicaid, Medical Assistance (MA), the Children's Health Insurance Program (CHIP), or any kind of state or government-sponsored assistance. plan based on income or a disability.",pxhic4,2005200084,,,,,,,,,RedCap
+"TRICARE or other military health care, including VA health care.",pxhic5,2005200085,,,,,,,,,RedCap
+Indian Health Service.,pxhic6,2005200086,,,,,,,,,RedCap
+Any other type of health insurance coverage or health coverage plan,pxhic7,2005200087,,,,,,,,,RedCap
+"Does this mean you currently have no health insurance or health coverage plan? In answering this question, please exclude plans that pay for only one type of service (such as, nursing home care, accidents, family planning, or dental care) and plans that only provide extra cash when hospitalized).",pxhic8,2005200088,,,,,,,,,RedCap
+What type of health insurance do you have?,pxhic9,2005200089,,,,,,,,,RedCap
+About how long has it been since you last saw a doctor or other health care professional about your health?,pxahc1,2005200090,,,,,,,,,RedCap
+"Was this a wellness visit, physical, or general purpose check-up?",pxahc2,2005200091,,,,,,,,,RedCap
+"About how long has it been since you last saw a doctor or other health professional for a wellness visit, physical, or general purpose check-up?",pxahc3,2005200092,,,,,,,,,RedCap
+Is there a place that you USUALLY go to if you are sick and need health care? ,pxahc4,2005200093,,,,,,,,,RedCap
+"What kind of place is it/do you go to most often? A doctor's office or health center is a place where you see the same doctor or the same group of doctors every visit, where you usually need to make an appointment ahead of time, and where your medical records are on file.Urgent care centers and clinics in a drug store or grocery store are places where you do not need to make an appointment ahead of time, and do not usually see the same health care provider at each visit.",pxahc5,2005200094,,,,,,,,,RedCap
+"During the past 12 months, how many times have you gone to an urgent care center or a clinic in a drug store or grocery store about your health?Urgent care centers and clinics in drug stores or grocery stores are places where you do not need to make an appointment ahead of time, and do not usually see the same health care provider at each visit. This is different from a hospital emergency room.",pxahc6,2005200095,,,,,,,,,RedCap
+"During the past 12 months, how many times have you gone to a hospital emergency room about your health?  *This includes emergency room visits that resulted in a hospital admission.",pxahc7,2005200096,,,,,,,,,RedCap
+"During the past 12 months, have you been hospitalized overnight? (Do not include an overnight stay in the emergency room)",pxahc8,2005200097,,,,,,,,,RedCap
+"During the past 12 months, have you DELAYED getting medical care because of the cost?",pxahc9,2005200098,,,,,,,,,RedCap
+"During the past 12 months, was there any time when you needed medical care, but DID NOT GET IT because of the cost?",pxahc10,2005200099,,,,,,,,,RedCap
+PhenX MetaData,px280901_metadata,2005200102,,,,,,,,,RedCap
+There is so much traffic on the streets that it makes it difficult or unpleasant to walk in my neighborhood. Would you say that you...,pxne8,2005200113,,,,,,,,,RedCap
+"I see many people being physically active in my neighborhood doing things like walking, jogging, cycling, or playing sports and active games. Would you say that you...",pxne9,2005200114,,,,,,,,,RedCap
+There are many interesting things to look at while walking in my neighborhood. Would you say you...,pxne10,2005200115,,,,,,,,,RedCap
+"How many motor vehicles in working order (e.g., cars, trucks, motorcycles) are there at your household?",pxne11,2005200116,,,,,,,,,RedCap
+There are many four-way intersections in my neighborhood. Would you say that you...,pxne12,2005200117,,,,,,,,,RedCap
+"The sidewalks in my neighborhood are well maintained (paved, with few cracks) and not obstructed. Would you say that you...",pxne13,2005200118,,,,,,,,,RedCap
+Places for bicycling (such as bike paths) in and around my neighborhood are well maintained and not obstructed. Would you say that you...,pxne14,2005200119,,,,,,,,,RedCap
+There is so much traffic on the streets that it makes it difficult or unpleasant to ride a bicycle in my neighborhood. Would you say that you...,pxne15,2005200120,,,,,,,,,RedCap
+The crime rate in my neighborhood makes it unsafe to go on walks during the day. Would you say that you...,pxne16,2005200121,,,,,,,,,RedCap
+There are many places to go within easy walking distance of my home. Would you say that you...,pxne17,2005200122,,,,,,,,,RedCap
+How often have you been treated unfairly by teachers and professors because of your race/ethnic group? How often in the past year?,pxrd1,2005200126,,,,,,,,,RedCap
+How often have you been treated unfairly by teachers and professors because of your race/ethnic group? How often in your entire life?,pxrd2,2005200127,,,,,,,,,RedCap
+"How often have you been treated unfairly by teachers and professors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd3,2005200128,,,,,,,,,RedCap
+"In an average week, how many days per week do you normally drive? (number of days)",dri1,2005200136,,,,,,,,,RedCap
+About how many miles did you personally drive during the past 12 months in all motorized vehicles?,dri2,2005200137,,,,,,,,,RedCap
+Drivers license state,dristate,2005200138,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),0,2005200141,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),1,2005200142,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2,2005200143,,,,,,,,,RedCap
+All of the time (5-7 days),3,2005200144,,,,,,,,,RedCap
+Have you taken aspirin in the past 2 weeks?,cm_asp,2005200145,,,,,,,,,RedCap
+"Have you taken acetaminophen medicines, such as Tylenol, in the past 2 weeks?",cm_act,2005200146,,,,,,,,,RedCap
+Have you taken ibuprofen or ibuprofen-containing medicines such as Advil or Motrin in the past 2 weeks?,cm_ibp,2005200147,,,,,,,,,RedCap
+"Have you taken antihistamines, such as cold pills or allergy pills, in the past 2 weeks?",cm_ant,2005200148,,,,,,,,,RedCap
+"Have you taken decongestants, such as cold pills or allergy pills, in the past 2 weeks?",cm_dcg,2005200149,,,,,,,,,RedCap
+Have you taken sleeping pills in the past 2 weeks?,cm_slp,2005200150,,,,,,,,,RedCap
+How many hours since you last ate? (number of hours),paate,2005200151,,,,,,,,,RedCap
+"OD: Log Contrast Sensitivity - Photopic, right eye",plcsodlog,2005200155,,,,,,,,,RedCap
+"OS: Log Contrast Sensitivity - Photopic, left eye",plcsoslog,2005200156,,,,,,,,,RedCap
+Right Foot - Felt:,mssrffl,2005200159,,,,,,,,,RedCap
+Right Foot - Tested:,mssrftt,2005200160,,,,,,,,,RedCap
+Left Foot - Felt:,msslffl,2005200161,,,,,,,,,RedCap
+Left Foot - Tested:,msslftt,2005200162,,,,,,,,,RedCap
+White Blood Cells (WBC) - x10E3/µL,lbscat_wbc,2005200182,,,,,,,,,RedCap
+Red Blood Cells (RBC) - x10E6/µL,lbscat_rbc,2005200183,,,,,,,,,RedCap
+Did the subject complete the study?,eos_ds,2005200192,,,,,,,,,RedCap
+41-50 (up to 2.5 packs),41,2005200194,,,,,,,,,RedCap
+More than 50 (3 or more packs),51,2005200195,,,,,,,,,RedCap
+22 to 28,22,2005200196,,,,,,,,,RedCap
+29 to 35,29,2005200197,,,,,,,,,RedCap
+36 or more,36,2005200198,,,,,,,,,RedCap
+21-25 (5 bottles),21,2005200199,,,,,,,,,RedCap
+M2-3D Wide(H) 12x9-OCT,rtma_osw,2005200200,,,,,,,,,RedCap
+M2-3D Macula 6x6-OCT,rtma_osm,2005200201,,,,,,,,,RedCap
+M2-Mac 6x6-360x360-(rep3)-OCTA,rtma_osm1,2005200202,,,,,,,,,RedCap
+Triton-3D(H)+Radial 12x9-OCT,rttr_osr,2005200203,,,,,,,,,RedCap
+Triton-Macula 6x6-OCTA,rttr_osm1,2005200204,,,,,,,,,RedCap
+Triton-Macula 12x12-OCTA,rttr_osm2,2005200205,,,,,,,,,RedCap
+Physical Activity Monitor was worn on which wrist?,dvamwenhand,2005200206,,,,,,,,,RedCap
+26-30 (6 bottles),26,2005200208,,,,,,,,,RedCap
+31-35 (7 bottles),31,2005200209,,,,,,,,,RedCap
+More than 36 (greater than 7 bottles),35,2005200210,,,,,,,,,RedCap
+More than 20 years,98,2005200211,,,,,,,,,RedCap
+More than 50 years,98,2005200212,,,,,,,,,RedCap
+Not a problem,0,2005200213,,,,,,,,,RedCap
+Minor problem,1,2005200214,,,,,,,,,RedCap
+Moderate problem,2,2005200215,,,,,,,,,RedCap
+Somewhat serious problem,3,2005200216,,,,,,,,,RedCap
+Serious problem,4,2005200217,,,,,,,,,RedCap
+RxNorm (assign after visit),cmtrt,2005200220,,,,,,,,,RedCap
+"Unit (Record the dose unit of the dose of concomitant medication/treatment/therapy taken (e.g., mg.)).",cmdosu,2005200221,,,,,,,,,RedCap
+Puff,13,2005200222,,,,,,,,,RedCap
+Less than 1 time,2,2005200238,,,,,,,,,RedCap
+1 - 3 times,1,2005200239,,,,,,,,,RedCap
+5 or more,0,2005200240,,,,,,,,,RedCap
+2 or less,2,2005200241,,,,,,,,,RedCap
+Less than 1,0,2005200242,,,,,,,,,RedCap
+1 time or less,0,2005200243,,,,,,,,,RedCap
+Within the past 2 years (1 year but less than 2 years ago),3,2005200244,,,,,,,,,RedCap
+Cost/Insurance,1,2005200245,,,,,,,,,RedCap
+Do not have/know an eye doctor,2,2005200246,,,,,,,,,RedCap
+"Cannot get to the office/clinic (too far away, no transportation)",3,2005200247,,,,,,,,,RedCap
+Could not get an appointment,4,2005200248,,,,,,,,,RedCap
+No reason to go (no problem),5,2005200249,,,,,,,,,RedCap
+Have not thought of it,6,2005200250,,,,,,,,,RedCap
+Will be leaving labor force voluntarily,5,2005200251,,,,,,,,,RedCap
+Covered,1,2005200252,,,,,,,,,RedCap
+I do NOT have health insurance,0,2005200253,,,,,,,,,RedCap
+I HAVE some kind of health insurance,1,2005200254,,,,,,,,,RedCap
+Within the last 10 years (5 years but less than 10 years ago),5,2005200255,,,,,,,,,RedCap
+There is NO place,0,2005200256,,,,,,,,,RedCap
+There is MORE THAN ONE place,2,2005200257,,,,,,,,,RedCap
+A doctor's office or health center,1,2005200258,,,,,,,,,RedCap
+"Walk-in clinic, urgent care center, or retail clinic in a pharmacy or grocery store",2,2005200259,,,,,,,,,RedCap
+A VA Medical Center or VA outpatient clinic,4,2005200260,,,,,,,,,RedCap
+Does not go to one place most often,6,2005200261,,,,,,,,,RedCap
+1 - 10 times,1,2005200262,,,,,,,,,RedCap
+11 - 19 times,2,2005200263,,,,,,,,,RedCap
+20 - 29 times,3,2005200264,,,,,,,,,RedCap
+30 - 39 times,4,2005200265,,,,,,,,,RedCap
+40 - 49 times,5,2005200266,,,,,,,,,RedCap
+50 or more times,6,2005200267,,,,,,,,,RedCap
+Does not apply to my neighborhood,88,2005200268,,,,,,,,,RedCap
+There are no streets or roads in my neighborhood,88,2005200269,,,,,,,,,RedCap
+6 or more,6,2005200270,,,,,,,,,RedCap
+5000 miles or less,1,2005200271,,,,,,,,,RedCap
+"5001 to 10,000 miles",2,2005200272,,,,,,,,,RedCap
+"10,001 to 15.000 miles",3,2005200273,,,,,,,,,RedCap
+"15,001 to 20,000 miles",4,2005200274,,,,,,,,,RedCap
+"More than 20,000 miles",5,2005200275,,,,,,,,,RedCap
+"In a typical week, how often do you engage in vigorous exercise? (Examples: hiking, jogging at 6 mph, shoveling, carrying heavy loads, bicycling fast (14-16 mph), playing basketball, playing soccer, playing tennis, or any activity during which you cannot say more than a few words without taking a breath)",dmlvex,2005200277,,,,,,,,,RedCap
+"How often would you say that you engage in daily home exercise? (Examples: stretching, calisthenics, or yoga)",dmlhex,2005200278,,,,,,,,,RedCap
+Did not meet Inclusion/Exclusion criteria,1,2005200280,,,,,,,,,RedCap
+Withdrawal by Subject,3,2005200281,,,,,,,,,RedCap
+Geographic Inaccessibility,4,2005200282,,,,,,,,,RedCap
+Currently enrolled in a conflicting study,6,2005200283,,,,,,,,,RedCap
+Protocol Deviation,9,2005200284,,,,,,,,,RedCap
+Individual was under age 40,1,2005200285,,,,,,,,,RedCap
+Individual is not needed at this time for recruitment goals,3,2005200286,,,,,,,,,RedCap
+Individual had Type 1 Diabetes,4,2005200287,,,,,,,,,RedCap
+In Person (Baseline),2,2005200288,,,,,,,,,RedCap
+OptoMed-Disc centered-CFP,rtop_osd,2005200289,,,,,,,,,RedCap
+OptoMed-Mac centered-CFP,rtop_osm,2005200290,,,,,,,,,RedCap
+Eidon-UWF Central-IR,rtei_osir,2005200291,,,,,,,,,RedCap
+Eidon-UWF Central-FAF,rtei_osfaf,2005200292,,,,,,,,,RedCap
+Eidon-UWF Central-CFP,rtsm_osc,2005200293,,,,,,,,,RedCap
+Eidon-UWF Nasal-CFP,rtsm_osn,2005200294,,,,,,,,,RedCap
+Eidon-UWF Temporal-CFP,rtsm_ost,2005200295,,,,,,,,,RedCap
+Eidon- Create Mosaic Image-CFP,rtsm_osm,2005200296,,,,,,,,,RedCap
+Spec-ONH-RC-HR-OCT,rtso_oso,2005200297,,,,,,,,,RedCap
+Spec-PPole Mac-HR-61 lines-OCT,rtso_osp,2005200298,,,,,,,,,RedCap
+Spec-Mac-20x20-HS-512 lines-OCTA,rtso_osm,2005200299,,,,,,,,,RedCap
+Cirrus-Mac Cube-512x128-OCT,rtci_osm1,2005200300,,,,,,,,,RedCap
+Cirrus-Disc Cube-200x200-OCT,rtci_osd1,2005200301,,,,,,,,,RedCap
+Cirrus-Macula 6x6-OCTA,rtci_osm2,2005200302,,,,,,,,,RedCap
+Cirrus-Disc 6x6-OCTA,rtci_osd2,2005200303,,,,,,,,,RedCap
+FLIO-Mac-HS,rtfl_os,2005200304,,,,,,,,,RedCap
+"When reflecting on your typical eating habits, which of the following options best describes how often you consume simple sugars?",dmlsugar,2005200305,,,,,,,,,RedCap
+"In a typical day, how often do you consume whole grains? (Examples: include whole wheat, brown bread, or brown rice).",dmlgrain,2005200306,,,,,,,,,RedCap
+"How often would you say that you engage in diabetes health education? (Examples: consulting with a dietician, attending support groups, reading books on diabetes, using diabetes-focused websites, watching TV shows on health, or using health-focused apps on your phone or tablet)",dmledu,2005200307,,,,,,,,,RedCap
+How often do you inspect your feet?,dmlfeet,2005200308,,,,,,,,,RedCap
+Which of the following options best describes you with respect to physician care and medications?,dmlmd,2005200309,,,,,,,,,RedCap
+At least 30 minutes daily 3 or more days a week,10,2005200312,,,,,,,,,RedCap
+Less than 30 minutes daily less than 3 days a week,5,2005200313,,,,,,,,,RedCap
+"Active (stairs, walks, housework)",10,2005200314,,,,,,,,,RedCap
+Somewhat active,5,2005200315,,,,,,,,,RedCap
+"Not Active (TV, computer, phone, use lifts)",0,2005200316,,,,,,,,,RedCap
+Doing daily or almost daily,10,2005200317,,,,,,,,,RedCap
+Irregular; once or twice a week,5,2005200318,,,,,,,,,RedCap
+Rarely eat sweets,10,2005200319,,,,,,,,,RedCap
+Occasionally eat sweets,5,2005200320,,,,,,,,,RedCap
+Frequently eat sweets,0,2005200321,,,,,,,,,RedCap
+Usually eat whole grain,10,2005200322,,,,,,,,,RedCap
+Rarely eat whole grain,5,2005200323,,,,,,,,,RedCap
+Usually eat white bread or white rice,0,2005200324,,,,,,,,,RedCap
+Eat small portions and avoid second servings,10,2005200325,,,,,,,,,RedCap
+Occasionally limit portions,5,2005200326,,,,,,,,,RedCap
+Rarely or none; eat at buffets and restaurants with large portions,0,2005200327,,,,,,,,,RedCap
+4-5 servings or pieces of fruits and raw vegetables per day,10,2005200328,,,,,,,,,RedCap
+1-3 servings or pieces per day,5,2005200329,,,,,,,,,RedCap
+"Regularly; at least monthly (dietician, support groups, books, websites, apps)",10,2005200330,,,,,,,,,RedCap
+Occasionally; every 2-3 months,5,2005200331,,,,,,,,,RedCap
+3 or more visits a year to the same doctor. Regular with medicines.,10,2005200332,,,,,,,,,RedCap
+1-2 visits a year. Forgetting medicines frequently.,5,2005200333,,,,,,,,,RedCap
+Rarely or none. Not taking 1 or more recommended medicines,0,2005200334,,,,,,,,,RedCap
+Mesopic LogMAR OD Score,viaodmscore,2005200336,,,,,,,,,RedCap
+Mesopic LogMAR OS Score,viaosmscore,2005200337,,,,,,,,,RedCap
+"OD: Value of final correct letter - Photopic, right eye",plcsodfcl,2005200338,,,,,,,,,RedCap
+"OD: Number of misses prior to stopping - Photopic, right eye",plcsodmiss,2005200339,,,,,,,,,RedCap
+"OS: Value of final correct letter - Photopic, left eye",plcsosfcl,2005200340,,,,,,,,,RedCap
+"OS: Number of misses prior to stopping - Photopic, left eye",plcsosmiss,2005200341,,,,,,,,,RedCap
+Other types of Dementia or Alzheimer's Disease,mhcat_dmtaot,2005200451,,,,,,,,,RedCap
+Neurocognitive disorder please specify,mhoccur_cnsot,2005200455,,,,,,,,,RedCap
+Other cancer type please (specify),mhoccur_cnrot,2005200459,,,,,,,,,RedCap
+Was your mother or father diagnosed with Type II Diabetes?,fh_dm2ptsp,2005200463,,,,,,,,,RedCap
+"If yes, please check all that apply: brother, sister, half-sister, half-brother",fh_dm2sbsp,2005200464,,,,,,,,,RedCap
+Have you been diagnosed with any conditions not listed above?,mhoccur_yn,2005200470,,,,,,,,,RedCap
+Do you use marijuana now?,sumrjcdur,2005200473,,,,,,,,,RedCap
+Do you speak another language at home?,pxep2,2005200480,,,,,,,,,RedCap
+Medication Name,cmname,2005200481,,,,,,,,,RedCap
+Specify other,odristate,2005200485,,,,,,,,,RedCap
+"OD: Value of final correct letter - Mesopic, right eye",mlcsodfcl,2005200486,,,,,,,,,RedCap
+"OD: Number of misses prior to stopping - Mesopic, right eye",mlcsodmiss,2005200487,,,,,,,,,RedCap
+"OS: Value of final correct letter - Mesopic, left eye",mlcsosfcl,2005200488,,,,,,,,,RedCap
+"OS: Number of misses prior to stopping - Mesopic, left eye",mlcsosmiss,2005200489,,,,,,,,,RedCap
+"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? How often in the past year?",pxrd4,2005200493,,,,,,,,,RedCap
+"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? How often in your entire life?",pxrd5,2005200494,,,,,,,,,RedCap
+"How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd6,2005200495,,,,,,,,,RedCap
+"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? How often in the past year?",pxrd7,2005200496,,,,,,,,,RedCap
+"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? How often in your entire life?",pxrd8,2005200497,,,,,,,,,RedCap
+"How often have you been treated unfairly by your co-workers, fellow students, and colleagues because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pdrx9,2005200498,,,,,,,,,RedCap
+"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? How often in the past year?",pxrd10,2005200499,,,,,,,,,RedCap
+"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? How often in your entire life?",pxrd11,2005200500,,,,,,,,,RedCap
+"How often have you been treated unfairly by people in service jobs (by store clerks, waiters, bartenders, bank tellers and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd12,2005200501,,,,,,,,,RedCap
+How often have you been treated unfairly by strangers because of your race/ethnic group? How often in the past year?,pxrd13,2005200502,,,,,,,,,RedCap
+How often have you been treated unfairly by strangers because of your race/ethnic group? How often in your entire life?,pxrd14,2005200503,,,,,,,,,RedCap
+"How often have you been treated unfairly by strangers because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd15,2005200504,,,,,,,,,RedCap
+"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? How often in the past year?",pxrd16,2005200505,,,,,,,,,RedCap
+"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? How often in your entire life?",pxrd17,2005200506,,,,,,,,,RedCap
+"How often have you been treated unfairly by people in helping jobs (by doctors, nurses, psychiatrists, case workers, dentists, school counselors, therapists, social workers and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd18,2005200507,,,,,,,,,RedCap
+How often have you been treated unfairly by neighbors because of your race/ethnic group? How often in the past year?,pxrd19,2005200508,,,,,,,,,RedCap
+How often have you been treated unfairly by neighbors because of your race/ethnic group? How often in your entire life?,pxrd20,2005200509,,,,,,,,,RedCap
+"How often have you been treated unfairly by neighbors because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd21,2005200510,,,,,,,,,RedCap
+"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? How often in the past year?",pxrd22,2005200511,,,,,,,,,RedCap
+"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? How often in your entire life?",pxrd23,2005200512,,,,,,,,,RedCap
+"How often have you been treated unfairly by institutions (schools, universities, law firms, the police, the courts, the Department of Social Services, the Unemployment Office and others) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd24,2005200513,,,,,,,,,RedCap
+How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? How often in the past year?,pxrd25,2005200514,,,,,,,,,RedCap
+How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? How often in your entire life?,pxrd26,2005200515,,,,,,,,,RedCap
+"How often have you been treated unfairly by people that you thought were your friends because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd27,2005200516,,,,,,,,,RedCap
+"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? How often in the past year?",pxrd28,2005200517,,,,,,,,,RedCap
+"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? How often in your entire life?",pxrd29,2005200518,,,,,,,,,RedCap
+"How often have you been accused or suspected of doing something wrong (such as stealing, cheating, not doing your share of the work, or breaking the law) because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd30,2005200519,,,,,,,,,RedCap
+How often have people misunderstood your intentions and motives because of your race/ethnic group? How often in the past year?,pxrd31,2005200520,,,,,,,,,RedCap
+How often have people misunderstood your intentions and motives because of your race/ethnic group? How often in your entire life?,pxrd32,2005200521,,,,,,,,,RedCap
+"How often have people misunderstood your intentions and motives because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd33,2005200522,,,,,,,,,RedCap
+How often did you want to tell someone off for being racist towards you but didn't say anything? How often in the past year?,pxrd34,2005200523,,,,,,,,,RedCap
+How often did you want to tell someone off for being racist towards you but didn't say anything? How often in your entire life?,pxrd35,2005200524,,,,,,,,,RedCap
+"How often did you want to tell someone off for being racist towards you but didn't say anything? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd36,2005200525,,,,,,,,,RedCap
+How often have you been really angry about something racist that was done to you? How often in the past year?,pxrd37,2005200526,,,,,,,,,RedCap
+How often have you been really angry about something racist that was done to you? How often in your entire life?,pxrd38,2005200527,,,,,,,,,RedCap
+"How often have you been really angry about something racist that was done to you? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd39,2005200528,,,,,,,,,RedCap
+"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? How often in the past year?",pxrd40,2005200529,,,,,,,,,RedCap
+"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? How often in your entire life?",pxrd41,2005200530,,,,,,,,,RedCap
+"How often have you been forced to take drastic steps (such as filing a grievance, filing a lawsuit, quitting your job, moving away, and other actions) to deal with some racist thing that was done towards you? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd42,2005200531,,,,,,,,,RedCap
+How often have you been called a racist name? How often in the past year?,pxrd43,2005200532,,,,,,,,,RedCap
+How often have you been called a racist name? How often in your entire life?,pxrd44,2005200533,,,,,,,,,RedCap
+"How often have you been called a racist name? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd45,2005200534,,,,,,,,,RedCap
+How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? How often in the past year?,pxrd46,2005200535,,,,,,,,,RedCap
+How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? How often in your entire life?,pxrd47,2005200536,,,,,,,,,RedCap
+"How often have you gotten into an argument or a fight about something racist that was done to you or done to another member or your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd48,2005200537,,,,,,,,,RedCap
+"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? How often in the past year?",pxrd49,2005200538,,,,,,,,,RedCap
+"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? How often in your entire life?",pxrd50,2005200539,,,,,,,,,RedCap
+"How often have you been made fun of, picked on, pushed, shoved, hit or threatened with harm because of your race/ethnic group? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd51,2005200540,,,,,,,,,RedCap
+How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In the Past Year?,pxrd52,2005200541,,,,,,,,,RedCap
+How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In your entire life?,pxrd53,2005200542,,,,,,,,,RedCap
+"How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd54,2005200543,,,,,,,,,RedCap
+Elevated A1C levels (elevated blood sugars),mh_a1c,2005200547,,,,,,,,,RedCap
+"Do you take pills to control your A1C and blood glucose levels? Examples: Metformin (Glucophage, Glumetza, Fortamet, Riomet), Glucotrol, Amaryl, DiaBeta, Blynase PresTab, Micronase, Actos, Avandia, Precose, Glyset, Prandin, Starlix, Januvia, Onglyza, Tradjenta, Nesina, Invokana, Farxiga, Jardiance, Welchol, and Cyclocet",cmtrt_a1c,2005200548,,,,,,,,,RedCap
+Do you inject insulin to control your blood glucose levels?,cmtrt_insln,2005200549,,,,,,,,,RedCap
+"Do you use other injections to control your blood glucose levels?  Examples: Victoza, Ozempic, Symlin, Tanzeum, and Trulicity",cmtrt_glcs,2005200550,,,,,,,,,RedCap
+"OD: Log Contrast Sensitivity - Mesopic, right eye",mlcsodlog,2005200552,,,,,,,,,RedCap
+"OS: Log Contrast Sensitivity - Mesopic, left eye",mlcsoslog,2005200553,,,,,,,,,RedCap
+Activity monitor returned?,dvamwenyn,2005200555,,,,,,,,,RedCap
+"What is your ancestry or ethnic origin?(Examples: Italian, Jamaican, African American, Cambodian, Cape Verdean, Cherokee, Navajo, Nez Pearce, Norwegian, Dominican, French Canadian, Haitian, Korean, Lebanese, Polish, Nigerian, Mexican, Taiwanese, Ukrainian, and so on.)",ancestry,2005200557,,,,,,,,,RedCap
+Survey Started Timestamp,sustartts,2005200558,,,,,,,,,RedCap
+Survey Completed Timestamp,sucmpts,2005200559,,,,,,,,,RedCap
+Recruitment Survey,reccmpdat,2005200561,,,,,,,,,RedCap
+FAQ Survey,faqcmpts,2005200562,,,,,,,,,RedCap
+Screening Survey,scrcmpts,2005200563,,,,,,,,,RedCap
+Pre-consent Survey,preconcmpts,2005200564,,,,,,,,,RedCap
+Consent Survey,icfcmpts,2005200565,,,,,,,,,RedCap
+Participant Contact Survey,prtcmpdat,2005200566,,,,,,,,,RedCap
+Demographic Survey,dmgcmpts,2005200567,,,,,,,,,RedCap
+Health Survey,mhcmpts,2005200568,,,,,,,,,RedCap
+Substance Use Survey,sucmpts,2005200569,,,,,,,,,RedCap
+CES-D-10 Survey,cescmpts,2005200570,,,,,,,,,RedCap
+PAID-5 DM Survey,paidcmpts,2005200571,,,,,,,,,RedCap
+Diabetes Survey,dmlcmpts,2005200572,,,,,,,,,RedCap
+Dietary Survey,dietcmpts,2005200573,,,,,,,,,RedCap
+Ophthalmic Survey,viacmpts,2005200574,,,,,,,,,RedCap
+PhenX SDOH Survey,pxsdohcmpts,2005200575,,,,,,,,,RedCap
+PhenX English Proficiency Survey,px270201_metadata,2005200576,,,,,,,,,RedCap
+PhenX Education Attainment Survey,px011002_metadata,2005200577,,,,,,,,,RedCap
+PhenX Job Security Survey,px280301_metadata,2005200578,,,,,,,,,RedCap
+PhenX Housing Insecurity Survey,px281401_metadata,2005200579,,,,,,,,,RedCap
+PhenX Prescriptions Affordability Survey,px280801_metadata,2005200580,,,,,,,,,RedCap
+PhenX Health Insurance Survey,px11502_metadata,2005200581,,,,,,,,,RedCap
+PhenX Health Care Access Survey,px270101_metadata,2005200582,,,,,,,,,RedCap
+PhenX Healthcare Discrimination Survey,px280901_metadata,2005200583,,,,,,,,,RedCap
+PhenX Food Insecurity Survey,px270301_metadata,2005200584,,,,,,,,,RedCap
+PhenX Neighborhood Environment Survey,px291201_metadata,2005200585,,,,,,,,,RedCap
+PhenX Racial/Ethnic Survey,px281501_metadata,2005200586,,,,,,,,,RedCap
+Paper Consent Completed,c184390_dat,2005200587,,,,,,,,,RedCap
+Consent Attestation,icfa_dat,2005200588,,,,,,,,,RedCap
+Device returned,dvenvenyn,2005200589,,,,,,,,,RedCap
+Driving record assessment conducted,dricmpdat,2005200590,,,,,,,,,RedCap
+Device given to participant,dvenvstdat,2005200591,,,,,,,,,RedCap
+Sensor inserted,dvcgmstdat,2005200592,,,,,,,,,RedCap
+Medications assessment conducted,cmcmpdat,2005200593,,,,,,,,,RedCap
+Current medication collected,cmcmpdat2,2005200594,,,,,,,,,RedCap
+Fundus - Edion,rtfncmpdattim,2005200595,,,,,,,,,RedCap
+Fundus - Optomed,rtfnocmpdattim,2005200596,,,,,,,,,RedCap
+OCT & OCTA - Spectralis HRA OCT,rthracmpdattim,2005200597,,,,,,,,,RedCap
+OCT - Triton OCT,rtoctcmpdattim,2005200598,,,,,,,,,RedCap
+OCT & OCTA - Maestro2,rtm2cmpdattim,2005200599,,,,,,,,,RedCap
+FLIO,rtfliocmpdattim,2005200600,,,,,,,,,RedCap
+Angioplex - Cirrus 5000,rtaccmpdattim,2005200601,,,,,,,,,RedCap
+Cardiology - EKG - Pagewriter TC30 Cardiograp,rtekgcmpdattim,2005200602,,,,,,,,,RedCap
+clinical labs,lbdattim1,2005200603,,,,,,,,,RedCap
+device received back from participant,dvenvendat,2005200604,,,,,,,,,RedCap
+Right foot - site 1,mssrf1,2005200605,,,,,,,,,RedCap
+Right foot - site 2,mssrf2,2005200606,,,,,,,,,RedCap
+Right foot - site 3,mssrf3,2005200607,,,,,,,,,RedCap
+Right foot - site 4,mssrf4,2005200608,,,,,,,,,RedCap
+Right foot - site 5,mssrf5,2005200609,,,,,,,,,RedCap
+Right foot - site 6,mssrf6,2005200610,,,,,,,,,RedCap
+Right foot - site 7,mssrf7,2005200611,,,,,,,,,RedCap
+Right foot - site 8,mssrf8,2005200612,,,,,,,,,RedCap
+Right foot - site 9,mssrf9,2005200613,,,,,,,,,RedCap
+Right foot - site 10,mssrf10,2005200614,,,,,,,,,RedCap
+Left foot - site 1,msslf1,2005200615,,,,,,,,,RedCap
+Left foot - site 2,msslf2,2005200616,,,,,,,,,RedCap
+Left foot - site 3,msslf3,2005200617,,,,,,,,,RedCap
+Left foot - site 4,msslf4,2005200618,,,,,,,,,RedCap
+Left foot - site 5,msslf5,2005200619,,,,,,,,,RedCap
+Left foot - site 6,msslf6,2005200620,,,,,,,,,RedCap
+Left foot - site 7,msslf7,2005200621,,,,,,,,,RedCap
+Left foot - site 8,msslf8,2005200622,,,,,,,,,RedCap
+Left foot - site 9,msslf9,2005200623,,,,,,,,,RedCap
+Left foot - site 10,msslf10,2005200624,,,,,,,,,RedCap
+AI-READI study discontinuation or completion,eos_dsstdat,2005200625,,,,,,,,,RedCap
+Assessment,rt_dat,2005200626,,,,,,,,,RedCap
+"Other heart issues (Examples: pacemaker, heart valve disease, open heart surgery)",mhoccur_cvdot,2005200627,,,,,,,,,RedCap
+Stroke,mhoccur_strk,2005200628,,,,,,,,,RedCap
+"Have you had anything to eat or drink in the last six hours, including coffee or tea with milk or sugar or any other drink other than water?",paate_6hr,2005200629,,,,,,,,,RedCap

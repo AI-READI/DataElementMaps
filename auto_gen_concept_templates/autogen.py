@@ -75,8 +75,8 @@ manual_concept_mappings = {
 # Output file specifications - simplified to essential columns and defaults
 output_config = {
     'concept.csv': {
-        'required_columns': ['concept_name', 'SRC_CODE', 'concept_id', 'vocabulary_id', 
-                           'domain_id', 'concept_class_id', 'standard_concept'],
+        'required_columns': ['concept_name', 'SRC CODE', 'concept_id', 'vocabulary_id', 
+                           'domain_id', 'v6_domain_id', 'concept_class_id', 'standard_concept'],
         'defaults': {
             'valid_start_date': '1/1/1970',
             'valid_end_date': '',
@@ -328,6 +328,7 @@ def extract_source_concepts(gc: gspread.Client, source: Dict[str, Any]) -> List[
 def create_concept_csv(concepts: List[ConceptData], manual_df: pd.DataFrame, tag: str) -> pd.DataFrame:
     """
     Create concept.csv output using extracted concepts and manual mapping data.
+    Row order will match the manual sheet order.
     
     Args:
         concepts: List of extracted concept data
@@ -340,51 +341,68 @@ def create_concept_csv(concepts: List[ConceptData], manual_df: pd.DataFrame, tag
     config = output_config['concept.csv']
     rows = []
     
-    # Create lookup dictionary from manual data
+    # Create lookup dictionary from manual data and preserve row order
     manual_lookup = {str(int(row['concept_id_1'])): row for _, row in manual_df.iterrows() 
                     if pd.notna(row['concept_id_1'])}
     
-    for concept in concepts:
+    # Get the order from the manual sheet (concept_manual uses concept_id, but manual_df has concept_id_1)
+    manual_order = [str(int(row['concept_id_1'])) for _, row in manual_df.iterrows() 
+                   if pd.notna(row['concept_id_1'])]
+    
+    # Create concept lookup for quick access
+    concept_lookup = {str(concept.concept_id): concept for concept in concepts}
+    
+    # Process concepts in the order they appear in the manual sheet
+    for concept_id_str in manual_order:
+        concept = concept_lookup.get(concept_id_str)
+        if not concept:
+            continue  # Skip if this concept is not in our extracted list
         concept_id_str = str(concept.concept_id)
         manual_row = manual_lookup.get(concept_id_str, {})
         
-        # Build row data with tracking
+        # Build row data with tracking in the exact manual sheet order
         row_data = {
+            'concept_name': '',
+            'SRC CODE': concept.src_code,  # Note: space in manual sheet, not underscore
             'concept_id': concept.concept_id,
-            'SRC_CODE': concept.src_code,
-            '_source_tracking': concept.tracking
+            'vocabulary_id': '',
+            'domain_id': '',
+            'v6_domain_id': '',
+            'concept_class_id': '',
+            'standard_concept': '',
+            'valid_start_date': '',
+            'valid_end_date': '',
+            'invalid_reason': '',
+            '_source_tracking': concept.tracking,
+            '_column_tracking': {}
         }
         
         # Fill from manual data with tracking
         for col in config['required_columns']:
-            if col in ['concept_id', 'SRC_CODE']:
+            if col in ['concept_id', 'SRC CODE']:
                 continue  # Already handled
             
             if col in manual_row and pd.notna(manual_row[col]) and str(manual_row[col]).strip():
                 row_data[col] = manual_row[col]
-                # Add tracking for manual values
-                if '_column_tracking' not in row_data:
-                    row_data['_column_tracking'] = {}
                 row_data['_column_tracking'][col] = SourceTracking('concept_relationship_manual')
             else:
                 # Use defaults
                 row_data[col] = config['defaults'].get(col, '')
-                if '_column_tracking' not in row_data:
-                    row_data['_column_tracking'] = {}
                 row_data['_column_tracking'][col] = SourceTracking('defaults')
         
         # Add defaults
         for col, default_val in config['defaults'].items():
             if col not in row_data:
                 row_data[col] = default_val
-                if '_column_tracking' not in row_data:
-                    row_data['_column_tracking'] = {}
                 row_data['_column_tracking'][col] = SourceTracking('defaults')
         
         rows.append(row_data)
     
-    # Convert to DataFrame
-    df = pd.DataFrame(rows)
+    # Convert to DataFrame with exact manual sheet column ordering
+    column_order = ['concept_name', 'SRC CODE', 'concept_id', 'vocabulary_id', 'domain_id', 
+                   'v6_domain_id', 'concept_class_id', 'standard_concept', 'valid_start_date', 
+                   'valid_end_date', 'invalid_reason', '_source_tracking', '_column_tracking']
+    df = pd.DataFrame(rows, columns=column_order)
     
     # Ensure integer types for concept IDs
     if 'concept_id' in df.columns:
@@ -396,6 +414,7 @@ def create_concept_csv(concepts: List[ConceptData], manual_df: pd.DataFrame, tag
 def create_concept_relationship_csv(concepts: List[ConceptData], manual_df: pd.DataFrame, tag: str) -> pd.DataFrame:
     """
     Create concept_relationship.csv output using extracted concepts and manual mapping data.
+    Row order will match the manual sheet order.
     
     Args:
         concepts: List of extracted concept data
@@ -412,27 +431,58 @@ def create_concept_relationship_csv(concepts: List[ConceptData], manual_df: pd.D
     manual_lookup = {str(int(row['concept_id_1'])): row for _, row in manual_df.iterrows() 
                     if pd.notna(row['concept_id_1'])}
     
+    # Get the order from the manual sheet
+    manual_order = [str(int(row['concept_id_1'])) for _, row in manual_df.iterrows() 
+                   if pd.notna(row['concept_id_1'])]
+    
+    # Create concept lookup for quick access
+    concept_lookup = {str(concept.concept_id): concept for concept in concepts}
+    
     # Get unique concept_id_2 values for OMOP lookup
     concept_id_2_values = []
-    for concept in concepts:
-        if not concept.is_qualifier_derived:  # Skip OMOP lookups for qualifier-derived concepts
-            concept_id_str = str(concept.concept_id)
-            manual_row = manual_lookup.get(concept_id_str, {})
-            concept_id_2 = manual_row.get('concept_id_2', '')
-            if concept_id_2 and str(concept_id_2).strip():
-                concept_id_2_values.append(str(concept_id_2))
+    for concept_id_str in manual_order:
+        concept = concept_lookup.get(concept_id_str)
+        if not concept or concept.is_qualifier_derived:
+            continue  # Skip OMOP lookups for qualifier-derived concepts
+        manual_row = manual_lookup.get(concept_id_str, {})
+        concept_id_2 = manual_row.get('concept_id_2', '')
+        if concept_id_2 and str(concept_id_2).strip():
+            concept_id_2_values.append(str(concept_id_2))
     
     # Query OMOP database for concept_id_2 data
     omop_data = query_omop_concepts(list(set(concept_id_2_values)))
     
-    for concept in concepts:
+    # Process concepts in the order they appear in the manual sheet
+    for concept_id_str in manual_order:
+        concept = concept_lookup.get(concept_id_str)
+        if not concept:
+            continue  # Skip if this concept is not in our extracted list
         concept_id_str = str(concept.concept_id)
         manual_row = manual_lookup.get(concept_id_str, {})
         
-        # Build row data with tracking
+        # Build row data with tracking in exact manual sheet order
         row_data = {
+            'concept_name': '',
             'concept_id_1': concept.concept_id,
-            'SRC_CODE': concept.src_code,
+            'SRC_CODE': concept.src_code,  # Note: underscore in relationship sheet
+            'vocabulary_id_1': '',
+            'relationship_id': '',
+            'concept_id_2': '',
+            'temp name': '',
+            'temp domain': '',
+            'vocabulary_id_2': '',
+            'temp class': '',
+            'concept_code_2': '',
+            'temp standard': '',
+            'relationship_valid_start_date': '',
+            'relationship_valid_end_date': '',
+            'invalid_reason': '',
+            'confidence': '',
+            'predicate_id': '',
+            'mapping_source': '',
+            'mapping_justification': '',
+            'mapping_tool': '',
+            'Notes': '',
             '_source_tracking': concept.tracking,
             '_column_tracking': {}
         }
@@ -494,8 +544,14 @@ def create_concept_relationship_csv(concepts: List[ConceptData], manual_df: pd.D
         
         rows.append(row_data)
     
-    # Convert to DataFrame
-    df = pd.DataFrame(rows)
+    # Convert to DataFrame with exact manual sheet column ordering
+    column_order = ['concept_name', 'concept_id_1', 'SRC_CODE', 'vocabulary_id_1', 'relationship_id',
+                   'concept_id_2', 'temp name', 'temp domain', 'vocabulary_id_2', 'temp class', 
+                   'concept_code_2', 'temp standard', 'relationship_valid_start_date', 
+                   'relationship_valid_end_date', 'invalid_reason', 'confidence', 'predicate_id',
+                   'mapping_source', 'mapping_justification', 'mapping_tool', 'Notes',
+                   '_source_tracking', '_column_tracking']
+    df = pd.DataFrame(rows, columns=column_order)
     
     # Ensure integer types for concept IDs
     if 'concept_id_1' in df.columns:
