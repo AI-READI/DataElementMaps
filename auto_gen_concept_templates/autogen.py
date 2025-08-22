@@ -225,7 +225,7 @@ def process_source_data(gc: gspread.Client, source: Dict[str, Any], crm_df: pd.D
     Args:
         gc: Authenticated Google Sheets client
         source: Source configuration dictionary
-        crm_df: DataFrame with existing concept relationships
+        crm_df: concept_relationship_manual worksheet
         
     Returns:
         Dictionary of output dataframes keyed by filename
@@ -236,30 +236,30 @@ def process_source_data(gc: gspread.Client, source: Dict[str, Any], crm_df: pd.D
     # Load source data
     spreadsheet = gc.open(source['spreadsheet_name'])
     mapping = spreadsheet.worksheet(source['worksheet_name'])
-    df_all = get_as_dataframe(mapping)
+    mapping_df_all = get_as_dataframe(mapping)
     
     # Convert TARGET_CONCEPT_ID to numeric
-    df_all['TARGET_CONCEPT_ID'] = pd.to_numeric(df_all['TARGET_CONCEPT_ID'], errors='coerce').fillna(0).astype(int)
+    mapping_df_all['TARGET_CONCEPT_ID'] = pd.to_numeric(mapping_df_all['TARGET_CONCEPT_ID'], errors='coerce').fillna(0).astype(int)
     
     # Convert qualifier_concept_id to numeric if it exists
-    if 'qualifier_concept_id' in df_all.columns:
-        df_all['qualifier_concept_id'] = pd.to_numeric(df_all['qualifier_concept_id'], errors='coerce').fillna(0).astype(int)
+    if 'qualifier_concept_id' in mapping_df_all.columns:
+        mapping_df_all['qualifier_concept_id'] = pd.to_numeric(mapping_df_all['qualifier_concept_id'], errors='coerce').fillna(0).astype(int)
     
     # Filter for new concepts (ID > 2000000000) or those needing extensions
-    if 'Extension_Needed' in df_all.columns:
-        df = df_all[(df_all['TARGET_CONCEPT_ID'] > 2000000000) |
-                    (df_all['Extension_Needed'] == 'Yes') |
-                    (df_all['TARGET_VOCABULARY_ID'] == 'AIREADI-Vision')].copy()
+    if 'Extension_Needed' in mapping_df_all.columns:
+        mapping_df = mapping_df_all[(mapping_df_all['TARGET_CONCEPT_ID'] > 2000000000) |
+                    (mapping_df_all['Extension_Needed'] == 'Yes') |
+                    (mapping_df_all['TARGET_VOCABULARY_ID'] == 'AIREADI-Vision')].copy()
     else:
-        df = df_all[df_all['TARGET_CONCEPT_ID'] > 2000000000].copy()
+        mapping_df = mapping_df_all[mapping_df_all['TARGET_CONCEPT_ID'] > 2000000000].copy()
     
     # Mark regular rows as not qualifier-derived
-    if '_is_qualifier_derived' not in df.columns:
-        df['_is_qualifier_derived'] = False
+    if '_is_qualifier_derived' not in mapping_df.columns:
+        mapping_df['_is_qualifier_derived'] = False
     
     # Add rows where qualifier_concept_id > 2000000000 if the column exists
-    if 'qualifier_concept_id' in df_all.columns:
-        qualifier_df = df_all[df_all['qualifier_concept_id'] > 2000000000]
+    if 'qualifier_concept_id' in mapping_df_all.columns:
+        qualifier_df = mapping_df_all[mapping_df_all['qualifier_concept_id'] > 2000000000]
         if not qualifier_df.empty:
             # For qualifier concept rows, treat qualifier_concept_id as the main concept
             # Create a copy and swap the values
@@ -276,25 +276,25 @@ def process_source_data(gc: gspread.Client, source: Dict[str, Any], crm_df: pd.D
             # Set qualifier_concept_id to 0 to avoid double processing
             qualifier_rows['qualifier_concept_id'] = 0
             
-            # Combine with existing df, removing duplicates based on TARGET_CONCEPT_ID
-            df = pd.concat([df, qualifier_rows], ignore_index=True)
-            df = df.drop_duplicates(subset=['TARGET_CONCEPT_ID'], keep='first')
+            # Combine with existing mapping_df, removing duplicates based on TARGET_CONCEPT_ID
+            mapping_df = pd.concat([mapping_df, qualifier_rows], ignore_index=True)
+            mapping_df = mapping_df.drop_duplicates(subset=['TARGET_CONCEPT_ID'], keep='first')
     
     # Process each output file specification
     for output_spec in outputs:
-        result_df = process_output_file(df, output_spec, tag, crm_df)
+        result_df = process_output_file(mapping_df, output_spec, tag, crm_df)
         result_df['source'] = tag
         result_dfs[output_spec['name']] = result_df
     
     return result_dfs
 
 
-def process_output_file(df: pd.DataFrame, output_spec: Dict[str, Any], tag: str, crm_df: pd.DataFrame) -> pd.DataFrame:
+def process_output_file(mapping_df: pd.DataFrame, output_spec: Dict[str, Any], tag: str, crm_df: pd.DataFrame) -> pd.DataFrame:
     """
     Process a single output file specification for a given source.
     
     Args:
-        df: Source dataframe
+        mapping_df: Source dataframe
         output_spec: Output file specification
         tag: Source tag (MOCA or RedCap)
         crm_df: DataFrame with existing concept relationships
@@ -318,26 +318,26 @@ def process_output_file(df: pd.DataFrame, output_spec: Dict[str, Any], tag: str,
         if col_name == 'concept_id_2' and output_spec['name'] == 'concept_relationship.csv':
             if tag == 'MOCA':
                 # For MOCA: use mapping or default to 606671
-                result_data['concept_id_2'] = df['TARGET_CONCEPT_ID'].apply(
+                result_data['concept_id_2'] = mapping_df['TARGET_CONCEPT_ID'].apply(
                     lambda x: cid2_mapping.get(str(x), source_def.get('defaultMOCA', ''))
                 )
             else:
                 # For RedCap: use mapping or leave blank
-                result_data['concept_id_2'] = df['TARGET_CONCEPT_ID'].apply(
+                result_data['concept_id_2'] = mapping_df['TARGET_CONCEPT_ID'].apply(
                     lambda x: cid2_mapping.get(str(x), '')
                 )
         elif tag in source_def or 'both' in source_def:
             # Use the source column from the dataframe
             source_col = source_def.get(tag, source_def.get('both'))
-            if source_col in df.columns:
-                result_data[col_name] = df[source_col].values
+            if source_col in mapping_df.columns:
+                result_data[col_name] = mapping_df[source_col].values
             else:
                 print(f"Warning: Column '{source_col}' not found in {tag} data")
-                result_data[col_name] = [source_def.get('default', '')] * len(df)
+                result_data[col_name] = [source_def.get('default', '')] * len(mapping_df)
         else:
             # Use default value
             default_value = source_def.get(f'default{tag}', source_def.get('default', ''))
-            result_data[col_name] = [default_value] * len(df)
+            result_data[col_name] = [default_value] * len(mapping_df)
     
     # Create and format the result dataframe
     result_df = pd.DataFrame(result_data)
