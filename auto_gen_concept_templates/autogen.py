@@ -249,9 +249,13 @@ def process_source_data(gc: gspread.Client, source: Dict[str, Any], crm_df: pd.D
     if 'Extension_Needed' in df_all.columns:
         df = df_all[(df_all['TARGET_CONCEPT_ID'] > 2000000000) |
                     (df_all['Extension_Needed'] == 'Yes') |
-                    (df_all['TARGET_VOCABULARY_ID'] == 'AIREADI-Vision')]
+                    (df_all['TARGET_VOCABULARY_ID'] == 'AIREADI-Vision')].copy()
     else:
-        df = df_all[df_all['TARGET_CONCEPT_ID'] > 2000000000]
+        df = df_all[df_all['TARGET_CONCEPT_ID'] > 2000000000].copy()
+    
+    # Mark regular rows as not qualifier-derived
+    if '_is_qualifier_derived' not in df.columns:
+        df['_is_qualifier_derived'] = False
     
     # Add rows where qualifier_concept_id > 2000000000 if the column exists
     if 'qualifier_concept_id' in df_all.columns:
@@ -261,6 +265,14 @@ def process_source_data(gc: gspread.Client, source: Dict[str, Any], crm_df: pd.D
             # Create a copy and swap the values
             qualifier_rows = qualifier_df.copy()
             qualifier_rows['TARGET_CONCEPT_ID'] = qualifier_df['qualifier_concept_id']
+            
+            # Use qualifier_source_value as the concept name for these rows
+            if 'qualifier_source_value' in qualifier_df.columns:
+                qualifier_rows['TARGET_CONCEPT_NAME'] = qualifier_df['qualifier_source_value']
+            
+            # Mark these as qualifier-derived rows to skip OMOP lookups
+            qualifier_rows['_is_qualifier_derived'] = True
+            
             # Set qualifier_concept_id to 0 to avoid double processing
             qualifier_rows['qualifier_concept_id'] = 0
             
@@ -338,31 +350,33 @@ def process_output_file(df: pd.DataFrame, output_spec: Dict[str, Any], tag: str,
     
     # For concept_relationship.csv, fill additional columns from OMOP database and crm_df
     if output_spec['name'] == 'concept_relationship.csv':
-        # Get unique concept_id_2 values to query
-        unique_concept_ids = result_df['concept_id_2'].unique().tolist()
+        # Only do OMOP lookups for non-qualifier-derived rows that have concept_id_2 values
+        if '_is_qualifier_derived' in result_df.columns:
+            non_qualifier_df = result_df[result_df['_is_qualifier_derived'] == False]
+        else:
+            non_qualifier_df = result_df
+        if not non_qualifier_df.empty:
+            # Get unique concept_id_2 values to query
+            unique_concept_ids = non_qualifier_df['concept_id_2'].unique().tolist()
+            
+            # Query OMOP database for concept details
+            omop_concepts = get_omop_concepts(unique_concept_ids)
+        else:
+            omop_concepts = {}
         
-        # Query OMOP database for concept details
-        omop_concepts = get_omop_concepts(unique_concept_ids)
+        # Fill columns from OMOP database (only for non-qualifier-derived rows)
+        def fill_omop_column(row, field):
+            # Check if this is a qualifier-derived row
+            if '_is_qualifier_derived' in row and row['_is_qualifier_derived']:
+                return ''  # Leave blank for qualifier-derived rows
+            return omop_concepts.get(str(row['concept_id_2']), {}).get(field, '')
         
-        # Fill columns from OMOP database
-        result_df['temp name'] = result_df['concept_id_2'].apply(
-            lambda x: omop_concepts.get(str(x), {}).get('concept_name', '')
-        )
-        result_df['temp domain'] = result_df['concept_id_2'].apply(
-            lambda x: omop_concepts.get(str(x), {}).get('domain_id', '')
-        )
-        result_df['vocabulary_id_2'] = result_df['concept_id_2'].apply(
-            lambda x: omop_concepts.get(str(x), {}).get('vocabulary_id', '')
-        )
-        result_df['temp class'] = result_df['concept_id_2'].apply(
-            lambda x: omop_concepts.get(str(x), {}).get('concept_class_id', '')
-        )
-        result_df['concept_code_2'] = result_df['concept_id_2'].apply(
-            lambda x: omop_concepts.get(str(x), {}).get('concept_code', '')
-        )
-        result_df['temp standard'] = result_df['concept_id_2'].apply(
-            lambda x: omop_concepts.get(str(x), {}).get('standard_concept', '')
-        )
+        result_df['temp name'] = result_df.apply(lambda row: fill_omop_column(row, 'concept_name'), axis=1)
+        result_df['temp domain'] = result_df.apply(lambda row: fill_omop_column(row, 'domain_id'), axis=1)
+        result_df['vocabulary_id_2'] = result_df.apply(lambda row: fill_omop_column(row, 'vocabulary_id'), axis=1)
+        result_df['temp class'] = result_df.apply(lambda row: fill_omop_column(row, 'concept_class_id'), axis=1)
+        result_df['concept_code_2'] = result_df.apply(lambda row: fill_omop_column(row, 'concept_code'), axis=1)
+        result_df['temp standard'] = result_df.apply(lambda row: fill_omop_column(row, 'standard_concept'), axis=1)
         
         # Fill columns from crm_df
         for col in ['confidence', 'predicate_id', 'mapping_source', 'mapping_justification', 'mapping_tool']:
@@ -376,6 +390,34 @@ def process_output_file(df: pd.DataFrame, output_spec: Dict[str, Any], tag: str,
             result_df['vocabulary_id_1'] = result_df['concept_id_1'].apply(
                 lambda x: crm_mapping.get(str(x), {}).get('vocabulary_id_1', '') if str(x) in crm_mapping else ''
             )
+    else:
+        # For concept.csv, fill vocabulary_id from crm_df when available
+        # This is especially important for qualifier concepts that should get AIREADI vocabulary_id
+        # Create the same mapping for concept.csv
+        crm_mapping = {str(row['concept_id_1']): row for _, row in crm_df.iterrows()}
+        
+        # Always apply vocabulary_id lookup from manual sheets
+        # This is critical for qualifier concepts that should get AIREADI vocabulary_id
+        def fill_vocabulary_id(row):
+            concept_id = str(row['concept_id'])
+            if concept_id in crm_mapping:
+                # First try vocabulary_id from concept_manual
+                manual_vocab = crm_mapping[concept_id].get('vocabulary_id', '')
+                if manual_vocab:
+                    return manual_vocab
+                # Fallback to vocabulary_id_1 from concept_relationship_manual  
+                manual_vocab_1 = crm_mapping[concept_id].get('vocabulary_id_1', '')
+                if manual_vocab_1:
+                    return manual_vocab_1
+            
+            # If no manual mapping found, use source data
+            return row['vocabulary_id']
+        
+        result_df['vocabulary_id'] = result_df.apply(fill_vocabulary_id, axis=1)
+    
+    # Remove internal marker column before returning
+    if '_is_qualifier_derived' in result_df.columns:
+        result_df = result_df.drop(columns=['_is_qualifier_derived'])
     
     return result_df
 

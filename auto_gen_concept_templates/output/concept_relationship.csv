@@ -346,69 +346,69 @@ More than 50 (3 or more packs),2005200195,51,AIREADI,,45884478,31 or more (3 poi
 26-30 (6 bottles),2005200208,26,AIREADI,,45876700,14 drinks or more a week,Meas Value,LOINC,Answer,LA14679-7,S,,,,1,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 31-35 (7 bottles),2005200209,31,AIREADI,,45876700,14 drinks or more a week,Meas Value,LOINC,Answer,LA14679-7,S,,,,1,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
 More than 36 (greater than 7 bottles),2005200210,35,AIREADI,,45876700,14 drinks or more a week,Meas Value,LOINC,Answer,LA14679-7,S,,,,1,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200605,mssrf1,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200606,mssrf2,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200607,mssrf3,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200608,mssrf4,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200609,mssrf5,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200610,mssrf6,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200611,mssrf7,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200612,mssrf8,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200613,mssrf9,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200614,mssrf10,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200615,msslf1,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200616,msslf2,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200617,msslf3,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200618,msslf4,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200619,msslf5,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200620,msslf6,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200621,msslf7,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200622,msslf8,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200623,msslf9,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Monofilament foot sensation test,2005200624,msslf10,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200570,cesmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200565,icf_dat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200587,c184390_dat,AIREADI,,765499,Written consent completed,Observation,SNOMED,Clinical Finding,5821000175103,S,,,,0.75,skos:closeMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Date,2005200594,cmcmpdat2,AIREADI,,764170,Gathering of current medication list,Observation,SNOMED,Procedure,451581000124104,S,,,,0.75,skos:closeMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200567,dmgcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Date,2005200591,dvamwstdat,AIREADI,,4169265,Device,Device,SNOMED,Physical Object,49062001,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Date,2005200592,dvcgmstdat,AIREADI,,4254068,Sensor device,Device,SNOMED,Physical Object,408746007,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Date,2005200604,dvamwendat,AIREADI,,4256607,Date,Observation,SNOMED,Attribute,410671006,,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200572,dmlcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200573,dietcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Date,2005200625,eos_dsstdat,AIREADI,,44810922,Participation in research study completed,Observation,SNOMED,Clinical Finding,871441000000107,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Date,2005200590,dricmpdat,AIREADI,,4151655,Driving assessment,Procedure,SNOMED,Procedure,310859004,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200562,faqcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200568,mhcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Has a doctor or other healthcare professional ever told you that you have/had...,2005200451,mhcat_dmtaot,AIREADI,,35207358,Other Alzheimer's disease,Condition,ICD10CM,4-char billing code,G30.8,,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200603,lbdattim1,AIREADI,,45947519,LABORATORY RESULTS,Measurement,CIEL,LabSet,1361,,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Date,2005200593,cmcmpdat,AIREADI,,45880025,Medications,Meas Value,LOINC,Answer,LA20271-5,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200574,viacmpdat,AIREADI-Vision,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200571,paidcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200566,prtcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200564,preconcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200595,rtfncmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200596,rtfnocmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200597,rthracmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200598,rtoctcmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200599,rtm2cmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200600,rtfliocmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200601,rtaccmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200602,rtekgcmpdattim,AIREADI,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200584,pxsficmpdat,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200585,pxnecmpdat,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200586,pxrdcmpdat,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200575,pxsdohcmpdat,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-PhenX MetaData,2005200576,px270201_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-PhenX MetaData,2005200577,px011002_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-PhenX MetaData,2005200578,px280301_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-PhenX MetaData,2005200579,px281401_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-PhenX MetaData,2005200580,px280801_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-PhenX MetaData,2005200581,px11502_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-PhenX MetaData,2005200582,px270101_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-PhenX MetaData,2005200583,px280901_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Survey Started Timestamp,2005200561,recstartts,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Date,2005200626,rt_dat,AIREADI,,44792407,Assessment,Type Concept,SNOMED,Record Artifact,325931000000109,,,,,0.75,skos:exactMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200563,scrcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200588,icfa_dat,AIREADI,,3018196,Informed consent obtained,Observation,LOINC,Clinical Observation,19826-7,S,,,,0.75,skos:closeMatch,ManualMapping,ManualMappingCuration,,,RedCap
-Performed,2005200569,sucmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+right foot - site 1,2005200605,mssrf1,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+right foot - site 2,2005200606,mssrf2,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+right foot - site 3,2005200607,mssrf3,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+right foot - site 4,2005200608,mssrf4,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+right foot - site 5,2005200609,mssrf5,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+right foot - site 6,2005200610,mssrf6,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+right foot - site 7,2005200611,mssrf7,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+right foot - site 8,2005200612,mssrf8,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+right foot - site 9,2005200613,mssrf9,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+right foot - site 10,2005200614,mssrf10,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+left foot - site 1,2005200615,msslf1,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+left foot - site 2,2005200616,msslf2,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+left foot - site 3,2005200617,msslf3,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+left foot - site 4,2005200618,msslf4,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+left foot - site 5,2005200619,msslf5,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+left foot - site 6,2005200620,msslf6,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+left foot - site 7,2005200621,msslf7,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+left foot - site 8,2005200622,msslf8,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+left foot - site 9,2005200623,msslf9,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+left foot - site 10,2005200624,msslf10,AIREADI,,4047085,Monofilament foot sensation test,Procedure,SNOMED,Procedure,134388005,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+CES-D-10 Survey,2005200570,cesmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Consent Survey,2005200565,icf_dat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Paper Consent Completed,2005200587,c184390_dat,AIREADI,,765499,Written consent completed,Observation,SNOMED,Clinical Finding,5821000175103,S,,,,0.75,skos:closeMatch,ManualMapping,ManualMappingCuration,,,RedCap
+current medication collected,2005200594,cmcmpdat2,AIREADI,,764170,Gathering of current medication list,Observation,SNOMED,Procedure,451581000124104,S,,,,0.75,skos:closeMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Demographic Survey,2005200567,dmgcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+device given to participant,2005200591,dvamwstdat,AIREADI,,4169265,Device,Device,SNOMED,Physical Object,49062001,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+sensor inserted,2005200592,dvcgmstdat,AIREADI,,4254068,Sensor device,Device,SNOMED,Physical Object,408746007,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+device received back from participant,2005200604,dvamwendat,AIREADI,,4256607,Date,Observation,SNOMED,Attribute,410671006,,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Diabetes Survey,2005200572,dmlcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Dietary Survey,2005200573,dietcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+AI-READI study discontinuation or completion,2005200625,eos_dsstdat,AIREADI,,44810922,Participation in research study completed,Observation,SNOMED,Clinical Finding,871441000000107,S,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+driving record assessment conducted,2005200590,dricmpdat,AIREADI,,4151655,Driving assessment,Procedure,SNOMED,Procedure,310859004,S,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+FAQ Survey,2005200562,faqcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Health Survey,2005200568,mhcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Other types of Dementia or Alzheimer's Disease,2005200451,mhcat_dmtaot,AIREADI,,35207358,Other Alzheimer's disease,Condition,ICD10CM,4-char billing code,G30.8,,,,,1,skos:narrowMatch,ManualMapping,ManualMappingCuration,,,RedCap
+clinical labs,2005200603,lbdattim1,AIREADI,,45947519,LABORATORY RESULTS,Measurement,CIEL,LabSet,1361,,,,,0.75,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+medications assessment conducted,2005200593,cmcmpdat,AIREADI,,45880025,Medications,Meas Value,LOINC,Answer,LA20271-5,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Ophthalmic Survey,2005200574,viacmpdat,AIREADI-Vision,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PAID-5 DM Survey,2005200571,paidcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Participant Contact Survey,2005200566,prtcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Pre-consent Survey,2005200564,preconcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Fundus - Edion,2005200595,rtfncmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Fundus - Optomed,2005200596,rtfnocmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+OCT & OCTA - Spectralis HRA OCT,2005200597,rthracmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+OCT - Triton OCT,2005200598,rtoctcmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+OCT & OCTA - Maestro2,2005200599,rtm2cmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+FLIO,2005200600,rtfliocmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Angioplex - Cirrus 5000,2005200601,rtaccmpdattim,AIREADI-Vision,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Cardiology - EKG - Pagewriter TC30 Cardiograp,2005200602,rtekgcmpdattim,AIREADI,,45885156,"Device or Medical/Surgical Supply, including Health Information Technology (HIT)",Meas Value,LOINC,Answer,LA20770-6,S,,,,0.5,skos:relatedMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX Food Insecurity Survey,2005200584,pxsficmpdat,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX Neighborhood Environment Survey,2005200585,pxnecmpdat,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX Racial/Ethnic Survey,2005200586,pxrdcmpdat,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX SDOH Survey,2005200575,pxsdohcmpdat,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX English Proficiency Survey,2005200576,px270201_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX Education Attainment Survey,2005200577,px011002_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX Job Security Survey,2005200578,px280301_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX Housing Insecurity Survey,2005200579,px281401_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX Prescriptions Affordability Survey,2005200580,px280801_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX Health Insurance Survey,2005200581,px11502_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX Health Care Access Survey,2005200582,px270101_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+PhenX Healthcare Discrimination Survey,2005200583,px280901_metadata,AIREADI,,45875977,PhenX,Measurement,LOINC,LOINC Class,PHENX,C,,,,0.75,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Recruitment Survey,2005200561,recstartts,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Assessment,2005200626,rt_dat,AIREADI,,44792407,Assessment,Type Concept,SNOMED,Record Artifact,325931000000109,,,,,0.75,skos:exactMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Screening Survey,2005200563,scrcmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Consent Attestation,2005200588,icfa_dat,AIREADI,,3018196,Informed consent obtained,Observation,LOINC,Clinical Observation,19826-7,S,,,,0.75,skos:closeMatch,ManualMapping,ManualMappingCuration,,,RedCap
+Substance Use Survey,2005200569,sucmpdat,AIREADI,,44804317,Survey,Observation,SNOMED,Qualifier Value,725111000000103,S,,,,0.5,skos:broadMatch,ManualMapping,ManualMappingCuration,,,RedCap
