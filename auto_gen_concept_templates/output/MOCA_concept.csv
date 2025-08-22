@@ -1,31 +1,31 @@
-concept_name,SRC_CODE,concept_id,vocabulary_id,domain_id,concept_class_id,standard_concept,valid_start_date,valid_end_date,invalid_reason,source
-Trail drawings score,trails_visuospatial_executive,2005200344,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Time taken to do trails in seconds,trails_visuospatial_executive_time,2005200345,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Cube drawings score,cube_visuospatial_executive,2005200346,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Time taken to do cube in seconds,cube_visuospatial_executive_time,2005200347,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Clock drawings score,clock_visuospatial_executive,2005200348,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Time taken to do clock in seconds,clock_visuospatial_executive_time,2005200349,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Animal name recall task score,naming,2005200350,AIREADI-MOCA,Measurement,Observable Entity,S,1/1/1970,,,MOCA
-Time in seconds to perform the animal name recall task,naming_time,2005200351,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Words correctly repeated (1st trial) score,memory_trial1,2005200352,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Time in seconds to perform the words correctly repeated (1st trial),memory_trial1_time,2005200353,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Words correctly repeated (2nd trial) score,memory_trial2,2005200354,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Time in seconds to perform the words correctly repeated (2nd trial),memory_trial2_time,2005200355,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Repeating digits score,digitspan,2005200356,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Time in seconds to perform the repeating digits task,digitspan_time,2005200357,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Letter tapping score,lettera,2005200358,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Time in seconds to perform the letter tapping task,lettera_time,2005200359,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Serial 7 subtraction score,subtraction,2005200360,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Time in seconds to perform the serial 7 subtraction task,subtraction_time,2005200361,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Repeats sentences II score,repetition,2005200362,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Time in seconds to perform repeats sentences II task,repetition_time,2005200363,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Maximal one-minute recall of words beginning with 'F' score,verbal_fluency_language,2005200364,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Time in seconds to perform the words beginning with 'F' recall task,verbal_fluency_language_time,2005200365,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-MOCA abstraction score,moca_abstraction,2005200366,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Time in seconds to perform MOCA abstraction task,moca_abstraction_time,2005200367,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-MOCA delayed recall with no cue score,delayed_recall_with_no_cue,2005200368,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Time in seconds to perform the MOCA delayed recall with no cue task,delayed_recall_with_no_cue_time,2005200369,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-"MOCA orientation date, month, year, day, place, city score",moca_orientation,2005200370,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-"Time in seconds to perform the MOCA orientation date, month, year, day, place, city task",moca_orientation_time,2005200371,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
-Age in years (3-4 year span),age_years_at_interview,2005200372,AIREADI-MOCA,Observation,Observable Entity,S,1/1/1970,,,MOCA
-"MOCA delayed recall with no cue, cue, and multiple choice cue (Combined score)",moca_combined_mis_score,2005200373,AIREADI-MOCA,Measurement,Assessment Item ,S,1/1/1970,,,MOCA
+concept_id,SRC_CODE,concept_name,vocabulary_id,domain_id,concept_class_id,standard_concept,valid_start_date,valid_end_date,invalid_reason,source
+2005200344,trails_visuospatial_executive,Trail drawings score,,,,,1/1/1970,,,MOCA
+2005200345,trails_visuospatial_executive_time,Time taken to do trails in seconds,,,,,1/1/1970,,,MOCA
+2005200346,cube_visuospatial_executive,Cube drawings score,,,,,1/1/1970,,,MOCA
+2005200347,cube_visuospatial_executive_time,Time taken to do cube in seconds,,,,,1/1/1970,,,MOCA
+2005200348,clock_visuospatial_executive,Clock drawings score,,,,,1/1/1970,,,MOCA
+2005200349,clock_visuospatial_executive_time,Time taken to do clock in seconds,,,,,1/1/1970,,,MOCA
+2005200350,naming,Animal name recall task score,,,,,1/1/1970,,,MOCA
+2005200351,naming_time,Time in seconds to perform the animal name recall task,,,,,1/1/1970,,,MOCA
+2005200352,memory_trial1,Words correctly repeated (1st trial) score,,,,,1/1/1970,,,MOCA
+2005200353,memory_trial1_time,Time in seconds to perform the words correctly repeated (1st trial),,,,,1/1/1970,,,MOCA
+2005200354,memory_trial2,Words correctly repeated (2nd trial) score,,,,,1/1/1970,,,MOCA
+2005200355,memory_trial2_time,Time in seconds to perform the words correctly repeated (2nd trial),,,,,1/1/1970,,,MOCA
+2005200356,digitspan,Repeating digits score,,,,,1/1/1970,,,MOCA
+2005200357,digitspan_time,Time in seconds to perform the repeating digits task,,,,,1/1/1970,,,MOCA
+2005200358,lettera,Letter tapping score,,,,,1/1/1970,,,MOCA
+2005200359,lettera_time,Time in seconds to perform the letter tapping task,,,,,1/1/1970,,,MOCA
+2005200360,subtraction,Serial 7 subtraction score,,,,,1/1/1970,,,MOCA
+2005200361,subtraction_time,Time in seconds to perform the serial 7 subtraction task,,,,,1/1/1970,,,MOCA
+2005200362,repetition,Repeats sentences II score,,,,,1/1/1970,,,MOCA
+2005200363,repetition_time,Time in seconds to perform repeats sentences II task,,,,,1/1/1970,,,MOCA
+2005200364,verbal_fluency_language,Maximal one-minute recall of words beginning with 'F' score,,,,,1/1/1970,,,MOCA
+2005200365,verbal_fluency_language_time,Time in seconds to perform the words beginning with 'F' recall task,,,,,1/1/1970,,,MOCA
+2005200366,moca_abstraction,MOCA abstraction score,,,,,1/1/1970,,,MOCA
+2005200367,moca_abstraction_time,Time in seconds to perform MOCA abstraction task,,,,,1/1/1970,,,MOCA
+2005200368,delayed_recall_with_no_cue,MOCA delayed recall with no cue score,,,,,1/1/1970,,,MOCA
+2005200369,delayed_recall_with_no_cue_time,Time in seconds to perform the MOCA delayed recall with no cue task,,,,,1/1/1970,,,MOCA
+2005200370,moca_orientation,"MOCA orientation date, month, year, day, place, city score",,,,,1/1/1970,,,MOCA
+2005200371,moca_orientation_time,"Time in seconds to perform the MOCA orientation date, month, year, day, place, city task",,,,,1/1/1970,,,MOCA
+2005200372,age_years_at_interview,Age in years (3-4 year span),,,,,1/1/1970,,,MOCA
+2005200373,moca_combined_mis_score,"MOCA delayed recall with no cue, cue, and multiple choice cue (Combined score)",,,,,1/1/1970,,,MOCA
