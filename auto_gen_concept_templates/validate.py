@@ -76,6 +76,76 @@ def normalize_value(value: Any) -> str:
     return str_value
 
 
+def analyze_difference_type(manual_val: str, generated_val: str, manual_normalized: str, generated_normalized: str) -> dict:
+    """
+    Analyze the type of difference between two values to provide explanations.
+    
+    Args:
+        manual_val: Original manual value
+        generated_val: Original generated value
+        manual_normalized: Normalized manual value
+        generated_normalized: Normalized generated value
+        
+    Returns:
+        Dictionary with difference analysis
+    """
+    analysis = {
+        'type': 'content',  # default
+        'explanation': '',
+        'severity': 'medium',  # low, medium, high
+        'should_ignore': False
+    }
+    
+    # Check if it's only whitespace differences
+    manual_stripped = manual_val.strip() if manual_val else ''
+    generated_stripped = generated_val.strip() if generated_val else ''
+    
+    if manual_stripped == generated_stripped and manual_stripped != '':
+        analysis['type'] = 'whitespace'
+        analysis['explanation'] = 'Only whitespace differences (leading/trailing spaces)'
+        analysis['severity'] = 'low'
+        analysis['should_ignore'] = True
+        return analysis
+    
+    # Check if it's only case differences
+    if manual_val.lower() == generated_val.lower() and manual_val != '' and generated_val != '':
+        analysis['type'] = 'case'
+        analysis['explanation'] = 'Only case differences (upper/lower case)'
+        analysis['severity'] = 'low'
+        return analysis
+    
+    # Check if one is blank
+    if manual_normalized == '' and generated_normalized != '':
+        analysis['type'] = 'missing_manual'
+        analysis['explanation'] = 'Value missing in manual sheet'
+        analysis['severity'] = 'medium'
+        return analysis
+    elif generated_normalized == '' and manual_normalized != '':
+        analysis['type'] = 'missing_generated'
+        analysis['explanation'] = 'Value missing in generated file'
+        analysis['severity'] = 'medium'
+        return analysis
+    
+    # Check if it's a minor formatting difference (like "123.0" vs "123")
+    if manual_normalized != generated_normalized:
+        try:
+            manual_float = float(manual_val) if manual_val else None
+            generated_float = float(generated_val) if generated_val else None
+            if manual_float == generated_float:
+                analysis['type'] = 'formatting'
+                analysis['explanation'] = 'Number formatting difference (e.g., "123.0" vs "123")'
+                analysis['severity'] = 'low'
+                return analysis
+        except (ValueError, TypeError):
+            pass
+    
+    # Default to content difference
+    analysis['type'] = 'content'
+    analysis['explanation'] = 'Content difference requiring review'
+    analysis['severity'] = 'high'
+    return analysis
+
+
 def load_worksheet_data(gc: gspread.Client, spreadsheet_name: str, worksheet_name: str) -> Tuple[pd.DataFrame, int]:
     """
     Load data from a Google Sheets worksheet.
@@ -208,8 +278,9 @@ def compare_dataframes(df_manual: pd.DataFrame, df_generated: pd.DataFrame,
         for idx, df_row in df_manual.iterrows():
             if str(df_row[id_column]) == str(row_id):
                 # Calculate actual Google Sheets row number
-                # Add 1 for 1-indexed, then add 1 for header row, then add rows_skipped
-                row_num = idx + 1 + 1 + manual_rows_skipped
+                # idx is 0-based in the cleaned dataframe
+                # Add 2 for 1-indexed + header row, then add rows_skipped
+                row_num = idx + 2 + manual_rows_skipped
                 break
         results['unmatched_manual'].append({
             'id': row_id,
@@ -251,11 +322,22 @@ def compare_dataframes(df_manual: pd.DataFrame, df_generated: pd.DataFrame,
             generated_val = normalize_value(generated_row.get(col, ''))
             
             if manual_val != generated_val:
+                manual_original = str(manual_row.get(col, ''))
+                generated_original = str(generated_row.get(col, ''))
+                
+                # Analyze the type of difference
+                diff_analysis = analyze_difference_type(manual_original, generated_original, manual_val, generated_val)
+                
+                # Skip whitespace-only differences if configured to ignore them
+                if diff_analysis['should_ignore']:
+                    continue
+                
                 diff_info = {
-                    'manual': str(manual_row.get(col, '')),
-                    'generated': str(generated_row.get(col, '')),
+                    'manual': manual_original,
+                    'generated': generated_original,
                     'manual_normalized': manual_val,
-                    'generated_normalized': generated_val
+                    'generated_normalized': generated_val,
+                    'analysis': diff_analysis
                 }
                 
                 if col in critical_id_columns:
@@ -316,6 +398,22 @@ def generate_markdown_report(all_results: List[Dict[str, Any]]) -> str:
     report = f"""# Validation Report
 
 Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+
+## Data Sources
+
+This report compares generated CSV files against manual Google Sheets:
+
+- **Manual Sheets**: [template_4_adding_vocabulary-2](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY)
+  - concept_manual worksheet
+  - concept_relationship_manual worksheet
+- **Generated Files**: 
+  - `output/concept.csv` (from autogen.py)
+  - `output/concept_relationship.csv` (from autogen.py)
+
+### Link Legend
+- 🔴 Manual values link to specific cells in Google Sheets
+- 🔵 Generated values link to line numbers in CSV files
+- Explanations in parentheses describe the type of difference
 
 ## Summary
 
@@ -490,7 +588,8 @@ Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
                         for idx, df_row in result['manual_df'].iterrows():
                             if str(df_row[id_column]) == str(concept_id):
                                 # Calculate actual Google Sheets row number 
-                                manual_row_num = idx + 1 + 1 + result['manual_rows_skipped']  # +1 for 1-indexed, +1 for header, +rows_skipped
+                                # idx is 0-based in cleaned dataframe, add 2 for 1-indexed + header, then add rows_skipped
+                                manual_row_num = idx + 2 + result['manual_rows_skipped']
                                 break
                         
                         # Find row number in generated dataframe  
@@ -528,8 +627,18 @@ Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
                             generated_url = f"{csv_path}#L{generated_row_num}"
                             generated_val_link = f"[{generated_val}]({generated_url})"
                         
-                        # Add to concept details
-                        concept_details.append(f"  - {col}: 🔴 {manual_val_link} vs 🔵 {generated_val_link}")
+                        # Get explanation if available
+                        explanation = diff.get('analysis', {}).get('explanation', '')
+                        severity = diff.get('analysis', {}).get('severity', 'medium')
+                        
+                        # Add severity indicator
+                        severity_icon = {'low': '🟡', 'medium': '🟠', 'high': '🔴'}.get(severity, '🟠')
+                        
+                        # Add to concept details with explanation
+                        detail_line = f"  - {col}: 🔴 {manual_val_link} vs 🔵 {generated_val_link}"
+                        if explanation:
+                            detail_line += f" ({explanation})"
+                        concept_details.append(detail_line)
                     
                     # Only show concept if it has details
                     if concept_has_details:
