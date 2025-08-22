@@ -277,7 +277,7 @@ Time in seconds to perform the MOCA delayed recall with no cue task,delayed_reca
 Age in years (3-4 year span),age_years_at_interview,2005200372,AIREADI-MOCA,Observation,,Observable Entity,,1/1/1970,,
 "MOCA delayed recall with no cue, cue, and multiple choice cue (Combined score)",moca_combined_mis_score,2005200373,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,
 Other types of Dementia or Alzheimer's Disease,mhcat_dmtaot,2005200451,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,
-Neurocognitive disorder please specify,mhoccur_cnsot,2005200455,AIREADI,Observation,survey_conduct,Survey,,,,
+Neurocognitive disorder please specify,mhoccur_cnsot,2005200455,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,
 Other cancer type please (specify),mhoccur_cnrot,2005200459,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,
 Was your mother or father diagnosed with Type II Diabetes?,fh_dm2ptsp,2005200463,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,
 "If yes, please check all that apply: brother, sister, half-sister, half-brother",fh_dm2sbsp,2005200464,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,
