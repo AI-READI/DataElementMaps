@@ -1,6 +1,6 @@
 # Validation Report
 
-Generated on: 2025-08-22 18:11:03
+Generated on: 2025-08-22 19:07:24
 
 ## Data Sources
 
@@ -39,31 +39,31 @@ This report compares generated CSV files against manual Google Sheets:
 
 | Column | Matching | Total | Match Rate |
 |--------|----------|-------|------------|
-| valid_start_date | 0 | 413 | 0.0% |
-| vocabulary_id | 0 | 413 | 0.0% |
-| concept_class_id | 0 | 413 | 0.0% |
 | domain_id | 0 | 413 | 0.0% |
-| SRC CODE | 226 | 413 | 54.7% |
+| vocabulary_id | 0 | 413 | 0.0% |
+| valid_start_date | 0 | 413 | 0.0% |
+| concept_class_id | 0 | 413 | 0.0% |
+| SRC CODE | 73 | 413 | 17.7% |
 | v6_domain_id | 245 | 413 | 59.3% |
 | concept_name | 412 | 413 | 99.8% |
-| invalid_reason | 413 | 413 | 100.0% |
-| valid_end_date | 413 | 413 | 100.0% |
-| concept_id | 413 | 413 | 100.0% |
 | standard_concept | 413 | 413 | 100.0% |
+| concept_id | 413 | 413 | 100.0% |
+| valid_end_date | 413 | 413 | 100.0% |
+| invalid_reason | 413 | 413 | 100.0% |
 
 #### All Discrepancies
 
-**valid_start_date**: 0 manual blanks, 413 generated blanks (out of 413 total differences)
+**domain_id**: 0 manual blanks, 413 generated blanks (out of 413 total differences)
 
 **vocabulary_id**: 0 manual blanks, 413 generated blanks (out of 413 total differences)
 
-**v6_domain_id**: 0 manual blanks, 168 generated blanks (out of 168 total differences)
+**valid_start_date**: 0 manual blanks, 413 generated blanks (out of 413 total differences)
 
 **concept_class_id**: 0 manual blanks, 413 generated blanks (out of 413 total differences)
 
-**domain_id**: 0 manual blanks, 413 generated blanks (out of 413 total differences)
+**SRC CODE**: 0 manual blanks, 340 generated blanks (out of 340 total differences)
 
-**SRC CODE**: 73 manual blanks, 0 generated blanks (out of 187 total differences)
+**v6_domain_id**: 0 manual blanks, 168 generated blanks (out of 168 total differences)
 
 
 - **Have you been diagnosed with any conditions not listed above? (any condition, not just eyes)** (2005200470)
@@ -93,36 +93,36 @@ This report compares generated CSV files against manual Google Sheets:
 | temp class | 336 | 413 | 81.4% |
 | vocabulary_id_2 | 336 | 413 | 81.4% |
 | temp domain | 337 | 413 | 81.6% |
-| relationship_id | 413 | 413 | 100.0% |
 | concept_id_1 | 413 | 413 | 100.0% |
+| relationship_valid_start_date | 413 | 413 | 100.0% |
+| relationship_id | 413 | 413 | 100.0% |
+| concept_name | 413 | 413 | 100.0% |
+| mapping_tool | 413 | 413 | 100.0% |
+| concept_id_2 | 413 | 413 | 100.0% |
+| relationship_valid_end_date | 413 | 413 | 100.0% |
 | vocabulary_id_1 | 413 | 413 | 100.0% |
 | invalid_reason | 413 | 413 | 100.0% |
-| concept_name | 413 | 413 | 100.0% |
-| relationship_valid_end_date | 413 | 413 | 100.0% |
-| concept_id_2 | 413 | 413 | 100.0% |
-| mapping_tool | 413 | 413 | 100.0% |
-| relationship_valid_start_date | 413 | 413 | 100.0% |
 
 #### All Discrepancies
-
-**mapping_source**: 0 manual blanks, 412 generated blanks (out of 412 total differences)
-
-**mapping_justification**: 0 manual blanks, 412 generated blanks (out of 412 total differences)
 
 **confidence**: 0 manual blanks, 321 generated blanks (out of 321 total differences)
 
 **predicate_id**: 0 manual blanks, 321 generated blanks (out of 321 total differences)
 
-**temp domain**: 0 manual blanks, 74 generated blanks (out of 76 total differences)
+**mapping_source**: 0 manual blanks, 412 generated blanks (out of 412 total differences)
+
+**mapping_justification**: 0 manual blanks, 412 generated blanks (out of 412 total differences)
 
 **concept_code_2**: 0 manual blanks, 74 generated blanks (out of 81 total differences)
 
-**temp class**: 0 manual blanks, 74 generated blanks (out of 77 total differences)
-
-**vocabulary_id_2**: 0 manual blanks, 74 generated blanks (out of 77 total differences)
-
 **temp name**: 0 manual blanks, 74 generated blanks (out of 85 total differences)
 
+**temp class**: 0 manual blanks, 74 generated blanks (out of 77 total differences)
+
 **temp standard**: 0 manual blanks, 82 generated blanks (out of 82 total differences)
+
+**temp domain**: 0 manual blanks, 74 generated blanks (out of 76 total differences)
+
+**vocabulary_id_2**: 0 manual blanks, 74 generated blanks (out of 77 total differences)
 
 
