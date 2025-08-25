@@ -368,6 +368,11 @@ def create_concept_csv(concepts: List[ConceptData], manual_df: pd.DataFrame, tag
     print(f"Manual lookup has {len(manual_lookup)} entries")
     print(f"Manual order has {len(manual_order)} entries")
     
+    # Validate that manual sheet is in concept_id order
+    numeric_order = [int(x) for x in manual_order]
+    if numeric_order != sorted(numeric_order):
+        raise ValueError(f"Manual sheet is not in concept_id order. Expected sorted order, but got: {numeric_order[:10]}...")
+    
     # Create concept lookup for quick access
     concept_lookup = {str(concept.concept_id): concept for concept in concepts}
     
@@ -376,6 +381,7 @@ def create_concept_csv(concepts: List[ConceptData], manual_df: pd.DataFrame, tag
     for concept_id_str in manual_order:
         concept = concept_lookup.get(concept_id_str)
         if not concept:
+            raise Exception("not expecting this")
             continue  # Skip if this concept is not in our extracted list
         
         concept_id_str = str(concept.concept_id)
@@ -475,6 +481,11 @@ def create_concept_relationship_csv(concepts: List[ConceptData], manual_df: pd.D
     # Get the order from the manual sheet
     manual_order = [str(int(row[id_column])) for _, row in manual_df.iterrows() 
                    if pd.notna(row[id_column])]
+    
+    # Validate that manual sheet is in concept_id order
+    numeric_order = [int(x) for x in manual_order]
+    if numeric_order != sorted(numeric_order):
+        raise ValueError(f"Manual sheet is not in concept_id order. Expected sorted order, but got: {numeric_order[:10]}...")
     
     # Create concept lookup for quick access
     concept_lookup = {str(concept.concept_id): concept for concept in concepts}
