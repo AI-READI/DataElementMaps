@@ -357,33 +357,16 @@ def create_concept_csv(concepts: List[ConceptData], manual_df: pd.DataFrame, tag
     id_column = 'concept_id' if 'concept_id' in manual_df.columns else 'concept_id_1'
     print(f"Using ID column: {id_column}")
     
-    # Create lookup dictionary from manual data and preserve row order
+    # Create lookup dictionary from manual data
     manual_lookup = {str(int(row[id_column])): row for _, row in manual_df.iterrows() 
                     if pd.notna(row[id_column])}
     
-    # Get the order from the manual sheet
-    manual_order = [str(int(row[id_column])) for _, row in manual_df.iterrows() 
-                   if pd.notna(row[id_column])]
-    
     print(f"Manual lookup has {len(manual_lookup)} entries")
-    print(f"Manual order has {len(manual_order)} entries")
+    print(f"Processing {len(concepts)} concepts")
     
-    # Validate that manual sheet is in concept_id order
-    numeric_order = [int(x) for x in manual_order]
-    if numeric_order != sorted(numeric_order):
-        raise ValueError(f"Manual sheet is not in concept_id order. Expected sorted order, but got: {numeric_order[:10]}...")
-    
-    # Create concept lookup for quick access
-    concept_lookup = {str(concept.concept_id): concept for concept in concepts}
-    
-    # Process concepts in the order they appear in the manual sheet
+    # Process concepts directly (ordering will be handled in save_outputs)
     processed_count = 0
-    for concept_id_str in manual_order:
-        concept = concept_lookup.get(concept_id_str)
-        if not concept:
-            raise Exception("not expecting this")
-            continue  # Skip if this concept is not in our extracted list
-        
+    for concept in concepts:
         concept_id_str = str(concept.concept_id)
         manual_row = manual_lookup.get(concept_id_str, {})
         
@@ -393,7 +376,7 @@ def create_concept_csv(concepts: List[ConceptData], manual_df: pd.DataFrame, tag
             if len(manual_row) > 0:
                 print(f"Manual row columns: {list(manual_row.keys())}")
         
-        # Build row data with tracking in the exact manual sheet order
+        # Build row data with tracking
         row_data = {
             'concept_name': '',
             'SRC_CODE': '',  # Will be filled from manual sheet
@@ -442,7 +425,7 @@ def create_concept_csv(concepts: List[ConceptData], manual_df: pd.DataFrame, tag
         
         rows.append(row_data)
     
-    # Convert to DataFrame with exact manual sheet column ordering
+    # Convert to DataFrame
     column_order = ['concept_name', 'SRC_CODE', 'concept_id', 'vocabulary_id', 'domain_id', 
                    'v6_domain_id', 'concept_class_id', 'standard_concept', 'valid_start_date', 
                    'valid_end_date', 'invalid_reason', '_source_tracking', '_column_tracking']
@@ -478,24 +461,15 @@ def create_concept_relationship_csv(concepts: List[ConceptData], manual_df: pd.D
     manual_lookup = {str(int(row[id_column])): row for _, row in manual_df.iterrows() 
                     if pd.notna(row[id_column])}
     
-    # Get the order from the manual sheet
-    manual_order = [str(int(row[id_column])) for _, row in manual_df.iterrows() 
-                   if pd.notna(row[id_column])]
-    
-    # Validate that manual sheet is in concept_id order
-    numeric_order = [int(x) for x in manual_order]
-    if numeric_order != sorted(numeric_order):
-        raise ValueError(f"Manual sheet is not in concept_id order. Expected sorted order, but got: {numeric_order[:10]}...")
-    
-    # Create concept lookup for quick access
-    concept_lookup = {str(concept.concept_id): concept for concept in concepts}
+    print(f"Manual lookup has {len(manual_lookup)} entries")
+    print(f"Processing {len(concepts)} concepts")
     
     # Get unique concept_id_2 values for OMOP lookup
     concept_id_2_values = []
-    for concept_id_str in manual_order:
-        concept = concept_lookup.get(concept_id_str)
-        if not concept or concept.is_qualifier_derived:
+    for concept in concepts:
+        if concept.is_qualifier_derived:
             continue  # Skip OMOP lookups for qualifier-derived concepts
+        concept_id_str = str(concept.concept_id)
         manual_row = manual_lookup.get(concept_id_str, {})
         concept_id_2 = manual_row.get('concept_id_2', '')
         if concept_id_2 and str(concept_id_2).strip():
@@ -504,15 +478,12 @@ def create_concept_relationship_csv(concepts: List[ConceptData], manual_df: pd.D
     # Query OMOP database for concept_id_2 data
     omop_data = query_omop_concepts(list(set(concept_id_2_values)))
     
-    # Process concepts in the order they appear in the manual sheet
-    for concept_id_str in manual_order:
-        concept = concept_lookup.get(concept_id_str)
-        if not concept:
-            continue  # Skip if this concept is not in our extracted list
-        # Use the same concept_id_str for manual_row lookup to maintain consistency
+    # Process concepts directly (ordering will be handled in save_outputs)
+    for concept in concepts:
+        concept_id_str = str(concept.concept_id)
         manual_row = manual_lookup.get(concept_id_str, {})
         
-        # Build row data with tracking in exact manual sheet order
+        # Build row data with tracking
         row_data = {
             'concept_name': '',
             'concept_id_1': concept.concept_id,
@@ -601,7 +572,7 @@ def create_concept_relationship_csv(concepts: List[ConceptData], manual_df: pd.D
         
         rows.append(row_data)
     
-    # Convert to DataFrame with exact manual sheet column ordering
+    # Convert to DataFrame
     column_order = ['concept_name', 'concept_id_1', 'SRC_CODE', 'vocabulary_id_1', 'relationship_id',
                    'concept_id_2', 'temp name', 'temp domain', 'vocabulary_id_2', 'temp class', 
                    'concept_code_2', 'temp standard', 'relationship_valid_start_date', 
@@ -667,6 +638,12 @@ def save_outputs(output_dfs: Dict[str, Dict[str, pd.DataFrame]]) -> None:
             tracking_columns = [col for col in clean_df.columns if col.startswith('_')]
             clean_df = clean_df.drop(columns=tracking_columns)
             
+            # Sort by concept_id to ensure consistent ordering
+            if 'concept_id' in clean_df.columns:
+                clean_df = clean_df.sort_values('concept_id')
+            elif 'concept_id_1' in clean_df.columns:
+                clean_df = clean_df.sort_values('concept_id_1')
+            
             # Save individual source file
             filename = f'output/{tag}_{fname}'
             clean_df.to_csv(filename, index=False)
@@ -680,6 +657,13 @@ def save_outputs(output_dfs: Dict[str, Dict[str, pd.DataFrame]]) -> None:
     # Save combined files
     for fname, dfs in combined_dfs.items():
         combined_df = pd.concat(dfs, ignore_index=True)
+        
+        # Sort combined file by concept_id to ensure consistent ordering
+        if 'concept_id' in combined_df.columns:
+            combined_df = combined_df.sort_values('concept_id')
+        elif 'concept_id_1' in combined_df.columns:
+            combined_df = combined_df.sort_values('concept_id_1')
+        
         filename = f'output/{fname}'
         combined_df.to_csv(filename, index=False)
         print(f"Saved {filename} with {len(combined_df)} rows")

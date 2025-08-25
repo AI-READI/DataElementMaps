@@ -1,40 +1,44 @@
 concept_name,SRC_CODE,concept_id,vocabulary_id,domain_id,v6_domain_id,concept_class_id,standard_concept,valid_start_date,valid_end_date,invalid_reason,source
-Trail drawings score,trails_visuospatial_executive,2005200344,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Time taken to do trails in seconds,trails_visuospatial_executive_time,2005200345,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Cube drawings score,cube_visuospatial_executive,2005200346,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Time taken to do cube in seconds,cube_visuospatial_executive_time,2005200347,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Clock drawings score,clock_visuospatial_executive,2005200348,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Time taken to do clock in seconds,clock_visuospatial_executive_time,2005200349,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Animal name recall task score,naming,2005200350,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Time in seconds to perform the animal name recall task,naming_time,2005200351,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Words correctly repeated (1st trial) score,memory_trial1,2005200352,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Time in seconds to perform the words correctly repeated (1st trial),memory_trial1_time,2005200353,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Words correctly repeated (2nd trial) score,memory_trial2,2005200354,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Time in seconds to perform the words correctly repeated (2nd trial),memory_trial2_time,2005200355,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Repeating digits score,digitspan,2005200356,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Time in seconds to perform the repeating digits task,digitspan_time,2005200357,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Letter tapping score,lettera,2005200358,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Time in seconds to perform the letter tapping task,lettera_time,2005200359,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Serial 7 subtraction score,subtraction,2005200360,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Time in seconds to perform the serial 7 subtraction task,subtraction_time,2005200361,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Repeats sentences II score,repetition,2005200362,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Time in seconds to perform repeats sentences II task,repetition_time,2005200363,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Maximal one-minute recall of words beginning with 'F' score,verbal_fluency_language,2005200364,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Time in seconds to perform the words beginning with 'F' recall task,verbal_fluency_language_time,2005200365,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-MOCA abstraction score,moca_abstraction,2005200366,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Time in seconds to perform MOCA abstraction task,moca_abstraction_time,2005200367,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-MOCA delayed recall with no cue score,delayed_recall_with_no_cue,2005200368,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Time in seconds to perform the MOCA delayed recall with no cue task,delayed_recall_with_no_cue_time,2005200369,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-"MOCA orientation date, month, year, day, place, city score",moca_orientation,2005200370,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-"Time in seconds to perform the MOCA orientation date, month, year, day, place, city task",moca_orientation_time,2005200371,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
-Age in years (3-4 year span),age_years_at_interview,2005200372,AIREADI-MOCA,Observation,,Observable Entity,,1/1/1970,,,MOCA
-"MOCA delayed recall with no cue, cue, and multiple choice cue (Combined score)",moca_combined_mis_score,2005200373,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
 "Do you use lifestyle changes to control your A1C and blood glucose levels? Examples: regular exercise, avoiding sugary foods and beverages, eating a balanced diet with lots of vegetables, sticking to a consistent eating schedule",cmtrt_lfst,2005200004,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 Method used to complete form,viaomthd,2005200011,AIREADI,Observation,survey_conduct,Attribute,,1/1/1970,,,RedCap
 Snellen fraction - Photopic VA - OD,viaodpsf,2005200012,AIREADI-Vision,Measurement,,Clinical Observation,,1/1/1970,,,RedCap
 Snellen fraction - Photopic VA - OS,viaospsf,2005200013,AIREADI-Vision,Measurement,,Clinical Observation,,1/1/1970,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,,2005200014,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 "Circulation problems (Examples: arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins)",mhoccur_circ,2005200015,AIREADI,Condition,,Disorder,,1/1/1970,,,RedCap
+"Circulation problems (Examples: arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins)",mhoccur_circ,2005200015,AIREADI,Condition,,Disorder,,1/1/1970,,,RedCap
+Kidney problems,mhoccur_rnl,2005200017,AIREADI,Condition,,Disorder,,1/1/1970,,,RedCap
 Kidney problems,mhoccur_rnl,2005200017,AIREADI,Condition,,Disorder,,1/1/1970,,,RedCap
 Were either of your parents diagnosed with Type II Diabetes?,fh_dm2pt,2005200018,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 Has a sibling been diagnosed with Type II Diabetes?,fh_dm2sb,2005200019,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
@@ -107,6 +111,16 @@ Is there a place that you USUALLY go to if you are sick and need health care? ,
 "During the past 12 months, have you DELAYED getting medical care because of the cost?",pxahc9,2005200098,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 "During the past 12 months, was there any time when you needed medical care, but DID NOT GET IT because of the cost?",pxahc10,2005200099,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 PhenX MetaData,,2005200102,AIREADI,Observation,,Survey,,1/1/1970,,,RedCap
+PhenX MetaData,,2005200102,AIREADI,Observation,,Survey,,1/1/1970,,,RedCap
+PhenX MetaData,,2005200102,AIREADI,Observation,,Survey,,1/1/1970,,,RedCap
+PhenX MetaData,,2005200102,AIREADI,Observation,,Survey,,1/1/1970,,,RedCap
+PhenX MetaData,,2005200102,AIREADI,Observation,,Survey,,1/1/1970,,,RedCap
+PhenX MetaData,,2005200102,AIREADI,Observation,,Survey,,1/1/1970,,,RedCap
+PhenX MetaData,,2005200102,AIREADI,Observation,,Survey,,1/1/1970,,,RedCap
+PhenX MetaData,,2005200102,AIREADI,Observation,,Survey,,1/1/1970,,,RedCap
+PhenX MetaData,,2005200102,AIREADI,Observation,,Survey,,1/1/1970,,,RedCap
+PhenX MetaData,,2005200102,AIREADI,Observation,,Survey,,1/1/1970,,,RedCap
+PhenX MetaData,,2005200102,AIREADI,Observation,,Survey,,1/1/1970,,,RedCap
 There is so much traffic on the streets that it makes it difficult or unpleasant to walk in my neighborhood. Would you say that you...,pxne8,2005200113,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 "I see many people being physically active in my neighborhood doing things like walking, jogging, cycling, or playing sports and active games. Would you say that you...",pxne9,2005200114,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 There are many interesting things to look at while walking in my neighborhood. Would you say you...,pxne10,2005200115,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
@@ -124,8 +138,44 @@ How often have you been treated unfairly by teachers and professors because of y
 About how many miles did you personally drive during the past 12 months in all motorized vehicles?,dri2,2005200137,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 Drivers license state,dristate,2005200138,AIREADI,Observation,survey_conduct,Location,,1/1/1970,,,RedCap
 Rarely or none of the time (< 1 day),ces1_0,2005200141,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Rarely or none of the time (< 1 day),ces1_0,2005200141,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Rarely or none of the time (< 1 day),ces1_0,2005200141,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Rarely or none of the time (< 1 day),ces1_0,2005200141,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Rarely or none of the time (< 1 day),ces1_0,2005200141,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Rarely or none of the time (< 1 day),ces1_0,2005200141,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Rarely or none of the time (< 1 day),ces1_0,2005200141,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Rarely or none of the time (< 1 day),ces1_0,2005200141,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Rarely or none of the time (< 1 day),ces1_0,2005200141,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Rarely or none of the time (< 1 day),ces1_0,2005200141,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Some or a little of the time (1-2 days),ces1_1,2005200142,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Some or a little of the time (1-2 days),ces1_1,2005200142,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Some or a little of the time (1-2 days),ces1_1,2005200142,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Some or a little of the time (1-2 days),ces1_1,2005200142,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Some or a little of the time (1-2 days),ces1_1,2005200142,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Some or a little of the time (1-2 days),ces1_1,2005200142,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Some or a little of the time (1-2 days),ces1_1,2005200142,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Some or a little of the time (1-2 days),ces1_1,2005200142,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Some or a little of the time (1-2 days),ces1_1,2005200142,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 Some or a little of the time (1-2 days),ces1_1,2005200142,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 Occasionally or a moderate amount of time (3-4 days),ces1_2,2005200143,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),ces1_2,2005200143,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),ces1_2,2005200143,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),ces1_2,2005200143,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),ces1_2,2005200143,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),ces1_2,2005200143,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),ces1_2,2005200143,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),ces1_2,2005200143,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),ces1_2,2005200143,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),ces1_2,2005200143,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+All of the time (5-7 days),ces1_3,2005200144,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+All of the time (5-7 days),ces1_3,2005200144,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+All of the time (5-7 days),ces1_3,2005200144,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+All of the time (5-7 days),ces1_3,2005200144,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+All of the time (5-7 days),ces1_3,2005200144,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+All of the time (5-7 days),ces1_3,2005200144,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+All of the time (5-7 days),ces1_3,2005200144,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+All of the time (5-7 days),ces1_3,2005200144,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+All of the time (5-7 days),ces1_3,2005200144,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 All of the time (5-7 days),ces1_3,2005200144,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 Have you taken aspirin in the past 2 weeks?,cm_asp,2005200145,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 "Have you taken acetaminophen medicines, such as Tylenol, in the past 2 weeks?",cm_act,2005200146,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
@@ -146,14 +196,23 @@ Did the subject complete the study?,eos_ds,2005200192,AIREADI,Observation,survey
 41-50 (up to 2.5 packs),susmkdosfr_41,2005200194,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 More than 50 (3 or more packs),susmkdosfr_51,2005200195,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 22 to 28,subrdosfr_22,2005200196,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+22 to 28,subrdosfr_22,2005200196,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 29 to 35,subrdosfr_29,2005200197,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+29 to 35,subrdosfr_29,2005200197,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+36 or more,subrdosfr_36,2005200198,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 36 or more,subrdosfr_36,2005200198,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 21-25 (5 bottles),suwndosfr_21,2005200199,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 M2-3D Wide(H) 12x9-OCT,rtma_odw,2005200200,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+M2-3D Wide(H) 12x9-OCT,rtma_odw,2005200200,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+M2-3D Macula 6x6-OCT,rtma_odm,2005200201,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 M2-3D Macula 6x6-OCT,rtma_odm,2005200201,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 M2-Mac 6x6-360x360-(rep3)-OCTA,rtma_odm1,2005200202,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+M2-Mac 6x6-360x360-(rep3)-OCTA,rtma_odm1,2005200202,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+Triton-3D(H)+Radial 12x9-OCT,rttr_odr,2005200203,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 Triton-3D(H)+Radial 12x9-OCT,rttr_odr,2005200203,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 Triton-Macula 6x6-OCTA,rttr_odm1,2005200204,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+Triton-Macula 6x6-OCTA,rttr_odm1,2005200204,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+Triton-Macula 12x12-OCTA,rttr_odm2,2005200205,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 Triton-Macula 12x12-OCTA,rttr_odm2,2005200205,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 Physical Activity Monitor was worn on which wrist?,dvamwenhand,2005200206,AIREADI,Observation,survey_conduct,Clinical Observation,,1/1/1970,,,RedCap
 26-30 (6 bottles),suwndosfr_26,2005200208,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
@@ -162,19 +221,45 @@ More than 36 (greater than 7 bottles),suwndosfr_35,2005200210,AIREADI,Meas Value
 More than 20 years,suvptoage_98,2005200211,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 More than 50 years,sumrjceddur_98,2005200212,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 Not a problem,paid_scrd_0,2005200213,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Not a problem,paid_scrd_0,2005200213,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Not a problem,paid_scrd_0,2005200213,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Not a problem,paid_scrd_0,2005200213,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Not a problem,paid_scrd_0,2005200213,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Minor problem,paid_scrd_1,2005200214,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Minor problem,paid_scrd_1,2005200214,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Minor problem,paid_scrd_1,2005200214,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Minor problem,paid_scrd_1,2005200214,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 Minor problem,paid_scrd_1,2005200214,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 Moderate problem,paid_scrd_2,2005200215,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Moderate problem,paid_scrd_2,2005200215,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Moderate problem,paid_scrd_2,2005200215,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Moderate problem,paid_scrd_2,2005200215,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Moderate problem,paid_scrd_2,2005200215,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 Somewhat serious problem,paid_scrd_3,2005200216,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Somewhat serious problem,paid_scrd_3,2005200216,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Somewhat serious problem,paid_scrd_3,2005200216,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Somewhat serious problem,paid_scrd_3,2005200216,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Somewhat serious problem,paid_scrd_3,2005200216,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Serious problem,paid_scrd_4,2005200217,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Serious problem,paid_scrd_4,2005200217,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Serious problem,paid_scrd_4,2005200217,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Serious problem,paid_scrd_4,2005200217,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 Serious problem,paid_scrd_4,2005200217,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 RxNorm (assign after visit),cmtrt,2005200220,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 "Unit (Record the dose unit of the dose of concomitant medication/treatment/therapy taken (e.g., mg.)).",cmdosu,2005200221,AIREADI,Observation,survey_conduct,Clinical Observation,,1/1/1970,,,RedCap
 Puff,cmdosu_13,2005200222,AIREADI,Device,,Physical Object,,1/1/1970,,,RedCap
 Less than 1 time,diet1_0,2005200238,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Less than 1 time,diet1_0,2005200238,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 1 - 3 times,diet1_1,2005200239,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 5 or more,diet2_0,2005200240,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+5 or more,diet2_0,2005200240,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+2 or less,diet2_2,2005200241,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 2 or less,diet2_2,2005200241,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 Less than 1,diet4_0,2005200242,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Less than 1,diet4_0,2005200242,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 1 time or less,diet6_0,2005200243,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+1 time or less,diet6_0,2005200243,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Within the past 2 years (1 year but less than 2 years ago),via4_3,2005200244,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 Within the past 2 years (1 year but less than 2 years ago),via4_3,2005200244,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 Cost/Insurance,via5_1,2005200245,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 Do not have/know an eye doctor,via5_2,2005200246,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
@@ -184,8 +269,15 @@ No reason to go (no problem),via5_5,2005200249,AIREADI,Meas Value,,Answer,,1/1/1
 Have not thought of it,via5_6,2005200250,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 Will be leaving labor force voluntarily,pxji1_5,2005200251,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 Covered,pxhic1_1,2005200252,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Covered,pxhic1_1,2005200252,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Covered,pxhic1_1,2005200252,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Covered,pxhic1_1,2005200252,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Covered,pxhic1_1,2005200252,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Covered,pxhic1_1,2005200252,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Covered,pxhic1_1,2005200252,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 I do NOT have health insurance,pxhic8_0,2005200253,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 I HAVE some kind of health insurance,pxhic8_1,2005200254,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Within the last 10 years (5 years but less than 10 years ago),pxahc1_5,2005200255,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 Within the last 10 years (5 years but less than 10 years ago),pxahc1_5,2005200255,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 There is NO place,pxahc4_0,2005200256,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 There is MORE THAN ONE place,pxahc4_2,2005200257,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
@@ -194,12 +286,20 @@ A doctor's office or health center,pxahc5_1,2005200258,AIREADI,Meas Value,,Answe
 A VA Medical Center or VA outpatient clinic,pxahc5_4,2005200260,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 Does not go to one place most often,pxahc5_6,2005200261,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 1 - 10 times,pxahc6_1,2005200262,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+1 - 10 times,pxahc6_1,2005200262,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+11 - 19 times,pxahc6_2,2005200263,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 11 - 19 times,pxahc6_2,2005200263,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 20 - 29 times,pxahc6_3,2005200264,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+20 - 29 times,pxahc6_3,2005200264,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+30 - 39 times,pxahc6_4,2005200265,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 30 - 39 times,pxahc6_4,2005200265,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 40 - 49 times,pxahc6_5,2005200266,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+40 - 49 times,pxahc6_5,2005200266,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+50 or more times,pxahc6_6,2005200267,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 50 or more times,pxahc6_6,2005200267,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 Does not apply to my neighborhood,pxne4_88,2005200268,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+Does not apply to my neighborhood,pxne4_88,2005200268,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
+There are no streets or roads in my neighborhood,pxne8_88,2005200269,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 There are no streets or roads in my neighborhood,pxne8_88,2005200269,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 6 or more,pxne11_6,2005200270,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 5000 miles or less,dri2_1,2005200271,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
@@ -219,20 +319,36 @@ Individual is not needed at this time for recruitment goals,eos_dsdecodie_3,2005
 Individual had Type 1 Diabetes,eos_dsdecodie_4,2005200287,AIREADI,Meas Value,,Answer,,1/1/1970,,,RedCap
 In Person (Baseline),eos_dsvst_2,2005200288,AIREADI,Observation,,Procedure,,1/1/1970,,,RedCap
 OptoMed-Disc centered-CFP,rtop_odd,2005200289,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+OptoMed-Disc centered-CFP,rtop_odd,2005200289,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+OptoMed-Mac centered-CFP,rtop_odm,2005200290,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 OptoMed-Mac centered-CFP,rtop_odm,2005200290,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 Eidon-UWF Central-IR,rtei_odir,2005200291,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+Eidon-UWF Central-IR,rtei_odir,2005200291,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+Eidon-UWF Central-FAF,rtei_odfaf,2005200292,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 Eidon-UWF Central-FAF,rtei_odfaf,2005200292,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 Eidon-UWF Central-CFP,rtsm_odc,2005200293,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+Eidon-UWF Central-CFP,rtsm_odc,2005200293,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+Eidon-UWF Nasal-CFP,rtsm_odn,2005200294,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 Eidon-UWF Nasal-CFP,rtsm_odn,2005200294,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 Eidon-UWF Temporal-CFP,rtsm_odt,2005200295,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+Eidon-UWF Temporal-CFP,rtsm_odt,2005200295,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+Eidon- Create Mosaic Image-CFP,rtsm_odm,2005200296,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 Eidon- Create Mosaic Image-CFP,rtsm_odm,2005200296,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 Spec-ONH-RC-HR-OCT,rtso_odo,2005200297,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+Spec-ONH-RC-HR-OCT,rtso_odo,2005200297,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+Spec-PPole Mac-HR-61 lines-OCT,rtso_odp,2005200298,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 Spec-PPole Mac-HR-61 lines-OCT,rtso_odp,2005200298,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 Spec-Mac-20x20-HS-512 lines-OCTA,rtso_odm,2005200299,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+Spec-Mac-20x20-HS-512 lines-OCTA,rtso_odm,2005200299,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+Cirrus-Mac Cube-512x128-OCT,rtci_odm1,2005200300,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 Cirrus-Mac Cube-512x128-OCT,rtci_odm1,2005200300,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 Cirrus-Disc Cube-200x200-OCT,rtci_odd1,2005200301,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+Cirrus-Disc Cube-200x200-OCT,rtci_odd1,2005200301,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+Cirrus-Macula 6x6-OCTA,rtci_odm2,2005200302,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 Cirrus-Macula 6x6-OCTA,rtci_odm2,2005200302,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
 Cirrus-Disc 6x6-OCTA,rtci_odd2,2005200303,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+Cirrus-Disc 6x6-OCTA,rtci_odd2,2005200303,AIREADI-Vision,Observation,,Observable Entity,,1/1/1970,,,RedCap
+FLIO-Mac-HS,rtfl_od,2005200304,AIREADI,Observation,,Observable Entity,,1/1/1970,,,RedCap
 FLIO-Mac-HS,rtfl_od,2005200304,AIREADI,Observation,,Observable Entity,,1/1/1970,,,RedCap
 "When reflecting on your typical eating habits, which of the following options best describes how often you consume simple sugars?",dmlsugar,2005200305,AIREADI,Observation,survey_conduct,Procedure,,1/1/1970,,,RedCap
 "In a typical day, how often do you consume whole grains? (Examples: include whole wheat, brown bread, or brown rice).",dmlgrain,2005200306,AIREADI,Observation,survey_conduct,Procedure,,1/1/1970,,,RedCap
@@ -268,8 +384,39 @@ Mesopic LogMAR OS Score,viaosmscore,2005200337,AIREADI-Vision,Measurement,,Clini
 "OD: Number of misses prior to stopping - Photopic, right eye",plcsodmiss,2005200339,AIREADI-Vision,Measurement,,Measurement,,1/1/1970,,,RedCap
 "OS: Value of final correct letter - Photopic, left eye",plcsosfcl,2005200340,AIREADI-Vision,Measurement,,Measurement,,1/1/1970,,,RedCap
 "OS: Number of misses prior to stopping - Photopic, left eye",plcsosmiss,2005200341,AIREADI-Vision,Measurement,,Measurement,,1/1/1970,,,RedCap
+Trail drawings score,trails_visuospatial_executive,2005200344,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Time taken to do trails in seconds,trails_visuospatial_executive_time,2005200345,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Cube drawings score,cube_visuospatial_executive,2005200346,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Time taken to do cube in seconds,cube_visuospatial_executive_time,2005200347,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Clock drawings score,clock_visuospatial_executive,2005200348,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Time taken to do clock in seconds,clock_visuospatial_executive_time,2005200349,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Animal name recall task score,naming,2005200350,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Time in seconds to perform the animal name recall task,naming_time,2005200351,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Words correctly repeated (1st trial) score,memory_trial1,2005200352,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Time in seconds to perform the words correctly repeated (1st trial),memory_trial1_time,2005200353,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Words correctly repeated (2nd trial) score,memory_trial2,2005200354,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Time in seconds to perform the words correctly repeated (2nd trial),memory_trial2_time,2005200355,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Repeating digits score,digitspan,2005200356,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Time in seconds to perform the repeating digits task,digitspan_time,2005200357,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Letter tapping score,lettera,2005200358,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Time in seconds to perform the letter tapping task,lettera_time,2005200359,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Serial 7 subtraction score,subtraction,2005200360,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Time in seconds to perform the serial 7 subtraction task,subtraction_time,2005200361,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Repeats sentences II score,repetition,2005200362,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Time in seconds to perform repeats sentences II task,repetition_time,2005200363,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Maximal one-minute recall of words beginning with 'F' score,verbal_fluency_language,2005200364,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Time in seconds to perform the words beginning with 'F' recall task,verbal_fluency_language_time,2005200365,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+MOCA abstraction score,moca_abstraction,2005200366,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Time in seconds to perform MOCA abstraction task,moca_abstraction_time,2005200367,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+MOCA delayed recall with no cue score,delayed_recall_with_no_cue,2005200368,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Time in seconds to perform the MOCA delayed recall with no cue task,delayed_recall_with_no_cue_time,2005200369,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+"MOCA orientation date, month, year, day, place, city score",moca_orientation,2005200370,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+"Time in seconds to perform the MOCA orientation date, month, year, day, place, city task",moca_orientation_time,2005200371,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
+Age in years (3-4 year span),age_years_at_interview,2005200372,AIREADI-MOCA,Observation,,Observable Entity,,1/1/1970,,,MOCA
+"MOCA delayed recall with no cue, cue, and multiple choice cue (Combined score)",moca_combined_mis_score,2005200373,AIREADI-MOCA,Measurement,,Assessment Item,,1/1/1970,,,MOCA
 Other types of Dementia or Alzheimer's Disease,mhcat_dmtaot,2005200451,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 Neurocognitive disorder please specify,mhoccur_cnsot,2005200455,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Other cancer type please (specify),mhoccur_cnrot,2005200459,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 Other cancer type please (specify),mhoccur_cnrot,2005200459,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 Was your mother or father diagnosed with Type II Diabetes?,fh_dm2ptsp,2005200463,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 "If yes, please check all that apply: brother, sister, half-sister, half-brother",fh_dm2sbsp,2005200464,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
@@ -277,6 +424,8 @@ Was your mother or father diagnosed with Type II Diabetes?,fh_dm2ptsp,2005200463
 Do you use marijuana now?,sumrjcdur,2005200473,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 Do you speak another language at home?,pxep2,2005200480,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 Medication Name,cmname,2005200481,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Specify other,odristate,2005200485,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
+Specify other,odristate,2005200485,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 Specify other,odristate,2005200485,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 "OD: Value of final correct letter - Mesopic, right eye",mlcsodfcl,2005200486,AIREADI-Vision,Measurement,,Measurement,,1/1/1970,,,RedCap
 "OD: Number of misses prior to stopping - Mesopic, right eye",mlcsodmiss,2005200487,AIREADI-Vision,Measurement,,Measurement,,1/1/1970,,,RedCap
@@ -334,6 +483,7 @@ How different would your life be now if you HAD NOT BEEN treated in a racist and
 How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In your entire life?,pxrd53,2005200542,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 "How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",pxrd54,2005200543,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 Elevated A1C levels (elevated blood sugars),mh_a1c,2005200547,AIREADI,Condition,survey_conduct,Disorder,,1/1/1970,,,RedCap
+Elevated A1C levels (elevated blood sugars),mh_a1c,2005200547,AIREADI,Condition,survey_conduct,Disorder,,1/1/1970,,,RedCap
 "Do you take pills to control your A1C and blood glucose levels? Examples: Metformin (Glucophage, Glumetza, Fortamet, Riomet), Glucotrol, Amaryl, DiaBeta, Blynase PresTab, Micronase, Actos, Avandia, Precose, Glyset, Prandin, Starlix, Januvia, Onglyza, Tradjenta, Nesina, Invokana, Farxiga, Jardiance, Welchol, and Cyclocet",cmtrt_a1c,2005200548,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 Do you inject insulin to control your blood glucose levels?,cmtrt_insln,2005200549,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 "Do you use other injections to control your blood glucose levels?  Examples: Victoza, Ozempic, Symlin, Tanzeum, and Trulicity",cmtrt_glcs,2005200550,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
@@ -342,21 +492,81 @@ Do you inject insulin to control your blood glucose levels?,cmtrt_insln,20052005
 Activity monitor returned?,dvamwenyn,2005200555,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 "What is your ancestry or ethnic origin?(Examples: Italian, Jamaican, African American, Cambodian, Cape Verdean, Cherokee, Navajo, Nez Pearce, Norwegian, Dominican, French Canadian, Haitian, Korean, Lebanese, Polish, Nigerian, Mexican, Taiwanese, Ukrainian, and so on.)",ancestry,2005200557,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap
 Survey Started Timestamp,,2005200558,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Started Timestamp,,2005200558,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Started Timestamp,,2005200558,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Started Timestamp,,2005200558,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Started Timestamp,,2005200558,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Started Timestamp,,2005200558,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Started Timestamp,,2005200558,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Started Timestamp,,2005200558,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Started Timestamp,,2005200558,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Started Timestamp,,2005200558,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Started Timestamp,,2005200558,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Started Timestamp,,2005200558,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Started Timestamp,,2005200558,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Started Timestamp,,2005200558,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Started Timestamp,,2005200558,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Started Timestamp,,2005200558,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Started Timestamp,,2005200558,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Completed Timestamp,,2005200559,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Completed Timestamp,,2005200559,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Completed Timestamp,,2005200559,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Completed Timestamp,,2005200559,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Completed Timestamp,,2005200559,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Completed Timestamp,,2005200559,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Completed Timestamp,,2005200559,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Completed Timestamp,,2005200559,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Completed Timestamp,,2005200559,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Completed Timestamp,,2005200559,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Completed Timestamp,,2005200559,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Completed Timestamp,,2005200559,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Completed Timestamp,,2005200559,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Completed Timestamp,,2005200559,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Completed Timestamp,,2005200559,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Survey Completed Timestamp,,2005200559,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Survey Completed Timestamp,,2005200559,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Recruitment Survey,,2005200561,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Recruitment Survey,,2005200561,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Recruitment Survey,,2005200561,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+FAQ Survey,,2005200562,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+FAQ Survey,,2005200562,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 FAQ Survey,,2005200562,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Screening Survey,,2005200563,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Screening Survey,,2005200563,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Screening Survey,,2005200563,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Pre-consent Survey,,2005200564,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Pre-consent Survey,,2005200564,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Pre-consent Survey,,2005200564,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Consent Survey,,2005200565,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Consent Survey,,2005200565,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Consent Survey,,2005200565,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Participant Contact Survey,,2005200566,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Demographic Survey,,2005200567,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Demographic Survey,,2005200567,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Demographic Survey,,2005200567,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Health Survey,,2005200568,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Health Survey,,2005200568,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Health Survey,,2005200568,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Substance Use Survey,,2005200569,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Substance Use Survey,,2005200569,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Substance Use Survey,,2005200569,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+CES-D-10 Survey,,2005200570,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+CES-D-10 Survey,,2005200570,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 CES-D-10 Survey,,2005200570,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 PAID-5 DM Survey,,2005200571,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+PAID-5 DM Survey,,2005200571,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+PAID-5 DM Survey,,2005200571,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Diabetes Survey,,2005200572,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Diabetes Survey,,2005200572,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Diabetes Survey,,2005200572,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Dietary Survey,,2005200573,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Dietary Survey,,2005200573,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Dietary Survey,,2005200573,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Ophthalmic Survey,,2005200574,AIREADI-Vision,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Ophthalmic Survey,,2005200574,AIREADI-Vision,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Ophthalmic Survey,,2005200574,AIREADI-Vision,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+PhenX SDOH Survey,,2005200575,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+PhenX SDOH Survey,,2005200575,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 PhenX SDOH Survey,,2005200575,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 PhenX English Proficiency Survey,,2005200576,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 PhenX Education Attainment Survey,,2005200577,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
@@ -367,12 +577,23 @@ PhenX Health Insurance Survey,,2005200581,AIREADI,Observation,,Qualifier Value,,
 PhenX Health Care Access Survey,,2005200582,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 PhenX Healthcare Discrimination Survey,,2005200583,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 PhenX Food Insecurity Survey,,2005200584,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+PhenX Food Insecurity Survey,,2005200584,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+PhenX Food Insecurity Survey,,2005200584,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+PhenX Food Insecurity Survey,,2005200584,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 PhenX Neighborhood Environment Survey,,2005200585,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+PhenX Neighborhood Environment Survey,,2005200585,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+PhenX Neighborhood Environment Survey,,2005200585,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+PhenX Neighborhood Environment Survey,,2005200585,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+PhenX Racial/Ethnic Survey,,2005200586,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+PhenX Racial/Ethnic Survey,,2005200586,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+PhenX Racial/Ethnic Survey,,2005200586,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 PhenX Racial/Ethnic Survey,,2005200586,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Paper Consent Completed,,2005200587,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Consent Attestation,,2005200588,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Device returned,,2005200589,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Device returned,,2005200589,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Driving record assessment conducted,,2005200590,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+Device given to participant,,2005200591,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Device given to participant,,2005200591,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Sensor inserted,,2005200592,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Medications assessment conducted,,2005200593,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
@@ -386,6 +607,8 @@ FLIO,,2005200600,AIREADI-Vision,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Angioplex - Cirrus 5000,,2005200601,AIREADI-Vision,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Cardiology - EKG - Pagewriter TC30 Cardiograp,,2005200602,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 clinical labs,,2005200603,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+device received back from participant,,2005200604,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
+device received back from participant,,2005200604,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 device received back from participant,,2005200604,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Right foot - site 1,,2005200605,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Right foot - site 2,,2005200606,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
@@ -410,5 +633,7 @@ Left foot - site 10,,2005200624,AIREADI,Observation,,Qualifier Value,,1/1/1970,,
 AI-READI study discontinuation or completion,,2005200625,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 Assessment,,2005200626,AIREADI,Observation,,Qualifier Value,,1/1/1970,,,RedCap
 "Other heart issues (Examples: pacemaker, heart valve disease, open heart surgery)",,2005200627,AIREADI,Condition,,Disorder,,1/1/1970,,,RedCap
+"Other heart issues (Examples: pacemaker, heart valve disease, open heart surgery)",,2005200627,AIREADI,Condition,,Disorder,,1/1/1970,,,RedCap
+Stroke,,2005200628,AIREADI,Condition,,Disorder,,1/1/1970,,,RedCap
 Stroke,,2005200628,AIREADI,Condition,,Disorder,,1/1/1970,,,RedCap
 "Have you had anything to eat or drink in the last six hours, including coffee or tea with milk or sugar or any other drink other than water?",,2005200629,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,,RedCap

@@ -1,40 +1,44 @@
 concept_name,concept_id_1,SRC_CODE,vocabulary_id_1,relationship_id,concept_id_2,temp name,temp domain,vocabulary_id_2,temp class,concept_code_2,temp standard,relationship_valid_start_date,relationship_valid_end_date,invalid_reason,confidence,predicate_id,mapping_source,mapping_justification,mapping_tool,Notes,source
-Trail drawings score,2005200344,trails_visuospatial_executive,,,606671,,,,,,,,,,,,,,,,MOCA
-Time taken to do trails in seconds,2005200345,trails_visuospatial_executive_time,,,606671,,,,,,,,,,,,,,,,MOCA
-Cube drawings score,2005200346,cube_visuospatial_executive,,,606671,,,,,,,,,,,,,,,,MOCA
-Time taken to do cube in seconds,2005200347,cube_visuospatial_executive_time,,,606671,,,,,,,,,,,,,,,,MOCA
-Clock drawings score,2005200348,clock_visuospatial_executive,,,606671,,,,,,,,,,,,,,,,MOCA
-Time taken to do clock in seconds,2005200349,clock_visuospatial_executive_time,,,606671,,,,,,,,,,,,,,,,MOCA
-Animal name recall task score,2005200350,naming,,,606671,,,,,,,,,,,,,,,,MOCA
-Time in seconds to perform the animal name recall task,2005200351,naming_time,,,606671,,,,,,,,,,,,,,,,MOCA
-Words correctly repeated (1st trial) score,2005200352,memory_trial1,,,606671,,,,,,,,,,,,,,,,MOCA
-Time in seconds to perform the words correctly repeated (1st trial),2005200353,memory_trial1_time,,,606671,,,,,,,,,,,,,,,,MOCA
-Words correctly repeated (2nd trial) score,2005200354,memory_trial2,,,606671,,,,,,,,,,,,,,,,MOCA
-Time in seconds to perform the words correctly repeated (2nd trial),2005200355,memory_trial2_time,,,606671,,,,,,,,,,,,,,,,MOCA
-Repeating digits score,2005200356,digitspan,,,606671,,,,,,,,,,,,,,,,MOCA
-Time in seconds to perform the repeating digits task,2005200357,digitspan_time,,,606671,,,,,,,,,,,,,,,,MOCA
-Letter tapping score,2005200358,lettera,,,606671,,,,,,,,,,,,,,,,MOCA
-Time in seconds to perform the letter tapping task,2005200359,lettera_time,,,606671,,,,,,,,,,,,,,,,MOCA
-Serial 7 subtraction score,2005200360,subtraction,,,606671,,,,,,,,,,,,,,,,MOCA
-Time in seconds to perform the serial 7 subtraction task,2005200361,subtraction_time,,,606671,,,,,,,,,,,,,,,,MOCA
-Repeats sentences II score,2005200362,repetition,,,606671,,,,,,,,,,,,,,,,MOCA
-Time in seconds to perform repeats sentences II task,2005200363,repetition_time,,,606671,,,,,,,,,,,,,,,,MOCA
-Maximal one-minute recall of words beginning with 'F' score,2005200364,verbal_fluency_language,,,606671,,,,,,,,,,,,,,,,MOCA
-Time in seconds to perform the words beginning with 'F' recall task,2005200365,verbal_fluency_language_time,,,606671,,,,,,,,,,,,,,,,MOCA
-MOCA abstraction score,2005200366,moca_abstraction,,,606671,,,,,,,,,,,,,,,,MOCA
-Time in seconds to perform MOCA abstraction task,2005200367,moca_abstraction_time,,,606671,,,,,,,,,,,,,,,,MOCA
-MOCA delayed recall with no cue score,2005200368,delayed_recall_with_no_cue,,,606671,,,,,,,,,,,,,,,,MOCA
-Time in seconds to perform the MOCA delayed recall with no cue task,2005200369,delayed_recall_with_no_cue_time,,,606671,,,,,,,,,,,,,,,,MOCA
-"MOCA orientation date, month, year, day, place, city score",2005200370,moca_orientation,,,606671,,,,,,,,,,,,,,,,MOCA
-"Time in seconds to perform the MOCA orientation date, month, year, day, place, city task",2005200371,moca_orientation_time,,,606671,,,,,,,,,,,,,,,,MOCA
-Age in years (3-4 year span),2005200372,age_years_at_interview,,,606671,,,,,,,,,,,,,,,,MOCA
-"MOCA delayed recall with no cue, cue, and multiple choice cue (Combined score)",2005200373,moca_combined_mis_score,,,606671,,,,,,,,,,,,,,,,MOCA
 "Do you use lifestyle changes to control your A1C and blood glucose levels? Examples: regular exercise, avoiding sugary foods and beverages, eating a balanced diet with lots of vegetables, sticking to a consistent eating schedule",2005200004,cmtrt_lfst,,,,,,,,,,,,,,,,,,,RedCap
 Method used to complete form,2005200011,viaomthd,,,,,,,,,,,,,,,,,,,RedCap
 Snellen fraction - Photopic VA - OD,2005200012,viaodpsf,,,,,,,,,,,,,,,,,,,RedCap
 Snellen fraction - Photopic VA - OS,2005200013,viaospsf,,,,,,,,,,,,,,,,,,,RedCap
 Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
+Has a doctor or other healthcare professional ever told you that you have/had...,2005200014,,,,,,,,,,,,,,,,,,,,RedCap
 "Circulation problems (Examples: arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins)",2005200015,mhoccur_circ,,,,,,,,,,,,,,,,,,,RedCap
+"Circulation problems (Examples: arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins)",2005200015,mhoccur_circ,,,,,,,,,,,,,,,,,,,RedCap
+Kidney problems,2005200017,mhoccur_rnl,,,,,,,,,,,,,,,,,,,RedCap
 Kidney problems,2005200017,mhoccur_rnl,,,,,,,,,,,,,,,,,,,RedCap
 Were either of your parents diagnosed with Type II Diabetes?,2005200018,fh_dm2pt,,,,,,,,,,,,,,,,,,,RedCap
 Has a sibling been diagnosed with Type II Diabetes?,2005200019,fh_dm2sb,,,,,,,,,,,,,,,,,,,RedCap
@@ -107,6 +111,16 @@ Is there a place that you USUALLY go to if you are sick and need health care? ,
 "During the past 12 months, have you DELAYED getting medical care because of the cost?",2005200098,pxahc9,,,,,,,,,,,,,,,,,,,RedCap
 "During the past 12 months, was there any time when you needed medical care, but DID NOT GET IT because of the cost?",2005200099,pxahc10,,,,,,,,,,,,,,,,,,,RedCap
 PhenX MetaData,2005200102,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX MetaData,2005200102,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX MetaData,2005200102,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX MetaData,2005200102,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX MetaData,2005200102,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX MetaData,2005200102,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX MetaData,2005200102,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX MetaData,2005200102,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX MetaData,2005200102,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX MetaData,2005200102,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX MetaData,2005200102,,,,,,,,,,,,,,,,,,,,RedCap
 There is so much traffic on the streets that it makes it difficult or unpleasant to walk in my neighborhood. Would you say that you...,2005200113,pxne8,,,,,,,,,,,,,,,,,,,RedCap
 "I see many people being physically active in my neighborhood doing things like walking, jogging, cycling, or playing sports and active games. Would you say that you...",2005200114,pxne9,,,,,,,,,,,,,,,,,,,RedCap
 There are many interesting things to look at while walking in my neighborhood. Would you say you...,2005200115,pxne10,,,,,,,,,,,,,,,,,,,RedCap
@@ -124,8 +138,44 @@ How often have you been treated unfairly by teachers and professors because of y
 About how many miles did you personally drive during the past 12 months in all motorized vehicles?,2005200137,dri2,,,,,,,,,,,,,,,,,,,RedCap
 Drivers license state,2005200138,dristate,,,,,,,,,,,,,,,,,,,RedCap
 Rarely or none of the time (< 1 day),2005200141,ces1_0,,,,,,,,,,,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),2005200141,ces1_0,,,,,,,,,,,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),2005200141,ces1_0,,,,,,,,,,,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),2005200141,ces1_0,,,,,,,,,,,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),2005200141,ces1_0,,,,,,,,,,,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),2005200141,ces1_0,,,,,,,,,,,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),2005200141,ces1_0,,,,,,,,,,,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),2005200141,ces1_0,,,,,,,,,,,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),2005200141,ces1_0,,,,,,,,,,,,,,,,,,,RedCap
+Rarely or none of the time (< 1 day),2005200141,ces1_0,,,,,,,,,,,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),2005200142,ces1_1,,,,,,,,,,,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),2005200142,ces1_1,,,,,,,,,,,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),2005200142,ces1_1,,,,,,,,,,,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),2005200142,ces1_1,,,,,,,,,,,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),2005200142,ces1_1,,,,,,,,,,,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),2005200142,ces1_1,,,,,,,,,,,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),2005200142,ces1_1,,,,,,,,,,,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),2005200142,ces1_1,,,,,,,,,,,,,,,,,,,RedCap
+Some or a little of the time (1-2 days),2005200142,ces1_1,,,,,,,,,,,,,,,,,,,RedCap
 Some or a little of the time (1-2 days),2005200142,ces1_1,,,,,,,,,,,,,,,,,,,RedCap
 Occasionally or a moderate amount of time (3-4 days),2005200143,ces1_2,,,,,,,,,,,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2005200143,ces1_2,,,,,,,,,,,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2005200143,ces1_2,,,,,,,,,,,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2005200143,ces1_2,,,,,,,,,,,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2005200143,ces1_2,,,,,,,,,,,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2005200143,ces1_2,,,,,,,,,,,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2005200143,ces1_2,,,,,,,,,,,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2005200143,ces1_2,,,,,,,,,,,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2005200143,ces1_2,,,,,,,,,,,,,,,,,,,RedCap
+Occasionally or a moderate amount of time (3-4 days),2005200143,ces1_2,,,,,,,,,,,,,,,,,,,RedCap
+All of the time (5-7 days),2005200144,ces1_3,,,,,,,,,,,,,,,,,,,RedCap
+All of the time (5-7 days),2005200144,ces1_3,,,,,,,,,,,,,,,,,,,RedCap
+All of the time (5-7 days),2005200144,ces1_3,,,,,,,,,,,,,,,,,,,RedCap
+All of the time (5-7 days),2005200144,ces1_3,,,,,,,,,,,,,,,,,,,RedCap
+All of the time (5-7 days),2005200144,ces1_3,,,,,,,,,,,,,,,,,,,RedCap
+All of the time (5-7 days),2005200144,ces1_3,,,,,,,,,,,,,,,,,,,RedCap
+All of the time (5-7 days),2005200144,ces1_3,,,,,,,,,,,,,,,,,,,RedCap
+All of the time (5-7 days),2005200144,ces1_3,,,,,,,,,,,,,,,,,,,RedCap
+All of the time (5-7 days),2005200144,ces1_3,,,,,,,,,,,,,,,,,,,RedCap
 All of the time (5-7 days),2005200144,ces1_3,,,,,,,,,,,,,,,,,,,RedCap
 Have you taken aspirin in the past 2 weeks?,2005200145,cm_asp,,,,,,,,,,,,,,,,,,,RedCap
 "Have you taken acetaminophen medicines, such as Tylenol, in the past 2 weeks?",2005200146,cm_act,,,,,,,,,,,,,,,,,,,RedCap
@@ -146,14 +196,23 @@ Did the subject complete the study?,2005200192,eos_ds,,,,,,,,,,,,,,,,,,,RedCap
 41-50 (up to 2.5 packs),2005200194,susmkdosfr_41,,,,,,,,,,,,,,,,,,,RedCap
 More than 50 (3 or more packs),2005200195,susmkdosfr_51,,,,,,,,,,,,,,,,,,,RedCap
 22 to 28,2005200196,subrdosfr_22,,,,,,,,,,,,,,,,,,,RedCap
+22 to 28,2005200196,subrdosfr_22,,,,,,,,,,,,,,,,,,,RedCap
 29 to 35,2005200197,subrdosfr_29,,,,,,,,,,,,,,,,,,,RedCap
+29 to 35,2005200197,subrdosfr_29,,,,,,,,,,,,,,,,,,,RedCap
+36 or more,2005200198,subrdosfr_36,,,,,,,,,,,,,,,,,,,RedCap
 36 or more,2005200198,subrdosfr_36,,,,,,,,,,,,,,,,,,,RedCap
 21-25 (5 bottles),2005200199,suwndosfr_21,,,,,,,,,,,,,,,,,,,RedCap
 M2-3D Wide(H) 12x9-OCT,2005200200,rtma_odw,,,,,,,,,,,,,,,,,,,RedCap
+M2-3D Wide(H) 12x9-OCT,2005200200,rtma_odw,,,,,,,,,,,,,,,,,,,RedCap
+M2-3D Macula 6x6-OCT,2005200201,rtma_odm,,,,,,,,,,,,,,,,,,,RedCap
 M2-3D Macula 6x6-OCT,2005200201,rtma_odm,,,,,,,,,,,,,,,,,,,RedCap
 M2-Mac 6x6-360x360-(rep3)-OCTA,2005200202,rtma_odm1,,,,,,,,,,,,,,,,,,,RedCap
+M2-Mac 6x6-360x360-(rep3)-OCTA,2005200202,rtma_odm1,,,,,,,,,,,,,,,,,,,RedCap
+Triton-3D(H)+Radial 12x9-OCT,2005200203,rttr_odr,,,,,,,,,,,,,,,,,,,RedCap
 Triton-3D(H)+Radial 12x9-OCT,2005200203,rttr_odr,,,,,,,,,,,,,,,,,,,RedCap
 Triton-Macula 6x6-OCTA,2005200204,rttr_odm1,,,,,,,,,,,,,,,,,,,RedCap
+Triton-Macula 6x6-OCTA,2005200204,rttr_odm1,,,,,,,,,,,,,,,,,,,RedCap
+Triton-Macula 12x12-OCTA,2005200205,rttr_odm2,,,,,,,,,,,,,,,,,,,RedCap
 Triton-Macula 12x12-OCTA,2005200205,rttr_odm2,,,,,,,,,,,,,,,,,,,RedCap
 Physical Activity Monitor was worn on which wrist?,2005200206,dvamwenhand,,,,,,,,,,,,,,,,,,,RedCap
 26-30 (6 bottles),2005200208,suwndosfr_26,,,,,,,,,,,,,,,,,,,RedCap
@@ -162,19 +221,45 @@ More than 36 (greater than 7 bottles),2005200210,suwndosfr_35,,,,,,,,,,,,,,,,,,,
 More than 20 years,2005200211,suvptoage_98,,,,,,,,,,,,,,,,,,,RedCap
 More than 50 years,2005200212,sumrjceddur_98,,,,,,,,,,,,,,,,,,,RedCap
 Not a problem,2005200213,paid_scrd_0,,,,,,,,,,,,,,,,,,,RedCap
+Not a problem,2005200213,paid_scrd_0,,,,,,,,,,,,,,,,,,,RedCap
+Not a problem,2005200213,paid_scrd_0,,,,,,,,,,,,,,,,,,,RedCap
+Not a problem,2005200213,paid_scrd_0,,,,,,,,,,,,,,,,,,,RedCap
+Not a problem,2005200213,paid_scrd_0,,,,,,,,,,,,,,,,,,,RedCap
+Minor problem,2005200214,paid_scrd_1,,,,,,,,,,,,,,,,,,,RedCap
+Minor problem,2005200214,paid_scrd_1,,,,,,,,,,,,,,,,,,,RedCap
+Minor problem,2005200214,paid_scrd_1,,,,,,,,,,,,,,,,,,,RedCap
+Minor problem,2005200214,paid_scrd_1,,,,,,,,,,,,,,,,,,,RedCap
 Minor problem,2005200214,paid_scrd_1,,,,,,,,,,,,,,,,,,,RedCap
 Moderate problem,2005200215,paid_scrd_2,,,,,,,,,,,,,,,,,,,RedCap
+Moderate problem,2005200215,paid_scrd_2,,,,,,,,,,,,,,,,,,,RedCap
+Moderate problem,2005200215,paid_scrd_2,,,,,,,,,,,,,,,,,,,RedCap
+Moderate problem,2005200215,paid_scrd_2,,,,,,,,,,,,,,,,,,,RedCap
+Moderate problem,2005200215,paid_scrd_2,,,,,,,,,,,,,,,,,,,RedCap
 Somewhat serious problem,2005200216,paid_scrd_3,,,,,,,,,,,,,,,,,,,RedCap
+Somewhat serious problem,2005200216,paid_scrd_3,,,,,,,,,,,,,,,,,,,RedCap
+Somewhat serious problem,2005200216,paid_scrd_3,,,,,,,,,,,,,,,,,,,RedCap
+Somewhat serious problem,2005200216,paid_scrd_3,,,,,,,,,,,,,,,,,,,RedCap
+Somewhat serious problem,2005200216,paid_scrd_3,,,,,,,,,,,,,,,,,,,RedCap
+Serious problem,2005200217,paid_scrd_4,,,,,,,,,,,,,,,,,,,RedCap
+Serious problem,2005200217,paid_scrd_4,,,,,,,,,,,,,,,,,,,RedCap
+Serious problem,2005200217,paid_scrd_4,,,,,,,,,,,,,,,,,,,RedCap
+Serious problem,2005200217,paid_scrd_4,,,,,,,,,,,,,,,,,,,RedCap
 Serious problem,2005200217,paid_scrd_4,,,,,,,,,,,,,,,,,,,RedCap
 RxNorm (assign after visit),2005200220,cmtrt,,,,,,,,,,,,,,,,,,,RedCap
 "Unit (Record the dose unit of the dose of concomitant medication/treatment/therapy taken (e.g., mg.)).",2005200221,cmdosu,,,,,,,,,,,,,,,,,,,RedCap
 Puff,2005200222,cmdosu_13,,,,,,,,,,,,,,,,,,,RedCap
 Less than 1 time,2005200238,diet1_0,,,,,,,,,,,,,,,,,,,RedCap
+Less than 1 time,2005200238,diet1_0,,,,,,,,,,,,,,,,,,,RedCap
 1 - 3 times,2005200239,diet1_1,,,,,,,,,,,,,,,,,,,RedCap
 5 or more,2005200240,diet2_0,,,,,,,,,,,,,,,,,,,RedCap
+5 or more,2005200240,diet2_0,,,,,,,,,,,,,,,,,,,RedCap
+2 or less,2005200241,diet2_2,,,,,,,,,,,,,,,,,,,RedCap
 2 or less,2005200241,diet2_2,,,,,,,,,,,,,,,,,,,RedCap
 Less than 1,2005200242,diet4_0,,,,,,,,,,,,,,,,,,,RedCap
+Less than 1,2005200242,diet4_0,,,,,,,,,,,,,,,,,,,RedCap
 1 time or less,2005200243,diet6_0,,,,,,,,,,,,,,,,,,,RedCap
+1 time or less,2005200243,diet6_0,,,,,,,,,,,,,,,,,,,RedCap
+Within the past 2 years (1 year but less than 2 years ago),2005200244,via4_3,,,,,,,,,,,,,,,,,,,RedCap
 Within the past 2 years (1 year but less than 2 years ago),2005200244,via4_3,,,,,,,,,,,,,,,,,,,RedCap
 Cost/Insurance,2005200245,via5_1,,,,,,,,,,,,,,,,,,,RedCap
 Do not have/know an eye doctor,2005200246,via5_2,,,,,,,,,,,,,,,,,,,RedCap
@@ -184,8 +269,15 @@ No reason to go (no problem),2005200249,via5_5,,,,,,,,,,,,,,,,,,,RedCap
 Have not thought of it,2005200250,via5_6,,,,,,,,,,,,,,,,,,,RedCap
 Will be leaving labor force voluntarily,2005200251,pxji1_5,,,,,,,,,,,,,,,,,,,RedCap
 Covered,2005200252,pxhic1_1,,,,,,,,,,,,,,,,,,,RedCap
+Covered,2005200252,pxhic1_1,,,,,,,,,,,,,,,,,,,RedCap
+Covered,2005200252,pxhic1_1,,,,,,,,,,,,,,,,,,,RedCap
+Covered,2005200252,pxhic1_1,,,,,,,,,,,,,,,,,,,RedCap
+Covered,2005200252,pxhic1_1,,,,,,,,,,,,,,,,,,,RedCap
+Covered,2005200252,pxhic1_1,,,,,,,,,,,,,,,,,,,RedCap
+Covered,2005200252,pxhic1_1,,,,,,,,,,,,,,,,,,,RedCap
 I do NOT have health insurance,2005200253,pxhic8_0,,,,,,,,,,,,,,,,,,,RedCap
 I HAVE some kind of health insurance,2005200254,pxhic8_1,,,,,,,,,,,,,,,,,,,RedCap
+Within the last 10 years (5 years but less than 10 years ago),2005200255,pxahc1_5,,,,,,,,,,,,,,,,,,,RedCap
 Within the last 10 years (5 years but less than 10 years ago),2005200255,pxahc1_5,,,,,,,,,,,,,,,,,,,RedCap
 There is NO place,2005200256,pxahc4_0,,,,,,,,,,,,,,,,,,,RedCap
 There is MORE THAN ONE place,2005200257,pxahc4_2,,,,,,,,,,,,,,,,,,,RedCap
@@ -194,12 +286,20 @@ A doctor's office or health center,2005200258,pxahc5_1,,,,,,,,,,,,,,,,,,,RedCap
 A VA Medical Center or VA outpatient clinic,2005200260,pxahc5_4,,,,,,,,,,,,,,,,,,,RedCap
 Does not go to one place most often,2005200261,pxahc5_6,,,,,,,,,,,,,,,,,,,RedCap
 1 - 10 times,2005200262,pxahc6_1,,,,,,,,,,,,,,,,,,,RedCap
+1 - 10 times,2005200262,pxahc6_1,,,,,,,,,,,,,,,,,,,RedCap
+11 - 19 times,2005200263,pxahc6_2,,,,,,,,,,,,,,,,,,,RedCap
 11 - 19 times,2005200263,pxahc6_2,,,,,,,,,,,,,,,,,,,RedCap
 20 - 29 times,2005200264,pxahc6_3,,,,,,,,,,,,,,,,,,,RedCap
+20 - 29 times,2005200264,pxahc6_3,,,,,,,,,,,,,,,,,,,RedCap
+30 - 39 times,2005200265,pxahc6_4,,,,,,,,,,,,,,,,,,,RedCap
 30 - 39 times,2005200265,pxahc6_4,,,,,,,,,,,,,,,,,,,RedCap
 40 - 49 times,2005200266,pxahc6_5,,,,,,,,,,,,,,,,,,,RedCap
+40 - 49 times,2005200266,pxahc6_5,,,,,,,,,,,,,,,,,,,RedCap
+50 or more times,2005200267,pxahc6_6,,,,,,,,,,,,,,,,,,,RedCap
 50 or more times,2005200267,pxahc6_6,,,,,,,,,,,,,,,,,,,RedCap
 Does not apply to my neighborhood,2005200268,pxne4_88,,,,,,,,,,,,,,,,,,,RedCap
+Does not apply to my neighborhood,2005200268,pxne4_88,,,,,,,,,,,,,,,,,,,RedCap
+There are no streets or roads in my neighborhood,2005200269,pxne8_88,,,,,,,,,,,,,,,,,,,RedCap
 There are no streets or roads in my neighborhood,2005200269,pxne8_88,,,,,,,,,,,,,,,,,,,RedCap
 6 or more,2005200270,pxne11_6,,,,,,,,,,,,,,,,,,,RedCap
 5000 miles or less,2005200271,dri2_1,,,,,,,,,,,,,,,,,,,RedCap
@@ -219,20 +319,36 @@ Individual is not needed at this time for recruitment goals,2005200286,eos_dsdec
 Individual had Type 1 Diabetes,2005200287,eos_dsdecodie_4,,,,,,,,,,,,,,,,,,,RedCap
 In Person (Baseline),2005200288,eos_dsvst_2,,,,,,,,,,,,,,,,,,,RedCap
 OptoMed-Disc centered-CFP,2005200289,rtop_odd,,,,,,,,,,,,,,,,,,,RedCap
+OptoMed-Disc centered-CFP,2005200289,rtop_odd,,,,,,,,,,,,,,,,,,,RedCap
+OptoMed-Mac centered-CFP,2005200290,rtop_odm,,,,,,,,,,,,,,,,,,,RedCap
 OptoMed-Mac centered-CFP,2005200290,rtop_odm,,,,,,,,,,,,,,,,,,,RedCap
 Eidon-UWF Central-IR,2005200291,rtei_odir,,,,,,,,,,,,,,,,,,,RedCap
+Eidon-UWF Central-IR,2005200291,rtei_odir,,,,,,,,,,,,,,,,,,,RedCap
+Eidon-UWF Central-FAF,2005200292,rtei_odfaf,,,,,,,,,,,,,,,,,,,RedCap
 Eidon-UWF Central-FAF,2005200292,rtei_odfaf,,,,,,,,,,,,,,,,,,,RedCap
 Eidon-UWF Central-CFP,2005200293,rtsm_odc,,,,,,,,,,,,,,,,,,,RedCap
+Eidon-UWF Central-CFP,2005200293,rtsm_odc,,,,,,,,,,,,,,,,,,,RedCap
+Eidon-UWF Nasal-CFP,2005200294,rtsm_odn,,,,,,,,,,,,,,,,,,,RedCap
 Eidon-UWF Nasal-CFP,2005200294,rtsm_odn,,,,,,,,,,,,,,,,,,,RedCap
 Eidon-UWF Temporal-CFP,2005200295,rtsm_odt,,,,,,,,,,,,,,,,,,,RedCap
+Eidon-UWF Temporal-CFP,2005200295,rtsm_odt,,,,,,,,,,,,,,,,,,,RedCap
+Eidon- Create Mosaic Image-CFP,2005200296,rtsm_odm,,,,,,,,,,,,,,,,,,,RedCap
 Eidon- Create Mosaic Image-CFP,2005200296,rtsm_odm,,,,,,,,,,,,,,,,,,,RedCap
 Spec-ONH-RC-HR-OCT,2005200297,rtso_odo,,,,,,,,,,,,,,,,,,,RedCap
+Spec-ONH-RC-HR-OCT,2005200297,rtso_odo,,,,,,,,,,,,,,,,,,,RedCap
+Spec-PPole Mac-HR-61 lines-OCT,2005200298,rtso_odp,,,,,,,,,,,,,,,,,,,RedCap
 Spec-PPole Mac-HR-61 lines-OCT,2005200298,rtso_odp,,,,,,,,,,,,,,,,,,,RedCap
 Spec-Mac-20x20-HS-512 lines-OCTA,2005200299,rtso_odm,,,,,,,,,,,,,,,,,,,RedCap
+Spec-Mac-20x20-HS-512 lines-OCTA,2005200299,rtso_odm,,,,,,,,,,,,,,,,,,,RedCap
+Cirrus-Mac Cube-512x128-OCT,2005200300,rtci_odm1,,,,,,,,,,,,,,,,,,,RedCap
 Cirrus-Mac Cube-512x128-OCT,2005200300,rtci_odm1,,,,,,,,,,,,,,,,,,,RedCap
 Cirrus-Disc Cube-200x200-OCT,2005200301,rtci_odd1,,,,,,,,,,,,,,,,,,,RedCap
+Cirrus-Disc Cube-200x200-OCT,2005200301,rtci_odd1,,,,,,,,,,,,,,,,,,,RedCap
+Cirrus-Macula 6x6-OCTA,2005200302,rtci_odm2,,,,,,,,,,,,,,,,,,,RedCap
 Cirrus-Macula 6x6-OCTA,2005200302,rtci_odm2,,,,,,,,,,,,,,,,,,,RedCap
 Cirrus-Disc 6x6-OCTA,2005200303,rtci_odd2,,,,,,,,,,,,,,,,,,,RedCap
+Cirrus-Disc 6x6-OCTA,2005200303,rtci_odd2,,,,,,,,,,,,,,,,,,,RedCap
+FLIO-Mac-HS,2005200304,rtfl_od,,,,,,,,,,,,,,,,,,,RedCap
 FLIO-Mac-HS,2005200304,rtfl_od,,,,,,,,,,,,,,,,,,,RedCap
 "When reflecting on your typical eating habits, which of the following options best describes how often you consume simple sugars?",2005200305,dmlsugar,,,,,,,,,,,,,,,,,,,RedCap
 "In a typical day, how often do you consume whole grains? (Examples: include whole wheat, brown bread, or brown rice).",2005200306,dmlgrain,,,,,,,,,,,,,,,,,,,RedCap
@@ -268,8 +384,39 @@ Mesopic LogMAR OS Score,2005200337,viaosmscore,,,,,,,,,,,,,,,,,,,RedCap
 "OD: Number of misses prior to stopping - Photopic, right eye",2005200339,plcsodmiss,,,,,,,,,,,,,,,,,,,RedCap
 "OS: Value of final correct letter - Photopic, left eye",2005200340,plcsosfcl,,,,,,,,,,,,,,,,,,,RedCap
 "OS: Number of misses prior to stopping - Photopic, left eye",2005200341,plcsosmiss,,,,,,,,,,,,,,,,,,,RedCap
+Trail drawings score,2005200344,trails_visuospatial_executive,,,606671,,,,,,,,,,,,,,,,MOCA
+Time taken to do trails in seconds,2005200345,trails_visuospatial_executive_time,,,606671,,,,,,,,,,,,,,,,MOCA
+Cube drawings score,2005200346,cube_visuospatial_executive,,,606671,,,,,,,,,,,,,,,,MOCA
+Time taken to do cube in seconds,2005200347,cube_visuospatial_executive_time,,,606671,,,,,,,,,,,,,,,,MOCA
+Clock drawings score,2005200348,clock_visuospatial_executive,,,606671,,,,,,,,,,,,,,,,MOCA
+Time taken to do clock in seconds,2005200349,clock_visuospatial_executive_time,,,606671,,,,,,,,,,,,,,,,MOCA
+Animal name recall task score,2005200350,naming,,,606671,,,,,,,,,,,,,,,,MOCA
+Time in seconds to perform the animal name recall task,2005200351,naming_time,,,606671,,,,,,,,,,,,,,,,MOCA
+Words correctly repeated (1st trial) score,2005200352,memory_trial1,,,606671,,,,,,,,,,,,,,,,MOCA
+Time in seconds to perform the words correctly repeated (1st trial),2005200353,memory_trial1_time,,,606671,,,,,,,,,,,,,,,,MOCA
+Words correctly repeated (2nd trial) score,2005200354,memory_trial2,,,606671,,,,,,,,,,,,,,,,MOCA
+Time in seconds to perform the words correctly repeated (2nd trial),2005200355,memory_trial2_time,,,606671,,,,,,,,,,,,,,,,MOCA
+Repeating digits score,2005200356,digitspan,,,606671,,,,,,,,,,,,,,,,MOCA
+Time in seconds to perform the repeating digits task,2005200357,digitspan_time,,,606671,,,,,,,,,,,,,,,,MOCA
+Letter tapping score,2005200358,lettera,,,606671,,,,,,,,,,,,,,,,MOCA
+Time in seconds to perform the letter tapping task,2005200359,lettera_time,,,606671,,,,,,,,,,,,,,,,MOCA
+Serial 7 subtraction score,2005200360,subtraction,,,606671,,,,,,,,,,,,,,,,MOCA
+Time in seconds to perform the serial 7 subtraction task,2005200361,subtraction_time,,,606671,,,,,,,,,,,,,,,,MOCA
+Repeats sentences II score,2005200362,repetition,,,606671,,,,,,,,,,,,,,,,MOCA
+Time in seconds to perform repeats sentences II task,2005200363,repetition_time,,,606671,,,,,,,,,,,,,,,,MOCA
+Maximal one-minute recall of words beginning with 'F' score,2005200364,verbal_fluency_language,,,606671,,,,,,,,,,,,,,,,MOCA
+Time in seconds to perform the words beginning with 'F' recall task,2005200365,verbal_fluency_language_time,,,606671,,,,,,,,,,,,,,,,MOCA
+MOCA abstraction score,2005200366,moca_abstraction,,,606671,,,,,,,,,,,,,,,,MOCA
+Time in seconds to perform MOCA abstraction task,2005200367,moca_abstraction_time,,,606671,,,,,,,,,,,,,,,,MOCA
+MOCA delayed recall with no cue score,2005200368,delayed_recall_with_no_cue,,,606671,,,,,,,,,,,,,,,,MOCA
+Time in seconds to perform the MOCA delayed recall with no cue task,2005200369,delayed_recall_with_no_cue_time,,,606671,,,,,,,,,,,,,,,,MOCA
+"MOCA orientation date, month, year, day, place, city score",2005200370,moca_orientation,,,606671,,,,,,,,,,,,,,,,MOCA
+"Time in seconds to perform the MOCA orientation date, month, year, day, place, city task",2005200371,moca_orientation_time,,,606671,,,,,,,,,,,,,,,,MOCA
+Age in years (3-4 year span),2005200372,age_years_at_interview,,,606671,,,,,,,,,,,,,,,,MOCA
+"MOCA delayed recall with no cue, cue, and multiple choice cue (Combined score)",2005200373,moca_combined_mis_score,,,606671,,,,,,,,,,,,,,,,MOCA
 Other types of Dementia or Alzheimer's Disease,2005200451,mhcat_dmtaot,,,,,,,,,,,,,,,,,,,RedCap
 Neurocognitive disorder please specify,2005200455,mhoccur_cnsot,,,,,,,,,,,,,,,,,,,RedCap
+Other cancer type please (specify),2005200459,mhoccur_cnrot,,,,,,,,,,,,,,,,,,,RedCap
 Other cancer type please (specify),2005200459,mhoccur_cnrot,,,,,,,,,,,,,,,,,,,RedCap
 Was your mother or father diagnosed with Type II Diabetes?,2005200463,fh_dm2ptsp,,,,,,,,,,,,,,,,,,,RedCap
 "If yes, please check all that apply: brother, sister, half-sister, half-brother",2005200464,fh_dm2sbsp,,,,,,,,,,,,,,,,,,,RedCap
@@ -277,6 +424,8 @@ Was your mother or father diagnosed with Type II Diabetes?,2005200463,fh_dm2ptsp
 Do you use marijuana now?,2005200473,sumrjcdur,,,,,,,,,,,,,,,,,,,RedCap
 Do you speak another language at home?,2005200480,pxep2,,,,,,,,,,,,,,,,,,,RedCap
 Medication Name,2005200481,cmname,,,,,,,,,,,,,,,,,,,RedCap
+Specify other,2005200485,odristate,,,,,,,,,,,,,,,,,,,RedCap
+Specify other,2005200485,odristate,,,,,,,,,,,,,,,,,,,RedCap
 Specify other,2005200485,odristate,,,,,,,,,,,,,,,,,,,RedCap
 "OD: Value of final correct letter - Mesopic, right eye",2005200486,mlcsodfcl,,,,,,,,,,,,,,,,,,,RedCap
 "OD: Number of misses prior to stopping - Mesopic, right eye",2005200487,mlcsodmiss,,,,,,,,,,,,,,,,,,,RedCap
@@ -334,6 +483,7 @@ How different would your life be now if you HAD NOT BEEN treated in a racist and
 How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? In your entire life?,2005200542,pxrd53,,,,,,,,,,,,,,,,,,,RedCap
 "How different would your life be now if you HAD NOT BEEN treated in a racist and unfair way? On a scale of 1-6, how stressful was this for you? 1 = Not at all stressful; 6 = Extremely stressful",2005200543,pxrd54,,,,,,,,,,,,,,,,,,,RedCap
 Elevated A1C levels (elevated blood sugars),2005200547,mh_a1c,,,,,,,,,,,,,,,,,,,RedCap
+Elevated A1C levels (elevated blood sugars),2005200547,mh_a1c,,,,,,,,,,,,,,,,,,,RedCap
 "Do you take pills to control your A1C and blood glucose levels? Examples: Metformin (Glucophage, Glumetza, Fortamet, Riomet), Glucotrol, Amaryl, DiaBeta, Blynase PresTab, Micronase, Actos, Avandia, Precose, Glyset, Prandin, Starlix, Januvia, Onglyza, Tradjenta, Nesina, Invokana, Farxiga, Jardiance, Welchol, and Cyclocet",2005200548,cmtrt_a1c,,,,,,,,,,,,,,,,,,,RedCap
 Do you inject insulin to control your blood glucose levels?,2005200549,cmtrt_insln,,,,,,,,,,,,,,,,,,,RedCap
 "Do you use other injections to control your blood glucose levels?  Examples: Victoza, Ozempic, Symlin, Tanzeum, and Trulicity",2005200550,cmtrt_glcs,,,,,,,,,,,,,,,,,,,RedCap
@@ -342,21 +492,81 @@ Do you inject insulin to control your blood glucose levels?,2005200549,cmtrt_ins
 Activity monitor returned?,2005200555,dvamwenyn,,,,,,,,,,,,,,,,,,,RedCap
 "What is your ancestry or ethnic origin?(Examples: Italian, Jamaican, African American, Cambodian, Cape Verdean, Cherokee, Navajo, Nez Pearce, Norwegian, Dominican, French Canadian, Haitian, Korean, Lebanese, Polish, Nigerian, Mexican, Taiwanese, Ukrainian, and so on.)",2005200557,ancestry,,,,,,,,,,,,,,,,,,,RedCap
 Survey Started Timestamp,2005200558,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Started Timestamp,2005200558,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,,,,,,,,,,,,,,,,,,,,RedCap
+Survey Completed Timestamp,2005200559,,,,,,,,,,,,,,,,,,,,RedCap
 Survey Completed Timestamp,2005200559,,,,,,,,,,,,,,,,,,,,RedCap
 Recruitment Survey,2005200561,,,,,,,,,,,,,,,,,,,,RedCap
+Recruitment Survey,2005200561,,,,,,,,,,,,,,,,,,,,RedCap
+Recruitment Survey,2005200561,,,,,,,,,,,,,,,,,,,,RedCap
+FAQ Survey,2005200562,,,,,,,,,,,,,,,,,,,,RedCap
+FAQ Survey,2005200562,,,,,,,,,,,,,,,,,,,,RedCap
 FAQ Survey,2005200562,,,,,,,,,,,,,,,,,,,,RedCap
 Screening Survey,2005200563,,,,,,,,,,,,,,,,,,,,RedCap
+Screening Survey,2005200563,,,,,,,,,,,,,,,,,,,,RedCap
+Screening Survey,2005200563,,,,,,,,,,,,,,,,,,,,RedCap
 Pre-consent Survey,2005200564,,,,,,,,,,,,,,,,,,,,RedCap
+Pre-consent Survey,2005200564,,,,,,,,,,,,,,,,,,,,RedCap
+Pre-consent Survey,2005200564,,,,,,,,,,,,,,,,,,,,RedCap
+Consent Survey,2005200565,,,,,,,,,,,,,,,,,,,,RedCap
+Consent Survey,2005200565,,,,,,,,,,,,,,,,,,,,RedCap
 Consent Survey,2005200565,,,,,,,,,,,,,,,,,,,,RedCap
 Participant Contact Survey,2005200566,,,,,,,,,,,,,,,,,,,,RedCap
 Demographic Survey,2005200567,,,,,,,,,,,,,,,,,,,,RedCap
+Demographic Survey,2005200567,,,,,,,,,,,,,,,,,,,,RedCap
+Demographic Survey,2005200567,,,,,,,,,,,,,,,,,,,,RedCap
+Health Survey,2005200568,,,,,,,,,,,,,,,,,,,,RedCap
+Health Survey,2005200568,,,,,,,,,,,,,,,,,,,,RedCap
 Health Survey,2005200568,,,,,,,,,,,,,,,,,,,,RedCap
 Substance Use Survey,2005200569,,,,,,,,,,,,,,,,,,,,RedCap
+Substance Use Survey,2005200569,,,,,,,,,,,,,,,,,,,,RedCap
+Substance Use Survey,2005200569,,,,,,,,,,,,,,,,,,,,RedCap
+CES-D-10 Survey,2005200570,,,,,,,,,,,,,,,,,,,,RedCap
+CES-D-10 Survey,2005200570,,,,,,,,,,,,,,,,,,,,RedCap
 CES-D-10 Survey,2005200570,,,,,,,,,,,,,,,,,,,,RedCap
 PAID-5 DM Survey,2005200571,,,,,,,,,,,,,,,,,,,,RedCap
+PAID-5 DM Survey,2005200571,,,,,,,,,,,,,,,,,,,,RedCap
+PAID-5 DM Survey,2005200571,,,,,,,,,,,,,,,,,,,,RedCap
+Diabetes Survey,2005200572,,,,,,,,,,,,,,,,,,,,RedCap
+Diabetes Survey,2005200572,,,,,,,,,,,,,,,,,,,,RedCap
 Diabetes Survey,2005200572,,,,,,,,,,,,,,,,,,,,RedCap
 Dietary Survey,2005200573,,,,,,,,,,,,,,,,,,,,RedCap
+Dietary Survey,2005200573,,,,,,,,,,,,,,,,,,,,RedCap
+Dietary Survey,2005200573,,,,,,,,,,,,,,,,,,,,RedCap
 Ophthalmic Survey,2005200574,,,,,,,,,,,,,,,,,,,,RedCap
+Ophthalmic Survey,2005200574,,,,,,,,,,,,,,,,,,,,RedCap
+Ophthalmic Survey,2005200574,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX SDOH Survey,2005200575,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX SDOH Survey,2005200575,,,,,,,,,,,,,,,,,,,,RedCap
 PhenX SDOH Survey,2005200575,,,,,,,,,,,,,,,,,,,,RedCap
 PhenX English Proficiency Survey,2005200576,,,,,,,,,,,,,,,,,,,,RedCap
 PhenX Education Attainment Survey,2005200577,,,,,,,,,,,,,,,,,,,,RedCap
@@ -367,12 +577,23 @@ PhenX Health Insurance Survey,2005200581,,,,,,,,,,,,,,,,,,,,RedCap
 PhenX Health Care Access Survey,2005200582,,,,,,,,,,,,,,,,,,,,RedCap
 PhenX Healthcare Discrimination Survey,2005200583,,,,,,,,,,,,,,,,,,,,RedCap
 PhenX Food Insecurity Survey,2005200584,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX Food Insecurity Survey,2005200584,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX Food Insecurity Survey,2005200584,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX Food Insecurity Survey,2005200584,,,,,,,,,,,,,,,,,,,,RedCap
 PhenX Neighborhood Environment Survey,2005200585,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX Neighborhood Environment Survey,2005200585,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX Neighborhood Environment Survey,2005200585,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX Neighborhood Environment Survey,2005200585,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX Racial/Ethnic Survey,2005200586,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX Racial/Ethnic Survey,2005200586,,,,,,,,,,,,,,,,,,,,RedCap
+PhenX Racial/Ethnic Survey,2005200586,,,,,,,,,,,,,,,,,,,,RedCap
 PhenX Racial/Ethnic Survey,2005200586,,,,,,,,,,,,,,,,,,,,RedCap
 Paper Consent Completed,2005200587,,,,,,,,,,,,,,,,,,,,RedCap
 Consent Attestation,2005200588,,,,,,,,,,,,,,,,,,,,RedCap
 Device returned,2005200589,,,,,,,,,,,,,,,,,,,,RedCap
+Device returned,2005200589,,,,,,,,,,,,,,,,,,,,RedCap
 Driving record assessment conducted,2005200590,,,,,,,,,,,,,,,,,,,,RedCap
+Device given to participant,2005200591,,,,,,,,,,,,,,,,,,,,RedCap
 Device given to participant,2005200591,,,,,,,,,,,,,,,,,,,,RedCap
 Sensor inserted,2005200592,,,,,,,,,,,,,,,,,,,,RedCap
 Medications assessment conducted,2005200593,,,,,,,,,,,,,,,,,,,,RedCap
@@ -386,6 +607,8 @@ FLIO,2005200600,,,,,,,,,,,,,,,,,,,,RedCap
 Angioplex - Cirrus 5000,2005200601,,,,,,,,,,,,,,,,,,,,RedCap
 Cardiology - EKG - Pagewriter TC30 Cardiograp,2005200602,,,,,,,,,,,,,,,,,,,,RedCap
 clinical labs,2005200603,,,,,,,,,,,,,,,,,,,,RedCap
+device received back from participant,2005200604,,,,,,,,,,,,,,,,,,,,RedCap
+device received back from participant,2005200604,,,,,,,,,,,,,,,,,,,,RedCap
 device received back from participant,2005200604,,,,,,,,,,,,,,,,,,,,RedCap
 Right foot - site 1,2005200605,,,,,,,,,,,,,,,,,,,,RedCap
 Right foot - site 2,2005200606,,,,,,,,,,,,,,,,,,,,RedCap
@@ -410,5 +633,7 @@ Left foot - site 10,2005200624,,,,,,,,,,,,,,,,,,,,RedCap
 AI-READI study discontinuation or completion,2005200625,,,,,,,,,,,,,,,,,,,,RedCap
 Assessment,2005200626,,,,,,,,,,,,,,,,,,,,RedCap
 "Other heart issues (Examples: pacemaker, heart valve disease, open heart surgery)",2005200627,,,,,,,,,,,,,,,,,,,,RedCap
+"Other heart issues (Examples: pacemaker, heart valve disease, open heart surgery)",2005200627,,,,,,,,,,,,,,,,,,,,RedCap
+Stroke,2005200628,,,,,,,,,,,,,,,,,,,,RedCap
 Stroke,2005200628,,,,,,,,,,,,,,,,,,,,RedCap
 "Have you had anything to eat or drink in the last six hours, including coffee or tea with milk or sugar or any other drink other than water?",2005200629,,,,,,,,,,,,,,,,,,,,RedCap
