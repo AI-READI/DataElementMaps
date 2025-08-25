@@ -76,7 +76,7 @@ manual_concept_mappings = {
 output_config = {
     'concept.csv': {
         'required_columns': ['concept_name', 'SRC_CODE', 'concept_id', 'vocabulary_id', 
-                           'domain_id', 'v6_domain_id', 'concept_class_id', 'standard_concept'],
+                           'domain_id', 'v6_domain_id', 'concept_class_id', 'standard_concept', 'valid_start_date'],
         'defaults': {
             'valid_start_date': '1/1/1970',
             'valid_end_date': '',
@@ -150,11 +150,27 @@ def load_manual_concept_data(gc: gspread.Client) -> pd.DataFrame:
         DataFrame with all manual concept data
     """
     spreadsheet = gc.open(manual_concept_mappings['spreadsheet_name'])
-    worksheet = spreadsheet.worksheet(manual_concept_mappings['worksheet_name'])
+    
+    # Try to load concept_manual sheet first, fallback to concept_relationship_manual
+    try:
+        worksheet = spreadsheet.worksheet('concept_manual')
+        print(f"Loading from 'concept_manual' sheet")
+    except:
+        worksheet = spreadsheet.worksheet(manual_concept_mappings['worksheet_name'])
+        print(f"Loading from '{manual_concept_mappings['worksheet_name']}' sheet")
+    
     df = get_as_dataframe(worksheet)
     
-    # Clean the dataframe
-    df = clean_worksheet_data(df, 'concept_id_1')
+    # Print debug info about columns
+    print(f"Manual sheet columns: {list(df.columns)}")
+    
+    # Clean the dataframe - use concept_id for concept_manual, concept_id_1 for concept_relationship_manual
+    id_column = 'concept_id' if 'concept_id' in df.columns else 'concept_id_1'
+    df = clean_worksheet_data(df, id_column)
+    
+    print(f"Loaded {len(df)} rows from manual sheet")
+    if len(df) > 0:
+        print(f"Sample row keys: {list(df.iloc[0].keys())}")
     
     return df
 
@@ -339,24 +355,39 @@ def create_concept_csv(concepts: List[ConceptData], manual_df: pd.DataFrame, tag
     config = output_config['concept.csv']
     rows = []
     
-    # Create lookup dictionary from manual data and preserve row order
-    manual_lookup = {str(int(row['concept_id_1'])): row for _, row in manual_df.iterrows() 
-                    if pd.notna(row['concept_id_1'])}
+    # Determine the correct ID column
+    id_column = 'concept_id' if 'concept_id' in manual_df.columns else 'concept_id_1'
+    print(f"Using ID column: {id_column}")
     
-    # Get the order from the manual sheet (concept_manual uses concept_id, but manual_df has concept_id_1)
-    manual_order = [str(int(row['concept_id_1'])) for _, row in manual_df.iterrows() 
-                   if pd.notna(row['concept_id_1'])]
+    # Create lookup dictionary from manual data and preserve row order
+    manual_lookup = {str(int(row[id_column])): row for _, row in manual_df.iterrows() 
+                    if pd.notna(row[id_column])}
+    
+    # Get the order from the manual sheet
+    manual_order = [str(int(row[id_column])) for _, row in manual_df.iterrows() 
+                   if pd.notna(row[id_column])]
+    
+    print(f"Manual lookup has {len(manual_lookup)} entries")
+    print(f"Manual order has {len(manual_order)} entries")
     
     # Create concept lookup for quick access
     concept_lookup = {str(concept.concept_id): concept for concept in concepts}
     
     # Process concepts in the order they appear in the manual sheet
+    processed_count = 0
     for concept_id_str in manual_order:
         concept = concept_lookup.get(concept_id_str)
         if not concept:
             continue  # Skip if this concept is not in our extracted list
+        
         concept_id_str = str(concept.concept_id)
         manual_row = manual_lookup.get(concept_id_str, {})
+        
+        if processed_count == 0:  # Debug first row
+            print(f"Processing first concept {concept_id_str}")
+            print(f"Manual row found: {len(manual_row) > 0}")
+            if len(manual_row) > 0:
+                print(f"Manual row columns: {list(manual_row.keys())}")
         
         # Build row data with tracking in the exact manual sheet order
         row_data = {
@@ -380,13 +411,24 @@ def create_concept_csv(concepts: List[ConceptData], manual_df: pd.DataFrame, tag
             if col == 'concept_id':
                 continue  # Already handled
             
-            if col in manual_row and pd.notna(manual_row[col]) and str(manual_row[col]).strip():
-                row_data[col] = manual_row[col]
+            # Handle both SRC_CODE and SRC CODE column name formats
+            manual_col = col
+            if col == 'SRC_CODE' and col not in manual_row and 'SRC CODE' in manual_row:
+                manual_col = 'SRC CODE'
+            
+            if manual_col in manual_row and pd.notna(manual_row[manual_col]) and str(manual_row[manual_col]).strip():
+                row_data[col] = manual_row[manual_col]
                 row_data['_column_tracking'][col] = SourceTracking('concept_relationship_manual')
+                if processed_count == 0:  # Debug first row
+                    print(f"Filled {col} from manual: {manual_row[manual_col]}")
             else:
                 # Use defaults
                 row_data[col] = config['defaults'].get(col, '')
                 row_data['_column_tracking'][col] = SourceTracking('defaults')
+                if processed_count == 0:  # Debug first row
+                    print(f"Used default for {col}: manual_col={manual_col}, in_manual={manual_col in manual_row}")
+        
+        processed_count += 1
         
         # Add defaults
         for col, default_val in config['defaults'].items():
@@ -425,13 +467,16 @@ def create_concept_relationship_csv(concepts: List[ConceptData], manual_df: pd.D
     config = output_config['concept_relationship.csv']
     rows = []
     
+    # Determine the correct ID column
+    id_column = 'concept_id' if 'concept_id' in manual_df.columns else 'concept_id_1'
+    
     # Create lookup dictionary from manual data
-    manual_lookup = {str(int(row['concept_id_1'])): row for _, row in manual_df.iterrows() 
-                    if pd.notna(row['concept_id_1'])}
+    manual_lookup = {str(int(row[id_column])): row for _, row in manual_df.iterrows() 
+                    if pd.notna(row[id_column])}
     
     # Get the order from the manual sheet
-    manual_order = [str(int(row['concept_id_1'])) for _, row in manual_df.iterrows() 
-                   if pd.notna(row['concept_id_1'])]
+    manual_order = [str(int(row[id_column])) for _, row in manual_df.iterrows() 
+                   if pd.notna(row[id_column])]
     
     # Create concept lookup for quick access
     concept_lookup = {str(concept.concept_id): concept for concept in concepts}
@@ -501,8 +546,13 @@ def create_concept_relationship_csv(concepts: List[ConceptData], manual_df: pd.D
             if col in ['concept_id_1', 'concept_id_2']:
                 continue  # Already handled
             
-            if col in manual_row and pd.notna(manual_row[col]) and str(manual_row[col]).strip():
-                row_data[col] = manual_row[col]
+            # Handle both SRC_CODE and SRC CODE column name formats
+            manual_col = col
+            if col == 'SRC_CODE' and col not in manual_row and 'SRC CODE' in manual_row:
+                manual_col = 'SRC CODE'
+            
+            if manual_col in manual_row and pd.notna(manual_row[manual_col]) and str(manual_row[manual_col]).strip():
+                row_data[col] = manual_row[manual_col]
                 row_data['_column_tracking'][col] = SourceTracking('concept_relationship_manual')
             else:
                 row_data[col] = config['defaults'].get(col, '')
