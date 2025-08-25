@@ -264,7 +264,7 @@ def extract_source_concepts(gc: gspread.Client, source: Dict[str, Any]) -> List[
     
     # Only extract concept ID columns - SRC_CODE comes from manual sheet
     required_columns = ['TARGET_CONCEPT_ID']
-    optional_columns = ['qualifier_concept_id', 'Extension_Needed', 'TARGET_VOCABULARY_ID']
+    optional_columns = ['qualifier_concept_id']
     
     # Verify required columns exist
     for col in required_columns:
@@ -279,13 +279,8 @@ def extract_source_concepts(gc: gspread.Client, source: Dict[str, Any]) -> List[
     if 'qualifier_concept_id' in df.columns:
         df['qualifier_concept_id'] = pd.to_numeric(df['qualifier_concept_id'], errors='coerce').fillna(0).astype(int)
     
-    # Filter for new concepts (ID > 2000000000) or those needing extensions
-    if 'Extension_Needed' in df.columns:
-        filtered_df = df[(df['TARGET_CONCEPT_ID'] > 2000000000) |
-                        (df['Extension_Needed'] == 'Yes') |
-                        (df.get('TARGET_VOCABULARY_ID', '') == 'AIREADI-Vision')].copy()
-    else:
-        filtered_df = df[df['TARGET_CONCEPT_ID'] > 2000000000].copy()
+    # Filter for new concepts (ID > 2000000000)
+    filtered_df = df[df['TARGET_CONCEPT_ID'] > 2000000000].copy()
     
     # Process regular concepts
     for idx, row in filtered_df.iterrows():
@@ -293,7 +288,10 @@ def extract_source_concepts(gc: gspread.Client, source: Dict[str, Any]) -> List[
         
         # Create tracking info for source cell
         row_num = idx + 2  # +2 for header and 1-indexed
-        cell_ref = f"A{row_num}"  # TARGET_CONCEPT_ID is typically in column A
+        # Determine TARGET_CONCEPT_ID column letter
+        col_index = list(df.columns).index('TARGET_CONCEPT_ID')
+        col_letter = chr(ord('A') + col_index) if col_index < 26 else f"A{chr(ord('A') + col_index - 26)}"
+        cell_ref = f"{col_letter}{row_num}"
         source_url = f"{source['location']}&range={cell_ref}"
         
         tracking = SourceTracking(
