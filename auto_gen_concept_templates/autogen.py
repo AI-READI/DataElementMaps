@@ -498,7 +498,7 @@ def create_concept_relationship_csv(concepts: List[ConceptData], manual_df: pd.D
         concept = concept_lookup.get(concept_id_str)
         if not concept:
             continue  # Skip if this concept is not in our extracted list
-        concept_id_str = str(concept.concept_id)
+        # Use the same concept_id_str for manual_row lookup to maintain consistency
         manual_row = manual_lookup.get(concept_id_str, {})
         
         # Build row data with tracking in exact manual sheet order
