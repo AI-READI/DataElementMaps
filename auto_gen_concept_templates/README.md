@@ -4,29 +4,27 @@ This project automatically generates OMOP concept and concept relationship templ
 
 ## Overview
 
-The system processes new medical concepts (concept IDs > 2,000,000,000) from multiple Google Sheets sources and generates standardized CSV files that follow OMOP vocabulary submission requirements. It combines data extraction, metadata enrichment, and validation reporting to ensure accuracy.
+The system follows a concept dictionary architecture to process new medical concepts (concept IDs > 2,000,000,000) from Google Sheets sources and generates standardized CSV files that follow OMOP vocabulary submission requirements. It ensures proper linkage between concept_id_2 relationships and their corresponding concepts.
 
 ## Key Features
 
+- **Concept Dictionary Architecture**: Uses concept_id as key with structured sub-dictionaries for concept and concept_relationship data
 - **Multi-source processing**: Extracts concepts from MOCA and RedCap assessment mappings
-- **Metadata enrichment**: Combines concept IDs from mapping sources with full metadata from manual template sheets
-- **Database integration**: Queries OMOP database for relationship concept details
-- **Validation reporting**: Comprehensive validation with discrepancy tracking and clickable links
+- **Single source of truth**: Gets all metadata from concept_relationship_manual sheet only
+- **Database integration**: Queries OMOP database for concept_id_2 relationship details with immediate failure on missing data
+- **Unified output**: Produces only concept.csv and concept_relationship.csv (no source-specific files)
 - **Source tracking**: Maintains audit trail linking generated values back to source cells
 
 ## Project Structure
 
 ```
 auto_gen_concept_templates/
-├── autogen.py              # Main generation script
+├── autogen.py              # Main generation script (concept dictionary architecture)
 ├── validate.py             # Validation script
 ├── output/                 # Generated CSV files
 │   ├── concept.csv         # Combined concept definitions
 │   ├── concept_relationship.csv # Combined relationships
-│   ├── MOCA_concept.csv    # MOCA-specific concepts
-│   ├── MOCA_concept_relationship.csv
-│   ├── RedCap_concept.csv  # RedCap-specific concepts
-│   └── RedCap_concept_relationship.csv
+│   └── tracking_info.json  # Tracking information for validation
 ├── old_validation_reports/ # Historical validation reports
 ├── validation_report.md    # Latest validation report
 ├── pyproject.toml         # Project configuration
@@ -35,26 +33,29 @@ auto_gen_concept_templates/
 
 ## Core Components
 
-### autogen.py (722 lines)
-The main generation script with several key modules:
+### autogen.py (466 lines)
+The main generation script implementing the concept dictionary architecture:
 
-**Data Sources Configuration (lines 50-109)**
-- `mapping_sources`: MOCA and RedCap Google Sheets containing new concepts
-- `manual_concept_mappings`: Template sheet with full concept metadata
-- `output_config`: Defines required columns and defaults for output files
+**Data Sources Configuration (lines 40-89)**
+- `mapping_sources`: MOCA and RedCap Google Sheets containing TARGET_CONCEPT_ID and qualifier_concept_id
+- `manual_concept_mappings`: concept_relationship_manual sheet with complete concept metadata
+- `output_config`: Defines column specifications for output files
+- `omop_field_map`: Maps OMOP database fields to CSV columns
 
 **Core Functions**
-- `extract_source_concepts()`: Extracts only concept IDs from mapping sources
-- `load_manual_concept_data()`: Loads complete concept metadata from manual template
-- `query_omop_concepts()`: Fetches relationship concept details from OMOP database
-- `create_concept_csv()`: Generates concept definition output
-- `create_concept_relationship_csv()`: Generates relationship output
+- `read_mapping_sources()`: Extracts TARGET_CONCEPT_ID and qualifier_concept_id from mapping sources
+- `create_concept_dict()`: Creates concept dictionary with concept_id as key and concept/concept_relationship sub-dicts
+- `load_concept_relationship_manual()`: Loads concept_relationship_manual sheet data
+- `fill_concept_dict()`: Fills concept dict from manual data and postgres lookups
+- `query_omop_concepts()`: Fetches concept_id_2 details from OMOP database
+- `save_outputs()`: Saves concept.csv and concept_relationship.csv files
 
-**Key Architecture Decisions**
-- Separates concept ID extraction from metadata population
-- Preserves manual sheet row ordering in outputs
-- Tracks data sources for every value (Google Sheets cells, database lookups, defaults)
-- Supports both individual and combined output files
+**Key Architecture Changes**
+- Uses concept dictionary with concept_id as primary key
+- Single data source: concept_relationship_manual sheet only
+- No source-specific output files (only combined concept.csv and concept_relationship.csv)
+- Immediate failure if concept_id_2 not found in postgres
+- Leaves v6_domain_id blank in concept.csv as specified
 
 ### validate.py (725 lines)
 Comprehensive validation system that compares generated CSVs against manual Google Sheets:
@@ -96,45 +97,49 @@ Comprehensive validation system that compares generated CSVs against manual Goog
 
 ## Data Flow
 
-### autogen.py Data Flow
+### autogen.py Data Flow (New Architecture)
 
 **1. Initialization & Configuration**
 - Load environment variables for database connection
 - Initialize Google Sheets API client with service account
 - Configure data sources (MOCA and RedCap mapping sheets)
-- Define output file specifications and column defaults
+- Define output file specifications and OMOP field mappings
 
-**2. Manual Template Loading**
-- Connect to `template_4_adding_vocabulary-2` spreadsheet
-- Load `concept_manual` sheet (fallback to `concept_relationship_manual`)
-- Clean data by removing subtitle rows and blank entries
-- Create lookup dictionaries for concept metadata
-
-**3. Source Data Extraction** (per source: MOCA, RedCap)
-- Connect to mapping source spreadsheet (MOCA or RedCap)
+**2. Extract Concept IDs from Mapping Sources**
+- Connect to MOCA and RedCap mapping spreadsheets
 - Extract only `TARGET_CONCEPT_ID` and `qualifier_concept_id` columns
-- Filter for new concepts (ID > 2,000,000,000) or extension-needed concepts
-- Create `ConceptData` objects with source cell tracking information
-- Generate Google Sheets URLs linking back to source cells
+- Filter for new concepts (ID > 2,000,000,000)
+- Group concept IDs by source tag for tracking
 
-**4. Database Enrichment**
-- Collect unique `concept_id_2` values from manual template
-- Query OMOP PostgreSQL database for relationship concept details
-- Retrieve concept names, domains, vocabularies, classes for relationships
-- Add database lookup tracking to enriched data
+**3. Create Concept Dictionary**
+- Create dictionary with concept_id as key
+- Initialize concept and concept_relationship sub-dictionaries with empty columns
+- Track which sources each concept_id belongs to
+- Set concept_id and concept_id_1 values
 
-**5. CSV Generation** (per source)
-- **concept.csv**: Combine extracted concept IDs with manual template metadata
-- **concept_relationship.csv**: Add OMOP database lookups for relationship concepts
-- Preserve manual sheet row ordering in outputs
-- Apply tag-specific defaults (e.g., MOCA concepts default to Montreal Cognitive Assessment)
-- Track data source for every value (manual sheet, database, defaults)
+**4. Load Manual Data**
+- Connect to `template_4_adding_vocabulary-2` spreadsheet
+- Load `concept_relationship_manual` sheet only (no concept_manual)
+- Clean data by removing empty rows
+- Create lookup dictionary by concept_id_1
 
-**6. Output Management**
-- Generate individual source files (`MOCA_concept.csv`, `RedCap_concept.csv`, etc.)
-- Create combined files (`concept.csv`, `concept_relationship.csv`)
-- Remove internal tracking columns before saving
-- Save all outputs to `output/` directory
+**5. Fill Concept Dictionary**
+- Fill concept and concept_relationship data from manual sheet
+- Map column names (handle 'SRC CODE' vs 'SRC_CODE')
+- Leave v6_domain_id blank in concept data as specified
+- Collect concept_id_2 values for database lookup
+
+**6. Database Enrichment**
+- Query OMOP PostgreSQL database for concept_id_2 details
+- Fill OMOP-related fields using omop_field_map
+- Fail immediately if any concept_id_2 not found in postgres
+- Track data source for every value
+
+**7. Output Generation**
+- Generate only concept.csv and concept_relationship.csv (no source-specific files)
+- Sort by concept_id for consistent ordering
+- Ensure proper column order matches manual sheet structure
+- Save tracking information to tracking_info.json for validation
 
 ### validate.py Data Flow
 
@@ -203,8 +208,10 @@ The system requires:
 
 Generated CSV files follow OMOP vocabulary submission standards:
 
-**concept.csv**: New concept definitions with columns like concept_name, concept_id, vocabulary_id, domain_id, etc.
+**concept.csv**: New concept definitions with columns including concept_name, concept_id, vocabulary_id, domain_id, etc. (v6_domain_id left blank as specified)
 
-**concept_relationship.csv**: Relationships between new concepts and existing OMOP concepts, with relationship metadata and OMOP lookups.
+**concept_relationship.csv**: Relationships between new concepts and existing OMOP concepts, with relationship metadata and OMOP lookups using the omop_field_map.
 
-Both individual source files (MOCA_*, RedCap_*) and combined files are generated for submission flexibility.
+**tracking_info.json**: Tracking information linking each generated value back to its source for validation purposes.
+
+The new architecture generates only combined files (no source-specific MOCA_* or RedCap_* files) to simplify the output structure while maintaining all necessary data.

@@ -5,13 +5,12 @@ Automatic Generation of OMOP Concept Templates
 This script processes medical/cognitive assessment data from MOCA and RedCap sources
 to generate concept templates for submission to the OMOP Vocabulary committee.
 
-The script:
-1. Reads concept IDs from Google Sheets (TARGET_CONCEPT_ID, qualifier_concept_id only)
-2. Gets all concept metadata including SRC_CODE from manual mapping sheets
-3. Generates two output files per source:
-   - concept.csv: New concept definitions
-   - concept_relationship.csv: Relationships between concepts
-4. Tracks source cell links and value generation sources for validation reports
+The script follows a concept dictionary architecture:
+1. Reads concept IDs from mapping sources (TARGET_CONCEPT_ID, qualifier_concept_id)
+2. Creates concept dict with concept_id as key and concept/concept_relationship sub-dicts
+3. Fills data from concept_relationship_manual and postgres lookups
+4. Generates concept.csv and concept_relationship.csv files
+5. Saves tracking information for validation
 
 Author: [Your name]
 Date: 2025
@@ -23,6 +22,7 @@ import pandas as pd
 from typing import Dict, List, Any, Optional, Tuple, NamedTuple
 import psycopg2
 import os
+import json
 from dotenv import load_dotenv
 from dataclasses import dataclass
 
@@ -32,28 +32,18 @@ load_dotenv()
 @dataclass
 class SourceTracking:
     """Tracks where a value came from for validation reports."""
-    source_type: str  # 'concept_manual', 'concept_relationship_manual', 'postgres_lookup', 'defaults'
+    source_type: str  # 'concept_relationship_manual', 'postgres_lookup', 'defaults', 'mapping_source'
     source_cell: Optional[str] = None  # Google Sheets cell reference like 'A5'
     source_url: Optional[str] = None   # Full URL to source cell
 
-@dataclass
-class ConceptData:
-    """Represents extracted concept data with tracking."""
-    concept_id: int
-    src_code: str
-    is_qualifier_derived: bool = False
-    tracking: Optional[SourceTracking] = None
-
 # Configuration for source data spreadsheets
-# Each source contains new concepts that need to be added to OMOP vocabulary
-# Only TARGET_CONCEPT_ID and qualifier_concept_id are extracted from these sources
 mapping_sources = [
     {
         'spreadsheet_name': 'AIREADI MOCA Data Dictionary and Mappings v0.3',
         'worksheet_name': 'MOCA Data Dictionary with Extensions',
         'location': 'https://docs.google.com/spreadsheets/d/1knk4Qru9zhK0CePZ1rLNVMWsKEI4hQ4a8UqR5K9khXc/edit?gid=1779053680#gid=1779053680',
-        'process': True,  # Whether to process this source
-        'tag': 'MOCA',    # Identifier used in output filenames and processing logic
+        'process': True,
+        'tag': 'MOCA',
     },
     {
         'spreadsheet_name': 'REDCap Data Dictionary and OMOP Mappings',
@@ -65,115 +55,176 @@ mapping_sources = [
 ]
 
 # Manual concept mappings - contains all concept metadata and relationships
-# This is the primary source for concept names, vocabularies, domains, etc.
 manual_concept_mappings = {
     'spreadsheet_name': 'template_4_adding_vocabulary-2',
     'worksheet_name': 'concept_relationship_manual',
     'location': 'https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125',
 }
 
-# Output file specifications - simplified to essential columns and defaults
+# Output file specifications
 output_config = {
     'concept.csv': {
-        'required_columns': ['concept_name', 'SRC_CODE', 'concept_id', 'vocabulary_id', 
-                           'domain_id', 'v6_domain_id', 'concept_class_id', 'standard_concept', 'valid_start_date'],
-        'defaults': {
-            'valid_start_date': '1/1/1970',
-            'valid_end_date': '',
-            'invalid_reason': ''
-        }
+        'columns': ['concept_name', 'SRC_CODE', 'concept_id', 'vocabulary_id', 'domain_id', 
+                   'v6_domain_id', 'concept_class_id', 'standard_concept', 'valid_start_date',
+                   'valid_end_date', 'invalid_reason']
     },
     'concept_relationship.csv': {
-        'required_columns': ['concept_name', 'concept_id_1', 'SRC_CODE', 'vocabulary_id_1', 
-                           'concept_id_2', 'relationship_id'],
-        'defaults': {
-            'concept_id_2': {'MOCA': '606671', 'RedCap': ''},  # MOCA default to Montreal Cognitive Assessment
-            'relationship_id': '',
-            'temp name': '',
-            'temp domain': '',
-            'vocabulary_id_2': '',
-            'temp class': '',
-            'concept_code_2': '',
-            'temp standard': '',
-            'relationship_valid_start_date': '',
-            'relationship_valid_end_date': '',
-            'invalid_reason': '',
-            'confidence': '',
-            'predicate_id': '',
-            'mapping_source': '',
-            'mapping_justification': '',
-            'mapping_tool': '',
-            'Notes': ''
-        }
+        'columns': ['concept_name', 'concept_id_1', 'SRC_CODE', 'vocabulary_id_1', 
+                   'relationship_id', 'concept_id_2', 'temp name', 'temp domain', 
+                   'vocabulary_id_2', 'temp class', 'concept_code_2', 'temp standard',
+                   'relationship_valid_start_date', 'relationship_valid_end_date', 
+                   'invalid_reason', 'confidence', 'predicate_id', 'mapping_source',
+                   'mapping_justification', 'mapping_tool', 'Notes']
     }
 }
 
-def clean_worksheet_data(df: pd.DataFrame, id_column: str = 'concept_id_1') -> pd.DataFrame:
-    """
-    Clean a dataframe by removing subtitle rows and blank rows.
-    Dynamically detects data boundaries instead of using hardcoded indices.
-    
-    Args:
-        df: Raw dataframe from Google Sheets
-        id_column: Column name to use for detecting data boundaries
-        
-    Returns:
-        Cleaned dataframe with only valid data rows
-    """
-    if df.empty or id_column not in df.columns:
-        return df
-    
-    # Skip first row if it contains subtitles (check if ID column is not numeric)
-    start_idx = 0
-    if pd.isna(pd.to_numeric(df.iloc[0][id_column], errors='coerce')):
-        start_idx = 1
-    
-    # Find last row with data (ID column not empty)
-    end_idx = len(df)
-    for idx in range(len(df) - 1, -1, -1):
-        if pd.notna(df.iloc[idx][id_column]) and str(df.iloc[idx][id_column]).strip() != '':
-            end_idx = idx + 1
-            break
-    
-    return df.iloc[start_idx:end_idx].fillna('')
+# OMOP field mapping for concept_id_2 lookups
+omop_field_map = {
+    'temp name': 'concept_name',
+    'temp domain': 'domain_id',
+    'vocabulary_id_2': 'vocabulary_id',
+    'temp class': 'concept_class_id',
+    'concept_code_2': 'concept_code',
+    'temp standard': 'standard_concept'
+}
 
-
-def load_manual_concept_data(gc: gspread.Client) -> pd.DataFrame:
+def read_mapping_sources(gc: gspread.Client) -> Dict[str, List[int]]:
     """
-    Load manual concept mappings that contain all concept metadata.
-    This is the primary source for concept names, vocabularies, domains, etc.
+    Read the two mapping sources and extract TARGET_CONCEPT_ID and qualifier_concept_id.
     
     Args:
         gc: Authenticated Google Sheets client
         
     Returns:
-        DataFrame with all manual concept data
+        Dict mapping source tag to list of concept IDs
     """
+    all_concept_ids = {}
+    
+    for source in mapping_sources:
+        if not source['process']:
+            continue
+            
+        tag = source['tag']
+        print(f"Reading {tag} mapping source...")
+        
+        # Load source data
+        spreadsheet = gc.open(source['spreadsheet_name'])
+        worksheet = spreadsheet.worksheet(source['worksheet_name'])
+        df = get_as_dataframe(worksheet)
+        
+        concept_ids = []
+        
+        # Extract TARGET_CONCEPT_ID
+        if 'TARGET_CONCEPT_ID' in df.columns:
+            target_ids = pd.to_numeric(df['TARGET_CONCEPT_ID'], errors='coerce').fillna(0).astype(int)
+            valid_targets = target_ids[target_ids > 2000000000].tolist()
+            concept_ids.extend(valid_targets)
+            print(f"  Found {len(valid_targets)} TARGET_CONCEPT_ID values")
+        
+        # Extract qualifier_concept_id for RedCap only
+        if tag == 'RedCap' and 'qualifier_concept_id' in df.columns:
+            qualifier_ids = pd.to_numeric(df['qualifier_concept_id'], errors='coerce').fillna(0).astype(int)
+            valid_qualifiers = qualifier_ids[qualifier_ids > 2000000000].tolist()
+            concept_ids.extend(valid_qualifiers)
+            print(f"  Found {len(valid_qualifiers)} qualifier_concept_id values")
+        
+        all_concept_ids[tag] = list(set(concept_ids))  # Remove duplicates
+        print(f"  Total unique concept IDs for {tag}: {len(all_concept_ids[tag])}")
+    
+    return all_concept_ids
+
+def create_concept_dict(concept_ids_by_source: Dict[str, List[int]]) -> Dict[int, Dict]:
+    """
+    Create concept dict with concept_id as key and two dicts to be filled in:
+    concept and concept_relationship with appropriate columns starting empty.
+    
+    Args:
+        concept_ids_by_source: Dict mapping source tag to concept ID lists
+        
+    Returns:
+        Dict mapping concept_id to concept and concept_relationship sub-dicts
+    """
+    concept_dict = {}
+    
+    # Get all unique concept IDs across sources
+    all_concept_ids = set()
+    for source_ids in concept_ids_by_source.values():
+        all_concept_ids.update(source_ids)
+    
+    print(f"Creating concept dict for {len(all_concept_ids)} unique concept IDs")
+    
+    for concept_id in all_concept_ids:
+        concept_dict[concept_id] = {
+            'concept': {col: '' for col in output_config['concept.csv']['columns']},
+            'concept_relationship': {col: '' for col in output_config['concept_relationship.csv']['columns']},
+            'source_tags': [],
+            'tracking': {}
+        }
+        
+        # Set the concept_id values
+        concept_dict[concept_id]['concept']['concept_id'] = concept_id
+        concept_dict[concept_id]['concept_relationship']['concept_id_1'] = concept_id
+        
+        # Determine which sources this concept_id belongs to
+        for tag, ids in concept_ids_by_source.items():
+            if concept_id in ids:
+                concept_dict[concept_id]['source_tags'].append(tag)
+    
+    return concept_dict
+
+def load_concept_manual(gc: gspread.Client) -> pd.DataFrame:
+    """
+    Load concept_manual sheet data.
+    
+    Args:
+        gc: Authenticated Google Sheets client
+        
+    Returns:
+        DataFrame with concept_manual data
+    """
+    print("Loading concept_manual...")
     spreadsheet = gc.open(manual_concept_mappings['spreadsheet_name'])
-    
-    # Try to load concept_manual sheet first, fallback to concept_relationship_manual
-    try:
-        worksheet = spreadsheet.worksheet('concept_manual')
-        print(f"Loading from 'concept_manual' sheet")
-    except:
-        worksheet = spreadsheet.worksheet(manual_concept_mappings['worksheet_name'])
-        print(f"Loading from '{manual_concept_mappings['worksheet_name']}' sheet")
-    
+    worksheet = spreadsheet.worksheet('concept_manual')
     df = get_as_dataframe(worksheet)
     
-    # Print debug info about columns
-    print(f"Manual sheet columns: {list(df.columns)}")
+    # Clean data by removing empty rows
+    if 'concept_id' in df.columns:
+        df = df[pd.notna(df['concept_id']) & (df['concept_id'] != '')]
+        df['concept_id'] = pd.to_numeric(df['concept_id'], errors='coerce').fillna(0).astype(int)
+        df = df[df['concept_id'] > 0]
     
-    # Clean the dataframe - use concept_id for concept_manual, concept_id_1 for concept_relationship_manual
-    id_column = 'concept_id' if 'concept_id' in df.columns else 'concept_id_1'
-    df = clean_worksheet_data(df, id_column)
-    
-    print(f"Loaded {len(df)} rows from manual sheet")
+    print(f"Loaded {len(df)} rows from concept_manual")
     if len(df) > 0:
-        print(f"Sample row keys: {list(df.iloc[0].keys())}")
+        print(f"Columns: {list(df.columns)}")
     
     return df
 
+def load_concept_relationship_manual(gc: gspread.Client) -> pd.DataFrame:
+    """
+    Load concept_relationship_manual sheet data.
+    
+    Args:
+        gc: Authenticated Google Sheets client
+        
+    Returns:
+        DataFrame with concept_relationship_manual data
+    """
+    print("Loading concept_relationship_manual...")
+    spreadsheet = gc.open(manual_concept_mappings['spreadsheet_name'])
+    worksheet = spreadsheet.worksheet(manual_concept_mappings['worksheet_name'])
+    df = get_as_dataframe(worksheet)
+    
+    # Clean data by removing empty rows
+    if 'concept_id_1' in df.columns:
+        df = df[pd.notna(df['concept_id_1']) & (df['concept_id_1'] != '')]
+        df['concept_id_1'] = pd.to_numeric(df['concept_id_1'], errors='coerce').fillna(0).astype(int)
+        df = df[df['concept_id_1'] > 0]
+    
+    print(f"Loaded {len(df)} rows from concept_relationship_manual")
+    if len(df) > 0:
+        print(f"Columns: {list(df.columns)}")
+    
+    return df
 
 def query_omop_concepts(concept_ids: List[str]) -> Dict[str, Dict[str, Any]]:
     """
@@ -196,7 +247,13 @@ def query_omop_concepts(concept_ids: List[str]) -> Dict[str, Dict[str, Any]]:
     }
     
     # Filter out empty concept IDs
-    valid_ids = [int(cid) for cid in concept_ids if cid and str(cid).strip() != '']
+    valid_ids = []
+    for cid in concept_ids:
+        if cid and str(cid).strip() != '' and str(cid).lower() != 'nan':
+            try:
+                valid_ids.append(int(float(cid)))  # Handle float strings like '123.0'
+            except (ValueError, TypeError):
+                continue
     
     if not valid_ids:
         return {}
@@ -218,7 +275,7 @@ def query_omop_concepts(concept_ids: List[str]) -> Dict[str, Dict[str, Any]]:
         cursor.execute(query, valid_ids)
         results = cursor.fetchall()
         
-        # Convert to dictionary with tracking info
+        # Convert to dictionary
         concept_data = {}
         for row in results:
             concept_data[str(row[0])] = {
@@ -227,489 +284,238 @@ def query_omop_concepts(concept_ids: List[str]) -> Dict[str, Dict[str, Any]]:
                 'vocabulary_id': row[3],
                 'concept_class_id': row[4],
                 'concept_code': row[5],
-                'standard_concept': row[6],
-                '_source_tracking': SourceTracking('postgres_lookup')
+                'standard_concept': row[6] or ''
             }
         
         cursor.close()
         conn.close()
         
+        print(f"Retrieved OMOP data for {len(concept_data)} concept_id_2 values")
         return concept_data
         
     except Exception as e:
         print(f"Error connecting to OMOP database: {e}")
         return {}
 
-
-def extract_source_concepts(gc: gspread.Client, source: Dict[str, Any]) -> List[ConceptData]:
+def fill_concept_dict(concept_dict: Dict[int, Dict], concept_manual_df: pd.DataFrame, concept_relationship_manual_df: pd.DataFrame) -> Dict[int, Dict]:
     """
-    Extract only the concept IDs (TARGET_CONCEPT_ID, qualifier_concept_id)
-    from a mapping source spreadsheet. SRC_CODE will come from manual sheets.
+    Fill concept dict from concept_manual and concept_relationship_manual sheets and postgres lookups.
     
     Args:
-        gc: Authenticated Google Sheets client
-        source: Source configuration dictionary
+        concept_dict: The concept dictionary to fill
+        concept_manual_df: Manual concept data for concept.csv
+        concept_relationship_manual_df: Manual concept relationship data for concept_relationship.csv
         
     Returns:
-        List of ConceptData objects with tracking information
+        Updated concept dictionary
     """
-    tag = source['tag']
+    print("Filling concept dict from manual data and postgres lookups...")
     
-    # Load source data
-    spreadsheet = gc.open(source['spreadsheet_name'])
-    worksheet = spreadsheet.worksheet(source['worksheet_name'])
-    df = get_as_dataframe(worksheet)
+    # Create lookup from concept_manual data
+    concept_manual_lookup = {}
+    for _, row in concept_manual_df.iterrows():
+        concept_id = int(row.get('concept_id', 0))
+        if concept_id > 0:
+            concept_manual_lookup[concept_id] = row.to_dict()
     
-    concepts = []
+    # Create lookup from concept_relationship_manual data
+    concept_relationship_manual_lookup = {}
+    for _, row in concept_relationship_manual_df.iterrows():
+        concept_id_1 = int(row.get('concept_id_1', 0))
+        if concept_id_1 > 0:
+            concept_relationship_manual_lookup[concept_id_1] = row.to_dict()
     
-    # Only extract concept ID columns - SRC_CODE comes from manual sheet
-    required_columns = ['TARGET_CONCEPT_ID']
-    optional_columns = ['qualifier_concept_id']
-    
-    # Verify required columns exist
-    for col in required_columns:
-        if col not in df.columns:
-            print(f"Warning: Required column '{col}' not found in {tag} source")
-            return concepts
-    
-    # Convert TARGET_CONCEPT_ID to numeric
-    df['TARGET_CONCEPT_ID'] = pd.to_numeric(df['TARGET_CONCEPT_ID'], errors='coerce').fillna(0).astype(int)
-    
-    # Convert qualifier_concept_id to numeric if it exists
-    if 'qualifier_concept_id' in df.columns:
-        df['qualifier_concept_id'] = pd.to_numeric(df['qualifier_concept_id'], errors='coerce').fillna(0).astype(int)
-    
-    # Filter for new concepts (ID > 2000000000)
-    filtered_df = df[df['TARGET_CONCEPT_ID'] > 2000000000].copy()
-    
-    # Process regular concepts
-    for idx, row in filtered_df.iterrows():
-        concept_id = int(row['TARGET_CONCEPT_ID'])
-        
-        # Create tracking info for source cell
-        row_num = idx + 2  # +2 for header and 1-indexed
-        # Determine TARGET_CONCEPT_ID column letter
-        col_index = list(df.columns).index('TARGET_CONCEPT_ID')
-        col_letter = chr(ord('A') + col_index) if col_index < 26 else f"A{chr(ord('A') + col_index - 26)}"
-        cell_ref = f"{col_letter}{row_num}"
-        source_url = f"{source['location']}&range={cell_ref}"
-        
-        tracking = SourceTracking(
-            source_type='concept_manual',
-            source_cell=cell_ref,
-            source_url=source_url
-        )
-        
-        concepts.append(ConceptData(
-            concept_id=concept_id,
-            src_code='',  # SRC_CODE will be filled from manual sheet
-            is_qualifier_derived=False,
-            tracking=tracking
-        ))
-    
-    # Process qualifier concepts if qualifier_concept_id column exists
-    if 'qualifier_concept_id' in df.columns:
-        qualifier_df = df[df['qualifier_concept_id'] > 2000000000]
-        for idx, row in qualifier_df.iterrows():
-            qualifier_id = int(row['qualifier_concept_id'])
-            
-            # Create tracking info for qualifier source cell
-            row_num = idx + 2
-            # Determine qualifier_concept_id column letter (usually different from A)
-            col_index = list(df.columns).index('qualifier_concept_id')
-            col_letter = chr(ord('A') + col_index) if col_index < 26 else f"A{chr(ord('A') + col_index - 26)}"
-            cell_ref = f"{col_letter}{row_num}"
-            source_url = f"{source['location']}&range={cell_ref}"
-            
-            tracking = SourceTracking(
-                source_type='concept_manual',
-                source_cell=cell_ref,
-                source_url=source_url
-            )
-            
-            concepts.append(ConceptData(
-                concept_id=qualifier_id,
-                src_code='',  # SRC_CODE will be filled from manual sheet
-                is_qualifier_derived=True,
-                tracking=tracking
-            ))
-    
-    return concepts
-
-
-def create_concept_csv(concepts: List[ConceptData], manual_df: pd.DataFrame, tag: str) -> pd.DataFrame:
-    """
-    Create concept.csv output using extracted concepts and manual mapping data.
-    Row order will match the manual sheet order.
-    
-    Args:
-        concepts: List of extracted concept data
-        manual_df: Manual concept mapping dataframe
-        tag: Source tag (MOCA or RedCap)
-        
-    Returns:
-        DataFrame ready for concept.csv output
-    """
-    config = output_config['concept.csv']
-    rows = []
-    
-    # Determine the correct ID column
-    id_column = 'concept_id' if 'concept_id' in manual_df.columns else 'concept_id_1'
-    print(f"Using ID column: {id_column}")
-    
-    # Create lookup dictionary from manual data
-    manual_lookup = {str(int(row[id_column])): row for _, row in manual_df.iterrows() 
-                    if pd.notna(row[id_column])}
-    
-    print(f"Manual lookup has {len(manual_lookup)} entries")
-    print(f"Processing {len(concepts)} concepts")
-    
-    # Process concepts directly (ordering will be handled in save_outputs)
-    processed_count = 0
-    for concept in concepts:
-        concept_id_str = str(concept.concept_id)
-        manual_row = manual_lookup.get(concept_id_str, {})
-        
-        if processed_count == 0:  # Debug first row
-            print(f"Processing first concept {concept_id_str}")
-            print(f"Manual row found: {len(manual_row) > 0}")
-            if len(manual_row) > 0:
-                print(f"Manual row columns: {list(manual_row.keys())}")
-        
-        # Build row data with tracking
-        row_data = {
-            'concept_name': '',
-            'SRC_CODE': '',  # Will be filled from manual sheet
-            'concept_id': concept.concept_id,
-            'vocabulary_id': '',
-            'domain_id': '',
-            'v6_domain_id': '',
-            'concept_class_id': '',
-            'standard_concept': '',
-            'valid_start_date': '',
-            'valid_end_date': '',
-            'invalid_reason': '',
-            '_source_tracking': concept.tracking,
-            '_column_tracking': {}
-        }
-        
-        # Fill from manual data with tracking
-        for col in config['required_columns']:
-            if col == 'concept_id':
-                continue  # Already handled
-            
-            # Handle both SRC_CODE and SRC CODE column name formats
-            manual_col = col
-            if col == 'SRC_CODE' and col not in manual_row and 'SRC CODE' in manual_row:
-                manual_col = 'SRC CODE'
-            
-            if manual_col in manual_row and pd.notna(manual_row[manual_col]) and str(manual_row[manual_col]).strip():
-                row_data[col] = manual_row[manual_col]
-                row_data['_column_tracking'][col] = SourceTracking('concept_relationship_manual')
-                if processed_count == 0:  # Debug first row
-                    print(f"Filled {col} from manual: {manual_row[manual_col]}")
-            else:
-                # Use defaults
-                row_data[col] = config['defaults'].get(col, '')
-                row_data['_column_tracking'][col] = SourceTracking('defaults')
-                if processed_count == 0:  # Debug first row
-                    print(f"Used default for {col}: manual_col={manual_col}, in_manual={manual_col in manual_row}")
-        
-        processed_count += 1
-        
-        # Add defaults
-        for col, default_val in config['defaults'].items():
-            if col not in row_data:
-                row_data[col] = default_val
-                row_data['_column_tracking'][col] = SourceTracking('defaults')
-        
-        rows.append(row_data)
-    
-    # Convert to DataFrame
-    column_order = ['concept_name', 'SRC_CODE', 'concept_id', 'vocabulary_id', 'domain_id', 
-                   'v6_domain_id', 'concept_class_id', 'standard_concept', 'valid_start_date', 
-                   'valid_end_date', 'invalid_reason', '_source_tracking', '_column_tracking']
-    df = pd.DataFrame(rows, columns=column_order)
-    
-    # Ensure integer types for concept IDs
-    if 'concept_id' in df.columns:
-        df['concept_id'] = df['concept_id'].astype(int)
-    
-    return df
-
-
-def create_concept_relationship_csv(concepts: List[ConceptData], manual_df: pd.DataFrame, tag: str) -> pd.DataFrame:
-    """
-    Create concept_relationship.csv output using extracted concepts and manual mapping data.
-    Row order will match the manual sheet order.
-    
-    Args:
-        concepts: List of extracted concept data
-        manual_df: Manual concept mapping dataframe
-        tag: Source tag (MOCA or RedCap)
-        
-    Returns:
-        DataFrame ready for concept_relationship.csv output
-    """
-    config = output_config['concept_relationship.csv']
-    rows = []
-    
-    # Determine the correct ID column
-    id_column = 'concept_id' if 'concept_id' in manual_df.columns else 'concept_id_1'
-    
-    # Create lookup dictionary from manual data
-    manual_lookup = {str(int(row[id_column])): row for _, row in manual_df.iterrows() 
-                    if pd.notna(row[id_column])}
-    
-    print(f"Manual lookup has {len(manual_lookup)} entries")
-    print(f"Processing {len(concepts)} concepts")
-    
-    # Get unique concept_id_2 values for OMOP lookup
+    # Collect concept_id_2 values for postgres lookup
     concept_id_2_values = []
-    for concept in concepts:
-        if concept.is_qualifier_derived:
-            continue  # Skip OMOP lookups for qualifier-derived concepts
-        concept_id_str = str(concept.concept_id)
-        manual_row = manual_lookup.get(concept_id_str, {})
-        concept_id_2 = manual_row.get('concept_id_2', '')
-        if concept_id_2 and str(concept_id_2).strip():
-            concept_id_2_values.append(str(concept_id_2))
+    for concept_id, data in concept_dict.items():
+        if concept_id in concept_relationship_manual_lookup:
+            manual_row = concept_relationship_manual_lookup[concept_id]
+            concept_id_2 = manual_row.get('concept_id_2', '')
+            if concept_id_2 and pd.notna(concept_id_2) and str(concept_id_2).strip() and str(concept_id_2).lower() != 'nan':
+                concept_id_2_values.append(str(concept_id_2))
     
-    # Query OMOP database for concept_id_2 data
+    # Get OMOP data for concept_id_2 values
     omop_data = query_omop_concepts(list(set(concept_id_2_values)))
     
-    # Process concepts directly (ordering will be handled in save_outputs)
-    for concept in concepts:
-        concept_id_str = str(concept.concept_id)
-        manual_row = manual_lookup.get(concept_id_str, {})
+    filled_count = 0
+    missing_concept_count = 0
+    missing_relationship_count = 0
+    
+    for concept_id, data in concept_dict.items():
+        # Fill concept data from concept_manual
+        if concept_id in concept_manual_lookup:
+            manual_row = concept_manual_lookup[concept_id]
+            concept_data = data['concept']
+            for col in output_config['concept.csv']['columns']:
+                if col == 'concept_id':
+                    continue  # Already set
+                
+                # Map column names if needed
+                manual_col = col
+                if col == 'SRC_CODE' and 'SRC CODE' in manual_row:
+                    manual_col = 'SRC CODE'
+                
+                if manual_col in manual_row and pd.notna(manual_row[manual_col]):
+                    concept_data[col] = manual_row[manual_col]
+                    data['tracking'][f'concept.{col}'] = SourceTracking('concept_manual')
+        else:
+            missing_concept_count += 1
+            print(f"Warning: concept_id {concept_id} not found in concept_manual")
         
-        # Build row data with tracking
-        row_data = {
-            'concept_name': '',
-            'concept_id_1': concept.concept_id,
-            'SRC_CODE': '',  # Will be filled from manual sheet
-            'vocabulary_id_1': '',
-            'relationship_id': '',
-            'concept_id_2': '',
-            'temp name': '',
-            'temp domain': '',
-            'vocabulary_id_2': '',
-            'temp class': '',
-            'concept_code_2': '',
-            'temp standard': '',
-            'relationship_valid_start_date': '',
-            'relationship_valid_end_date': '',
-            'invalid_reason': '',
-            'confidence': '',
-            'predicate_id': '',
-            'mapping_source': '',
-            'mapping_justification': '',
-            'mapping_tool': '',
-            'Notes': '',
-            '_source_tracking': concept.tracking,
-            '_column_tracking': {}
+        # Fill concept_relationship data from concept_relationship_manual
+        if concept_id in concept_relationship_manual_lookup:
+            manual_row = concept_relationship_manual_lookup[concept_id]
+            rel_data = data['concept_relationship']
+            
+            # Specific fields from concept_relationship_manual as per instructions
+            relationship_fields = ['concept_name', 'SRC_CODE', 'vocabulary_id_1', 'concept_id_2', 
+                                 'confidence', 'predicate_id', 'mapping_source', 
+                                 'mapping_justification', 'mapping_tool', 'Notes']
+            
+            for col in relationship_fields:
+                if col == 'concept_id_1':
+                    continue  # Already set
+                
+                # Map column names if needed
+                manual_col = col
+                if col == 'SRC_CODE' and 'SRC CODE' in manual_row:
+                    manual_col = 'SRC CODE'
+                
+                if manual_col in manual_row and pd.notna(manual_row[manual_col]):
+                    rel_data[col] = manual_row[manual_col]
+                    data['tracking'][f'concept_relationship.{col}'] = SourceTracking('concept_relationship_manual')
+            
+            # Fill OMOP data for concept_id_2 if present
+            concept_id_2 = rel_data.get('concept_id_2', '')
+            if concept_id_2 and pd.notna(concept_id_2) and str(concept_id_2).strip() and str(concept_id_2).lower() != 'nan':
+                concept_id_2_str = str(concept_id_2)
+                if concept_id_2_str not in omop_data:
+                    print(f"ERROR: concept_id_2 {concept_id_2_str} not found in postgres for concept_id_1 {concept_id}")
+                    # Fail immediately as specified
+                    raise ValueError(f"concept_id_2 {concept_id_2_str} not found in postgres database")
+                
+                omop_concept = omop_data[concept_id_2_str]
+                for csv_col, omop_field in omop_field_map.items():
+                    if omop_field in omop_concept:
+                        rel_data[csv_col] = omop_concept[omop_field]
+                        data['tracking'][f'concept_relationship.{csv_col}'] = SourceTracking('postgres_lookup')
+            
+            filled_count += 1
+        else:
+            missing_relationship_count += 1
+            print(f"Warning: concept_id {concept_id} not found in concept_relationship_manual")
+    
+    print(f"Filled data for {filled_count} concepts")
+    if missing_concept_count > 0:
+        print(f"Missing from concept_manual: {missing_concept_count} concepts")
+    if missing_relationship_count > 0:
+        print(f"Missing from concept_relationship_manual: {missing_relationship_count} concepts")
+    
+    return concept_dict
+
+def save_outputs(concept_dict: Dict[int, Dict], concept_ids_by_source: Dict[str, List[int]]) -> None:
+    """
+    Save concept.csv and concept_relationship.csv files (no source-specific files).
+    
+    Args:
+        concept_dict: The filled concept dictionary
+        concept_ids_by_source: Original concept IDs by source for ordering
+    """
+    os.makedirs('output', exist_ok=True)
+    
+    # Prepare concept.csv data
+    concept_rows = []
+    for concept_id in sorted(concept_dict.keys()):
+        data = concept_dict[concept_id]
+        row = data['concept'].copy()
+        # Remove tracking columns
+        concept_rows.append(row)
+    
+    concept_df = pd.DataFrame(concept_rows)
+    concept_df = concept_df[output_config['concept.csv']['columns']]  # Ensure column order
+    concept_df.to_csv('output/concept.csv', index=False)
+    print(f"Saved output/concept.csv with {len(concept_df)} rows")
+    
+    # Prepare concept_relationship.csv data
+    relationship_rows = []
+    for concept_id in sorted(concept_dict.keys()):
+        data = concept_dict[concept_id]
+        row = data['concept_relationship'].copy()
+        # Remove tracking columns
+        relationship_rows.append(row)
+    
+    relationship_df = pd.DataFrame(relationship_rows)
+    relationship_df = relationship_df[output_config['concept_relationship.csv']['columns']]  # Ensure column order
+    relationship_df.to_csv('output/concept_relationship.csv', index=False)
+    print(f"Saved output/concept_relationship.csv with {len(relationship_df)} rows")
+
+def save_tracking_info(concept_dict: Dict[int, Dict]) -> None:
+    """
+    Save tracking information to a file for use in validate.py.
+    
+    Args:
+        concept_dict: The concept dictionary with tracking info
+    """
+    tracking_data = {}
+    
+    for concept_id, data in concept_dict.items():
+        tracking_data[str(concept_id)] = {
+            'source_tags': data['source_tags'],
+            'tracking': {}
         }
         
-        # Fill concept_id_2 (with defaults for MOCA)
-        concept_id_2 = manual_row.get('concept_id_2', '')
-        if concept_id_2 and str(concept_id_2).strip():
-            row_data['concept_id_2'] = concept_id_2
-            row_data['_column_tracking']['concept_id_2'] = SourceTracking('concept_relationship_manual')
-        else:
-            # Use tag-specific defaults
-            default_id_2 = config['defaults']['concept_id_2'].get(tag, '')
-            row_data['concept_id_2'] = default_id_2
-            row_data['_column_tracking']['concept_id_2'] = SourceTracking('defaults')
-        
-        # Fill other required columns from manual data
-        for col in config['required_columns']:
-            if col in ['concept_id_1', 'concept_id_2']:
-                continue  # Already handled
-            
-            # Handle both SRC_CODE and SRC CODE column name formats
-            manual_col = col
-            if col == 'SRC_CODE' and col not in manual_row and 'SRC CODE' in manual_row:
-                manual_col = 'SRC CODE'
-            
-            if manual_col in manual_row and pd.notna(manual_row[manual_col]) and str(manual_row[manual_col]).strip():
-                row_data[col] = manual_row[manual_col]
-                row_data['_column_tracking'][col] = SourceTracking('concept_relationship_manual')
-            else:
-                row_data[col] = config['defaults'].get(col, '')
-                row_data['_column_tracking'][col] = SourceTracking('defaults')
-        
-        # Fill OMOP data if concept_id_2 exists and not qualifier-derived
-        if not concept.is_qualifier_derived and str(row_data['concept_id_2']).strip():
-            omop_concept = omop_data.get(str(row_data['concept_id_2']), {})
-            omop_columns = ['temp name', 'temp domain', 'vocabulary_id_2', 'temp class', 
-                          'concept_code_2', 'temp standard']
-            omop_field_map = {
-                'temp name': 'concept_name',
-                'temp domain': 'domain_id',
-                'vocabulary_id_2': 'vocabulary_id',
-                'temp class': 'concept_class_id',
-                'concept_code_2': 'concept_code',
-                'temp standard': 'standard_concept'
+        # Convert SourceTracking objects to serializable format
+        for key, tracking in data['tracking'].items():
+            tracking_data[str(concept_id)]['tracking'][key] = {
+                'source_type': tracking.source_type,
+                'source_cell': tracking.source_cell,
+                'source_url': tracking.source_url
             }
-            
-            for col in omop_columns:
-                omop_field = omop_field_map[col]
-                if omop_field in omop_concept:
-                    row_data[col] = omop_concept[omop_field]
-                    row_data['_column_tracking'][col] = SourceTracking('postgres_lookup')
-                else:
-                    row_data[col] = config['defaults'].get(col, '')
-                    row_data['_column_tracking'][col] = SourceTracking('defaults')
-        
-        # Fill remaining defaults
-        for col, default_val in config['defaults'].items():
-            if col not in row_data:
-                if isinstance(default_val, dict):
-                    row_data[col] = default_val.get(tag, '')
-                else:
-                    row_data[col] = default_val
-                row_data['_column_tracking'][col] = SourceTracking('defaults')
-        
-        rows.append(row_data)
     
-    # Convert to DataFrame
-    column_order = ['concept_name', 'concept_id_1', 'SRC_CODE', 'vocabulary_id_1', 'relationship_id',
-                   'concept_id_2', 'temp name', 'temp domain', 'vocabulary_id_2', 'temp class', 
-                   'concept_code_2', 'temp standard', 'relationship_valid_start_date', 
-                   'relationship_valid_end_date', 'invalid_reason', 'confidence', 'predicate_id',
-                   'mapping_source', 'mapping_justification', 'mapping_tool', 'Notes',
-                   '_source_tracking', '_column_tracking']
-    df = pd.DataFrame(rows, columns=column_order)
+    with open('output/tracking_info.json', 'w') as f:
+        json.dump(tracking_data, f, indent=2)
     
-    # Ensure integer types for concept IDs
-    if 'concept_id_1' in df.columns:
-        df['concept_id_1'] = df['concept_id_1'].astype(int)
-    
-    return df
-
-
-def process_source_data(gc: gspread.Client, source: Dict[str, Any], manual_df: pd.DataFrame) -> Dict[str, pd.DataFrame]:
-    """
-    Process data from a single source (MOCA or RedCap).
-    
-    Args:
-        gc: Authenticated Google Sheets client
-        source: Source configuration dictionary
-        manual_df: Manual concept mapping dataframe
-        
-    Returns:
-        Dictionary of output dataframes keyed by filename
-    """
-    tag = source['tag']
-    
-    # Extract only essential concept data
-    concepts = extract_source_concepts(gc, source)
-    
-    # Create output files
-    result_dfs = {
-        'concept.csv': create_concept_csv(concepts, manual_df, tag),
-        'concept_relationship.csv': create_concept_relationship_csv(concepts, manual_df, tag)
-    }
-    
-    # Add source tag to each dataframe
-    for df in result_dfs.values():
-        df['source'] = tag
-    
-    return result_dfs
-
-
-
-def save_outputs(output_dfs: Dict[str, Dict[str, pd.DataFrame]]) -> None:
-    """
-    Save all output dataframes to CSV files.
-    Creates both individual source files and combined files.
-    Removes tracking columns before saving.
-    
-    Args:
-        output_dfs: Nested dictionary of dataframes by source and filename
-    """
-    combined_dfs = {}
-    
-    # Save individual source files and collect for combined output
-    for tag, dfs in output_dfs.items():
-        for fname, df in dfs.items():
-            # Remove tracking columns before saving
-            clean_df = df.copy()
-            tracking_columns = [col for col in clean_df.columns if col.startswith('_')]
-            clean_df = clean_df.drop(columns=tracking_columns)
-            
-            # Sort by concept_id to ensure consistent ordering
-            if 'concept_id' in clean_df.columns:
-                clean_df = clean_df.sort_values('concept_id')
-            elif 'concept_id_1' in clean_df.columns:
-                clean_df = clean_df.sort_values('concept_id_1')
-            
-            # Save individual source file
-            filename = f'output/{tag}_{fname}'
-            clean_df.to_csv(filename, index=False)
-            print(f"Saved {filename} with {len(clean_df)} rows")
-            
-            # Collect for combined file
-            if fname not in combined_dfs:
-                combined_dfs[fname] = []
-            combined_dfs[fname].append(clean_df)
-    
-    # Save combined files
-    for fname, dfs in combined_dfs.items():
-        combined_df = pd.concat(dfs, ignore_index=True)
-        
-        # Sort combined file by concept_id to ensure consistent ordering
-        if 'concept_id' in combined_df.columns:
-            combined_df = combined_df.sort_values('concept_id')
-        elif 'concept_id_1' in combined_df.columns:
-            combined_df = combined_df.sort_values('concept_id_1')
-        
-        filename = f'output/{fname}'
-        combined_df.to_csv(filename, index=False)
-        print(f"Saved {filename} with {len(combined_df)} rows")
-
+    print(f"Saved tracking information for {len(tracking_data)} concepts")
 
 def main() -> None:
     """
-    Main function to orchestrate the concept template generation process.
+    Main function implementing the new concept dictionary architecture.
     """
     try:
         # Initialize Google Sheets client
         gc = gspread.service_account()
         
-        # Load manual concept mappings (primary source for concept metadata)
-        print("Loading manual concept mappings...")
-        manual_df = load_manual_concept_data(gc)
-        print(f"Loaded {len(manual_df)} manual concept mappings")
+        # 1. Read the two mapping sources
+        print("Step 1: Reading mapping sources...")
+        concept_ids_by_source = read_mapping_sources(gc)
         
-        # Process each source
-        output_dfs = {}
-        for source in mapping_sources:
-            if not source['process']:
-                continue
-            
-            print(f"\nProcessing {source['tag']} data...")
-            print(f"  Extracting concepts from: {source['worksheet_name']}")
-            output_dfs[source['tag']] = process_source_data(gc, source, manual_df)
-            
-            # Print summary
-            for fname, df in output_dfs[source['tag']].items():
-                print(f"  Generated {len(df)} rows for {fname}")
+        # 2. Create concept dict with concept_id as key
+        print("\nStep 2: Creating concept dictionary...")
+        concept_dict = create_concept_dict(concept_ids_by_source)
         
-        # Save all outputs
-        print("\nSaving output files...")
-        save_outputs(output_dfs)
+        # 3. Load both manual sheets and fill concept dict
+        print("\nStep 3: Loading manual data and filling concept dict...")
+        concept_manual_df = load_concept_manual(gc)
+        concept_relationship_manual_df = load_concept_relationship_manual(gc)
+        concept_dict = fill_concept_dict(concept_dict, concept_manual_df, concept_relationship_manual_df)
+        
+        # 4. Save outputs
+        print("\nStep 4: Saving output files...")
+        save_outputs(concept_dict, concept_ids_by_source)
+        
+        # 5. Save tracking information
+        print("\nStep 5: Saving tracking information...")
+        save_tracking_info(concept_dict)
         
         print("\nProcessing complete!")
-        print("\nSummary:")
-        print("- Only TARGET_CONCEPT_ID and qualifier_concept_id extracted from mapping sources")
-        print("- All concept metadata including SRC_CODE comes from manual mapping sheets")
-        print("- Source cell links and value generation tracking added for validation reports")
+        print("Generated files:")
+        print("- output/concept.csv")
+        print("- output/concept_relationship.csv") 
+        print("- output/tracking_info.json")
         
     except Exception as e:
         print(f"Error during processing: {e}")
         raise
-
 
 if __name__ == "__main__":
     main()
