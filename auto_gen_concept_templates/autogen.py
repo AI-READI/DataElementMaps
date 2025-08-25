@@ -297,6 +297,39 @@ def query_omop_concepts(concept_ids: List[str]) -> Dict[str, Dict[str, Any]]:
         print(f"Error connecting to OMOP database: {e}")
         return {}
 
+def get_column_letter(col_index: int) -> str:
+    """Convert column index to Excel-style column letter (0=A, 1=B, etc.)"""
+    result = ""
+    while col_index >= 0:
+        result = chr(col_index % 26 + ord('A')) + result
+        col_index = col_index // 26 - 1
+        if col_index < 0:
+            break
+    return result
+
+def create_tracking_info(sheet_type: str, row_index: int, column_name: str, df: pd.DataFrame) -> SourceTracking:
+    """Create tracking information for a specific cell"""
+    # Get column index
+    if column_name in df.columns:
+        col_index = list(df.columns).index(column_name)
+    else:
+        return SourceTracking(sheet_type)
+    
+    # Generate cell reference (Excel style)
+    col_letter = get_column_letter(col_index)
+    row_num = row_index + 2  # +2 because row_index is 0-based and there's a header row
+    cell_ref = f"{col_letter}{row_num}"
+    
+    # Generate URL based on sheet type
+    if sheet_type == 'concept_manual':
+        base_url = "https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=0"  # concept_manual sheet
+    else:  # concept_relationship_manual
+        base_url = manual_concept_mappings['location']
+    
+    source_url = f"{base_url}&range={cell_ref}"
+    
+    return SourceTracking(sheet_type, cell_ref, source_url)
+
 def fill_concept_dict(concept_dict: Dict[int, Dict], concept_manual_df: pd.DataFrame, concept_relationship_manual_df: pd.DataFrame) -> Dict[int, Dict]:
     """
     Fill concept dict from concept_manual and concept_relationship_manual sheets and postgres lookups.
@@ -311,25 +344,31 @@ def fill_concept_dict(concept_dict: Dict[int, Dict], concept_manual_df: pd.DataF
     """
     print("Filling concept dict from manual data and postgres lookups...")
     
-    # Create lookup from concept_manual data
+    # Create lookup from concept_manual data with row indices for tracking
     concept_manual_lookup = {}
-    for _, row in concept_manual_df.iterrows():
+    for idx, row in concept_manual_df.iterrows():
         concept_id = int(row.get('concept_id', 0))
         if concept_id > 0:
-            concept_manual_lookup[concept_id] = row.to_dict()
+            concept_manual_lookup[concept_id] = {
+                'data': row.to_dict(),
+                'row_index': idx
+            }
     
-    # Create lookup from concept_relationship_manual data
+    # Create lookup from concept_relationship_manual data with row indices for tracking
     concept_relationship_manual_lookup = {}
-    for _, row in concept_relationship_manual_df.iterrows():
+    for idx, row in concept_relationship_manual_df.iterrows():
         concept_id_1 = int(row.get('concept_id_1', 0))
         if concept_id_1 > 0:
-            concept_relationship_manual_lookup[concept_id_1] = row.to_dict()
+            concept_relationship_manual_lookup[concept_id_1] = {
+                'data': row.to_dict(),
+                'row_index': idx
+            }
     
     # Collect concept_id_2 values for postgres lookup
     concept_id_2_values = []
     for concept_id, data in concept_dict.items():
         if concept_id in concept_relationship_manual_lookup:
-            manual_row = concept_relationship_manual_lookup[concept_id]
+            manual_row = concept_relationship_manual_lookup[concept_id]['data']
             concept_id_2 = manual_row.get('concept_id_2', '')
             if concept_id_2 and pd.notna(concept_id_2) and str(concept_id_2).strip() and str(concept_id_2).lower() != 'nan':
                 concept_id_2_values.append(str(concept_id_2))
@@ -344,8 +383,11 @@ def fill_concept_dict(concept_dict: Dict[int, Dict], concept_manual_df: pd.DataF
     for concept_id, data in concept_dict.items():
         # Fill concept data from concept_manual
         if concept_id in concept_manual_lookup:
-            manual_row = concept_manual_lookup[concept_id]
+            manual_entry = concept_manual_lookup[concept_id]
+            manual_row = manual_entry['data']
+            row_index = manual_entry['row_index']
             concept_data = data['concept']
+            
             for col in output_config['concept.csv']['columns']:
                 if col == 'concept_id':
                     continue  # Already set
@@ -357,14 +399,16 @@ def fill_concept_dict(concept_dict: Dict[int, Dict], concept_manual_df: pd.DataF
                 
                 if manual_col in manual_row and pd.notna(manual_row[manual_col]):
                     concept_data[col] = manual_row[manual_col]
-                    data['tracking'][f'concept.{col}'] = SourceTracking('concept_manual')
+                    data['tracking'][f'concept.{col}'] = create_tracking_info('concept_manual', row_index, manual_col, concept_manual_df)
         else:
             missing_concept_count += 1
             print(f"Warning: concept_id {concept_id} not found in concept_manual")
         
         # Fill concept_relationship data from concept_relationship_manual
         if concept_id in concept_relationship_manual_lookup:
-            manual_row = concept_relationship_manual_lookup[concept_id]
+            manual_entry = concept_relationship_manual_lookup[concept_id]
+            manual_row = manual_entry['data']
+            row_index = manual_entry['row_index']
             rel_data = data['concept_relationship']
             
             # Specific fields from concept_relationship_manual as per instructions
@@ -383,7 +427,7 @@ def fill_concept_dict(concept_dict: Dict[int, Dict], concept_manual_df: pd.DataF
                 
                 if manual_col in manual_row and pd.notna(manual_row[manual_col]):
                     rel_data[col] = manual_row[manual_col]
-                    data['tracking'][f'concept_relationship.{col}'] = SourceTracking('concept_relationship_manual')
+                    data['tracking'][f'concept_relationship.{col}'] = create_tracking_info('concept_relationship_manual', row_index, manual_col, concept_relationship_manual_df)
             
             # Fill OMOP data for concept_id_2 if present
             concept_id_2 = rel_data.get('concept_id_2', '')
@@ -405,6 +449,7 @@ def fill_concept_dict(concept_dict: Dict[int, Dict], concept_manual_df: pd.DataF
             missing_relationship_count += 1
             print(f"Warning: concept_id {concept_id} not found in concept_relationship_manual")
     
+
     print(f"Filled data for {filled_count} concepts")
     if missing_concept_count > 0:
         print(f"Missing from concept_manual: {missing_concept_count} concepts")
