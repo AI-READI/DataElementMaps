@@ -20,25 +20,47 @@ from gspread_dataframe import get_as_dataframe
 import pandas as pd
 from typing import Dict, List, Any, Tuple, Optional
 import os
+import json
 from datetime import datetime
 
-# Configuration for validation targets
+# Import configuration from autogen.py
+try:
+    from autogen import spreadsheet_config
+except ImportError:
+    # Fallback configuration if import fails
+    spreadsheet_config = {
+        'spreadsheet_name': 'template_4_adding_vocabulary-2',
+        'spreadsheet_id': '1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY',
+        'base_url': 'https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit',
+        'worksheets': {
+            'concept_manual': {
+                'gid': '535320917',
+                'url': 'https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=535320917#gid=535320917'
+            },
+            'concept_relationship_manual': {
+                'gid': '933853125', 
+                'url': 'https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125'
+            }
+        }
+    }
+
+# Configuration for validation targets - using imported spreadsheet config
 validation_targets = [
     {
         'name': 'concept',
-        'spreadsheet_name': 'template_4_adding_vocabulary-2',
-        'worksheet_name': 'concept_manual',
-        'csv_path': 'output/concept.csv',
+        'spreadsheet_name': spreadsheet_config['spreadsheet_name'],
+        'manual_worksheet_name': 'concept_manual',
+        'generated_worksheet_name': 'concept_generated',
         'id_column': 'concept_id',
-        'worksheet_url': 'https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=535320917#gid=535320917',
+        'manual_worksheet_url': spreadsheet_config['worksheets']['concept_manual']['url'],
     },
     {
         'name': 'concept_relationship', 
-        'spreadsheet_name': 'template_4_adding_vocabulary-2',
-        'worksheet_name': 'concept_relationship_manual',
-        'csv_path': 'output/concept_relationship.csv',
+        'spreadsheet_name': spreadsheet_config['spreadsheet_name'],
+        'manual_worksheet_name': 'concept_relationship_manual',
+        'generated_worksheet_name': 'concept_relationship_generated',
         'id_column': 'concept_id_1',
-        'worksheet_url': 'https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125',
+        'manual_worksheet_url': spreadsheet_config['worksheets']['concept_relationship_manual']['url'],
     }
 ]
 
@@ -178,6 +200,13 @@ def load_worksheet_data(gc: gspread.Client, spreadsheet_name: str, worksheet_nam
                 break
         
         df = df.iloc[start_idx:end_idx].fillna('')
+        
+        # Ensure concept IDs are integers to fix float/int issues
+        if id_column in df.columns:
+            df[id_column] = pd.to_numeric(df[id_column], errors='coerce').fillna(0).astype(int)
+        if 'concept_id_2' in df.columns:
+            df['concept_id_2'] = pd.to_numeric(df['concept_id_2'], errors='coerce').fillna(0).astype('Int64')  # nullable integer
+        
         return df, start_idx
         
     except Exception as e:
@@ -185,27 +214,65 @@ def load_worksheet_data(gc: gspread.Client, spreadsheet_name: str, worksheet_nam
         return pd.DataFrame(), 0
 
 
-def load_csv_data(csv_path: str) -> pd.DataFrame:
+def load_generated_worksheet_data(gc: gspread.Client, spreadsheet_name: str, worksheet_name: str) -> Tuple[pd.DataFrame, int]:
     """
-    Load data from a CSV file.
+    Load data from a generated Google Sheets worksheet.
     
     Args:
-        csv_path: Path to the CSV file
+        gc: Authenticated Google Sheets client
+        spreadsheet_name: Name of the spreadsheet
+        worksheet_name: Name of the worksheet
         
     Returns:
-        DataFrame with CSV data
+        Tuple of (DataFrame with worksheet data, number of rows skipped from top)
     """
     try:
-        if not os.path.exists(csv_path):
-            print(f"CSV file not found: {csv_path}")
-            return pd.DataFrame()
+        spreadsheet = gc.open(spreadsheet_name)
+        worksheet = spreadsheet.worksheet(worksheet_name)
+        df = get_as_dataframe(worksheet)
         
-        df = pd.read_csv(csv_path).fillna('')
-        return df
+        # Clean the dataframe similar to manual worksheets  
+        # Dynamically detect where data starts
+        start_idx = 0
+        id_column = 'concept_id_1' if 'concept_id_1' in df.columns else 'concept_id'
+        if pd.isna(pd.to_numeric(df.iloc[0][id_column], errors='coerce')):
+            start_idx = 1
+        end_idx = len(df)
+        
+        # Find the last row with meaningful data
+        for idx in range(len(df) - 1, -1, -1):
+            if pd.notna(df.iloc[idx][id_column]) and str(df.iloc[idx][id_column]).strip() != '':
+                end_idx = idx + 1
+                break
+        
+        df = df.iloc[start_idx:end_idx].fillna('')
+        
+        # Ensure concept IDs are integers to fix float/int issues
+        if id_column in df.columns:
+            df[id_column] = pd.to_numeric(df[id_column], errors='coerce').fillna(0).astype(int)
+        if 'concept_id_2' in df.columns:
+            df['concept_id_2'] = pd.to_numeric(df['concept_id_2'], errors='coerce').fillna(0).astype('Int64')  # nullable integer
+        
+        return df, start_idx
         
     except Exception as e:
-        print(f"Error loading CSV {csv_path}: {e}")
-        return pd.DataFrame()
+        print(f"Error loading generated worksheet {worksheet_name}: {e}")
+        return pd.DataFrame(), 0
+
+
+def load_tracking_info() -> Dict[str, Any]:
+    """
+    Load tracking information from the JSON file created by autogen.py.
+    
+    Returns:
+        Dictionary with URL lookup and tracking data
+    """
+    try:
+        with open('output/tracking_info.json', 'r') as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"Could not load tracking info: {e}")
+        return {'url_lookup': {}, 'concepts': {}}
 
 
 def compare_dataframes(df_manual: pd.DataFrame, df_generated: pd.DataFrame, 
@@ -243,9 +310,9 @@ def compare_dataframes(df_manual: pd.DataFrame, df_generated: pd.DataFrame,
         results['error'] = f"One or both dataframes are empty (manual: {len(df_manual)}, generated: {len(df_generated)})"
         return results
     
-    # Convert ID columns to string for consistent matching
-    df_manual[id_column] = df_manual[id_column].astype(str)
-    df_generated[id_column] = df_generated[id_column].astype(str)
+    # Ensure ID columns are integers first, then convert to string for consistent matching
+    df_manual[id_column] = pd.to_numeric(df_manual[id_column], errors='coerce').fillna(0).astype(int).astype(str)
+    df_generated[id_column] = pd.to_numeric(df_generated[id_column], errors='coerce').fillna(0).astype(int).astype(str)
     
     # Create dictionaries for easy lookup
     manual_dict = {str(row[id_column]): row for _, row in df_manual.iterrows()}
@@ -401,18 +468,18 @@ Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 
 ## Data Sources
 
-This report compares generated CSV files against manual Google Sheets:
+This report compares generated Google Sheets against manual Google Sheets:
 
-- **Manual Sheets**: [template_4_adding_vocabulary-2](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY)
+- **Manual Sheets**: [{spreadsheet_config['spreadsheet_name']}]({spreadsheet_config['base_url']})
   - concept_manual worksheet
   - concept_relationship_manual worksheet
-- **Generated Files**: 
-  - `output/concept.csv` (from autogen.py)
-  - `output/concept_relationship.csv` (from autogen.py)
+- **Generated Sheets**: [{spreadsheet_config['spreadsheet_name']}]({spreadsheet_config['base_url']})
+  - concept_generated worksheet (from autogen.py)
+  - concept_relationship_generated worksheet (from autogen.py)
 
 ### Link Legend
-- 🔴 Manual values link to specific cells in Google Sheets
-- 🔵 Generated values link to line numbers in CSV files
+- 🔴 Manual values link to specific cells in manual Google Sheets
+- 🔵 Generated values link to specific cells in generated Google Sheets
 - Explanations in parentheses describe the type of difference
 
 ## Summary
@@ -464,8 +531,8 @@ This report compares generated CSV files against manual Google Sheets:
                 concept_name = row_info['concept_name']
                 
                 # Create proper Google Sheets URL with range
-                if result.get('target_info') and result['target_info'].get('worksheet_url') and row_info.get('row_num'):
-                    base_url = result['target_info']['worksheet_url']
+                if result.get('target_info') and result['target_info'].get('manual_worksheet_url') and row_info.get('row_num'):
+                    base_url = result['target_info']['manual_worksheet_url']
                     row_num = row_info['row_num']
                     url_with_range = f"{base_url}&range=A{row_num}"
                     concept_id_link = f"[{concept_id}]({url_with_range})"
@@ -487,9 +554,18 @@ This report compares generated CSV files against manual Google Sheets:
                 concept_id = row_info['id']
                 concept_name = row_info['concept_name']
                 
-                # Create relative link to CSV file
-                csv_filename = f"output/{result['name']}.csv"
-                concept_id_link = f"[{concept_id}]({csv_filename})"
+                # Create link to generated sheet using tracking info
+                concept_id_link = concept_id
+                if result.get('target_info') and result['target_info'].get('tracking_info') and row_info.get('row_num'):
+                    tracking_info = result['target_info']['tracking_info']
+                    url_lookup = tracking_info.get('url_lookup', {})
+                    generated_sheet_name = result['target_info']['generated_worksheet_name']
+                    
+                    if generated_sheet_name in url_lookup:
+                        base_url = url_lookup[generated_sheet_name]
+                        row_num = row_info['row_num']
+                        url_with_range = f"{base_url}&range=A{row_num}"
+                        concept_id_link = f"[{concept_id}]({url_with_range})"
                 
                 report += f"| {concept_id_link} | {concept_name} |\n"
             report += "\n"
@@ -614,18 +690,24 @@ This report compares generated CSV files against manual Google Sheets:
                         
                         # Create manual link with correct column
                         manual_val_link = manual_val
-                        if result.get('target_info') and result['target_info'].get('worksheet_url') and manual_row_num:
+                        if result.get('target_info') and result['target_info'].get('manual_worksheet_url') and manual_row_num:
                             col_letter = get_column_letter(col, result['manual_df'])
-                            base_url = result['target_info']['worksheet_url']
+                            base_url = result['target_info']['manual_worksheet_url']
                             manual_url = f"{base_url}&range={col_letter}{manual_row_num}"
                             manual_val_link = f"[{manual_val}]({manual_url})"
                         
-                        # Create generated link with line number
+                        # Create generated link with sheet reference
                         generated_val_link = generated_val
-                        if generated_row_num:
-                            csv_path = f"output/{result['name']}.csv"
-                            generated_url = f"{csv_path}#L{generated_row_num}"
-                            generated_val_link = f"[{generated_val}]({generated_url})"
+                        if generated_row_num and result.get('target_info') and result['target_info'].get('tracking_info'):
+                            tracking_info = result['target_info']['tracking_info']
+                            url_lookup = tracking_info.get('url_lookup', {})
+                            generated_sheet_name = result['target_info']['generated_worksheet_name']
+                            
+                            if generated_sheet_name in url_lookup:
+                                col_letter = get_column_letter(col, result['generated_df'])
+                                base_url = url_lookup[generated_sheet_name]
+                                generated_url = f"{base_url}&range={col_letter}{generated_row_num}"
+                                generated_val_link = f"[{generated_val}]({generated_url})"
                         
                         # Get explanation if available
                         explanation = diff.get('analysis', {}).get('explanation', '')
@@ -662,20 +744,28 @@ def main():
         
         print("Starting validation process...")
         
+        # Load tracking information
+        tracking_info = load_tracking_info()
+        
         for target in validation_targets:
             print(f"\nValidating {target['name']}...")
             
             # Load manual worksheet data
-            print(f"  Loading manual data from {target['worksheet_name']}...")
-            df_manual, manual_rows_skipped = load_worksheet_data(gc, target['spreadsheet_name'], target['worksheet_name'])
+            print(f"  Loading manual data from {target['manual_worksheet_name']}...")
+            df_manual, manual_rows_skipped = load_worksheet_data(gc, target['spreadsheet_name'], target['manual_worksheet_name'])
             
-            # Load generated CSV data
-            print(f"  Loading generated data from {target['csv_path']}...")
-            df_generated = load_csv_data(target['csv_path'])
+            # Load generated worksheet data
+            print(f"  Loading generated data from {target['generated_worksheet_name']}...")
+            df_generated, generated_rows_skipped = load_generated_worksheet_data(gc, target['spreadsheet_name'], target['generated_worksheet_name'])
+            
+            # Add tracking info to target config
+            target_with_tracking = target.copy()
+            target_with_tracking['tracking_info'] = tracking_info
             
             # Compare the data
             print("  Comparing data...")
-            results = compare_dataframes(df_manual, df_generated, target['id_column'], target['name'], target, manual_rows_skipped)
+            results = compare_dataframes(df_manual, df_generated, target['id_column'], target['name'], target_with_tracking, manual_rows_skipped)
+            results['generated_rows_skipped'] = generated_rows_skipped
             all_results.append(results)
             
             if 'error' not in results:

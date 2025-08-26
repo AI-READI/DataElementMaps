@@ -33,8 +33,8 @@ load_dotenv()
 class SourceTracking:
     """Tracks where a value came from for validation reports."""
     source_type: str  # 'concept_relationship_manual', 'postgres_lookup', 'defaults', 'mapping_source'
+    source_sheet: Optional[str] = None  # Sheet name like 'concept_manual'
     source_cell: Optional[str] = None  # Google Sheets cell reference like 'A5'
-    source_url: Optional[str] = None   # Full URL to source cell
 
 # Configuration for source data spreadsheets
 mapping_sources = [
@@ -106,7 +106,7 @@ omop_field_map = {
     'temp standard': 'standard_concept'
 }
 
-def read_mapping_sources(gc: gspread.Client) -> Dict[str, List[int]]:
+def read_mapping_sources(gc: gspread.Client) -> Tuple[Dict[str, List[int]], Dict[int, SourceTracking]]:
     """
     Read the two mapping sources and extract TARGET_CONCEPT_ID and qualifier_concept_id.
     
@@ -114,9 +114,10 @@ def read_mapping_sources(gc: gspread.Client) -> Dict[str, List[int]]:
         gc: Authenticated Google Sheets client
         
     Returns:
-        Dict mapping source tag to list of concept IDs
+        Tuple of (Dict mapping source tag to list of concept IDs, Dict mapping concept_id to SourceTracking)
     """
     all_concept_ids = {}
+    mapping_sources_tracking = {}  # Track where each concept_id came from
     
     for source in mapping_sources:
         if not source['process']:
@@ -134,24 +135,51 @@ def read_mapping_sources(gc: gspread.Client) -> Dict[str, List[int]]:
         
         # Extract TARGET_CONCEPT_ID
         if 'TARGET_CONCEPT_ID' in df.columns:
-            target_ids = pd.to_numeric(df['TARGET_CONCEPT_ID'], errors='coerce').fillna(0).astype(int)
-            valid_targets = target_ids[target_ids > 2000000000].tolist()
-            concept_ids.extend(valid_targets)
+            target_col_index = list(df.columns).index('TARGET_CONCEPT_ID')
+            col_letter = get_column_letter(target_col_index)
+            
+            for idx, value in enumerate(df['TARGET_CONCEPT_ID']):
+                if pd.notna(value):
+                    numeric_value = pd.to_numeric(value, errors='coerce')
+                    if pd.notna(numeric_value):
+                        concept_id = int(numeric_value)
+                        if concept_id > 2000000000:
+                            concept_ids.append(concept_id)
+                            # Track mapping source - row is idx + 2 (1-indexed + header)
+                            row_num = idx + 2  
+                            cell_ref = f"{col_letter}{row_num}"
+                            mapping_sources_tracking[concept_id] = SourceTracking('mapping_source', f'mapping_{tag}', cell_ref)
+            
+            valid_targets = [cid for cid in concept_ids if cid > 2000000000]
             print(f"  Found {len(valid_targets)} TARGET_CONCEPT_ID values")
         
         # Extract qualifier_concept_id for RedCap only
         if tag == 'RedCap' and 'qualifier_concept_id' in df.columns:
-            qualifier_ids = pd.to_numeric(df['qualifier_concept_id'], errors='coerce').fillna(0).astype(int)
-            valid_qualifiers = qualifier_ids[qualifier_ids > 2000000000].tolist()
-            concept_ids.extend(valid_qualifiers)
-            print(f"  Found {len(valid_qualifiers)} qualifier_concept_id values")
+            qualifier_col_index = list(df.columns).index('qualifier_concept_id')
+            col_letter = get_column_letter(qualifier_col_index)
+            
+            qualifier_count = 0
+            for idx, value in enumerate(df['qualifier_concept_id']):
+                if pd.notna(value):
+                    numeric_value = pd.to_numeric(value, errors='coerce')
+                    if pd.notna(numeric_value):
+                        concept_id = int(numeric_value)
+                        if concept_id > 2000000000:
+                            concept_ids.append(concept_id)
+                            # Track mapping source - row is idx + 2 (1-indexed + header) 
+                            row_num = idx + 2
+                            cell_ref = f"{col_letter}{row_num}"
+                            mapping_sources_tracking[concept_id] = SourceTracking('mapping_source', f'mapping_{tag}', cell_ref)
+                            qualifier_count += 1
+            
+            print(f"  Found {qualifier_count} qualifier_concept_id values")
         
         all_concept_ids[tag] = list(set(concept_ids))  # Remove duplicates
         print(f"  Total unique concept IDs for {tag}: {len(all_concept_ids[tag])}")
     
-    return all_concept_ids
+    return all_concept_ids, mapping_sources_tracking
 
-def create_concept_dict(concept_ids_by_source: Dict[str, List[int]]) -> Dict[int, Dict]:
+def create_concept_dict(concept_ids_by_source: Dict[str, List[int]], mapping_sources_tracking: Dict[int, SourceTracking]) -> Dict[int, Dict]:
     """
     Create concept dict with concept_id as key and two dicts to be filled in:
     concept and concept_relationship with appropriate columns starting empty.
@@ -187,6 +215,10 @@ def create_concept_dict(concept_ids_by_source: Dict[str, List[int]]) -> Dict[int
         for tag, ids in concept_ids_by_source.items():
             if concept_id in ids:
                 concept_dict[concept_id]['source_tags'].append(tag)
+        
+        # Add mapping source tracking if available
+        if concept_id in mapping_sources_tracking:
+            concept_dict[concept_id]['tracking']['mapping_source'] = mapping_sources_tracking[concept_id]
     
     return concept_dict
 
@@ -344,9 +376,7 @@ def create_tracking_info(sheet_type: str, row_index: int, column_name: str, df: 
     else:
         base_url = f"{spreadsheet_config['base_url']}?gid=0#gid=0"
     
-    source_url = f"{base_url}&range={cell_ref}"
-    
-    return SourceTracking(sheet_type, cell_ref, source_url)
+    return SourceTracking(sheet_type, sheet_type, cell_ref)
 
 def fill_concept_dict(concept_dict: Dict[int, Dict], concept_manual_df: pd.DataFrame, concept_relationship_manual_df: pd.DataFrame) -> Dict[int, Dict]:
     """
@@ -460,7 +490,7 @@ def fill_concept_dict(concept_dict: Dict[int, Dict], concept_manual_df: pd.DataF
                 for csv_col, omop_field in omop_field_map.items():
                     if omop_field in omop_concept:
                         rel_data[csv_col] = omop_concept[omop_field]
-                        data['tracking'][f'concept_relationship.{csv_col}'] = SourceTracking('postgres_lookup')
+                        data['tracking'][f'concept_relationship.{csv_col}'] = SourceTracking('postgres_lookup', 'postgres', None)
             
             filled_count += 1
         else:
@@ -774,6 +804,11 @@ def save_tracking_info(concept_dict: Dict[int, Dict], gc: gspread.Client) -> Non
         else:
             url_lookup[sheet_name] = sheet_info['url']
     
+    # Add mapping sheets
+    for source in mapping_sources:
+        if source['process']:
+            url_lookup[f"mapping_{source['tag']}"] = source['location']
+    
     tracking_data = {
         'url_lookup': url_lookup,
         'concepts': {}
@@ -789,8 +824,8 @@ def save_tracking_info(concept_dict: Dict[int, Dict], gc: gspread.Client) -> Non
         for key, tracking in data['tracking'].items():
             tracking_data['concepts'][str(concept_id)]['tracking'][key] = {
                 'source_type': tracking.source_type,
-                'source_cell': tracking.source_cell,
-                'source_url': tracking.source_url
+                'source_sheet': tracking.source_sheet,
+                'source_cell': tracking.source_cell
             }
     
     with open('output/tracking_info.json', 'w') as f:
@@ -808,11 +843,11 @@ def main() -> None:
         
         # 1. Read the two mapping sources
         print("Step 1: Reading mapping sources...")
-        concept_ids_by_source = read_mapping_sources(gc)
+        concept_ids_by_source, mapping_sources_tracking = read_mapping_sources(gc)
         
         # 2. Create concept dict with concept_id as key
         print("\nStep 2: Creating concept dictionary...")
-        concept_dict = create_concept_dict(concept_ids_by_source)
+        concept_dict = create_concept_dict(concept_ids_by_source, mapping_sources_tracking)
         
         # 3. Load both manual sheets and fill concept dict
         print("\nStep 3: Loading manual data and filling concept dict...")
