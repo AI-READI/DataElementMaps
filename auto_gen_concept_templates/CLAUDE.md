@@ -36,3 +36,9 @@ output. Let's try changing the architecture a bit. Try something like this:
 - Tracking information is being collected for use in validate.py, but it's not actually
   being saved and not being referenced in validate.py yet. Save it to a file, but don't
   change validate.py yet.
+
+
+The urls for concept_manual are not including the worksheet gid. Should be                                                                              │
+│   https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=535320917#gid=535320917                                    │
+│                                                                                                                                                           │
+│   At the top of tracking_info, you should put a url lookup

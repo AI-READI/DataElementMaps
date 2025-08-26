@@ -17,7 +17,7 @@ Date: 2025
 """
 
 import gspread
-from gspread_dataframe import get_as_dataframe
+from gspread_dataframe import get_as_dataframe, set_with_dataframe
 import pandas as pd
 from typing import Dict, List, Any, Optional, Tuple, NamedTuple
 import psycopg2
@@ -322,7 +322,7 @@ def create_tracking_info(sheet_type: str, row_index: int, column_name: str, df: 
     
     # Generate URL based on sheet type
     if sheet_type == 'concept_manual':
-        base_url = "https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=0"  # concept_manual sheet
+        base_url = "https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=535320917#gid=535320917"  # concept_manual sheet
     else:  # concept_relationship_manual
         base_url = manual_concept_mappings['location']
     
@@ -458,17 +458,16 @@ def fill_concept_dict(concept_dict: Dict[int, Dict], concept_manual_df: pd.DataF
     
     return concept_dict
 
-def save_outputs(concept_dict: Dict[int, Dict], concept_ids_by_source: Dict[str, List[int]]) -> None:
+def save_outputs(concept_dict: Dict[int, Dict], concept_ids_by_source: Dict[str, List[int]], gc: gspread.Client) -> None:
     """
-    Save concept.csv and concept_relationship.csv files (no source-specific files).
+    Save data to concept_generated and concept_relationship_generated worksheets.
     
     Args:
         concept_dict: The filled concept dictionary
         concept_ids_by_source: Original concept IDs by source for ordering
+        gc: Authenticated Google Sheets client
     """
-    os.makedirs('output', exist_ok=True)
-    
-    # Prepare concept.csv data
+    # Prepare concept data
     concept_rows = []
     for concept_id in sorted(concept_dict.keys()):
         data = concept_dict[concept_id]
@@ -478,10 +477,8 @@ def save_outputs(concept_dict: Dict[int, Dict], concept_ids_by_source: Dict[str,
     
     concept_df = pd.DataFrame(concept_rows)
     concept_df = concept_df[output_config['concept.csv']['columns']]  # Ensure column order
-    concept_df.to_csv('output/concept.csv', index=False)
-    print(f"Saved output/concept.csv with {len(concept_df)} rows")
     
-    # Prepare concept_relationship.csv data
+    # Prepare concept_relationship data
     relationship_rows = []
     for concept_id in sorted(concept_dict.keys()):
         data = concept_dict[concept_id]
@@ -491,8 +488,41 @@ def save_outputs(concept_dict: Dict[int, Dict], concept_ids_by_source: Dict[str,
     
     relationship_df = pd.DataFrame(relationship_rows)
     relationship_df = relationship_df[output_config['concept_relationship.csv']['columns']]  # Ensure column order
+    
+    # Open the spreadsheet
+    spreadsheet = gc.open(manual_concept_mappings['spreadsheet_name'])
+    
+    # For now, save to CSV files - Google Sheets writing needs manual worksheet creation
+    # TODO: Manually create concept_generated and concept_relationship_generated worksheets first
+    # Then uncomment the Google Sheets writing code below
+    
+    # Save to CSV files
+    os.makedirs('output', exist_ok=True)
+    concept_df.to_csv('output/concept.csv', index=False)
     relationship_df.to_csv('output/concept_relationship.csv', index=False)
-    print(f"Saved output/concept_relationship.csv with {len(relationship_df)} rows")
+    print(f"Saved concept.csv with {len(concept_df)} rows")
+    print(f"Saved concept_relationship.csv with {len(relationship_df)} rows")
+    print("NOTE: To write to Google Sheets, manually create 'concept_generated' and 'concept_relationship_generated' worksheets first")
+    
+    try:
+        concept_worksheet = spreadsheet.worksheet('concept_generated')
+        print("Found existing concept_generated worksheet, clearing it...")
+        concept_worksheet.clear()
+        print(f"Writing {len(concept_df)} rows to concept_generated worksheet...")
+        set_with_dataframe(concept_worksheet, concept_df, include_index=False)
+        print(f"Saved concept_generated worksheet with {len(concept_df)} rows")
+    except:
+        print("concept_generated worksheet not found - please create it manually first")
+
+    try:
+        relationship_worksheet = spreadsheet.worksheet('concept_relationship_generated')
+        print("Found existing concept_relationship_generated worksheet, clearing it...")
+        relationship_worksheet.clear()
+        print(f"Writing {len(relationship_df)} rows to concept_relationship_generated worksheet...")
+        set_with_dataframe(relationship_worksheet, relationship_df, include_index=False)
+        print(f"Saved concept_relationship_generated worksheet with {len(relationship_df)} rows")
+    except:
+        print("concept_relationship_generated worksheet not found - please create it manually first")
 
 def save_tracking_info(concept_dict: Dict[int, Dict]) -> None:
     """
@@ -501,17 +531,28 @@ def save_tracking_info(concept_dict: Dict[int, Dict]) -> None:
     Args:
         concept_dict: The concept dictionary with tracking info
     """
-    tracking_data = {}
+    # URL lookup at the top
+    url_lookup = {
+        'concept_manual': 'https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=535320917#gid=535320917',
+        'concept_relationship_manual': 'https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125',
+        'concept_generated': 'https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=TBD#gid=TBD',
+        'concept_relationship_generated': 'https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=TBD#gid=TBD'
+    }
+    
+    tracking_data = {
+        'url_lookup': url_lookup,
+        'concepts': {}
+    }
     
     for concept_id, data in concept_dict.items():
-        tracking_data[str(concept_id)] = {
+        tracking_data['concepts'][str(concept_id)] = {
             'source_tags': data['source_tags'],
             'tracking': {}
         }
         
         # Convert SourceTracking objects to serializable format
         for key, tracking in data['tracking'].items():
-            tracking_data[str(concept_id)]['tracking'][key] = {
+            tracking_data['concepts'][str(concept_id)]['tracking'][key] = {
                 'source_type': tracking.source_type,
                 'source_cell': tracking.source_cell,
                 'source_url': tracking.source_url
@@ -520,7 +561,7 @@ def save_tracking_info(concept_dict: Dict[int, Dict]) -> None:
     with open('output/tracking_info.json', 'w') as f:
         json.dump(tracking_data, f, indent=2)
     
-    print(f"Saved tracking information for {len(tracking_data)} concepts")
+    print(f"Saved tracking information for {len(tracking_data['concepts'])} concepts")
 
 def main() -> None:
     """
@@ -546,7 +587,7 @@ def main() -> None:
         
         # 4. Save outputs
         print("\nStep 4: Saving output files...")
-        save_outputs(concept_dict, concept_ids_by_source)
+        save_outputs(concept_dict, concept_ids_by_source, gc)
         
         # 5. Save tracking information
         print("\nStep 5: Saving tracking information...")
