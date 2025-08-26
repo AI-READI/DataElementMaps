@@ -506,7 +506,7 @@ def fill_concept_dict(concept_dict: Dict[int, Dict], concept_manual_df: pd.DataF
     
     return concept_dict
 
-def copy_subheader_and_formatting(source_worksheet, target_worksheet, target_df: pd.DataFrame) -> None:
+def copy_subheader_and_formatting_fixed(source_worksheet, target_worksheet, target_df: pd.DataFrame) -> None:
     """
     Copy subheader row and formatting from source worksheet to target worksheet.
     
@@ -572,13 +572,17 @@ def copy_subheader_and_formatting(source_worksheet, target_worksheet, target_df:
                 }
             })
         
-        # Insert a blank row at the top for the subheader
+        # Don't insert a blank row - instead we'll work with the existing structure
+        # The data is already written starting from row 2, so we need to:
+        # 1. Insert a row at position 2 to push data down
+        # 2. Write subheader content to the new row 2
+        
         requests.append({
             'insertDimension': {
                 'range': {
                     'sheetId': target_sheet_id,
                     'dimension': 'ROWS',
-                    'startIndex': 1,  # Insert after header row
+                    'startIndex': 1,  # Insert after header row (before data)
                     'endIndex': 2
                 },
                 'inheritFromBefore': False
@@ -663,6 +667,36 @@ def copy_subheader_and_formatting(source_worksheet, target_worksheet, target_df:
             }
         })
         
+        # Clear formatting from data rows (row 3 onwards) to prevent subheader formatting bleeding
+        requests.append({
+            'repeatCell': {
+                'range': {
+                    'sheetId': target_sheet_id,
+                    'startRowIndex': 2,  # Start from row 3 (data rows)
+                    'endRowIndex': min(1000, len(target_df) + 10),  # Clear enough rows
+                    'startColumnIndex': 0,
+                    'endColumnIndex': len(target_df.columns)
+                },
+                'cell': {
+                    'userEnteredFormat': {}  # Clear all formatting
+                },
+                'fields': 'userEnteredFormat'
+            }
+        })
+        
+        # Freeze the top 2 rows (header and subheader)
+        requests.append({
+            'updateSheetProperties': {
+                'properties': {
+                    'sheetId': target_sheet_id,
+                    'gridProperties': {
+                        'frozenRowCount': 2
+                    }
+                },
+                'fields': 'gridProperties.frozenRowCount'
+            }
+        })
+        
         # Execute formatting batch update
         if requests:
             target_worksheet.spreadsheet.batch_update({'requests': requests})
@@ -673,40 +707,86 @@ def copy_subheader_and_formatting(source_worksheet, target_worksheet, target_df:
         import traceback
         traceback.print_exc()
 
+def create_aligned_dataframe(manual_df: pd.DataFrame, concept_dict: Dict[int, Dict], 
+                           data_type: str, columns: List[str]) -> pd.DataFrame:
+    """
+    Create a DataFrame that aligns row-by-row with the manual sheet.
+    
+    Args:
+        manual_df: Manual sheet DataFrame to align with
+        concept_dict: Generated concept data
+        data_type: 'concept' or 'concept_relationship'
+        columns: Column order for output
+        
+    Returns:
+        Aligned DataFrame with same row structure as manual sheet
+    """
+    # Get the ID column name
+    id_column = 'concept_id' if data_type == 'concept' else 'concept_id_1'
+    
+    # Create empty DataFrame with same structure as manual
+    aligned_rows = []
+    unmatched_generated_rows = []
+    
+    # Iterate through manual sheet rows to maintain row order
+    for _, manual_row in manual_df.iterrows():
+        manual_concept_id = int(manual_row[id_column])
+        
+        if manual_concept_id in concept_dict:
+            # We have generated data for this concept - use it
+            generated_data = concept_dict[manual_concept_id][data_type].copy()
+            aligned_rows.append(generated_data)
+        else:
+            # No generated data for this manual concept - create blank row
+            blank_row = {col: '' for col in columns}
+            blank_row[id_column] = manual_concept_id  # Keep the concept ID for reference
+            aligned_rows.append(blank_row)
+    
+    # Collect any generated concepts not in manual (to add at bottom)
+    for concept_id, data in concept_dict.items():
+        if concept_id not in manual_df[id_column].values:
+            unmatched_generated_rows.append(data[data_type].copy())
+    
+    # Combine aligned rows with unmatched generated rows at bottom
+    all_rows = aligned_rows + unmatched_generated_rows
+    
+    # Create DataFrame and ensure column order
+    df = pd.DataFrame(all_rows)
+    df = df.reindex(columns=columns, fill_value='')
+    
+    return df
+
+
 def save_outputs(concept_dict: Dict[int, Dict], concept_ids_by_source: Dict[str, List[int]], gc: gspread.Client) -> None:
     """
     Save data to concept_generated and concept_relationship_generated worksheets.
-    Copy formatting and column widths from manual sheets.
+    Create DataFrames that align row-by-row with manual sheets for easier validation.
     
     Args:
         concept_dict: The filled concept dictionary
         concept_ids_by_source: Original concept IDs by source for ordering
         gc: Authenticated Google Sheets client
     """
-    # Prepare concept data
-    concept_rows = []
-    for concept_id in sorted(concept_dict.keys()):
-        data = concept_dict[concept_id]
-        row = data['concept'].copy()
-        # Remove tracking columns
-        concept_rows.append(row)
-    
-    concept_df = pd.DataFrame(concept_rows)
-    concept_df = concept_df[output_config['concept.csv']['columns']]  # Ensure column order
-    
-    # Prepare concept_relationship data
-    relationship_rows = []
-    for concept_id in sorted(concept_dict.keys()):
-        data = concept_dict[concept_id]
-        row = data['concept_relationship'].copy()
-        # Remove tracking columns
-        relationship_rows.append(row)
-    
-    relationship_df = pd.DataFrame(relationship_rows)
-    relationship_df = relationship_df[output_config['concept_relationship.csv']['columns']]  # Ensure column order
-    
-    # Open the spreadsheet
+    # Load manual sheets to get the row structure we need to match
     spreadsheet = gc.open(spreadsheet_config['spreadsheet_name'])
+    
+    # Load concept_manual with same logic as existing functions
+    concept_manual_df = get_as_dataframe(spreadsheet.worksheet('concept_manual'))
+    if 'concept_id' in concept_manual_df.columns:
+        concept_manual_df = concept_manual_df[pd.notna(concept_manual_df['concept_id']) & (concept_manual_df['concept_id'] != '')]
+        concept_manual_df['concept_id'] = pd.to_numeric(concept_manual_df['concept_id'], errors='coerce').fillna(0).astype(int)
+        concept_manual_df = concept_manual_df[concept_manual_df['concept_id'] > 0]
+    
+    # Load concept_relationship_manual with same logic
+    relationship_manual_df = get_as_dataframe(spreadsheet.worksheet('concept_relationship_manual'))
+    if 'concept_id_1' in relationship_manual_df.columns:
+        relationship_manual_df = relationship_manual_df[pd.notna(relationship_manual_df['concept_id_1']) & (relationship_manual_df['concept_id_1'] != '')]
+        relationship_manual_df['concept_id_1'] = pd.to_numeric(relationship_manual_df['concept_id_1'], errors='coerce').fillna(0).astype(int)
+        relationship_manual_df = relationship_manual_df[relationship_manual_df['concept_id_1'] > 0]
+    
+    # Create generated DataFrames that align row-by-row with manual sheets
+    concept_df = create_aligned_dataframe(concept_manual_df, concept_dict, 'concept', output_config['concept.csv']['columns'])
+    relationship_df = create_aligned_dataframe(relationship_manual_df, concept_dict, 'concept_relationship', output_config['concept_relationship.csv']['columns'])
     
     # For now, save to CSV files - Google Sheets writing needs manual worksheet creation
     # TODO: Manually create concept_generated and concept_relationship_generated worksheets first
@@ -738,7 +818,7 @@ def save_outputs(concept_dict: Dict[int, Dict], concept_ids_by_source: Dict[str,
         # Copy subheader and formatting from concept_manual
         try:
             concept_manual_worksheet = spreadsheet.worksheet('concept_manual')
-            copy_subheader_and_formatting(concept_manual_worksheet, concept_worksheet, concept_df)
+            copy_subheader_and_formatting_fixed(concept_manual_worksheet, concept_worksheet, concept_df)
         except Exception as e:
             print(f"Could not copy subheader and formatting from concept_manual: {e}")
             
@@ -756,7 +836,7 @@ def save_outputs(concept_dict: Dict[int, Dict], concept_ids_by_source: Dict[str,
         # Copy subheader and formatting from concept_relationship_manual
         try:
             concept_relationship_manual_worksheet = spreadsheet.worksheet('concept_relationship_manual')
-            copy_subheader_and_formatting(concept_relationship_manual_worksheet, relationship_worksheet, relationship_df)
+            copy_subheader_and_formatting_fixed(concept_relationship_manual_worksheet, relationship_worksheet, relationship_df)
         except Exception as e:
             print(f"Could not copy subheader and formatting from concept_relationship_manual: {e}")
             

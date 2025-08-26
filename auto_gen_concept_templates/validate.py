@@ -118,15 +118,15 @@ def analyze_difference_type(manual_val: str, generated_val: str, manual_normaliz
         'should_ignore': False
     }
     
-    # Check if it's only whitespace differences
-    manual_stripped = manual_val.strip() if manual_val else ''
-    generated_stripped = generated_val.strip() if generated_val else ''
+    # Check if it's only whitespace differences (including internal whitespace)
+    manual_no_spaces = ''.join(manual_val.split()) if manual_val else ''
+    generated_no_spaces = ''.join(generated_val.split()) if generated_val else ''
     
-    if manual_stripped == generated_stripped and manual_stripped != '':
+    if manual_no_spaces == generated_no_spaces and manual_no_spaces != '':
         analysis['type'] = 'whitespace'
-        analysis['explanation'] = 'Only whitespace differences (leading/trailing spaces)'
+        analysis['explanation'] = 'Only whitespace differences (spaces, tabs, or line breaks)'
         analysis['severity'] = 'low'
-        analysis['should_ignore'] = True
+        analysis['should_ignore'] = False  # Don't ignore, but categorize as whitespace
         return analysis
     
     # Check if it's only case differences
@@ -201,6 +201,9 @@ def load_worksheet_data(gc: gspread.Client, spreadsheet_name: str, worksheet_nam
         
         df = df.iloc[start_idx:end_idx].fillna('')
         
+        # Reset index so that idx starts from 0 for the first data row
+        df = df.reset_index(drop=True)
+        
         # Ensure concept IDs are integers to fix float/int issues
         if id_column in df.columns:
             df[id_column] = pd.to_numeric(df[id_column], errors='coerce').fillna(0).astype(int)
@@ -246,6 +249,9 @@ def load_generated_worksheet_data(gc: gspread.Client, spreadsheet_name: str, wor
                 break
         
         df = df.iloc[start_idx:end_idx].fillna('')
+        
+        # Reset index so that idx starts from 0 for the first data row
+        df = df.reset_index(drop=True)
         
         # Ensure concept IDs are integers to fix float/int issues
         if id_column in df.columns:
@@ -344,9 +350,11 @@ def compare_dataframes(df_manual: pd.DataFrame, df_generated: pd.DataFrame,
         row_num = None
         for idx, df_row in df_manual.iterrows():
             if str(df_row[id_column]) == str(row_id):
-                # Calculate actual Google Sheets row number
-                # idx is 0-based in the cleaned dataframe
-                # Add 2 for 1-indexed + header row, then add rows_skipped
+                # With aligned DataFrames, row numbers match directly
+                # Google Sheets: Row 1=Header, Row 2=Subheader, Row 3+=Data
+                # After reset_index(), idx 0 = first data row in Google Sheets
+                # start_idx tells us how many rows we skipped, so actual row = idx + start_idx + 3
+                # But if user says it should be 167 not 168, we need idx + start_idx + 2
                 row_num = idx + 2 + manual_rows_skipped
                 break
         results['unmatched_manual'].append({
@@ -360,11 +368,13 @@ def compare_dataframes(df_manual: pd.DataFrame, df_generated: pd.DataFrame,
     for row_id in generated_ids - manual_ids:
         row = generated_dict[row_id]
         concept_name = row.get('concept_name', '')
-        # Find the actual row number in the dataframe (add 2 for header + 1-indexed for CSV)
+        # Find the actual row number in the dataframe
         row_num = None
         for idx, df_row in df_generated.iterrows():
             if str(df_row[id_column]) == str(row_id):
-                row_num = idx + 2  # +2 for header and 1-indexed for CSV
+                # With aligned DataFrames, use same calculation as manual
+                # Since DataFrames are aligned, they have same row structure  
+                row_num = idx + 2 + manual_rows_skipped
                 break
         results['unmatched_generated'].append({
             'id': row_id,
@@ -599,38 +609,69 @@ This report compares generated Google Sheets against manual Google Sheets:
                     report += f"| {col} | {stats['matching']} | {stats['total']} | {match_rate:.1f}% |\n"
                 report += "\n"
             
-            # Single comprehensive table for all discrepancies
-            report += "#### All Discrepancies\n\n"
+            # Group discrepancies by type
+            report += "#### Discrepancy Summary\n\n"
             report += "- 🔴 Manual values link to specific cells in manual Google Sheets\n"
             report += "- 🔵 Generated values link to specific cells in generated Google Sheets\n"
             report += "- Explanations in parentheses describe the type of difference\n\n"
 
-            # First, collect column stats to determine which ones have >5 blanks
+            # Categorize all discrepancies
+            whitespace_case_diffs = []
+            blank_diffs = []
+            substantive_diffs = []
             column_blank_counts = {}
+            
             for row_diff in result['discrepancies']:
                 for col, diff in row_diff['differences'].items():
+                    # Track blank counts
                     if col not in column_blank_counts:
                         column_blank_counts[col] = {'manual_blanks': 0, 'generated_blanks': 0, 'total': 0}
                     column_blank_counts[col]['total'] += 1
-                    if diff['manual_normalized'] == '':
-                        column_blank_counts[col]['manual_blanks'] += 1
-                    if diff['generated_normalized'] == '':
-                        column_blank_counts[col]['generated_blanks'] += 1
+                    
+                    diff_type = diff.get('analysis', {}).get('type', 'content')
+                    
+                    if diff_type in ['whitespace', 'case', 'formatting']:
+                        whitespace_case_diffs.append((row_diff, col, diff))
+                    elif diff_type in ['missing_manual', 'missing_generated']:
+                        blank_diffs.append((row_diff, col, diff))
+                        if diff['manual_normalized'] == '':
+                            column_blank_counts[col]['manual_blanks'] += 1
+                        if diff['generated_normalized'] == '':
+                            column_blank_counts[col]['generated_blanks'] += 1
+                    else:
+                        substantive_diffs.append((row_diff, col, diff))
             
-            # Show counts for columns with >5 blanks
-            high_blank_columns = []
+            # Show blank summaries for all columns with blanks
+            blank_summary_columns = []
             for col, stats in column_blank_counts.items():
-                if stats['manual_blanks'] > 5 or stats['generated_blanks'] > 5:
-                    high_blank_columns.append(col)
+                if stats['manual_blanks'] > 0 or stats['generated_blanks'] > 0:
+                    blank_summary_columns.append(col)
                     report += f"**{col}**: {stats['manual_blanks']} manual blanks, {stats['generated_blanks']} generated blanks (out of {stats['total']} total differences)\n\n"
             
-            if high_blank_columns:
+            # Show whitespace/case summary
+            if whitespace_case_diffs:
+                report += f"**Whitespace/Case differences**: {len(whitespace_case_diffs)} instances across {len(set(item[1] for item in whitespace_case_diffs))} columns\n"
+                # Show 2-3 examples
+                for i, (row_diff, col, diff) in enumerate(whitespace_case_diffs[:3]):
+                    concept_name = row_diff['concept_name_manual']
+                    concept_id = row_diff['id']
+                    manual_val = diff['manual'] if diff['manual'] else 'blank'
+                    generated_val = diff['generated'] if diff['generated'] else 'blank'
+                    explanation = diff.get('analysis', {}).get('explanation', '')
+                    report += f"- {concept_name} ({concept_id}) - {col}: \"{manual_val}\" vs \"{generated_val}\" ({explanation})\n"
+                if len(whitespace_case_diffs) > 3:
+                    report += f"- ... and {len(whitespace_case_diffs) - 3} more\n"
                 report += "\n"
             
-            # Show detailed table for columns without excessive blanks
-            detailed_columns = [col for col in column_blank_counts.keys() if col not in high_blank_columns]
+            if blank_summary_columns:
+                report += "\n"
+            
+            # Show detailed table only for substantive differences
+            detailed_columns = set(item[1] for item in substantive_diffs)
             
             if detailed_columns:
+                report += f"#### Substantive Content Differences ({len(substantive_diffs)} instances)\n\n"
+                
                 # Helper function to get column letter from column name
                 def get_column_letter(col_name, df):
                     try:
@@ -643,12 +684,23 @@ This report compares generated Google Sheets against manual Google Sheets:
                     except ValueError:
                         return 'A'  # fallback
                 
-                # Sort discrepancies by concept name, then by column name within each concept
-                sorted_discrepancies = sorted(result['discrepancies'], key=lambda x: (x['concept_name_manual'], x['id']))
+                # Group substantive differences by concept
+                substantive_by_concept = {}
+                for row_diff, col, diff in substantive_diffs:
+                    concept_id = row_diff['id']
+                    if concept_id not in substantive_by_concept:
+                        substantive_by_concept[concept_id] = {
+                            'row_diff': row_diff,
+                            'differences': []
+                        }
+                    substantive_by_concept[concept_id]['differences'].append((col, diff))
+                
+                # Sort concepts by name
+                sorted_concepts = sorted(substantive_by_concept.items(), key=lambda x: x[1]['row_diff']['concept_name_manual'])
                 
                 # Group by concept using nested lists
-                for row_diff in sorted_discrepancies:
-                    concept_id = row_diff['id']
+                for concept_id, concept_data in sorted_concepts:
+                    row_diff = concept_data['row_diff']
                     concept_name_manual = row_diff['concept_name_manual']
                     
                     # Get row numbers for linking
@@ -662,26 +714,27 @@ This report compares generated Google Sheets against manual Google Sheets:
                         for idx, df_row in result['manual_df'].iterrows():
                             if str(df_row[id_column]) == str(concept_id):
                                 # Calculate actual Google Sheets row number 
-                                # idx is 0-based in cleaned dataframe, add 2 for 1-indexed + header, then add rows_skipped
+                                # idx is 0-based in cleaned dataframe
+                                # Google Sheets structure: Row 1=Header, Row 2=Subheader, Row 3+=Data
+                                # After reset_index(), idx 0 = first data row
+                                # Adjusted formula to match expected row numbers
                                 manual_row_num = idx + 2 + result['manual_rows_skipped']
                                 break
                         
                         # Find row number in generated dataframe  
                         for idx, df_row in result['generated_df'].iterrows():
                             if str(df_row[id_column]) == str(concept_id):
-                                generated_row_num = idx + 2  # +2 for header and 1-indexed
+                                # With aligned DataFrames, manual and generated rows should be at same positions
+                                generated_row_num = idx + 2 + result['manual_rows_skipped']  # Same calculation as manual
                                 break
                     
                     # Show concept header with nested differences
-                    concept_has_details = False
                     concept_details = []
                     
                     # Sort columns within each concept
-                    sorted_columns_for_concept = sorted([(col, diff) for col, diff in row_diff['differences'].items() if col in detailed_columns])
+                    sorted_columns_for_concept = sorted(concept_data['differences'])
                     
                     for col, diff in sorted_columns_for_concept:
-                        concept_has_details = True
-                        
                         # Create linked values with proper column references
                         manual_val = diff['manual'] if diff['manual'] else 'blank'
                         generated_val = diff['generated'] if diff['generated'] else 'blank'
@@ -709,10 +762,6 @@ This report compares generated Google Sheets against manual Google Sheets:
                         
                         # Get explanation if available
                         explanation = diff.get('analysis', {}).get('explanation', '')
-                        severity = diff.get('analysis', {}).get('severity', 'medium')
-                        
-                        # Add severity indicator
-                        severity_icon = {'low': '🟡', 'medium': '🟠', 'high': '🔴'}.get(severity, '🟠')
                         
                         # Add to concept details with explanation
                         detail_line = f"  - {col}: 🔴 {manual_val_link} vs 🔵 {generated_val_link}"
@@ -720,12 +769,10 @@ This report compares generated Google Sheets against manual Google Sheets:
                             detail_line += f" ({explanation})"
                         concept_details.append(detail_line)
                     
-                    # Only show concept if it has details
-                    if concept_has_details:
-                        report += f"- **{concept_name_manual}** ({concept_id})\n"
-                        for detail in concept_details:
-                            report += f"{detail}\n"
-                        # report += "\n"
+                    # Show concept with details
+                    report += f"- **{concept_name_manual}** ({concept_id})\n"
+                    for detail in concept_details:
+                        report += f"{detail}\n"
     
     return report
 
