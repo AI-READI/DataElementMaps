@@ -54,11 +54,29 @@ mapping_sources = [
     },
 ]
 
-# Manual concept mappings - contains all concept metadata and relationships
-manual_concept_mappings = {
+# Spreadsheet configuration - contains all manual and generated worksheets
+spreadsheet_config = {
     'spreadsheet_name': 'template_4_adding_vocabulary-2',
-    'worksheet_name': 'concept_relationship_manual',
-    'location': 'https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125',
+    'spreadsheet_id': '1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY',
+    'base_url': 'https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit',
+    'worksheets': {
+        'concept_manual': {
+            'gid': '535320917',
+            'url': 'https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=535320917#gid=535320917'
+        },
+        'concept_relationship_manual': {
+            'gid': '933853125', 
+            'url': 'https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125'
+        },
+        'concept_generated': {
+            'gid': 'TBD',  # Will be determined dynamically
+            'url': 'TBD'   # Will be determined dynamically
+        },
+        'concept_relationship_generated': {
+            'gid': 'TBD',  # Will be determined dynamically
+            'url': 'TBD'   # Will be determined dynamically
+        }
+    }
 }
 
 # Output file specifications
@@ -183,7 +201,7 @@ def load_concept_manual(gc: gspread.Client) -> pd.DataFrame:
         DataFrame with concept_manual data
     """
     print("Loading concept_manual...")
-    spreadsheet = gc.open(manual_concept_mappings['spreadsheet_name'])
+    spreadsheet = gc.open(spreadsheet_config['spreadsheet_name'])
     worksheet = spreadsheet.worksheet('concept_manual')
     df = get_as_dataframe(worksheet)
     
@@ -210,8 +228,8 @@ def load_concept_relationship_manual(gc: gspread.Client) -> pd.DataFrame:
         DataFrame with concept_relationship_manual data
     """
     print("Loading concept_relationship_manual...")
-    spreadsheet = gc.open(manual_concept_mappings['spreadsheet_name'])
-    worksheet = spreadsheet.worksheet(manual_concept_mappings['worksheet_name'])
+    spreadsheet = gc.open(spreadsheet_config['spreadsheet_name'])
+    worksheet = spreadsheet.worksheet('concept_relationship_manual')
     df = get_as_dataframe(worksheet)
     
     # Clean data by removing empty rows
@@ -317,14 +335,14 @@ def create_tracking_info(sheet_type: str, row_index: int, column_name: str, df: 
     
     # Generate cell reference (Excel style)
     col_letter = get_column_letter(col_index)
-    row_num = row_index + 2  # +2 because row_index is 0-based and there's a header row
+    row_num = row_index + 3  # +3 because row_index is 0-based, plus header row, plus subheader row
     cell_ref = f"{col_letter}{row_num}"
     
     # Generate URL based on sheet type
-    if sheet_type == 'concept_manual':
-        base_url = "https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=535320917#gid=535320917"  # concept_manual sheet
-    else:  # concept_relationship_manual
-        base_url = manual_concept_mappings['location']
+    if sheet_type in spreadsheet_config['worksheets']:
+        base_url = spreadsheet_config['worksheets'][sheet_type]['url']
+    else:
+        base_url = f"{spreadsheet_config['base_url']}?gid=0#gid=0"
     
     source_url = f"{base_url}&range={cell_ref}"
     
@@ -458,9 +476,177 @@ def fill_concept_dict(concept_dict: Dict[int, Dict], concept_manual_df: pd.DataF
     
     return concept_dict
 
+def copy_subheader_and_formatting(source_worksheet, target_worksheet, target_df: pd.DataFrame) -> None:
+    """
+    Copy subheader row and formatting from source worksheet to target worksheet.
+    
+    Args:
+        source_worksheet: Source worksheet to copy from
+        target_worksheet: Target worksheet to copy to
+        target_df: The data dataframe being written
+    """
+    print(f"Copying subheader and formatting from {source_worksheet.title} to {target_worksheet.title}...")
+    
+    try:
+        # Get the subheader row (row 1, 0-indexed) from source
+        source_raw = get_as_dataframe(source_worksheet, header=None)
+        if len(source_raw) < 2:
+            print("Source sheet doesn't have a subheader row")
+            return
+            
+        subheader_row = source_raw.iloc[1].tolist()  # Get row 1 (subheader)
+        
+        # Prepare batch update requests
+        requests = []
+        
+        # Get target sheet ID 
+        target_sheet_metadata = target_worksheet.spreadsheet.fetch_sheet_metadata()
+        target_sheet_id = None
+        for sheet in target_sheet_metadata['sheets']:
+            if sheet['properties']['title'] == target_worksheet.title:
+                target_sheet_id = sheet['properties']['sheetId']
+                break
+        
+        if target_sheet_id is None:
+            print(f"Could not find target sheet ID for {target_worksheet.title}")
+            return
+            
+        # Set reasonable column widths
+        standard_widths = {
+            0: 400,   # concept_name - much wider for long descriptions
+            1: 120,   # SRC_CODE 
+            2: 100,   # concept_id
+            3: 120,   # vocabulary_id
+            4: 120,   # domain_id
+            5: 120,   # v6_domain_id
+            6: 140,   # concept_class_id
+            7: 100,   # standard_concept
+            8: 120,   # dates and other fields
+        }
+        
+        # Apply column widths
+        for col_index in range(min(len(target_df.columns), 20)):  # Don't go beyond reasonable number
+            width = standard_widths.get(col_index, 120)  # Default width
+            requests.append({
+                'updateDimensionProperties': {
+                    'range': {
+                        'sheetId': target_sheet_id,
+                        'dimension': 'COLUMNS',
+                        'startIndex': col_index,
+                        'endIndex': col_index + 1
+                    },
+                    'properties': {
+                        'pixelSize': width
+                    },
+                    'fields': 'pixelSize'
+                }
+            })
+        
+        # Insert a blank row at the top for the subheader
+        requests.append({
+            'insertDimension': {
+                'range': {
+                    'sheetId': target_sheet_id,
+                    'dimension': 'ROWS',
+                    'startIndex': 1,  # Insert after header row
+                    'endIndex': 2
+                },
+                'inheritFromBefore': False
+            }
+        })
+        
+        # Execute the insert first
+        if requests:
+            target_worksheet.spreadsheet.batch_update({'requests': requests})
+        
+        # Now add the subheader content and formatting
+        requests = []
+        
+        # Add subheader row content (matching columns from target_df)
+        subheader_values = []
+        for col_name in target_df.columns:
+            col_idx = list(source_raw.iloc[0]).index(col_name) if col_name in source_raw.iloc[0].values else -1
+            if col_idx >= 0 and col_idx < len(subheader_row):
+                subheader_values.append(subheader_row[col_idx] if pd.notna(subheader_row[col_idx]) else "")
+            else:
+                subheader_values.append("")
+        
+        # Update subheader row with values
+        if subheader_values:
+            # Convert to the range format that gspread expects
+            cell_range = f"A2:{get_column_letter(len(subheader_values)-1)}2"
+            target_worksheet.update(values=[subheader_values], range_name=cell_range)
+        
+        # Format header row (bold, dark gray background)
+        requests.append({
+            'repeatCell': {
+                'range': {
+                    'sheetId': target_sheet_id,
+                    'startRowIndex': 0,
+                    'endRowIndex': 1,
+                    'startColumnIndex': 0,
+                    'endColumnIndex': len(target_df.columns)
+                },
+                'cell': {
+                    'userEnteredFormat': {
+                        'textFormat': {
+                            'bold': True
+                        },
+                        'backgroundColor': {
+                            'red': 0.8,
+                            'green': 0.8,
+                            'blue': 0.8,
+                            'alpha': 1.0
+                        }
+                    }
+                },
+                'fields': 'userEnteredFormat(textFormat,backgroundColor)'
+            }
+        })
+        
+        # Format subheader row (italic, light gray background)
+        requests.append({
+            'repeatCell': {
+                'range': {
+                    'sheetId': target_sheet_id,
+                    'startRowIndex': 1,
+                    'endRowIndex': 2,
+                    'startColumnIndex': 0,
+                    'endColumnIndex': len(target_df.columns)
+                },
+                'cell': {
+                    'userEnteredFormat': {
+                        'textFormat': {
+                            'italic': True,
+                            'fontSize': 9
+                        },
+                        'backgroundColor': {
+                            'red': 0.95,
+                            'green': 0.95,
+                            'blue': 0.95,
+                            'alpha': 1.0
+                        },
+                        'wrapStrategy': 'WRAP'
+                    }
+                },
+                'fields': 'userEnteredFormat(textFormat,backgroundColor,wrapStrategy)'
+            }
+        })
+        
+        # Execute formatting batch update
+        if requests:
+            target_worksheet.spreadsheet.batch_update({'requests': requests})
+            print(f"Applied subheader and {len(requests)} formatting updates successfully")
+    
+    except Exception as e:
+        print(f"Error copying subheader and formatting: {e}")
+        import traceback
+        traceback.print_exc()
+
 def save_outputs(concept_dict: Dict[int, Dict], concept_ids_by_source: Dict[str, List[int]], gc: gspread.Client) -> None:
     """
     Save data to concept_generated and concept_relationship_generated worksheets.
+    Copy formatting and column widths from manual sheets.
     
     Args:
         concept_dict: The filled concept dictionary
@@ -490,18 +676,25 @@ def save_outputs(concept_dict: Dict[int, Dict], concept_ids_by_source: Dict[str,
     relationship_df = relationship_df[output_config['concept_relationship.csv']['columns']]  # Ensure column order
     
     # Open the spreadsheet
-    spreadsheet = gc.open(manual_concept_mappings['spreadsheet_name'])
+    spreadsheet = gc.open(spreadsheet_config['spreadsheet_name'])
     
     # For now, save to CSV files - Google Sheets writing needs manual worksheet creation
     # TODO: Manually create concept_generated and concept_relationship_generated worksheets first
     # Then uncomment the Google Sheets writing code below
     
-    # Save to CSV files
+    # Save to CSV files with blank first row to match subheader structure
     os.makedirs('output', exist_ok=True)
-    concept_df.to_csv('output/concept.csv', index=False)
-    relationship_df.to_csv('output/concept_relationship.csv', index=False)
-    print(f"Saved concept.csv with {len(concept_df)} rows")
-    print(f"Saved concept_relationship.csv with {len(relationship_df)} rows")
+    
+    # Add blank first row to concept CSV for subheader space
+    concept_df_with_blank = pd.concat([pd.DataFrame([[''] * len(concept_df.columns)], columns=concept_df.columns), concept_df], ignore_index=True)
+    concept_df_with_blank.to_csv('output/concept.csv', index=False)
+    
+    # Add blank first row to relationship CSV for subheader space
+    relationship_df_with_blank = pd.concat([pd.DataFrame([[''] * len(relationship_df.columns)], columns=relationship_df.columns), relationship_df], ignore_index=True)
+    relationship_df_with_blank.to_csv('output/concept_relationship.csv', index=False)
+    
+    print(f"Saved concept.csv with {len(concept_df)} data rows (plus blank subheader row)")
+    print(f"Saved concept_relationship.csv with {len(relationship_df)} data rows (plus blank subheader row)")
     print("NOTE: To write to Google Sheets, manually create 'concept_generated' and 'concept_relationship_generated' worksheets first")
     
     try:
@@ -511,8 +704,16 @@ def save_outputs(concept_dict: Dict[int, Dict], concept_ids_by_source: Dict[str,
         print(f"Writing {len(concept_df)} rows to concept_generated worksheet...")
         set_with_dataframe(concept_worksheet, concept_df, include_index=False)
         print(f"Saved concept_generated worksheet with {len(concept_df)} rows")
-    except:
-        print("concept_generated worksheet not found - please create it manually first")
+        
+        # Copy subheader and formatting from concept_manual
+        try:
+            concept_manual_worksheet = spreadsheet.worksheet('concept_manual')
+            copy_subheader_and_formatting(concept_manual_worksheet, concept_worksheet, concept_df)
+        except Exception as e:
+            print(f"Could not copy subheader and formatting from concept_manual: {e}")
+            
+    except Exception as e:
+        print(f"concept_generated worksheet not found or error occurred: {e}")
 
     try:
         relationship_worksheet = spreadsheet.worksheet('concept_relationship_generated')
@@ -521,23 +722,57 @@ def save_outputs(concept_dict: Dict[int, Dict], concept_ids_by_source: Dict[str,
         print(f"Writing {len(relationship_df)} rows to concept_relationship_generated worksheet...")
         set_with_dataframe(relationship_worksheet, relationship_df, include_index=False)
         print(f"Saved concept_relationship_generated worksheet with {len(relationship_df)} rows")
-    except:
-        print("concept_relationship_generated worksheet not found - please create it manually first")
+        
+        # Copy subheader and formatting from concept_relationship_manual
+        try:
+            concept_relationship_manual_worksheet = spreadsheet.worksheet('concept_relationship_manual')
+            copy_subheader_and_formatting(concept_relationship_manual_worksheet, relationship_worksheet, relationship_df)
+        except Exception as e:
+            print(f"Could not copy subheader and formatting from concept_relationship_manual: {e}")
+            
+    except Exception as e:
+        print(f"concept_relationship_generated worksheet not found or error occurred: {e}")
 
-def save_tracking_info(concept_dict: Dict[int, Dict]) -> None:
+def save_tracking_info(concept_dict: Dict[int, Dict], gc: gspread.Client) -> None:
     """
     Save tracking information to a file for use in validate.py.
     
     Args:
         concept_dict: The concept dictionary with tracking info
+        gc: Authenticated Google Sheets client
     """
+    # Try to get actual gids for generated worksheets
+    concept_generated_gid = 'TBD'
+    concept_relationship_generated_gid = 'TBD'
+    
+    try:
+        spreadsheet = gc.open(spreadsheet_config['spreadsheet_name'])
+        
+        # Try to get concept_generated gid
+        try:
+            concept_worksheet = spreadsheet.worksheet('concept_generated')
+            concept_generated_gid = concept_worksheet.id
+        except:
+            pass
+            
+        # Try to get concept_relationship_generated gid  
+        try:
+            relationship_worksheet = spreadsheet.worksheet('concept_relationship_generated')
+            concept_relationship_generated_gid = relationship_worksheet.id
+        except:
+            pass
+    except:
+        pass
+    
     # URL lookup at the top
-    url_lookup = {
-        'concept_manual': 'https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=535320917#gid=535320917',
-        'concept_relationship_manual': 'https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125',
-        'concept_generated': 'https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=TBD#gid=TBD',
-        'concept_relationship_generated': 'https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=TBD#gid=TBD'
-    }
+    url_lookup = {}
+    for sheet_name, sheet_info in spreadsheet_config['worksheets'].items():
+        if sheet_name == 'concept_generated':
+            url_lookup[sheet_name] = f'{spreadsheet_config["base_url"]}?gid={concept_generated_gid}#gid={concept_generated_gid}'
+        elif sheet_name == 'concept_relationship_generated':
+            url_lookup[sheet_name] = f'{spreadsheet_config["base_url"]}?gid={concept_relationship_generated_gid}#gid={concept_relationship_generated_gid}'
+        else:
+            url_lookup[sheet_name] = sheet_info['url']
     
     tracking_data = {
         'url_lookup': url_lookup,
@@ -591,7 +826,7 @@ def main() -> None:
         
         # 5. Save tracking information
         print("\nStep 5: Saving tracking information...")
-        save_tracking_info(concept_dict)
+        save_tracking_info(concept_dict, gc)
         
         print("\nProcessing complete!")
         print("Generated files:")

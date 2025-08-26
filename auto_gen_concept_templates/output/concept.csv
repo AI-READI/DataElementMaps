@@ -1,4 +1,5 @@
 concept_name,SRC_CODE,concept_id,vocabulary_id,domain_id,v6_domain_id,concept_class_id,standard_concept,valid_start_date,valid_end_date,invalid_reason
+,,,,,,,,,,
 "Do you use lifestyle changes to control your A1C and blood glucose levels? Examples: regular exercise, avoiding sugary foods and beverages, eating a balanced diet with lots of vegetables, sticking to a consistent eating schedule",cmtrt_lfst,2005200004,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,
 Method used to complete form,viaomthd,2005200011,AIREADI,Observation,survey_conduct,Attribute,,1/1/1970,,
 Snellen fraction - Photopic VA - OD,viaodpsf,2005200012,AIREADI-Vision,Measurement,,Clinical Observation,,1/1/1970,,
