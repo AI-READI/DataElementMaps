@@ -1,6 +1,6 @@
 # Validation Report
 
-Generated on: 2025-08-26 08:22:42
+Generated on: 2025-08-26 08:32:00
 
 ## Data Sources
 
@@ -12,11 +12,6 @@ This report compares generated Google Sheets against manual Google Sheets:
 - **Generated Sheets**: [template_4_adding_vocabulary-2](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit)
   - concept_generated worksheet (from autogen.py)
   - concept_relationship_generated worksheet (from autogen.py)
-
-### Link Legend
-- 🔴 Manual values link to specific cells in manual Google Sheets
-- 🔵 Generated values link to specific cells in generated Google Sheets
-- Explanations in parentheses describe the type of difference
 
 ## Summary
 
@@ -51,24 +46,28 @@ This report compares generated Google Sheets against manual Google Sheets:
 | temp standard | 389 | 413 | 94.2% |
 | temp name | 399 | 413 | 96.6% |
 | concept_code_2 | 406 | 413 | 98.3% |
-| vocabulary_id_2 | 410 | 413 | 99.3% |
 | temp class | 410 | 413 | 99.3% |
+| vocabulary_id_2 | 410 | 413 | 99.3% |
 | temp domain | 411 | 413 | 99.5% |
-| concept_id_1 | 413 | 413 | 100.0% |
-| concept_id_2 | 413 | 413 | 100.0% |
-| vocabulary_id_1 | 413 | 413 | 100.0% |
-| mapping_source | 413 | 413 | 100.0% |
-| invalid_reason | 413 | 413 | 100.0% |
-| mapping_justification | 413 | 413 | 100.0% |
-| mapping_tool | 413 | 413 | 100.0% |
-| predicate_id | 413 | 413 | 100.0% |
-| relationship_valid_start_date | 413 | 413 | 100.0% |
-| relationship_valid_end_date | 413 | 413 | 100.0% |
-| relationship_id | 413 | 413 | 100.0% |
 | concept_name | 413 | 413 | 100.0% |
+| mapping_source | 413 | 413 | 100.0% |
+| concept_id_2 | 413 | 413 | 100.0% |
+| concept_id_1 | 413 | 413 | 100.0% |
+| relationship_valid_end_date | 413 | 413 | 100.0% |
+| mapping_justification | 413 | 413 | 100.0% |
+| relationship_id | 413 | 413 | 100.0% |
+| relationship_valid_start_date | 413 | 413 | 100.0% |
 | confidence | 413 | 413 | 100.0% |
+| predicate_id | 413 | 413 | 100.0% |
+| invalid_reason | 413 | 413 | 100.0% |
+| vocabulary_id_1 | 413 | 413 | 100.0% |
+| mapping_tool | 413 | 413 | 100.0% |
 
 #### All Discrepancies
+
+- 🔴 Manual values link to specific cells in manual Google Sheets
+- 🔵 Generated values link to specific cells in generated Google Sheets
+- Explanations in parentheses describe the type of difference
 
 **temp standard**: 0 manual blanks, 12 generated blanks (out of 24 total differences)
 

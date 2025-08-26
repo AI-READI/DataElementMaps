@@ -477,11 +477,6 @@ This report compares generated Google Sheets against manual Google Sheets:
   - concept_generated worksheet (from autogen.py)
   - concept_relationship_generated worksheet (from autogen.py)
 
-### Link Legend
-- 🔴 Manual values link to specific cells in manual Google Sheets
-- 🔵 Generated values link to specific cells in generated Google Sheets
-- Explanations in parentheses describe the type of difference
-
 ## Summary
 
 """
@@ -589,7 +584,7 @@ This report compares generated Google Sheets against manual Google Sheets:
         # Discrepancies section (other differences) - single table format
         if result.get('discrepancies'):
             report += f"### Discrepancies ({len(result['discrepancies'])} rows with other differences)\n\n"
-            
+
             # Add column match rates here
             if result['column_differences']:
                 report += "#### Column Match Rates\n\n"
@@ -606,7 +601,10 @@ This report compares generated Google Sheets against manual Google Sheets:
             
             # Single comprehensive table for all discrepancies
             report += "#### All Discrepancies\n\n"
-            
+            report += "- 🔴 Manual values link to specific cells in manual Google Sheets\n"
+            report += "- 🔵 Generated values link to specific cells in generated Google Sheets\n"
+            report += "- Explanations in parentheses describe the type of difference\n\n"
+
             # First, collect column stats to determine which ones have >5 blanks
             column_blank_counts = {}
             for row_diff in result['discrepancies']:
