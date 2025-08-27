@@ -1,6 +1,6 @@
 # Validation Report
 
-Generated on: 2025-08-26 11:04:26
+Generated on: 2025-08-27 11:58:42
 
 ## Data Sources
 
@@ -17,51 +17,51 @@ This report compares generated Google Sheets against manual Google Sheets:
 
 | Target | Manual Rows | Generated Rows | Matched Rows | Errors | Discrepancies |
 |--------|-------------|----------------|--------------|--------|---------------|
-| concept | 413 | 413 | 413 | 0 | 0 |
-| concept_relationship | 413 | 413 | 413 | 0 | 40 |
+| concept | 412 | 412 | 412 | 0 | 0 |
+| concept_relationship | 412 | 412 | 412 | 0 | 26 |
 
 ## Concept Validation
 
-- **Manual rows:** 413
-- **Generated rows:** 413
-- **Matched rows:** 413
+- **Manual rows:** 412
+- **Generated rows:** 412
+- **Matched rows:** 412
 - **Unmatched manual rows:** 0
 - **Unmatched generated rows:** 0
 
 
 ## Concept_Relationship Validation
 
-- **Manual rows:** 413
-- **Generated rows:** 413
-- **Matched rows:** 413
+- **Manual rows:** 412
+- **Generated rows:** 412
+- **Matched rows:** 412
 - **Unmatched manual rows:** 0
 - **Unmatched generated rows:** 0
 
-### Discrepancies (40 rows with other differences)
+### Discrepancies (26 rows with other differences)
 
 #### Column Match Rates
 
 | Column | Matching | Total | Match Rate |
 |--------|----------|-------|------------|
-| temp standard | 389 | 413 | 94.2% |
-| temp name | 399 | 413 | 96.6% |
-| concept_code_2 | 406 | 413 | 98.3% |
-| temp class | 410 | 413 | 99.3% |
-| vocabulary_id_2 | 410 | 413 | 99.3% |
-| temp domain | 411 | 413 | 99.5% |
-| vocabulary_id_1 | 413 | 413 | 100.0% |
-| relationship_valid_end_date | 413 | 413 | 100.0% |
-| concept_id_1 | 413 | 413 | 100.0% |
-| mapping_tool | 413 | 413 | 100.0% |
-| predicate_id | 413 | 413 | 100.0% |
-| mapping_justification | 413 | 413 | 100.0% |
-| mapping_source | 413 | 413 | 100.0% |
-| invalid_reason | 413 | 413 | 100.0% |
-| concept_name | 413 | 413 | 100.0% |
-| relationship_valid_start_date | 413 | 413 | 100.0% |
-| relationship_id | 413 | 413 | 100.0% |
-| confidence | 413 | 413 | 100.0% |
-| concept_id_2 | 413 | 413 | 100.0% |
+| temp name | 399 | 412 | 96.8% |
+| temp standard | 400 | 412 | 97.1% |
+| concept_code_2 | 407 | 412 | 98.8% |
+| vocabulary_id_2 | 409 | 412 | 99.3% |
+| temp class | 409 | 412 | 99.3% |
+| temp domain | 410 | 412 | 99.5% |
+| mapping_justification | 412 | 412 | 100.0% |
+| concept_id_2 | 412 | 412 | 100.0% |
+| confidence | 412 | 412 | 100.0% |
+| vocabulary_id_1 | 412 | 412 | 100.0% |
+| predicate_id | 412 | 412 | 100.0% |
+| concept_name | 412 | 412 | 100.0% |
+| mapping_source | 412 | 412 | 100.0% |
+| relationship_valid_end_date | 412 | 412 | 100.0% |
+| invalid_reason | 412 | 412 | 100.0% |
+| concept_id_1 | 412 | 412 | 100.0% |
+| relationship_id | 412 | 412 | 100.0% |
+| relationship_valid_start_date | 412 | 412 | 100.0% |
+| mapping_tool | 412 | 412 | 100.0% |
 
 #### Discrepancy Summary
 
@@ -69,76 +69,47 @@ This report compares generated Google Sheets against manual Google Sheets:
 - 🔵 Generated values link to specific cells in generated Google Sheets
 - Explanations in parentheses describe the type of difference
 
-**temp standard**: 0 manual blanks, 12 generated blanks (out of 24 total differences)
+**temp standard**: 0 manual blanks, 12 generated blanks (out of 12 total differences)
 
 **Whitespace/Case differences**: 1 instances across 1 columns
 - 1 - 10 times (2005200262) - temp name: "1 - 10 " vs "1-10" (Only whitespace differences (spaces, tabs, or line breaks))
 
 
-#### Substantive Content Differences (40 instances)
+#### Substantive Content Differences (25 instances)
 
-- **1 - 3 times** (2005200239)
-  - concept_code_2: 🔴 [LA23695-2](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=K144) vs 🔵 [LA15695-2](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=K144) (Content difference requiring review)
 - **29 to 35** (2005200197)
   - concept_code_2: 🔴 [LA14679-7](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=K120) vs 🔵 [LA15787-7](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=K120) (Content difference requiring review)
 - **Activity monitor returned?** (2005200555)
-  - concept_code_2: 🔴 [42528781](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=K343) vs 🔵 [82611-5](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=K343) (Content difference requiring review)
+  - concept_code_2: 🔴 [42528781](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=K342) vs 🔵 [82611-5](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=K342) (Content difference requiring review)
 - **Covered** (2005200252)
-  - temp name: 🔴 [Covered](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G157) vs 🔵 [Insurance](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G157) (Content difference requiring review)
-- **Does not apply to my neighborhood** (2005200268)
-  - concept_code_2: 🔴 [LA14452-9](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=K173) vs 🔵 [LA16616-7](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=K173) (Content difference requiring review)
-  - temp name: 🔴 [Does not apply](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G173) vs 🔵 [PEFR 1](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G173) (Content difference requiring review)
+  - temp name: 🔴 [Covered](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G156) vs 🔵 [Insurance](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G156) (Content difference requiring review)
 - **Doing daily or almost daily** (2005200317)
-  - temp name: 🔴 [Doing daily or almost daily](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G218) vs 🔵 [Daily or almost daily](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G218) (Content difference requiring review)
+  - temp name: 🔴 [Doing daily or almost daily](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G217) vs 🔵 [Daily or almost daily](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G217) (Content difference requiring review)
 - **I HAVE some kind of health insurance** (2005200254)
-  - temp name: 🔴 [I HAVE some kind of health insurance](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G159) vs 🔵 [Insurance](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G159) (Content difference requiring review)
+  - temp name: 🔴 [I HAVE some kind of health insurance](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G158) vs 🔵 [Insurance](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G158) (Content difference requiring review)
 - **I do NOT have health insurance** (2005200253)
-  - temp name: 🔴 [I do NOT have health insurance](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G158) vs 🔵 [Not Covered by Insurance](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G158) (Content difference requiring review)
+  - temp name: 🔴 [I do NOT have health insurance](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G157) vs 🔵 [Not Covered by Insurance](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G157) (Content difference requiring review)
 - **More than 20 years** (2005200211)
   - temp name: 🔴 [More than 20 years](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G133) vs 🔵 [Electronic cigarette smoker](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G133) (Content difference requiring review)
 - **Other heart issues (Examples: pacemaker, heart valve disease, open heart surgery)** (2005200627)
-  - temp name: 🔴 [History of Problems with your heart or circulation](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G413) vs 🔵 [History of Problems with your heart or circulation [PhenX]](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G413) (Content difference requiring review)
-- **PhenX Education Attainment Survey** (2005200577)
-  - temp standard: 🔴 [S](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=L363) vs 🔵 [C](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=L363) (Content difference requiring review)
-- **PhenX English Proficiency Survey** (2005200576)
-  - temp standard: 🔴 [S](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=L362) vs 🔵 [C](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=L362) (Content difference requiring review)
-- **PhenX Food Insecurity Survey** (2005200584)
-  - temp standard: 🔴 [S](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=L370) vs 🔵 [C](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=L370) (Content difference requiring review)
-- **PhenX Health Care Access Survey** (2005200582)
-  - temp standard: 🔴 [S](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=L368) vs 🔵 [C](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=L368) (Content difference requiring review)
-- **PhenX Health Insurance Survey** (2005200581)
-  - temp standard: 🔴 [S](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=L367) vs 🔵 [C](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=L367) (Content difference requiring review)
-- **PhenX Healthcare Discrimination Survey** (2005200583)
-  - temp standard: 🔴 [S](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=L369) vs 🔵 [C](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=L369) (Content difference requiring review)
-- **PhenX Housing Insecurity Survey** (2005200579)
-  - temp standard: 🔴 [S](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=L365) vs 🔵 [C](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=L365) (Content difference requiring review)
-- **PhenX Job Security Survey** (2005200578)
-  - temp standard: 🔴 [S](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=L364) vs 🔵 [C](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=L364) (Content difference requiring review)
-- **PhenX Neighborhood Environment Survey** (2005200585)
-  - temp standard: 🔴 [S](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=L371) vs 🔵 [C](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=L371) (Content difference requiring review)
-- **PhenX Prescriptions Affordability Survey** (2005200580)
-  - temp standard: 🔴 [S](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=L366) vs 🔵 [C](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=L366) (Content difference requiring review)
-- **PhenX Racial/Ethnic Survey** (2005200586)
-  - temp standard: 🔴 [S](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=L372) vs 🔵 [C](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=L372) (Content difference requiring review)
-- **PhenX SDOH Survey** (2005200575)
-  - temp standard: 🔴 [S](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=L361) vs 🔵 [C](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=L361) (Content difference requiring review)
+  - temp name: 🔴 [History of Problems with your heart or circulation](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G412) vs 🔵 [History of Problems with your heart or circulation [PhenX]](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G412) (Content difference requiring review)
 - **Protocol Deviation** (2005200284)
-  - temp name: 🔴 [Protocol Deviation](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G187) vs 🔵 [Research administrative status](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G187) (Content difference requiring review)
+  - temp name: 🔴 [Protocol Deviation](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G186) vs 🔵 [Research administrative status](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G186) (Content difference requiring review)
 - **Red Blood Cells (RBC) - x10E6/µL** (2005200183)
   - temp name: 🔴 [RBC - Red blood cell count](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G115) vs 🔵 [Red blood cell count](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G115) (Content difference requiring review)
 - **Stroke** (2005200628)
-  - temp name: 🔴 [History of Problems with your heart or circulation](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G414) vs 🔵 [History of Problems with your heart or circulation [PhenX]](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G414) (Content difference requiring review)
+  - temp name: 🔴 [History of Problems with your heart or circulation](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G413) vs 🔵 [History of Problems with your heart or circulation [PhenX]](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G413) (Content difference requiring review)
 - **There is MORE THAN ONE place** (2005200257)
-  - concept_code_2: 🔴 [394777002](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=K162) vs 🔵 [65123005](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=K162) (Content difference requiring review)
-  - temp class: 🔴 [Answer](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=J162) vs 🔵 [Substance](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=J162) (Content difference requiring review)
-  - temp domain: 🔴 [Observation](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=H162) vs 🔵 [Drug](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=H162) (Content difference requiring review)
-  - temp name: 🔴 [There is MORE THAN ONE place](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G162) vs 🔵 [Choline](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G162) (Content difference requiring review)
-  - vocabulary_id_2: 🔴 [SNOMED ](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=I162) vs 🔵 [Nebraska Lexicon](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=I162) (Content difference requiring review)
-- **There is NO place** (2005200256)
-  - temp class: 🔴 [Answer](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=J161) vs 🔵 [Location](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=J161) (Content difference requiring review)
-  - temp domain: 🔴 [Observation](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=H161) vs 🔵 [Place of Service](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=H161) (Content difference requiring review)
-  - temp name: 🔴 [There is NO place](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G161) vs 🔵 [Health encounter sites](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G161) (Content difference requiring review)
+  - concept_code_2: 🔴 [394777002](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=K161) vs 🔵 [65123005](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=K161) (Content difference requiring review)
+  - temp class: 🔴 [Answer](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=J161) vs 🔵 [Substance](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=J161) (Content difference requiring review)
+  - temp domain: 🔴 [Observation](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=H161) vs 🔵 [Drug](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=H161) (Content difference requiring review)
+  - temp name: 🔴 [There is MORE THAN ONE place](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G161) vs 🔵 [Choline](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G161) (Content difference requiring review)
   - vocabulary_id_2: 🔴 [SNOMED ](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=I161) vs 🔵 [Nebraska Lexicon](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=I161) (Content difference requiring review)
+- **There is NO place** (2005200256)
+  - temp class: 🔴 [Answer](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=J160) vs 🔵 [Location](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=J160) (Content difference requiring review)
+  - temp domain: 🔴 [Observation](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=H160) vs 🔵 [Place of Service](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=H160) (Content difference requiring review)
+  - temp name: 🔴 [There is NO place](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=G160) vs 🔵 [Health encounter sites](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=G160) (Content difference requiring review)
+  - vocabulary_id_2: 🔴 [SNOMED ](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=I160) vs 🔵 [Nebraska Lexicon](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=I160) (Content difference requiring review)
 - **When you used marijuana, approximately how many days in a typical week would you use it?** (2005200039)
   - concept_code_2: 🔴 [1333013](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=K27) vs 🔵 [733460004](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=K27) (Content difference requiring review)
   - temp class: 🔴 [Question](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=933853125#gid=933853125&range=J27) vs 🔵 [Clinical Finding](https://docs.google.com/spreadsheets/d/1IDjSfI9Kbr9VGeL9hTxO4ic6xBEMNs88b1f8DHPgKPY/edit?gid=963371514#gid=963371514&range=J27) (Content difference requiring review)

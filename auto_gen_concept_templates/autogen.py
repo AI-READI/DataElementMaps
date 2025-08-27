@@ -684,6 +684,27 @@ def copy_subheader_and_formatting_fixed(source_worksheet, target_worksheet, targ
             }
         })
         
+        # Format all columns as text to prevent any automatic conversion
+        requests.append({
+            'repeatCell': {
+                'range': {
+                    'sheetId': target_sheet_id,
+                    'startRowIndex': 0,  # Start from very first row (header)
+                    'endRowIndex': min(1000, len(target_df) + 10),
+                    'startColumnIndex': 0,
+                    'endColumnIndex': len(target_df.columns)
+                },
+                'cell': {
+                    'userEnteredFormat': {
+                        'numberFormat': {
+                            'type': 'TEXT'
+                        }
+                    }
+                },
+                'fields': 'userEnteredFormat.numberFormat'
+            }
+        })
+        
         # Freeze the top 2 rows (header and subheader)
         requests.append({
             'updateSheetProperties': {
