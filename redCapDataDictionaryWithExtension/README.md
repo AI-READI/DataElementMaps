@@ -19,8 +19,10 @@
 - [General health](https://docs.aireadi.org/v2/questionnaires/general-health.pdf)
 - [Diabetes self care](https://docs.aireadi.org/v2/questionnaires/diabetes-self-care.pdf)
 - [Center for Epidemiological Studies Depression Scale (CES-D-10) ](https://docs.aireadi.org/v2/questionnaires/depression.pdf)
-- [Social Determinants of Health ](
-- [Food insecurity, Neighborhood environment, and Racial and Ethnic Discrimination](
+- [Social Determinants of Health ](https://docs.aireadi.org/v2/questionnaires/sdoh.pdf)
+- [Food insecurity](https://docs.aireadi.org/v2/questionnaires/food-security.pdf)
+- [Neighborhood environment](https://docs.aireadi.org/v2/questionnaires/neighborhood.pdf)
+- [Racial and Ethnic Discrimination](https://docs.aireadi.org/v2/questionnaires/racial.pdf)
 - [Problem Areas In Diabetes (PAID-5)](https://docs.aireadi.org/v2/questionnaires/sdoh.pdf)
 - [Vision and access to eye care](https://docs.aireadi.org/v2/questionnaires/visual.pdf)
 - [Dietary Survey](https://docs.aireadi.org/v2/questionnaires/dietary.pdf)
