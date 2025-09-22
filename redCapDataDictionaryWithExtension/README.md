@@ -17,7 +17,7 @@
 # [Survey Instruments](https://github.com/AI-READI/DataElementMaps/wiki/Survey-Instruments)
 
 
-# [Map Survey Instrument Questionairs to Standard Terminology](https://github.com/AI-READI/DataElementMaps/wiki/Map-Survey-Instrument-Questionairs-to-Standard-Terminology)
+# [Map Survey Instruments to Standard Terminology](https://github.com/AI-READI/DataElementMaps/wiki/Map-Survey-Instruments-to-Standard-Terminology)
 
 
 **Notes**:
