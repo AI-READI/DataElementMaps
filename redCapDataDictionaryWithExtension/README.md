@@ -61,7 +61,7 @@ The following table illustrates how specific variables from the AI-READI REDCap 
 **Notes**:
 - Concept IDs are mapped to the OHDSI Athena vocabulary. URLs are provided for reference, but specific Concept Codes (e.g., SNOMED CT, LOINC) are pending confirmation.
 - These questions align with AI-READI's focus on diabetes-related distress and social determinants of health, mapped to standard terminologies for interoperability.
-- For full REDCap dictionary details, see the [Core REDCap Data Dictionary Data Element Mapping Structure](#core-redcap-data-dictionary-structure) section.
+- For full REDCap dictionary data element mapping details, see the [Core REDCap Data Dictionary Data Element Mapping Structure](#core-redcap-data-dictionary-structure) section.
 
 
 The AI-READI project is funded by NIH Award 1OT2OD032644.
