@@ -29,5 +29,8 @@
 - [Substance use](https://docs.aireadi.org/v2/questionnaires/substance-use.pdf)
 - Medications - Each participant was asked to provide a list of medications. However, these are not currently included in the publicly accessible version 1 dataset.
 
+ # Mapped Survey Instrument Questionairs to Standard Terminology 
+ Each survey question was reviewed and mapped to standard terminology concepts (e.g., NIH CDEs, SNOMED CT, LOINC or OMOP standards) to ensure interoperability and alignment with AI-READI's data harmonization goals.
+
   
  
