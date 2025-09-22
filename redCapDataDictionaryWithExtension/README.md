@@ -52,6 +52,7 @@ The following table illustrates how specific variables from the AI-READI REDCap 
 
 
 
-![AI-READI Logo][(https://github.com/AI-READI/DataElementMaps/raw/main/logo.png)
+![AI-READI Logo][(<img width="332" height="270" alt="image" src="https://github.com/user-attachments/assets/dff5f6ad-391a-4f3d-a9a3-7be49b82d8be" />
+)
   
  
