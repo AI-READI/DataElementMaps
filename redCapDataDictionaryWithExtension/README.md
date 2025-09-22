@@ -48,5 +48,10 @@ The following table illustrates how specific variables from the AI-READI REDCap 
 | Marital Status | Observation | SNOMED 125680007 | [4053609](https://athena.ohdsi.org/search-terms/terms/4053609) | Value_as_concept_id: “Married” concept_id: 4338692 |
 | Troponin-T | Measurement | LOINC 67151-1 | [40769783](https://athena.ohdsi.org/search-terms/terms/40769783) | Code Description: Troponin T.cardiac [Mass/volume] in Serum or Plasma by High sensitivity method |
 
+### Gaps - Survey Questions Not Mappable with existing concepts when 
+
+
+
+![AI-READI Logo][(https://github.com/AI-READI/DataElementMaps/raw/main/logo.png)
   
  
