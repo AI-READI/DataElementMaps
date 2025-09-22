@@ -19,7 +19,7 @@
 
 # [Map Survey Instruments to Standard Terminology](https://github.com/AI-READI/DataElementMaps/wiki/Map-Survey-Instruments-to-Standard-Terminology)
 
-# [AI-READI Survey Mapping Guide](https://github.com/AI-READI/DataElementMaps/wiki/AI%E2%80%90READI-Survey-Data-Element-Mapping-Table-Guide)
+# [AI‐READI Survey Data Element Mapping Table Guide](https://github.com/AI-READI/DataElementMaps/wiki/AI%E2%80%90READI-Survey-Data-Element-Mapping-Table-Guide)
 
 **Notes**:
 - Concept IDs are mapped to the OHDSI Athena vocabulary. URLs are provided for reference, but specific Concept Codes (e.g., SNOMED CT, LOINC, AI-READI custom concepts) are pending confirmation.
