@@ -31,6 +31,10 @@
 
  # Mapped Survey Instrument Questionairs to Standard Terminology 
  Each survey question was reviewed and mapped to standard terminology concepts (e.g., NIH CDEs, SNOMED CT, LOINC or OMOP standards) to ensure interoperability and alignment with AI-READI's data harmonization goals.
+ - Map data elements to standard concepts using the OMOP CDM vocabulary and established concept relationships.
+ - Apply FAIR principles (Findable, Accessible, Interoperable, Reusable) through tools such as FAIRshare.
+ - Manage variable extensions and create custom concepts to address terminology gaps.
+ 
  ## Mapping Overview
  <img width="1805" height="692" alt="image" src="https://github.com/user-attachments/assets/1f70f5fd-debb-40f4-9fe5-7248cea21f8a" />
 
@@ -48,12 +52,12 @@ The following table illustrates how specific variables from the AI-READI REDCap 
 | Marital Status | Observation | SNOMED 125680007 | [4053609](https://athena.ohdsi.org/search-terms/terms/4053609) | Value_as_concept_id: “Married” concept_id: 4338692 |
 | Troponin-T | Measurement | LOINC 67151-1 | [40769783](https://athena.ohdsi.org/search-terms/terms/40769783) | Code Description: Troponin T.cardiac [Mass/volume] in Serum or Plasma by High sensitivity method |
 
-### Gaps - Survey Questions Not Mappable with existing concepts when 
+### Gaps – Survey questions that cannot be mapped when no standard terminology exists
 
 
 
 The AI-READI project is funded by NIH Award 1OT2OD032644.
-(<img width="332" height="270" alt="image" src="https://github.com/user-attachments/assets/dff5f6ad-391a-4f3d-a9a3-7be49b82d8be" />
-)
+<img width="332" height="270" alt="image" src="https://github.com/user-attachments/assets/dff5f6ad-391a-4f3d-a9a3-7be49b82d8be" />
+
   
  
