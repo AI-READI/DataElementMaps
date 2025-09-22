@@ -31,7 +31,13 @@
 
  # Mapped Survey Instrument Questionairs to Standard Terminology 
  Each survey question was reviewed and mapped to standard terminology concepts (e.g., NIH CDEs, SNOMED CT, LOINC or OMOP standards) to ensure interoperability and alignment with AI-READI's data harmonization goals.
- Simple Example: 
+ ## Mapping Overview
+ <img width="1805" height="692" alt="image" src="https://github.com/user-attachments/assets/1f70f5fd-debb-40f4-9fe5-7248cea21f8a" />
+
+
+
+
+
 ## Standard Terminology Mappings
 
 The following table illustrates how specific variables from the AI-READI REDCap survey instruments are mapped to standard terminology concepts (e.g., SNOMED CT, LOINC) using OHDSI's Athena vocabulary for interoperability. These mappings ensure alignment with AI-READI's data harmonization goals.
