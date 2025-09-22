@@ -42,6 +42,7 @@
 
 The following table illustrates how specific variables from the AI-READI REDCap survey instruments are mapped to standard terminology concepts (e.g., SNOMED CT, LOINC) using OHDSI's Athena vocabulary for interoperability. These mappings ensure alignment with AI-READI's data harmonization goals.
 
+### Simple Mapping Case
 | Variable | Domain_id | Concept Code | Maps to Concept_id | URL | Additional Details |
 |----------|-----------|--------------|--------------------|-----|--------------------|
 | Marital Status | Observation | SNOMED 125680007 | [4053609](https://athena.ohdsi.org/search-terms/terms/4053609) | Value_as_concept_id: “Married” concept_id: 4338692 |
