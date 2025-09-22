@@ -30,58 +30,7 @@
 - Medications - Each participant was asked to provide a list of medications. However, these are not currently included in the publicly accessible version 1 dataset.
 
  # [Map Survey Instrument Questionairs to Standard Terminology](https://github.com/AI-READI/DataElementMaps/wiki/Map-Survey-Instrument-Questionairs-to-Standard-Terminology)
- Each survey question was reviewed and mapped to standard terminology concepts (e.g., NIH CDEs, SNOMED CT, LOINC or OMOP standards) to ensure interoperability and alignment with AI-READI's data harmonization goals.
- - Map data elements to standard concepts using the OMOP CDM vocabulary and established concept relationships.
- - Apply FAIR principles (Findable, Accessible, Interoperable, Reusable) through tools such as FAIRshare.
- - Manage variable extensions and create custom concepts to address terminology gaps.
- 
- ## Mapping Overview
- <img width="1805" height="692" alt="image" src="https://github.com/user-attachments/assets/1f70f5fd-debb-40f4-9fe5-7248cea21f8a" />
 
-
-
-
-
-## Standard Terminology Mappings Explained
-
-The following table illustrates how specific variables from the AI-READI REDCap survey instruments are mapped to standard terminology concepts (e.g., SNOMED CT, LOINC) using OHDSI's Athena vocabulary for interoperability. These mappings ensure alignment with AI-READI's data harmonization goals.
-
-### 1. Simple Mapping Case
-| Variable | Domain_id | Concept Code | Maps to Concept_id | URL | Additional Details |
-|----------|-----------|--------------|--------------------|-----|--------------------|
-| Marital Status | Observation | SNOMED 125680007 | [4053609](https://athena.ohdsi.org/search-terms/terms/4053609) | Value_as_concept_id: “Married” concept_id: 4338692 |
-| Troponin-T | Measurement | LOINC 67151-1 | [40769783](https://athena.ohdsi.org/search-terms/terms/40769783) | Code Description: Troponin T.cardiac [Mass/volume] in Serum or Plasma by High sensitivity method |
-
-### 2. Gaps – Survey questions that cannot be mapped when no standard terminology exists
-| Survey Question | Domain_id | Concept Code | Maps to Concept_id | URL | Additional Details |
-|-----------------|-----------|--------------|--------------------|-----|--------------------|
-| Worrying about the future and the possibility of serious complications | Observation | [TBD] | [2005200046](https://athena.ohdsi.org/search-terms/terms/2005200046) | Likely from PAID-5 survey; Maps to diabetes distress concept |
-| How often have you been treated unfairly by teachers and professors because of your race/ethnic group? | Observation | [TBD] | [2005200126](https://athena.ohdsi.org/search-terms/terms/2005200126) | Likely from Social Determinants of Health survey; Maps to racial/ethnic discrimination concept |
-
-### 3. Complex - Both the survey question and its corresponding response must be combined to map the data accurately. A dual mapping approach was applied to capture both the answer response and the self-reported condition in the Condition domain.
-| # | Survey Question                                                                 | Response Options                |
-|---|----------------------------------------------------------------------------------|---------------------------------|
-| First part of the question | Has a doctor or other healthcare professional ever told you that you have/had a heart attack? | ☐ Yes ☐ No ☐ Prefer not to say |
-| Second part of the question - option 1| Other heart issues (e.g., pacemaker, heart valve disease, open heart surgery)    | ☐ Yes ☐ No ☐ Prefer not to say |
-| Second part of the question - option 2 | Stroke                                                                           | ☐ Yes ☐ No ☐ Prefer not to say |
-| Second part of the question - option 3 | Circulation problems (e.g., arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins) | ☐ Yes ☐ No ☐ Prefer not to say |
-| Second part of the question - option 4 | High blood cholesterol                                                           | ☐ Yes ☐ No ☐ Prefer not to say |
-| Second part of the question - option 5 | High blood pressure                                                              | ☐ Yes ☐ No ☐ Prefer not to say |
-| Second part of the question - option 6 | Low blood pressure                                                               | ☐ Yes ☐ No ☐ Prefer not to say |
-| Second part of the question - option 7 | Parkinson’s disease                                                              | ☐ Yes ☐ No ☐ Prefer not to say |
-| Second part of the question - option 8 | Dementia (e.g., Alzheimer’s disease, vascular dementia, etc.)                    | ☐ Yes ☐ No ☐ Prefer not to say |
-
-#### Dual Map Explained 
-##### 3a. Map to Observation Domain 
-| Survey Question                                                                 | Answer                        | Mapping Details                                                                                                                                              |
-|---------------------------------------------------------------------------------|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Has a doctor or other healthcare professional ever told you that you have/had any of the following conditions | Myocardial infarction          | **observation_concept_id:** 2005200014<br>**qualifier_concept_id:** 4329847<br>**qualifier_source_value:** Myocardial infarction<br>**observation_type_concept_id:** 32862 (survey type concept)<br>**value_as_concept_id:** 4188539 (yes), 4188540 (no), 36311156 (prefer not to say) |
-| Has a doctor or other healthcare professional ever told you that you have/had any of the following conditions | Type 2 diabetes mellitus       | **observation_concept_id:** 2005200014<br>**qualifier_concept_id:** 201826<br>**qualifier_source_value:** Type 2 diabetes mellitus<br>**observation_type_concept_id:** 32862 (survey type concept)<br>**value_as_concept_id:** 4188539 (yes), 4188540 (no), 36311156 (prefer not to say) |
-
-##### 3b. Map to Condition Domain 
-| Survey Question                                                                 | Response | Condition Concept Mapping                                                                 |
-|---------------------------------------------------------------------------------|----------|-------------------------------------------------------------------------------------------|
-| Has a doctor or other healthcare professional ever told you that you have/had any of the following conditions | Yes – Type 2 diabetes mellitus | **condition_concept_id:** 201820<br>**qualifier_concept_id:** 201826<br>**qualifier_source_value:** Type 2 diabetes mellitus<br>**condition_type_concept_id:** 45905770 (patient reported) |
 
 **Notes**:
 - Concept IDs are mapped to the OHDSI Athena vocabulary. URLs are provided for reference, but specific Concept Codes (e.g., SNOMED CT, LOINC) are pending confirmation.
