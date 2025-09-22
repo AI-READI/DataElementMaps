@@ -61,7 +61,7 @@ The following table illustrates how specific variables from the AI-READI REDCap 
 ### 3. Complex - Both the survey question and its corresponding response must be combined to map the data accurately. A dual mapping approach was applied to capture both the answer response and the self-reported condition in the Condition domain.
 | # | Survey Question                                                                 | Response Options                |
 |---|----------------------------------------------------------------------------------|---------------------------------|
-| 1 | Has a doctor or other healthcare professional ever told you that you have/had a heart attack? | ☐ Yes ☐ No ☐ Prefer not to say |
+| Main Question | Has a doctor or other healthcare professional ever told you that you have/had a heart attack? | ☐ Yes ☐ No ☐ Prefer not to say |
 | 2 | Other heart issues (e.g., pacemaker, heart valve disease, open heart surgery)    | ☐ Yes ☐ No ☐ Prefer not to say |
 | 3 | Stroke                                                                           | ☐ Yes ☐ No ☐ Prefer not to say |
 | 4 | Circulation problems (e.g., arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins) | ☐ Yes ☐ No ☐ Prefer not to say |
