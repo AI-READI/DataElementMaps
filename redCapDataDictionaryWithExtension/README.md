@@ -14,22 +14,10 @@
 * Those who are 40 or older, are not pregnant, and do not have Type 1 Diabetes were then presented with a series of additional questions on previous diabetes diagnoses, diabetes-related medications, biological sex assigned at birth, and race/ethnicity.
 * If the answers show that the individual qualifies, then he/she was formally invited to participate.
 
-# Survey Instrument Questionnaires  
-- [Demographics Survey](https://docs.aireadi.org/v2/questionnaires/demographics.pdf)
-- [General health](https://docs.aireadi.org/v2/questionnaires/general-health.pdf)
-- [Diabetes self care](https://docs.aireadi.org/v2/questionnaires/diabetes-self-care.pdf)
-- [Center for Epidemiological Studies Depression Scale (CES-D-10) ](https://docs.aireadi.org/v2/questionnaires/depression.pdf)
-- [Social Determinants of Health ](https://docs.aireadi.org/v2/questionnaires/sdoh.pdf)
-- [Food insecurity](https://docs.aireadi.org/v2/questionnaires/food-security.pdf)
-- [Neighborhood environment](https://docs.aireadi.org/v2/questionnaires/neighborhood.pdf)
-- [Racial and Ethnic Discrimination](https://docs.aireadi.org/v2/questionnaires/racial.pdf)
-- [Problem Areas In Diabetes (PAID-5)](https://docs.aireadi.org/v2/questionnaires/sdoh.pdf)
-- [Vision and access to eye care](https://docs.aireadi.org/v2/questionnaires/visual.pdf)
-- [Dietary Survey](https://docs.aireadi.org/v2/questionnaires/dietary.pdf)
-- [Substance use](https://docs.aireadi.org/v2/questionnaires/substance-use.pdf)
-- Medications - Each participant was asked to provide a list of medications. However, these are not currently included in the publicly accessible version 1 dataset.
+# [Survey Instrument Questionnaires](https://github.com/AI-READI/DataElementMaps/wiki/Survey-Instruments)
 
- # [Map Survey Instrument Questionairs to Standard Terminology](https://github.com/AI-READI/DataElementMaps/wiki/Map-Survey-Instrument-Questionairs-to-Standard-Terminology)
+
+# [Map Survey Instrument Questionairs to Standard Terminology](https://github.com/AI-READI/DataElementMaps/wiki/Map-Survey-Instrument-Questionairs-to-Standard-Terminology)
 
 
 **Notes**:
