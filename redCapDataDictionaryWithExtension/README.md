@@ -46,13 +46,13 @@
 
 The following table illustrates how specific variables from the AI-READI REDCap survey instruments are mapped to standard terminology concepts (e.g., SNOMED CT, LOINC) using OHDSI's Athena vocabulary for interoperability. These mappings ensure alignment with AI-READI's data harmonization goals.
 
-### Simple Mapping Case
+### 1. Simple Mapping Case
 | Variable | Domain_id | Concept Code | Maps to Concept_id | URL | Additional Details |
 |----------|-----------|--------------|--------------------|-----|--------------------|
 | Marital Status | Observation | SNOMED 125680007 | [4053609](https://athena.ohdsi.org/search-terms/terms/4053609) | Value_as_concept_id: “Married” concept_id: 4338692 |
 | Troponin-T | Measurement | LOINC 67151-1 | [40769783](https://athena.ohdsi.org/search-terms/terms/40769783) | Code Description: Troponin T.cardiac [Mass/volume] in Serum or Plasma by High sensitivity method |
 
-### Gaps – Survey questions that cannot be mapped when no standard terminology exists
+### 2. Gaps – Survey questions that cannot be mapped when no standard terminology exists
 | Survey Question | Domain_id | Concept Code | Maps to Concept_id | URL | Additional Details |
 |-----------------|-----------|--------------|--------------------|-----|--------------------|
 | Worrying about the future and the possibility of serious complications | Observation | [TBD] | [2005200046](https://athena.ohdsi.org/search-terms/terms/2005200046) | Likely from PAID-5 survey; Maps to diabetes distress concept |
