@@ -71,14 +71,14 @@ The following table illustrates how specific variables from the AI-READI REDCap 
 | Second part of the question - option 7 | Parkinson’s disease                                                              | ☐ Yes ☐ No ☐ Prefer not to say |
 | Second part of the question - option 8 | Dementia (e.g., Alzheimer’s disease, vascular dementia, etc.)                    | ☐ Yes ☐ No ☐ Prefer not to say |
 
-### Dual Map Explained 
-#### Map to Observation Domain 
+#### Dual Map Explained 
+##### 3a. Map to Observation Domain 
 | Survey Question                                                                 | Answer                        | Mapping Details                                                                                                                                              |
 |---------------------------------------------------------------------------------|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Has a doctor or other healthcare professional ever told you that you have/had any of the following conditions | Myocardial infarction          | **observation_concept_id:** 2005200014<br>**qualifier_concept_id:** 4329847<br>**qualifier_source_value:** Myocardial infarction<br>**observation_type_concept_id:** 32862 (survey type concept)<br>**value_as_concept_id:** 4188539 (yes), 4188540 (no), 36311156 (prefer not to say) |
 | Has a doctor or other healthcare professional ever told you that you have/had any of the following conditions | Type 2 diabetes mellitus       | **observation_concept_id:** 2005200014<br>**qualifier_concept_id:** 201826<br>**qualifier_source_value:** Type 2 diabetes mellitus<br>**observation_type_concept_id:** 32862 (survey type concept)<br>**value_as_concept_id:** 4188539 (yes), 4188540 (no), 36311156 (prefer not to say) |
 
-### Map to Condition Domain 
+##### 3b. Map to Condition Domain 
 | Survey Question                                                                 | Response | Condition Concept Mapping                                                                 |
 |---------------------------------------------------------------------------------|----------|-------------------------------------------------------------------------------------------|
 | Has a doctor or other healthcare professional ever told you that you have/had any of the following conditions | Yes – Type 2 diabetes mellitus | **condition_concept_id:** 201820<br>**qualifier_concept_id:** 201826<br>**qualifier_source_value:** Type 2 diabetes mellitus<br>**condition_type_concept_id:** 45905770 (patient reported) |
