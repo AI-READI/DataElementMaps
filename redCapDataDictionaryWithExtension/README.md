@@ -53,7 +53,15 @@ The following table illustrates how specific variables from the AI-READI REDCap 
 | Troponin-T | Measurement | LOINC 67151-1 | [40769783](https://athena.ohdsi.org/search-terms/terms/40769783) | Code Description: Troponin T.cardiac [Mass/volume] in Serum or Plasma by High sensitivity method |
 
 ### Gaps – Survey questions that cannot be mapped when no standard terminology exists
+| Survey Question | Domain_id | Concept Code | Maps to Concept_id | URL | Additional Details |
+|-----------------|-----------|--------------|--------------------|-----|--------------------|
+| Worrying about the future and the possibility of serious complications | Observation | [TBD] | [2005200046](https://athena.ohdsi.org/search-terms/terms/2005200046) | Likely from PAID-5 survey; Maps to diabetes distress concept |
+| How often have you been treated unfairly by teachers and professors because of your race/ethnic group? | Observation | [TBD] | [2005200126](https://athena.ohdsi.org/search-terms/terms/2005200126) | Likely from Social Determinants of Health survey; Maps to racial/ethnic discrimination concept |
 
+**Notes**:
+- Concept IDs are mapped to the OHDSI Athena vocabulary. URLs are provided for reference, but specific Concept Codes (e.g., SNOMED CT, LOINC) are pending confirmation.
+- These questions align with AI-READI's focus on diabetes-related distress and social determinants of health, mapped to standard terminologies for interoperability.
+- For full REDCap dictionary details, see the [Core REDCap Data Dictionary Data Element Mapping Structure](#core-redcap-data-dictionary-structure) section.
 
 
 The AI-READI project is funded by NIH Award 1OT2OD032644.
