@@ -58,6 +58,20 @@ The following table illustrates how specific variables from the AI-READI REDCap 
 | Worrying about the future and the possibility of serious complications | Observation | [TBD] | [2005200046](https://athena.ohdsi.org/search-terms/terms/2005200046) | Likely from PAID-5 survey; Maps to diabetes distress concept |
 | How often have you been treated unfairly by teachers and professors because of your race/ethnic group? | Observation | [TBD] | [2005200126](https://athena.ohdsi.org/search-terms/terms/2005200126) | Likely from Social Determinants of Health survey; Maps to racial/ethnic discrimination concept |
 
+### 3. Complex - Both the question and the answer response must be combined to map the data properly. Dual map applied to capture the answer response and the self-reported condition in the condition domain.
+| # | Survey Question                                                                 | Response Options                |
+|---|----------------------------------------------------------------------------------|---------------------------------|
+| 1 | Has a doctor or other healthcare professional ever told you that you have/had a heart attack? | ☐ Yes ☐ No ☐ Prefer not to say |
+| 2 | Other heart issues (e.g., pacemaker, heart valve disease, open heart surgery)    | ☐ Yes ☐ No ☐ Prefer not to say |
+| 3 | Stroke                                                                           | ☐ Yes ☐ No ☐ Prefer not to say |
+| 4 | Circulation problems (e.g., arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins) | ☐ Yes ☐ No ☐ Prefer not to say |
+| 5 | High blood cholesterol                                                           | ☐ Yes ☐ No ☐ Prefer not to say |
+| 6 | High blood pressure                                                              | ☐ Yes ☐ No ☐ Prefer not to say |
+| 7 | Low blood pressure                                                               | ☐ Yes ☐ No ☐ Prefer not to say |
+| 8 | Parkinson’s disease                                                              | ☐ Yes ☐ No ☐ Prefer not to say |
+| 9 | Dementia (e.g., Alzheimer’s disease, vascular dementia, etc.)                    | ☐ Yes ☐ No ☐ Prefer not to say |
+
+
 **Notes**:
 - Concept IDs are mapped to the OHDSI Athena vocabulary. URLs are provided for reference, but specific Concept Codes (e.g., SNOMED CT, LOINC) are pending confirmation.
 - These questions align with AI-READI's focus on diabetes-related distress and social determinants of health, mapped to standard terminologies for interoperability.
