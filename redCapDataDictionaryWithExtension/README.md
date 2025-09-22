@@ -62,14 +62,14 @@ The following table illustrates how specific variables from the AI-READI REDCap 
 | # | Survey Question                                                                 | Response Options                |
 |---|----------------------------------------------------------------------------------|---------------------------------|
 | First part of the question | Has a doctor or other healthcare professional ever told you that you have/had a heart attack? | ☐ Yes ☐ No ☐ Prefer not to say |
-| Second part of the question 1| Other heart issues (e.g., pacemaker, heart valve disease, open heart surgery)    | ☐ Yes ☐ No ☐ Prefer not to say |
-| Second part of the question 2 | Stroke                                                                           | ☐ Yes ☐ No ☐ Prefer not to say |
-| Second part of the question 3 | Circulation problems (e.g., arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins) | ☐ Yes ☐ No ☐ Prefer not to say |
-| Second part of the question 4 | High blood cholesterol                                                           | ☐ Yes ☐ No ☐ Prefer not to say |
-| Second part of the question 5 | High blood pressure                                                              | ☐ Yes ☐ No ☐ Prefer not to say |
-| Second part of the question 6 | Low blood pressure                                                               | ☐ Yes ☐ No ☐ Prefer not to say |
-| Second part of the question 7 | Parkinson’s disease                                                              | ☐ Yes ☐ No ☐ Prefer not to say |
-| Second part of the question 8 | Dementia (e.g., Alzheimer’s disease, vascular dementia, etc.)                    | ☐ Yes ☐ No ☐ Prefer not to say |
+| Second part of the question - option 1| Other heart issues (e.g., pacemaker, heart valve disease, open heart surgery)    | ☐ Yes ☐ No ☐ Prefer not to say |
+| Second part of the question - option 2 | Stroke                                                                           | ☐ Yes ☐ No ☐ Prefer not to say |
+| Second part of the question - option 3 | Circulation problems (e.g., arteriosclerosis, atherosclerosis, blood clots in lungs or leg veins) | ☐ Yes ☐ No ☐ Prefer not to say |
+| Second part of the question - option 4 | High blood cholesterol                                                           | ☐ Yes ☐ No ☐ Prefer not to say |
+| Second part of the question - option 5 | High blood pressure                                                              | ☐ Yes ☐ No ☐ Prefer not to say |
+| Second part of the question - option 6 | Low blood pressure                                                               | ☐ Yes ☐ No ☐ Prefer not to say |
+| Second part of the question - option 7 | Parkinson’s disease                                                              | ☐ Yes ☐ No ☐ Prefer not to say |
+| Second part of the question - option 8 | Dementia (e.g., Alzheimer’s disease, vascular dementia, etc.)                    | ☐ Yes ☐ No ☐ Prefer not to say |
 
 
 **Notes**:
