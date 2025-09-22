@@ -14,7 +14,7 @@
 * Those who are 40 or older, are not pregnant, and do not have Type 1 Diabetes were then presented with a series of additional questions on previous diabetes diagnoses, diabetes-related medications, biological sex assigned at birth, and race/ethnicity.
 * If the answers show that the individual qualifies, then he/she was formally invited to participate.
 
-# [Survey Instrument Questionnaires](https://github.com/AI-READI/DataElementMaps/wiki/Survey-Instruments)
+# [Survey Instruments](https://github.com/AI-READI/DataElementMaps/wiki/Survey-Instruments)
 
 
 # [Map Survey Instrument Questionairs to Standard Terminology](https://github.com/AI-READI/DataElementMaps/wiki/Map-Survey-Instrument-Questionairs-to-Standard-Terminology)
