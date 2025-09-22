@@ -38,7 +38,7 @@
 
 
 
-## Standard Terminology Mappings
+## Standard Terminology Mappings Explained
 
 The following table illustrates how specific variables from the AI-READI REDCap survey instruments are mapped to standard terminology concepts (e.g., SNOMED CT, LOINC) using OHDSI's Athena vocabulary for interoperability. These mappings ensure alignment with AI-READI's data harmonization goals.
 
@@ -52,7 +52,7 @@ The following table illustrates how specific variables from the AI-READI REDCap 
 
 
 
-![The AI-READI project is funded by NIH Award 1OT2OD032644.][(<img width="332" height="270" alt="image" src="https://github.com/user-attachments/assets/dff5f6ad-391a-4f3d-a9a3-7be49b82d8be" />
+The AI-READI project is funded by NIH Award 1OT2OD032644.[(<img width="332" height="270" alt="image" src="https://github.com/user-attachments/assets/dff5f6ad-391a-4f3d-a9a3-7be49b82d8be" />
 )
   
  
