@@ -77,9 +77,8 @@ The following table illustrates how specific variables from the AI-READI REDCap 
 - These questions align with AI-READI's focus on diabetes-related distress and social determinants of health, mapped to standard terminologies for interoperability.
 - For full REDCap dictionary data element mapping details, see the [Core REDCap Data Dictionary Data Element Mapping Structure](#core-redcap-data-dictionary-structure) section.
 
-<p align="center">
-[<img width="332" height="270" alt="image" src="https://github.com/user-attachments/assets/dff5f6ad-391a-4f3d-a9a3-7be49b82d8be" />](https://aireadi.org/)
-</p>
+[<p align="center"
+img width="332" height="270" alt="image" src="https://github.com/user-attachments/assets/dff5f6ad-391a-4f3d-a9a3-7be49b82d8be" /p>](https://aireadi.org/)
 The AI-READI project is funded by NIH Award 1OT2OD032644.
 
 
