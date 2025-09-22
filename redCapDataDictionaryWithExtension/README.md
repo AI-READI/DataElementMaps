@@ -21,7 +21,7 @@
 
 
 **Notes**:
-- Concept IDs are mapped to the OHDSI Athena vocabulary. URLs are provided for reference, but specific Concept Codes (e.g., SNOMED CT, LOINC) are pending confirmation.
+- Concept IDs are mapped to the OHDSI Athena vocabulary. URLs are provided for reference, but specific Concept Codes (e.g., SNOMED CT, LOINC, AI-READI custom concepts) are pending confirmation.
 - These questions align with AI-READI's focus on diabetes-related distress and social determinants of health, mapped to standard terminologies for interoperability.
 - For full REDCap dictionary data element mapping details, see the [Core REDCap Data Dictionary Data Element Mapping Structure](#core-redcap-data-dictionary-structure) section.
 
