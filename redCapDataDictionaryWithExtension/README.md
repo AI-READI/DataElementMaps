@@ -58,7 +58,7 @@ The following table illustrates how specific variables from the AI-READI REDCap 
 | Worrying about the future and the possibility of serious complications | Observation | [TBD] | [2005200046](https://athena.ohdsi.org/search-terms/terms/2005200046) | Likely from PAID-5 survey; Maps to diabetes distress concept |
 | How often have you been treated unfairly by teachers and professors because of your race/ethnic group? | Observation | [TBD] | [2005200126](https://athena.ohdsi.org/search-terms/terms/2005200126) | Likely from Social Determinants of Health survey; Maps to racial/ethnic discrimination concept |
 
-### 3. Complex - Both the question and the answer response must be combined to map the data properly. Dual map applied to capture the answer response and the self-reported condition in the condition domain.
+### 3. Complex - Both the survey question and its corresponding response must be combined to map the data accurately. A dual mapping approach was applied to capture both the answer response and the self-reported condition in the Condition domain.
 | # | Survey Question                                                                 | Response Options                |
 |---|----------------------------------------------------------------------------------|---------------------------------|
 | 1 | Has a doctor or other healthcare professional ever told you that you have/had a heart attack? | ☐ Yes ☐ No ☐ Prefer not to say |
