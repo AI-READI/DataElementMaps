@@ -34,7 +34,7 @@
 
 The AI-READI project is funded by NIH Award 1OT2OD032644.
 
-[This work was presented at the Bridge2AI Leadership Meeting Science Talk](https://docs.google.com/presentation/d/1oRcIhiRf66O53kr1fN2mc3kZts9ugPoZ/edit?slide=id.p1#slide=id.p1)
+[This work was presented at the Bridge2AI Leadership Meeting Science Talk](https://bridge2ai.org/event/bridge2ai-fall-2024-leadership-meeting/))
 
 
   
