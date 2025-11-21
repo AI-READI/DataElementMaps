@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Automatic Generation of OMOP Concept Templates
+Automatic Generation of OMOP Concept Templates/
 
 This script processes medical/cognitive assessment data from MOCA and RedCap sources
 to generate concept templates for submission to the OMOP Vocabulary committee.
@@ -12,8 +12,14 @@ The script follows a concept dictionary architecture:
 4. Generates concept.csv and concept_relationship.csv files
 5. Saves tracking information for validation
 
-Author: [Your name]
+Author: [sigfried gold]
 Date: 2025
+
+
+    Needs to find credentials in ~/.config/gspread/service_account.json.
+    And you have to share the google sheet with the service account email address
+    Instructions: https://docs.gspread.org/en/v6.1.3/oauth2.html
+
 """
 
 import gspread
