@@ -1,0 +1,1 @@
+ The submission was organized into three groups: AI-READI survey constructs, vision care terms, and MoCA terms. The custom concepts were presented to the monthly OHDSI Survey Working Group meetings, where various mapping strategies were discussed and reviewed.
