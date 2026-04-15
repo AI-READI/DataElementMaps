@@ -44,13 +44,13 @@ class SourceTracking:
 
 # Configuration for source data spreadsheets
 mapping_sources = [
-    {
-        'spreadsheet_name': 'AIREADI MOCA Data Dictionary and Mappings v0.3',
-        'worksheet_name': 'MOCA Data Dictionary with Extensions',
-        'location': 'https://docs.google.com/spreadsheets/d/1knk4Qru9zhK0CePZ1rLNVMWsKEI4hQ4a8UqR5K9khXc/edit?gid=1779053680#gid=1779053680',
-        'process': True,
-        'tag': 'MOCA',
-    },
+    # {
+    #     'spreadsheet_name': 'AIREADI MOCA Data Dictionary and Mappings v0.3',
+    #     'worksheet_name': 'MOCA Data Dictionary with Extensions',
+    #     'location': 'https://docs.google.com/spreadsheets/d/1knk4Qru9zhK0CePZ1rLNVMWsKEI4hQ4a8UqR5K9khXc/edit?gid=1779053680#gid=1779053680',
+    #     'process': True,
+    #     'tag': 'MOCA',
+    # },
     {
         'spreadsheet_name': 'REDCap Data Dictionary and OMOP Mappings',
         'worksheet_name': '_master REDCap Data Dictionary with Extensions',
