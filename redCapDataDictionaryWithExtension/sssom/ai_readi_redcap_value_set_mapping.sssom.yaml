@@ -1,0 +1,18 @@
+mapping_set_id: https://w3id.org/ai-readi/mapping/redcap-to-omop
+mapping_set_title: AI-READI REDCap value set mappings to OMOP concepts
+mapping_set_description: SSSOM representation generated from the AI-READI REDCap value
+  set mapping file. Subject identifiers represent AI-READI REDCap source variables/response
+  options; object identifiers represent OMOP concept_id targets.
+license: UNSPECIFIED
+creator_id:
+- AI-READI
+mapping_provider: AI-READI
+mapping_tool: manual_curation
+curie_map:
+  AIREADI_REDCAP: https://w3id.org/ai-readi/redcap/
+  OMOP: https://athena.ohdsi.org/search-terms/terms/
+  skos: http://www.w3.org/2004/02/skos/core#
+  semapv: https://w3id.org/semapv/vocab/
+subject_source: AI-READI REDCap
+object_source: OMOP Standardized Vocabularies
+mapping_date: '2026-06-09'
