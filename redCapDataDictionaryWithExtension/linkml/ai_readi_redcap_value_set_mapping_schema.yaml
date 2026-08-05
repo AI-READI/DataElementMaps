@@ -1,0 +1,247 @@
+id: https://w3id.org/ai-readi/redcap-value-set-mapping
+name: ai_readi_redcap_value_set_mapping
+title: AI-READI REDCap Value Set Mapping Schema
+description: LinkML schema generated from _ai_readi_redcap_value_set_mapping_common_v4.csv. It represents source REDCap variables/question-response
+  values mapped to OMOP target concepts and related mapping metadata.
+license: https://creativecommons.org/licenses/by/4.0/
+prefixes:
+  linkml: https://w3id.org/linkml/
+  ai_readi: https://w3id.org/ai-readi/
+  omop: https://ohdsi.github.io/CommonDataModel/
+  skos: http://www.w3.org/2004/02/skos/core#
+default_prefix: ai_readi
+default_range: string
+imports:
+- linkml:types
+classes:
+  MappingFile:
+    tree_root: true
+    description: Container for AI-READI REDCap to OMOP mapping records.
+    slots:
+    - mappings
+  MappingRecord:
+    description: A single source-to-target mapping row from the AI-READI REDCap value set mapping file.
+    slots:
+    - mapping_record_id
+    - map_to_omop
+    - transferred_to_fairhub_redcap_dataset
+    - protected_or_open_source
+    - extension_needed
+    - form_name
+    - field_type
+    - field_id
+    - field_id_num
+    - question_or_answer
+    - src_code
+    - src_code_id
+    - src_cd_description
+    - target_concept_id
+    - local_concept_id
+    - target_concept_name
+    - target_domain_id
+    - target_vocabulary_id
+    - target_concept_class_id
+    - target_concept_code
+    - target_standard_concept
+    - predicate_id
+    - confidence
+    - modifier
+    - value_as_concept_id
+    - qualifier_concept_id
+    - qualifier_source_value
+slots:
+  mappings:
+    range: MappingRecord
+    multivalued: true
+    inlined: true
+    description: Collection of source-to-OMOP mapping records.
+  mapping_record_id:
+    range: string
+    identifier: true
+    description: Local identifier assigned to each mapping row during conversion.
+  map_to_omop:
+    range: MapToOmopEnum
+    description: Column imported from source CSV column `Map_to_OMOP`.
+    annotations:
+      source_column: Map_to_OMOP
+  transferred_to_fairhub_redcap_dataset:
+    range: YesNoEnum
+    description: Column imported from source CSV column `transferred_to_fairhub_REDCap_dataset`.
+    annotations:
+      source_column: transferred_to_fairhub_REDCap_dataset
+  protected_or_open_source:
+    range: ProtectedOpenSourceEnum
+    description: Column imported from source CSV column `Protected_or_open-source`.
+    annotations:
+      source_column: Protected_or_open-source
+  extension_needed:
+    range: YesNoEnum
+    description: Column imported from source CSV column `Extension_Needed`.
+    annotations:
+      source_column: Extension_Needed
+  form_name:
+    range: string
+    description: Column imported from source CSV column `FORM_NAME`.
+    annotations:
+      source_column: FORM_NAME
+  field_type:
+    range: FieldTypeEnum
+    description: Column imported from source CSV column `FIELD_TYPE`.
+    annotations:
+      source_column: FIELD_TYPE
+  field_id:
+    range: string
+    description: Column imported from source CSV column `FIELD_ID`.
+    annotations:
+      source_column: FIELD_ID
+  field_id_num:
+    range: integer
+    description: Column imported from source CSV column `FIELD_ID_NUM`.
+    annotations:
+      source_column: FIELD_ID_NUM
+  question_or_answer:
+    range: QuestionAnswerEnum
+    description: Column imported from source CSV column `temp_Question_or_Answer`.
+    annotations:
+      source_column: temp_Question_or_Answer
+  src_code:
+    range: string
+    description: Column imported from source CSV column `SRC_CODE`.
+    annotations:
+      source_column: SRC_CODE
+  src_code_id:
+    range: string
+    description: Column imported from source CSV column `SRC_CODE_ID`.
+    annotations:
+      source_column: SRC_CODE_ID
+  src_cd_description:
+    range: string
+    description: Column imported from source CSV column `SRC_CD_DESCRIPTION`.
+    annotations:
+      source_column: SRC_CD_DESCRIPTION
+  target_concept_id:
+    range: integer
+    description: Column imported from source CSV column `TARGET_CONCEPT_ID`.
+    annotations:
+      source_column: TARGET_CONCEPT_ID
+  local_concept_id:
+    range: integer
+    description: Column imported from source CSV column `LOCAL_CONCEPT_ID`.
+    annotations:
+      source_column: LOCAL_CONCEPT_ID
+  target_concept_name:
+    range: string
+    description: Column imported from source CSV column `TARGET_CONCEPT_NAME`.
+    annotations:
+      source_column: TARGET_CONCEPT_NAME
+  target_domain_id:
+    range: OmopDomainEnum
+    description: Column imported from source CSV column `TARGET_DOMAIN_ID`.
+    annotations:
+      source_column: TARGET_DOMAIN_ID
+  target_vocabulary_id:
+    range: VocabularyEnum
+    description: Column imported from source CSV column `TARGET_VOCABULARY_ID`.
+    annotations:
+      source_column: TARGET_VOCABULARY_ID
+  target_concept_class_id:
+    range: string
+    description: Column imported from source CSV column `TARGET_CONCEPT_CLASS_ID`.
+    annotations:
+      source_column: TARGET_CONCEPT_CLASS_ID
+  target_concept_code:
+    range: string
+    description: Column imported from source CSV column `TARGET_CONCEPT_CODE`.
+    annotations:
+      source_column: TARGET_CONCEPT_CODE
+  target_standard_concept:
+    range: StandardConceptEnum
+    description: Column imported from source CSV column `TARGET_STANDARD_CONCEPT`.
+    annotations:
+      source_column: TARGET_STANDARD_CONCEPT
+  predicate_id:
+    range: PredicateEnum
+    description: Column imported from source CSV column `PREDICATE_ID`.
+    annotations:
+      source_column: PREDICATE_ID
+  confidence:
+    range: float
+    description: Column imported from source CSV column `CONFIDENCE`.
+    annotations:
+      source_column: CONFIDENCE
+  modifier:
+    range: string
+    description: Column imported from source CSV column `MODIFIER`.
+    annotations:
+      source_column: MODIFIER
+  value_as_concept_id:
+    range: integer
+    description: Column imported from source CSV column `value_as_concept_id`.
+    annotations:
+      source_column: value_as_concept_id
+  qualifier_concept_id:
+    range: integer
+    description: Column imported from source CSV column `qualifier_concept_id`.
+    annotations:
+      source_column: qualifier_concept_id
+  qualifier_source_value:
+    range: string
+    description: Column imported from source CSV column `qualifier_source_value`.
+    annotations:
+      source_column: qualifier_source_value
+enums:
+  MapToOmopEnum:
+    permissible_values:
+      'Yes': {}
+  YesNoEnum:
+    permissible_values:
+      'No': {}
+      'Yes': {}
+  ProtectedOpenSourceEnum:
+    permissible_values:
+      locked (unavailable): {}
+      open-source: {}
+      protected: {}
+  QuestionAnswerEnum:
+    permissible_values:
+      Answer: {}
+      Question: {}
+  OmopDomainEnum:
+    permissible_values:
+      Condition: {}
+      Device: {}
+      Meas Value: {}
+      Measurement: {}
+      Observation: {}
+      Procedure: {}
+      Route: {}
+      Unit: {}
+  VocabularyEnum:
+    permissible_values:
+      AIREADI: {}
+      AIREADI-MOCA: {}
+      AIREADI-Vision: {}
+      LOINC: {}
+      OMOP Extension: {}
+      PPI: {}
+      SNOMED: {}
+      UCUM: {}
+  StandardConceptEnum:
+    permissible_values:
+      S: {}
+  PredicateEnum:
+    permissible_values:
+      skos:closeMatch: {}
+      skos:exactMatch: {}
+      skos:relatedMatch: {}
+  FieldTypeEnum:
+    permissible_values:
+      calc: {}
+      checkbox: {}
+      dropdown: {}
+      'no': {}
+      notes: {}
+      radio: {}
+      text: {}
+      'yes': {}
+      yesno: {}
