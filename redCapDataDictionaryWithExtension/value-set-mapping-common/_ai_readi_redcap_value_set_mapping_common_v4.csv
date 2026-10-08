@@ -511,7 +511,7 @@ Yes,Yes,open-source,No,imported,text,import_troponin_t_u,2919,Question,,,,,,nano
 Yes,Yes,open-source,No,imported,text,import_troponin_t_max,2920,Question,,,NORC analyses,,,Troponin-T max,,,,,,,,,,,
 Yes,Yes,open-source,No,imported,text,import_troponin_t_max2,2920,Question,,,NORC analyses,,,Troponin-T max,,,,,,,,,,,
 Yes,Yes,open-source,No,imported,text,import_c_peptide,2921,Question,1986-9,C-Peptide,C peptide [Mass/volume] in Serum or Plasma,3010084,,C peptide [Mass/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,1986-9,S,skos:exactMatch,1,,,,
-Yes,Yes,open-source,No,imported,text,import_c_peptide_u,2922,Question,,,nanogram per liter,8725,,nanogram per liter,,,,,,,,,,,
+Yes,Yes,open-source,No,imported,text,import_c_peptide_u,2922,Question,,,nanogram per liter,8725,,nanogram per liter,Unit,UCUM,Unit,ng/L,S,skos:exactMatch,1,,,,
 Yes,Yes,open-source,No,imported,text,import_c_peptide_min,2923,Question,,,NORC analyses,,,C-Peptide min,,,,,,,,,,,
 Yes,Yes,open-source,No,imported,text,import_c_peptide_max,2924,Question,,,NORC analyses,,,C-Peptide max,,,,,,,,,,,
 Yes,Yes,open-source,No,imported,text,import_insulin,2925,Question,20448-7,Insulin,Insulin [Units/volume] in Serum or Plasma,3016244,,Insulin [Units/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,20448-7,S,skos:exactMatch,1,,,,
