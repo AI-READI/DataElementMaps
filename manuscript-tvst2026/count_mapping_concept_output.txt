@@ -30,8 +30,8 @@
 │ REDCap survey timestamp        │    34 │
 │ Specimen handling              │    12 │
 │ BCVA not-done / sign modifier  │    10 │
-│ MoCA paper-administration flag │     1 │
 │ REDCap administrative          │     1 │
+│ MoCA paper-administration flag │     1 │
 └────────────────────────────────┴───────┘
 ┌──────────────────┬───────────────────┬────────────┬───────┐
 │ mapping_category │   PREDICATE_ID    │ CONFIDENCE │   n   │
