@@ -39,6 +39,15 @@ Related artifacts elsewhere in this repository:
 | OMOP Standardized Vocabularies (validation) | v5.0 27-AUG-25 |
 | Repository release | `v1.0-tvst` |
 
+
+|vocabulary_id|vocabulary_version|
+|---|---|
+|LOINC|LOINC 2.80|
+|None|v5.0 27-AUG-25|
+|OMOP Extension|OMOP Extension 20240716|
+|PPI|Codebook Version 0.4.43 + COVID + MHWB + SDOH + PFH + BHP + EHH|
+|SNOMED|2025-02-01 SNOMED CT International Edition; 2025-03-01 SNOMED CT US Edition; 2025-04-09 SNOMED CT UK Edition|
+|UCUM|Version 1.8.2|
 ## Reproducing the counts
 
 **Option A — DuckDB (local, no database needed)**

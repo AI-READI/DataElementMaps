@@ -2,8 +2,8 @@
 │        category         │   n    │ pct_of_2906 │ distinct_concepts │
 │         varchar         │ int128 │   double    │       int64       │
 ├─────────────────────────┼────────┼─────────────┼───────────────────┤
-│ Standard                │   1413 │        48.6 │               381 │
-│ Custom                  │    487 │        16.8 │               342 │
+│ Standard                │   1412 │        48.6 │               380 │
+│ Custom                  │    488 │        16.8 │               343 │
 │ Mapped total            │   1900 │        65.4 │               723 │
 │ Designated but unmapped │    104 │         3.6 │              NULL │
 │ Not designated          │    902 │        31.0 │              NULL │
@@ -13,12 +13,12 @@
 │ mapping_category │   vocabulary   │ elements │ distinct_concepts │
 │     varchar      │    varchar     │  int64   │       int64       │
 ├──────────────────┼────────────────┼──────────┼───────────────────┤
-│ Standard         │ LOINC          │     1200 │               281 │
-│ Standard         │ SNOMED         │      138 │                71 │
+│ Standard         │ LOINC          │     1203 │               283 │
+│ Standard         │ SNOMED         │      134 │                68 │
 │ Standard         │ UCUM           │       69 │                23 │
 │ Standard         │ PPI            │        5 │                 5 │
 │ Standard         │ OMOP Extension │        1 │                 1 │
-│ Custom           │ AIREADI        │      388 │               265 │
+│ Custom           │ AIREADI        │      389 │               266 │
 │ Custom           │ AIREADI-Vision │       69 │                47 │
 │ Custom           │ AIREADI-MOCA   │       30 │                30 │
 └──────────────────┴────────────────┴──────────┴───────────────────┘
@@ -30,20 +30,20 @@
 │ REDCap survey timestamp        │    34 │
 │ Specimen handling              │    12 │
 │ BCVA not-done / sign modifier  │    10 │
-│ REDCap administrative          │     1 │
 │ MoCA paper-administration flag │     1 │
+│ REDCap administrative          │     1 │
 └────────────────────────────────┴───────┘
 ┌──────────────────┬───────────────────┬────────────┬───────┐
 │ mapping_category │   PREDICATE_ID    │ CONFIDENCE │   n   │
 │     varchar      │      varchar      │  varchar   │ int64 │
 ├──────────────────┼───────────────────┼────────────┼───────┤
-│ Standard         │ skos:closeMatch   │ 1          │   158 │
+│ Standard         │ skos:closeMatch   │ 1          │   156 │
 │ Standard         │ skos:closeMatch   │ 0.75       │    79 │
-│ Standard         │ skos:exactMatch   │ 1          │  1169 │
-│ Standard         │ skos:exactMatch   │ 0.75       │     4 │
+│ Standard         │ skos:exactMatch   │ 1          │  1171 │
+│ Standard         │ skos:exactMatch   │ 0.75       │     3 │
 │ Standard         │ skos:relatedMatch │ 0.75       │     1 │
 │ Standard         │ skos:relatedMatch │ 0.5        │     2 │
-│ Custom           │ skos:exactMatch   │ 1          │   487 │
+│ Custom           │ skos:exactMatch   │ 1          │   488 │
 └──────────────────┴───────────────────┴────────────┴───────┘
 ┌──────────────────────┬─────────────────────────┬───────┐
 │ qualifier_concept_id │ qualifier_source_value  │   n   │
