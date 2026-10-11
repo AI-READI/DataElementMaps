@@ -1,0 +1,52 @@
+// Figure 2. Operational decision logic for survey-to-OMOP semantic mapping (AI-READI)
+// Render: dot -Tpdf Figure2_mapping_decision_logic.dot -o Figure2.pdf
+digraph Figure2 {
+  graph [rankdir=TB, compound=true, splines=ortho, nodesep=0.45, ranksep=0.42, fontname="Arial", pad=0.25, bgcolor="white"];
+  node  [fontname="Arial", fontsize=11, shape=box, style="rounded,filled", fillcolor="#F2F2EE", color="#8C8C80", penwidth=1.1, margin="0.18,0.08"];
+  edge  [fontname="Arial", fontsize=10, color="#555555", arrowsize=0.7, penwidth=1.0];
+
+  src     [label="Source survey data element\n(question or response option)", shape=box, style="filled", fillcolor="#FFFFFF", penwidth=1.4];
+  domain  [label="Assign OMOP domain\n(Observation, Measurement, Condition)"];
+  q1      [label="Standard concept with\nexact or close match and\nconfidence ≥ 0.75?", shape=diamond, style="filled", fillcolor="#FFFFFF", margin="0.05,0.05"];
+  flag    [label="Flag for working group review", fillcolor="#FCEBD9", color="#C98B4E"];
+  q2      [label="Suitable standard\nconcept identified\non review?", shape=diamond, style="filled", fillcolor="#FFFFFF", margin="0.05,0.05"];
+  std     [label="Map to standard concept\n(LOINC, SNOMED CT, UCUM, PPI)", fillcolor="#DCEAF7", color="#4F81BD"];
+  rel     [label="Retain standard concept\n(related match, documented)", fillcolor="#DCEAF7", color="#4F81BD"];
+  cust    [label="Create AI-READI custom concept\n(concept ID ≥ 2,000,000,000)", fillcolor="#FBE3D6", color="#C0504D"];
+  ohdsi   [label="Submit to OHDSI\nVocabulary Working Group", style="rounded,dashed", fillcolor="#FFFFFF"];
+
+  subgraph cluster_patterns {
+    label="Apply mapping pattern(s)"; labeljust="l"; fontname="Arial Bold"; fontsize=11;
+    style="rounded,filled"; fillcolor="#FAF6EC"; color="#B8A57A";
+    p1 [label="One-to-one mapping", fillcolor="#FFFFFF"];
+    p2 [label="Question–response pairing\n(value_as_concept_id)", fillcolor="#FFFFFF"];
+    p3 [label="Negative-response capture", fillcolor="#FFFFFF"];
+    p4 [label="Dual-domain mapping\n(Observation + Condition)", fillcolor="#FFFFFF"];
+    p5 [label="Contextual qualifier, e.g., laterality\n(qualifier_concept_id)", fillcolor="#FFFFFF"];
+    {rank=same; p1; p2;}
+    {rank=same; p3; p4;}
+    p1 -> p3 [style=invis]; p2 -> p4 [style=invis]; p3 -> p5 [style=invis]; p4 -> p5 [style=invis];
+  }
+
+  doc    [label="Document SSSOM metadata\n(predicate, confidence, provenance)"];
+  adj    [label="Working group adjudication\n(consensus review)"];
+  final  [label="Final validated mapping", fillcolor="#E4F1E1", color="#6A9A5B"];
+
+  src -> domain -> q1;
+  q1 -> std  [xlabel="Yes "];
+  q1 -> flag [xlabel=" No"];
+  flag -> q2;
+  q2 -> rel  [xlabel="Yes "];
+  q2 -> cust [xlabel=" No"];
+  cust -> ohdsi [style=dashed];
+
+  {rank=same; std; flag;}
+  {rank=same; rel; cust;}
+
+  std  -> p1 [lhead=cluster_patterns];
+  rel  -> p1 [lhead=cluster_patterns];
+  cust -> p1 [lhead=cluster_patterns];
+  p5 -> doc [ltail=cluster_patterns];
+  doc -> adj -> final;
+  adj -> flag [style=dotted, xlabel="revise", constraint=false];
+}
