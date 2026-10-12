@@ -35,11 +35,10 @@ These files and folders are **superseded** and retained only for provenance (ver
 | `mappings-csv/` | `mappings-csv/` | Dated working versions of the REDCap, Labs, Vision, MoCA and timestamp mappings (2023–2025) |
 | `Custom_Concepts_Review/` | `Custom_Concepts_Review/` | Custom concept review lists (2025), superseded by the OHDSI vocabulary request files |
 | `auto_gen_concept_templates/` | `auto_gen_concept_templates/` | Earlier script for generating custom concept templates |
-   | `data-dictionary/` | `data-dictionary/` | REDCap pilot data dictionary exports (2023–2024) |
-   | `sample_data/` | `sample_data/` | Sample REDCap export files (2024) |
-   | `unified_dashboard/` | `unified_dashboard/` | SQL for an earlier OMOP unified dashboard table |
-   | `.github/` | `.github/` | Template issue forms and GitHub Actions workflows (inactive here) |
-   | `.vscode/` | `.vscode/` | Editor settings |
+| `data-dictionary/` | `data-dictionary/` | REDCap pilot data dictionary exports (2023–2024) |
+| `sample_data/` | `sample_data/` | Sample REDCap export files (2024) |
+| `unified_dashboard/` | `unified_dashboard/` | SQL for an earlier OMOP unified dashboard table |
+| `.vscode/` | `.vscode/` | Editor settings |
 
 Full history of each file is preserved in git (`git log --follow <file>`).
 

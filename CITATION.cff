@@ -8,23 +8,10 @@ authors:
     given-names: Stephanie S.
   - family-names: Bangudi
     given-names: Monique M.
-  - family-names: Cavallon
-    given-names: James
-  - family-names: Mitchell
-    given-names: Jessica L.
-  - family-names: Francis
-    given-names: Patricia A.
   - family-names: Gold
     given-names: Sigfried
   - family-names: Chen
     given-names: Yi-Ju
-  - family-names: Chute
-    given-names: Christopher G.
-  - family-names: Lee
-    given-names: Cecilia S.
-  - family-names: Lee
-    given-names: Aaron Y.
-  - name: "AI-READI Consortium"
 repository-code: "https://github.com/AI-READI/DataElementMaps"
 repository-artifact: "https://github.com/AI-READI/DataElementMaps/blob/main/manuscript-tvst2026/ai_readi_redcap_value_set_mapping_common.csv"
 url: "https://aireadi.org"
