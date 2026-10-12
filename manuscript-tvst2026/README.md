@@ -17,8 +17,20 @@ Contents
 |---|---|
 | `ai_readi_redcap_value_set_mapping_common.csv` | Final REDCap-to-OMOP value-set mapping used in the manuscript (2,004 rows; 26 columns). Field definitions: [value-set-mapping-common/README.md](../../redCapDataDictionaryWithExtension/value-set-mapping-common/README.md). |
 | `count_mapping_concepts.sql` | Reproduces all counts in Table 2, the Results and the Abstract. DuckDB; runs locally on the CSV. |
+| `count_mapping_concept_output.txt` | Output of `count_mapping_concepts.sql` on the final mapping file. |
 | `count_mapping_concepts_databricks.sql` | Same counts for Databricks / Spark SQL; reads the CSV loaded as table `ai_readi_redcap_value_set_mapping_common`. |
 | `validate_mapping_against_omop_vocabulary.sql` | Validates every standard target and qualifier concept against the OMOP Standardized Vocabularies (existence, standard status, validity, domain, vocabulary, concept code). Databricks / Spark SQL; requires vocabulary tables in schema `omop_vocab`. |
+| `validation-count-mapping-concepts_databricks.ipynb` | Databricks notebook that runs the count and validation queries, with saved outputs. |
+
+
+Supplementary tables and figures:
+
+| Folder | Contents |
+|---|---|
+| [`supplementary/`](supplementary/) | Supplementary Tables S1 (survey instruments and documentation) and S2 (mapping relationships, confidence, reasons for non-mapping, laterality), as PDF and Markdown |
+| [`figures/`](figures/) | Figures 1–3 (PDF, PNG, TIFF) and the Figure 3 plotting script |
+| [`source/`](source/) | Editable sources: Figure 2 Graphviz `.dot` file and the Supplementary Table S2 `.docx` |
+
 
 Related artifacts elsewhere in this repository:
 
@@ -48,50 +60,60 @@ Related artifacts elsewhere in this repository:
 |PPI|Codebook Version 0.4.43 + COVID + MHWB + SDOH + PFH + BHP + EHH|
 |SNOMED|2025-02-01 SNOMED CT International Edition; 2025-03-01 SNOMED CT US Edition; 2025-04-09 SNOMED CT UK Edition|
 |UCUM|Version 1.8.2|
+---
+
 ## Reproducing the counts
 
 **Option A — DuckDB (local, no database needed)**
 
+Install the DuckDB command-line tool ([duckdb.org/docs/installation](https://duckdb.org/docs/installation/)):
+
+| OS | Install |
+|---|---|
+| Windows | `winget install DuckDB.cli` (then reopen your terminal) |
+| macOS | `brew install duckdb` |
+| Linux | `curl https://install.duckdb.org \| sh` |
+
+Then, from this folder (Terminal, PowerShell or Git Bash):
+
+```bash
+duckdb < count_mapping_concepts.sql
+```
+
+The script reads `ai_readi_redcap_value_set_mapping_common.csv` from the same folder.
+
+*Python alternative (no CLI needed):*
+
 ```bash
 pip install duckdb
-duckdb -c ".read count_mapping_concepts.sql"
---or
-winget install DuckDB.cli
+python run_counts.py
 ```
-
-Run from this folder; the script reads `ai_readi_redcap_value_set_mapping_common.csv` directly.
-```
-   cd /c/path/to/DataElementMaps/manuscript/tvst-2026
-   duckdb < count_mapping_concepts.sql
-```
-
 **Option B — Databricks**
 
 1. Load the CSV as table `ai_readi_redcap_value_set_mapping_common` (catalog/schema-qualify the name in the script if needed).
 2. Run `count_mapping_concepts_databricks.sql`.
-3. With the OMOP vocabulary tables in schema `omop_vocab`, run `validate_mapping_against_vocabulary.sql`.
+3. With the OMOP vocabulary tables in schema `omop_vocab`, run `validate_mapping_against__omop_vocabulary.sql`.
 
 ### Counting rules
 
 - **Designated for mapping:** `Map_to_OMOP = 'Yes'`
 - **Mapped:** designated and `TARGET_CONCEPT_ID` populated
 - **Custom (AI-READI) concept:** `TARGET_CONCEPT_ID` ≥ 2,000,000,000; **standard concept:** < 2,000,000,000
-- **Excluded from mapped counts:** REDCap survey start/completion timestamps (custom concepts 2005200558 and 2005200559; n = 34). These are system metadata rather than survey content and are counted as designated but not mapped. Including them would yield 521 custom-mapped elements and 344 distinct custom concepts.
+- **Excluded from mapped counts:** REDCap survey start/completion timestamps (custom concepts 2005200558 and 2005200559; n = 34). These are system metadata rather than survey content and are counted as designated but not mapped. Including them would yield 522 custom-mapped elements and 345 distinct custom concepts.
 - **Not designated:** the 2,906 curated REDCap data elements minus the 2,004 rows in the mapping file.
-
 
 ### Expected results (Table 2)
 
 | Category | Data elements, n (%) | Distinct concepts |
 |---|---|---|
-| Mapped to standard concepts | 1,413 (48.6) | 381 |
-| — LOINC | 1,200 (41.3) | 281 |
-| — SNOMED CT | 138 (4.7) | 71 |
+| Mapped to standard concepts | 1,412 (48.6) | 380 |
+| — LOINC | 1,203 (41.4) | 283 |
+| — SNOMED CT | 134 (4.6) | 68 |
 | — UCUM | 69 (2.4) | 23 |
 | — PPI | 5 (0.2) | 5 |
 | — OMOP Extension | 1 (<0.1) | 1 |
-| Mapped to AI-READI custom concepts | 487 (16.8) | 342 |
-| — AIREADI | 388 (13.4) | 265 |
+| Mapped to AI-READI custom concepts | 488 (16.8) | 343 |
+| — AIREADI | 389 (13.4) | 266 |
 | — AIREADI-Vision | 69 (2.4) | 47 |
 | — AIREADI-MOCA | 30 (1.0) | 30 |
 | **Mapped total** | **1,900 (65.4)** | **723** |
@@ -101,11 +123,11 @@ Run from this folder; the script reads `ai_readi_redcap_value_set_mapping_common
 
 Designated-but-not-mapped breakdown: laboratory reference ranges 46; survey timestamps 34; specimen-handling fields 12; BCVA not-done/sign modifiers 10; REDCap administrative 1; MoCA paper-administration flag 1.
 
-Mapping relationships (standard concepts): exact match 1,173; close match 237; related match 3. Confidence: 1.0 = 1,327; 0.75 = 84; 0.5 = 2. All 487 custom mappings are exact match at confidence 1.0.
+Mapping relationships (standard concepts): exact match 1,174; close match 235; related match 3. Confidence: 1.0 = 1,327; 0.75 = 83; 0.5 = 2. All 488 custom mappings are exact match at confidence 1.0.
 
 Laterality qualifiers: Right eye (45876703) 78; Left eye (45883829) 78; Structure of right foot (4298982) 2; Structure of left foot (4320144) 2.
 
-All integrity checks in section 6 of the count scripts return zero rows.
+All integrity checks in section 6 of the count scripts (6a–6d) return zero rows.
 
 ---
 
@@ -119,4 +141,4 @@ AI-READI Survey Data Element Commons, release v1.0-tvst. Zenodo. https://doi.org
 
 ## License
 
-MIT — see [LICENSE](../../LICENSE).
+MIT — see [LICENSE](../LICENSE).
