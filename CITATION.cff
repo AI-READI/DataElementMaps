@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "If you use these mappings, please cite the manuscript and this software release."
-title: "AI-READI Survey Data Element Commons: REDCap-to-OMOP value-set mappings"
+type: software
+title: "AI-READI Survey Data Element Mapping Artifacts"
 abstract: "Value-set mappings of AI-READI survey, vision care and cognitive assessment (MoCA) data elements to the OMOP Common Data Model, with SSSOM metadata, LinkML schema, AI-READI custom vocabularies, and scripts to reproduce the counts reported in the TVST 2026 manuscript."
 authors:
   - family-names: Hong
@@ -25,23 +26,17 @@ authors:
     given-names: Aaron Y.
   - name: "AI-READI Consortium"
 repository-code: "https://github.com/AI-READI/DataElementMaps"
+repository-artifact: "https://github.com/AI-READI/DataElementMaps/blob/main/manuscript-tvst2026/ai_readi_redcap_value_set_mapping_common.csv"
+url: "https://aireadi.org"
 license: MIT
 version: "v1.0-tvst"
-date-released: "2026-10-11"   # set on the day you create the release
+date-released: "2026-10-11"
 # identifiers:                  # add after Zenodo mints the DOI
 #   - type: doi
 #     value: "10.5281/zenodo.XXXXXXX"
 keywords:
   - AI-READI
-  - OMOP
-  - OHDSI
-  - REDCap
-  - SSSOM
-  - survey data
-  - vision
-  - MoCA
-  - Super Intelligence 
-  - AI-READI
+  - Computable Survey Data Element Map
   - OMOP
   - OHDSI
   - REDCap
@@ -51,24 +46,16 @@ keywords:
   - MoCA
   - demographics
   - general health
-  - Diabetes self care
-  - Center for Epidemiological Studies Depression Scale (CES-D-10)
-  - Social determinants of healt
-  - Food insecurity,
-  - Neighborhood environment, and racial and ethnic discrimination
-  - Problem Areas In Diabetes (PAID-5)
-  - Vision and access to eye care
-  - Dietary Survey
-  - Substance use
-license: MIT
-message: "If you use this software, please cite it as below."
-repository-artifact: "https://github.com/AI-READI/DataElementMaps/blob/main/manuscript-tvst2026/ai_readi_redcap_value_set_mapping_common.csv"
-repository-code: "https://github.com/AI-READI/DataElementMaps/tree/main/redCapDataDictionaryWithExtension"
-title: "AI-READI, Computable AI-READI Survey Data Elements"
-type: software
-url: "https://aireadi.org"
-version: 0.0.1
-
+  - diabetes self-care
+  - Center for Epidemiologic Studies Depression Scale (CES-D-10)
+  - Problem Areas in Diabetes (PAID-5)
+  - social determinants of health
+  - food insecurity
+  - neighborhood environment
+  - racial and ethnic discrimination
+  - vision and access to eye care
+  - dietary habits
+  - substance use
 preferred-citation:
   type: article
   title: "A Generalizable Framework for Mapping Survey, Vision Care, and Cognitive Assessment Data to the OMOP Common Data Model in AI-READI"
@@ -113,16 +100,3 @@ preferred-citation:
   journal: "Translational Vision Science & Technology"
   year: 2026
   # doi: "10.1167/tvst.XX.X.XX"   # add after publication
-
-
-keywords:
-  - "AI-READI"
-  - "Computable AI-READI Survey Data Elements"
-license: MIT
-message: "If you use this software, please cite it as below."
-repository-artifact: "https://github.com/AI-READI/DataElementMaps/blob/main/manuscript-tvst2026/ai_readi_redcap_value_set_mapping_common.csv""
-repository-code: "https://github.com/AI-READI/DataElementMaps/tree/main/redCapDataDictionaryWithExtensione"
-title: "AI-READI Survey Data Element Mapping Artifacts"
-type: software
-url: "https://aireadi.org"
-version: 1.0.0

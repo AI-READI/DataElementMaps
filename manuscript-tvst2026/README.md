@@ -15,11 +15,11 @@ Contents
 
 | File | Description |
 |---|---|
-| `ai_readi_redcap_value_set_mapping_common.csv` | Final REDCap-to-OMOP value-set mapping used in the manuscript (2,004 rows; 26 columns). Field definitions: [value-set-mapping-common/README.md](../../redCapDataDictionaryWithExtension/value-set-mapping-common/README.md). |
+| `ai_readi_redcap_value_set_mapping_common.csv` | Final REDCap-to-OMOP value-set mapping used in the manuscript (2,004 rows; 26 columns). Field definitions: [value-set-mapping-common/README.md](../redCapDataDictionaryWithExtension/value-set-mapping-common/README.md). |
 | `count_mapping_concepts.sql` | Reproduces all counts in Table 2, the Results and the Abstract. DuckDB; runs locally on the CSV. |
 | `count_mapping_concept_output.txt` | Output of `count_mapping_concepts.sql` on the final mapping file. |
 | `count_mapping_concepts_databricks.sql` | Same counts for Databricks / Spark SQL; reads the CSV loaded as table `ai_readi_redcap_value_set_mapping_common`. |
-| `validate_mapping_against_omop_vocabulary.sql` | Validates every standard target and qualifier concept against the OMOP Standardized Vocabularies (existence, standard status, validity, domain, vocabulary, concept code). Databricks / Spark SQL; requires vocabulary tables in schema `omop_vocab`. |
+| `validate_mapping_against__omop_vocabulary.sql` | Validates every standard target and qualifier concept against the OMOP Standardized Vocabularies (existence, standard status, validity, domain, vocabulary, concept code). Databricks / Spark SQL; requires vocabulary tables in schema `omop_vocab`. |
 | `validation-count-mapping-concepts_databricks.ipynb` | Databricks notebook that runs the count and validation queries, with saved outputs. |
 
 
@@ -36,10 +36,10 @@ Related artifacts elsewhere in this repository:
 
 | Artifact | Location |
 |---|---|
-| SSSOM mapping set | [`redCapDataDictionaryWithExtension/sssom/`](../../redCapDataDictionaryWithExtension/sssom/) |
-| LinkML schema and data | [`redCapDataDictionaryWithExtension/linkml/`](../../redCapDataDictionaryWithExtension/linkml/) |
-| AI-READI custom vocabulary (OHDSI submission) | [`redCapDataDictionaryWithExtension/OHDSI-vocabulary-request/`](../../redCapDataDictionaryWithExtension/OHDSI-vocabulary-request/) |
-| REDCap survey forms (PDF) | [`redCapDataDictionaryWithExtension/survey_pdfs/`](../../redCapDataDictionaryWithExtension/survey_pdfs/) |
+| SSSOM mapping set | [`redCapDataDictionaryWithExtension/sssom/`](../redCapDataDictionaryWithExtension/sssom/) |
+| LinkML schema and data | [`redCapDataDictionaryWithExtension/linkml/`](../redCapDataDictionaryWithExtension/linkml/) |
+| AI-READI custom vocabulary (OHDSI submission) | [`redCapDataDictionaryWithExtension/OHDSI-vocabulary-request/`](../redCapDataDictionaryWithExtension/OHDSI-vocabulary-request/) |
+| REDCap survey forms (PDF) | [`redCapDataDictionaryWithExtension/survey_pdfs/`](../redCapDataDictionaryWithExtension/survey_pdfs/) |
 
 ---
 
