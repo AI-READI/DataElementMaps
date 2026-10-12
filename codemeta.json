@@ -1,56 +1,55 @@
 {
     "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
     "@type": "SoftwareSourceCode",
+    "name": "AI-READI Survey Data Element Commons",
+    "description": "Value-set mappings of AI-READI survey, vision care and cognitive assessment (MoCA) data elements to the OMOP Common Data Model, with SSSOM metadata, LinkML schema, AI-READI custom vocabularies, and scripts to reproduce the counts reported in the TVST 2026 manuscript.",
     "license": "https://spdx.org/licenses/MIT",
-    "codeRepository": "https://github.com/AI-READI/template",
-    "dateCreated": "2022-11-28",
-    "dateModified": "2022-11-28",
-    "downloadUrl": "https://github.com/AI-READI/template",
-    "issueTracker": "https://github.com/AI-READI/template/issues",
-    "name": "AI-READI Template",
-    "version": "0.0.1",
-    "identifier": "https://doi.org/10.5281/zenodo.7373697",
-    "description": "A sample template for AI-READI projects",
+    "codeRepository": "https://github.com/AI-READI/DataElementMaps",
+    "downloadUrl": "https://github.com/AI-READI/DataElementMaps",
+    "issueTracker": "https://github.com/AI-READI/DataElementMaps/issues",
+    "version": "v1.0-tvst",
+    "dateCreated": "2023-06-28",
+    "dateModified": "2026-10-11",
     "applicationCategory": "Scientific",
-    "funding": "1OT2OD032644",
     "developmentStatus": "active",
     "isPartOf": "https://aireadi.org/",
+    "funding": "1OT2OD032644",
     "funder": {
         "@type": "Organization",
-        "@name": "National Institutes of Health (NIH)"
+        "name": "National Institutes of Health (NIH)"
     },
-    "keywords": [
-        "AI-READI",
-        "template",
-        "project"
-    ],
-    "programmingLanguage": [
-        "JavaScript",
-        "CSS"
-    ],
     "relatedLink": [
         "https://github.com/AI-READI"
     ],
     "author": [
         {
             "@type": "Person",
-            "givenName": "Sanjay",
-            "familyName": "Soundarajan",
-            "email": "ssoundarajan@calmi2.org",
+            "givenName": "Stephanie S.",
+            "familyName": "Hong",
             "affiliation": {
                 "@type": "Organization",
-                "name": "FAIR Data Innovations Hub"
+                "name": "Johns Hopkins University School of Medicine, Department of Medicine, General Internal Medicine, Biomedical Informatics and Data Science Section"
             }
         },
         {
             "@type": "Person",
-            "givenName": "Bhavesh",
-            "familyName": "Patel",
-            "email": "bpatel@calmi2.org",
+            "givenName": "Yi-Ju",
+            "familyName": "Chen",
             "affiliation": {
                 "@type": "Organization",
-                "name": "FAIR Data Innovations Hub"
+                "name": "Johns Hopkins University School of Medicine, Department of Medicine, General Internal Medicine, Biomedical Informatics and Data Science Section"
+            }
+        },
+        {
+            "@type": "Person",
+            "givenName": "Monique",
+            "familyName": "Bangudi",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "Johns Hopkins University School of Medicine, Department of Medicine, General Internal Medicine, Biomedical Informatics and Data Science Section"
             }
         }
-    ]
+    ],
+    "keywords": ["AI-READI", "OMOP", "OHDSI", "REDCap", "SSSOM", "survey data", "vision", "MoCA", "Computable Survey Data Element Map"],
+    "programmingLanguage": ["SQL", "Python"]
 }
