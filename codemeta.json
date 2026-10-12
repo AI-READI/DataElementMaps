@@ -33,6 +33,15 @@
         },
         {
             "@type": "Person",
+            "givenName": "Sigfried",
+            "familyName": "Gold",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "Johns Hopkins University School of Medicine, Department of Medicine, General Internal Medicine, Biomedical Informatics and Data Science Section"
+            }
+        },
+        {
+            "@type": "Person",
             "givenName": "Yi-Ju",
             "familyName": "Chen",
             "affiliation": {
