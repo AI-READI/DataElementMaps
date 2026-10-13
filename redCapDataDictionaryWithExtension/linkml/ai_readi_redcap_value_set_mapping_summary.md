@@ -1,6 +1,6 @@
 # AI-READI REDCap Value Set Mapping LinkML Conversion Summary
 
-- Source file: `_ai_readi_redcap_value_set_mapping_common_v4.csv`
+- Source file: `_ai_readi_redcap_value_set_mapping_common.csv`
 - Rows converted: 2004
 - Source columns: 26
 
@@ -23,33 +23,33 @@
 
 ### TARGET_DOMAIN_ID
 - Meas Value: 1253
-- Observation: 437
+- Observation: 438
 - Measurement: 115
-- [blank]: 96
-- Unit: 44
+- [blank]: 70
+- Unit: 69
 - Condition: 33
 - Procedure: 23
 - Device: 2
 - Route: 1
 
 ### TARGET_VOCABULARY_ID
-- LOINC: 1200
-- AIREADI: 421
-- SNOMED: 138
-- [blank]: 96
+- LOINC: 1203
+- AIREADI: 423
+- SNOMED: 134
+- [blank]: 70
 - AIREADI-Vision: 69
-- UCUM: 44
+- UCUM: 69
 - AIREADI-MOCA: 30
 - PPI: 5
 - OMOP Extension: 1
 
 ### PREDICATE_ID
-- skos:exactMatch: 1640
-- skos:closeMatch: 265
-- [blank]: 96
+- skos:exactMatch: 1668
+- skos:closeMatch: 263
+- [blank]: 70
 - skos:relatedMatch: 3
 
 ### Extension_Needed
-- No: 1514
-- Yes: 489
+- No: 1512
+- Yes: 491
 - [blank]: 1

@@ -3,7 +3,7 @@ mapping_set_title: AI-READI REDCap value set mappings to OMOP concepts
 mapping_set_description: SSSOM representation generated from the AI-READI REDCap value
   set mapping file. Subject identifiers represent AI-READI REDCap source variables/response
   options; object identifiers represent OMOP concept_id targets.
-license: UNSPECIFIED
+license: https://opensource.org/licenses/MIT
 creator_id:
 - AI-READI
 mapping_provider: AI-READI
@@ -15,4 +15,4 @@ curie_map:
   semapv: https://w3id.org/semapv/vocab/
 subject_source: AI-READI REDCap
 object_source: OMOP Standardized Vocabularies
-mapping_date: '2026-06-09'
+mapping_date: '2026-10-12'

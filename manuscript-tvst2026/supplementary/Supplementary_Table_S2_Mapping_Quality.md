@@ -40,4 +40,4 @@ These 104 elements were designated for mapping but intentionally not assigned OM
 
 Laterality was recorded with standard concepts: Right eye (45876703) and Left eye (45883829); Structure of right foot (4298982) and Structure of left foot (4320144). Site-level monofilament results additionally use AI-READI custom site qualifiers (concept IDs 2005200605–2005200624).
 
-All counts were generated from the final mapping file using [`count_mapping_concepts.sql`](../count_mapping_concepts.sql) (see Data Availability). BCVA, best-corrected visual acuity; ETL, extract, transform, load; MoCA, Montreal Cognitive Assessment; SKOS, Simple Knowledge Organization System.
+All counts were generated from the final mapping file using [`count_concept_map.sql`](../count_concept_map.sql) (see [manuscript-tvst2026/count_concept_map.sql](https://github.com/AI-READI/DataElementMaps/blob/main/manuscript-tvst2026/count_concept_map.sql)). BCVA, best-corrected visual acuity; ETL, extract, transform, load; MoCA, Montreal Cognitive Assessment; SKOS, Simple Knowledge Organization System.

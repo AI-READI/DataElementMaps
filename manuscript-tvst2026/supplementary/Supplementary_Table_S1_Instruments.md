@@ -14,7 +14,7 @@
 | Vision and access to eye care | <https://docs.aireadi.org/v3/questionnaires/visual.pdf> |
 | Dietary habits | <https://docs.aireadi.org/v3/questionnaires/dietary.pdf> |
 | Substance use | <https://docs.aireadi.org/v3/questionnaires/substance-use.pdf> |
-| Montreal Cognitive Assessment (MoCA) | [MoCA-8.1-English-Test-2020.pdf](https://github.com/AI-READI/DataElementMaps/blob/main/redCapDataDictionaryWithExtension/moca-data-dictionary/MoCA-8.1-English-Test-2020.pdf) |
+| Montreal Cognitive Assessment (MoCA) | <https://mocacognition.com/paper> (registration required) |
 | Complete AI-READI REDCap survey instruments (all forms) | [AIREADiPilot_REDCap PDFs_survey.pdf](https://github.com/AI-READI/DataElementMaps/blob/main/redCapDataDictionaryWithExtension/survey_pdfs/AIREADiPilot_REDCap%20PDFs_survey.pdf) |
 | Medications | Participant-reported medication lists; available under controlled (restricted) access |
 

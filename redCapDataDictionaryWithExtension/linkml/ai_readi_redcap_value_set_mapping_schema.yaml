@@ -1,7 +1,7 @@
 id: https://w3id.org/ai-readi/redcap-value-set-mapping
 name: ai_readi_redcap_value_set_mapping
 title: AI-READI REDCap Value Set Mapping Schema
-description: LinkML schema generated from _ai_readi_redcap_value_set_mapping_common_v4.csv. It represents source REDCap variables/question-response
+description: LinkML schema generated from _ai_readi_redcap_value_set_mapping_common.csv. It represents source REDCap variables/question-response
   values mapped to OMOP target concepts and related mapping metadata.
 license: https://creativecommons.org/licenses/by/4.0/
 prefixes:
@@ -192,6 +192,7 @@ slots:
 enums:
   MapToOmopEnum:
     permissible_values:
+      'No': {}
       'Yes': {}
   YesNoEnum:
     permissible_values:
@@ -206,6 +207,7 @@ enums:
     permissible_values:
       Answer: {}
       Question: {}
+      Unit: {}
   OmopDomainEnum:
     permissible_values:
       Condition: {}

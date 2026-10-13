@@ -1,6 +1,6 @@
 # AI-READI REDCap Value Set Mapping — SSSOM Representation
 
-Generated from `_ai_readi_redcap_value_set_mapping_common_v4.csv`.
+Generated from `_ai_readi_redcap_value_set_mapping_common.csv` with `generate_linkml_sssom.py`.
 
 ## Files
 
@@ -11,8 +11,8 @@ Generated from `_ai_readi_redcap_value_set_mapping_common_v4.csv`.
 ## Row counts
 
 - Source rows: 2,004
-- Rows included in SSSOM TSV: 1,908
-- Rows excluded as incomplete for SSSOM: 96
+- Rows included in SSSOM TSV: 1,934
+- Rows excluded as incomplete for SSSOM: 70
 
 ## Identifier conventions
 
@@ -24,3 +24,5 @@ Generated from `_ai_readi_redcap_value_set_mapping_common_v4.csv`.
 ## Notes
 
 The TSV includes both standard SSSOM columns and AI-READI/OMOP-specific extension columns such as `target_domain_id`, `target_vocabulary_id`, `value_as_concept_id`, and `qualifier_concept_id`. These extension columns preserve information needed for OMOP ETL and downstream review.
+
+Row counts here are rows in the mapping file. Manuscript counts (e.g., 1,900 mapped elements) additionally exclude REDCap survey timestamps; see `manuscript-tvst2026/README.md`.
