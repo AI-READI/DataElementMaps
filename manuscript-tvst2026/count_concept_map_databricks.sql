@@ -1,5 +1,5 @@
 -- =============================================================================
--- count_mapping_concepts_databricks.sql
+-- count_concept_map_databricks.sql
 -- AI-READI REDCap -> OMOP CDM mapping: element and concept counts
 -- Dialect: Databricks SQL / Spark SQL
 --

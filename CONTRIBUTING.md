@@ -25,7 +25,7 @@ Do **not** post participant-level data, protected health information, or restric
    - Record the SKOS predicate (`skos:exactMatch`, `skos:closeMatch`, `skos:relatedMatch`) and a confidence score; mappings below an exact/close match at 0.75 are flagged for working group review.
    - Record laterality and other context in the qualifier fields.
 4. Avoid editing the CSV in Excel, which silently converts long codes to scientific notation and answer ranges (e.g., `3-4`) to dates. Use a text editor, or import all columns as text.
-5. Before opening a pull request, run the checks in [`manuscript-tvst2026/`](manuscript-tvst2026/README.md): `count_mapping_concepts.sql` (integrity checks 6a–6d should return zero rows) and, if you have the OMOP vocabulary tables, `validate_mapping_against__omop_vocabulary.sql`.
+5. Before opening a pull request, run the checks in [`manuscript-tvst2026/`](manuscript-tvst2026/README.md): `count_concept_map.sql` (integrity checks 6a–6d should return zero rows) and, if you have the OMOP vocabulary tables, `validate_mapping_against__omop_vocabulary.sql`.
 6. Open a pull request into `main` describing what changed and why, with the affected `FIELD_ID`s. A working group member will review it.
 
 ## Commit messages
