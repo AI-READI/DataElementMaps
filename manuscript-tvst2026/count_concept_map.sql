@@ -1,5 +1,5 @@
 -- =============================================================================
--- count_mapping_concepts.sql
+-- count_concept_map.sql
 -- AI-READI REDCap -> OMOP CDM mapping: element and concept counts
 --
 -- Reproduces the counts reported in the manuscript (Table 2, Results, Abstract)
@@ -7,7 +7,7 @@
 --     ai_readi_redcap_value_set_mapping_common.csv
 --
 -- Dialect: DuckDB (>= 0.10). Run with:
---     duckdb -c ".read count_mapping_concepts.sql"
+--     duckdb -c ".read count_concept_map.sql"
 -- or set the file path below and run in the DuckDB CLI.
 -- For PostgreSQL, load the CSV into a table named `mapping` (all columns TEXT)
 -- and run the queries from section 1 onward unchanged.

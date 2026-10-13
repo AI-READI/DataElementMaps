@@ -7,8 +7,6 @@ Hong S, et al. A Generalizable Framework for Mapping Survey, Vision Care, and Co
 The files here are a frozen snapshot that reproduces every number reported in the paper. The working (actively maintained) mapping lives in redCapDataDictionaryWithExtension/value-set-mapping-common/ and may change after publication. 
 For the archived version cited in the paper, use release v1.0-tvst (Zenodo DOI: 10.5281/zenodo.XXXXXXX).
 
-Contents
-
 ---
 
 ## Contents
@@ -16,11 +14,13 @@ Contents
 | File | Description |
 |---|---|
 | `ai_readi_redcap_value_set_mapping_common.csv` | Final REDCap-to-OMOP value-set mapping used in the manuscript (2,004 rows; 26 columns). Field definitions: [value-set-mapping-common/README.md](../redCapDataDictionaryWithExtension/value-set-mapping-common/README.md). |
-| `count_mapping_concepts.sql` | Reproduces all counts in Table 2, the Results and the Abstract. DuckDB; runs locally on the CSV. |
-| `count_mapping_concept_output.txt` | Output of `count_mapping_concepts.sql` on the final mapping file. |
-| `count_mapping_concepts_databricks.sql` | Same counts for Databricks / Spark SQL; reads the CSV loaded as table `ai_readi_redcap_value_set_mapping_common`. |
+| `count_concept_map.sql` | Reproduces all counts in Table 2, the Results and the Abstract. DuckDB; runs locally on the CSV. |
+| `count_concept_map_output.txt` | Output of `count_concept_map.sql` on the final mapping file. |
+| `count_concept_map_databricks.sql` | Same counts for Databricks / Spark SQL; reads the CSV loaded as table `ai_readi_redcap_value_set_mapping_common`. |
 | `validate_mapping_against__omop_vocabulary.sql` | Validates every standard target and qualifier concept against the OMOP Standardized Vocabularies (existence, standard status, validity, domain, vocabulary, concept code). Databricks / Spark SQL; requires vocabulary tables in schema `omop_vocab`. |
 | `validation-count-mapping-concepts_databricks.ipynb` | Databricks notebook that runs the count and validation queries, with saved outputs. |
+| `run_counts.py` | Runs `count_concept_map.sql` with the DuckDB Python package (no CLI needed). |
+| `scripts/` | Supporting queries: OMOP vocabulary validation of AI-READI concepts, mapping-strategy counts, and the type 2 diabetes + BCVA example use-case query. |
 
 
 Supplementary tables and figures:
@@ -77,7 +77,7 @@ Install the DuckDB command-line tool ([duckdb.org/docs/installation](https://duc
 Then, from this folder (Terminal, PowerShell or Git Bash):
 
 ```bash
-duckdb < count_mapping_concepts.sql
+duckdb < count_concept_map.sql
 ```
 
 The script reads `ai_readi_redcap_value_set_mapping_common.csv` from the same folder.
@@ -91,7 +91,7 @@ python run_counts.py
 **Option B — Databricks**
 
 1. Load the CSV as table `ai_readi_redcap_value_set_mapping_common` (catalog/schema-qualify the name in the script if needed).
-2. Run `count_mapping_concepts_databricks.sql`.
+2. Run `count_concept_map_databricks.sql`.
 3. With the OMOP vocabulary tables in schema `omop_vocab`, run `validate_mapping_against__omop_vocabulary.sql`.
 
 ### Counting rules
