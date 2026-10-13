@@ -9,6 +9,11 @@ from pathlib import Path
 
 import duckdb
 
+ 
+# Windows consoles default to cp1252, which cannot print DuckDB's box-drawing table borders.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
 sql_path = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).with_name("count_concept_map.sql")
 con = duckdb.connect()
 
