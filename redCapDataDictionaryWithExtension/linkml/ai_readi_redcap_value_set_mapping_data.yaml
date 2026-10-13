@@ -202,6 +202,9 @@ mappings:
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
+  modifier: Snellen fraction - Photopic VA - OD
+  qualifier_concept_id: 45876703
+  qualifier_source_value: Right eye
 - mapping_record_id: AIREADI_MAPPING_0011
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'No'
@@ -222,6 +225,9 @@ mappings:
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
+  modifier: Snellen fraction - Photopic VA - OS
+  qualifier_concept_id: 45883829
+  qualifier_source_value: Left eye
 - mapping_record_id: AIREADI_MAPPING_0012
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -231,6 +237,7 @@ mappings:
   field_type: text
   field_id_num: 1507
   question_or_answer: Question
+  src_code: viaodplog
   src_cd_description: VA Letter Score - Photopic VA - OD
   target_concept_id: 2005200042
   local_concept_id: 2005200042
@@ -333,6 +340,9 @@ mappings:
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
+  modifier: Snellen fraction - Mesopic VA - OD
+  qualifier_concept_id: 45876703
+  qualifier_source_value: Right eye
 - mapping_record_id: AIREADI_MAPPING_0017
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'No'
@@ -353,6 +363,9 @@ mappings:
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
+  modifier: Snellen fraction - Mesopic VA - OS
+  qualifier_concept_id: 45883829
+  qualifier_source_value: Left eye
 - mapping_record_id: AIREADI_MAPPING_0018
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -4472,7 +4485,7 @@ mappings:
   question_or_answer: Answer
   src_code: '1'
   src_code_id: diet2_1
-  src_cd_description: 3 - 4
+  src_cd_description: 3-4
   target_concept_id: 45882611
   target_concept_name: 3-4
   target_domain_id: Meas Value
@@ -4560,7 +4573,7 @@ mappings:
   question_or_answer: Answer
   src_code: '1'
   src_code_id: diet3_1
-  src_cd_description: 3 - 4
+  src_cd_description: 3-4
   target_concept_id: 45882611
   target_concept_name: 3-4
   target_domain_id: Meas Value
@@ -4648,7 +4661,7 @@ mappings:
   question_or_answer: Answer
   src_code: '1'
   src_code_id: diet4_1
-  src_cd_description: 1 - 2
+  src_cd_description: 1-2
   target_concept_id: 45884526
   target_concept_name: 1-2
   target_domain_id: Meas Value
@@ -5088,7 +5101,7 @@ mappings:
   question_or_answer: Answer
   src_code: '1'
   src_code_id: diet9_1
-  src_cd_description: 1 - 2
+  src_cd_description: 1-2
   target_concept_id: 45884526
   target_concept_name: 1-2
   target_domain_id: Meas Value
@@ -5173,12 +5186,12 @@ mappings:
   question_or_answer: Question
   src_code: eos_dsdecod
   src_cd_description: What was the primary reason the subject discontinued?
-  target_concept_id: 4260904
-  target_concept_name: Reason for
+  target_concept_id: 44810920
+  target_concept_name: Withdrawn from research study
   target_domain_id: Observation
   target_vocabulary_id: SNOMED
-  target_concept_class_id: Attribute
-  target_concept_code: '410666004'
+  target_concept_class_id: Clinical Finding
+  target_concept_code: '871401000000109'
   target_standard_concept: S
   predicate_id: skos:relatedMatch
   confidence: 0.5
@@ -7123,12 +7136,12 @@ mappings:
   question_or_answer: Question
   src_code: cmdosfrq
   src_cd_description: 'Frequency taken or applied:'
-  target_concept_id: 4126015
-  target_concept_name: Frequency
+  target_concept_id: 3042548
+  target_concept_name: Current Medication, Frequency
   target_domain_id: Observation
-  target_vocabulary_id: SNOMED
-  target_concept_class_id: Attribute
-  target_concept_code: '260864003'
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Claims Attachment
+  target_concept_code: 52810-9
   target_standard_concept: S
   predicate_id: skos:closeMatch
   confidence: 1.0
@@ -9356,22 +9369,22 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: protected
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: device_return
   field_type: text
   field_id_num: 1719
   question_or_answer: Question
   src_code: dvenvlocn
   src_cd_description: 'Location of the environmental sensor in the home:'
-  target_concept_id: 4109238
-  target_concept_name: Location within home premises
+  target_concept_id: 2005200631
+  local_concept_id: 2005200631
+  target_concept_name: Location of environmental sensor within home
   target_domain_id: Observation
-  target_vocabulary_id: SNOMED
-  target_concept_class_id: Location
-  target_concept_code: '284349006'
+  target_vocabulary_id: AIREADI
+  target_concept_class_id: Survey
   target_standard_concept: S
-  predicate_id: skos:closeMatch
-  confidence: 0.75
+  predicate_id: skos:exactMatch
+  confidence: 1.0
   qualifier_concept_id: 45762337
   qualifier_source_value: Environmental sensor
 - mapping_record_id: AIREADI_MAPPING_0436
@@ -9498,7 +9511,7 @@ mappings:
   target_domain_id: Observation
   target_vocabulary_id: LOINC
   target_concept_class_id: Clinical Observation
-  target_concept_code: ValidityValid
+  target_concept_code: 45401-7
   target_standard_concept: S
   predicate_id: skos:closeMatch
   confidence: 1.0
@@ -10841,8 +10854,19 @@ mappings:
   field_type: text
   field_id: import_nt_probnp_u
   field_id_num: 2915
-  question_or_answer: Question
+  question_or_answer: Unit
+  src_code: pg/mL
+  src_code_id: import_nt_probnp_u
+  src_cd_description: picogram per milliliter
+  target_concept_id: 8845
   target_concept_name: picogram per milliliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: pg/mL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0506
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -10898,8 +10922,19 @@ mappings:
   field_type: text
   field_id: import_troponin_t_u
   field_id_num: 2919
-  question_or_answer: Question
+  question_or_answer: Unit
+  src_code: ng/L
+  src_code_id: import_troponin_t_u
+  src_cd_description: nanogram per liter
+  target_concept_id: 8725
   target_concept_name: nanogram per liter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: ng/L
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0510
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -10955,10 +10990,19 @@ mappings:
   field_type: text
   field_id: import_c_peptide_u
   field_id_num: 2922
-  question_or_answer: Question
+  question_or_answer: Unit
+  src_code: ng/L
+  src_code_id: import_c_peptide_u
   src_cd_description: nanogram per liter
   target_concept_id: 8725
   target_concept_name: nanogram per liter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: ng/L
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0514
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -10993,15 +11037,15 @@ mappings:
   field_id: import_insulin
   field_id_num: 2925
   question_or_answer: Question
-  src_code: 20448-7
+  src_code: 3695-4
   src_code_id: Insulin
-  src_cd_description: Insulin [Units/volume] in Serum or Plasma
-  target_concept_id: 3016244
-  target_concept_name: Insulin [Units/volume] in Serum or Plasma
+  src_cd_description: Insulin [Mass/volume] in Serum or Plasma
+  target_concept_id: 3022466
+  target_concept_name: Insulin [Mass/volume] in Serum or Plasma
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
-  target_concept_code: 20448-7
+  target_concept_code: 3695-4
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -11014,8 +11058,19 @@ mappings:
   field_type: text
   field_id: import_insulin_u
   field_id_num: 2926
-  question_or_answer: Question
-  target_concept_name: nanogram per liter
+  question_or_answer: Unit
+  src_code: ng/mL
+  src_code_id: import_insulin_u
+  src_cd_description: nanogram per milliliter
+  target_concept_id: 8842
+  target_concept_name: nanogram per milliliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: ng/mL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0518
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -11107,8 +11162,19 @@ mappings:
   field_type: text
   field_id: import_crp_hs_u
   field_id_num: 2933
-  question_or_answer: Question
+  question_or_answer: Unit
+  src_code: mg/L
+  src_code_id: import_crp_hs_u
+  src_cd_description: milligram per liter
+  target_concept_id: 8751
   target_concept_name: milligram per liter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mg/L
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0525
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -11164,7 +11230,19 @@ mappings:
   field_type: text
   field_id: import_total_cholesterol_u
   field_id_num: 2937
-  question_or_answer: Question
+  question_or_answer: Unit
+  src_code: mg/dL
+  src_code_id: import_total_cholesterol_u
+  src_cd_description: milligram per deciliter
+  target_concept_id: 8840
+  target_concept_name: milligram per deciliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mg/dL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0529
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -11208,7 +11286,19 @@ mappings:
   field_type: text
   field_id: import_triglycerides_u
   field_id_num: 2940
-  question_or_answer: Question
+  question_or_answer: Unit
+  src_code: mg/dL
+  src_code_id: import_triglycerides_u
+  src_cd_description: milligram per deciliter
+  target_concept_id: 8840
+  target_concept_name: milligram per deciliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mg/dL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0532
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -11252,7 +11342,19 @@ mappings:
   field_type: text
   field_id: import_hdl_cholesterol_u
   field_id_num: 2943
-  question_or_answer: Question
+  question_or_answer: Unit
+  src_code: mg/dL
+  src_code_id: import_hdl_cholesterol_u
+  src_cd_description: milligram per deciliter
+  target_concept_id: 8840
+  target_concept_name: milligram per deciliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mg/dL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0535
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -11296,7 +11398,19 @@ mappings:
   field_type: text
   field_id: import_ldl_cholesterol_u
   field_id_num: 2946
-  question_or_answer: Question
+  question_or_answer: Unit
+  src_code: mg/dL
+  src_code_id: import_ldl_cholesterol_u
+  src_cd_description: milligram per deciliter
+  target_concept_id: 8840
+  target_concept_name: milligram per deciliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mg/dL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0538
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -11340,7 +11454,19 @@ mappings:
   field_type: text
   field_id: import_glucose_u
   field_id_num: 2949
-  question_or_answer: Question
+  question_or_answer: Unit
+  src_code: mg/dL
+  src_code_id: import_glucose_u
+  src_cd_description: milligram per deciliter
+  target_concept_id: 8840
+  target_concept_name: milligram per deciliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mg/dL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0541
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -11396,9 +11522,19 @@ mappings:
   field_type: text
   field_id: import_bun_u
   field_id_num: 2953
-  question_or_answer: Question
-  src_cd_description: COMP
-  target_concept_name: BUN units
+  question_or_answer: Unit
+  src_code: mg/dL
+  src_code_id: import_bun_u
+  src_cd_description: milligram per deciliter
+  target_concept_id: 8840
+  target_concept_name: milligram per deciliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mg/dL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0545
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -11454,9 +11590,19 @@ mappings:
   field_type: text
   field_id: import_creatinine_u
   field_id_num: 2957
-  question_or_answer: Question
-  src_cd_description: COMP
-  target_concept_name: Creatinine units
+  question_or_answer: Unit
+  src_code: mg/dL
+  src_code_id: import_creatinine_u
+  src_cd_description: milligram per deciliter
+  target_concept_id: 8840
+  target_concept_name: milligram per deciliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mg/dL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0549
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -11555,9 +11701,19 @@ mappings:
   field_type: text
   field_id: import_sodium_u
   field_id_num: 2962
-  question_or_answer: Question
-  src_cd_description: COMP
-  target_concept_name: Sodium units
+  question_or_answer: Unit
+  src_code: mEq/L
+  src_code_id: import_sodium_u
+  src_cd_description: milliequivalent per liter
+  target_concept_id: 9557
+  target_concept_name: milliequivalent per liter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: 10*-3.eq/L
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0556
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -11613,9 +11769,19 @@ mappings:
   field_type: text
   field_id: import_potassium_u
   field_id_num: 2966
-  question_or_answer: Question
-  src_cd_description: COMP
-  target_concept_name: Potassium units
+  question_or_answer: Unit
+  src_code: mEq/L
+  src_code_id: import_potassium_u
+  src_cd_description: milliequivalent per liter
+  target_concept_id: 9557
+  target_concept_name: milliequivalent per liter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: 10*-3.eq/L
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0560
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -11671,9 +11837,19 @@ mappings:
   field_type: text
   field_id: import_chloride_u
   field_id_num: 2970
-  question_or_answer: Question
-  src_cd_description: COMP
-  target_concept_name: Chloride units
+  question_or_answer: Unit
+  src_code: mEq/L
+  src_code_id: import_chloride_u
+  src_cd_description: milliequivalent per liter
+  target_concept_id: 9557
+  target_concept_name: milliequivalent per liter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: 10*-3.eq/L
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0564
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -11729,9 +11905,19 @@ mappings:
   field_type: text
   field_id: import_carbon_dioxide_total_u
   field_id_num: 2974
-  question_or_answer: Question
-  src_cd_description: COMP
-  target_concept_name: Carbon Dioxide, Total units
+  question_or_answer: Unit
+  src_code: mEq/L
+  src_code_id: import_carbon_dioxide_total_u
+  src_cd_description: milliequivalent per liter
+  target_concept_id: 9557
+  target_concept_name: milliequivalent per liter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: 10*-3.eq/L
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0568
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -11787,9 +11973,19 @@ mappings:
   field_type: text
   field_id: import_calcium_u
   field_id_num: 2978
-  question_or_answer: Question
-  src_cd_description: COMP
-  target_concept_name: Calcium units
+  question_or_answer: Unit
+  src_code: mg/dL
+  src_code_id: import_calcium_u
+  src_cd_description: milligram per deciliter
+  target_concept_id: 8840
+  target_concept_name: milligram per deciliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mg/dL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0572
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -11845,9 +12041,19 @@ mappings:
   field_type: text
   field_id: import_protein_total_u
   field_id_num: 2982
-  question_or_answer: Question
-  src_cd_description: COMP
-  target_concept_name: Protein, total units
+  question_or_answer: Unit
+  src_code: g/dL
+  src_code_id: import_protein_total_u
+  src_cd_description: gram per deciliter
+  target_concept_id: 8713
+  target_concept_name: gram per deciliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: g/dL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0576
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -11903,9 +12109,19 @@ mappings:
   field_type: text
   field_id: import_albumin_u
   field_id_num: 2986
-  question_or_answer: Question
-  src_cd_description: COMP
-  target_concept_name: Albumin units
+  question_or_answer: Unit
+  src_code: g/dL
+  src_code_id: import_albumin_u
+  src_cd_description: gram per deciliter
+  target_concept_id: 8713
+  target_concept_name: gram per deciliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: g/dL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0580
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -12026,9 +12242,19 @@ mappings:
   field_type: text
   field_id: import_alkaline_phosphatase_u
   field_id_num: 2993
-  question_or_answer: Question
-  src_cd_description: COMP
-  target_concept_name: Alkaline Phosphatase units
+  question_or_answer: Unit
+  src_code: IU/L
+  src_code_id: import_alkaline_phosphatase_u
+  src_cd_description: international unit per liter
+  target_concept_id: 8923
+  target_concept_name: international unit per liter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[iU]/L'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0587
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -12106,9 +12332,19 @@ mappings:
   field_type: text
   field_id: import_ast_got_u
   field_id_num: 2997
-  question_or_answer: Question
-  src_cd_description: COMP
-  target_concept_name: AST (GOT) units
+  question_or_answer: Unit
+  src_code: IU/L
+  src_code_id: import_ast_got_u
+  src_cd_description: international unit per liter
+  target_concept_id: 8923
+  target_concept_name: international unit per liter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[iU]/L'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0593
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -12164,9 +12400,19 @@ mappings:
   field_type: text
   field_id: import_alt_got_u
   field_id_num: 3001
-  question_or_answer: Question
-  src_cd_description: COMP
-  target_concept_name: ALT (GPT) units
+  question_or_answer: Unit
+  src_code: IU/L
+  src_code_id: import_alt_got_u
+  src_cd_description: international unit per liter
+  target_concept_id: 8923
+  target_concept_name: international unit per liter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[iU]/L'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0597
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -12258,9 +12504,19 @@ mappings:
   field_type: text
   field_id: import_hba1c_u
   field_id_num: 3008
-  question_or_answer: Question
-  src_cd_description: NORC analyses
-  target_concept_name: HbA1c units
+  question_or_answer: Unit
+  src_code: '%'
+  src_code_id: import_hba1c_u
+  src_cd_description: percent
+  target_concept_id: 8554
+  target_concept_name: percent
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '%'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0604
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -12352,9 +12608,19 @@ mappings:
   field_type: text
   field_id: import_urine_creatinine_u
   field_id_num: 3015
-  question_or_answer: Question
-  src_cd_description: NORC analyses
-  target_concept_name: Urine creatinine units
+  question_or_answer: Unit
+  src_code: mg/dL
+  src_code_id: import_urine_creatinine_u
+  src_cd_description: milligram per deciliter
+  target_concept_id: 8840
+  target_concept_name: milligram per deciliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mg/dL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0611
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -12386,9 +12652,19 @@ mappings:
   field_type: text
   field_id: import_urine_albumin_u
   field_id_num: 3017
-  question_or_answer: Question
-  src_cd_description: NORC analyses
-  target_concept_name: Urine Albumin units
+  question_or_answer: Unit
+  src_code: mg/L
+  src_code_id: import_urine_albumin_u
+  src_cd_description: milligram per liter
+  target_concept_id: 8751
+  target_concept_name: milligram per liter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mg/L
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0613
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -12980,10 +13256,11 @@ mappings:
   src_code: years_of_education
   src_cd_description: Years of Education
   target_concept_id: 42528764
-  target_concept_name: Years of education in number - Reported
+  target_concept_name: Years of education [#] - Reported
   target_domain_id: Observation
   target_vocabulary_id: LOINC
   target_concept_class_id: Clinical Observation
+  target_concept_code: 82590-1
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -13058,12 +13335,12 @@ mappings:
   question_or_answer: Question
   src_code: moca_total_score
   src_cd_description: Total Score
-  target_concept_id: 37174522
-  target_concept_name: Montreal cognitive assessment score
+  target_concept_id: 606671
+  target_concept_name: Montreal Cognitive Assessment version 8.1
   target_domain_id: Measurement
   target_vocabulary_id: SNOMED
-  target_concept_class_id: Observable Entity
-  target_concept_code: '1255891005'
+  target_concept_class_id: Staging / Scale
+  target_concept_code: '1148423001'
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -13482,7 +13759,7 @@ mappings:
   target_domain_id: Unit
   target_vocabulary_id: UCUM
   target_concept_class_id: Unit
-  target_concept_code: second
+  target_concept_code: s
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -13599,7 +13876,7 @@ mappings:
   src_code: lbscat_hct
   src_cd_description: Hematocrit  - %
   target_concept_id: 3009542
-  target_concept_name: Hematocrit [Volume Fraction] of Blood
+  target_concept_name: Hematocrit [Volume Fraction] of Blood by calculation
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
@@ -13619,7 +13896,7 @@ mappings:
   src_code: lbscat_mcv
   src_cd_description: MCV - fL
   target_concept_id: 3024731
-  target_concept_name: MCV [Entitic volume]
+  target_concept_name: MCV [Entitic mean volume] in Red Blood Cells
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
@@ -13659,7 +13936,7 @@ mappings:
   src_code: lbscat_mchc
   src_cd_description: MCHC - g/dL
   target_concept_id: 3003338
-  target_concept_name: MCHC [Mass/volume]
+  target_concept_name: MCHC [Entitic Mass/volume] in Red Blood Cells
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
@@ -13679,7 +13956,7 @@ mappings:
   src_code: lbscat_rdw
   src_cd_description: RDW - %
   target_concept_id: 3002385
-  target_concept_name: Erythrocyte distribution width [Ratio]
+  target_concept_name: Erythrocyte [DistWidth] in Red Blood Cells
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
@@ -15003,7 +15280,7 @@ mappings:
   qualifier_concept_id: 44808666
   qualifier_source_value: Montreal cognitive assessment
 - mapping_record_id: AIREADI_MAPPING_0739
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -15285,6 +15562,9 @@ mappings:
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
+  modifier: right
+  qualifier_concept_id: 4298982
+  qualifier_source_value: Structure of right foot
 - mapping_record_id: AIREADI_MAPPING_0752
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -15305,6 +15585,9 @@ mappings:
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
+  modifier: right
+  qualifier_concept_id: 4298982
+  qualifier_source_value: Structure of right foot
 - mapping_record_id: AIREADI_MAPPING_0753
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -15555,6 +15838,9 @@ mappings:
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
+  modifier: left
+  qualifier_concept_id: 4320144
+  qualifier_source_value: Structure of left foot
 - mapping_record_id: AIREADI_MAPPING_0764
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -15575,6 +15861,9 @@ mappings:
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
+  modifier: left
+  qualifier_concept_id: 4320144
+  qualifier_source_value: Structure of left foot
 - mapping_record_id: AIREADI_MAPPING_0765
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -17689,7 +17978,7 @@ mappings:
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Clinical Observation
-  target_concept_code: '2403450'
+  target_concept_code: 8480-6
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -17709,7 +17998,7 @@ mappings:
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Clinical Observation
-  target_concept_code: '2396814'
+  target_concept_code: 8462-4
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -17724,14 +18013,14 @@ mappings:
   question_or_answer: Question
   src_code: pulse_vsorres
   src_cd_description: Heart Rate (bpm)
-  target_concept_id: 4239408
+  target_concept_id: 3027018
   target_concept_name: Heart rate
   target_domain_id: Measurement
-  target_vocabulary_id: SNOMED
-  target_concept_class_id: Observable Entity
-  target_concept_code: '364075005'
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Clinical Observation
+  target_concept_code: 8867-4
   target_standard_concept: S
-  predicate_id: skos:closeMatch
+  predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0864
   map_to_omop: 'Yes'
@@ -17749,7 +18038,7 @@ mappings:
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Clinical Observation
-  target_concept_code: '2403450'
+  target_concept_code: 8480-6
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -17769,7 +18058,7 @@ mappings:
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Clinical Observation
-  target_concept_code: '2396814'
+  target_concept_code: 8462-4
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -17784,14 +18073,14 @@ mappings:
   question_or_answer: Question
   src_code: pulse_vsorres_2
   src_cd_description: Heart Rate (bpm)
-  target_concept_id: 4239408
+  target_concept_id: 3027018
   target_concept_name: Heart rate
   target_domain_id: Measurement
-  target_vocabulary_id: SNOMED
-  target_concept_class_id: Observable Entity
-  target_concept_code: '364075005'
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Clinical Observation
+  target_concept_code: 8867-4
   target_standard_concept: S
-  predicate_id: skos:closeMatch
+  predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0867
   map_to_omop: 'Yes'
@@ -22816,8 +23105,8 @@ mappings:
   question_or_answer: Question
   src_code: pxrdcmpts
   src_cd_description: PhenX Racial/Ethnic Discrimination Survey Completed Timestamp (from REDCap)
-  target_concept_id: 2005200558
-  target_concept_name: Survey Started Timestamp
+  target_concept_id: 2005200559
+  target_concept_name: Survey Completed Timestamp
   target_domain_id: Observation
   target_vocabulary_id: AIREADI
   target_concept_class_id: Qualifier Value
@@ -22839,8 +23128,8 @@ mappings:
   question_or_answer: Question
   src_code: pxrdstartts
   src_cd_description: PhenX Racial/Ethnic Discrimination Survey Started Timestamp (from REDCap)
-  target_concept_id: 2005200559
-  target_concept_name: Survey Completed Timestamp
+  target_concept_id: 2005200558
+  target_concept_name: Survey Started Timestamp
   target_domain_id: Observation
   target_vocabulary_id: AIREADI
   target_concept_class_id: Qualifier Value
@@ -29633,12 +29922,23 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: px_sdoh_combined_survey
   field_type: calc
   question_or_answer: Question
   src_code: pxdhc_sum
   src_cd_description: Discrimination in healthcare - Summary Score
+  target_concept_id: 2005200630
+  local_concept_id: 2005200630
+  target_concept_name: Discrimination in Medical Settings (DMS) total score [PhenX]
+  target_domain_id: Observation
+  target_vocabulary_id: AIREADI
+  target_concept_class_id: Survey
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  qualifier_concept_id: 2005200575
+  qualifier_source_value: PhenX SDOH Survey
 - mapping_record_id: AIREADI_MAPPING_1408
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -36615,7 +36915,7 @@ mappings:
   field_type: yesno
   question_or_answer: Question
   src_code: rtsm_ost
-  src_cd_description: Eidon-UWF temporal-CFP
+  src_cd_description: Eidon-UWF Temporal-CFP
   target_concept_id: 2005200295
   local_concept_id: 2005200295
   target_concept_name: Eidon-UWF Temporal-CFP
@@ -36640,7 +36940,7 @@ mappings:
   src_cd_description: Eidon- Create Mosaic Image-CFP
   target_concept_id: 2005200296
   local_concept_id: 2005200296
-  target_concept_name: Eidon- Create Mosaic Image-CFP
+  target_concept_name: Eidon-Create Mosaic Image-CFP
   target_domain_id: Observation
   target_vocabulary_id: AIREADI-Vision
   target_concept_class_id: Observable Entity
@@ -40439,14 +40739,14 @@ mappings:
   src_code: subrdosfr
   src_cd_description: During the average week, how many 12 oz. bottles or cans of beer do you usually drink? (Number of bottles
     or cans per week)
-  target_concept_id: 1010004
-  target_concept_name: How often do you have a drink containing alcohol
+  target_concept_id: 40766674
+  target_concept_name: How many drinks per day, week, month, or year did you usually have [PhenX]
   target_domain_id: Observation
   target_vocabulary_id: LOINC
   target_concept_class_id: Clinical Observation
-  target_concept_code: 68518-0
+  target_concept_code: 63954-2
   target_standard_concept: S
-  predicate_id: skos:exactMatch
+  predicate_id: skos:closeMatch
   confidence: 0.75
 - mapping_record_id: AIREADI_MAPPING_1893
   map_to_omop: 'Yes'
