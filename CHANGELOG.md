@@ -20,7 +20,9 @@ First archived release, accompanying the manuscript *"A Generalizable Framework 
 
 ### Changed
 
-- Standard concepts replaced after validation against the OMOP Standardized Vocabularies from non-standard (e.g., heart rate 3027018, LOINC 63954-2, LOINC 52810-9, SNOMED 1148423001).
+- Standard concepts replaced after validation against the OMOP Standardized Vocabularies from non-standard (e.g., heart rate 3027018, LOINC 63954-2, LOINC 52810-9, SNOMED 1148423001). line 864,867 - non-standard vs. standard - use standard concept
+Heart rate (pulse_vsorres)
+4239408 (SNOMED 364075005) -> 3027018 (LOINC 8867-4, Heart rate) Standard Measurement-domain concept for a recorded vital sign
 - Insulin mapped to LOINC 3695-4 (Mass/volume) with ng/mL units; 24 missing lab unit concepts added.
 - Top-level README, `CITATION.cff` and `codemeta.json` rewritten for this repository (previously template content).
 - Superseded mapping files and folders moved to `deprecated/`.
@@ -46,11 +48,6 @@ pxrdstartts (start) pointed to 2005200559 Survey Completed Timestamp.
 - 25 lab unit rows that had no UCUM concept
 - the Excel-corrupted codes found in the mapping csv, fixed
 - line 647 - failed standard validation test (non-standard vs standard)  - use the standard concept
-- line 864,867 - non-standard vs. standard - use standard concept
-Heart rate (pulse_vsorres)
-4239408 (SNOMED 364075005)
-3027018 (LOINC 8867-4, Heart rate)
-Standard Measurement-domain concept for a recorded vital sign
 - Line 1893 - found a better term
 Substance use item (subrdosfr)
 1010004 (LOINC 68518-0) -> 40766674 (LOINC 63954-2)closeMatch, confidence 0.75 Closer standard equivalent
@@ -67,7 +64,7 @@ No exact standard concept; nearest related concept kept and was flagged for revi
 - Values corrupted by excel- found few values that were turned into a scientific notation when the code value was long ( i.e. 434941000124101, 859981000000107, 449921000124105, 873751000000103, 368441000000106)
 For example, case of 4-Mar when it should be 3-4 and case of 2-Jan when it should be 1-2
 
--line 862,865,863,866 - concept id was entered into the code field - corrected.
+- line 862,865,863,866 - concept id was entered into the code field - corrected.
 
 - Concept names did not match the concept name in the OMOP vocabulary table - corrected
 
@@ -76,7 +73,8 @@ Snellen visual acuity rows were missing the qualifier concept id for right eye o
 Monofilament foot sensation rows were missing the laterality qualifier - right or left
 
 
-## release version is ai_readi_redcap_value_set_mapping_common.csv
-- current release concept map csv file is located in the manuscript-tvst2026/
+## Latest Release version tag v1.0-tvst2026
+- the latest release version of the concept map csv file is ai_readi_redcap_value_set_mapping_common.csv - tag v1.0-tvst-2026
+- fronzen release copy of the concept map csv file is located in the manuscript-tvst2026/
 - working version is located in the redCapDataDictionaryWithExtension/value-set-mapping-common/
-note, the working directory contains the ai_readi_redcap_value_set_mapping_common.csv, which should be used for ETL. This file is working file so it can change after each release. The fronzen release version is in the manuscript-tvst2026 folder
+Please note, the working directory contains the ai_readi_redcap_value_set_mapping_common.csv, which should be used for ETL. This file is working file so it can change after each release. The fronzen release version is in the manuscript-tvst2026 folder.
