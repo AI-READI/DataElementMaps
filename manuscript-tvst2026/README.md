@@ -5,7 +5,7 @@ This folder contains the exact files used for the manuscript:
 Hong S, et al. A Generalizable Framework for Mapping Survey, Vision Care, and Cognitive Assessment Data to the OMOP Common Data Model in AI-READI. Translational Vision Science & Technology. 2026 (under review).
 
 The files here are a frozen snapshot that reproduces every number reported in the paper. The working (actively maintained) mapping lives in redCapDataDictionaryWithExtension/value-set-mapping-common/ and may change after publication. 
-For the archived version cited in the paper, use release v1.0-tvst (Zenodo DOI: 10.5281/zenodo.XXXXXXX).
+For the archived version cited in the paper, use release v1.0-tvst (Zenodo DOI: 10.5281/zenodo.23375723).
 
 ---
 

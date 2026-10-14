@@ -14,6 +14,7 @@
     "developmentStatus": "active",
     "isPartOf": "https://aireadi.org/",
     "funding": "1OT2OD032644",
+    "identifier": "https://doi.org/10.5281/zenodo.1234567"
     "funder": {
         "@type": "Organization",
         "name": "National Institutes of Health (NIH)"
