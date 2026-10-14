@@ -14,7 +14,7 @@
     "developmentStatus": "active",
     "isPartOf": "https://aireadi.org/",
     "funding": "1OT2OD032644",
-    "identifier": "https://doi.org/10.5281/zenodo.1234567"
+    "identifier": "https://doi.org/10.5281/zenodo.1234567",
     "funder": {
         "@type": "Organization",
         "name": "National Institutes of Health (NIH)"
@@ -34,6 +34,15 @@
         },
         {
             "@type": "Person",
+            "givenName": "Monique",
+            "familyName": "Bangudi",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "Johns Hopkins University School of Medicine, Department of Medicine, General Internal Medicine, Biomedical Informatics and Data Science Section"
+            }
+        }
+        {
+            "@type": "Person",
             "givenName": "Sigfried",
             "familyName": "Gold",
             "affiliation": {
@@ -50,15 +59,6 @@
                 "name": "Johns Hopkins University School of Medicine, Department of Medicine, General Internal Medicine, Biomedical Informatics and Data Science Section"
             }
         },
-        {
-            "@type": "Person",
-            "givenName": "Monique",
-            "familyName": "Bangudi",
-            "affiliation": {
-                "@type": "Organization",
-                "name": "Johns Hopkins University School of Medicine, Department of Medicine, General Internal Medicine, Biomedical Informatics and Data Science Section"
-            }
-        }
     ],
     "keywords": ["AI-READI", "OMOP", "OHDSI", "REDCap", "SSSOM", "survey data", "vision", "MoCA", "Computable Survey Data Element Map"],
     "programmingLanguage": ["SQL", "Python"]

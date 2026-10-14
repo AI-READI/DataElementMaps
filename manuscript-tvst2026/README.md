@@ -136,7 +136,7 @@ All integrity checks in section 6 of the count scripts (6a–6d) return zero row
 If you use these artifacts, please cite the manuscript above and the archived release:
 
 ```
-AI-READI Survey Data Element Commons, release v1.0-tvst. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
+AI-READI Survey Data Element Commons, release v1.0-tvst. Zenodo. https://doi.org/10.5281/zenodo.23375723
 ```
 
 ## License
