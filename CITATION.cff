@@ -17,7 +17,7 @@ repository-artifact: "https://github.com/AI-READI/DataElementMaps/blob/main/manu
 url: "https://aireadi.org"
 license: MIT
 version: "v1.0-tvst"
-date-released: "2026-10-11"
+date-released: "2026-10-14"
 identifiers:                  # add after Zenodo mints the DOI
    - type: doi
      value: "10.5281/zenodo.23375723"
