@@ -9,12 +9,12 @@
     "issueTracker": "https://github.com/AI-READI/DataElementMaps/issues",
     "version": "v1.0-tvst",
     "dateCreated": "2023-06-28",
-    "dateModified": "2026-10-11",
+    "dateModified": "2026-10-14",
     "applicationCategory": "Scientific",
     "developmentStatus": "active",
     "isPartOf": "https://aireadi.org/",
     "funding": "1OT2OD032644",
-    "identifier": "https://doi.org/10.5281/zenodo.1234567",
+    "identifier": "https://doi.org/10.5281/zenodo.23375723",
     "funder": {
         "@type": "Organization",
         "name": "National Institutes of Health (NIH)"
