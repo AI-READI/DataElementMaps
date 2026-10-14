@@ -40,7 +40,7 @@
                 "@type": "Organization",
                 "name": "Johns Hopkins University School of Medicine, Department of Medicine, General Internal Medicine, Biomedical Informatics and Data Science Section"
             }
-        }
+        },
         {
             "@type": "Person",
             "givenName": "Sigfried",
@@ -58,7 +58,7 @@
                 "@type": "Organization",
                 "name": "Johns Hopkins University School of Medicine, Department of Medicine, General Internal Medicine, Biomedical Informatics and Data Science Section"
             }
-        },
+        }
     ],
     "keywords": ["AI-READI", "OMOP", "OHDSI", "REDCap", "SSSOM", "survey data", "vision", "MoCA", "Computable Survey Data Element Map"],
     "programmingLanguage": ["SQL", "Python"]
