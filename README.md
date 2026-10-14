@@ -22,8 +22,8 @@ Mappings of AI-READI REDCap survey, vision care, and cognitive assessment data e
   <a href="https://github.com/AI-READI/DataElementMaps/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/AI-READI/DataElementMaps.svg?style=flat-square" alt="license" />
   </a>
-  <a href="https://doi.org/10.5281/zenodo.XXXXXXX">
-    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg" alt="doi" />
+  <a href="https://doi.org/10.5281/zenodo.23375723">
+    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.23375723.svg" alt="doi" />
   </a>
   <a href="https://fairdataihub.org/fairshare">
     <img src="https://raw.githubusercontent.com/fairdataihub/FAIRshare/main/badge.svg" alt="Curated with FAIRshare" />
@@ -62,7 +62,7 @@ The mapping file and SQL scripts used for the manuscript *"A Generalizable Frame
 | AI-READI custom vocabulary (OHDSI submission) | [`redCapDataDictionaryWithExtension/OHDSI-vocabulary-request/`](redCapDataDictionaryWithExtension/OHDSI-vocabulary-request/) |
 | Superseded mapping files (provenance only) | [`deprecated/`](deprecated/) |
 
-Archived release cited in the paper: **v1.0-tvst** — https://doi.org/10.5281/zenodo.XXXXXXX
+Archived release cited in the paper: **v1.0-tvst** — https://doi.org/10.5281/zenodo.23375723
 
 ## Getting started
 
@@ -109,7 +109,7 @@ Hong S, et al. A Generalizable Framework for Mapping Survey, Vision Care, and Co
 Assessment Data to the OMOP Common Data Model in AI-READI. Transl Vis Sci Technol. 2026.
 
 AI-READI Survey Data Element Commons, release v1.0-tvst. Zenodo.
-https://doi.org/10.5281/zenodo.XXXXXXX
+https://doi.org/10.5281/zenodo.23375723
 ```
 
 ## Acknowledgements

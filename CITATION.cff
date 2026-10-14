@@ -18,9 +18,9 @@ url: "https://aireadi.org"
 license: MIT
 version: "v1.0-tvst"
 date-released: "2026-10-11"
-# identifiers:                  # add after Zenodo mints the DOI
-#   - type: doi
-#     value: "10.5281/zenodo.XXXXXXX"
+identifiers:                  # add after Zenodo mints the DOI
+   - type: doi
+     value: "10.5281/zenodo.23375723"
 keywords:
   - AI-READI
   - Computable Survey Data Element Map
