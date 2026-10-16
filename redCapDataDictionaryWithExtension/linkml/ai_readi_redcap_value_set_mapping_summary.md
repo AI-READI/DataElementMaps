@@ -34,9 +34,9 @@
 - Route: 1
 
 ### TARGET_VOCABULARY_ID
-- LOINC: 1199
+- LOINC: 1201
 - AIREADI: 424
-- SNOMED: 131
+- SNOMED: 129
 - [blank]: 72
 - AIREADI-Vision: 69
 - UCUM: 69
@@ -46,12 +46,12 @@
 - OMOP Extension: 1
 
 ### PREDICATE_ID
-- skos:exactMatch: 1667
-- skos:closeMatch: 263
+- skos:exactMatch: 1669
+- skos:closeMatch: 261
 - [blank]: 72
 - skos:relatedMatch: 2
 
 ### Extension_Needed
-- No: 1511
-- Yes: 492
+- No: 1513
+- Yes: 490
 - [blank]: 1

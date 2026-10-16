@@ -2998,15 +2998,16 @@ mappings:
   src_code: dmlgrain
   src_cd_description: 'In a typical day, how often do you consume whole grains? (Examples: include whole wheat, brown bread,
     or brown rice).'
-  target_concept_id: 46272478
-  target_concept_name: Assessment of eating and drinking behavior
+  target_concept_id: 2005200633
+  local_concept_id: 2005200633
+  target_concept_name: 'In a typical day, how often do you consume whole grains? (Examples: include whole wheat, brown bread,
+    or brown rice).'
   target_domain_id: Observation
-  target_vocabulary_id: SNOMED
-  target_concept_class_id: Procedure
-  target_concept_code: '710848001'
+  target_vocabulary_id: AIREADI
+  target_concept_class_id: Survey
   target_standard_concept: S
-  predicate_id: skos:closeMatch
-  confidence: 0.75
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0146
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -5248,7 +5249,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'Yes'
+  extension_needed: 'No'
   form_name: disposition
   field_type: radio
   field_id: eos_dsdecod
@@ -5257,12 +5258,12 @@ mappings:
   src_code: '1'
   src_code_id: eos_dsdecod_1
   src_cd_description: Did not meet Inclusion/Exclusion criteria
-  target_concept_id: 2005200280
-  local_concept_id: 2005200280
-  target_concept_name: Did not meet Inclusion/Exclusion criteria
-  target_domain_id: Meas Value
-  target_vocabulary_id: AIREADI
-  target_concept_class_id: Answer
+  target_concept_id: 40480675
+  target_concept_name: Does not meet eligibility criteria for clinical trial
+  target_domain_id: Observation
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Clinical Finding
+  target_concept_code: '444734003'
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -5336,7 +5337,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: disposition
   field_type: radio
   field_id: eos_dsdecod
@@ -5345,15 +5346,15 @@ mappings:
   src_code: '5'
   src_code_id: eos_dsdecod_5
   src_cd_description: Investigator deemed not appropriate for study
-  target_concept_id: 40480675
-  target_concept_name: Does not meet eligibility criteria for clinical trial
-  target_domain_id: Observation
-  target_vocabulary_id: SNOMED
-  target_concept_class_id: Clinical Finding
-  target_concept_code: '444734003'
+  target_concept_id: 2005200634
+  local_concept_id: 2005200634
+  target_concept_name: Investigator deemed not appropriate for study
+  target_domain_id: Meas Value
+  target_vocabulary_id: AIREADI
+  target_concept_class_id: Answer
   target_standard_concept: S
-  predicate_id: skos:closeMatch
-  confidence: 0.75
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0254
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -13795,19 +13796,19 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'Yes'
+  extension_needed: 'No'
   form_name: lab_results
   field_type: text
   field_id_num: 1665
   question_or_answer: Question
   src_code: lbscat_wbc
   src_cd_description: White Blood Cells (WBC) - x10E3/µL
-  target_concept_id: 2005200182
-  local_concept_id: 2005200182
-  target_concept_name: White Blood Cells (WBC) - x10E3/µL
+  target_concept_id: 3000905
+  target_concept_name: Leukocytes [#/volume] in Blood by Automated count
   target_domain_id: Measurement
-  target_vocabulary_id: AIREADI
-  target_concept_class_id: Procedure
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Lab Test
+  target_concept_code: 6690-2
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -13815,19 +13816,19 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'Yes'
+  extension_needed: 'No'
   form_name: lab_results
   field_type: text
   field_id_num: 1666
   question_or_answer: Question
   src_code: lbscat_rbc
   src_cd_description: Red Blood Cells (RBC) - x10E6/µL
-  target_concept_id: 2005200183
-  local_concept_id: 2005200183
-  target_concept_name: Red Blood Cells (RBC) - x10E6/µL
+  target_concept_id: 3020416
+  target_concept_name: Erythrocytes [#/volume] in Blood by Automated count
   target_domain_id: Measurement
-  target_vocabulary_id: AIREADI
-  target_concept_class_id: Procedure
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Lab Test
+  target_concept_code: 789-8
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -13863,7 +13864,7 @@ mappings:
   src_code: lbscat_hct
   src_cd_description: Hematocrit  - %
   target_concept_id: 3009542
-  target_concept_name: Hematocrit [Volume Fraction] of Blood by calculation
+  target_concept_name: Hematocrit [Volume Fraction] of Blood
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
@@ -13883,7 +13884,7 @@ mappings:
   src_code: lbscat_mcv
   src_cd_description: MCV - fL
   target_concept_id: 3024731
-  target_concept_name: MCV [Entitic mean volume] in Red Blood Cells
+  target_concept_name: MCV [Entitic volume]
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
@@ -13923,7 +13924,7 @@ mappings:
   src_code: lbscat_mchc
   src_cd_description: MCHC - g/dL
   target_concept_id: 3003338
-  target_concept_name: MCHC [Entitic Mass/volume] in Red Blood Cells
+  target_concept_name: MCHC [Mass/volume]
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
@@ -13943,7 +13944,7 @@ mappings:
   src_code: lbscat_rdw
   src_cd_description: RDW - %
   target_concept_id: 3002385
-  target_concept_name: Erythrocyte [DistWidth] in Red Blood Cells
+  target_concept_name: Erythrocyte distribution width [Ratio]
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
@@ -16895,12 +16896,12 @@ mappings:
   question_or_answer: Question
   src_code: paid_scrd
   src_cd_description: Feeling scared when you think about living with diabetes
-  target_concept_id: 36716888
-  target_concept_name: Fear of metabolic disease
+  target_concept_id: 2005200635
+  local_concept_id: 2005200635
+  target_concept_name: Feeling scared when you think about living with diabetes
   target_domain_id: Observation
-  target_vocabulary_id: SNOMED
-  target_concept_class_id: Clinical Finding
-  target_concept_code: '723113005'
+  target_vocabulary_id: AIREADI
+  target_concept_class_id: Survey
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
