@@ -11,6 +11,40 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Concept map v1.2 (`_ai_readi_redcap_value_set_mapping_common.csv`)
+
+10 rows changed from `v1.1`: 6 target-concept corrections and 4 concept-name fixes. Line numbers refer to the CSV file (header = line 1).
+
+#### Changed — target concept
+
+- `dmlgrain` (line 146): 46272478 (Assessment of eating and drinking behavior, a SNOMED procedure used with a domain override) → custom 2005200633 (Observation, Survey), exactMatch 1. No standard concept matches the question; LOINC 90725-3 differs in time frame, foods and answer type.
+- `eos_dsdecod_1` "Did not meet Inclusion/Exclusion criteria" (line 250): custom 2005200280 → 40480675 (Does not meet eligibility criteria for clinical trial, SNOMED 444734003), exactMatch 1.
+- `eos_dsdecod_5` "Investigator deemed not appropriate for study" (line 254): 40480675 (closeMatch 0.75; investigator judgment is not ineligibility) → custom 2005200634 (Meas Value, Answer), exactMatch 1.
+- `lbscat_wbc` (line 672): custom 2005200182 → 3000905 (Leukocytes [#/volume] in Blood by Automated count, LOINC 6690-2).
+- `lbscat_rbc` (line 673): custom 2005200183 → 3020416 (Erythrocytes [#/volume] in Blood by Automated count, LOINC 789-8).
+- `paid_scrd` (line 813): 36716888 (Fear of metabolic disease, a SNOMED Condition-domain clinical finding used with a domain override) → custom 2005200635 (Observation, Survey), exactMatch 1, consistent with the other PAID-5 items.
+
+#### Changed — concept name only (target concept unchanged)
+
+- `lbscat_hct` (675): Hematocrit [Volume Fraction] of Blood (removed "by calculation").
+- `lbscat_mcv` (676): MCV [Entitic volume].
+- `lbscat_mchc` (678): MCHC [Mass/volume].
+- `lbscat_rdw` (679): Erythrocyte distribution width [Ratio].
+
+#### Added
+
+- AI-READI custom concepts 2005200633 (`dmlgrain`), 2005200634 (`eos_dsdecod_5`) and 2005200635 (`paid_scrd`) in `OHDSI-vocabulary-request/concept_manual.csv`. Custom concepts 2005200182, 2005200183 and 2005200280 are no longer referenced but are kept (IDs are not reused).
+
+#### Regenerated
+
+- map2omop and open-source public versions from the v1.2 common file.
+- SSSOM and LinkML with `generate_linkml_sssom.py`.
+- Counts (`redCapDataDictionaryWithExtension/scripts/run_counts.py`): standard 1,409 (380 concepts); custom 489 (344); mapped 1,898 (724); designated but unmapped 106.
+
+#### Downstream
+
+- Survey ETL must be re-run to apply v1.2.
+
 
 ## [v1.1] - 2026-10-16
 
@@ -51,9 +85,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `_ai_readi_redcap_value_set_mapping_common_map2omop.csv` (Map_to_OMOP = Yes; 2,003 rows) and `_ai_readi_redcap_value_set_mapping_map2omop_open_source_public_version.csv` (open-source rows; 1,895 rows) from the v1.1 common file.
 - SSSOM and LinkML (`redCapDataDictionaryWithExtension/sssom/`, `linkml/`) with `generate_linkml_sssom.py`: SSSOM 1,932 rows, 72 incomplete (`ethnicscore` and `brthyy` now listed as incomplete); `Ethnicity` added to the LinkML domain and vocabulary enums.
 
-#### Downstream
-
-- Survey ETL must be re-run to apply v1.1.
 
 ### Manuscript package (changes since v1.0-tvst)
 
