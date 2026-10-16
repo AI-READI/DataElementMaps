@@ -212,6 +212,7 @@ enums:
     permissible_values:
       Condition: {}
       Device: {}
+      Ethnicity: {}
       Meas Value: {}
       Measurement: {}
       Observation: {}
@@ -223,6 +224,7 @@ enums:
       AIREADI: {}
       AIREADI-MOCA: {}
       AIREADI-Vision: {}
+      Ethnicity: {}
       LOINC: {}
       OMOP Extension: {}
       PPI: {}
