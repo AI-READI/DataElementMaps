@@ -10,7 +10,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - **Frozen release version:** `manuscript-tvst2026/ai_readi_redcap_value_set_mapping_common.csv` (with frozen SSSOM and LinkML copies), matching release `v1.0-tvst` and the TVST 2026 manuscript.
 
 ## [Unreleased]
+
+## [v1.2.1] - 2026-10-16
+
+### Fixed
+
+- Reverted the v1.2 `TARGET_CONCEPT_NAME` edits for four CBC rows so the names again match the deployed OMOP vocabulary (Databricks `omop_vocab`). The v1.2 names had been taken from an older external vocabulary release (ATLAS demo, Feb 2025). Concept IDs and codes are unchanged; no ETL impact.
+  - `lbscat_hct` (line 675, 3009542): Hematocrit [Volume Fraction] of Blood by calculation
+  - `lbscat_mcv` (line 676, 3024731): MCV [Entitic mean volume] in Red Blood Cells
+  - `lbscat_mchc` (line 678, 3003338): MCHC [Entitic Mass/volume] in Red Blood Cells
+  - `lbscat_rdw` (line 679, 3002385): Erythrocyte [DistWidth] in Red Blood Cells
+
+### Regenerated
+
+- map2omop and open-source public versions, SSSOM and LinkML from the v1.2.1 common file.
+
 ## [v1.2] - 2026-10-16
+
 ### Concept map v1.2 (`_ai_readi_redcap_value_set_mapping_common.csv`)
 
 10 rows changed from `v1.1`: 6 target-concept corrections and 4 concept-name fixes. Line numbers refer to the CSV file (header = line 1).
