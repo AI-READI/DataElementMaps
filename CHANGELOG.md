@@ -10,7 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - **Frozen release version:** `manuscript-tvst2026/ai_readi_redcap_value_set_mapping_common.csv` (with frozen SSSOM and LinkML copies), matching release `v1.0-tvst` and the TVST 2026 manuscript.
 
 ## [Unreleased]
-
+## [v1.2] - 2026-10-16
 ### Concept map v1.2 (`_ai_readi_redcap_value_set_mapping_common.csv`)
 
 10 rows changed from `v1.1`: 6 target-concept corrections and 4 concept-name fixes. Line numbers refer to the CSV file (header = line 1).
