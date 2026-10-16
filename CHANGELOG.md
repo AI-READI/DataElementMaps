@@ -54,7 +54,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 #### To do before tagging v1.1
 
-- SSSOM and LinkML from the common file.
 - Re-run the survey ETL downstream.
 
 ## [v1.0-tvst] - 2026-10-14
