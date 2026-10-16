@@ -12,6 +12,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 
+## [v1.1] - 2026-10-16
+
 ### Concept map v1.1 (`_ai_readi_redcap_value_set_mapping_common.csv`)
 
 17 rows changed from `v1.0-tvst`: 11 target-concept corrections and 6 metadata-only fixes. Line numbers refer to the CSV file (header = line 1). Release `v1.0-tvst` and the frozen copy in `manuscript-tvst2026/` are unchanged.
@@ -53,7 +55,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Survey ETL must be re-run to apply v1.1.
 
-### Manuscript package (post-release)
+### Manuscript package (changes since v1.0-tvst)
 
 #### Added
 
@@ -66,14 +68,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 #### Fixed
 
 - Supplementary Table S2 footnote linked the pre-rename `count_mapping_concepts.sql`; it now links `count_concept_map.sql` at tag v1.0-tvst and cites doi:10.5281/zenodo.23375723 (.md and .pdf).
-
-
-#### To do before tagging v1.1
-	v1.1
-Standard	1,409 (48.5%), 380 concepts
-Custom	489 (16.8%), 344 concepts
-Mapped	1,898 (65.3%), 724 concepts
-Designated but unmapped	106, including 2 “No matching concept”
 
 
 ## [v1.0-tvst] - 2026-10-14
