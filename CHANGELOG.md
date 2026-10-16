@@ -11,17 +11,53 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 ### Added
-
+- AI-READI custom concept 2005200632 "Last study visit/stage completed" (Observation, Survey) in `OHDSI-vocabulary-request/concept_manual.csv`, for `eos_dsvst`.
 - Word (.docx) versions of Supplementary Tables S1 and S2 in `manuscript-tvst2026/supplementary/`.
+- `redCapDataDictionaryWithExtension/scripts/count_concept_map.sql` and `run_counts.py`: working count scripts for the maintained mapping file; TARGET_CONCEPT_ID = 0 is counted as designated but unmapped. The frozen manuscript scripts in `manuscript-tvst2026/` are unchanged.
+* runcount results match the current concept map 
+  -  Vocabularies: LOINC 1,199/284, SNOMED 131/65 and Ethnicity 4/2 (the MENA concepts).
+  -  Unmapped: includes the 2 “No matching concept” rows.
+  -  Predicates: 1,409 standard and 489 custom rows.
+  -  Integrity checks: all 4 return 0 rows.
+
+
+
 ### Changed
 
 - Removed the outdated `manuscript-tvst2026/source/Supplementary_Table_S2_Mapping_Quality.docx`; the current .docx is now in `manuscript-tvst2026/supplementary/` alongside the .md and .pdf.
+
+#### Changed — target concept
+
+- Race, Middle Eastern / North African answers (`race_C77820`, `race_C77813`, `race2_C77820`, `race2_C77813`; lines 463, 465, 472, 474): 45877987 (White) → 1546809 (Middle Eastern, OMOP5558948) and 1546912 (North African, OMOP5559052), standard Ethnicity-vocabulary concepts added in July 2025. Answers were previously collapsed into White.
+- Hearing loss (`mhoccur_ear_1`, line 395): 439378 (Ear anomalies with hearing impairment, a congenital anomaly) → 377889 (Hearing loss, SNOMED 15188001).
+- Cataract (`mhoccur_crt_1`, line 421): 4317977 (Bilateral cataracts) → 375545 (Cataract, SNOMED 193570009); the question does not specify laterality.
+- Mild cognitive impairment (`mhoccur_cogn_1`, line 365): 439795 (Minimal cognitive impairment, SNOMED 110352000) → 4297400 (Mild neurocognitive disorder, SNOMED 386805003).
+- Last study visit (`eos_dsvst`, line 249): 3655035 (Date of last examination, relatedMatch 0.5) → custom 2005200632, exactMatch 1. The field records which visit/stage was completed, not a date.
+- Age (`cage`, line 110): 4265453 (SNOMED Age, Meas Value) → 3022304 (LOINC 30525-0 Age, Observation).
+- Hispanic score (`ethnicscore`, line 23) and birth year (`brthyy`, line 109): set to 0 (No matching concept). `ethnicscore` is an internal screening-logic calculation, not Hispanic ethnicity; birth year is carried in `PERSON.year_of_birth`, not as an observation.
+
+#### Changed — metadata only (target concept unchanged)
+
+- `dmlgrain` (line 146): domain Procedure → Observation; predicate exactMatch → closeMatch.
+- `dmlfeet_10` "Daily or weekly" (line 186): confidence 1 → 0.75 (target LA18934-2 is "Daily or almost daily", so weekly is not covered exactly).
+- `paid_scrd` (line 813): domain Condition → Observation (PAID-5 item response, not a diagnosis); concept 36716888 kept.
+- `sualcage` (line 1890): exactMatch 1 → closeMatch 0.75.
+- `lbscat_a1c` (line 674): added missing TARGET_CONCEPT_CODE 718-7 for 3000963 (Hemoglobin [Mass/volume] in Blood). Despite the variable name, this field holds total hemoglobin in g/dL, not HbA1c; confirmed against OMOP data (median 13.8; r = 0.004 with `import_hba1c` across 2,212 participants). HbA1c is mapped separately via `import_hba1c`.
+- `lbscat_hct` (line 675): removed trailing space from TARGET_CONCEPT_NAME.
 
 
 ### Fixed
 
 - Supplementary Table S2 footnote linked the pre-rename `count_mapping_concepts.sql`; it now links `count_concept_map.sql` at tag v1.0-tvst and cites doi:10.5281/zenodo.23375723 (.md and .pdf).
 
+### Mapping corrections — concept map v1.1 (`_ai_readi_redcap_value_set_mapping_common.csv`)
+
+17 rows changed from `v1.0-tvst`: 11 target-concept corrections and 6 metadata-only fixes. Line numbers refer to the CSV file (header = line 1). Release `v1.0-tvst` and the frozen copy in `manuscript-tvst2026/` are unchanged.
+
+#### To do before tagging v1.1
+
+- Regenerate map2omop, open-source public version, SSSOM and LinkML from the common file.
+- Re-run the survey ETL downstream.
 
 ## [v1.0-tvst] - 2026-10-14
 
