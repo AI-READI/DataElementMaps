@@ -13,6 +13,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Added
 - AI-READI custom concept 2005200632 "Last study visit/stage completed" (Observation, Survey) in `OHDSI-vocabulary-request/concept_manual.csv`, for `eos_dsvst`.
 - Word (.docx) versions of Supplementary Tables S1 and S2 in `manuscript-tvst2026/supplementary/`.
+- `redCapDataDictionaryWithExtension/scripts/count_concept_map.sql` and `run_counts.py`: working count scripts for the maintained mapping file; TARGET_CONCEPT_ID = 0 is counted as designated but unmapped. The frozen manuscript scripts in `manuscript-tvst2026/` are unchanged.
+* runcount results match the current concept map 
+  -  Vocabularies: LOINC 1,199/284, SNOMED 131/65 and Ethnicity 4/2 (the MENA concepts).
+  -  Unmapped: includes the 2 “No matching concept” rows.
+  -  Predicates: 1,409 standard and 489 custom rows.
+  -  Integrity checks: all 4 return 0 rows.
+
+
 
 ### Changed
 
@@ -48,7 +56,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 #### To do before tagging v1.1
 
-- Fix `count_concept_map.sql` so TARGET_CONCEPT_ID = 0 is not counted as a standard concept.
 - Regenerate map2omop, open-source public version, SSSOM and LinkML from the common file.
 - Re-run the survey ETL downstream.
 
