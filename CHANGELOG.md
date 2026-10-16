@@ -10,6 +10,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - **Frozen release version:** `manuscript-tvst2026/ai_readi_redcap_value_set_mapping_common.csv` (with frozen SSSOM and LinkML copies), matching release `v1.0-tvst` and the TVST 2026 manuscript.
 
 ## [Unreleased]
+### Added
+
+- Word (.docx) versions of Supplementary Tables S1 and S2 in `manuscript-tvst2026/supplementary/`.
+### Changed
+
+- Removed the outdated `manuscript-tvst2026/source/Supplementary_Table_S2_Mapping_Quality.docx`; the current .docx is now in `manuscript-tvst2026/supplementary/` alongside the .md and .pdf.
+
+
+### Fixed
+
+- Supplementary Table S2 footnote linked the pre-rename `count_mapping_concepts.sql`; it now links `count_concept_map.sql` at tag v1.0-tvst and cites doi:10.5281/zenodo.23375723 (.md and .pdf).
+
 
 ## [v1.0-tvst] - 2026-10-14
 
