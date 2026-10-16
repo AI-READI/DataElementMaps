@@ -15,4 +15,4 @@ curie_map:
   semapv: https://w3id.org/semapv/vocab/
 subject_source: AI-READI REDCap
 object_source: OMOP Standardized Vocabularies
-mapping_date: '2026-10-12'
+mapping_date: '2026-10-16'

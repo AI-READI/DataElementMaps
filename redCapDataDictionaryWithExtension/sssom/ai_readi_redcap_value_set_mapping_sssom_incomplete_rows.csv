@@ -1,4 +1,5 @@
 Map_to_OMOP,transferred_to_fairhub_REDCap_dataset,Protected_or_open-source,Extension_Needed,FORM_NAME,FIELD_TYPE,FIELD_ID,FIELD_ID_NUM,temp_Question_or_Answer,SRC_CODE,SRC_CODE_ID,SRC_CD_DESCRIPTION,TARGET_CONCEPT_ID,LOCAL_CONCEPT_ID,TARGET_CONCEPT_NAME,TARGET_DOMAIN_ID,TARGET_VOCABULARY_ID,TARGET_CONCEPT_CLASS_ID,TARGET_CONCEPT_CODE,TARGET_STANDARD_CONCEPT,PREDICATE_ID,CONFIDENCE,MODIFIER,value_as_concept_id,qualifier_concept_id,qualifier_source_value
+Yes,Yes,protected,No,screening_survey,calc,,1054,Question,ethnicscore,,Hispanic score (needed for demographics screening logic),0,,No matching concept,,,,,,,,,,,
 Yes,Yes,open-source,No,bcva,checkbox,,,Question,viaod_nd,,OD - Not done,,,Right eye Autorefractor not done,,,,,,,,,,,
 Yes,Yes,open-source,No,bcva,checkbox,,,Question,viaos_nd,,OS - Not done,,,Left eye Autorefractor not done,,,,,,,,,,,
 Yes,Yes,open-source,No,bcva,radio,,,Question,viaodsph_m,,OD - Autorefractor - Sphere +/- modifier,,,,,,,,,,,,,,
@@ -9,6 +10,7 @@ Yes,Yes,open-source,No,bcva,radio,viaodsph_m,,Answer,1,viaodsph_m_1,+ (positive)
 Yes,Yes,open-source,No,bcva,radio,viaodsph_m,,Answer,0,viaodsph_m_0,- (negative) modifier for viaodsph,,,,,,,,,,,,,,
 Yes,Yes,open-source,No,bcva,radio,viaossph_m,,Answer,1,viaossph_m_1,+ (positive) modifier for viaossph,,,,,,,,,,,,,,
 Yes,Yes,open-source,No,bcva,radio,viaossph_m,,Answer,0,viaossph_m_0,- (negative) modifier for viaossph,,,,,,,,,,,,,,
+Yes,Yes,open-source,No,demographics_survey,text,,1111,Question,brthyy,,Year (e.g. 1967),0,,No matching concept,,,,,,,,,,,
 Yes,Yes,open-source,,device_return,checkbox,send_satisfaction_survey,,Answer,1,send_satisfaction_survey_1,Checking the box and saving the form schedules a survey invitation to be sent to the participant in 1 hour,,,,,,,,,,,,,,
 Yes,Yes,open-source,No,imported,text,import_collection_dt_edta,2911,Question,,,EDTA Plasma,,,EDTA Plasma - Date Collection,,,,,,,,,,,
 Yes,Yes,open-source,No,imported,text,import_process_dt_edta,2912,Question,,,EDTA Plasma,,,EDTA Plasma - Date Processed,,,,,,,,,,,

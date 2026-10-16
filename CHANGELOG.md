@@ -20,8 +20,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   -  Predicates: 1,409 standard and 489 custom rows.
   -  Integrity checks: all 4 return 0 rows.
 
-
-
 ### Changed
 
 - Removed the outdated `manuscript-tvst2026/source/Supplementary_Table_S2_Mapping_Quality.docx`; the current .docx is now in `manuscript-tvst2026/supplementary/` alongside the .md and .pdf.
@@ -56,7 +54,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 #### To do before tagging v1.1
 
-- Regenerate map2omop, open-source public version, SSSOM and LinkML from the common file.
+- SSSOM and LinkML from the common file.
 - Re-run the survey ETL downstream.
 
 ## [v1.0-tvst] - 2026-10-14

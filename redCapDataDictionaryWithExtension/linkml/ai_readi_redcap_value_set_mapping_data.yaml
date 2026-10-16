@@ -457,15 +457,8 @@ mappings:
   question_or_answer: Question
   src_code: ethnicscore
   src_cd_description: Hispanic score (needed for demographics screening logic)
-  target_concept_id: 42868351
-  target_concept_name: Hispanic, latino-a, or spanish origin
-  target_domain_id: Observation
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Clinical Observation
-  target_concept_code: 69854-8
-  target_standard_concept: S
-  predicate_id: skos:closeMatch
-  confidence: 1.0
+  target_concept_id: 0
+  target_concept_name: No matching concept
 - mapping_record_id: AIREADI_MAPPING_0023
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -2224,15 +2217,8 @@ mappings:
   question_or_answer: Question
   src_code: brthyy
   src_cd_description: Year (e.g. 1967)
-  target_concept_id: 4078999
-  target_concept_name: Calendar year
-  target_domain_id: Meas Value
-  target_vocabulary_id: SNOMED
-  target_concept_class_id: Qualifier Value
-  target_concept_code: '277267003'
-  target_standard_concept: S
-  predicate_id: skos:closeMatch
-  confidence: 1.0
+  target_concept_id: 0
+  target_concept_name: No matching concept
 - mapping_record_id: AIREADI_MAPPING_0109
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -2244,12 +2230,12 @@ mappings:
   question_or_answer: Question
   src_code: cage
   src_cd_description: Age (in years)
-  target_concept_id: 4265453
+  target_concept_id: 3022304
   target_concept_name: Age
-  target_domain_id: Meas Value
-  target_vocabulary_id: SNOMED
-  target_concept_class_id: Qualifier Value
-  target_concept_code: '397669002'
+  target_domain_id: Observation
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Clinical Observation
+  target_concept_code: 30525-0
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -3014,12 +3000,12 @@ mappings:
     or brown rice).'
   target_concept_id: 46272478
   target_concept_name: Assessment of eating and drinking behavior
-  target_domain_id: Procedure
+  target_domain_id: Observation
   target_vocabulary_id: SNOMED
   target_concept_class_id: Procedure
   target_concept_code: '710848001'
   target_standard_concept: S
-  predicate_id: skos:exactMatch
+  predicate_id: skos:closeMatch
   confidence: 0.75
 - mapping_record_id: AIREADI_MAPPING_0146
   map_to_omop: 'Yes'
@@ -3897,7 +3883,7 @@ mappings:
   target_concept_code: LA18934-2
   target_standard_concept: S
   predicate_id: skos:closeMatch
-  confidence: 1.0
+  confidence: 0.75
 - mapping_record_id: AIREADI_MAPPING_0186
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -5242,22 +5228,22 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: disposition
   field_type: radio
   field_id_num: 1732
   question_or_answer: Question
   src_code: eos_dsvst
   src_cd_description: 'Provide the last study visit/stage completed:'
-  target_concept_id: 3655035
-  target_concept_name: Date of last examination
+  target_concept_id: 2005200632
+  local_concept_id: 2005200632
+  target_concept_name: Last study visit/stage completed
   target_domain_id: Observation
-  target_vocabulary_id: SNOMED
-  target_concept_class_id: Observable Entity
-  target_concept_code: '840643003'
+  target_vocabulary_id: AIREADI
+  target_concept_class_id: Survey
   target_standard_concept: S
-  predicate_id: skos:relatedMatch
-  confidence: 0.5
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0249
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -7816,12 +7802,12 @@ mappings:
   src_code: '1'
   src_code_id: mhoccur_cogn_1
   src_cd_description: 'Yes'
-  target_concept_id: 439795
-  target_concept_name: Minimal cognitive impairment
+  target_concept_id: 4297400
+  target_concept_name: Mild neurocognitive disorder
   target_domain_id: Condition
   target_vocabulary_id: SNOMED
-  target_concept_class_id: Clinical Finding
-  target_concept_code: '110352000'
+  target_concept_class_id: Disorder
+  target_concept_code: '386805003'
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -8476,12 +8462,12 @@ mappings:
   src_code: '1'
   src_code_id: mhoccur_ear_1
   src_cd_description: 'Yes'
-  target_concept_id: 439378
-  target_concept_name: Ear anomalies with hearing impairment
+  target_concept_id: 377889
+  target_concept_name: Hearing loss
   target_domain_id: Condition
   target_vocabulary_id: SNOMED
   target_concept_class_id: Disorder
-  target_concept_code: '204224006'
+  target_concept_code: '15188001'
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -9048,12 +9034,12 @@ mappings:
   src_code: '1'
   src_code_id: mhoccur_crt_1
   src_cd_description: 'Yes'
-  target_concept_id: 4317977
-  target_concept_name: Bilateral cataracts
+  target_concept_id: 375545
+  target_concept_name: Cataract
   target_domain_id: Condition
   target_vocabulary_id: SNOMED
   target_concept_class_id: Disorder
-  target_concept_code: '95722004'
+  target_concept_code: '193570009'
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -9966,12 +9952,12 @@ mappings:
   src_code: C77820
   src_code_id: race_C77820
   src_cd_description: Middle Eastern
-  target_concept_id: 45877987
-  target_concept_name: White
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA4457-3
+  target_concept_id: 1546809
+  target_concept_name: Middle Eastern
+  target_domain_id: Ethnicity
+  target_vocabulary_id: Ethnicity
+  target_concept_class_id: Ethnicity
+  target_concept_code: OMOP5558948
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -10010,12 +9996,12 @@ mappings:
   src_code: C77813
   src_code_id: race_C77813
   src_cd_description: North African
-  target_concept_id: 45877987
-  target_concept_name: White
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA4457-3
+  target_concept_id: 1546912
+  target_concept_name: North African
+  target_domain_id: Ethnicity
+  target_vocabulary_id: Ethnicity
+  target_concept_class_id: Ethnicity
+  target_concept_code: OMOP5559052
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -10164,12 +10150,12 @@ mappings:
   src_code: C77820
   src_code_id: race2_C77820
   src_cd_description: Middle Eastern
-  target_concept_id: 45877987
-  target_concept_name: White
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA4457-3
+  target_concept_id: 1546809
+  target_concept_name: Middle Eastern
+  target_domain_id: Ethnicity
+  target_vocabulary_id: Ethnicity
+  target_concept_class_id: Ethnicity
+  target_concept_code: OMOP5558948
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -10208,12 +10194,12 @@ mappings:
   src_code: C77813
   src_code_id: race2_C77813
   src_cd_description: North African
-  target_concept_id: 45877987
-  target_concept_name: White
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA4457-3
+  target_concept_id: 1546912
+  target_concept_name: North African
+  target_domain_id: Ethnicity
+  target_vocabulary_id: Ethnicity
+  target_concept_class_id: Ethnicity
+  target_concept_code: OMOP5559052
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -13861,6 +13847,7 @@ mappings:
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
+  target_concept_code: 718-7
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -16910,7 +16897,7 @@ mappings:
   src_cd_description: Feeling scared when you think about living with diabetes
   target_concept_id: 36716888
   target_concept_name: Fear of metabolic disease
-  target_domain_id: Condition
+  target_domain_id: Observation
   target_vocabulary_id: SNOMED
   target_concept_class_id: Clinical Finding
   target_concept_code: '723113005'
@@ -40685,8 +40672,8 @@ mappings:
   target_concept_class_id: Clinical Observation
   target_concept_code: 63576-3
   target_standard_concept: S
-  predicate_id: skos:exactMatch
-  confidence: 1.0
+  predicate_id: skos:closeMatch
+  confidence: 0.75
 - mapping_record_id: AIREADI_MAPPING_1890
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'

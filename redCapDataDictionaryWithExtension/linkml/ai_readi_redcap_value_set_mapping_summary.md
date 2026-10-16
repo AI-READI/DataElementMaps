@@ -22,34 +22,36 @@
 - diabetes_survey: 53
 
 ### TARGET_DOMAIN_ID
-- Meas Value: 1253
-- Observation: 438
+- Meas Value: 1247
+- Observation: 440
 - Measurement: 115
-- [blank]: 70
+- [blank]: 72
 - Unit: 69
-- Condition: 33
-- Procedure: 23
+- Condition: 32
+- Procedure: 22
+- Ethnicity: 4
 - Device: 2
 - Route: 1
 
 ### TARGET_VOCABULARY_ID
-- LOINC: 1203
-- AIREADI: 423
-- SNOMED: 134
-- [blank]: 70
+- LOINC: 1199
+- AIREADI: 424
+- SNOMED: 131
+- [blank]: 72
 - AIREADI-Vision: 69
 - UCUM: 69
 - AIREADI-MOCA: 30
 - PPI: 5
+- Ethnicity: 4
 - OMOP Extension: 1
 
 ### PREDICATE_ID
-- skos:exactMatch: 1668
+- skos:exactMatch: 1667
 - skos:closeMatch: 263
-- [blank]: 70
-- skos:relatedMatch: 3
+- [blank]: 72
+- skos:relatedMatch: 2
 
 ### Extension_Needed
-- No: 1512
-- Yes: 491
+- No: 1511
+- Yes: 492
 - [blank]: 1
