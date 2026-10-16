@@ -13864,7 +13864,7 @@ mappings:
   src_code: lbscat_hct
   src_cd_description: Hematocrit  - %
   target_concept_id: 3009542
-  target_concept_name: Hematocrit [Volume Fraction] of Blood
+  target_concept_name: Hematocrit [Volume Fraction] of Blood by calculation
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
@@ -13884,7 +13884,7 @@ mappings:
   src_code: lbscat_mcv
   src_cd_description: MCV - fL
   target_concept_id: 3024731
-  target_concept_name: MCV [Entitic volume]
+  target_concept_name: MCV [Entitic mean volume] in Red Blood Cells
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
@@ -13924,7 +13924,7 @@ mappings:
   src_code: lbscat_mchc
   src_cd_description: MCHC - g/dL
   target_concept_id: 3003338
-  target_concept_name: MCHC [Mass/volume]
+  target_concept_name: MCHC [Entitic Mass/volume] in Red Blood Cells
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
@@ -13944,7 +13944,7 @@ mappings:
   src_code: lbscat_rdw
   src_cd_description: RDW - %
   target_concept_id: 3002385
-  target_concept_name: Erythrocyte distribution width [Ratio]
+  target_concept_name: Erythrocyte [DistWidth] in Red Blood Cells
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
