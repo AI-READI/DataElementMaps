@@ -22,8 +22,8 @@
 - diabetes_survey: 53
 
 ### TARGET_DOMAIN_ID
-- Meas Value: 1247
-- Observation: 440
+- Meas Value: 1248
+- Observation: 439
 - Measurement: 115
 - [blank]: 72
 - Unit: 69
@@ -34,9 +34,9 @@
 - Route: 1
 
 ### TARGET_VOCABULARY_ID
-- LOINC: 1201
+- LOINC: 1202
 - AIREADI: 424
-- SNOMED: 129
+- SNOMED: 128
 - [blank]: 72
 - AIREADI-Vision: 69
 - UCUM: 69
@@ -46,8 +46,8 @@
 - OMOP Extension: 1
 
 ### PREDICATE_ID
-- skos:exactMatch: 1669
-- skos:closeMatch: 261
+- skos:exactMatch: 1667
+- skos:closeMatch: 263
 - [blank]: 72
 - skos:relatedMatch: 2
 

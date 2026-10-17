@@ -11,6 +11,31 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [v1.3] - 2026-10-17
+
+### Changed — target concept
+
+- `cmtrt_lfst_1` "Yes" (line 1873), answer to `cmtrt_lfst` "Do you use lifestyle changes to control your A1C and blood glucose levels?": 607008 (Able to modify behavior and lifestyle to support health improvement, SNOMED Clinical Finding) → 45877994 (Yes, LOINC LA33-6, Meas Value), exactMatch 1. The previous concept described ability rather than practice and did not pair with the "No" answer (`cmtrt_lfst_0`, 45878245 No, LA32-8). In the current OMOP survey data this affects 1,245 participants' "Yes" responses (`value_as_concept_id`); `value_as_string` is unaffected.
+
+- Health history "Has a doctor or other healthcare professional ever told you that you have/had..." (`2005200014`): four condition concepts corrected. Each change updates the "Yes" answer row (CONDITION_OCCURRENCE target) and the matching question row (`MODIFIER`, `qualifier_concept_id`, `qualifier_source_value` on the OBSERVATION record), so both tables carry the same concept.
+  - `mhoccur_cns` "Other neurological conditions" (lines 303, 371): 46271045 Neurocognitive disorder → 376337 Disorder of nervous system (SNOMED 118940003), closeMatch 0.75. Neurocognitive disorder covers only cognitive conditions, which have their own questions (dementia, mild cognitive impairment).
+  - `mhoccur_ua` "Urinary problems (Examples: urinary tract infections, incontinence, prostate problems)" (lines 309, 389): 81902 Urinary tract infectious disease → 75865 Disorder of urinary system (SNOMED 128606002), closeMatch 0.75. The previous concept covered infections only.
+  - `mhoccur_clsh` "High blood cholesterol" (lines 295, 346): 4159131 Dyslipidemia → 4029305 Hypercholesterolemia (SNOMED 13644009), exactMatch 1. The previous concept was broader than the question.
+  - `mhoccur_ca` "Cancer (any type)" (lines 306, 380): 4194405 Cancer confirmed (Context-dependent) → 443392 Malignant neoplastic disease (SNOMED 363346000, Disorder), exactMatch 1, the standard concept used for "any cancer" cohort definitions.
+
+### Fixed
+
+- `dcvgmenyn` "Dexcom G6 transmitter returned?" (line 127): `qualifier_concept_id` 1615066 → 2615313 (Transmitter; external, for use with non-durable medical equipment interstitial continuous glucose monitoring system; HCPCS, Device, standard). Concept 1615066 (GLUCOSE TRANSMITTER DEXCOM G6) is not present in the deployed OMOP vocabulary (Databricks `omop_vocab`), and no Dexcom G6 device concept exists there. 2615313 was chosen over 45764014 (Invasive interstitial-fluid glucose monitoring system, SNOMED) because the question and `qualifier_source_value` refer specifically to the transmitter. `qualifier_source_value` is unchanged. Target concept 2005200589 is unchanged.
+
+### Regenerated
+
+- map2omop and open-source public versions, SSSOM and LinkML from the v1.3 common file. Counts (`run_counts.py`): standard 1,409 elements (379 distinct concepts, down from 380 because 607008 is no longer used; the four condition replacements are one-for-one); custom 489 (344); mapped 1,898 (723); designated but unmapped 106.
+
+### Downstream
+
+- Survey ETL must be re-run to apply all v1.3 changes.
+- Note for the ETL team: in the current OMOP survey data, "Yes" answers to the `2005200014` health history questions are written as `value_as_concept_id` 4188539 (SNOMED Yes), while the map specifies 45877994 (LOINC Yes, LA33-6).
+
 ## [v1.2.1] - 2026-10-16
 
 ### Fixed
