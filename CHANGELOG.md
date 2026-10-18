@@ -11,6 +11,36 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [v1.3.1] - 2026-10-18
+
+Metadata-only release. No `TARGET_CONCEPT_ID`, `value_as_concept_id`, `qualifier_concept_id` or `Map_to_OMOP` values changed; counts are unchanged from v1.3, and no ETL re-run is required.
+
+### Changed — metadata
+
+- `TARGET_CONCEPT_CLASS_ID`: removed the trailing space from "Assessment Item " on 29 MoCA rows (lines 615–642, 644), matching `concept_manual.csv`.
+- `Extension_Needed` set to match the target concept: "Yes" for the 34 rows that map to AI-READI custom concepts but were marked "No" (lines 11–12, 17–18, 615–642, 644, 646); "No" for line 1893 (`subrdosfr`, standard concept 40766674), consistent with the other questions that have a standard target and custom answers.
+- Predicate and confidence:
+  - `cl_maristatot` "Other (please specify)" (line 45): exactMatch 1 → closeMatch 0.75. A free-text "other" field is not the marital status question itself.
+  - `pxep1` "Is English your first language?" (line 1409): exactMatch 0.75 → closeMatch 0.75. "First language" vs "primary language"; exactMatch with confidence below 1 was contradictory.
+  - `cmdosu_1` "Percent Volume per Volume" (line 1690): exactMatch 0.75 → exactMatch 1. Same unit as 45891010 ({vol}%{vol}).
+- `TARGET_CONCEPT_NAME` for custom concept 2005200296 (line 1727): "Eidon-Create Mosaic Image-CFP" → "Eidon- Create Mosaic Image-CFP", matching `concept_manual.csv` and line 1693.
+
+### Fixed — hidden characters
+
+- Removed non-breaking spaces (hidden characters) and stray leading or trailing spaces:
+  - `SRC_CD_DESCRIPTION`: lines 41–44, 675, 770, 1049, 1431, 1434, 1449–1451, 1855, 1884, 1895, 1905, 1907.
+  - `TARGET_CONCEPT_NAME`: lines 1431, 1434, 1855, 1895, 1907.
+  - `MODIFIER`: lines 1449–1451.
+- The same clean-up was applied to the names of the five affected AI-READI custom concepts (2005200027, 2005200037, 2005200093, 2005200096, 2005200550) in `redCapDataDictionaryWithExtension/OHDSI-vocabulary-request/concept_manual.csv`, so the names are identical in the map and the custom vocabulary files.
+
+### Added
+
+- `redCapDataDictionaryWithExtension/OHDSI-vocabulary-request/AI-READI-Vocabulary/`: `concept_manual_AIREADI.csv` (334 concepts), `concept_manual_AIREADI-Vision.csv` (54) and `concept_manual_AIREADI-MOCA.csv` (30), generated from the v1.3.1 `concept_manual.csv` by `vocabulary_id`. Together they contain exactly the 418 custom concepts in `concept_manual.csv` (same columns and values). These are the current version of the split. The October 2025 OHDSI submission (Vocabulary-v5.0 issue #1176) in `AIREADi_OMOP_Vocabulary_Request/split_concept_manual/` is kept frozen, unchanged, and differs from the current custom vocabulary: it includes four concepts later retired from the map (2005200193, 2005200236, 2005200239, 2005200560), lacks five added since (2005200455, 2005200632–2005200635), and has blank `valid_start_date` (15 MoCA concepts) or `v6_domain_id` (2005200451, 2005200459, 2005200629) where `concept_manual.csv` has values, and still has non-breaking spaces in five names. `AI-READI-Vocabulary/README.md` now lists the three files and these differences.
+
+### Regenerated
+
+- map2omop and open-source public versions, SSSOM and LinkML from the v1.3.1 common file. Counts unchanged: standard 1,409 (379); custom 489 (344); mapped 1,898 (723); designated but unmapped 106.
+
 ## [v1.3] - 2026-10-17
 
 ### Changed — target concept
