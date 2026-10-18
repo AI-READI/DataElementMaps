@@ -46,12 +46,12 @@
 - OMOP Extension: 1
 
 ### PREDICATE_ID
-- skos:exactMatch: 1667
-- skos:closeMatch: 263
+- skos:exactMatch: 1665
+- skos:closeMatch: 265
 - [blank]: 72
 - skos:relatedMatch: 2
 
 ### Extension_Needed
-- No: 1513
-- Yes: 490
+- No: 1480
+- Yes: 523
 - [blank]: 1

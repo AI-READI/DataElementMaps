@@ -186,7 +186,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'No'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: bcva
   field_type: text
   field_id_num: 1505
@@ -209,7 +209,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'No'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: bcva
   field_type: text
   field_id_num: 1506
@@ -324,7 +324,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'No'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: bcva
   field_type: text
   field_id_num: 1511
@@ -347,7 +347,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'No'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: bcva
   field_type: text
   field_id_num: 1512
@@ -831,8 +831,8 @@ mappings:
   target_concept_class_id: Observable Entity
   target_concept_code: '125680007'
   target_standard_concept: S
-  predicate_id: skos:exactMatch
-  confidence: 1.0
+  predicate_id: skos:closeMatch
+  confidence: 0.75
 - mapping_record_id: AIREADI_MAPPING_0045
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -12675,7 +12675,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: trails_visuospatial_executive
@@ -12695,7 +12695,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: trails_visuospatial_executive_time
@@ -12715,7 +12715,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: cube_visuospatial_executive
@@ -12735,7 +12735,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: cube_visuospatial_executive_time
@@ -12755,7 +12755,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: clock_visuospatial_executive
@@ -12775,7 +12775,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: clock_visuospatial_executive_time
@@ -12795,7 +12795,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: naming
@@ -12815,7 +12815,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: naming_time
@@ -12835,7 +12835,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: memory_trial1
@@ -12855,7 +12855,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: memory_trial1_time
@@ -12875,7 +12875,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: memory_trial2
@@ -12895,7 +12895,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: memory_trial2_time
@@ -12915,7 +12915,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: digitspan
@@ -12935,7 +12935,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: digitspan_time
@@ -12955,7 +12955,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: lettera
@@ -12975,7 +12975,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: lettera_time
@@ -12995,7 +12995,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: subtraction
@@ -13015,7 +13015,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: subtraction_time
@@ -13035,7 +13035,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: repetition
@@ -13055,7 +13055,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: repetition_time
@@ -13075,7 +13075,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: fluency_language
@@ -13095,7 +13095,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: fluency_language_time
@@ -13115,7 +13115,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: moca_abstraction
@@ -13135,7 +13135,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: moca_abstraction_time
@@ -13155,7 +13155,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: delayed_recall_with_no_clue
@@ -13175,7 +13175,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: delayed_recall_with_no_clue_time
@@ -13195,7 +13195,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: moca_orientation
@@ -13215,7 +13215,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: moca_orientation_time
@@ -13255,7 +13255,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: moca_combined_mis_score
@@ -13295,7 +13295,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'No'
+  extension_needed: 'Yes'
   form_name: imported
   field_type: text
   field_id: age_years_at_interview
@@ -13862,7 +13862,7 @@ mappings:
   field_id_num: 1668
   question_or_answer: Question
   src_code: lbscat_hct
-  src_cd_description: Hematocrit  - %
+  src_cd_description: Hematocrit - %
   target_concept_id: 3009542
   target_concept_name: Hematocrit [Volume Fraction] of Blood by calculation
   target_domain_id: Measurement
@@ -22051,7 +22051,7 @@ mappings:
   field_id_num: 1356
   question_or_answer: Question
   src_code: pxrd6
-  src_cd_description: On a scale of 1-6, how stressful was this for you?    1= Not at all stressful; 6 = Extremely stressful
+  src_cd_description: On a scale of 1-6, how stressful was this for you? 1= Not at all stressful; 6 = Extremely stressful
   target_concept_id: 2005200495
   local_concept_id: 2005200495
   target_concept_name: How often have you been treated unfairly by employers, bosses and supervisors because of your race/ethnic
@@ -29945,7 +29945,7 @@ mappings:
   target_concept_class_id: Survey
   target_concept_code: 52553-5
   target_standard_concept: S
-  predicate_id: skos:exactMatch
+  predicate_id: skos:closeMatch
   confidence: 0.75
 - mapping_record_id: AIREADI_MAPPING_1409
   map_to_omop: 'Yes'
@@ -30477,11 +30477,11 @@ mappings:
   field_id_num: 1292
   question_or_answer: Question
   src_code: pxahc7
-  src_cd_description: During the past 12 months, how many times have you gone to a hospital emergency room about your health? 
+  src_cd_description: During the past 12 months, how many times have you gone to a hospital emergency room about your health?
     *This includes emergency room visits that resulted in a hospital admission.
   target_concept_id: 2005200096
   local_concept_id: 2005200096
-  target_concept_name: During the past 12 months, how many times have you gone to a hospital emergency room about your health? 
+  target_concept_name: During the past 12 months, how many times have you gone to a hospital emergency room about your health?
     *This includes emergency room visits that resulted in a hospital admission.
   target_domain_id: Observation
   target_vocabulary_id: AIREADI
@@ -36123,7 +36123,7 @@ mappings:
   target_concept_code: '{vol}%{vol}'
   target_standard_concept: S
   predicate_id: skos:exactMatch
-  confidence: 0.75
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_1690
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -36928,7 +36928,7 @@ mappings:
   src_cd_description: Eidon- Create Mosaic Image-CFP
   target_concept_id: 2005200296
   local_concept_id: 2005200296
-  target_concept_name: Eidon-Create Mosaic Image-CFP
+  target_concept_name: Eidon- Create Mosaic Image-CFP
   target_domain_id: Observation
   target_vocabulary_id: AIREADI-Vision
   target_concept_class_id: Observable Entity
@@ -39922,11 +39922,11 @@ mappings:
   field_id_num: 1048
   question_or_answer: Question
   src_code: cmtrt_glcs
-  src_cd_description: 'Do you use other injections to control your blood glucose levels?  Examples: Victoza, Ozempic, Symlin,
+  src_cd_description: 'Do you use other injections to control your blood glucose levels? Examples: Victoza, Ozempic, Symlin,
     Tanzeum, and Trulicity'
   target_concept_id: 2005200550
   local_concept_id: 2005200550
-  target_concept_name: 'Do you use other injections to control your blood glucose levels?  Examples: Victoza, Ozempic, Symlin,
+  target_concept_name: 'Do you use other injections to control your blood glucose levels? Examples: Victoza, Ozempic, Symlin,
     Tanzeum, and Trulicity'
   target_domain_id: Observation
   target_vocabulary_id: AIREADI
@@ -40543,7 +40543,7 @@ mappings:
   field_id_num: 1166
   question_or_answer: Question
   src_code: susmkncf
-  src_cd_description: Have you smoked at least 100 cigarettes or more in your lifetime?  (100 cigarettes = 5 packs)
+  src_cd_description: Have you smoked at least 100 cigarettes or more in your lifetime? (100 cigarettes = 5 packs)
   target_concept_id: 40766306
   target_concept_name: Smoked at least 100 cigarettes in entire life
   target_domain_id: Observation
@@ -40719,7 +40719,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
-  extension_needed: 'Yes'
+  extension_needed: 'No'
   form_name: substance_use_survey
   field_type: dropdown
   field_id_num: 1175
@@ -40766,11 +40766,11 @@ mappings:
   field_id_num: 1177
   question_or_answer: Question
   src_code: suwndosfr
-  src_cd_description: During the average week, how many 5 oz. glasses of wine do you usually drink?  The average wine bottle
+  src_cd_description: During the average week, how many 5 oz. glasses of wine do you usually drink? The average wine bottle
     has 5 servings. (Number of glasses per week)
   target_concept_id: 2005200027
   local_concept_id: 2005200027
-  target_concept_name: During the average week, how many 5 oz. glasses of wine do you usually drink?  The average wine bottle
+  target_concept_name: During the average week, how many 5 oz. glasses of wine do you usually drink? The average wine bottle
     has 5 servings. (Number of glasses per week)
   target_domain_id: Observation
   target_vocabulary_id: AIREADI
@@ -40974,7 +40974,7 @@ mappings:
   field_id_num: 1187
   question_or_answer: Question
   src_code: sumrjstage
-  src_cd_description: At what age did you start using marijuana? (Age started - years old)
+  src_cd_description: At what age did you start using marijuana? (Age started - years old)
   target_concept_id: 37020592
   target_concept_name: Age when first used marijuana
   target_domain_id: Observation
@@ -41014,10 +41014,10 @@ mappings:
   field_id_num: 1189
   question_or_answer: Question
   src_code: sumrjtrt
-  src_cd_description: In what form do you usually use marijuana?  (check all that apply)
+  src_cd_description: In what form do you usually use marijuana? (check all that apply)
   target_concept_id: 2005200037
   local_concept_id: 2005200037
-  target_concept_name: In what form do you usually use marijuana?  (check all that apply)
+  target_concept_name: In what form do you usually use marijuana? (check all that apply)
   target_domain_id: Observation
   target_vocabulary_id: AIREADI
   target_concept_class_id: Survey
