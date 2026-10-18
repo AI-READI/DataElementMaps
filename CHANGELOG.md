@@ -22,10 +22,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   - `mhoccur_ua` "Urinary problems (Examples: urinary tract infections, incontinence, prostate problems)" (lines 309, 389): 81902 Urinary tract infectious disease → 75865 Disorder of urinary system (SNOMED 128606002), closeMatch 0.75. The previous concept covered infections only.
   - `mhoccur_clsh` "High blood cholesterol" (lines 295, 346): 4159131 Dyslipidemia → 4029305 Hypercholesterolemia (SNOMED 13644009), exactMatch 1. The previous concept was broader than the question.
   - `mhoccur_ca` "Cancer (any type)" (lines 306, 380): 4194405 Cancer confirmed (Context-dependent) → 443392 Malignant neoplastic disease (SNOMED 363346000, Disorder), exactMatch 1, the standard concept used for "any cancer" cohort definitions.
+- Health history question rows left unchanged in v1.1 (lines 301, 311, 319): v1.1 corrected the "Yes" → Condition targets for `mhoccur_cogn_1` (line 365), `mhoccur_ear_1` (line 395) and `mhoccur_crt_1` (line 421), but the matching question rows kept the old concepts in `MODIFIER`, `qualifier_concept_id` and `qualifier_source_value`. They now match the Condition targets, so OBSERVATION and CONDITION_OCCURRENCE agree:
+  - `mhoccur_cogn` (line 301): 439795 Minimal cognitive impairment → 4297400 Mild neurocognitive disorder.
+  - `mhoccur_ear` (line 311): 439378 Ear anomalies with hearing impairment → 377889 Hearing loss.
+  - `mhoccur_crt` (line 319): 4317977 Bilateral cataracts → 375545 Cataract.
 
 ### Fixed
 
 - `dcvgmenyn` "Dexcom G6 transmitter returned?" (line 127): `qualifier_concept_id` 1615066 → 2615313 (Transmitter; external, for use with non-durable medical equipment interstitial continuous glucose monitoring system; HCPCS, Device, standard). Concept 1615066 (GLUCOSE TRANSMITTER DEXCOM G6) is not present in the deployed OMOP vocabulary (Databricks `omop_vocab`), and no Dexcom G6 device concept exists there. 2615313 was chosen over 45764014 (Invasive interstitial-fluid glucose monitoring system, SNOMED) because the question and `qualifier_source_value` refer specifically to the transmitter. `qualifier_source_value` is unchanged. Target concept 2005200589 is unchanged.
+
+- `TARGET_CONCEPT_NAME` aligned with the deployed OMOP vocabulary for two rows (metadata only; concept IDs unchanged):
+  - `dvamwendhand_3` (line 140, 763013): "Not Provided" → "Not provided". The map now uses one spelling for this concept.
+  - `cmdosfrq` (line 334, 3042548): "Current Medication, Frequency" → "Current medication, Frequency".
 
 ### Regenerated
 

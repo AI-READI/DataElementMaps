@@ -9,7 +9,7 @@
     "issueTracker": "https://github.com/AI-READI/DataElementMaps/issues",
     "version": "v1.3",
     "datePublished": "2026-10-17",
-    "releaseNotes": "Concept map v1.3: line 127 qualifier 1615066 replaced with 2615313; cmtrt_lfst_1 Yes answer 607008 replaced with 45877994; four health history condition concepts corrected (neurological, urinary, high cholesterol, cancer). See CHANGELOG.md.",
+    "releaseNotes": "Concept map v1.3: line 127 qualifier 1615066 replaced with 2615313; cmtrt_lfst_1 Yes answer 607008 replaced with 45877994; four health history condition concepts corrected (neurological, urinary, high cholesterol, cancer); three health history question qualifiers aligned with their v1.1 Condition targets (cognitive impairment, hearing loss, cataract); two concept names aligned with the OMOP vocabulary. See CHANGELOG.md.",
     "dateCreated": "2023-06-28",
     "dateModified": "2026-10-16",
     "applicationCategory": "Scientific",

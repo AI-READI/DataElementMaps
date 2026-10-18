@@ -2867,7 +2867,7 @@ mappings:
   src_code: dvamwendhand_3
   src_cd_description: Not Provided
   target_concept_id: 763013
-  target_concept_name: Not Provided
+  target_concept_name: Not provided
   target_domain_id: Meas Value
   target_vocabulary_id: SNOMED
   target_concept_class_id: Qualifier Value
@@ -6407,9 +6407,9 @@ mappings:
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
-  modifier: '439795'
-  qualifier_concept_id: 439795
-  qualifier_source_value: Minimal cognitive impairment
+  modifier: '4297400'
+  qualifier_concept_id: 4297400
+  qualifier_source_value: Mild neurocognitive disorder
 - mapping_record_id: AIREADI_MAPPING_0301
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -6637,9 +6637,9 @@ mappings:
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
-  modifier: '439378'
-  qualifier_concept_id: 439378
-  qualifier_source_value: Ear anomalies with hearing impairment
+  modifier: '377889'
+  qualifier_concept_id: 377889
+  qualifier_source_value: Hearing loss
 - mapping_record_id: AIREADI_MAPPING_0311
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -6809,9 +6809,9 @@ mappings:
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
-  modifier: '4317977'
-  qualifier_concept_id: 4317977
-  qualifier_source_value: Bilateral cataracts
+  modifier: '375545'
+  qualifier_concept_id: 375545
+  qualifier_source_value: Cataract
 - mapping_record_id: AIREADI_MAPPING_0319
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -7124,7 +7124,7 @@ mappings:
   src_code: cmdosfrq
   src_cd_description: 'Frequency taken or applied:'
   target_concept_id: 3042548
-  target_concept_name: Current Medication, Frequency
+  target_concept_name: Current medication, Frequency
   target_domain_id: Observation
   target_vocabulary_id: LOINC
   target_concept_class_id: Claims Attachment
