@@ -11,6 +11,54 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [v1.4] - 2026-10-19
+
+Adds unit mappings and corrects medication route and dose-unit answers. Target concepts change on 18 rows, source codes on 4 rows, and 72 rows are added, so the ETL must be re-run to apply these changes. All new rows are appended at the end of the file (lines 2006–2077), so every existing row keeps its v1.3.1 line number. Unit rows are matched by `FIELD_ID` (e.g. `import_potassium_u`) or by the unit text in `SRC_CODE`, not by position.
+
+### Added — units
+
+- Generic unit-string lookup (lines 2006–2018, same format as lines 1997–2005; blank FORM_NAME and FIELD_ID, unit text in `SRC_CODE`): x10E3/µL → 8848 thousand per microliter; x10E6/µL → 8815 million per microliter; fL → 8583 femtoliter; pg → 8564 picogram; cm → 8582 centimeter; kilograms → 9529 kilogram; kg/m2 → 9531 kilogram per square meter; mmHg → 8876 millimeter mercury column; bpm → 8541 per minute; mg/g → 8723 milligram per gram; diopter → 9291 diopter; degree → 9484 degree; kg → 9529 kilogram (alias of "kilograms").
+- Fixed-unit rows for measurements that have no REDCap unit field (the unit is fixed and appears only in the field label). Each is named after its field plus `_u`, with `FIELD_ID_NUM` blank and `MODIFIER` "fixed unit; no REDCap unit field":
+  - Imported labs (lines 2019–2020): `import_globulin_total_norc_u` → 8713 gram per deciliter; `import_bilirubin_total_u` → 8840 milligram per deciliter. Units confirmed from the data (medians 2.6 g/dL and 0.5 mg/dL).
+  - Physical assessment (lines 2021–2031): height, waist, hip → cm 8582; weight → kilograms 9529; BMI → kg/m2 9531; systolic and diastolic BP (×2) → mmHg 8876; heart rate (×2) → bpm 8541.
+  - CBC (lines 2032–2040): WBC, platelets → x10E3/µL 8848; RBC → x10E6/µL 8815; hemoglobin, MCHC → g/dL 8713; hematocrit, RDW → % 8554; MCV → fL 8583; MCH → pg 8564.
+  - Autorefractor (lines 2041–2046): sphere and cylinder (both eyes) → diopter 9291; axis (both eyes) → degree 9484.
+  - Urine albumin/creatinine ratio (line 2047): `import_uarc_u` → mg/g 8723.
+  - MoCA (lines 2048–2077): each MoCA measurement field gets its own unit row: the 16 score fields (14 item scores, combined MIS score, total score) → score 44777566; the 14 time fields → second 8555 (UCUM `s`). The existing MoCA unit rows (lines 648–667, e.g. `trails_time_unit`) are unchanged; they are not named after the measurement fields, so they were not being applied.
+
+### Added — unit lookup scripts
+
+- `redCapDataDictionaryWithExtension/value-set-mapping-common/scripts/` (Databricks SQL), so the ETL can fill `unit_concept_id` with one lookup table and one LEFT JOIN:
+  - `USAGE.md`: step-by-step usage; `README.md`: overview and the full lookup content.
+  - `00_load_concept_map.sql`: loads the mapping file as `concept_map` if needed.
+  - `unit_concept_lookup.csv`: the ready-made lookup table (110 rows; `key_type`, `lookup_key`, `unit_concept_id`, `unit_source_value`), and `01a_load_unit_concept_lookup_csv.sql` to load it as the table `unit_lookup`.
+  - `01_create_unit_lookup.sql`: alternatively, one query that builds the same table `unit_lookup` from the concept map (110 rows, one per key): 85 keyed by measurement field name (the `<field>_u` Unit rows, plus the LDL field whose unit field has a different name) and 25 keyed by unit text (generic Unit rows plus `s`, `second`, `score`).
+  - `02_view_unit_lookup.sql`: review queries and a duplicate-key check.
+  - `03_left_join_unit_lookup_template.sql`: the LEFT JOIN to add to the ETL (field name first, then unit text, otherwise 0).
+  - `04_example_omop_survey_measurement.sql`: the same join, ready to run on `omop_survey.measurement`.
+  - `05_check_no_fanout.sql`: checks that the join adds no rows.
+  - `06_check_units_after_etl.sql`: checks MEASUREMENT units after the ETL re-run.
+  - Medication route: `medication_route_lookup.csv` (26 rows: `cmroute` answer code or label → SNOMED Route `route_concept_id`), `07a_load_medication_route_lookup_csv.sql` to load it, `07_create_medication_route_lookup.sql` to build it from the concept map, and `08_left_join_medication_route_template.sql`, the LEFT JOIN for `DRUG_EXPOSURE.route_concept_id`.
+
+### Fixed — MoCA source codes
+
+- `SRC_CODE` for four MoCA rows set back to the REDCap field names used in the data, matching `FIELD_ID`: line 635 `verbal_fluency_language` → `fluency_language`; line 636 `verbal_fluency_language_time` → `fluency_language_time`; line 639 `delayed_recall_with_no_cue` → `delayed_recall_with_no_clue`; line 640 `delayed_recall_with_no_cue_time` → `delayed_recall_with_no_clue_time`. Confirmed in `omop_survey.measurement` (`measurement_source_value` uses the `FIELD_ID` names). This restores the August 2026 correction in `_v5.csv` (commit `01f5c7f`), which was lost when v5 was replaced by v4 (commit `807c116`). Target concepts are unchanged. The custom vocabulary keeps the MoCA dictionary names as concept source codes.
+
+### Changed — target concept (protected fields)
+
+- `cmroute` "How is it taken?" answers (lines 1662–1688) → standard SNOMED Route concepts (domain Route) for `DRUG_EXPOSURE.route_concept_id`, replacing LOINC answer concepts: Intramuscular 4302612, Intraocular 4157760, Intraperitoneal 4243022, Nasal 4262914, Oral 4132161, Rectal 4290759, Inhalation 40486069 Respiratory tract (closeMatch 1), Subcutaneous 4142048, Topical 4263689, Transdermal 4262099, Vaginal 4057765. Intralesional (4157758) unchanged. Other (888) → 0, no matching concept.
+- `cmdosu` dose-unit answers → UCUM units (domain Unit): Inhalation (line 1696), Puff (line 1714) and Spray (line 1751) → 45744809 Actuation `{actuat}` (closeMatch 1); Tablet (line 1752) → 9431 tablet `{tbl}`. Capsule (line 1692) and Other (line 1755) → 0; no UCUM concept exists for capsule.
+- Puff previously mapped to AI-READI custom concept 2005200222 (domain Device). That concept is retired: removed from `concept_manual.csv`, from `concept_relationship_manual.csv` (its broadMatch to 45758813 Metered dose inhaler) and from the split file `AI-READI-Vocabulary/concept_manual_AIREADI.csv` (now 333 concepts; 417 in total). It remains in the frozen October 2025 submission.
+
+### Regenerated
+
+- map2omop and open-source public versions, SSSOM and LinkML from the v1.4 common file; split custom vocabulary files from `concept_manual.csv`.
+- Counts: standard 1,479 (391 concepts); custom 488 (343); mapped 1,967 (734); designated but unmapped 109. The 72 added unit rows are counted as mapped elements although they are not REDCap data elements, so "mapped" rises and "not designated" falls from 902 to 830 against the fixed total of 2,906; `count_concept_map.sql` comments updated.
+
+### Not yet included
+
+- CBC method-specific LOINC codes (hematocrit and others): waiting on the labs.
+
 ## [v1.3.1] - 2026-10-18
 
 Metadata-only release. No `TARGET_CONCEPT_ID`, `value_as_concept_id`, `qualifier_concept_id` or `Map_to_OMOP` values changed; counts are unchanged from v1.3, and no ETL re-run is required.

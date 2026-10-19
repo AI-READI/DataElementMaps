@@ -13080,7 +13080,7 @@ mappings:
   field_type: text
   field_id: fluency_language
   question_or_answer: Question
-  src_code: verbal_fluency_language
+  src_code: fluency_language
   src_cd_description: Language - Fluency
   target_concept_id: 2005200364
   local_concept_id: 2005200364
@@ -13100,7 +13100,7 @@ mappings:
   field_type: text
   field_id: fluency_language_time
   question_or_answer: Question
-  src_code: verbal_fluency_language_time
+  src_code: fluency_language_time
   src_cd_description: Language - Fluency (Time)
   target_concept_id: 2005200365
   local_concept_id: 2005200365
@@ -13160,7 +13160,7 @@ mappings:
   field_type: text
   field_id: delayed_recall_with_no_clue
   question_or_answer: Question
-  src_code: delayed_recall_with_no_cue
+  src_code: delayed_recall_with_no_clue
   src_cd_description: Delayed Recall (with no clue)
   target_concept_id: 2005200368
   local_concept_id: 2005200368
@@ -13180,7 +13180,7 @@ mappings:
   field_type: text
   field_id: delayed_recall_with_no_clue_time
   question_or_answer: Question
-  src_code: delayed_recall_with_no_cue_time
+  src_code: delayed_recall_with_no_clue_time
   src_cd_description: Delayed Recall (with no clue) (Time)
   target_concept_id: 2005200369
   local_concept_id: 2005200369
@@ -35541,12 +35541,12 @@ mappings:
   src_code: '2'
   src_code_id: cmroute_2
   src_cd_description: Intramuscular
-  target_concept_id: 45881508
+  target_concept_id: 4302612
   target_concept_name: Intramuscular
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA9429-7
+  target_domain_id: Route
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Qualifier Value
+  target_concept_code: '78421000'
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -35607,12 +35607,12 @@ mappings:
   src_code: '3'
   src_code_id: cmroute_3
   src_cd_description: Intraocular
-  target_concept_id: 36309506
+  target_concept_id: 4157760
   target_concept_name: Intraocular
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA9432-1
+  target_domain_id: Route
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Qualifier Value
+  target_concept_code: '372468001'
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -35673,12 +35673,12 @@ mappings:
   src_code: '4'
   src_code_id: cmroute_4
   src_cd_description: Intraperitoneal
-  target_concept_id: 36308860
+  target_concept_id: 4243022
   target_concept_name: Intraperitoneal
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA9433-9
+  target_domain_id: Route
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Qualifier Value
+  target_concept_code: '38239002'
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -35717,12 +35717,12 @@ mappings:
   src_code: '5'
   src_code_id: cmroute_5
   src_cd_description: Nasal
-  target_concept_id: 45881525
+  target_concept_id: 4262914
   target_concept_name: Nasal
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA9263-0
+  target_domain_id: Route
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Qualifier Value
+  target_concept_code: '46713006'
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -35761,12 +35761,12 @@ mappings:
   src_code: '6'
   src_code_id: cmroute_6
   src_cd_description: Oral
-  target_concept_id: 45881524
-  target_concept_name: Oral, including sublingual or buccal
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA20324-2
+  target_concept_id: 4132161
+  target_concept_name: Oral
+  target_domain_id: Route
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Qualifier Value
+  target_concept_code: '26643006'
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -35806,12 +35806,12 @@ mappings:
   src_code: '7'
   src_code_id: cmroute_7
   src_cd_description: Rectal
-  target_concept_id: 45884045
+  target_concept_id: 4290759
   target_concept_name: Rectal
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA9369-5
+  target_domain_id: Route
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Qualifier Value
+  target_concept_code: '37161004'
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -35851,14 +35851,14 @@ mappings:
   src_code: '8'
   src_code_id: cmroute_8
   src_cd_description: Inhalation
-  target_concept_id: 45880877
-  target_concept_name: Inhalation
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA9427-1
+  target_concept_id: 40486069
+  target_concept_name: Respiratory tract
+  target_domain_id: Route
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Qualifier Value
+  target_concept_code: '447694001'
   target_standard_concept: S
-  predicate_id: skos:exactMatch
+  predicate_id: skos:closeMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_1678
   map_to_omop: 'Yes'
@@ -35895,12 +35895,12 @@ mappings:
   src_code: '9'
   src_code_id: cmroute_9
   src_cd_description: Subcutaneous
-  target_concept_id: 45878096
+  target_concept_id: 4142048
   target_concept_name: Subcutaneous
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA9451-1
+  target_domain_id: Route
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Qualifier Value
+  target_concept_code: '34206005'
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -35939,12 +35939,12 @@ mappings:
   src_code: '10'
   src_code_id: cmroute_10
   src_cd_description: Topical
-  target_concept_id: 45877645
+  target_concept_id: 4263689
   target_concept_name: Topical
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA9456-0
+  target_domain_id: Route
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Qualifier Value
+  target_concept_code: '6064005'
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -35983,12 +35983,12 @@ mappings:
   src_code: '11'
   src_code_id: cmroute_11
   src_cd_description: Transdermal
-  target_concept_id: 45877646
+  target_concept_id: 4262099
   target_concept_name: Transdermal
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA9454-5
+  target_domain_id: Route
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Qualifier Value
+  target_concept_code: '45890007'
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -36027,12 +36027,12 @@ mappings:
   src_code: '12'
   src_code_id: cmroute_12
   src_cd_description: Vaginal
-  target_concept_id: 45876972
+  target_concept_id: 4057765
   target_concept_name: Vaginal
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA9459-4
+  target_domain_id: Route
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Qualifier Value
+  target_concept_code: '16857009'
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -36071,15 +36071,8 @@ mappings:
   src_code: '888'
   src_code_id: cmroute_888
   src_cd_description: Other
-  target_concept_id: 45878142
-  target_concept_name: Other
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA46-8
-  target_standard_concept: S
-  predicate_id: skos:exactMatch
-  confidence: 1.0
+  target_concept_id: 0
+  modifier: No matching route concept; route_source_value = Other
 - mapping_record_id: AIREADI_MAPPING_1688
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -36159,15 +36152,8 @@ mappings:
   src_code: '2'
   src_code_id: cmdosu_2
   src_cd_description: Capsule
-  target_concept_id: 46237103
-  target_concept_name: Capsule
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA21907-3
-  target_standard_concept: S
-  predicate_id: skos:exactMatch
-  confidence: 1.0
+  target_concept_id: 0
+  modifier: No matching unit concept; dose_unit_source_value = Capsule
 - mapping_record_id: AIREADI_MAPPING_1692
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -36247,14 +36233,14 @@ mappings:
   src_code: '4'
   src_code_id: cmdosu_4
   src_cd_description: Inhalation
-  target_concept_id: 45880877
-  target_concept_name: Inhalation
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA9427-1
+  target_concept_id: 45744809
+  target_concept_name: Actuation
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '{actuat}'
   target_standard_concept: S
-  predicate_id: skos:exactMatch
+  predicate_id: skos:closeMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_1696
   map_to_omop: 'Yes'
@@ -36634,7 +36620,7 @@ mappings:
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: protected
-  extension_needed: 'Yes'
+  extension_needed: 'No'
   form_name: current_medications
   field_type: dropdown
   field_id: cmdosu
@@ -36643,14 +36629,14 @@ mappings:
   src_code: '13'
   src_code_id: cmdosu_13
   src_cd_description: Puff
-  target_concept_id: 2005200222
-  local_concept_id: 2005200222
-  target_concept_name: Puff
-  target_domain_id: Device
-  target_vocabulary_id: AIREADI
-  target_concept_class_id: Physical Object
+  target_concept_id: 45744809
+  target_concept_name: Actuation
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '{actuat}'
   target_standard_concept: S
-  predicate_id: skos:exactMatch
+  predicate_id: skos:closeMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_1714
   map_to_omop: 'Yes'
@@ -37474,14 +37460,14 @@ mappings:
   src_code: '14'
   src_code_id: cmdosu_14
   src_cd_description: Spray
-  target_concept_id: 46237551
-  target_concept_name: Spray
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA21919-8
+  target_concept_id: 45744809
+  target_concept_name: Actuation
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '{actuat}'
   target_standard_concept: S
-  predicate_id: skos:exactMatch
+  predicate_id: skos:closeMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_1751
   map_to_omop: 'Yes'
@@ -37496,12 +37482,12 @@ mappings:
   src_code: '15'
   src_code_id: cmdosu_15
   src_cd_description: Tablet
-  target_concept_id: 46237517
-  target_concept_name: Tablet
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA21908-1
+  target_concept_id: 9431
+  target_concept_name: tablet
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '{tbl}'
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -37562,15 +37548,8 @@ mappings:
   src_code: '18'
   src_code_id: cmdosu_18
   src_cd_description: Other
-  target_concept_id: 45878142
-  target_concept_name: Other
-  target_domain_id: Meas Value
-  target_vocabulary_id: LOINC
-  target_concept_class_id: Answer
-  target_concept_code: LA46-8
-  target_standard_concept: S
-  predicate_id: skos:exactMatch
-  confidence: 1.0
+  target_concept_id: 0
+  modifier: No matching unit concept; dose_unit_source_value = Other
 - mapping_record_id: AIREADI_MAPPING_1755
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -43132,3 +43111,1535 @@ mappings:
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2005
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  field_type: text
+  src_code: x10E3/µL
+  src_code_id: x10E3/µL
+  src_cd_description: thousand per microliter
+  target_concept_id: 8848
+  target_concept_name: thousand per microliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: 10*3/uL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2006
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  field_type: text
+  src_code: x10E6/µL
+  src_code_id: x10E6/µL
+  src_cd_description: million per microliter
+  target_concept_id: 8815
+  target_concept_name: million per microliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: 10*6/uL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2007
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  field_type: text
+  src_code: fL
+  src_code_id: fL
+  src_cd_description: femtoliter
+  target_concept_id: 8583
+  target_concept_name: femtoliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: fL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2008
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  field_type: text
+  src_code: pg
+  src_code_id: pg
+  src_cd_description: picogram
+  target_concept_id: 8564
+  target_concept_name: picogram
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: pg
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2009
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  field_type: text
+  src_code: cm
+  src_code_id: cm
+  src_cd_description: centimeter
+  target_concept_id: 8582
+  target_concept_name: centimeter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: cm
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2010
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  field_type: text
+  src_code: kilograms
+  src_code_id: kilograms
+  src_cd_description: kilogram
+  target_concept_id: 9529
+  target_concept_name: kilogram
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: kg
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2011
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  field_type: text
+  src_code: kg/m2
+  src_code_id: kg/m2
+  src_cd_description: kilogram per square meter
+  target_concept_id: 9531
+  target_concept_name: kilogram per square meter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: kg/m2
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2012
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  field_type: text
+  src_code: mmHg
+  src_code_id: mmHg
+  src_cd_description: millimeter mercury column
+  target_concept_id: 8876
+  target_concept_name: millimeter mercury column
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mm[Hg]
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2013
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  field_type: text
+  src_code: bpm
+  src_code_id: bpm
+  src_cd_description: per minute
+  target_concept_id: 8541
+  target_concept_name: per minute
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: /min
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2014
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  field_type: text
+  src_code: mg/g
+  src_code_id: mg/g
+  src_cd_description: milligram per gram
+  target_concept_id: 8723
+  target_concept_name: milligram per gram
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mg/g
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2015
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  field_type: text
+  src_code: diopter
+  src_code_id: diopter
+  src_cd_description: diopter
+  target_concept_id: 9291
+  target_concept_name: diopter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[diop]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2016
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  field_type: text
+  src_code: degree
+  src_code_id: degree
+  src_cd_description: degree
+  target_concept_id: 9484
+  target_concept_name: degree
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: deg
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2017
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  field_type: text
+  src_code: kg
+  src_code_id: kg
+  src_cd_description: kilogram
+  target_concept_id: 9529
+  target_concept_name: kilogram
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: kg
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2018
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: import_globulin_total_norc_u
+  question_or_answer: Unit
+  src_code: g/dL
+  src_code_id: import_globulin_total_norc_u
+  src_cd_description: gram per deciliter
+  target_concept_id: 8713
+  target_concept_name: gram per deciliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: g/dL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2019
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: import_bilirubin_total_u
+  question_or_answer: Unit
+  src_code: mg/dL
+  src_code_id: import_bilirubin_total_u
+  src_cd_description: milligram per deciliter
+  target_concept_id: 8840
+  target_concept_name: milligram per deciliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mg/dL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2020
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: physical_assessment
+  field_type: text
+  field_id: height_vsorres_u
+  question_or_answer: Unit
+  src_code: cm
+  src_code_id: height_vsorres_u
+  src_cd_description: centimeter
+  target_concept_id: 8582
+  target_concept_name: centimeter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: cm
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2021
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: physical_assessment
+  field_type: text
+  field_id: weight_vsorres_u
+  question_or_answer: Unit
+  src_code: kilograms
+  src_code_id: weight_vsorres_u
+  src_cd_description: kilogram
+  target_concept_id: 9529
+  target_concept_name: kilogram
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: kg
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2022
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: physical_assessment
+  field_type: calc
+  field_id: bmi_vsorres_u
+  question_or_answer: Unit
+  src_code: kg/m2
+  src_code_id: bmi_vsorres_u
+  src_cd_description: kilogram per square meter
+  target_concept_id: 9531
+  target_concept_name: kilogram per square meter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: kg/m2
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2023
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: physical_assessment
+  field_type: text
+  field_id: waist_vsorres_u
+  question_or_answer: Unit
+  src_code: cm
+  src_code_id: waist_vsorres_u
+  src_cd_description: centimeter
+  target_concept_id: 8582
+  target_concept_name: centimeter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: cm
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2024
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: physical_assessment
+  field_type: text
+  field_id: hip_vsorres_u
+  question_or_answer: Unit
+  src_code: cm
+  src_code_id: hip_vsorres_u
+  src_cd_description: centimeter
+  target_concept_id: 8582
+  target_concept_name: centimeter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: cm
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2025
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: physical_assessment
+  field_type: text
+  field_id: bp1_sysbp_vsorres_u
+  question_or_answer: Unit
+  src_code: mmHg
+  src_code_id: bp1_sysbp_vsorres_u
+  src_cd_description: millimeter mercury column
+  target_concept_id: 8876
+  target_concept_name: millimeter mercury column
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mm[Hg]
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2026
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: physical_assessment
+  field_type: text
+  field_id: bp1_diabp_vsorres_u
+  question_or_answer: Unit
+  src_code: mmHg
+  src_code_id: bp1_diabp_vsorres_u
+  src_cd_description: millimeter mercury column
+  target_concept_id: 8876
+  target_concept_name: millimeter mercury column
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mm[Hg]
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2027
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: physical_assessment
+  field_type: text
+  field_id: pulse_vsorres_u
+  question_or_answer: Unit
+  src_code: bpm
+  src_code_id: pulse_vsorres_u
+  src_cd_description: per minute
+  target_concept_id: 8541
+  target_concept_name: per minute
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: /min
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2028
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: physical_assessment
+  field_type: text
+  field_id: bp2_sysbp_vsorres_u
+  question_or_answer: Unit
+  src_code: mmHg
+  src_code_id: bp2_sysbp_vsorres_u
+  src_cd_description: millimeter mercury column
+  target_concept_id: 8876
+  target_concept_name: millimeter mercury column
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mm[Hg]
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2029
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: physical_assessment
+  field_type: text
+  field_id: bp2_diabp_vsorres_u
+  question_or_answer: Unit
+  src_code: mmHg
+  src_code_id: bp2_diabp_vsorres_u
+  src_cd_description: millimeter mercury column
+  target_concept_id: 8876
+  target_concept_name: millimeter mercury column
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mm[Hg]
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2030
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: physical_assessment
+  field_type: text
+  field_id: pulse_vsorres_2_u
+  question_or_answer: Unit
+  src_code: bpm
+  src_code_id: pulse_vsorres_2_u
+  src_cd_description: per minute
+  target_concept_id: 8541
+  target_concept_name: per minute
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: /min
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2031
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: lab_results
+  field_type: text
+  field_id: lbscat_wbc_u
+  question_or_answer: Unit
+  src_code: x10E3/µL
+  src_code_id: lbscat_wbc_u
+  src_cd_description: thousand per microliter
+  target_concept_id: 8848
+  target_concept_name: thousand per microliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: 10*3/uL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2032
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: lab_results
+  field_type: text
+  field_id: lbscat_rbc_u
+  question_or_answer: Unit
+  src_code: x10E6/µL
+  src_code_id: lbscat_rbc_u
+  src_cd_description: million per microliter
+  target_concept_id: 8815
+  target_concept_name: million per microliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: 10*6/uL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2033
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: lab_results
+  field_type: text
+  field_id: lbscat_a1c_u
+  question_or_answer: Unit
+  src_code: g/dL
+  src_code_id: lbscat_a1c_u
+  src_cd_description: gram per deciliter
+  target_concept_id: 8713
+  target_concept_name: gram per deciliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: g/dL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2034
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: lab_results
+  field_type: text
+  field_id: lbscat_hct_u
+  question_or_answer: Unit
+  src_code: '%'
+  src_code_id: lbscat_hct_u
+  src_cd_description: percent
+  target_concept_id: 8554
+  target_concept_name: percent
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '%'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2035
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: lab_results
+  field_type: text
+  field_id: lbscat_mcv_u
+  question_or_answer: Unit
+  src_code: fL
+  src_code_id: lbscat_mcv_u
+  src_cd_description: femtoliter
+  target_concept_id: 8583
+  target_concept_name: femtoliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: fL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2036
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: lab_results
+  field_type: text
+  field_id: lbscat_mch_u
+  question_or_answer: Unit
+  src_code: pg
+  src_code_id: lbscat_mch_u
+  src_cd_description: picogram
+  target_concept_id: 8564
+  target_concept_name: picogram
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: pg
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2037
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: lab_results
+  field_type: text
+  field_id: lbscat_mchc_u
+  question_or_answer: Unit
+  src_code: g/dL
+  src_code_id: lbscat_mchc_u
+  src_cd_description: gram per deciliter
+  target_concept_id: 8713
+  target_concept_name: gram per deciliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: g/dL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2038
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: lab_results
+  field_type: text
+  field_id: lbscat_rdw_u
+  question_or_answer: Unit
+  src_code: '%'
+  src_code_id: lbscat_rdw_u
+  src_cd_description: percent
+  target_concept_id: 8554
+  target_concept_name: percent
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '%'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2039
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: lab_results
+  field_type: text
+  field_id: lbscat_plt_u
+  question_or_answer: Unit
+  src_code: x10E3/µL
+  src_code_id: lbscat_plt_u
+  src_cd_description: thousand per microliter
+  target_concept_id: 8848
+  target_concept_name: thousand per microliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: 10*3/uL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2040
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: bcva
+  field_type: text
+  field_id: viaodsph_u
+  question_or_answer: Unit
+  src_code: diopter
+  src_code_id: viaodsph_u
+  src_cd_description: diopter
+  target_concept_id: 9291
+  target_concept_name: diopter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[diop]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2041
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: bcva
+  field_type: text
+  field_id: viaodcyl_u
+  question_or_answer: Unit
+  src_code: diopter
+  src_code_id: viaodcyl_u
+  src_cd_description: diopter
+  target_concept_id: 9291
+  target_concept_name: diopter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[diop]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2042
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: bcva
+  field_type: text
+  field_id: viaodaxi_u
+  question_or_answer: Unit
+  src_code: degree
+  src_code_id: viaodaxi_u
+  src_cd_description: degree
+  target_concept_id: 9484
+  target_concept_name: degree
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: deg
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2043
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: bcva
+  field_type: text
+  field_id: viaossph_u
+  question_or_answer: Unit
+  src_code: diopter
+  src_code_id: viaossph_u
+  src_cd_description: diopter
+  target_concept_id: 9291
+  target_concept_name: diopter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[diop]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2044
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: bcva
+  field_type: text
+  field_id: viaoscyl_u
+  question_or_answer: Unit
+  src_code: diopter
+  src_code_id: viaoscyl_u
+  src_cd_description: diopter
+  target_concept_id: 9291
+  target_concept_name: diopter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[diop]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2045
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: bcva
+  field_type: text
+  field_id: viaosaxi_u
+  question_or_answer: Unit
+  src_code: degree
+  src_code_id: viaosaxi_u
+  src_cd_description: degree
+  target_concept_id: 9484
+  target_concept_name: degree
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: deg
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2046
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'No'
+  protected_or_open_source: locked (unavailable)
+  extension_needed: 'No'
+  form_name: imported
+  field_type: calc
+  field_id: import_uarc_u
+  question_or_answer: Unit
+  src_code: mg/g
+  src_code_id: import_uarc_u
+  src_cd_description: milligram per gram
+  target_concept_id: 8723
+  target_concept_name: milligram per gram
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mg/g
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2047
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: trails_visuospatial_executive_u
+  question_or_answer: Unit
+  src_code: score
+  src_code_id: trails_visuospatial_executive_u
+  src_cd_description: score
+  target_concept_id: 44777566
+  target_concept_name: score
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[score]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2048
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: trails_visuospatial_executive_time_u
+  question_or_answer: Unit
+  src_code: s
+  src_code_id: trails_visuospatial_executive_time_u
+  src_cd_description: second
+  target_concept_id: 8555
+  target_concept_name: second
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: s
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2049
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: cube_visuospatial_executive_u
+  question_or_answer: Unit
+  src_code: score
+  src_code_id: cube_visuospatial_executive_u
+  src_cd_description: score
+  target_concept_id: 44777566
+  target_concept_name: score
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[score]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2050
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: cube_visuospatial_executive_time_u
+  question_or_answer: Unit
+  src_code: s
+  src_code_id: cube_visuospatial_executive_time_u
+  src_cd_description: second
+  target_concept_id: 8555
+  target_concept_name: second
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: s
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2051
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: clock_visuospatial_executive_u
+  question_or_answer: Unit
+  src_code: score
+  src_code_id: clock_visuospatial_executive_u
+  src_cd_description: score
+  target_concept_id: 44777566
+  target_concept_name: score
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[score]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2052
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: clock_visuospatial_executive_time_u
+  question_or_answer: Unit
+  src_code: s
+  src_code_id: clock_visuospatial_executive_time_u
+  src_cd_description: second
+  target_concept_id: 8555
+  target_concept_name: second
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: s
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2053
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: naming_u
+  question_or_answer: Unit
+  src_code: score
+  src_code_id: naming_u
+  src_cd_description: score
+  target_concept_id: 44777566
+  target_concept_name: score
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[score]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2054
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: naming_time_u
+  question_or_answer: Unit
+  src_code: s
+  src_code_id: naming_time_u
+  src_cd_description: second
+  target_concept_id: 8555
+  target_concept_name: second
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: s
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2055
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: memory_trial1_u
+  question_or_answer: Unit
+  src_code: score
+  src_code_id: memory_trial1_u
+  src_cd_description: score
+  target_concept_id: 44777566
+  target_concept_name: score
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[score]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2056
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: memory_trial1_time_u
+  question_or_answer: Unit
+  src_code: s
+  src_code_id: memory_trial1_time_u
+  src_cd_description: second
+  target_concept_id: 8555
+  target_concept_name: second
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: s
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2057
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: memory_trial2_u
+  question_or_answer: Unit
+  src_code: score
+  src_code_id: memory_trial2_u
+  src_cd_description: score
+  target_concept_id: 44777566
+  target_concept_name: score
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[score]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2058
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: memory_trial2_time_u
+  question_or_answer: Unit
+  src_code: s
+  src_code_id: memory_trial2_time_u
+  src_cd_description: second
+  target_concept_id: 8555
+  target_concept_name: second
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: s
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2059
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: digitspan_u
+  question_or_answer: Unit
+  src_code: score
+  src_code_id: digitspan_u
+  src_cd_description: score
+  target_concept_id: 44777566
+  target_concept_name: score
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[score]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2060
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: digitspan_time_u
+  question_or_answer: Unit
+  src_code: s
+  src_code_id: digitspan_time_u
+  src_cd_description: second
+  target_concept_id: 8555
+  target_concept_name: second
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: s
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2061
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: lettera_u
+  question_or_answer: Unit
+  src_code: score
+  src_code_id: lettera_u
+  src_cd_description: score
+  target_concept_id: 44777566
+  target_concept_name: score
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[score]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2062
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: lettera_time_u
+  question_or_answer: Unit
+  src_code: s
+  src_code_id: lettera_time_u
+  src_cd_description: second
+  target_concept_id: 8555
+  target_concept_name: second
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: s
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2063
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: subtraction_u
+  question_or_answer: Unit
+  src_code: score
+  src_code_id: subtraction_u
+  src_cd_description: score
+  target_concept_id: 44777566
+  target_concept_name: score
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[score]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2064
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: subtraction_time_u
+  question_or_answer: Unit
+  src_code: s
+  src_code_id: subtraction_time_u
+  src_cd_description: second
+  target_concept_id: 8555
+  target_concept_name: second
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: s
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2065
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: repetition_u
+  question_or_answer: Unit
+  src_code: score
+  src_code_id: repetition_u
+  src_cd_description: score
+  target_concept_id: 44777566
+  target_concept_name: score
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[score]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2066
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: repetition_time_u
+  question_or_answer: Unit
+  src_code: s
+  src_code_id: repetition_time_u
+  src_cd_description: second
+  target_concept_id: 8555
+  target_concept_name: second
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: s
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2067
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: fluency_language_u
+  question_or_answer: Unit
+  src_code: score
+  src_code_id: fluency_language_u
+  src_cd_description: score
+  target_concept_id: 44777566
+  target_concept_name: score
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[score]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2068
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: fluency_language_time_u
+  question_or_answer: Unit
+  src_code: s
+  src_code_id: fluency_language_time_u
+  src_cd_description: second
+  target_concept_id: 8555
+  target_concept_name: second
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: s
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2069
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: moca_abstraction_u
+  question_or_answer: Unit
+  src_code: score
+  src_code_id: moca_abstraction_u
+  src_cd_description: score
+  target_concept_id: 44777566
+  target_concept_name: score
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[score]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2070
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: moca_abstraction_time_u
+  question_or_answer: Unit
+  src_code: s
+  src_code_id: moca_abstraction_time_u
+  src_cd_description: second
+  target_concept_id: 8555
+  target_concept_name: second
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: s
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2071
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: delayed_recall_with_no_clue_u
+  question_or_answer: Unit
+  src_code: score
+  src_code_id: delayed_recall_with_no_clue_u
+  src_cd_description: score
+  target_concept_id: 44777566
+  target_concept_name: score
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[score]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2072
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: delayed_recall_with_no_clue_time_u
+  question_or_answer: Unit
+  src_code: s
+  src_code_id: delayed_recall_with_no_clue_time_u
+  src_cd_description: second
+  target_concept_id: 8555
+  target_concept_name: second
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: s
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2073
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: moca_orientation_u
+  question_or_answer: Unit
+  src_code: score
+  src_code_id: moca_orientation_u
+  src_cd_description: score
+  target_concept_id: 44777566
+  target_concept_name: score
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[score]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2074
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: moca_orientation_time_u
+  question_or_answer: Unit
+  src_code: s
+  src_code_id: moca_orientation_time_u
+  src_cd_description: second
+  target_concept_id: 8555
+  target_concept_name: second
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: s
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2075
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: moca_combined_mis_score_u
+  question_or_answer: Unit
+  src_code: score
+  src_code_id: moca_combined_mis_score_u
+  src_cd_description: score
+  target_concept_id: 44777566
+  target_concept_name: score
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[score]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2076
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: moca_total_score_u
+  question_or_answer: Unit
+  src_code: score
+  src_code_id: moca_total_score_u
+  src_cd_description: score
+  target_concept_id: 44777566
+  target_concept_name: score
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '[score]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field

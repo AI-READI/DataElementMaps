@@ -1,0 +1,27 @@
+key_type,lookup_key,route_concept_id,route_concept_name,route_source_value
+code,1,4157758,Intralesional,Intralesional
+code,2,4302612,Intramuscular,Intramuscular
+code,3,4157760,Intraocular,Intraocular
+code,4,4243022,Intraperitoneal,Intraperitoneal
+code,5,4262914,Nasal,Nasal
+code,6,4132161,Oral,Oral
+code,7,4290759,Rectal,Rectal
+code,8,40486069,Respiratory tract,Inhalation
+code,9,4142048,Subcutaneous,Subcutaneous
+code,10,4263689,Topical,Topical
+code,11,4262099,Transdermal,Transdermal
+code,12,4057765,Vaginal,Vaginal
+code,888,0,,Other
+string,Inhalation,40486069,Respiratory tract,Inhalation
+string,Intralesional,4157758,Intralesional,Intralesional
+string,Intramuscular,4302612,Intramuscular,Intramuscular
+string,Intraocular,4157760,Intraocular,Intraocular
+string,Intraperitoneal,4243022,Intraperitoneal,Intraperitoneal
+string,Nasal,4262914,Nasal,Nasal
+string,Oral,4132161,Oral,Oral
+string,Other,0,,Other
+string,Rectal,4290759,Rectal,Rectal
+string,Subcutaneous,4142048,Subcutaneous,Subcutaneous
+string,Topical,4263689,Topical,Topical
+string,Transdermal,4262099,Transdermal,Transdermal
+string,Vaginal,4057765,Vaginal,Vaginal

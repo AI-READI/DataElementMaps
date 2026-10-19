@@ -30,7 +30,7 @@
 --     (custom concepts 2005200558 "Survey Started Timestamp" and
 --      2005200559 "Survey Completed Timestamp"); these are REDCap system
 --     metadata, not survey content, and are reported as designated-but-unmapped.
---   * Not designated (902) = REDCap data elements in the curated dictionary
+--   * Not designated (830) = REDCap data elements in the curated dictionary
 --     (2,906) that are not rows in this mapping file.
 -- =============================================================================
 
@@ -103,9 +103,9 @@ FROM rows
 ORDER BY CASE category
            WHEN 'Standard' THEN 1 WHEN 'Custom' THEN 2 WHEN 'Mapped total' THEN 3
            WHEN 'Designated but unmapped' THEN 4 WHEN 'Not designated' THEN 5 ELSE 6 END;
--- Expected (v1.1): Standard 1,409 (48.5%) / 380; Custom 489 (16.8%) / 344;
---           Mapped 1,898 (65.3%) / 724; Designated-unmapped 106 (3.6%);
---           Not designated 902 (31.0%); Total 2,906.
+-- Expected (v1.4): Standard 1,479 (50.9%) / 391; Custom 488 (16.8%) / 343;
+--           Mapped 1,967 (67.7%) / 734; Designated-unmapped 109 (3.8%);
+--           Not designated 830 (28.6%); Total 2,906.
 
 -- 2. Elements and distinct concepts by vocabulary ----------------------------------
 SELECT mapping_category,
