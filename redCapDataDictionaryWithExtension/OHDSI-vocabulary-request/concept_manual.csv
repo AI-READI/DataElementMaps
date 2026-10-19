@@ -139,7 +139,6 @@ Somewhat serious problem,paid_scrd_3,2005200216,AIREADI,Meas Value,,Answer,,1/1/
 Serious problem,paid_scrd_4,2005200217,AIREADI,Meas Value,,Answer,,1/1/1970,,
 RxNorm (assign after visit),cmtrt,2005200220,AIREADI,Observation,survey_conduct,Survey,,1/1/1970,,
 "Unit (Record the dose unit of the dose of concomitant medication/treatment/therapy taken (e.g., mg.)).",cmdosu,2005200221,AIREADI,Observation,survey_conduct,Clinical Observation,,1/1/1970,,
-Puff,cmdosu_13,2005200222,AIREADI,Device,,Physical Object,,1/1/1970,,
 Less than 1 time,diet1_0,2005200238,AIREADI,Meas Value,,Answer,,1/1/1970,,
 5 or more,diet2_0,2005200240,AIREADI,Meas Value,,Answer,,1/1/1970,,
 2 or less,diet2_2,2005200241,AIREADI,Meas Value,,Answer,,1/1/1970,,

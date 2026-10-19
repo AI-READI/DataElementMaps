@@ -10,9 +10,9 @@ Generated from `_ai_readi_redcap_value_set_mapping_common.csv` with `generate_li
 
 ## Row counts
 
-- Source rows: 2,004
-- Rows included in SSSOM TSV: 1,932
-- Rows excluded as incomplete for SSSOM: 72
+- Source rows: 2,076
+- Rows included in SSSOM TSV: 2,001
+- Rows excluded as incomplete for SSSOM: 75
 
 ## Identifier conventions
 
