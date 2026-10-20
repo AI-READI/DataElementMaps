@@ -11,7 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
-## [v1.5] - 2026-10-19
+## [v1.5] - 2026-10-19 - 10.5281/zenodo.23488128
 
 Corrections from a full review of all 2,076 rows of v1.4 (the first review of the whole file; earlier releases reviewed only the rows in each batch of changes). Target concepts change on 10 rows, qualifier concepts on 2 rows and field names on 5 answer rows, so the ETL must be re-run to apply these changes. All edits are in place: no rows are added or removed, so every line number is the same as in v1.4. Concept IDs and names for the new standard concepts were confirmed in the deployed OMOP vocabulary (Databricks `omop_vocab`).
 
