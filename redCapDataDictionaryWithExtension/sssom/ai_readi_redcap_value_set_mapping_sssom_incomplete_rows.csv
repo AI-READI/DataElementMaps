@@ -12,6 +12,7 @@ Yes,Yes,open-source,No,bcva,radio,viaossph_m,,Answer,1,viaossph_m_1,+ (positive)
 Yes,Yes,open-source,No,bcva,radio,viaossph_m,,Answer,0,viaossph_m_0,- (negative) modifier for viaossph,,,,,,,,,,,,,,
 Yes,Yes,open-source,No,demographics_survey,text,,1111,Question,brthyy,,Year (e.g. 1967),0,,No matching concept,,,,,,,,,,,
 Yes,Yes,open-source,,device_return,checkbox,send_satisfaction_survey,,Answer,1,send_satisfaction_survey_1,Checking the box and saving the form schedules a survey invitation to be sent to the participant in 1 hour,,,,,,,,,,,,,,
+Yes,Yes,protected,No,current_medications,dropdown,,1471,Question,cmroute,,"How is it taken? (ex. oral, cream, injection, etc.)",0,,,,,,,,,,No matching concept; answers populate DRUG_EXPOSURE.route_concept_id,,,
 Yes,Yes,open-source,No,imported,text,import_collection_dt_edta,2911,Question,,,EDTA Plasma,,,EDTA Plasma - Date Collection,,,,,,,,,,,
 Yes,Yes,open-source,No,imported,text,import_process_dt_edta,2912,Question,,,EDTA Plasma,,,EDTA Plasma - Date Processed,,,,,,,,,,,
 Yes,Yes,open-source,No,imported,notes,import_notes_edta,2913,Question,,,EDTA Plasma,,,EDTA Plasma Notes,,,,,,,,,,,
