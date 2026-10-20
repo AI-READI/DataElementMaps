@@ -25,8 +25,8 @@
 - Meas Value: 1231
 - Observation: 439
 - Unit: 145
-- Measurement: 115
-- [blank]: 75
+- Measurement: 114
+- [blank]: 76
 - Condition: 32
 - Procedure: 22
 - Route: 12
@@ -34,11 +34,11 @@
 - Device: 1
 
 ### TARGET_VOCABULARY_ID
-- LOINC: 1185
-- AIREADI: 423
+- LOINC: 1183
+- AIREADI: 422
 - UCUM: 145
-- SNOMED: 139
-- [blank]: 75
+- SNOMED: 141
+- [blank]: 76
 - AIREADI-Vision: 69
 - AIREADI-MOCA: 30
 - PPI: 5
@@ -46,12 +46,12 @@
 - OMOP Extension: 1
 
 ### PREDICATE_ID
-- skos:exactMatch: 1730
-- skos:closeMatch: 269
-- [blank]: 75
+- skos:exactMatch: 1734
+- skos:closeMatch: 264
+- [blank]: 76
 - skos:relatedMatch: 2
 
 ### Extension_Needed
-- No: 1553
-- Yes: 522
+- No: 1554
+- Yes: 521
 - [blank]: 1

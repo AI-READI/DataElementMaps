@@ -11,6 +11,61 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [v1.5] - 2026-10-19
+
+Corrections from a full review of all 2,076 rows of v1.4 (the first review of the whole file; earlier releases reviewed only the rows in each batch of changes). Target concepts change on 10 rows, qualifier concepts on 2 rows and field names on 5 answer rows, so the ETL must be re-run to apply these changes. All edits are in place: no rows are added or removed, so every line number is the same as in v1.4. Concept IDs and names for the new standard concepts were confirmed in the deployed OMOP vocabulary (Databricks `omop_vocab`).
+
+### Changed — target concept
+
+- Health history, "Has a doctor or other healthcare professional ever told you that you have/had…": two "Yes" answers moved from AI-READI custom concepts to standard SNOMED conditions, so standard OHDSI cohorts find these participants. As in v1.3, the matching question row's `MODIFIER`, `qualifier_concept_id` and `qualifier_source_value` change with the answer, so OBSERVATION and CONDITION_OCCURRENCE carry the same concept.
+  - `mhoccur_strk` "Stroke" (answer line 340, question line 293): custom 2005200628 → 381316 Cerebrovascular accident (SNOMED 230690007), exactMatch 1.
+  - `mhoccur_rnl` "Kidney problems" (answer line 392, question line 310): custom 2005200017 → 198124 Kidney disease (SNOMED 90708001), closeMatch 0.75. "Kidney problems" is a lay umbrella term, so the match is to the broad parent, as for `mhoccur_ua` in v1.3.
+  - Custom concepts 2005200628 and 2005200017 are no longer referenced but are kept in `concept_manual.csv` (IDs are not reused).
+- `susmkdosfr` "31-40 (up to 2 packs)" (line 1923), answer to "On average how many cigarettes do/did you usually smoke in a day?": 45884478 *31 or more (3 points)* (LOINC LA15915-4, closeMatch 1) → new AI-READI custom concept **2005200636** *31-40 (up to 2 packs)*, exactMatch 1. The LOINC answer means 31 or more, but the map used it only for 31–40 while 41–50 and >50 use custom concepts 2005200194 and 2005200195, so a query on 45884478 missed the heaviest smokers. In the current OMOP survey data this affects 41 participants (31–40); 18 more are in the 41–50 and >50 ranges.
+- `cm_asp`, `cm_act`, `cm_ibp`, `cm_ant`, `cm_dcg`, `cm_slp` answer "A few days (<1 day/week)" (lines 690, 697, 704, 711, 718, 725), answers to "Have you taken [aspirin, acetaminophen, ibuprofen, antihistamines, decongestants, sleeping pills] in the past 2 weeks?": 45884557 *Less than a day* (LOINC LA14482-6, a duration answer, closeMatch 0.75) → 36210209 *Less than once a week* (LOINC LA27722-0, a frequency answer), exactMatch 1.
+- `cmroute` question "How is it taken? (ex. oral, cream, injection, etc.)" (line 331, protected field): 44786711 *Dose form – RxNorm RXCUI of Medication* (LOINC 74054-8, closeMatch 0.75) → 0, with `MODIFIER` "No matching concept; answers populate DRUG_EXPOSURE.route_concept_id". The question asks for a route, not a dose form; since v1.4 the answers map to SNOMED Route concepts.
+
+### Fixed — answer field names
+
+Two answer sets used a `FIELD_ID` that does not exist in REDCap, so the ETL could not link those answers to their question and wrote `value_as_concept_id` = 0. Confirmed in the current OMOP survey data.
+- `pdrx9` "On a scale of 1-6, how stressful was this for you?" (racial/ethnic discrimination survey; question line 1052): answers on lines 1149–1151 (1 "Not at all stressful", 6 "Extremely stressful", 777 "Prefer not to say") had `FIELD_ID` `pxrd9` → `pdrx9` (`SRC_CODE_ID` `pxrd9_1` → `pdrx9_1`, etc.). The REDCap field name is `pdrx9`. All 1,896 `pdrx9` rows currently have concept 0.
+- `pxne9` (neighborhood environment survey): answers on lines 994–995 (555 "Don't know/Not sure", 777 "Prefer not to say") had `FIELD_ID` `pxne9_` → `pxne9` (`SRC_CODE_ID` `pxne9__555` → `pxne9_555`, etc.). 71 `pxne9` rows currently have concept 0.
+
+### Added
+
+- AI-READI custom concept 2005200636 "31-40 (up to 2 packs)" (Meas Value, Answer) in `OHDSI-vocabulary-request/concept_manual.csv` and `AI-READI-Vocabulary/concept_manual_AIREADI.csv` (now 334 concepts; 418 in total), with a broadMatch to 45884478 *31 or more (3 points)* in `concept_relationship_manual.csv`.
+- Release audit scripts in `redCapDataDictionaryWithExtension/scripts/`, to run before every release:
+  - `audit_concept_map.py`: structural checks (custom targets present in `concept_manual.csv` with matching name and domain; one name, domain, vocabulary and code per concept ID; standard flags; predicate and confidence rules; duplicate keys; hidden spaces; custom Condition targets; answer rows whose `FIELD_ID` matches no question row) and review lists (answers whose text differs from the target name; questions mapped to standard concepts; "Other" rows). Writes a Markdown report. Runs on the CSV (with line numbers) or, in Databricks, on the loaded tables with `run_audit_table()`. Standard library only.
+  - `validate_concept_map_vocab.sql` (Databricks): checks every target, value and qualifier concept against `omop_vocab` (exists, standard, valid; name, domain, vocabulary and code match; unit and route domains), the same structural checks on the loaded table, and lookups.
+
+### Changed — metadata
+
+- `PREDICATE_ID`/`CONFIDENCE` for the "Other (please specify)" questions `scrsexot` (line 20) and `ethnicot` (line 22), exactMatch 1, and `raceot` (line 25), closeMatch 1 → closeMatch 0.75, matching `cl_maristatot` (line 45, changed in v1.3.1). A free-text "other" field is not the question itself.
+
+### Fixed
+
+- `TARGET_CONCEPT_CODE` 118575009 removed from 32 survey timestamp rows mapped to custom concepts 2005200558 (Survey Started Timestamp) and 2005200559 (Survey Completed Timestamp); custom concepts have no code, and 2 rows (931, 932) were already blank.
+- Hidden characters: leading space removed from `MODIFIER` on lines 868 and 869 (`paate_6hr`, " 6 hours | 4048382" → "6 hours | 4048382"). The v1.3.1 clean-up removed non-breaking spaces but did not check `MODIFIER` for ordinary leading spaces.
+- `AI-READI-Vocabulary/README.md`: lists the retirement of 2005200222 "Puff" (v1.4, not recorded there in v1.4) and the addition of 2005200636.
+- `codemeta.json`: `dateModified` updated (was 2026-10-16).
+
+### Regenerated
+
+- map2omop (2,075 rows) and open-source public (1,966) versions, SSSOM (2,000 rows; 76 incomplete, +1 for `cmroute` → 0) and LinkML from the v1.5 common file. `unit_concept_lookup.csv` (110 rows) and `medication_route_lookup.csv` (26 rows) checked against the map: unchanged.
+- Counts (`run_counts.py`): standard 1,479 (391 concepts); custom 487 (342); mapped 1,966 (733); designated but unmapped 110. Expected values in `count_concept_map.sql` updated to v1.5.
+
+### Reviewed and not changed
+
+- `dmlpor` question (line 147, *Able to control portion size*, closeMatch 0.75): describes ability rather than approach, but no better standard concept exists and the answers are exact custom concepts.
+- `moca_total_score` (line 647, *Montreal Cognitive Assessment version 8.1*): the study used MoCA 8.1.
+- Custom "Other heart issues" (337), "Circulation problems" (343) and "Elevated A1C levels" (1869): no single standard concept covers these grouped questions; elevated A1C to be reviewed again.
+- `susmkdosfr` question (line 1888, 40769208 *How many of these do you smoke per day [#] [PhenX]*, LOINC 66548-9): 63640-7 *How many cigarettes per day do, or did, you smoke* (40766364) matches the wording and owns the 21–30 answer list, but it is a nominal (range) question, while most AI-READI answers are counts from 1 to 20, which suit the quantitative 66548-9. Kept.
+- `pxrd52`/`pxrd53` "How different would your life be now…" (lines 1390–1402): the 6-point answers map to three LOINC answers (*About the same*, *Slight change*, *Major change*), closeMatch 0.75. Kept: the current OMOP data keeps the exact answer code (1–6) in `value_as_number`, so no detail is lost.
+
+### Not yet included
+
+- CBC method-specific LOINC codes (hematocrit 20570-8 *by calculation* vs 4544-3 *by Automated count*): waiting on the performing labs.
+
 ## [v1.4] - 2026-10-19
 
 Adds unit mappings and corrects medication route and dose-unit answers. Target concepts change on 18 rows, source codes on 4 rows, and 72 rows are added, so the ETL must be re-run to apply these changes. All new rows are appended at the end of the file (lines 2006–2077), so every existing row keeps its v1.3.1 line number. Unit rows are matched by `FIELD_ID` (e.g. `import_potassium_u`) or by the unit text in `SRC_CODE`, not by position.

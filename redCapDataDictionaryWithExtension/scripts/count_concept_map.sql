@@ -103,8 +103,8 @@ FROM rows
 ORDER BY CASE category
            WHEN 'Standard' THEN 1 WHEN 'Custom' THEN 2 WHEN 'Mapped total' THEN 3
            WHEN 'Designated but unmapped' THEN 4 WHEN 'Not designated' THEN 5 ELSE 6 END;
--- Expected (v1.4): Standard 1,479 (50.9%) / 391; Custom 488 (16.8%) / 343;
---           Mapped 1,967 (67.7%) / 734; Designated-unmapped 109 (3.8%);
+-- Expected (v1.5): Standard 1,479 (50.9%) / 391; Custom 487 (16.8%) / 342;
+--           Mapped 1,966 (67.7%) / 733; Designated-unmapped 110 (3.8%);
 --           Not designated 830 (28.6%); Total 2,906.
 
 -- 2. Elements and distinct concepts by vocabulary ----------------------------------
@@ -116,8 +116,8 @@ FROM mapping_classified
 WHERE mapping_category IN ('Standard','Custom')
 GROUP BY mapping_category, TARGET_VOCABULARY_ID
 ORDER BY mapping_category DESC, elements DESC;
--- Expected (v1.1): LOINC 1,199/284; SNOMED 131/65; UCUM 69/23; PPI 5/5; Ethnicity 4/2;
---           OMOP Extension 1/1; AIREADI 390/267; AIREADI-Vision 69/47; AIREADI-MOCA 30/30.
+-- Expected (v1.5): LOINC 1,183/271; UCUM 145/37; SNOMED 141/75; PPI 5/5; Ethnicity 4/2;
+--           OMOP Extension 1/1; AIREADI 388/265; AIREADI-Vision 69/47; AIREADI-MOCA 30/30.
 
 -- 3. Designated-but-unmapped breakdown -------------------------------------------------
 SELECT unmapped_reason, COUNT(*) AS n
@@ -125,9 +125,9 @@ FROM mapping_classified
 WHERE mapping_category = 'Designated but unmapped'
 GROUP BY unmapped_reason
 ORDER BY n DESC;
--- Expected (v1.1): reference range 46; survey timestamp 34; specimen handling 12;
---           BCVA 10; no matching concept 2; REDCap administrative 1; MoCA paper flag 1
---           (total 106).
+-- Expected (v1.5): reference range 46; survey timestamp 34; specimen handling 12;
+--           BCVA 10; no matching concept 6; REDCap administrative 1; MoCA paper flag 1
+--           (total 110).
 
 -- 4. Confidence and SKOS predicate distribution -----------------------------------------
 SELECT mapping_category,
@@ -138,9 +138,9 @@ FROM mapping_classified
 WHERE mapping_category IN ('Standard','Custom')
 GROUP BY mapping_category, PREDICATE_ID, CONFIDENCE
 ORDER BY mapping_category DESC, PREDICATE_ID, CONFIDENCE DESC;
--- Expected (v1.1, standard): exact 1,172; close 235; related 2;
---                      confidence 1.0 = 1,323; 0.75 = 85; 0.5 = 1.
--- Expected (v1.1, custom):   all 489 exact match at confidence 1.0.
+-- Expected (v1.5, standard): exact 1,241; close 236 (155 at 1, 81 at 0.75); related 2;
+--                      confidence 1 = 1,396; 0.75 = 82; 0.5 = 1.
+-- Expected (v1.5, custom):   all 487 exact match at confidence 1.
 
 -- 5. Laterality qualifiers ---------------------------------------------------------------
 SELECT qualifier_concept_id, qualifier_source_value, COUNT(*) AS n
