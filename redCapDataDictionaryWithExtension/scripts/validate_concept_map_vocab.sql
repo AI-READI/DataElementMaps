@@ -229,4 +229,5 @@ SELECT a.FORM_NAME, a.FIELD_ID, a.SRC_CODE, a.SRC_CD_DESCRIPTION, a.tid
 FROM cmap a
 LEFT JOIN cmap q ON TRIM(q.temp_Question_or_Answer) = 'Question' AND TRIM(CAST(q.SRC_CODE AS STRING)) = TRIM(a.FIELD_ID)
 WHERE TRIM(a.temp_Question_or_Answer) = 'Answer' AND q.SRC_CODE IS NULL
+  AND TRIM(CAST(a.Map_to_OMOP AS STRING)) = 'Yes'
 ORDER BY a.FIELD_ID, a.SRC_CODE;

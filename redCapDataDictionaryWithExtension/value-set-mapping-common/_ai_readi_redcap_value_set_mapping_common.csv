@@ -274,8 +274,8 @@ Yes,Yes,open-source,Yes,driving_record,radio,dri2,2939,Answer,3,dri2_3,"10,001 t
 Yes,Yes,open-source,Yes,driving_record,radio,dri2,2940,Answer,4,dri2_4,"15,001 to 20,000 miles",2005200274,2005200274,"15,001 to 20,000 miles",Meas Value,AIREADI,Answer,,S,skos:exactMatch,1,,,,
 Yes,Yes,open-source,Yes,driving_record,radio,dri2,2941,Answer,5,dri2_5,"More than 20,000 miles",2005200275,2005200275,"More than 20,000 miles",Meas Value,AIREADI,Answer,,S,skos:exactMatch,1,,,,
 Yes,Yes,open-source,No,driving_record,radio,dri2,2942,Answer,99,dri2_99,Don't know,45876636,,Don't know,Meas Value,LOINC,Answer,LA12688-0,S,skos:exactMatch,1,,,,
-Yes,Yes,open-source,No,driving_record,radio,dri3,2943,Answer,1,dri3_1,Yes,45877994,,Yes,Meas Value,LOINC,Answer,LA33-6,S,skos:exactMatch,1,,,,
-Yes,Yes,open-source,No,driving_record,radio,dri3,2944,Answer,0,dri3_0,No,45878245,,No,Meas Value,LOINC,Answer,LA32-8,S,skos:exactMatch,1,,,,
+No,Yes,open-source,No,driving_record,radio,dri3,2943,Answer,1,dri3_1,Yes,45877994,,Yes,Meas Value,LOINC,Answer,LA33-6,S,skos:exactMatch,1,,,,
+No,Yes,open-source,No,driving_record,radio,dri3,2944,Answer,0,dri3_0,No,45878245,,No,Meas Value,LOINC,Answer,LA32-8,S,skos:exactMatch,1,,,,
 Yes,Yes,open-source,No,ecg,text,,1629,Question,rtfncmpdattim,,Date & time Fundus - Edion performed,4160030,,Performed,Observation,SNOMED,Qualifier Value,398166005,S,skos:closeMatch,0.75,Date & time Fundus - Edion performed,,2005200595,Fundus - Edion
 Yes,Yes,open-source,No,ecg,text,,1633,Question,rtfnocmpdattim,,Date & time Fundus - Optomed performed,4160030,,Performed,Observation,SNOMED,Qualifier Value,398166005,S,skos:closeMatch,0.75,Date & time Fundus - Optomed performed,,2005200596,Fundus - Optomed
 Yes,Yes,open-source,No,ecg,text,,1637,Question,rthracmpdattim,,Date & time OCT & OCTA - Spectralis HRA OCT performed,4160030,,Performed,Observation,SNOMED,Qualifier Value,398166005,S,skos:closeMatch,0.75,Date & time OCT & OCTA - Spectralis HRA OCT performed,,2005200597,OCT & OCTA - Spectralis HRA OCT
@@ -551,7 +551,7 @@ Yes,Yes,open-source,No,imported,text,import_creatinine_min,2958,Question,,,COMP,
 Yes,Yes,open-source,No,imported,text,import_creatinine_min2,,Question,,,COMP,,,Creatinine min,,,,,,,,,,,
 Yes,Yes,open-source,No,imported,text,import_creatinine_max,2959,Question,,,COMP,,,Creatinine max,,,,,,,,,,,
 Yes,Yes,open-source,No,imported,text,import_creatinine_max2,,Question,,,COMP,,,Creatinine max,,,,,,,,,,,
-Yes,Yes,open-source,No,imported,text,import_buncreatinineratio,2960,Question,,BUN/Creatinine ratio,BUN/Creatinine ratio,4112223,,BUN/Creatinine ratio,Measurement,SNOMED,Procedure,18207002,S,skos:exactMatch,1,,,,
+Yes,Yes,open-source,No,imported,text,import_buncreatinineratio,2960,Question,,BUN/Creatinine ratio,BUN/Creatinine ratio,3033837,,Creatinine/Urea nitrogen [Mass Ratio] in Serum or Plasma,Measurement,LOINC,Lab Test,31045-8,S,skos:exactMatch,1,Stored value is creatinine/BUN (REDCap calculation inverted; field label says BUN/Creatinine); remap to 3018311 (LOINC 3097-3) when the REDCap formula and values are corrected,,,
 Yes,Yes,open-source,No,imported,text,import_sodium,2961,Question,2951-2,Sodium,Sodium [Moles/volume] in Serum or Plasma,3019550,,Sodium [Moles/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,2951-2,S,skos:exactMatch,1,,,,
 Yes,Yes,open-source,No,imported,text,import_sodium_u,2962,Unit,mEq/L,import_sodium_u,milliequivalent per liter,9557,,milliequivalent per liter,Unit,UCUM,Unit,10*-3.eq/L,S,skos:exactMatch,1,,,,
 Yes,Yes,open-source,No,imported,text,import_sodium_min,2963,Question,,,COMP,,,Sodium min,,,,,,,,,,,
@@ -581,7 +581,7 @@ Yes,Yes,open-source,No,imported,text,import_albumin_u,2986,Unit,g/dL,import_albu
 Yes,Yes,open-source,No,imported,text,import_albumin_min,2987,Question,,,COMP,,,Albumin min,,,,,,,,,,,
 Yes,Yes,open-source,No,imported,text,import_albumin_max,2988,Question,,,COMP,,,Albumin max,,,,,,,,,,,
 Yes,Yes,open-source,No,imported,text,import_globulin_total_norc,2989,Question,2336-6,"Globulin, total (calculated field)",Globulin [Mass/volume] in Serum,3021886,,Globulin [Mass/volume] in Serum,Measurement,LOINC,Lab Test,2336-6,S,skos:exactMatch,1,,,,
-Yes,Yes,open-source,No,imported,text,import_ag_ratio,2990,Question,,A/G Ratio (calculated field),Albumin/Globulin ratio,4288601,,Albumin/Globulin ratio,Measurement,SNOMED,Procedure,687005,S,skos:exactMatch,1,,,,
+Yes,Yes,open-source,No,imported,text,import_ag_ratio,2990,Question,,A/G Ratio (calculated field),Albumin/Globulin ratio,3020509,,Albumin/Globulin [Mass Ratio] in Serum or Plasma,Measurement,LOINC,Lab Test,1759-0,S,skos:exactMatch,1,,,,
 Yes,Yes,open-source,No,imported,text,import_bilirubin_total,2991,Question,1975-2,"Bilirubin, Total",Bilirubin.total [Mass/volume] in Serum or Plasma,3024128,,Bilirubin.total [Mass/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,1975-2,S,skos:exactMatch,1,,,,
 Yes,Yes,open-source,No,imported,text,import_alkaline_phosphatase,2992,Question,6768-6,Alkaline Phosphatase,Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma,3035995,,Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma,Measurement,LOINC,Lab Test,6768-6,S,skos:exactMatch,1,,,,
 Yes,Yes,open-source,No,imported,text,import_alkaline_phosphatase_u,2993,Unit,IU/L,import_alkaline_phosphatase_u,international unit per liter,8923,,international unit per liter,Unit,UCUM,Unit,[iU]/L,S,skos:exactMatch,1,,,,
@@ -727,8 +727,8 @@ Yes,Yes,open-source,No,meds_assessment,radio,cm_slp,2987,Answer,3,cm_slp_3,Some 
 Yes,Yes,open-source,No,meds_assessment,radio,cm_slp,2988,Answer,4,cm_slp_4,Most days (3-4 days/week),1620862,,Most days (3-4 days),Meas Value,LOINC,Answer,LA31670-5,S,skos:closeMatch,1,,,,
 Yes,Yes,open-source,No,meds_assessment,radio,cm_slp,2989,Answer,99,cm_slp_99,Don't know/not sure,45876636,,Don't know,Meas Value,LOINC,Answer,LA12688-0,S,skos:exactMatch,1,,,,
 Yes,Yes,open-source,No,meds_assessment,radio,cm_slp,2990,Answer,777,cm_slp_777,Decline to answer,36311156,,Prefer not to say,Meas Value,LOINC,Answer,LA28803-7,S,skos:exactMatch,1,,,,
-Yes,Yes,open-source,No,meds_assessment,radio,cmotyn,2991,Answer,1,cmotyn_1,Yes,45877994,,Yes,Meas Value,LOINC,Answer,LA33-6,S,skos:exactMatch,1,,,,
-Yes,Yes,open-source,No,meds_assessment,radio,cmotyn,2992,Answer,0,cmotyn_0,No,45878245,,No,Meas Value,LOINC,Answer,LA32-8,S,skos:exactMatch,1,,,,
+No,Yes,open-source,No,meds_assessment,radio,cmotyn,2991,Answer,1,cmotyn_1,Yes,45877994,,Yes,Meas Value,LOINC,Answer,LA33-6,S,skos:exactMatch,1,,,,
+No,Yes,open-source,No,meds_assessment,radio,cmotyn,2992,Answer,0,cmotyn_0,No,45878245,,No,Meas Value,LOINC,Answer,LA32-8,S,skos:exactMatch,1,,,,
 Yes,Yes,open-source,No,mesopic_mars,text,,1557,Question,mlcscmpdat,,Date procedure performed,4160030,,Performed,Observation,SNOMED,Qualifier Value,398166005,S,skos:closeMatch,0.75,Date procedure performed,,4322976,Procedure
 Yes,Yes,open-source,Yes,mesopic_mars,text,,1570,Question,mlcsodfcl,,OD: Value of final correct letter,2005200486,2005200486,"OD: Value of final correct letter - Mesopic, right eye",Measurement,AIREADI-Vision,Measurement,,S,skos:exactMatch,1,right,,45876703,Right eye
 Yes,Yes,open-source,Yes,mesopic_mars,text,,1571,Question,mlcsodmiss,,OD: Number of misses prior to stopping,2005200487,2005200487,"OD: Number of misses prior to stopping - Mesopic, right eye",Measurement,AIREADI-Vision,Measurement,,S,skos:exactMatch,1,right,,45876703,Right eye
@@ -855,8 +855,8 @@ Yes,Yes,open-source,No,physical_assessment,text,,1477,Question,pacmpdat,,Date As
 Yes,Yes,open-source,Yes,physical_assessment,text,,1481,Question,paate,,How many hours since you last ate? (number of hours),2005200151,2005200151,How many hours since you last ate? (number of hours),Observation,AIREADI,Survey,,S,skos:exactMatch,1,,,,
 Yes,Yes,open-source,No,physical_assessment,text,,1482,Question,height_vsorres,,Height (cm),3036277,,Body height,Measurement,LOINC,Clinical Observation,8302-2,S,skos:exactMatch,1,,,,
 Yes,Yes,open-source,No,physical_assessment,text,,1483,Question,weight_vsorres,,Weight (kilograms),3025315,,Body weight,Measurement,LOINC,Clinical Observation,29463-7,S,skos:exactMatch,1,,,,
-Yes,Yes,open-source,No,physical_assessment,calc,,1484,Question,bmi_vsorres,,BMI,4245997,,Body mass index,Measurement,SNOMED,Observable Entity,60621009,S,skos:exactMatch,1,,,,
-Yes,Yes,open-source,No,physical_assessment,text,,1485,Question,waist_vsorres,,Waist Circumference (cm),4172830,,Waist circumference,Measurement,SNOMED,Observable Entity,276361009,S,skos:exactMatch,1,,,,
+Yes,Yes,open-source,No,physical_assessment,calc,,1484,Question,bmi_vsorres,,BMI,3038553,,Body mass index (BMI) [Ratio],Measurement,LOINC,Clinical Observation,39156-5,S,skos:exactMatch,1,,,,
+Yes,Yes,open-source,No,physical_assessment,text,,1485,Question,waist_vsorres,,Waist Circumference (cm),3016258,,Waist Circumference at umbilicus by Tape measure,Measurement,LOINC,Clinical Observation,8280-0,S,skos:closeMatch,1,,,,
 Yes,Yes,open-source,No,physical_assessment,text,,1486,Question,hip_vsorres,,Hip Circumference (cm),4111665,,Hip circumference,Measurement,SNOMED,Observable Entity,284472007,S,skos:exactMatch,1,,,,
 Yes,Yes,open-source,No,physical_assessment,calc,,1487,Question,whr_vsorres,,Waist to Hip Ratio (WHR),4087501,,Waist/hip ratio,Measurement,SNOMED,Observable Entity,248367009,S,skos:exactMatch,1,,,,
 Yes,Yes,open-source,No,physical_assessment,text,,1488,Question,bp1_sysbp_vsorres,,Systolic (mmHg),3004249,,Systolic blood pressure,Measurement,LOINC,Clinical Observation,8480-6,S,skos:exactMatch,1,,,,
@@ -2075,3 +2075,6 @@ Yes,Yes,open-source,No,imported,text,moca_orientation_u,,Unit,score,moca_orienta
 Yes,Yes,open-source,No,imported,text,moca_orientation_time_u,,Unit,s,moca_orientation_time_u,second,8555,,second,Unit,UCUM,Unit,s,S,skos:exactMatch,1,fixed unit; no REDCap unit field,,,
 Yes,Yes,open-source,No,imported,text,moca_combined_mis_score_u,,Unit,score,moca_combined_mis_score_u,score,44777566,,score,Unit,UCUM,Unit,[score],S,skos:exactMatch,1,fixed unit; no REDCap unit field,,,
 Yes,Yes,open-source,No,imported,text,moca_total_score_u,,Unit,score,moca_total_score_u,score,44777566,,score,Unit,UCUM,Unit,[score],S,skos:exactMatch,1,fixed unit; no REDCap unit field,,,
+Yes,Yes,open-source,No,imported,text,import_ag_ratio_u,,Unit,ratio,import_ag_ratio_u,ratio,8523,,ratio,Unit,UCUM,Unit,{ratio},S,skos:exactMatch,1,fixed unit; no REDCap unit field,,,
+Yes,Yes,open-source,No,physical_assessment,text,whr_vsorres_u,,Unit,ratio,whr_vsorres_u,ratio,8523,,ratio,Unit,UCUM,Unit,{ratio},S,skos:exactMatch,1,fixed unit; no REDCap unit field,,,
+Yes,Yes,open-source,No,imported,text,import_buncreatinineratio_u,,Unit,ratio,import_buncreatinineratio_u,ratio,8523,,ratio,Unit,UCUM,Unit,{ratio},S,skos:exactMatch,1,fixed unit; no REDCap unit field,,,

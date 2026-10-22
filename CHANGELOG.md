@@ -11,6 +11,45 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [v1.6] - 2026-10-22
+
+Lab and vital-sign measurements moved from SNOMED to standard LOINC concepts, unit rows added for the three ratio fields, and the leftover answers of two removed questions excluded. Target concepts change on 4 rows, `Map_to_OMOP` on 4 rows, and 3 unit rows are appended, so the ETL must be re-run to apply these changes. Edits to existing rows are in place and the new rows are appended at the end (lines 2078–2080), so every existing line number is the same as in v1.5. Concept IDs and names were confirmed in the deployed OMOP vocabulary (Databricks `omop_vocab`).
+
+### Changed — target concept (SNOMED → LOINC)
+
+- `import_ag_ratio` "A/G Ratio (calculated field)" (line 584): 4288601 *Albumin/Globulin ratio* (SNOMED 687005) → 3020509 *Albumin/Globulin [Mass Ratio] in Serum or Plasma* (LOINC 1759-0, Lab Test), exactMatch 1. Every other imported lab already maps to a LOINC lab test. Current OMOP data: 3,984 values, median 1.72.
+- `import_buncreatinineratio` "BUN/Creatinine ratio" (line 554): 4112223 *BUN/Creatinine ratio* (SNOMED 18207002) → **3033837 *Creatinine/Urea nitrogen [Mass Ratio] in Serum or Plasma*** (LOINC 31045-8, Lab Test), exactMatch 1. The REDCap calculated field stores **creatinine ÷ BUN**, the inverse of its label: compared with each person's own BUN and creatinine on the same date, all 3,981 values in the current OMOP data match creatinine ÷ BUN (median 0.053; BUN ÷ creatinine would be 18.75). The row is mapped to what is stored, with `MODIFIER` "Stored value is creatinine/BUN (REDCap calculation inverted; field label says BUN/Creatinine); remap to 3018311 (LOINC 3097-3) when the REDCap formula and values are corrected". `SRC_CD_DESCRIPTION` keeps the REDCap label. The data team has been asked to correct the formula.
+- `bmi_vsorres` "BMI" (line 858): 4245997 *Body mass index* (SNOMED 60621009) → 3038553 *Body mass index (BMI) [Ratio]* (LOINC 39156-5), exactMatch 1, the standard BMI concept used in OHDSI phenotypes.
+- `waist_vsorres` "Waist Circumference (cm)" (line 859): 4172830 *Waist circumference* (SNOMED 276361009) → 3016258 *Waist Circumference at umbilicus by Tape measure* (LOINC 8280-0), closeMatch 1. Measurement at the umbilicus with a tape measure is accepted for AI-READI; closeMatch because the site is not stated on the form.
+- Kept on SNOMED: hip circumference (line 860; LOINC has only a protocol term, 62409-8) and waist/hip ratio (line 861; no LOINC term).
+
+### Added — units
+
+- Fixed-unit rows for the three ratio fields, same format as the v1.4 fixed-unit rows (`MODIFIER` "fixed unit; no REDCap unit field"): `import_ag_ratio_u` (line 2078), `whr_vsorres_u` (line 2079) and `import_buncreatinineratio_u` (line 2080) → 8523 *ratio* (UCUM `{ratio}`). A ratio of two values in the same unit is dimensionless; the unit is the same whichever way the BUN/creatinine ratio is calculated. v1.4 had left these fields without a unit.
+- `unit_concept_lookup.csv` (and `01_create_unit_lookup.sql`): 113 rows (field 88, string 25), up from 110; row counts updated in the scripts' README, USAGE and SQL comments.
+
+### Changed — Map_to_OMOP
+
+- `dri3` "Driver's License photocopied" answers (lines 277–278) and `cmotyn` "Are there any other medications that you are currently taking that are not included here?" answers (lines 730–731): `Map_to_OMOP` Yes → No. In the master REDCap dictionary the `dri3` question was deleted (6/27/2023) and the `cmotyn` question was excluded from mapping (4/25/2024), but their Yes/No answer rows had been left as Yes. Neither field appears in the current OMOP survey data. map2omop and the open-source public file each lose these 4 rows.
+
+### Changed — scripts
+
+- `count_concept_map.sql`: answer rows of an excluded question (`Map_to_OMOP` = No) are reported as designated-but-unmapped with the reason "Answer to an excluded question"; expected values updated to v1.6.
+- `audit_concept_map.py` (check A8) and `validate_concept_map_vocab.sql` (check V9): answer rows already excluded (`Map_to_OMOP` = No) are no longer flagged. A8 now lists 3 rows (administrative BCVA "not done" and satisfaction-survey rows).
+
+### Regenerated
+
+- map2omop (2,074 rows) and open-source public (1,965) versions, SSSOM (2,003 rows; 76 incomplete) and LinkML (2,079 records) from the v1.6 common file. `medication_route_lookup.csv` checked against the map: unchanged.
+- Counts (`run_counts.py`): standard 1,478 (392 concepts); custom 487 (342); mapped 1,965 (734 concepts); designated but unmapped 114. The 3 added unit rows lower "not designated" from 830 to 827 against the fixed total of 2,906.
+
+### Reviewed and not changed
+
+- LDL cholesterol (lines 537–538): the unit row `import_ldl_cholesterol_u` does not follow the `<field>_u` pattern because the REDCap names differ: the data uses `import_ldl_cholesterol_calculation` (3,984 rows in the current OMOP data) and the REDCap unit field is `import_ldl_cholesterol_u`. The extra key in `unit_concept_lookup.csv` (and the UNION in `01_create_unit_lookup.sql`) is the documented exception.
+
+### Not yet included
+
+- CBC method codes: hematocrit (line 675) stays *by calculation* (20570-8, 3009542) unless the lab confirms it is measured directly (then 4544-3, 3023314); MCV, MCH, MCHC, RDW and platelets (676–680) may move to their "by Automated count" codes (3023599, 3012030, 3009744, 3019897, 3024929) once the lab confirms an automated analyzer. Waiting on the performing labs.
+
 ## [v1.5] - 2026-10-19 - 10.5281/zenodo.23488128
 
 Corrections from a full review of all 2,076 rows of v1.4 (the first review of the whole file; earlier releases reviewed only the rows in each batch of changes). Target concepts change on 10 rows, qualifier concepts on 2 rows and field names on 5 answer rows, so the ETL must be re-run to apply these changes. All edits are in place: no rows are added or removed, so every line number is the same as in v1.4. Concept IDs and names for the new standard concepts were confirmed in the deployed OMOP vocabulary (Databricks `omop_vocab`).

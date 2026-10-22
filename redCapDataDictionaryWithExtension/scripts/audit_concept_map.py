@@ -12,8 +12,8 @@ Part A - structural checks (each should report 0 rows unless noted):
   A6  Leading/trailing spaces or non-breaking spaces in key columns
   A7  Custom concept used as a Condition/answer target where a review is due
       (lists every custom Condition target; check whether a standard concept exists)
-  A8  Answer rows whose FIELD_ID matches no question row (a field-name typo stops the
-      ETL from linking the answers; e.g. pxne9_ and pxrd9 before v1.5)
+  A8  Answer rows (Map_to_OMOP = Yes) whose FIELD_ID matches no question row (a field-name
+      typo stops the ETL from linking the answers; e.g. pxne9_ and pxrd9 before v1.5)
 
 Part B - review lists (read every row; nothing here is automatically wrong):
   B1  Answer rows whose source text differs from the target concept name
@@ -218,7 +218,8 @@ def audit(rows, cm, out, label):
     # A8
     qcodes = {r["SRC_CODE"] for r in rows if r["temp_Question_or_Answer"] == "Question"}
     a8 = [(r["_ln"], r["FORM_NAME"], r["FIELD_ID"], r["SRC_CODE"], r["SRC_CD_DESCRIPTION"][:60], r["TARGET_CONCEPT_ID"])
-          for r in rows if r["temp_Question_or_Answer"] == "Answer" and r["FIELD_ID"] not in qcodes]
+          for r in rows if r["temp_Question_or_Answer"] == "Answer" and r["FIELD_ID"] not in qcodes
+          and r.get("Map_to_OMOP", "Yes") == "Yes"]  # rows already excluded (Map_to_OMOP = No) are not flagged
     sections.append(("A8 Answers whose FIELD_ID matches no question row (field-name typos; administrative fields expected)",
                      ["Line", "Form", "FIELD_ID", "SRC_CODE", "Source text", "Concept"], a8, False))
 

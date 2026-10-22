@@ -5827,7 +5827,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0276
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -5849,7 +5849,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0277
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -11627,15 +11627,17 @@ mappings:
   question_or_answer: Question
   src_code_id: BUN/Creatinine ratio
   src_cd_description: BUN/Creatinine ratio
-  target_concept_id: 4112223
-  target_concept_name: BUN/Creatinine ratio
+  target_concept_id: 3033837
+  target_concept_name: Creatinine/Urea nitrogen [Mass Ratio] in Serum or Plasma
   target_domain_id: Measurement
-  target_vocabulary_id: SNOMED
-  target_concept_class_id: Procedure
-  target_concept_code: '18207002'
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Lab Test
+  target_concept_code: 31045-8
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
+  modifier: Stored value is creatinine/BUN (REDCap calculation inverted; field label says BUN/Creatinine); remap to 3018311
+    (LOINC 3097-3) when the REDCap formula and values are corrected
 - mapping_record_id: AIREADI_MAPPING_0554
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -12146,12 +12148,12 @@ mappings:
   question_or_answer: Question
   src_code_id: A/G Ratio (calculated field)
   src_cd_description: Albumin/Globulin ratio
-  target_concept_id: 4288601
-  target_concept_name: Albumin/Globulin ratio
+  target_concept_id: 3020509
+  target_concept_name: Albumin/Globulin [Mass Ratio] in Serum or Plasma
   target_domain_id: Measurement
-  target_vocabulary_id: SNOMED
-  target_concept_class_id: Procedure
-  target_concept_code: '687005'
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Lab Test
+  target_concept_code: 1759-0
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -15019,7 +15021,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0729
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -15041,7 +15043,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0730
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -17856,12 +17858,12 @@ mappings:
   question_or_answer: Question
   src_code: bmi_vsorres
   src_cd_description: BMI
-  target_concept_id: 4245997
-  target_concept_name: Body mass index
+  target_concept_id: 3038553
+  target_concept_name: Body mass index (BMI) [Ratio]
   target_domain_id: Measurement
-  target_vocabulary_id: SNOMED
-  target_concept_class_id: Observable Entity
-  target_concept_code: '60621009'
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Clinical Observation
+  target_concept_code: 39156-5
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -17876,14 +17878,14 @@ mappings:
   question_or_answer: Question
   src_code: waist_vsorres
   src_cd_description: Waist Circumference (cm)
-  target_concept_id: 4172830
-  target_concept_name: Waist circumference
+  target_concept_id: 3016258
+  target_concept_name: Waist Circumference at umbilicus by Tape measure
   target_domain_id: Measurement
-  target_vocabulary_id: SNOMED
-  target_concept_class_id: Observable Entity
-  target_concept_code: '276361009'
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Clinical Observation
+  target_concept_code: 8280-0
   target_standard_concept: S
-  predicate_id: skos:exactMatch
+  predicate_id: skos:closeMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0859
   map_to_omop: 'Yes'
@@ -44600,6 +44602,72 @@ mappings:
   target_vocabulary_id: UCUM
   target_concept_class_id: Unit
   target_concept_code: '[score]'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2077
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: import_ag_ratio_u
+  question_or_answer: Unit
+  src_code: ratio
+  src_code_id: import_ag_ratio_u
+  src_cd_description: ratio
+  target_concept_id: 8523
+  target_concept_name: ratio
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '{ratio}'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2078
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: physical_assessment
+  field_type: text
+  field_id: whr_vsorres_u
+  question_or_answer: Unit
+  src_code: ratio
+  src_code_id: whr_vsorres_u
+  src_cd_description: ratio
+  target_concept_id: 8523
+  target_concept_name: ratio
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '{ratio}'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2079
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: import_buncreatinineratio_u
+  question_or_answer: Unit
+  src_code: ratio
+  src_code_id: import_buncreatinineratio_u
+  src_cd_description: ratio
+  target_concept_id: 8523
+  target_concept_name: ratio
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '{ratio}'
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0

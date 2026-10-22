@@ -30,7 +30,9 @@
 --     (custom concepts 2005200558 "Survey Started Timestamp" and
 --      2005200559 "Survey Completed Timestamp"); these are REDCap system
 --     metadata, not survey content, and are reported as designated-but-unmapped.
---   * Not designated (830) = REDCap data elements in the curated dictionary
+--   * Answer rows whose question was excluded or deleted (Map_to_OMOP = 'No',
+--     e.g. dri3, cmotyn since v1.6) are reported as designated-but-unmapped.
+--   * Not designated (827 in v1.6) = REDCap data elements in the curated dictionary
 --     (2,906) that are not rows in this mapping file.
 -- =============================================================================
 
@@ -63,6 +65,8 @@ SELECT
                                                                     THEN 'REDCap survey timestamp'
         WHEN TRY_CAST(TARGET_CONCEPT_ID AS BIGINT) = 0              THEN 'No matching concept'
         WHEN Map_to_OMOP <> 'Yes' AND SRC_CODE LIKE 'moca_paper%'   THEN 'MoCA paper-administration flag'
+        WHEN Map_to_OMOP <> 'Yes' AND temp_Question_or_Answer = 'Answer'
+                                                                    THEN 'Answer to an excluded question'
         WHEN NULLIF(TRIM(TARGET_CONCEPT_ID), '') IS NOT NULL         THEN NULL
         WHEN FIELD_ID LIKE 'import\_%\_min%' ESCAPE '\'
           OR FIELD_ID LIKE 'import\_%\_max%' ESCAPE '\'             THEN 'Laboratory reference range'
@@ -103,9 +107,9 @@ FROM rows
 ORDER BY CASE category
            WHEN 'Standard' THEN 1 WHEN 'Custom' THEN 2 WHEN 'Mapped total' THEN 3
            WHEN 'Designated but unmapped' THEN 4 WHEN 'Not designated' THEN 5 ELSE 6 END;
--- Expected (v1.5): Standard 1,479 (50.9%) / 391; Custom 487 (16.8%) / 342;
---           Mapped 1,966 (67.7%) / 733; Designated-unmapped 110 (3.8%);
---           Not designated 830 (28.6%); Total 2,906.
+-- Expected (v1.6): Standard 1,478 (50.9%) / 392; Custom 487 (16.8%) / 342;
+--           Mapped 1,965 (67.6%) / 734; Designated-unmapped 114 (3.9%);
+--           Not designated 827 (28.5%); Total 2,906.
 
 -- 2. Elements and distinct concepts by vocabulary ----------------------------------
 SELECT mapping_category,
@@ -116,7 +120,7 @@ FROM mapping_classified
 WHERE mapping_category IN ('Standard','Custom')
 GROUP BY mapping_category, TARGET_VOCABULARY_ID
 ORDER BY mapping_category DESC, elements DESC;
--- Expected (v1.5): LOINC 1,183/271; UCUM 145/37; SNOMED 141/75; PPI 5/5; Ethnicity 4/2;
+-- Expected (v1.6): LOINC 1,183/275; UCUM 148/38; SNOMED 137/71; PPI 5/5; Ethnicity 4/2;
 --           OMOP Extension 1/1; AIREADI 388/265; AIREADI-Vision 69/47; AIREADI-MOCA 30/30.
 
 -- 3. Designated-but-unmapped breakdown -------------------------------------------------
@@ -125,9 +129,9 @@ FROM mapping_classified
 WHERE mapping_category = 'Designated but unmapped'
 GROUP BY unmapped_reason
 ORDER BY n DESC;
--- Expected (v1.5): reference range 46; survey timestamp 34; specimen handling 12;
---           BCVA 10; no matching concept 6; REDCap administrative 1; MoCA paper flag 1
---           (total 110).
+-- Expected (v1.6): reference range 46; survey timestamp 34; specimen handling 12;
+--           BCVA 10; no matching concept 6; answer to an excluded question 4;
+--           REDCap administrative 1; MoCA paper flag 1 (total 114).
 
 -- 4. Confidence and SKOS predicate distribution -----------------------------------------
 SELECT mapping_category,
@@ -138,9 +142,9 @@ FROM mapping_classified
 WHERE mapping_category IN ('Standard','Custom')
 GROUP BY mapping_category, PREDICATE_ID, CONFIDENCE
 ORDER BY mapping_category DESC, PREDICATE_ID, CONFIDENCE DESC;
--- Expected (v1.5, standard): exact 1,241; close 236 (155 at 1, 81 at 0.75); related 2;
---                      confidence 1 = 1,396; 0.75 = 82; 0.5 = 1.
--- Expected (v1.5, custom):   all 487 exact match at confidence 1.
+-- Expected (v1.6, standard): exact 1,239; close 237 (156 at 1, 81 at 0.75); related 2;
+--                      confidence 1 = 1,395; 0.75 = 82; 0.5 = 1.
+-- Expected (v1.6, custom):   all 487 exact match at confidence 1.
 
 -- 5. Laterality qualifiers ---------------------------------------------------------------
 SELECT qualifier_concept_id, qualifier_source_value, COUNT(*) AS n
