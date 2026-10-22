@@ -16,12 +16,14 @@ field,fluency_language,44777566,score
 field,fluency_language_time,8555,s
 field,height_vsorres,8582,cm
 field,hip_vsorres,8582,cm
+field,import_ag_ratio,8523,ratio
 field,import_albumin,8713,g/dL
 field,import_alkaline_phosphatase,8923,IU/L
 field,import_alt_got,8923,IU/L
 field,import_ast_got,8923,IU/L
 field,import_bilirubin_total,8840,mg/dL
 field,import_bun,8840,mg/dL
+field,import_buncreatinineratio,8523,ratio
 field,import_c_peptide,8725,ng/L
 field,import_calcium,8840,mg/dL
 field,import_carbon_dioxide_total,9557,mEq/L
@@ -84,6 +86,7 @@ field,viaoscyl,9291,diopter
 field,viaossph,9291,diopter
 field,waist_vsorres,8582,cm
 field,weight_vsorres,9529,kilograms
+field,whr_vsorres,8523,ratio
 string,%,8554,%
 string,IU/L,8923,IU/L
 string,bpm,8541,bpm

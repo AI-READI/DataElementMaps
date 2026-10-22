@@ -4,7 +4,7 @@ How to fill `MEASUREMENT.unit_concept_id` from the AI-READI concept map: create 
 
 ## Step 1. Create the unit_lookup table (choose one)
 
-**Option A: load the ready-made file (simplest).** `unit_concept_lookup.csv` (in this folder) is the complete lookup table, 110 rows:
+**Option A: load the ready-made file (simplest).** `unit_concept_lookup.csv` (in this folder) is the complete lookup table, 113 rows:
 
 | Column | Meaning |
 |---|---|
@@ -19,7 +19,7 @@ Upload it, set the path in `01a_load_unit_concept_lookup_csv.sql`, and run it. T
 
 | key_type | lookup_key | Rows | Example |
 |---|---|---|---|
-| `field` | measurement field name | 85 | `lbscat_rbc` → 8815 (`x10E6/µL`) |
+| `field` | measurement field name | 88 | `lbscat_rbc` → 8815 (`x10E6/µL`) |
 | `string` | unit text | 25 | `mEq/L` → 9557 |
 
 Each key appears once.
@@ -61,7 +61,7 @@ f.lookup_key = TRIM(SPLIT_PART(m.measurement_source_value, ',', 1))
 | Script | Check | Expected |
 |---|---|---|
 | `05_check_no_fanout.sql` | Row count before and after the join; measurements that appear twice | Equal counts; 0 rows |
-| `06_check_units_after_etl.sql` | After the ETL re-run: units on CBC, globulin, bilirubin, physical assessment, potassium; all measurements still without a unit | No `unit_concept_id` = 0 in the first list; only unitless vision scores and ratios in the second |
+| `06_check_units_after_etl.sql` | After the ETL re-run: units on CBC, globulin, bilirubin, physical assessment, potassium; all measurements still without a unit | No `unit_concept_id` = 0 in the first list; only unitless vision scores in the second (since v1.6 the BUN/creatinine, A/G and waist/hip ratios have the unit 8523 *ratio*) |
 
 ## Example result
 

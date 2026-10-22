@@ -6,9 +6,9 @@ Scripts to fill `MEASUREMENT.unit_concept_id` from the AI-READI concept map (`..
 |---|---|
 | `USAGE.md` | **Step-by-step usage** |
 | `00_load_concept_map.sql` | Loads the mapping file as `concept_map` (only needed for option B; set the file path) |
-| `unit_concept_lookup.csv` | **The ready-made lookup table** (110 rows): load it and skip building it |
+| `unit_concept_lookup.csv` | **The ready-made lookup table** (113 rows): load it and skip building it |
 | `01a_load_unit_concept_lookup_csv.sql` | Option A: creates `unit_lookup` from `unit_concept_lookup.csv` |
-| `01_create_unit_lookup.sql` | Option B: **one query** that builds `unit_lookup` from the concept map (same 110 rows) |
+| `01_create_unit_lookup.sql` | Option B: **one query** that builds `unit_lookup` from the concept map (same 113 rows) |
 | `02_view_unit_lookup.sql` | Review `unit_lookup`: counts, field and unit-text lists, duplicate check |
 | `03_left_join_unit_lookup_template.sql` | **The LEFT JOIN** to add to the ETL (replace the placeholders) |
 | `04_example_omop_survey_measurement.sql` | The same join, ready to run on `omop_survey.measurement` |
@@ -38,7 +38,7 @@ LEFT JOIN unit_lookup u
 
 | key_type | lookup_key | Rows | Source in the concept map |
 |---|---|---|---|
-| `field` | measurement field name | 85 | Unit rows named `<field>_u`: the imported-lab unit fields (e.g. `import_potassium_u`) and the v1.4 fixed-unit rows for fields with no unit field (CBC, physical assessment, autorefractor, globulin, bilirubin, urine albumin/creatinine, MoCA scores and times). Plus `import_ldl_cholesterol_calculation`, whose unit field has a different name (`import_ldl_cholesterol_u`). |
+| `field` | measurement field name | 88 | Unit rows named `<field>_u`: the imported-lab unit fields (e.g. `import_potassium_u`) and the v1.4 fixed-unit rows for fields with no unit field (CBC, physical assessment, autorefractor, globulin, bilirubin, urine albumin/creatinine, MoCA scores and times; v1.6: the BUN/creatinine, A/G and waist/hip ratios). Plus `import_ldl_cholesterol_calculation`, whose unit field has a different name (`import_ldl_cholesterol_u`). |
 | `string` | unit text | 25 | Generic Unit rows (blank `FIELD_ID`) plus `s`, `second`, `score` |
 
 Notes:
@@ -46,7 +46,7 @@ Notes:
 - MoCA: score fields → 44777566 (score), time fields → 8555 (second).
 - Do not join on all Unit rows of the concept map by `SRC_CODE`: the same text appears in several rows (e.g. `g/dL` in 6), which would multiply measurement rows. `unit_lookup` avoids this.
 
-### key_type = 'field' (85 rows)
+### key_type = 'field' (88 rows)
 
 | lookup_key | unit_concept_id | unit_source_value |
 |---|---|---|
@@ -67,12 +67,14 @@ Notes:
 | `fluency_language_time` | 8555 | s |
 | `height_vsorres` | 8582 | cm |
 | `hip_vsorres` | 8582 | cm |
+| `import_ag_ratio` | 8523 | ratio |
 | `import_albumin` | 8713 | g/dL |
 | `import_alkaline_phosphatase` | 8923 | IU/L |
 | `import_alt_got` | 8923 | IU/L |
 | `import_ast_got` | 8923 | IU/L |
 | `import_bilirubin_total` | 8840 | mg/dL |
 | `import_bun` | 8840 | mg/dL |
+| `import_buncreatinineratio` | 8523 | ratio |
 | `import_c_peptide` | 8725 | ng/L |
 | `import_calcium` | 8840 | mg/dL |
 | `import_carbon_dioxide_total` | 9557 | mEq/L |
@@ -135,6 +137,7 @@ Notes:
 | `viaossph` | 9291 | diopter |
 | `waist_vsorres` | 8582 | cm |
 | `weight_vsorres` | 9529 | kilograms |
+| `whr_vsorres` | 8523 | ratio |
 
 ### key_type = 'string' (25 rows)
 
