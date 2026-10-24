@@ -1,7 +1,7 @@
 # AI-READI REDCap Value Set Mapping LinkML Conversion Summary
 
 - Source file: `_ai_readi_redcap_value_set_mapping_common.csv`
-- Rows converted: 2079
+- Rows converted: 2127
 - Source columns: 26
 
 ## Generated files
@@ -12,9 +12,9 @@
 ### FORM_NAME
 - px_racial_ethnic_discrimination_survey: 364
 - px_sdoh_combined_survey: 267
-- imported: 205
+- imported: 207
+- retinal_imaging_v2: 177
 - health_survey: 174
-- retinal_imaging_v2: 133
 - px_neighborhood_environment_survey: 126
 - substance_use_survey: 111
 - screening_survey: 77
@@ -24,34 +24,35 @@
 ### TARGET_DOMAIN_ID
 - Meas Value: 1231
 - Observation: 439
-- Unit: 148
-- Measurement: 114
+- Unit: 150
+- Measurement: 116
 - [blank]: 76
+- Procedure: 66
 - Condition: 32
-- Procedure: 22
 - Route: 12
 - Ethnicity: 4
 - Device: 1
 
 ### TARGET_VOCABULARY_ID
-- LOINC: 1187
+- LOINC: 1189
 - AIREADI: 422
-- UCUM: 148
-- SNOMED: 137
+- SNOMED: 169
+- UCUM: 150
 - [blank]: 76
 - AIREADI-Vision: 69
 - AIREADI-MOCA: 30
+- CPT4: 12
 - PPI: 5
 - Ethnicity: 4
 - OMOP Extension: 1
 
 ### PREDICATE_ID
-- skos:exactMatch: 1736
-- skos:closeMatch: 265
+- skos:exactMatch: 1764
+- skos:closeMatch: 285
 - [blank]: 76
 - skos:relatedMatch: 2
 
 ### Extension_Needed
-- No: 1557
+- No: 1605
 - Yes: 521
 - [blank]: 1

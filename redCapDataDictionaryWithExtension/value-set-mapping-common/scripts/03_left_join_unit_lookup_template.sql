@@ -8,6 +8,7 @@
 --   <unit_text_column>       : the unit text on the record, if any, e.g. 'mEq/L' (may be NULL)
 --
 -- Rule: unit by field name first, then by unit text, otherwise 0 (no matching concept).
+-- Unit text is trimmed, and blank text (e.g. ' ') is written as NULL (v1.7 ETL rule 5).
 -- unit_lookup has one row per key, so the LEFT JOINs never add rows.
 -- Requires unit_lookup (01_create_unit_lookup.sql). Dialect: Databricks / Spark SQL.
 -- This file contains placeholders and does not run until they are replaced.
@@ -15,7 +16,7 @@
 
 SELECT m.*,
        COALESCE(f.unit_concept_id, u.unit_concept_id, 0)   AS unit_concept_id,
-       COALESCE(f.unit_source_value, m.<unit_text_column>) AS unit_source_value
+       COALESCE(f.unit_source_value, NULLIF(TRIM(m.<unit_text_column>), '')) AS unit_source_value
 FROM <your_measurement_table> m
 LEFT JOIN unit_lookup f
        ON f.key_type = 'field'  AND f.lookup_key = TRIM(m.<field_name_column>)

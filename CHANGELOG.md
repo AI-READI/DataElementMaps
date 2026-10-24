@@ -11,6 +11,82 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [v1.7] - 2026-10-24
+
+Retinal imaging scans are recorded as procedures, the new BUN/creatinine ratio field is mapped, and the CBC results move to the lab's "by Automated count" LOINC codes. 48 rows are appended at the end of the file (lines 2081–2128), 6 rows are edited in place (lines 675–680), and 20 superseded MoCA unit rows are switched off (lines 648–667), so every existing line number is the same as in v1.6. The new rows write PROCEDURE_OCCURRENCE and MEASUREMENT, so the ETL must be re-run, with the ETL rules below. Concept IDs, names and domains were confirmed in the deployed OMOP vocabulary (Databricks `omop_vocab`).
+
+### Added — retinal imaging procedures
+
+- Form `retinal_imaging_v2` asks one yes/no question per scan type and eye (22 scan types × 2 eyes; questions on lines 1679–1741, answers on lines 1743–1846). Until v1.6 a completed scan was recorded only as an OBSERVATION (custom scan concept, value *Yes*), so a standard query for fundus photography or OCT found no AI-READI participants.
+- For each of the 44 questions, a second "Yes" answer row (same `FIELD_ID`, `SRC_CODE` 1 and `SRC_CODE_ID` as the existing Yes row) maps to a standard procedure concept, domain Procedure. This follows the health-history pattern, where a "Yes" has a Yes value row and a Condition row (for example `mhoccur_mi`, lines 440 and 328). Right eye on lines 2081–2102 and left eye on lines 2103–2124, both in form order.
+
+| Scans (per eye) | Concept | Predicate |
+|---|---|---|
+| OptoMed disc and macula CFP; Eidon central, nasal, temporal CFP and mosaic (6) | 4063911 *Ocular fundus photography* (SNOMED 20067007) | exactMatch 1 |
+| Eidon IR, Eidon FAF, FLIO (3) | 4063911 | closeMatch 0.75 (no infrared, autofluorescence or FLIO procedure concept exists) |
+| Spectralis posterior pole, Cirrus macula cube, Maestro2 3D wide and 3D macula, Triton 3D (5) | 1073298 *Optical coherence tomography of posterior segment of eye* (SNOMED 1303746000) | exactMatch 1 |
+| Spectralis ONH, Cirrus disc cube (2) | 1073298 | closeMatch 1 (optic nerve head scans) |
+| Spectralis, Cirrus, Maestro2 and Triton macula OCTA (5) | 745759 *Computerized ophthalmic diagnostic imaging … retina, including OCT angiography* (CPT4 92137) | closeMatch 1 (no SNOMED OCT angiography concept) |
+| Cirrus disc 6x6 OCTA (1) | 745759 | closeMatch 0.75 (the code says "retina") |
+
+- Laterality as a CPT4 modifier, the class OMOP intends for `PROCEDURE_OCCURRENCE.modifier_concept_id`: right-eye rows `qualifier_concept_id` 45888271 (RT), `qualifier_source_value` "Right eye", `MODIFIER` "right eye|45888271"; left-eye rows 45888270 (LT), "Left eye", "left eye|45888270". The existing imaging question and Yes rows keep the LOINC answers 45876703 *Right eye* / 45883829 *Left eye*.
+- Not used: Measurement-domain concepts such as 4189584 *Confocal scanning laser ophthalmoscopy* and 45763633 *Optical coherence tomography of retina* (they would write MEASUREMENT), and Device-domain OCT scanner concepts. No new custom concepts.
+
+### Added — BUN/creatinine ratio, new REDCap field
+
+- `import_bun_creatinine_ratio` "Creatinine/BUN ratio" (line 2125, new) → **3033837** *Creatinine/Urea nitrogen [Mass Ratio] in Serum or Plasma* (LOINC 31045-8, Lab Test), exactMatch 1; `SRC_CODE` 31045-8, as for the other imported labs. This is the field the data team named for the ratio; it maps to what is stored now (creatinine ÷ BUN).
+- Fixed-unit row `import_bun_creatinine_ratio_u` (line 2126) → 8523 *ratio* (UCUM `{ratio}`), same format as line 2080; `unit_concept_lookup.csv` (and `01_create_unit_lookup.sql`) gains `import_bun_creatinine_ratio` (with NRBC below: 115 rows, up from 113).
+- Line 554 (`import_buncreatinineratio`) is unchanged from v1.6: 3033837, with the `MODIFIER` note that the stored value is creatinine ÷ BUN. Both fields therefore map to creatinine ÷ BUN (all 3,981 current values; median 0.053). 3018311 *Urea nitrogen/Creatinine [Mass Ratio]* (LOINC 3097-3) is not used; if a field is later recalculated as BUN ÷ creatinine (median about 18), remap that field to 3018311.
+
+### Changed — CBC method codes (lines 675–680)
+
+The performing lab's LOINC map (Labcorp test 028142 *CBC, Platelet, No Differential*) reports these results with the "by Automated count" codes; WBC (6690-2), RBC (789-8) and hemoglobin (718-7) already matched. All exactMatch 1; concept names from `omop_vocab`.
+
+| Line | Field | v1.6 | v1.7 |
+|---|---|---|---|
+| 675 | `lbscat_hct` Hematocrit - % | 3009542 *… by calculation* (20570-8) | **3023314** *Hematocrit [Volume Fraction] of Blood by Automated count* (4544-3) |
+| 676 | `lbscat_mcv` MCV - fL | 3024731 (30428-7) | **3023599** *MCV [Entitic mean volume] in Red Blood Cells by Automated count* (787-2) |
+| 677 | `lbscat_mch` MCH - pg | 3035941 (28539-5), closeMatch 0.75 | **3012030** *MCH [Entitic mass] by Automated count* (785-6) |
+| 678 | `lbscat_mchc` MCHC - g/dL | 3003338 (28540-3) | **3009744** *MCHC [Entitic Mass/volume] in Red Blood Cells by Automated count* (786-4) |
+| 679 | `lbscat_rdw` RDW - % | 3002385 (30385-9) | **3019897** *Erythrocyte [DistWidth] in Red Blood Cells by Automated count* (788-0) |
+| 680 | `lbscat_plt` Platelets - x10E3/µL | 3007461 (26515-7), closeMatch 0.75 | **3024929** *Platelets [#/volume] in Blood by Automated count* (777-3) |
+
+Units are unchanged (the lab's units match the v1.4 CBC unit rows). The lab's NRBC result (58413-6) has no REDCap field yet; see *Added — NRBC* below.
+
+### Added — NRBC (proposed REDCap field)
+
+- Labcorp test 028142 also reports nucleated red blood cells (NRBC) per 100 white blood cells (LOINC 58413-6, unit %), but the REDCap CBC form has no NRBC field. Rows are added in advance for the proposed field `lbscat_nrbc`, so it maps as soon as it is added to the form: question row (line 2127) → **40761514** *Nucleated erythrocytes/Leukocytes [Ratio] in Blood by Automated count* (LOINC 58413-6), exactMatch 1; fixed-unit row `lbscat_nrbc_u` (line 2128) → 8554 *percent* (`%`), as for RDW and hematocrit. Both rows have `transferred_to_fairhub_REDCap_dataset` = Yes, as the other CBC rows: NRBC belongs in the dataset and was missed on the REDCap form. `MODIFIER` is blank on both rows. Note: `lbscat_nrbc` is a proposed REDCap field, not yet on the CBC form; Labcorp 028142 reports NRBC per 100 WBC (LOINC 58413-6), so it should have been included. `lbscat_nrbc` maps to **40761514** *Nucleated erythrocytes/Leukocytes [Ratio] in Blood by Automated count* (line 2127), with unit 8554 *percent* (`lbscat_nrbc_u`, line 2128); the value maps as soon as the field is added. `unit_concept_lookup.csv`: 115 rows (field 90, string 25).
+
+### Changed — Map_to_OMOP: old MoCA unit rows (lines 648–667)
+
+- The 20 original MoCA unit rows (14 `*_time_unit` → 8555 *second*, 6 `*_score_unit` → 44777566 *score*, e.g. `trails_time_unit`, `lettera_score_unit`) are not named after the MoCA measurement fields, so nothing links to them: in the current OMOP data all 30 MoCA measurement fields have `unit_concept_id` 0. They are superseded by the v1.4 `<field>_u` rows (lines 2048–2077), which cover all 30 fields and are used by `unit_concept_lookup.csv`.
+- `Map_to_OMOP` Yes → No on lines 648–667; no other column changes (`MODIFIER` stays blank). The rows are kept, not deleted, so the original content and line numbers are preserved, and there are no duplicate active MoCA unit rows. The replacement row for each is listed in the v1.7 decision record. map2omop and the open-source public file each lose these 20 rows; the unit lookup is unchanged (it never used them).
+- The generic unit-text rows `s`, `second` → 8555 and `score` → 44777566 (lines 668–670) stay active; the lookup uses them.
+
+### ETL rules (for the survey ETL)
+
+1. **One procedure per "Yes".** Answers are matched on `FIELD_ID` (REDCap field) + `SRC_CODE` (answer code). A "Yes" (1) now matches two rows: the Yes row (Meas Value → `value_as_concept_id` on the OBSERVATION) and the procedure row (Procedure → one PROCEDURE_OCCURRENCE row). A "No" matches only the No row, so no procedure is written. Procedure rows are not merged: up to 22 per eye per visit.
+2. **Date.** `procedure_date` = the form's Assessment Date (`rt_dat`, line 1742), the same date for every scan on the form.
+3. **Laterality.** For Procedure rows whose `qualifier_concept_id` is a CPT4 Modifier (45888271, 45888270), write `qualifier_concept_id` to `modifier_concept_id` and `qualifier_source_value` to `modifier_source_value`. The monofilament Procedure rows (742–765) are unchanged and not covered by this rule.
+4. **Source concept.** `procedure_source_concept_id` = the AI-READI custom concept of the imaging question (the `TARGET_CONCEPT_ID` of the question row whose `SRC_CODE` equals the procedure row's `FIELD_ID`; for example `rtso_odo` → 2005200297 *Spec-ONH-RC-HR-OCT*). `procedure_source_value` = the REDCap field, as for other tables.
+5. **Units.** Fill `unit_concept_id` with `unit_concept_lookup.csv` (scripts `03_` / `04_`), matching on the trimmed field name and the trimmed unit text: the current data has `unit_source_value` " " (a single space) on the MoCA rows and a leading space on lab units (" mg/dL"). Write `unit_source_value` trimmed.
+
+### Changed — scripts
+
+- `count_concept_map.sql`: expected values updated to v1.7 (standard predicates: exact 1,267; close 257); the laterality query includes the CPT4 modifiers.
+- `validate_concept_map_vocab.sql`: new check V10 (Procedure rows: the target is in the Procedure domain and a laterality qualifier is a CPT4 Modifier; expect only the two monofilament "Tested" rows); V0 row counts.
+- Unit lookup scripts (`value-set-mapping-common/scripts/`): `03_left_join_unit_lookup_template.sql`, `04_example_omop_survey_measurement.sql`, `USAGE.md` and `README.md` write `unit_source_value` trimmed, with blank text as NULL (`NULLIF(TRIM(…), '')`, ETL rule 5); `USAGE.md` explains the MoCA unit rows, the generic `s`/`second`/`score` unit-text keys and blank unit text.
+- `audit_concept_map.py`: A5 label lists Procedure among the expected duplicate-key pairs (A5 rises from 34 to 78 with the 44 new pairs).
+
+### Regenerated
+
+- map2omop (2,102 rows) and open-source public (1,993) versions, SSSOM (2,051 rows; 76 incomplete) and LinkML (2,127 records; `CPT4` added to the vocabulary enum) from the v1.7 common file. `unit_concept_lookup.csv` rebuilt (115 rows); `medication_route_lookup.csv` unchanged.
+- Counts (`run_counts.py`): standard 1,506 (396 concepts); custom 487 (342); mapped 1,993 (738 concepts); designated but unmapped 134 (+20 "Superseded unit row"). The 44 procedure rows, the unit rows and the proposed NRBC field are not REDCap data elements in the curated dictionary, so, as with the earlier unit rows, "not designated" falls from 827 to 779 against the fixed total of 2,906.
+
+### Not yet included
+
+- Monofilament redesign (one procedure per foot, site results as measurements): deferred.
+
 ## [v1.6] - 2026-10-22
 
 Lab and vital-sign measurements moved from SNOMED to standard LOINC concepts, unit rows added for the three ratio fields, and the leftover answers of two removed questions excluded. Target concepts change on 4 rows, `Map_to_OMOP` on 4 rows, and 3 unit rows are appended, so the ETL must be re-run to apply these changes. Edits to existing rows are in place and the new rows are appended at the end (lines 2078–2080), so every existing line number is the same as in v1.5. Concept IDs and names were confirmed in the deployed OMOP vocabulary (Databricks `omop_vocab`).

@@ -16,8 +16,8 @@ repository-code: "https://github.com/AI-READI/DataElementMaps"
 repository-artifact: "https://github.com/AI-READI/DataElementMaps/blob/main/manuscript-tvst2026/ai_readi_redcap_value_set_mapping_common.csv"
 url: "https://aireadi.org"
 license: MIT
-version: "v1.6"
-date-released: "2026-10-22" 
+version: "v1.7"
+date-released: "2026-10-24" 
 identifiers:
    - type: doi
      value: "10.5281/zenodo.23375723"

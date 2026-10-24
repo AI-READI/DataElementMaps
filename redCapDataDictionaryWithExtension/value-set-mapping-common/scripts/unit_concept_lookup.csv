@@ -23,6 +23,7 @@ field,import_alt_got,8923,IU/L
 field,import_ast_got,8923,IU/L
 field,import_bilirubin_total,8840,mg/dL
 field,import_bun,8840,mg/dL
+field,import_bun_creatinine_ratio,8523,ratio
 field,import_buncreatinineratio,8523,ratio
 field,import_c_peptide,8725,ng/L
 field,import_calcium,8840,mg/dL
@@ -52,6 +53,7 @@ field,lbscat_hct,8554,%
 field,lbscat_mch,8564,pg
 field,lbscat_mchc,8713,g/dL
 field,lbscat_mcv,8583,fL
+field,lbscat_nrbc,8554,%
 field,lbscat_plt,8848,x10E3/µL
 field,lbscat_rbc,8815,x10E6/µL
 field,lbscat_rdw,8554,%

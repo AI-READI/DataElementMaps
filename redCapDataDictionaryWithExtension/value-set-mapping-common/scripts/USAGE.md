@@ -4,7 +4,7 @@ How to fill `MEASUREMENT.unit_concept_id` from the AI-READI concept map: create 
 
 ## Step 1. Create the unit_lookup table (choose one)
 
-**Option A: load the ready-made file (simplest).** `unit_concept_lookup.csv` (in this folder) is the complete lookup table, 113 rows:
+**Option A: load the ready-made file (simplest).** `unit_concept_lookup.csv` (in this folder) is the complete lookup table, 115 rows:
 
 | Column | Meaning |
 |---|---|
@@ -19,7 +19,7 @@ Upload it, set the path in `01a_load_unit_concept_lookup_csv.sql`, and run it. T
 
 | key_type | lookup_key | Rows | Example |
 |---|---|---|---|
-| `field` | measurement field name | 88 | `lbscat_rbc` → 8815 (`x10E6/µL`) |
+| `field` | measurement field name | 90 | `lbscat_rbc` → 8815 (`x10E6/µL`) |
 | `string` | unit text | 25 | `mEq/L` → 9557 |
 
 Each key appears once.
@@ -35,7 +35,7 @@ Copy the query in `03_left_join_unit_lookup_template.sql` and replace the placeh
 ```sql
 SELECT m.*,
        COALESCE(f.unit_concept_id, u.unit_concept_id, 0)   AS unit_concept_id,
-       COALESCE(f.unit_source_value, m.<unit_text_column>) AS unit_source_value
+       COALESCE(f.unit_source_value, NULLIF(TRIM(m.<unit_text_column>), '')) AS unit_source_value
 FROM <your_measurement_table> m
 LEFT JOIN unit_lookup f
        ON f.key_type = 'field'  AND f.lookup_key = TRIM(m.<field_name_column>)
@@ -49,7 +49,7 @@ LEFT JOIN unit_lookup u
 | `<field_name_column>` | the REDCap field name | `lbscat_rbc` |
 | `<unit_text_column>` | the unit text on the record, if any (can be NULL) | `mEq/L` |
 
-How it decides: the unit for the field first; if the field is not in `unit_lookup`, the unit text on the record; otherwise 0 (OMOP: no matching concept). `unit_source_value` is the unit text that goes with the concept chosen.
+How it decides: the unit for the field first; if the field is not in `unit_lookup`, the unit text on the record; otherwise 0 (OMOP: no matching concept). `unit_source_value` is the unit text that goes with the concept chosen; when nothing matches, the record's own unit text is kept, trimmed, and blank text (e.g. a single space) becomes NULL.
 
 `04_example_omop_survey_measurement.sql` is the same join, ready to run on `omop_survey.measurement`, where the field name is the text before the first comma of `measurement_source_value`:
 ```sql
@@ -85,7 +85,9 @@ f.lookup_key = TRIM(SPLIT_PART(m.measurement_source_value, ',', 1))
 - **Exact text:** `x10E3/µL` and `x10E6/µL` use the micro sign µ (U+00B5). If your data uses the Greek letter μ (U+03BC), use `REPLACE(TRIM(m.<unit_text_column>), 'μ', 'µ')` in the second join.
 - **Missing values:** text such as "NA", "N/A" or "nan" in the unit column does not match anything, so those records get the field's unit (or 0). It is still best to load missing values as NULL.
 - **LDL:** the field `import_ldl_cholesterol_calculation` has its unit in the REDCap field `import_ldl_cholesterol_u`; `unit_lookup` includes this pair.
-- **MoCA:** score fields get 44777566 (score) and time fields 8555 (second).
+- **MoCA:** score fields get 44777566 (score) and time fields 8555 (second), through the `field` keys built from the v1.4 `<field>_u` rows (concept map lines 2048–2077), one per MoCA measurement field. The original MoCA unit rows (`trails_time_unit`, `lettera_score_unit`, … lines 648–667) are not named after the fields and were never used; since v1.7 they have `Map_to_OMOP` = No and are not in `unit_lookup`.
+- **Generic unit text:** the `string` keys `s`, `second` → 8555 and `score` → 44777566 (lines 668–670), like `mg/dL` or `mEq/L`, match on the unit text on the record. They are the fallback for records whose field has no `field` key.
+- **Blank unit text:** the current OMOP data has `unit_source_value` = " " (a single space) on the MoCA records and a leading space on lab units (" mg/dL"). The joins trim the text, and the output writes blank text as NULL (v1.7 ETL rule 5).
 - **After a new concept map release:** reload the new `unit_concept_lookup.csv` (option A) or rerun `01_create_unit_lookup.sql` (option B). The CSV is regenerated with every release.
 
 ## Medication route (DRUG_EXPOSURE.route_concept_id)

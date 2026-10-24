@@ -224,6 +224,7 @@ enums:
       AIREADI: {}
       AIREADI-MOCA: {}
       AIREADI-Vision: {}
+      CPT4: {}
       Ethnicity: {}
       LOINC: {}
       OMOP Extension: {}
