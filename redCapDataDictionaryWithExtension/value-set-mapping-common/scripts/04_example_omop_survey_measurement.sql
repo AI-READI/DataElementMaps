@@ -13,7 +13,7 @@ SELECT m.measurement_id,
        m.value_as_number,
        m.unit_concept_id                                   AS unit_concept_id_current,
        COALESCE(f.unit_concept_id, u.unit_concept_id, 0)   AS unit_concept_id,
-       COALESCE(f.unit_source_value, m.unit_source_value)  AS unit_source_value
+       COALESCE(f.unit_source_value, NULLIF(TRIM(m.unit_source_value), '')) AS unit_source_value
 FROM omop_survey.measurement m
 LEFT JOIN unit_lookup f
        ON f.key_type = 'field'  AND f.lookup_key = TRIM(SPLIT_PART(m.measurement_source_value, ',', 1))
@@ -24,7 +24,7 @@ LEFT JOIN unit_lookup u
 SELECT TRIM(SPLIT_PART(m.measurement_source_value, ',', 1))  AS field_name,
        m.unit_concept_id                                     AS unit_concept_id_current,
        COALESCE(f.unit_concept_id, u.unit_concept_id, 0)     AS unit_concept_id,
-       COALESCE(f.unit_source_value, m.unit_source_value)    AS unit_source_value,
+       COALESCE(f.unit_source_value, NULLIF(TRIM(m.unit_source_value), '')) AS unit_source_value,
        COUNT(*)                                              AS n
 FROM omop_survey.measurement m
 LEFT JOIN unit_lookup f

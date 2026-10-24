@@ -19,7 +19,7 @@ SELECT *,
        TRY_CAST(TRIM(CAST(qualifier_concept_id AS STRING)) AS BIGINT) AS qid
 FROM redcapsurveydb.ai_readi_redcap_value_set_mapping_common;
 
--- V0. Row count (v1.4 and v1.5: 2,076)
+-- V0. Row count (v1.4 and v1.5: 2,076; v1.6: 2,079; v1.7: 2,127)
 SELECT COUNT(*) AS n_rows FROM cmap;
 
 -- V1. Standard (non-custom) targets missing from the vocabulary, not standard, or invalid. Expect 0 rows.
@@ -231,3 +231,19 @@ LEFT JOIN cmap q ON TRIM(q.temp_Question_or_Answer) = 'Question' AND TRIM(CAST(q
 WHERE TRIM(a.temp_Question_or_Answer) = 'Answer' AND q.SRC_CODE IS NULL
   AND TRIM(CAST(a.Map_to_OMOP AS STRING)) = 'Yes'
 ORDER BY a.FIELD_ID, a.SRC_CODE;
+
+-- V10. Procedure-domain rows (v1.7 retinal imaging: "Yes" -> PROCEDURE_OCCURRENCE). The target must be a
+-- standard Procedure-domain concept, and a laterality qualifier must be a CPT4 Modifier (45888271 RT,
+-- 45888270 LT), which the ETL writes to PROCEDURE_OCCURRENCE.modifier_concept_id. Expect 2 rows: the
+-- monofilament "Tested" rows mssrftt and msslftt (qualifiers 4298982 / 4320144 Structure of right/left foot),
+-- kept unchanged in v1.7 (monofilament redesign deferred).
+SELECT m.FORM_NAME, m.FIELD_ID, m.SRC_CODE, m.tid, t.domain_id AS target_domain,
+       m.qid, q.concept_name AS qualifier_name, q.concept_class_id AS qualifier_class
+FROM cmap m
+LEFT JOIN omop_vocab.concept t ON t.concept_id = m.tid
+LEFT JOIN omop_vocab.concept q ON q.concept_id = m.qid
+WHERE TRIM(m.TARGET_DOMAIN_ID) = 'Procedure'
+  AND TRIM(CAST(m.Map_to_OMOP AS STRING)) = 'Yes'
+  AND (   (m.tid < 2000000000 AND t.domain_id IS DISTINCT FROM 'Procedure')
+       OR (m.qid IS NOT NULL AND m.qid < 2000000000 AND q.concept_class_id IS DISTINCT FROM 'CPT4 Modifier'))
+ORDER BY m.FORM_NAME, m.FIELD_ID;

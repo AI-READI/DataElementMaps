@@ -3,9 +3,9 @@
 -- AI-READI concept map: create the unit_lookup table (one query)
 --
 -- unit_lookup has one row per (key_type, lookup_key):
---   key_type = 'field'  : lookup_key = measurement field name (e.g. lbscat_rbc)      -> 88 rows
+--   key_type = 'field'  : lookup_key = measurement field name (e.g. lbscat_rbc)      -> 90 rows
 --   key_type = 'string' : lookup_key = unit text            (e.g. 'mEq/L')          -> 25 rows
--- v1.6: 113 rows (v1.4 and v1.5: 110). Same content as unit_concept_lookup.csv (option A: 01a_load_unit_concept_lookup_csv.sql).
+-- v1.7: 115 rows (v1.6: 113; v1.4 and v1.5: 110). Same content as unit_concept_lookup.csv (option A: 01a_load_unit_concept_lookup_csv.sql).
 --
 -- Requires the concept map as a table or view named concept_map (see 00_load_concept_map.sql).
 -- Dialect: Databricks / Spark SQL.

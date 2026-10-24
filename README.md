@@ -95,6 +95,7 @@ To report an incorrect mapping, suggest an improvement, or request a new feature
 
 This work is licensed under
 [MIT](https://opensource.org/licenses/mit). See [LICENSE](LICENSE) for more information.
+[AI-READI](https://zenodo.org/records/17555036) The AI-READI dataset is shared under a custom license that has been developed as part of the project. The full license terms are available here. It is recommended to read them first to ensure that your envisioned use of the AI-READI dataset fits within the requirements of the license.
 
 <a href="https://aireadi.org" >
   <img src="https://www.channelfutures.com/files/2017/04/3_0.png" height="30" />
@@ -117,6 +118,8 @@ https://doi.org/10.5281/zenodo.23375723
 This project is funded by the NIH under award number 1OT2OD032644, R01AG060942, and an unrestricted research grant from Research to Prevent Blindness. 
 The content is solely the responsibility of the authors and does not necessarily represent the official views of the NIH.
 The funders/sponsors had no role in the design and conduct of the study; collection, management, analysis, and interpretation of the data; preparation, review, or approval of the manuscript; and decision to submit the manuscript for publication. 
+
+
 
 
 <br />

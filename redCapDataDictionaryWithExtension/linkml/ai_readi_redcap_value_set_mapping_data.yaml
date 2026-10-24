@@ -13313,7 +13313,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0647
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13332,7 +13332,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0648
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13351,7 +13351,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0649
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13370,7 +13370,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0650
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13389,7 +13389,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0651
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13408,7 +13408,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0652
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13427,7 +13427,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0653
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13446,7 +13446,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0654
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13465,7 +13465,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0655
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13484,7 +13484,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0656
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13503,7 +13503,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0657
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13522,7 +13522,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0658
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13541,7 +13541,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0659
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13560,7 +13560,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0660
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13579,7 +13579,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0661
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13598,7 +13598,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0662
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13617,7 +13617,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0663
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13636,7 +13636,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0664
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13655,7 +13655,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0665
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13675,7 +13675,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0666
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -13844,12 +13844,12 @@ mappings:
   question_or_answer: Question
   src_code: lbscat_hct
   src_cd_description: Hematocrit - %
-  target_concept_id: 3009542
-  target_concept_name: Hematocrit [Volume Fraction] of Blood by calculation
+  target_concept_id: 3023314
+  target_concept_name: Hematocrit [Volume Fraction] of Blood by Automated count
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
-  target_concept_code: 20570-8
+  target_concept_code: 4544-3
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -13864,12 +13864,12 @@ mappings:
   question_or_answer: Question
   src_code: lbscat_mcv
   src_cd_description: MCV - fL
-  target_concept_id: 3024731
-  target_concept_name: MCV [Entitic mean volume] in Red Blood Cells
+  target_concept_id: 3023599
+  target_concept_name: MCV [Entitic mean volume] in Red Blood Cells by Automated count
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
-  target_concept_code: 30428-7
+  target_concept_code: 787-2
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -13884,15 +13884,15 @@ mappings:
   question_or_answer: Question
   src_code: lbscat_mch
   src_cd_description: MCH - pg
-  target_concept_id: 3035941
-  target_concept_name: MCH [Entitic mass]
+  target_concept_id: 3012030
+  target_concept_name: MCH [Entitic mass] by Automated count
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
-  target_concept_code: 28539-5
+  target_concept_code: 785-6
   target_standard_concept: S
-  predicate_id: skos:closeMatch
-  confidence: 0.75
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0677
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -13904,12 +13904,12 @@ mappings:
   question_or_answer: Question
   src_code: lbscat_mchc
   src_cd_description: MCHC - g/dL
-  target_concept_id: 3003338
-  target_concept_name: MCHC [Entitic Mass/volume] in Red Blood Cells
+  target_concept_id: 3009744
+  target_concept_name: MCHC [Entitic Mass/volume] in Red Blood Cells by Automated count
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
-  target_concept_code: 28540-3
+  target_concept_code: 786-4
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -13924,12 +13924,12 @@ mappings:
   question_or_answer: Question
   src_code: lbscat_rdw
   src_cd_description: RDW - %
-  target_concept_id: 3002385
-  target_concept_name: Erythrocyte [DistWidth] in Red Blood Cells
+  target_concept_id: 3019897
+  target_concept_name: Erythrocyte [DistWidth] in Red Blood Cells by Automated count
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
-  target_concept_code: 30385-9
+  target_concept_code: 788-0
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -13944,15 +13944,15 @@ mappings:
   question_or_answer: Question
   src_code: lbscat_plt
   src_cd_description: Platelets - x10E3/µL
-  target_concept_id: 3007461
-  target_concept_name: Platelets [#/volume] in Blood
+  target_concept_id: 3024929
+  target_concept_name: Platelets [#/volume] in Blood by Automated count
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
-  target_concept_code: 26515-7
+  target_concept_code: 777-3
   target_standard_concept: S
-  predicate_id: skos:closeMatch
-  confidence: 0.75
+  predicate_id: skos:exactMatch
+  confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0680
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -44668,6 +44668,1158 @@ mappings:
   target_vocabulary_id: UCUM
   target_concept_class_id: Unit
   target_concept_code: '{ratio}'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2080
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtop_odd
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtop_odd_1
+  src_cd_description: 'Yes'
+  target_concept_id: 4063911
+  target_concept_name: Ocular fundus photography
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '20067007'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2081
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtop_odm
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtop_odm_1
+  src_cd_description: 'Yes'
+  target_concept_id: 4063911
+  target_concept_name: Ocular fundus photography
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '20067007'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2082
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtei_odir
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtei_odir_1
+  src_cd_description: 'Yes'
+  target_concept_id: 4063911
+  target_concept_name: Ocular fundus photography
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '20067007'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 0.75
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2083
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtei_odfaf
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtei_odfaf_1
+  src_cd_description: 'Yes'
+  target_concept_id: 4063911
+  target_concept_name: Ocular fundus photography
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '20067007'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 0.75
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2084
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtsm_odc
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtsm_odc_1
+  src_cd_description: 'Yes'
+  target_concept_id: 4063911
+  target_concept_name: Ocular fundus photography
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '20067007'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2085
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtsm_odn
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtsm_odn_1
+  src_cd_description: 'Yes'
+  target_concept_id: 4063911
+  target_concept_name: Ocular fundus photography
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '20067007'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2086
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtsm_odt
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtsm_odt_1
+  src_cd_description: 'Yes'
+  target_concept_id: 4063911
+  target_concept_name: Ocular fundus photography
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '20067007'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2087
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtsm_odm
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtsm_odm_1
+  src_cd_description: 'Yes'
+  target_concept_id: 4063911
+  target_concept_name: Ocular fundus photography
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '20067007'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2088
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtso_odo
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtso_odo_1
+  src_cd_description: 'Yes'
+  target_concept_id: 1073298
+  target_concept_name: Optical coherence tomography of posterior segment of eye
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '1303746000'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 1.0
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2089
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtso_odp
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtso_odp_1
+  src_cd_description: 'Yes'
+  target_concept_id: 1073298
+  target_concept_name: Optical coherence tomography of posterior segment of eye
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '1303746000'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2090
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtso_odm
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtso_odm_1
+  src_cd_description: 'Yes'
+  target_concept_id: 745759
+  target_concept_name: Computerized ophthalmic diagnostic imaging (eg, optical coherence tomography [OCT]), posterior segment,
+    with interpretation and report, unilateral or bilateral; retina, including OCT angiography
+  target_domain_id: Procedure
+  target_vocabulary_id: CPT4
+  target_concept_class_id: CPT4
+  target_concept_code: '92137'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 1.0
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2091
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtci_odm1
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtci_odm1_1
+  src_cd_description: 'Yes'
+  target_concept_id: 1073298
+  target_concept_name: Optical coherence tomography of posterior segment of eye
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '1303746000'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2092
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtci_odd1
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtci_odd1_1
+  src_cd_description: 'Yes'
+  target_concept_id: 1073298
+  target_concept_name: Optical coherence tomography of posterior segment of eye
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '1303746000'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 1.0
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2093
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtci_odm2
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtci_odm2_1
+  src_cd_description: 'Yes'
+  target_concept_id: 745759
+  target_concept_name: Computerized ophthalmic diagnostic imaging (eg, optical coherence tomography [OCT]), posterior segment,
+    with interpretation and report, unilateral or bilateral; retina, including OCT angiography
+  target_domain_id: Procedure
+  target_vocabulary_id: CPT4
+  target_concept_class_id: CPT4
+  target_concept_code: '92137'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 1.0
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2094
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtci_odd2
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtci_odd2_1
+  src_cd_description: 'Yes'
+  target_concept_id: 745759
+  target_concept_name: Computerized ophthalmic diagnostic imaging (eg, optical coherence tomography [OCT]), posterior segment,
+    with interpretation and report, unilateral or bilateral; retina, including OCT angiography
+  target_domain_id: Procedure
+  target_vocabulary_id: CPT4
+  target_concept_class_id: CPT4
+  target_concept_code: '92137'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 0.75
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2095
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtma_odw
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtma_odw_1
+  src_cd_description: 'Yes'
+  target_concept_id: 1073298
+  target_concept_name: Optical coherence tomography of posterior segment of eye
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '1303746000'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2096
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtma_odm
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtma_odm_1
+  src_cd_description: 'Yes'
+  target_concept_id: 1073298
+  target_concept_name: Optical coherence tomography of posterior segment of eye
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '1303746000'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2097
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtma_odm1
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtma_odm1_1
+  src_cd_description: 'Yes'
+  target_concept_id: 745759
+  target_concept_name: Computerized ophthalmic diagnostic imaging (eg, optical coherence tomography [OCT]), posterior segment,
+    with interpretation and report, unilateral or bilateral; retina, including OCT angiography
+  target_domain_id: Procedure
+  target_vocabulary_id: CPT4
+  target_concept_class_id: CPT4
+  target_concept_code: '92137'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 1.0
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2098
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rttr_odr
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rttr_odr_1
+  src_cd_description: 'Yes'
+  target_concept_id: 1073298
+  target_concept_name: Optical coherence tomography of posterior segment of eye
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '1303746000'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2099
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rttr_odm1
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rttr_odm1_1
+  src_cd_description: 'Yes'
+  target_concept_id: 745759
+  target_concept_name: Computerized ophthalmic diagnostic imaging (eg, optical coherence tomography [OCT]), posterior segment,
+    with interpretation and report, unilateral or bilateral; retina, including OCT angiography
+  target_domain_id: Procedure
+  target_vocabulary_id: CPT4
+  target_concept_class_id: CPT4
+  target_concept_code: '92137'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 1.0
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2100
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rttr_odm2
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rttr_odm2_1
+  src_cd_description: 'Yes'
+  target_concept_id: 745759
+  target_concept_name: Computerized ophthalmic diagnostic imaging (eg, optical coherence tomography [OCT]), posterior segment,
+    with interpretation and report, unilateral or bilateral; retina, including OCT angiography
+  target_domain_id: Procedure
+  target_vocabulary_id: CPT4
+  target_concept_class_id: CPT4
+  target_concept_code: '92137'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 1.0
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2101
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtfl_od
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtfl_od_1
+  src_cd_description: 'Yes'
+  target_concept_id: 4063911
+  target_concept_name: Ocular fundus photography
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '20067007'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 0.75
+  modifier: right eye|45888271
+  qualifier_concept_id: 45888271
+  qualifier_source_value: Right eye
+- mapping_record_id: AIREADI_MAPPING_2102
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtop_osd
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtop_osd_1
+  src_cd_description: 'Yes'
+  target_concept_id: 4063911
+  target_concept_name: Ocular fundus photography
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '20067007'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2103
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtop_osm
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtop_osm_1
+  src_cd_description: 'Yes'
+  target_concept_id: 4063911
+  target_concept_name: Ocular fundus photography
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '20067007'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2104
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtei_osir
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtei_osir_1
+  src_cd_description: 'Yes'
+  target_concept_id: 4063911
+  target_concept_name: Ocular fundus photography
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '20067007'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 0.75
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2105
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtei_osfaf
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtei_osfaf_1
+  src_cd_description: 'Yes'
+  target_concept_id: 4063911
+  target_concept_name: Ocular fundus photography
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '20067007'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 0.75
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2106
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtsm_osc
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtsm_osc_1
+  src_cd_description: 'Yes'
+  target_concept_id: 4063911
+  target_concept_name: Ocular fundus photography
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '20067007'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2107
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtsm_osn
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtsm_osn_1
+  src_cd_description: 'Yes'
+  target_concept_id: 4063911
+  target_concept_name: Ocular fundus photography
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '20067007'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2108
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtsm_ost
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtsm_ost_1
+  src_cd_description: 'Yes'
+  target_concept_id: 4063911
+  target_concept_name: Ocular fundus photography
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '20067007'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2109
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtsm_osm
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtsm_osm_1
+  src_cd_description: 'Yes'
+  target_concept_id: 4063911
+  target_concept_name: Ocular fundus photography
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '20067007'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2110
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtso_oso
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtso_oso_1
+  src_cd_description: 'Yes'
+  target_concept_id: 1073298
+  target_concept_name: Optical coherence tomography of posterior segment of eye
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '1303746000'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 1.0
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2111
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtso_osp
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtso_osp_1
+  src_cd_description: 'Yes'
+  target_concept_id: 1073298
+  target_concept_name: Optical coherence tomography of posterior segment of eye
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '1303746000'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2112
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtso_osm
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtso_osm_1
+  src_cd_description: 'Yes'
+  target_concept_id: 745759
+  target_concept_name: Computerized ophthalmic diagnostic imaging (eg, optical coherence tomography [OCT]), posterior segment,
+    with interpretation and report, unilateral or bilateral; retina, including OCT angiography
+  target_domain_id: Procedure
+  target_vocabulary_id: CPT4
+  target_concept_class_id: CPT4
+  target_concept_code: '92137'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 1.0
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2113
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtci_osm1
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtci_osm1_1
+  src_cd_description: 'Yes'
+  target_concept_id: 1073298
+  target_concept_name: Optical coherence tomography of posterior segment of eye
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '1303746000'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2114
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtci_osd1
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtci_osd1_1
+  src_cd_description: 'Yes'
+  target_concept_id: 1073298
+  target_concept_name: Optical coherence tomography of posterior segment of eye
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '1303746000'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 1.0
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2115
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtci_osm2
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtci_osm2_1
+  src_cd_description: 'Yes'
+  target_concept_id: 745759
+  target_concept_name: Computerized ophthalmic diagnostic imaging (eg, optical coherence tomography [OCT]), posterior segment,
+    with interpretation and report, unilateral or bilateral; retina, including OCT angiography
+  target_domain_id: Procedure
+  target_vocabulary_id: CPT4
+  target_concept_class_id: CPT4
+  target_concept_code: '92137'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 1.0
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2116
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtci_osd2
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtci_osd2_1
+  src_cd_description: 'Yes'
+  target_concept_id: 745759
+  target_concept_name: Computerized ophthalmic diagnostic imaging (eg, optical coherence tomography [OCT]), posterior segment,
+    with interpretation and report, unilateral or bilateral; retina, including OCT angiography
+  target_domain_id: Procedure
+  target_vocabulary_id: CPT4
+  target_concept_class_id: CPT4
+  target_concept_code: '92137'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 0.75
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2117
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtma_osw
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtma_osw_1
+  src_cd_description: 'Yes'
+  target_concept_id: 1073298
+  target_concept_name: Optical coherence tomography of posterior segment of eye
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '1303746000'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2118
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtma_osm
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtma_osm_1
+  src_cd_description: 'Yes'
+  target_concept_id: 1073298
+  target_concept_name: Optical coherence tomography of posterior segment of eye
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '1303746000'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2119
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtma_osm1
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtma_osm1_1
+  src_cd_description: 'Yes'
+  target_concept_id: 745759
+  target_concept_name: Computerized ophthalmic diagnostic imaging (eg, optical coherence tomography [OCT]), posterior segment,
+    with interpretation and report, unilateral or bilateral; retina, including OCT angiography
+  target_domain_id: Procedure
+  target_vocabulary_id: CPT4
+  target_concept_class_id: CPT4
+  target_concept_code: '92137'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 1.0
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2120
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rttr_osr
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rttr_osr_1
+  src_cd_description: 'Yes'
+  target_concept_id: 1073298
+  target_concept_name: Optical coherence tomography of posterior segment of eye
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '1303746000'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2121
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rttr_osm1
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rttr_osm1_1
+  src_cd_description: 'Yes'
+  target_concept_id: 745759
+  target_concept_name: Computerized ophthalmic diagnostic imaging (eg, optical coherence tomography [OCT]), posterior segment,
+    with interpretation and report, unilateral or bilateral; retina, including OCT angiography
+  target_domain_id: Procedure
+  target_vocabulary_id: CPT4
+  target_concept_class_id: CPT4
+  target_concept_code: '92137'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 1.0
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2122
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rttr_osm2
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rttr_osm2_1
+  src_cd_description: 'Yes'
+  target_concept_id: 745759
+  target_concept_name: Computerized ophthalmic diagnostic imaging (eg, optical coherence tomography [OCT]), posterior segment,
+    with interpretation and report, unilateral or bilateral; retina, including OCT angiography
+  target_domain_id: Procedure
+  target_vocabulary_id: CPT4
+  target_concept_class_id: CPT4
+  target_concept_code: '92137'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 1.0
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2123
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: retinal_imaging_v2
+  field_type: yesno
+  field_id: rtfl_os
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: rtfl_os_1
+  src_cd_description: 'Yes'
+  target_concept_id: 4063911
+  target_concept_name: Ocular fundus photography
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '20067007'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 0.75
+  modifier: left eye|45888270
+  qualifier_concept_id: 45888270
+  qualifier_source_value: Left eye
+- mapping_record_id: AIREADI_MAPPING_2124
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: import_bun_creatinine_ratio
+  question_or_answer: Question
+  src_code: 31045-8
+  src_code_id: Creatinine/BUN ratio
+  src_cd_description: Creatinine/BUN ratio
+  target_concept_id: 3033837
+  target_concept_name: Creatinine/Urea nitrogen [Mass Ratio] in Serum or Plasma
+  target_domain_id: Measurement
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Lab Test
+  target_concept_code: 31045-8
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2125
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: import_bun_creatinine_ratio_u
+  question_or_answer: Unit
+  src_code: ratio
+  src_code_id: import_bun_creatinine_ratio_u
+  src_cd_description: ratio
+  target_concept_id: 8523
+  target_concept_name: ratio
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '{ratio}'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2126
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: lab_results
+  field_type: text
+  question_or_answer: Question
+  src_code: lbscat_nrbc
+  src_cd_description: NRBC - %
+  target_concept_id: 40761514
+  target_concept_name: Nucleated erythrocytes/Leukocytes [Ratio] in Blood by Automated count
+  target_domain_id: Measurement
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Lab Test
+  target_concept_code: 58413-6
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2127
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: lab_results
+  field_type: text
+  field_id: lbscat_nrbc_u
+  question_or_answer: Unit
+  src_code: '%'
+  src_code_id: lbscat_nrbc_u
+  src_cd_description: percent
+  target_concept_id: 8554
+  target_concept_name: percent
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '%'
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0

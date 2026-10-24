@@ -7,7 +7,7 @@ Part A - structural checks (each should report 0 rows unless noted):
   A4  Predicate/confidence: exactMatch with confidence < 1; target 0 with a predicate;
       non-zero target without a predicate
   A5  Duplicate (FORM_NAME, FIELD_ID, SRC_CODE, row type) keys
-      (informational: Yes answers deliberately mapped to both a Condition/Observation
+      (informational: Yes answers deliberately mapped to both a Condition/Observation/Procedure
       concept and the Yes value are listed here)
   A6  Leading/trailing spaces or non-breaking spaces in key columns
   A7  Custom concept used as a Condition/answer target where a review is due
@@ -197,7 +197,7 @@ def audit(rows, cm, out, label):
         if len(rs) > 1:
             a5.append((" / ".join(key), ", ".join(str(r["_ln"]) for r in rs),
                        " | ".join(f"{r['TARGET_CONCEPT_ID']} {r['TARGET_CONCEPT_NAME'][:40]} ({r['TARGET_DOMAIN_ID']})" for r in rs)))
-    sections.append(("A5 Duplicate keys (informational: Yes -> Condition/Observation + Yes value pairs are expected)",
+    sections.append(("A5 Duplicate keys (informational: Yes -> Condition/Observation/Procedure + Yes value pairs are expected)",
                      ["Form / field / code / type", "Lines", "Targets"], a5, False))
 
     # A6
