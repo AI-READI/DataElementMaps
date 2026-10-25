@@ -95,7 +95,9 @@ To report an incorrect mapping, suggest an improvement, or request a new feature
 
 This work is licensed under
 [MIT](https://opensource.org/licenses/mit). See [LICENSE](LICENSE) for more information.
-[AI-READI](https://zenodo.org/records/17555036) The AI-READI dataset is shared under a custom license that has been developed as part of the project. The full license terms are available here. It is recommended to read them first to ensure that your envisioned use of the AI-READI dataset fits within the requirements of the license.
+
+The AI-READI dataset itself is shared under a custom license developed as part of the project. Read the [AI-READI dataset license](https://zenodo.org/records/17555036) first to make sure your intended use fits its requirements.
+
 
 <a href="https://aireadi.org" >
   <img src="https://www.channelfutures.com/files/2017/04/3_0.png" height="30" />
