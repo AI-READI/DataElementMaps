@@ -19,7 +19,7 @@ SELECT *,
        TRY_CAST(TRIM(CAST(qualifier_concept_id AS STRING)) AS BIGINT) AS qid
 FROM redcapsurveydb.ai_readi_redcap_value_set_mapping_common;
 
--- V0. Row count (v1.4 and v1.5: 2,076; v1.6: 2,079; v1.7: 2,127)
+-- V0. Row count (v1.4 and v1.5: 2,076; v1.6: 2,079; v1.7: 2,127; v1.8: 2,142)
 SELECT COUNT(*) AS n_rows FROM cmap;
 
 -- V1. Standard (non-custom) targets missing from the vocabulary, not standard, or invalid. Expect 0 rows.

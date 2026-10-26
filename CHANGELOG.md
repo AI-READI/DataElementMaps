@@ -11,6 +11,81 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [v1.8] - 2026-10-25
+
+Corrections from the review of the concept map against the REDCap codebook (2026-10-25), checked against the delivered OMOP survey data, an ECG procedure row, four protected fields that had no row, and the master REDCap data dictionary brought in line with the concept map. 15 rows are appended at the end of the file (lines 2129–2143) and the other changes are in place, so every existing line number is the same as in v1.7. Concept IDs and names were confirmed in `omop_vocab`.
+
+### Fixed — Capsule dose unit (line 1692)
+
+- `cmdosu` 2 *Capsule* had no concept (0, with the `MODIFIER` note "No matching unit concept"). UCUM has no capsule unit (Tablet has `{tbl}` 9431), but SNOMED 428641000 *Capsule - unit of product usage* (4176621, non-standard) **Maps to** **32912** *Generic unit for indivisible thing* (UCUM `1`, standard, Unit). Line 1692 → 32912, closeMatch 0.75 (the target is a count of items and does not say capsule); `MODIFIER` cleared. Capsule is a dose form, not a route: the route is `cmroute` (6 *Oral* → 4132161, `route_concept_id`), and the product form comes with the RxNorm drug (`cmtrt`).
+
+### Fixed — answer codes
+
+| Lines | Field | v1.7 | v1.8 | Evidence |
+|---|---|---|---|---|
+| 133–135, 137–140 | `dvamwenhand`, `dvamwendhand` | `SRC_CODE` held the code ID (`dvamwenhand_1` …), so no answer matched | `SRC_CODE` 1–4, `SRC_CODE_ID` `<field>_<code>` | REDCap choices 1–4; all 7,905 data rows have `value_as_concept_id` 0 |
+| 1993 | `sumrjfr` *Prefer not to say* | 999 | **777** (`sumrjfr_777`) | REDCap choice 777; 70 data rows use 777 |
+| 1974 | `rp_childpot` *Yes* | `rp_childpot_yes` | **1** (`rp_childpot_1`), `FIELD_TYPE` yesno | REDCap yesno codes 1/0 |
+
+### Changed — Map_to_OMOP
+
+- Answer 0 *No* of `susmkstoage`, `sualcage` and `suvptoyr` (lines 1994–1996): `Map_to_OMOP` Yes → No. 0 is not a REDCap choice for these questions and does not occur in the data. The rows are kept; the counts report them with "Answer to an excluded question".
+
+### Added
+
+- `cmdosu` (medication dose unit) choices with no row: 19 → 8723 *milligram per gram* (`mg/g`, line 2129) and 20 → 8861 *milligram per milliliter* (`mg/mL`, line 2130), in the format of line 1708.
+- Yes (45877994) and No (45878245) answer rows for yes/no questions that had none: `dvamwenyn`, `dcvgmenyn`, `dvenvenyn` (device return) and `eos_ds` (lines 2131–2138), in the format of lines 871–872; `Map_to_OMOP`, transferred, protected and form copied from each question row.
+
+### Added — ECG performed → PROCEDURE_OCCURRENCE
+
+- The ECG form has no yes/no question: the EKG is performed when `rtekgcmpdattim` *Date & time Cardiology - EKG - Pagewriter TC30 Cardiograp performed* is filled in. Until v1.7 that field wrote only an OBSERVATION (line 286, 4160030 *Performed*), so a standard query for an ECG found no AI-READI participants.
+- A second Question row for `rtekgcmpdattim` (line 2139, new) maps to **4145308** *12 lead ECG* (SNOMED 268400002, Procedure, standard), exactMatch 1: the PageWriter TC30 is a 12-lead electrocardiograph. Line 286 is unchanged. No qualifier (there is no laterality). Not used: 4163951 *Electrocardiographic procedure* (SNOMED 29303009, more general) and the CPT4 billing codes 93005 / 93000 (2313815 / 2313814); 4065277 *Standard ECG* (164847006) is not standard.
+- ETL rule (as v1.7 rules 1–4): when `rtekgcmpdattim` has a value, write one PROCEDURE_OCCURRENCE with `procedure_concept_id` 4145308, `procedure_datetime` (and `procedure_date`) = the value of `rtekgcmpdattim`, `procedure_source_value` `rtekgcmpdattim`, `procedure_source_concept_id` 2005200602 (the custom device concept on line 286). This is the first question with two rows on one key (A5 rises from 78 to 79).
+- ECG and EKG are the same test; REDCap names the form `ecg` and the fields `rtekg…`, and the map keeps REDCap's names.
+
+### Added — protected fields missing from the map
+
+Protected rows are mapped like any other row (`Map_to_OMOP` = Yes) and flagged `protected`. The flag decides the release, not the mapping: map2omop (all `Map_to_OMOP` = Yes rows, 2,114) includes them; the open-source public version (1,999) leaves them out. The delivered OMOP survey data is a public build (DRUG_EXPOSURE is empty), so protected rows appear only in a controlled-access build run on map2omop. Four protected fields on the codebook had no row (lines 2140–2143, new; all protected, `Map_to_OMOP` = Yes):
+
+| Line | Field | Target | Note |
+|---|---|---|---|
+| 2140 | `cmcmpdat2` *Date current medication collected* | 4260905 *Date* (SNOMED), qualifier 2005200594 *Current medication collected* | As `cmcmpdat` (line 681); values from the master row |
+| 2141 | `cmrouteot` medication route *If Other, please specify* | 2005200485 *Specify other* (AIREADI), exactMatch 1 | As `odristate` (line 1979); the master had it with `Map_to_OMOP` = No |
+| 2142 | `mhoccur_ot` health history *If yes, please specify* | 2005200485 *Specify other* | Same |
+| 2143 | `rp_childpot` answer 0 *No* | **42530854** *Not pregnant* (LOINC LA26683-5), exactMatch 1 | Pairs with line 1974 (1 → 45884583 *Currently pregnant*) |
+
+Checked and left at 0 (no concept): `cmdosu` 18 *Other*; `cmroute` question and 888 *Other* (OMOP has no "other" route); `ethnicscore` (REDCap calculation). `dristate` (state codes) and `cmtrt` (RxNorm code from the BioPortal autocomplete) have no answer rows by design.
+
+### Changed — metadata
+
+- Row type (`temp_Question_or_Answer`) blank → **Unit** on the 45 unit rows that had none: the old MoCA unit rows (648–667), the generic unit-text rows `s`, `second`, `score` (668–670) and the generic unit-text rows `pg/mL` … `kg` (1997–2018). `TARGET_DOMAIN_ID` was already Unit on all 153 unit rows. No row in the map now has a blank row type. Metadata only: the unit lookup selects on `TARGET_DOMAIN_ID` and is unchanged (115 keys: field 90, string 25).
+- `SRC_CD_DESCRIPTION`: line 361 (`mhcat_adot`) *Yes* → *Alzheimer's disease*; line 1957 (`sulqdosfr` 36) *36 or more* → *More than 36* (REDCap labels).
+- `FIELD_TYPE` `yes` / `no` → `yesno` (REDCap field type) on 10 rows (lines 1861–1867, 1869, 1870, 1878), and on line 1974 above. The LinkML `FIELD_TYPE` enum loses `yes` and `no`.
+
+### Changed — master REDCap data dictionary
+
+`redcap-data-dictionary/_master_red_cap_data_dictionary_with_extensions.csv` (last updated 2025-09-22) had fallen behind the concept map. It is now in sync: every concept map row has a master row with the same values in the 26 shared columns.
+
+- **Changed (300 rows):** master rows that match a concept map row (on `FIELD_ID` + `SRC_CODE` + row type; for imported labs, on the field name or REDCap field number) take the map's values; `Origin` = Changed. The imported lab and unit rows (form `import_data`, row type Question) take the map's form (`imported`), row type (Question / Unit), LOINC `SRC_CODE` and concepts; four imported fields renamed since the master was written take the map's name (`import_ldl_cholesterol` → `import_ldl_cholesterol_calculation`, `import_ldl_cholesterol_max\` → `import_ldl_cholesterol_max`, `import_globulin_total` → `import_globulin_total_norc`, `import_a_g_ratio` → `import_ag_ratio`, same field numbers 2945, 2947, 2989, 2990). The imaging date fields (`rt*cmpdattim`) take form `ecg`; `cmrouteot` and `mhoccur_ot` take `Map_to_OMOP` = Yes.
+- **Added (212 rows):** concept map rows with no master row, appended at the end with `Origin` = Added: MoCA (lines 615–670), the v1.4–v1.8 unit rows, the retinal imaging procedure rows, BUN/creatinine, NRBC and the v1.8 rows above (including the ECG procedure row), and a few older rows (e.g. `pdrx9` answers, `pxdhc_sum`, `import_uarc`).
+- **Date_of_Variable_Modification:** the date of the concept map release in which that line last changed (Changed) or first appeared (Added): v1.0-tvst 10/14/2026, v1.1–v1.2.1 10/16/2026, v1.3 10/17/2026, v1.3.1 10/18/2026, v1.4–v1.5 10/19/2026, v1.6 10/22/2026, v1.7 10/24/2026, v1.8 10/25/2026.
+- **Unchanged:** the other 2,638 master rows, byte for byte, including rows that are not in the concept map (REDCap history, `Map_to_OMOP` = No fields such as the `procedures` "not done" checkboxes, and Deleted rows). `NOTES` and `Choices_Calculations_OR_Slider_Labels` are kept on changed rows and blank on added rows. The master grows from 2,938 to 3,150 rows.
+
+### Changed — scripts
+
+- `count_concept_map.sql`: expected values updated to v1.8; the v1.7 entry below that reads "exact 1,267" should read "exact 1,247".
+- `validate_concept_map_vocab.sql`: V0 row count 2,142; V10 (Procedure rows) also covers the ECG row.
+
+### Regenerated
+
+- map2omop (2,114 rows) and open-source public (1,999) versions, SSSOM (2,067 rows; 75 incomplete) and LinkML (2,142 records) from the v1.8 common file. `unit_concept_lookup.csv` and `medication_route_lookup.csv` unchanged.
+- Counts: standard 1,517 (400 concepts); custom 489 (342); mapped 2,006 (69.0%, 742 concepts); designated but unmapped 136; not designated 764. Standard predicates: exact 1,257; close 258 (170 at 1, 88 at 0.75); related 2.
+
+### Not yet included
+
+- Monofilament redesign: deferred.
+- Form name of the device imaging date rows (lines 279–285, form `ecg`): the fields are not on the current codebook; metadata only, the ETL does not use the form name.
+
 ## [v1.7] - 2026-10-24
 
 Retinal imaging scans are recorded as procedures, the new BUN/creatinine ratio field is mapped, and the CBC results move to the lab's "by Automated count" LOINC codes. 48 rows are appended at the end of the file (lines 2081–2128), 6 rows are edited in place (lines 675–680), and 20 superseded MoCA unit rows are switched off (lines 648–667), so every existing line number is the same as in v1.6. The new rows write PROCEDURE_OCCURRENCE and MEASUREMENT, so the ETL must be re-run, with the ETL rules below. Concept IDs, names and domains were confirmed in the deployed OMOP vocabulary (Databricks `omop_vocab`).

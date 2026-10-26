@@ -244,9 +244,7 @@ enums:
       calc: {}
       checkbox: {}
       dropdown: {}
-      'no': {}
       notes: {}
       radio: {}
       text: {}
-      'yes': {}
       yesno: {}

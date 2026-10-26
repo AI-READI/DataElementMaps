@@ -73,5 +73,4 @@ Yes,Yes,open-source,No,imported,text,import_process_dt_urine,3012,Question,,,NOR
 Yes,Yes,open-source,No,imported,notes,import_notes_urine,3013,Question,,,NORC analyses,,,Notes,,,,,,,,,,,
 No,Yes,open-source,No,moca,checkbox,,,Question,moca_paper___1,,Check if MOCA done on paper,,,,,,,,,,,,,,
 Yes,Yes,protected,No,current_medications,dropdown,cmroute,3005,Answer,888,cmroute_888,Other,0,,,,,,,,,,No matching route concept; route_source_value = Other,,,
-Yes,Yes,protected,No,current_medications,dropdown,cmdosu,3007,Answer,2,cmdosu_2,Capsule,0,,,,,,,,,,No matching unit concept; dose_unit_source_value = Capsule,,,
 Yes,Yes,protected,No,current_medications,dropdown,cmdosu,3023,Answer,18,cmdosu_18,Other,0,,,,,,,,,,No matching unit concept; dose_unit_source_value = Other,,,
