@@ -4,7 +4,7 @@ How to fill `MEASUREMENT.unit_concept_id` from the AI-READI concept map: create 
 
 ## Step 1. Create the unit_lookup table (choose one)
 
-**Option A: load the ready-made file (simplest).** `unit_concept_lookup.csv` (in this folder) is the complete lookup table, 115 rows:
+**Option A: load the ready-made file (simplest).** `unit_concept_lookup.csv` (in this folder) is the complete lookup table, 114 rows:
 
 | Column | Meaning |
 |---|---|
@@ -19,7 +19,7 @@ Upload it, set the path in `01a_load_unit_concept_lookup_csv.sql`, and run it. T
 
 | key_type | lookup_key | Rows | Example |
 |---|---|---|---|
-| `field` | measurement field name | 90 | `lbscat_rbc` → 8815 (`x10E6/µL`) |
+| `field` | measurement field name | 89 | `lbscat_rbc` → 8815 (`x10E6/µL`) |
 | `string` | unit text | 25 | `mEq/L` → 9557 |
 
 Each key appears once.

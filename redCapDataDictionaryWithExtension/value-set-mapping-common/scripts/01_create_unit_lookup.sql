@@ -5,7 +5,7 @@
 -- unit_lookup has one row per (key_type, lookup_key):
 --   key_type = 'field'  : lookup_key = measurement field name (e.g. lbscat_rbc)      -> 90 rows
 --   key_type = 'string' : lookup_key = unit text            (e.g. 'mEq/L')          -> 25 rows
--- v1.7: 115 rows (v1.6: 113; v1.4 and v1.5: 110). Same content as unit_concept_lookup.csv (option A: 01a_load_unit_concept_lookup_csv.sql).
+-- v1.8.1: 114 rows (v1.7 and v1.8: 115; v1.6: 113; v1.4 and v1.5: 110). Only Map_to_OMOP = 'Yes' rows are used (v1.8.1). Same content as unit_concept_lookup.csv (option A: 01a_load_unit_concept_lookup_csv.sql).
 --
 -- Requires the concept map as a table or view named concept_map (see 00_load_concept_map.sql).
 -- Dialect: Databricks / Spark SQL.
@@ -20,6 +20,7 @@ SELECT DISTINCT
        TRIM(SRC_CODE)                            AS unit_source_value
 FROM concept_map
 WHERE TARGET_DOMAIN_ID = 'Unit'
+  AND Map_to_OMOP = 'Yes'
   AND RIGHT(TRIM(FIELD_ID), 2) = '_u'
 UNION ALL
 -- LDL: the measurement field and its unit field have different names
@@ -28,6 +29,7 @@ SELECT DISTINCT
        CAST(TARGET_CONCEPT_ID AS INT), TRIM(SRC_CODE)
 FROM concept_map
 WHERE TARGET_DOMAIN_ID = 'Unit'
+  AND Map_to_OMOP = 'Yes'
   AND TRIM(FIELD_ID) = 'import_ldl_cholesterol_u'
 UNION ALL
 -- by unit text: generic Unit rows (blank FIELD_ID) plus 's', 'second', 'score'
@@ -36,4 +38,5 @@ SELECT DISTINCT
        CAST(TARGET_CONCEPT_ID AS INT), TRIM(SRC_CODE)
 FROM concept_map
 WHERE TARGET_DOMAIN_ID = 'Unit'
+  AND Map_to_OMOP = 'Yes'
   AND (COALESCE(TRIM(FIELD_ID), '') = '' OR TRIM(SRC_CODE) IN ('s', 'second', 'score'));

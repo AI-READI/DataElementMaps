@@ -11,6 +11,45 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [v1.8.1] - 2026-10-26
+
+NRBC is switched off: it is not collected. The data team confirmed that the Labcorp *CBC, Platelet, No Differential* reports returned to AI-READI do not include NRBC, and that no REDCap field will be added ("We do not collect data for NRBC. This value is not provided in the reports returned to us from LabCorp."). A redacted Labcorp report (UAB) lists exactly 9 results: WBC, RBC, hemoglobin, hematocrit, MCV, MCH, MCHC, RDW and platelets. Two rows are edited in place, so every line number is the same as in v1.8. No concept changes; the ETL is not affected (the field matches no data).
+
+### Changed — Map_to_OMOP
+
+- `lbscat_nrbc` (line 2127, → 40761514) and its unit row `lbscat_nrbc_u` (line 2128, → 8554): `Map_to_OMOP` Yes → No and `transferred_to_fairhub_REDCap_dataset` Yes → No, so the transferred rows match the fields FAIRhub receives. The rows are kept (as for the superseded MoCA unit rows); the v1.7 note under *Added — NRBC* is superseded.
+
+### Reviewed and not changed — CBC LOINC codes
+
+The 9 CBC fields on the report map to the Labcorp test 028142 LOINC codes (v1.7), all standard Measurement concepts confirmed in `omop_vocab`, exactMatch 1; the report units match the unit rows (lines 2032–2040; the report writes "uL" for "µL").
+
+| Line | Field | LOINC | Concept |
+|---|---|---|---|
+| 672 | `lbscat_wbc` WBC (x10E3/µL) | 6690-2 | 3000905 *Leukocytes [#/volume] in Blood by Automated count* |
+| 673 | `lbscat_rbc` RBC (x10E6/µL) | 789-8 | 3020416 *Erythrocytes [#/volume] in Blood by Automated count* |
+| 674 | `lbscat_a1c` Hemoglobin (g/dL) | 718-7 | 3000963 *Hemoglobin [Mass/volume] in Blood* |
+| 675 | `lbscat_hct` Hematocrit (%) | 4544-3 | 3023314 *Hematocrit [Volume Fraction] of Blood by Automated count* |
+| 676 | `lbscat_mcv` MCV (fL) | 787-2 | 3023599 *MCV [Entitic mean volume] in Red Blood Cells by Automated count* |
+| 677 | `lbscat_mch` MCH (pg) | 785-6 | 3012030 *MCH [Entitic mass] by Automated count* |
+| 678 | `lbscat_mchc` MCHC (g/dL) | 786-4 | 3009744 *MCHC [Entitic Mass/volume] in Red Blood Cells by Automated count* |
+| 679 | `lbscat_rdw` RDW (%) | 788-0 | 3019897 *Erythrocyte [DistWidth] in Red Blood Cells by Automated count* |
+| 680 | `lbscat_plt` Platelets (x10E3/µL) | 777-3 | 3024929 *Platelets [#/volume] in Blood by Automated count* |
+
+### Changed — scripts
+
+- `unit_concept_lookup.csv`: 114 rows (field 89, string 25); `lbscat_nrbc` removed.
+- `01_create_unit_lookup.sql`: uses only `Map_to_OMOP` = Yes rows, so a switched-off unit row never enters the lookup (the result equals the CSV). Row counts updated in `01a_`, `02_`, the scripts' README and USAGE.
+- `count_concept_map.sql`: the two NRBC rows are reported as designated-but-unmapped, "Not collected (NRBC)"; expected values updated to v1.8.1. `validate_concept_map_vocab.sql`: V0 comment (2,142 rows, unchanged).
+
+### Changed — master REDCap data dictionary
+
+- The two NRBC rows (master records 3138–3139) take the new values; `Origin` = Changed, `Date_of_Variable_Modification` 10/26/2026. Every concept map row still has a master row with the same values; 3,150 rows.
+
+### Regenerated
+
+- map2omop (2,112 rows) and open-source public (1,997) versions, SSSOM (2,067 rows; 75 incomplete) and LinkML (2,142 records) from the v1.8.1 common file.
+- Counts: standard 1,515 (399 concepts); custom 489 (342); mapped 2,004 (69.0%, 741 concepts); designated but unmapped 138 (+2 "Not collected (NRBC)"); not designated 764. LOINC 1,190/276; UCUM 132/40. Standard predicates: exact 1,255; close 258 (170 at 1, 88 at 0.75); related 2.
+
 ## [v1.8] - 2026-10-25
 
 Corrections from the review of the concept map against the REDCap codebook (2026-10-25), checked against the delivered OMOP survey data, an ECG procedure row, four protected fields that had no row, and the master REDCap data dictionary brought in line with the concept map. 15 rows are appended at the end of the file (lines 2129–2143) and the other changes are in place, so every existing line number is the same as in v1.7. Concept IDs and names were confirmed in `omop_vocab`.

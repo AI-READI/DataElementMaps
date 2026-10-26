@@ -53,7 +53,6 @@ field,lbscat_hct,8554,%
 field,lbscat_mch,8564,pg
 field,lbscat_mchc,8713,g/dL
 field,lbscat_mcv,8583,fL
-field,lbscat_nrbc,8554,%
 field,lbscat_plt,8848,x10E3/µL
 field,lbscat_rbc,8815,x10E6/µL
 field,lbscat_rdw,8554,%

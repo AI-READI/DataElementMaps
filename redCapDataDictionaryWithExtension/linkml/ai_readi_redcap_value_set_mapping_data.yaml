@@ -45843,8 +45843,8 @@ mappings:
   confidence: 1.0
   modifier: fixed unit; no REDCap unit field
 - mapping_record_id: AIREADI_MAPPING_2126
-  map_to_omop: 'Yes'
-  transferred_to_fairhub_redcap_dataset: 'Yes'
+  map_to_omop: 'No'
+  transferred_to_fairhub_redcap_dataset: 'No'
   protected_or_open_source: open-source
   extension_needed: 'No'
   form_name: lab_results
@@ -45862,8 +45862,8 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_2127
-  map_to_omop: 'Yes'
-  transferred_to_fairhub_redcap_dataset: 'Yes'
+  map_to_omop: 'No'
+  transferred_to_fairhub_redcap_dataset: 'No'
   protected_or_open_source: open-source
   extension_needed: 'No'
   form_name: lab_results

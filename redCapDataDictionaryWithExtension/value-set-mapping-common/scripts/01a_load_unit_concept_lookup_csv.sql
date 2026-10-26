@@ -6,7 +6,7 @@
 -- 01_create_unit_lookup.sql (option B), without loading the concept map.
 --
 -- unit_concept_lookup.csv columns: key_type, lookup_key, unit_concept_id, unit_source_value
--- v1.7: 115 rows (field 90, string 25), one row per (key_type, lookup_key).
+-- v1.8.1: 114 rows (field 89, string 25), one row per (key_type, lookup_key).
 -- The file is UTF-8 (x10E3/µL and x10E6/µL use the micro sign U+00B5).
 --
 -- Set the path to your copy of unit_concept_lookup.csv, then run.
@@ -28,5 +28,5 @@ SELECT TRIM(key_type)                AS key_type,
        TRIM(unit_source_value)       AS unit_source_value
 FROM unit_concept_lookup_csv;
 
--- Check: 115 rows; field 90, string 25.
+-- Check: 114 rows; field 89, string 25.
 SELECT key_type, COUNT(*) AS n FROM unit_lookup GROUP BY key_type ORDER BY key_type;
