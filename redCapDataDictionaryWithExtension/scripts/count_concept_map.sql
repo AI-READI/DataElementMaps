@@ -35,6 +35,8 @@
 --   * Unit rows switched off because a newer row replaces them (Map_to_OMOP = 'No',
 --     the old MoCA *_time_unit / *_score_unit rows since v1.7) are reported as
 --     designated-but-unmapped ("Superseded unit row").
+--   * The NRBC rows (lbscat_nrbc, lbscat_nrbc_u; Map_to_OMOP = 'No' since v1.8.1: NRBC is not
+--     collected) are reported as designated-but-unmapped ("Not collected (NRBC)").
 --   * Answer rows switched off because the answer is not a REDCap choice (Map_to_OMOP = 'No',
 --     answer 0 of susmkstoage, sualcage, suvptoyr since v1.8) are counted with
 --     "Answer to an excluded question".
@@ -74,6 +76,8 @@ SELECT
                                                                     THEN 'REDCap survey timestamp'
         WHEN TRY_CAST(TARGET_CONCEPT_ID AS BIGINT) = 0              THEN 'No matching concept'
         WHEN Map_to_OMOP <> 'Yes' AND SRC_CODE LIKE 'moca_paper%'   THEN 'MoCA paper-administration flag'
+        WHEN Map_to_OMOP <> 'Yes' AND (SRC_CODE = 'lbscat_nrbc' OR FIELD_ID = 'lbscat_nrbc_u')
+                                                                    THEN 'Not collected (NRBC)'
         WHEN Map_to_OMOP <> 'Yes' AND temp_Question_or_Answer = 'Answer'
                                                                     THEN 'Answer to an excluded question'
         WHEN Map_to_OMOP <> 'Yes' AND TARGET_DOMAIN_ID = 'Unit'     THEN 'Superseded unit row'
@@ -117,8 +121,8 @@ FROM rows
 ORDER BY CASE category
            WHEN 'Standard' THEN 1 WHEN 'Custom' THEN 2 WHEN 'Mapped total' THEN 3
            WHEN 'Designated but unmapped' THEN 4 WHEN 'Not designated' THEN 5 ELSE 6 END;
--- Expected (v1.8): Standard 1,517 (52.2%) / 400; Custom 489 (16.8%) / 342;
---           Mapped 2,006 (69.0%) / 742; Designated-unmapped 136 (4.7%);
+-- Expected (v1.8.1): Standard 1,515 (52.1%) / 399; Custom 489 (16.8%) / 342;
+--           Mapped 2,004 (69.0%) / 741; Designated-unmapped 138 (4.7%);
 --           Not designated 764 (26.3%); Total 2,906.
 
 -- 2. Elements and distinct concepts by vocabulary ----------------------------------
@@ -130,7 +134,7 @@ FROM mapping_classified
 WHERE mapping_category IN ('Standard','Custom')
 GROUP BY mapping_category, TARGET_VOCABULARY_ID
 ORDER BY mapping_category DESC, elements DESC;
--- Expected (v1.8): LOINC 1,191/277; SNOMED 171/74; UCUM 133/40; CPT4 12/1; PPI 5/5;
+-- Expected (v1.8.1): LOINC 1,190/276; SNOMED 171/74; UCUM 132/40; CPT4 12/1; PPI 5/5;
 --           Ethnicity 4/2; OMOP Extension 1/1; AIREADI 390/265; AIREADI-Vision 69/47; AIREADI-MOCA 30/30.
 
 -- 3. Designated-but-unmapped breakdown -------------------------------------------------
@@ -139,9 +143,9 @@ FROM mapping_classified
 WHERE mapping_category = 'Designated but unmapped'
 GROUP BY unmapped_reason
 ORDER BY n DESC;
--- Expected (v1.8): reference range 46; survey timestamp 34; superseded unit row 20; specimen handling 12;
---           BCVA 10; answer to an excluded question 7; no matching concept 5;
---           REDCap administrative 1; MoCA paper flag 1 (total 136).
+-- Expected (v1.8.1): reference range 46; survey timestamp 34; superseded unit row 20; specimen handling 12;
+--           BCVA 10; answer to an excluded question 7; no matching concept 5; not collected (NRBC) 2;
+--           REDCap administrative 1; MoCA paper flag 1 (total 138).
 
 -- 4. Confidence and SKOS predicate distribution -----------------------------------------
 SELECT mapping_category,
@@ -152,9 +156,9 @@ FROM mapping_classified
 WHERE mapping_category IN ('Standard','Custom')
 GROUP BY mapping_category, PREDICATE_ID, CONFIDENCE
 ORDER BY mapping_category DESC, PREDICATE_ID, CONFIDENCE DESC;
--- Expected (v1.8, standard): exact 1,257; close 258 (170 at 1, 88 at 0.75); related 2;
---                      confidence 1 = 1,427; 0.75 = 89; 0.5 = 1.
--- Expected (v1.8, custom):   all 489 exact match at confidence 1.
+-- Expected (v1.8.1, standard): exact 1,255; close 258 (170 at 1, 88 at 0.75); related 2;
+--                      confidence 1 = 1,425; 0.75 = 89; 0.5 = 1.
+-- Expected (v1.8.1, custom):   all 489 exact match at confidence 1.
 
 -- 5. Laterality qualifiers ---------------------------------------------------------------
 SELECT qualifier_concept_id, qualifier_source_value, COUNT(*) AS n

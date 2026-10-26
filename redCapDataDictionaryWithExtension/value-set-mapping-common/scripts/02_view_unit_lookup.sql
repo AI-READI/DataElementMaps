@@ -5,13 +5,13 @@
 -- Requires unit_lookup (01_create_unit_lookup.sql). Dialect: Databricks / Spark SQL.
 -- =============================================================================
 
--- Row counts by key type. v1.7: field 90, string 25.
+-- Row counts by key type. v1.8.1: field 89, string 25.
 SELECT key_type, COUNT(*) AS n
 FROM unit_lookup
 GROUP BY key_type
 ORDER BY key_type;
 
--- Lookup by measurement field name (90 rows).
+-- Lookup by measurement field name (89 rows).
 SELECT lookup_key AS field_name, unit_concept_id, unit_source_value
 FROM unit_lookup
 WHERE key_type = 'field'
