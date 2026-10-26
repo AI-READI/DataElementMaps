@@ -2719,7 +2719,8 @@ mappings:
   field_type: radio
   field_id: dvamwenhand
   question_or_answer: Answer
-  src_code: dvamwenhand_1
+  src_code: '1'
+  src_code_id: dvamwenhand_1
   src_cd_description: Right
   target_concept_id: 45881626
   target_concept_name: Right
@@ -2739,7 +2740,8 @@ mappings:
   field_type: radio
   field_id: dvamwenhand
   question_or_answer: Answer
-  src_code: dvamwenhand_2
+  src_code: '2'
+  src_code_id: dvamwenhand_2
   src_cd_description: Left
   target_concept_id: 45883143
   target_concept_name: Left
@@ -2759,7 +2761,8 @@ mappings:
   field_type: radio
   field_id: dvamwenhand
   question_or_answer: Answer
-  src_code: dvamwenhand_3
+  src_code: '3'
+  src_code_id: dvamwenhand_3
   src_cd_description: Not Provided
   target_concept_id: 763013
   target_concept_name: Not provided
@@ -2798,7 +2801,8 @@ mappings:
   field_type: radio
   field_id: dvamwendhand
   question_or_answer: Answer
-  src_code: dvamwendhand_1
+  src_code: '1'
+  src_code_id: dvamwendhand_1
   src_cd_description: Right hand
   target_concept_id: 45881626
   target_concept_name: Right
@@ -2818,7 +2822,8 @@ mappings:
   field_type: radio
   field_id: dvamwendhand
   question_or_answer: Answer
-  src_code: dvamwendhand_2
+  src_code: '2'
+  src_code_id: dvamwendhand_2
   src_cd_description: Left hand
   target_concept_id: 45883143
   target_concept_name: Left
@@ -2838,7 +2843,8 @@ mappings:
   field_type: radio
   field_id: dvamwendhand
   question_or_answer: Answer
-  src_code: dvamwendhand_4
+  src_code: '4'
+  src_code_id: dvamwendhand_4
   src_cd_description: Neither (ambidextrous)
   target_concept_id: 4045863
   target_concept_name: Ambidextrous
@@ -2858,7 +2864,8 @@ mappings:
   field_type: radio
   field_id: dvamwendhand
   question_or_answer: Answer
-  src_code: dvamwendhand_3
+  src_code: '3'
+  src_code_id: dvamwendhand_3
   src_cd_description: Not Provided
   target_concept_id: 763013
   target_concept_name: Not provided
@@ -7693,7 +7700,7 @@ mappings:
   question_or_answer: Answer
   src_code: '1'
   src_code_id: mhcat_adot_1
-  src_cd_description: 'Yes'
+  src_cd_description: Alzheimer's disease
   target_concept_id: 378419
   target_concept_name: Alzheimer's disease
   target_domain_id: Condition
@@ -13320,6 +13327,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: trails_time_unit
+  question_or_answer: Unit
   src_code: trails_time_unit
   src_cd_description: Time taken to do trails in seconds (Unit)
   target_concept_id: 8555
@@ -13339,6 +13347,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: trails_score_unit
+  question_or_answer: Unit
   src_code: trails_score_unit
   src_cd_description: Trail drawings score (Unit)
   target_concept_id: 44777566
@@ -13358,6 +13367,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: cube_time_unit
+  question_or_answer: Unit
   src_code: cube_time_unit
   src_cd_description: Time taken to do cube in seconds (Unit)
   target_concept_id: 8555
@@ -13377,6 +13387,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: cube_score_unit
+  question_or_answer: Unit
   src_code: cube_score_unit
   src_cd_description: Cube drawings score (Unit)
   target_concept_id: 44777566
@@ -13396,6 +13407,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: clock_time_unit
+  question_or_answer: Unit
   src_code: clock_time_unit
   src_cd_description: Time taken to do clock in seconds (Unit)
   target_concept_id: 8555
@@ -13415,6 +13427,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: clock_score_unit
+  question_or_answer: Unit
   src_code: clock_score_unit
   src_cd_description: Clock drawings score (Unit)
   target_concept_id: 44777566
@@ -13434,6 +13447,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: naming_time_unit
+  question_or_answer: Unit
   src_code: naming_time_unit
   src_cd_description: time in seconds to perform the animal name recall task (Unit)
   target_concept_id: 8555
@@ -13453,6 +13467,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: memorytrial1_time_unit
+  question_or_answer: Unit
   src_code: memorytrial1_time_unit
   src_cd_description: Time in seconds to perform the above task. (Unit)
   target_concept_id: 8555
@@ -13472,6 +13487,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: memorytrial2_time_unit
+  question_or_answer: Unit
   src_code: memorytrial2_time_unit
   src_cd_description: Time in seconds to perform the above task. (Unit)
   target_concept_id: 8555
@@ -13491,6 +13507,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: digitspan_time_unit
+  question_or_answer: Unit
   src_code: digitspan_time_unit
   src_cd_description: Time in seconds to perform the above task. (Unit)
   target_concept_id: 8555
@@ -13510,6 +13527,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: lettera_time_unit
+  question_or_answer: Unit
   src_code: lettera_time_unit
   src_cd_description: Time in seconds to perform the above task. (Unit)
   target_concept_id: 8555
@@ -13529,6 +13547,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: lettera_score_unit
+  question_or_answer: Unit
   src_code: lettera_score_unit
   src_cd_description: Letter tapping score (Unit)
   target_concept_id: 44777566
@@ -13548,6 +13567,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: subtraction_time_unit
+  question_or_answer: Unit
   src_code: subtraction_time_unit
   src_cd_description: Time in seconds to perform the above task. (Unit)
   target_concept_id: 8555
@@ -13567,6 +13587,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: repetition_time_unit
+  question_or_answer: Unit
   src_code: repetition_time_unit
   src_cd_description: Time in seconds to perform the above task. (Unit)
   target_concept_id: 8555
@@ -13586,6 +13607,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: fluency_language_time_unit
+  question_or_answer: Unit
   src_code: fluency_language_time_unit
   src_cd_description: Time in seconds to perform the above task. (Unit)
   target_concept_id: 8555
@@ -13605,6 +13627,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: abstraction_time_unit
+  question_or_answer: Unit
   src_code: abstraction_time_unit
   src_cd_description: Time in seconds to perform the above task. (Unit)
   target_concept_id: 8555
@@ -13624,6 +13647,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: delayedrecall_time_unit
+  question_or_answer: Unit
   src_code: delayedrecall_time_unit
   src_cd_description: Time in seconds to perform the above task. (Unit)
   target_concept_id: 8555
@@ -13643,6 +13667,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: orientation_time_unit
+  question_or_answer: Unit
   src_code: orientation_time_unit
   src_cd_description: Time in seconds to perform the above task. (Unit)
   target_concept_id: 8555
@@ -13662,6 +13687,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: moca_combined_mis_score_unit
+  question_or_answer: Unit
   src_code: moca_combined_mis_score_unit
   src_cd_description: combined score of MOCA delayed recall with no cue, MOCA delayed recall category cue (not included in
     total score), MOCA delayed recall multiple choice cue (not included in total score) (Unit)
@@ -13682,6 +13708,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: moca_total_score_unit
+  question_or_answer: Unit
   src_code: moca_total_score_unit
   src_cd_description: Montreal Cognitive Assessment Total Score (Unit)
   target_concept_id: 44777566
@@ -13701,6 +13728,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: s
+  question_or_answer: Unit
   src_code: s
   src_cd_description: second
   target_concept_id: 8555
@@ -13720,6 +13748,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: second
+  question_or_answer: Unit
   src_code: second
   src_cd_description: second
   target_concept_id: 8555
@@ -13739,6 +13768,7 @@ mappings:
   form_name: imported
   field_type: text
   field_id: score
+  question_or_answer: Unit
   src_code: score
   src_cd_description: '[score]'
   target_concept_id: 44777566
@@ -36119,8 +36149,15 @@ mappings:
   src_code: '2'
   src_code_id: cmdosu_2
   src_cd_description: Capsule
-  target_concept_id: 0
-  modifier: No matching unit concept; dose_unit_source_value = Capsule
+  target_concept_id: 32912
+  target_concept_name: Generic unit for indivisible thing
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: '1'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 0.75
 - mapping_record_id: AIREADI_MAPPING_1692
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -39996,7 +40033,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   form_name: screening_survey
-  field_type: 'yes'
+  field_type: yesno
   field_id: mhterm_dm1
   question_or_answer: Answer
   src_code: '1'
@@ -40017,7 +40054,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   form_name: screening_survey
-  field_type: 'no'
+  field_type: yesno
   field_id: mhterm_dm1
   question_or_answer: Answer
   src_code: '0'
@@ -40038,7 +40075,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   form_name: screening_survey
-  field_type: 'yes'
+  field_type: yesno
   field_id: mhterm_dm2
   question_or_answer: Answer
   src_code: '1'
@@ -40059,7 +40096,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   form_name: screening_survey
-  field_type: 'yes'
+  field_type: yesno
   field_id: mhterm_dm2
   question_or_answer: Answer
   src_code: '1'
@@ -40080,7 +40117,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   form_name: screening_survey
-  field_type: 'yes'
+  field_type: yesno
   field_id: mhterm_predm
   question_or_answer: Answer
   src_code: '1'
@@ -40101,7 +40138,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   form_name: screening_survey
-  field_type: 'yes'
+  field_type: yesno
   field_id: mh_a1c
   question_or_answer: Answer
   src_code: '1'
@@ -40122,7 +40159,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   form_name: screening_survey
-  field_type: 'yes'
+  field_type: yesno
   field_id: mhterm_dm1
   question_or_answer: Answer
   src_code: '1'
@@ -40164,7 +40201,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'Yes'
   form_name: screening_survey
-  field_type: 'yes'
+  field_type: yesno
   field_id: mh_a1c
   question_or_answer: Answer
   src_code: '1'
@@ -40185,7 +40222,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   form_name: screening_survey
-  field_type: 'no'
+  field_type: yesno
   field_id: mhterm_dm2
   question_or_answer: Answer
   src_code: '0'
@@ -40353,7 +40390,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   form_name: screening_survey
-  field_type: 'no'
+  field_type: yesno
   field_id: mh_a1c
   question_or_answer: Answer
   src_code: '0'
@@ -42054,7 +42091,7 @@ mappings:
   question_or_answer: Answer
   src_code: '36'
   src_code_id: sulqdosfr_36
-  src_cd_description: 36 or more
+  src_cd_description: More than 36
   target_concept_id: 2005200198
   local_concept_id: 2005200198
   target_concept_name: 36 or more
@@ -42422,11 +42459,11 @@ mappings:
   protected_or_open_source: protected
   extension_needed: 'No'
   form_name: screening_survey
-  field_type: 'yes'
+  field_type: yesno
   field_id: rp_childpot
   question_or_answer: Answer
-  src_code: rp_childpot_yes
-  src_code_id: rp_childpot_yes
+  src_code: '1'
+  src_code_id: rp_childpot_1
   src_cd_description: 'Yes'
   target_concept_id: 45884583
   target_concept_name: Currently pregnant
@@ -42837,8 +42874,8 @@ mappings:
   field_id: sumrjfr
   field_id_num: 2077
   question_or_answer: Answer
-  src_code: '999'
-  src_code_id: sumrjfr_999
+  src_code: '777'
+  src_code_id: sumrjfr_777
   src_cd_description: Prefer not to say
   target_concept_id: 36311156
   target_concept_name: Prefer not to say
@@ -42850,7 +42887,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_1993
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -42871,7 +42908,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_1994
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -42892,7 +42929,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_1995
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -42918,6 +42955,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: pg/mL
   src_code_id: pg/mL
   src_cd_description: picogram per milliliter
@@ -42936,6 +42974,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: ng/L
   src_code_id: ng/L
   src_cd_description: nanogram per liter
@@ -42954,6 +42993,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: ng/mL
   src_code_id: ng/mL
   src_cd_description: nanogram per milliliter
@@ -42972,6 +43012,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: mg/L
   src_code_id: mg/L
   src_cd_description: milligram per liter
@@ -42990,6 +43031,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: mg/dL
   src_code_id: mg/dL
   src_cd_description: milligram per deciliter
@@ -43008,6 +43050,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: mEq/L
   src_code_id: mEq/L
   src_cd_description: milliequivalent per liter
@@ -43026,6 +43069,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: g/dL
   src_code_id: g/dL
   src_cd_description: gram per deciliter
@@ -43044,6 +43088,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: IU/L
   src_code_id: IU/L
   src_cd_description: international unit per liter
@@ -43062,6 +43107,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: '%'
   src_code_id: '%'
   src_cd_description: percent
@@ -43080,6 +43126,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: x10E3/µL
   src_code_id: x10E3/µL
   src_cd_description: thousand per microliter
@@ -43098,6 +43145,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: x10E6/µL
   src_code_id: x10E6/µL
   src_cd_description: million per microliter
@@ -43116,6 +43164,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: fL
   src_code_id: fL
   src_cd_description: femtoliter
@@ -43134,6 +43183,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: pg
   src_code_id: pg
   src_cd_description: picogram
@@ -43152,6 +43202,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: cm
   src_code_id: cm
   src_cd_description: centimeter
@@ -43170,6 +43221,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: kilograms
   src_code_id: kilograms
   src_cd_description: kilogram
@@ -43188,6 +43240,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: kg/m2
   src_code_id: kg/m2
   src_cd_description: kilogram per square meter
@@ -43206,6 +43259,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: mmHg
   src_code_id: mmHg
   src_cd_description: millimeter mercury column
@@ -43224,6 +43278,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: bpm
   src_code_id: bpm
   src_cd_description: per minute
@@ -43242,6 +43297,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: mg/g
   src_code_id: mg/g
   src_cd_description: milligram per gram
@@ -43260,6 +43316,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: diopter
   src_code_id: diopter
   src_cd_description: diopter
@@ -43278,6 +43335,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: degree
   src_code_id: degree
   src_cd_description: degree
@@ -43296,6 +43354,7 @@ mappings:
   protected_or_open_source: open-source
   extension_needed: 'No'
   field_type: text
+  question_or_answer: Unit
   src_code: kg
   src_code_id: kg
   src_cd_description: kilogram
@@ -45824,3 +45883,316 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
   modifier: fixed unit; no REDCap unit field
+- mapping_record_id: AIREADI_MAPPING_2128
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: protected
+  extension_needed: 'No'
+  form_name: current_medications
+  field_type: dropdown
+  field_id: cmdosu
+  question_or_answer: Answer
+  src_code: '19'
+  src_code_id: cmdosu_19
+  src_cd_description: Milligram per Gram (mg/g)
+  target_concept_id: 8723
+  target_concept_name: milligram per gram
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mg/g
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2129
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: protected
+  extension_needed: 'No'
+  form_name: current_medications
+  field_type: dropdown
+  field_id: cmdosu
+  question_or_answer: Answer
+  src_code: '20'
+  src_code_id: cmdosu_20
+  src_cd_description: Milligram per Milliliter (mg/mL)
+  target_concept_id: 8861
+  target_concept_name: milligram per milliliter
+  target_domain_id: Unit
+  target_vocabulary_id: UCUM
+  target_concept_class_id: Unit
+  target_concept_code: mg/mL
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2130
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: device_return
+  field_type: yesno
+  field_id: dvamwenyn
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: dvamwenyn_1
+  src_cd_description: 'Yes'
+  target_concept_id: 45877994
+  target_concept_name: 'Yes'
+  target_domain_id: Meas Value
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Answer
+  target_concept_code: LA33-6
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2131
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: device_return
+  field_type: yesno
+  field_id: dvamwenyn
+  question_or_answer: Answer
+  src_code: '0'
+  src_code_id: dvamwenyn_0
+  src_cd_description: 'No'
+  target_concept_id: 45878245
+  target_concept_name: 'No'
+  target_domain_id: Meas Value
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Answer
+  target_concept_code: LA32-8
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2132
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: device_return
+  field_type: yesno
+  field_id: dcvgmenyn
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: dcvgmenyn_1
+  src_cd_description: 'Yes'
+  target_concept_id: 45877994
+  target_concept_name: 'Yes'
+  target_domain_id: Meas Value
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Answer
+  target_concept_code: LA33-6
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2133
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: device_return
+  field_type: yesno
+  field_id: dcvgmenyn
+  question_or_answer: Answer
+  src_code: '0'
+  src_code_id: dcvgmenyn_0
+  src_cd_description: 'No'
+  target_concept_id: 45878245
+  target_concept_name: 'No'
+  target_domain_id: Meas Value
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Answer
+  target_concept_code: LA32-8
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2134
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: device_return
+  field_type: yesno
+  field_id: dvenvenyn
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: dvenvenyn_1
+  src_cd_description: 'Yes'
+  target_concept_id: 45877994
+  target_concept_name: 'Yes'
+  target_domain_id: Meas Value
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Answer
+  target_concept_code: LA33-6
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2135
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: device_return
+  field_type: yesno
+  field_id: dvenvenyn
+  question_or_answer: Answer
+  src_code: '0'
+  src_code_id: dvenvenyn_0
+  src_cd_description: 'No'
+  target_concept_id: 45878245
+  target_concept_name: 'No'
+  target_domain_id: Meas Value
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Answer
+  target_concept_code: LA32-8
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2136
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: disposition
+  field_type: yesno
+  field_id: eos_ds
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: eos_ds_1
+  src_cd_description: 'Yes'
+  target_concept_id: 45877994
+  target_concept_name: 'Yes'
+  target_domain_id: Meas Value
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Answer
+  target_concept_code: LA33-6
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2137
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: disposition
+  field_type: yesno
+  field_id: eos_ds
+  question_or_answer: Answer
+  src_code: '0'
+  src_code_id: eos_ds_0
+  src_cd_description: 'No'
+  target_concept_id: 45878245
+  target_concept_name: 'No'
+  target_domain_id: Meas Value
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Answer
+  target_concept_code: LA32-8
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2138
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: ecg
+  field_type: text
+  question_or_answer: Question
+  src_code: rtekgcmpdattim
+  src_cd_description: Date & time Cardiology - EKG - Pagewriter TC30 Cardiograp performed
+  target_concept_id: 4145308
+  target_concept_name: 12 lead ECG
+  target_domain_id: Procedure
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '268400002'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2139
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: protected
+  extension_needed: 'No'
+  form_name: current_medications
+  field_type: text
+  field_id_num: 1468
+  question_or_answer: Question
+  src_code: cmcmpdat2
+  src_cd_description: Date current medication collected
+  target_concept_id: 4260905
+  target_concept_name: Date
+  target_domain_id: Observation
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Qualifier Value
+  target_concept_code: '410672004'
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+  modifier: Date current medication collected
+  qualifier_concept_id: 2005200594
+  qualifier_source_value: current medication collected
+- mapping_record_id: AIREADI_MAPPING_2140
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: protected
+  extension_needed: 'Yes'
+  form_name: current_medications
+  field_type: text
+  field_id_num: 1472
+  question_or_answer: Question
+  src_code: cmrouteot
+  src_cd_description: 'If Other, please specify:'
+  target_concept_id: 2005200485
+  local_concept_id: 2005200485
+  target_concept_name: Specify other
+  target_domain_id: Observation
+  target_vocabulary_id: AIREADI
+  target_concept_class_id: Survey
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2141
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: protected
+  extension_needed: 'Yes'
+  form_name: health_survey
+  field_type: text
+  field_id_num: 1158
+  question_or_answer: Question
+  src_code: mhoccur_ot
+  src_cd_description: 'If yes, please specify:'
+  target_concept_id: 2005200485
+  local_concept_id: 2005200485
+  target_concept_name: Specify other
+  target_domain_id: Observation
+  target_vocabulary_id: AIREADI
+  target_concept_class_id: Survey
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2142
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: protected
+  extension_needed: 'No'
+  form_name: screening_survey
+  field_type: yesno
+  field_id: rp_childpot
+  question_or_answer: Answer
+  src_code: '0'
+  src_code_id: rp_childpot_0
+  src_cd_description: 'No'
+  target_concept_id: 42530854
+  target_concept_name: Not pregnant
+  target_domain_id: Meas Value
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Answer
+  target_concept_code: LA26683-5
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0

@@ -75,6 +75,7 @@ Archived release cited in the paper: **v1.0-tvst** — https://doi.org/10.5281/z
 ### Inputs and Outputs
 
 - **Input:** the AI-READI REDCap data dictionary ([`redCapDataDictionaryWithExtension/redcap-data-dictionary/`](redCapDataDictionaryWithExtension/redcap-data-dictionary/)).
+  The master dictionary (`_master_red_cap_data_dictionary_with_extensions.csv`) is the REDCap history record: the 26 mapping columns plus `Origin`, `Date_of_Variable_Modification`, `NOTES` and `Choices_Calculations_OR_Slider_Labels`, including fields that are not mapped or were deleted. The concept map (`value-set-mapping-common/_ai_readi_redcap_value_set_mapping_common.csv`) is authoritative for the mappings; since v1.8 every concept map row has a master row with the same values, and the master is updated with each concept map release.
 - **Output:** the value-set mapping table, one row per survey question or response option, with OMOP target concept, domain, vocabulary, SKOS predicate, confidence, and value/qualifier concepts. Field definitions are in [`value-set-mapping-common/README.md`](redCapDataDictionaryWithExtension/value-set-mapping-common/README.md).
 
 ## Contributing
@@ -95,9 +96,7 @@ To report an incorrect mapping, suggest an improvement, or request a new feature
 
 This work is licensed under
 [MIT](https://opensource.org/licenses/mit). See [LICENSE](LICENSE) for more information.
-
-The AI-READI dataset itself is shared under a custom license developed as part of the project. Read the [AI-READI dataset license](https://zenodo.org/records/17555036) first to make sure your intended use fits its requirements.
-
+[AI-READI](https://zenodo.org/records/17555036) The AI-READI dataset is shared under a custom license that has been developed as part of the project. The full license terms are available here. It is recommended to read them first to ensure that your envisioned use of the AI-READI dataset fits within the requirements of the license.
 
 <a href="https://aireadi.org" >
   <img src="https://www.channelfutures.com/files/2017/04/3_0.png" height="30" />
