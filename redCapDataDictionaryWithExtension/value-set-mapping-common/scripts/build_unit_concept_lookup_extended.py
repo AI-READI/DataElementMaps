@@ -21,7 +21,7 @@ LAB_FIELD = {'import_ldl_cholesterol': 'import_ldl_cholesterol_calculation'}
 NOTE = {'import_ldl_cholesterol': 'Key from unit field import_ldl_cholesterol_u; the measurement field is import_ldl_cholesterol_calculation',
         'import_ldl_cholesterol_calculation': 'Unit field is import_ldl_cholesterol_u (different name)'}
 lk = [x for x in csv.DictReader(open(f'{D}/scripts/unit_concept_lookup.csv', encoding='utf-8')) if x['key_type'] == 'field']
-cols = ['lookup_key', 'form_name', 'lab_name', 'lab_concept_id', 'lab_concept_name', 'lab_vocabulary_id', 'lab_concept_code',
+cols = ['lookup_key', 'form_name', 'source_concept_name', 'target_concept_id', 'target_concept_name', 'target_vocabulary_id', 'target_concept_code',
         'unit_concept_id', 'unit_concept_name', 'unit_source_value', 'map_line_lab', 'map_line_unit', 'note']
 out = []
 for k in lk:
@@ -30,7 +30,7 @@ for k in lk:
     un, ux = u[UNIT_FIELD.get(key, key + '_u')]
     assert g(ux, 'TARGET_CONCEPT_ID') == k['unit_concept_id'] and g(ux, 'SRC_CODE') == k['unit_source_value'], key
     assert g(qx, 'TARGET_DOMAIN_ID') == 'Measurement', key
-    # lab name: imported labs keep the short REDCap label in SRC_CODE_ID (SRC_CD_DESCRIPTION is the LOINC name)
+    # source_concept_name: imported labs keep the short REDCap label in SRC_CODE_ID (SRC_CD_DESCRIPTION is the LOINC name)
     name = g(qx, 'SRC_CODE_ID') if g(qx, 'FIELD_ID') and g(qx, 'SRC_CODE_ID') else g(qx, 'SRC_CD_DESCRIPTION')
     out.append([key, g(qx, 'FORM_NAME'), name, g(qx, 'TARGET_CONCEPT_ID'), g(qx, 'TARGET_CONCEPT_NAME'),
                 g(qx, 'TARGET_VOCABULARY_ID'), g(qx, 'TARGET_CONCEPT_CODE'), k['unit_concept_id'], g(ux, 'TARGET_CONCEPT_NAME'),
