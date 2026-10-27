@@ -1,4 +1,4 @@
-lookup_key,form_name,lab_name,lab_concept_id,lab_concept_name,lab_vocabulary_id,lab_concept_code,unit_concept_id,unit_concept_name,unit_source_value,map_line_lab,map_line_unit,note
+lookup_key,form_name,source_concept_name,target_concept_id,target_concept_name,target_vocabulary_id,target_concept_code,unit_concept_id,unit_concept_name,unit_source_value,map_line_lab,map_line_unit,note
 bmi_vsorres,physical_assessment,BMI,3038553,Body mass index (BMI) [Ratio],LOINC,39156-5,9531,kilogram per square meter,kg/m2,858,2023,
 bp1_diabp_vsorres,physical_assessment,Diastolic (mmHg),3012888,Diastolic blood pressure,LOINC,8462-4,8876,millimeter mercury column,mmHg,863,2027,
 bp1_sysbp_vsorres,physical_assessment,Systolic (mmHg),3004249,Systolic blood pressure,LOINC,8480-6,8876,millimeter mercury column,mmHg,862,2026,
