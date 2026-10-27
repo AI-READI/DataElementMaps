@@ -7,7 +7,7 @@ Scripts to fill `MEASUREMENT.unit_concept_id` from the AI-READI concept map (`..
 | `USAGE.md` | **Step-by-step usage** |
 | `00_load_concept_map.sql` | Loads the mapping file as `concept_map` (only needed for option B; set the file path) |
 | `unit_concept_lookup.csv` | **The ready-made lookup table** (114 rows): load it and skip building it |
-| `unit_concept_lookup_extended.csv` | **Reference view** of the 89 field keys (v1.8.2): per measurement field, its lab/measurement concept (ID, name, vocabulary, code) and its unit concept (ID, name, unit text), with the concept map lines they come from. Not needed by the join; rebuilt with `build_unit_concept_lookup_extended.py` |
+| `unit_concept_lookup_extended.csv` | **Reference view** of the 89 field keys (v1.8.2): per measurement field, its measurement (target) concept (ID, name, vocabulary, code) and its unit concept (ID, name, unit text), with the concept map lines they come from. Not needed by the join; rebuilt with `build_unit_concept_lookup_extended.py` |
 | `01a_load_unit_concept_lookup_csv.sql` | Option A: creates `unit_lookup` from `unit_concept_lookup.csv` |
 | `01_create_unit_lookup.sql` | Option B: **one query** that builds `unit_lookup` from the concept map (same 114 rows) |
 | `02_view_unit_lookup.sql` | Review `unit_lookup`: counts, field and unit-text lists, duplicate check |
@@ -19,14 +19,14 @@ Scripts to fill `MEASUREMENT.unit_concept_id` from the AI-READI concept map (`..
 
 ## Extended lookup (`unit_concept_lookup_extended.csv`)
 
-One row per field key of `unit_concept_lookup.csv` (89 rows), for review and for joining units to measurement concepts. "Lab" columns cover every measurement field with a unit: labs, CBC, vital signs, autorefractor and MoCA.
+One row per field key of `unit_concept_lookup.csv` (89 rows), for review and for joining units to measurement concepts. The target concept columns cover every measurement field with a unit: labs, CBC, vital signs, autorefractor and MoCA.
 
 | Column | Meaning |
 |---|---|
 | `lookup_key` | Measurement field name (REDCap field ID), the same key as `unit_concept_lookup.csv` |
 | `form_name` | REDCap form |
-| `lab_name` | REDCap label (imported labs: the short label, e.g. `HbA1c`) |
-| `lab_concept_id`, `lab_concept_name`, `lab_vocabulary_id`, `lab_concept_code` | Measurement concept of the field's question row (`measurement_concept_id`) |
+| `source_concept_name` | REDCap label (imported labs: the short label, e.g. `HbA1c`) |
+| `target_concept_id`, `target_concept_name`, `target_vocabulary_id`, `target_concept_code` | Measurement concept of the field's question row (`measurement_concept_id`) |
 | `unit_concept_id`, `unit_concept_name`, `unit_source_value` | Unit concept of the field's unit row (`unit_concept_id`) |
 | `map_line_lab`, `map_line_unit` | Line numbers of those rows in the concept map |
 | `note` | The LDL exception (unit field `import_ldl_cholesterol_u`) |
