@@ -93,7 +93,7 @@ Notes:
 | `import_bun` | 8840 | mg/dL |
 | `import_bun_creatinine_ratio` | 8523 | ratio |
 | `import_buncreatinineratio` | 8523 | ratio |
-| `import_c_peptide` | 8725 | ng/L |
+| `import_c_peptide` | 8842 | ng/mL |
 | `import_calcium` | 8840 | mg/dL |
 | `import_carbon_dioxide_total` | 9557 | mEq/L |
 | `import_chloride` | 9557 | mEq/L |
@@ -114,7 +114,7 @@ Notes:
 | `import_triglycerides` | 8840 | mg/dL |
 | `import_troponin_t` | 8725 | ng/L |
 | `import_uarc` | 8723 | mg/g |
-| `import_urine_albumin` | 8751 | mg/L |
+| `import_urine_albumin` | 8840 | mg/dL |
 | `import_urine_creatinine` | 8840 | mg/dL |
 | `lbscat_a1c` | 8713 | g/dL |
 | `lbscat_hct` | 8554 | % |
