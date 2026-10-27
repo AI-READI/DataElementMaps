@@ -11,6 +11,29 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [v1.8.3] - 2026-10-27
+
+Two lab unit rows are corrected to the units the data is reported in. A check of the delivered OMOP survey data against the v1.8.2 unit lookup found that the unit text in the data and the value ranges disagree with the map for C-peptide and urine albumin; the field key (which the join applies first) would have labeled C-peptide 1,000× and urine albumin 10× off. Two rows are edited in place, so every line number is the same as in v1.8.2. The ETL must apply this change (`MEASUREMENT.unit_concept_id`).
+
+### Fixed — unit rows
+
+| Line | Unit row | v1.8.2 | v1.8.3 | Evidence (current OMOP data) |
+|---|---|---|---|---|
+| 514 | `import_c_peptide_u` | 8725 *nanogram per liter* (`ng/L`) | **8842** *nanogram per milliliter* (`ng/mL`) | unit text `ng/mL`; 3,981 values, median 2.64 (p05 0.86, p95 7.39): ng/mL range (ng/L would be about 1,000× higher) |
+| 613 | `import_urine_albumin_u` | 8751 *milligram per liter* (`mg/L`) | **8840** *milligram per deciliter* (`mg/dL`) | unit text `mg/dL`; 3,984 values, median 0.54 (p95 9.6) |
+
+- `SRC_CODE`, `SRC_CD_DESCRIPTION`, `TARGET_CONCEPT_NAME` and `TARGET_CONCEPT_CODE` follow the new unit. The other imported lab units were checked against the data's unit text and agree (e.g. insulin `ng/mL`, median 0.60; urine creatinine `mg/dL`, median 66.8; troponin T `ng/L`; NT-proBNP `pg/mL`; CRP-HS `mg/L`).
+- `unit_concept_lookup.csv`: field keys `import_c_peptide` → 8842 `ng/mL` and `import_urine_albumin` → 8840 `mg/dL` (still 114 rows; `01_create_unit_lookup.sql` gives the same result). The unit-text keys `ng/L` and `mg/L` are unchanged (generic rows). `unit_concept_lookup_extended.csv` rebuilt; scripts README updated.
+- Not changed: the vision and monofilament measurements (BCVA, MARS contrast sensitivity, monofilament; 26 fields) have no unit rows: logMAR and log contrast sensitivity are dimensionless, the others are letter counts or scores; `unit_concept_id` stays 0.
+
+### Changed — master REDCap data dictionary
+
+- The two unit rows (master records 2844 and 2939) take the new values; `Origin` = Changed, `Date_of_Variable_Modification` 10/27/2026. 3,150 rows; every concept map row has a master row with the same values.
+
+### Regenerated
+
+- map2omop (2,112 rows) and open-source public (1,997) versions, SSSOM (2,067 rows; 75 incomplete) and LinkML (2,142 records). Counts unchanged from v1.8.2 (UCUM 132/40: 8725 and 8751 are still used by troponin T and CRP-HS).
+
 ## [v1.8.2] - 2026-10-27
 
 The new BUN/creatinine field holds BUN ÷ creatinine, so it moves to the BUN/creatinine LOINC code. The data team confirmed the values (for example BUN 15 mg/dL, creatinine 0.77 mg/dL → ratio 19.5; BUN 37, creatinine 1.01 → 36.6). One row is edited in place, so every line number is the same as in v1.8.1. The ETL must apply this change: the field's MEASUREMENT concept changes. Also added: an extended unit lookup that pairs each measurement field's concept with its unit concept.
