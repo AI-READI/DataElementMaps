@@ -45808,15 +45808,15 @@ mappings:
   field_type: text
   field_id: import_bun_creatinine_ratio
   question_or_answer: Question
-  src_code: 31045-8
-  src_code_id: Creatinine/BUN ratio
-  src_cd_description: Creatinine/BUN ratio
-  target_concept_id: 3033837
-  target_concept_name: Creatinine/Urea nitrogen [Mass Ratio] in Serum or Plasma
+  src_code: 3097-3
+  src_code_id: BUN/Creatinine ratio
+  src_cd_description: BUN/Creatinine ratio
+  target_concept_id: 3018311
+  target_concept_name: Urea nitrogen/Creatinine [Mass Ratio] in Serum or Plasma
   target_domain_id: Measurement
   target_vocabulary_id: LOINC
   target_concept_class_id: Lab Test
-  target_concept_code: 31045-8
+  target_concept_code: 3097-3
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0

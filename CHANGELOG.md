@@ -11,6 +11,35 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [v1.8.2] - 2026-10-27
+
+The new BUN/creatinine field holds BUN ÷ creatinine, so it moves to the BUN/creatinine LOINC code. The data team confirmed the values (for example BUN 15 mg/dL, creatinine 0.77 mg/dL → ratio 19.5; BUN 37, creatinine 1.01 → 36.6). One row is edited in place, so every line number is the same as in v1.8.1. The ETL must apply this change: the field's MEASUREMENT concept changes. Also added: an extended unit lookup that pairs each measurement field's concept with its unit concept.
+
+### Changed — target concept
+
+| Line | Field | v1.8.1 | v1.8.2 |
+|---|---|---|---|
+| 2125 | `import_bun_creatinine_ratio` | 3033837 *Creatinine/Urea nitrogen [Mass Ratio] in Serum or Plasma* (LOINC 31045-8) | **3018311** *Urea nitrogen/Creatinine [Mass Ratio] in Serum or Plasma* (LOINC 3097-3), exactMatch 1 |
+
+- `SRC_CODE` 31045-8 → 3097-3 (the LOINC code, as for the other imported labs); `SRC_CODE_ID` and `SRC_CD_DESCRIPTION` "Creatinine/BUN ratio" → "BUN/Creatinine ratio".
+- Unit row `import_bun_creatinine_ratio_u` (line 2126, 8523 *ratio*) unchanged; `unit_concept_lookup.csv` unchanged (114 rows).
+- Not changed: line 554, `import_buncreatinineratio` (the original field), stays 3033837 *Creatinine/Urea nitrogen*: its stored values are creatinine ÷ BUN (all 3,981 current values; median 0.053). Its `MODIFIER` still says to remap it to 3018311 if that field's formula and values are corrected.
+- This replaces the v1.7 decision that both fields map to creatinine ÷ BUN.
+
+### Added — extended unit lookup
+
+- `value-set-mapping-common/scripts/unit_concept_lookup_extended.csv` (89 rows): one row per field key of `unit_concept_lookup.csv`, with the field's measurement concept (`lab_concept_id`, name, vocabulary, code, from its question row) and unit concept (`unit_concept_id`, name, unit text, from its unit row), the REDCap form and label, and the concept map line numbers. Reference only: the ETL join still uses `unit_concept_lookup.csv`. `import_ldl_cholesterol` (key from the unit field `import_ldl_cholesterol_u`) carries the LDL calculation concept, with a note.
+- `build_unit_concept_lookup_extended.py`: rebuilds it from the concept map and `unit_concept_lookup.csv` (checks that every unit matches the lookup and every concept is in the Measurement domain). Scripts README: file list and column definitions.
+
+### Changed — master REDCap data dictionary
+
+- The `import_bun_creatinine_ratio` row takes the new values; `Origin` = Changed, `Date_of_Variable_Modification` 10/27/2026. 3,150 rows; every concept map row has a master row with the same values.
+
+### Regenerated
+
+- map2omop (2,112 rows) and open-source public (1,997) versions, SSSOM (2,067 rows; 75 incomplete) and LinkML (2,142 records) from the v1.8.2 common file.
+- Counts: standard 1,515 (400 concepts, +1: 3018311 is new and 3033837 is still used by line 554); custom 489 (342); mapped 2,004 (69.0%, 742 concepts); designated but unmapped 138; not designated 764. LOINC 1,190/277. `count_concept_map.sql` expected values updated to v1.8.2; `validate_concept_map_vocab.sql` V0 comment (2,142 rows).
+
 ## [v1.8.1] - 2026-10-26
 
 NRBC is switched off: it is not collected. The data team confirmed that the Labcorp *CBC, Platelet, No Differential* reports returned to AI-READI do not include NRBC, and that no REDCap field will be added ("We do not collect data for NRBC. This value is not provided in the reports returned to us from LabCorp."). A redacted Labcorp report (UAB) lists exactly 9 results: WBC, RBC, hemoglobin, hematocrit, MCV, MCH, MCHC, RDW and platelets. Two rows are edited in place, so every line number is the same as in v1.8. No concept changes; the ETL is not affected (the field matches no data).
