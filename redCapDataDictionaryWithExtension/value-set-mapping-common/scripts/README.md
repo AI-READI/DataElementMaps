@@ -15,6 +15,7 @@ Scripts to fill `MEASUREMENT.unit_concept_id` from the AI-READI concept map (`..
 | `04_example_omop_survey_measurement.sql` | The same join, ready to run on `omop_survey.measurement` |
 | `05_check_no_fanout.sql` | Checks that the join adds no rows |
 | `06_check_units_after_etl.sql` | Checks units in MEASUREMENT after the ETL re-run |
+| `09_validate_units_and_value_ranges.sql` | Read-only data review of the delivered OMOP survey data (v1.8.5): unit coverage and fan-out, unit concepts, unit text vs assigned unit, value distributions, value-range flags, waist/hip, refraction, dates and age, repeated entries, zeros by year and monthly drift. Baselines from the 2026-10-28 check are in the comments |
 | `medication_route_lookup.csv`, `07_`, `07a_`, `08_` | Medication route lookup for `DRUG_EXPOSURE.route_concept_id` (see the end of this file) |
 
 ## Extended lookup (`unit_concept_lookup_extended.csv`)

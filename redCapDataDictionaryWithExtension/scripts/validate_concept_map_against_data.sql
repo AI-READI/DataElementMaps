@@ -170,7 +170,7 @@ LEFT JOIN redcapsurveydb.unit_concept_lookup f
 LEFT JOIN redcapsurveydb.unit_concept_lookup s
        ON s.key_type = 'string' AND s.lookup_key = NULLIF(TRIM(m.unit_source_value), '');
 
--- PASS: unit filled 86 fields / 337,169 rows; no unit 26 fields / 104,454 rows
+-- PASS: unit filled 86 fields / 337,196 rows; no unit 26 fields / 104,454 rows
 SELECT CASE WHEN test_unit_concept_id = 0 THEN 'no unit' ELSE 'unit filled' END AS status,
        COUNT(DISTINCT SPLIT_PART(measurement_source_value, ',', 1)) AS fields, COUNT(*) AS n
 FROM measurement_units_test WHERE value_as_number IS NOT NULL GROUP BY 1;
