@@ -11,6 +11,29 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [v1.8.5] - 2026-10-28
+
+Validation scripts and a frozen v1.8.4 metrics snapshot. **No change to the concept map, the unit and route lookups, the master data dictionary, SSSOM or LinkML**: row counts and hashes are those of v1.8.4, and no ETL re-run is needed for this release.
+
+### Added — data review script
+
+- `redCapDataDictionaryWithExtension/value-set-mapping-common/scripts/09_validate_units_and_value_ranges.sql` (read-only, Databricks): review of the OMOP survey data. U1–U5 unit coverage, fan-out, unit concepts, unitless fields and source unit text that disagrees with the assigned unit; U6–U7 value distributions per field and unit text, and rows with vs without unit text; U8 plausible and extreme ranges for 60 fields with same-date context; U9 waist and hip (zeros, values entered in the wrong fields, mismatch with height, weight and BMI, comparison within age band); U10 refraction; U11 dates before enrollment and age outside the eligibility range (`year_of_birth` is capped on purpose, so ages near 90 are not flagged); U12 repeated entries; U13 zeros by year; U14 monthly median drift. Each section notes the baseline from the 2026-10-28 check of the current build (counts only; query output lists `person_id` and is not to be posted publicly).
+- Known exception documented in U3: the LDL unit row is `import_ldl_cholesterol_u` (line 538) for the field `import_ldl_cholesterol_calculation`.
+
+### Added — release snapshot
+
+- `releases/v1.8.4/`: frozen reports for v1.8.4, for citation (poster and paper metrics): `concept_map_metrics.md` (counts from `count_concept_map.sql`), `audit_concept_map_report.md` (output of `audit_concept_map.py`) and a `README.md` with the MD5 and git blob of each v1.8.4 file and the concept map version used by each OMOP survey build (build checked 2026-10-28: `v1.0-tvst`; handoff to the ETL team for the next build: `v1.8.4`).
+
+### Fixed
+
+- `redCapDataDictionaryWithExtension/scripts/validate_concept_map_against_data.sql`, section 8: expected value 337,169 → **337,196** rows with a unit (typo; the field counts 86 / 26 and the 104,454 unitless rows were correct).
+
+### Changed
+
+- `value-set-mapping-common/scripts/README.md`: lists `09_validate_units_and_value_ranges.sql`.
+- `.gitignore`: ignores the default output of `audit_concept_map.py` (`scripts/audit_concept_map_report.md`); release snapshots go in `releases/<version>/`.
+- `CITATION.cff`, `codemeta.json`: version v1.8.5.
+
 ## [v1.8.4] - 2026-10-28
 
 Custom concepts with a standard equivalent move to the standard concept, and one missing answer is added. The candidates came from the vocabulary review of v1.8.3 against `omop_vocab` (`validate_concept_map_vocab.sql` V8 and a name search ignoring case and punctuation); each target's class, standard status and validity were confirmed in `omop_vocab`. Seven rows are edited in place and one is appended (line 2144), so every existing line number is the same as in v1.8.3. The ETL must apply these changes (OBSERVATION and CONDITION_OCCURRENCE concepts).

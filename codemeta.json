@@ -7,7 +7,7 @@
     "codeRepository": "https://github.com/AI-READI/DataElementMaps",
     "downloadUrl": "https://github.com/AI-READI/DataElementMaps",
     "issueTracker": "https://github.com/AI-READI/DataElementMaps/issues",
-    "version": "v1.8.4",
+    "version": "v1.8.5",
     "datePublished": "2026-10-28",
     "releaseNotes": "Concept map v1.6: maps the A/G ratio, BUN/creatinine ratio (stored as creatinine/BUN), BMI and waist circumference to standard LOINC concepts, adds the unit ratio for the three ratio fields, and excludes the leftover answers of two removed questions. ETL re-run required. See CHANGELOG.md.",
     "dateCreated": "2023-06-28",

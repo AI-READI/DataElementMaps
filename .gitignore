@@ -3,3 +3,5 @@
 validation_report_*.md
 .idea
 __pycache__
+# default output of audit_concept_map.py (release snapshots go in releases/<version>/)
+redCapDataDictionaryWithExtension/scripts/audit_concept_map_report.md
