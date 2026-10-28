@@ -40,7 +40,7 @@
 --   * Answer rows switched off because the answer is not a REDCap choice (Map_to_OMOP = 'No',
 --     answer 0 of susmkstoage, sualcage, suvptoyr since v1.8) are counted with
 --     "Answer to an excluded question".
---   * Not designated (764 in v1.8) = REDCap data elements in the curated dictionary
+--   * Not designated (763 in v1.8.4) = REDCap data elements in the curated dictionary
 --     (2,906) that are not rows in this mapping file. Rows that are not REDCap data
 --     elements (the unit rows added in v1.4, v1.6 and v1.7, the 44 retinal imaging procedure
 --     rows added in v1.7, the Yes/No answer rows and the ECG
@@ -121,9 +121,9 @@ FROM rows
 ORDER BY CASE category
            WHEN 'Standard' THEN 1 WHEN 'Custom' THEN 2 WHEN 'Mapped total' THEN 3
            WHEN 'Designated but unmapped' THEN 4 WHEN 'Not designated' THEN 5 ELSE 6 END;
--- Expected (v1.8.2): Standard 1,515 (52.1%) / 400; Custom 489 (16.8%) / 342;
---           Mapped 2,004 (69.0%) / 742; Designated-unmapped 138 (4.7%);
---           Not designated 764 (26.3%); Total 2,906.
+-- Expected (v1.8.4): Standard 1,519 (52.3%) / 403; Custom 486 (16.7%) / 339;
+--           Mapped 2,005 (69.0%) / 742; Designated-unmapped 138 (4.7%);
+--           Not designated 763 (26.3%); Total 2,906.
 
 -- 2. Elements and distinct concepts by vocabulary ----------------------------------
 SELECT mapping_category,
@@ -134,8 +134,8 @@ FROM mapping_classified
 WHERE mapping_category IN ('Standard','Custom')
 GROUP BY mapping_category, TARGET_VOCABULARY_ID
 ORDER BY mapping_category DESC, elements DESC;
--- Expected (v1.8.2): LOINC 1,190/277; SNOMED 171/74; UCUM 132/40; CPT4 12/1; PPI 5/5;
---           Ethnicity 4/2; OMOP Extension 1/1; AIREADI 390/265; AIREADI-Vision 69/47; AIREADI-MOCA 30/30.
+-- Expected (v1.8.4): LOINC 1,190/277; SNOMED 172/75; UCUM 132/40; CPT4 12/1; PPI 8/7;
+--           Ethnicity 4/2; OMOP Extension 1/1; AIREADI 387/262; AIREADI-Vision 69/47; AIREADI-MOCA 30/30.
 
 -- 3. Designated-but-unmapped breakdown -------------------------------------------------
 SELECT unmapped_reason, COUNT(*) AS n
@@ -143,7 +143,7 @@ FROM mapping_classified
 WHERE mapping_category = 'Designated but unmapped'
 GROUP BY unmapped_reason
 ORDER BY n DESC;
--- Expected (v1.8.2): reference range 46; survey timestamp 34; superseded unit row 20; specimen handling 12;
+-- Expected (v1.8.4): reference range 46; survey timestamp 34; superseded unit row 20; specimen handling 12;
 --           BCVA 10; answer to an excluded question 7; no matching concept 5; not collected (NRBC) 2;
 --           REDCap administrative 1; MoCA paper flag 1 (total 138).
 
@@ -156,9 +156,9 @@ FROM mapping_classified
 WHERE mapping_category IN ('Standard','Custom')
 GROUP BY mapping_category, PREDICATE_ID, CONFIDENCE
 ORDER BY mapping_category DESC, PREDICATE_ID, CONFIDENCE DESC;
--- Expected (v1.8.2, standard): exact 1,255; close 258 (170 at 1, 88 at 0.75); related 2;
---                      confidence 1 = 1,425; 0.75 = 89; 0.5 = 1.
--- Expected (v1.8.2, custom):   all 489 exact match at confidence 1.
+-- Expected (v1.8.4, standard): exact 1,258; close 259 (170 at 1, 89 at 0.75); related 2;
+--                      confidence 1 = 1,428; 0.75 = 90; 0.5 = 1.
+-- Expected (v1.8.4, custom):   all 486 exact match at confidence 1.
 
 -- 5. Laterality qualifiers ---------------------------------------------------------------
 SELECT qualifier_concept_id, qualifier_source_value, COUNT(*) AS n

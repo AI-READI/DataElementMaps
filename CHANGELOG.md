@@ -11,6 +11,45 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [v1.8.4] - 2026-10-28
+
+Custom concepts with a standard equivalent move to the standard concept, and one missing answer is added. The candidates came from the vocabulary review of v1.8.3 against `omop_vocab` (`validate_concept_map_vocab.sql` V8 and a name search ignoring case and punctuation); each target's class, standard status and validity were confirmed in `omop_vocab`. Seven rows are edited in place and one is appended (line 2144), so every existing line number is the same as in v1.8.3. The ETL must apply these changes (OBSERVATION and CONDITION_OCCURRENCE concepts).
+
+### Changed — custom → standard
+
+| Line | Row | v1.8.3 | v1.8.4 |
+|---|---|---|---|
+| 929 | `pxne16` question "The crime rate in my neighborhood makes it unsafe to go on walks during the day…" | 2005200121 (custom) | **40192414** (PPI `ips_16`, Question, standard; same wording), exactMatch 1 |
+| 957, 964 | `pxne4`, `pxne5` answer 88 "Does not apply to my neighborhood" | 2005200268 (custom) | **40192520** (PPI `SDOH_9`, Answer, standard; same wording), exactMatch 1 |
+| 1869 | `mh_a1c` "Yes" (Condition) "Elevated A1C levels (elevated blood sugars)" | 2005200547 (custom) | **4214376** *Hyperglycemia* (SNOMED 80394007, Condition, standard), closeMatch 0.75 |
+| 1849 | `mh_a1c` question `MODIFIER` | 2005200547 | 4214376 (follows line 1869, as for the v1.5 health-history conditions) |
+
+- `TARGET_DOMAIN_ID` of the two answer rows stays *Meas Value*: the answer is written as `value_as_concept_id` of the OBSERVATION. The vocabulary domain of 40192520 is Observation (PPI answers), so `validate_concept_map_vocab.sql` V2 lists these two rows as a deliberate domain override.
+- `mh_a1c` "Yes" now writes a standard CONDITION_OCCURRENCE (hyperglycemia) that OHDSI cohorts can find. closeMatch 0.75: the answer reports elevated A1C (blood sugar), which `mhterm_predm` and `mhterm_dm2` complement as separate items.
+- The custom concepts 2005200121, 2005200268 and 2005200547 are no longer referenced by the map but are kept in `concept_manual.csv` (IDs are never reused).
+- Reviewed and not changed: the other `pxne*` items (PPI `ips_1`–`ips_7` are non-standard and map to the PhenX LOINC questions the map already uses; `pxne8`–`pxne15` and `pxne17` have no PPI question); the insurance block `pxhic1`–`pxhic7` (All of Us models insurance as one non-standard question, `basics_11a`, with the insurance types as answers, so `cope_a_193` *Medicare* is an Answer, not a question concept); `viaomthd` *EVA* (the same-name standard concept 42066053 is a Geography place); `pxhic*` *Covered* (SNOMED 255334000 is a general qualifier, not insurance coverage); `mhoccur_circ`, `mhoccur_cvdot` (compound answers; only very broad standard parents exist).
+
+### Added
+
+- `eos_dsvst` answer 3 "Devices Returned" (line 2144) → **2005200589** *Device returned* (existing AI-READI custom concept, as used for `dcvgmenyn` and `dvenvenyn`), exactMatch 1, in the format of line 267. Stages 0–2 were mapped and stage 3 was not; the current data has 3 records with stage 3.
+
+### Changed — metadata
+
+- `SRC_CODE` filled for the two imported ratio questions that had it blank: line 554 `import_buncreatinineratio` → 31045-8, line 584 `import_ag_ratio` → 1759-0 (the LOINC code, as for the other imported labs). The ETL and the unit lookup match on `FIELD_ID`, so this changes nothing in the data.
+
+### Added — release check script
+
+- `redCapDataDictionaryWithExtension/scripts/validate_concept_map_against_data.sql` (read-only, Databricks): checks the map against the OMOP survey data and the vocabulary, alongside `validate_concept_map_vocab.sql`. Row count; targets non-standard, invalid or missing in `omop_vocab`; answer and question fan-out (one value row per REDCap answer); the v1.8.x changes in place; data fields with no map row; answer codes in the data with no map row; unit coverage, no fan-out and Unit-domain units; question rows pointing at Answer-class concepts and the reverse. Each check states its expected result.
+
+### Changed — master REDCap data dictionary
+
+- Eight master rows take the new values (`Origin` = Changed, `Date_of_Variable_Modification` 10/28/2026), including the existing `eos_dsvst` 3 row (now `Map_to_OMOP` = Yes). 3,150 rows; every concept map row has a master row with the same values.
+
+### Regenerated
+
+- map2omop (2,113 rows) and open-source public (1,998) versions, SSSOM (2,068 rows; 75 incomplete) and LinkML (2,143 records). `unit_concept_lookup.csv` and `unit_concept_lookup_extended.csv` unchanged.
+- Counts: standard 1,519 (403 concepts); custom 486 (339); mapped 2,005 (69.0%, 742); designated but unmapped 138; not designated 763. SNOMED 172/75; PPI 8/7. Standard predicates: exact 1,258; close 259 (170 at 1, 89 at 0.75); related 2. Audit A7 (custom Condition targets) 3 → 2. `count_concept_map.sql` expected values and `validate_concept_map_vocab.sql` V0 (2,143) updated.
+
 ## [v1.8.3] - 2026-10-27
 
 Two lab unit rows are corrected to the units the data is reported in. A check of the delivered OMOP survey data against the v1.8.2 unit lookup found that the unit text in the data and the value ranges disagree with the map for C-peptide and urine albumin; the field key (which the join applies first) would have labeled C-peptide 1,000× and urine albumin 10× off. Two rows are edited in place, so every line number is the same as in v1.8.2. The ETL must apply this change (`MEASUREMENT.unit_concept_id`).

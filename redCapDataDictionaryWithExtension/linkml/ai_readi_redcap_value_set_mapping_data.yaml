@@ -11632,6 +11632,7 @@ mappings:
   field_id: import_buncreatinineratio
   field_id_num: 2960
   question_or_answer: Question
+  src_code: 31045-8
   src_code_id: BUN/Creatinine ratio
   src_cd_description: BUN/Creatinine ratio
   target_concept_id: 3033837
@@ -12153,6 +12154,7 @@ mappings:
   field_id: import_ag_ratio
   field_id_num: 2990
   question_or_answer: Question
+  src_code: 1759-0
   src_code_id: A/G Ratio (calculated field)
   src_cd_description: Albumin/Globulin ratio
   target_concept_id: 3020509
@@ -19421,13 +19423,13 @@ mappings:
   src_code: pxne16
   src_cd_description: The crime rate in my neighborhood makes it unsafe to go on walks during the day. Would you say that
     you...
-  target_concept_id: 2005200121
-  local_concept_id: 2005200121
+  target_concept_id: 40192414
   target_concept_name: The crime rate in my neighborhood makes it unsafe to go on walks during the day. Would you say that
     you...
   target_domain_id: Observation
-  target_vocabulary_id: AIREADI
-  target_concept_class_id: Survey
+  target_vocabulary_id: PPI
+  target_concept_class_id: Question
+  target_concept_code: ips_16
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -20037,12 +20039,12 @@ mappings:
   src_code: '88'
   src_code_id: pxne4_88
   src_cd_description: Does not apply to my neighborhood
-  target_concept_id: 2005200268
-  local_concept_id: 2005200268
+  target_concept_id: 40192520
   target_concept_name: Does not apply to my neighborhood
   target_domain_id: Meas Value
-  target_vocabulary_id: AIREADI
+  target_vocabulary_id: PPI
   target_concept_class_id: Answer
+  target_concept_code: SDOH_9
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -20191,12 +20193,12 @@ mappings:
   src_code: '88'
   src_code_id: pxne5_88
   src_cd_description: Does not apply to my neighborhood
-  target_concept_id: 2005200268
-  local_concept_id: 2005200268
+  target_concept_id: 40192520
   target_concept_name: Does not apply to my neighborhood
   target_domain_id: Meas Value
-  target_vocabulary_id: AIREADI
+  target_vocabulary_id: PPI
   target_concept_class_id: Answer
+  target_concept_code: SDOH_9
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
@@ -39782,7 +39784,7 @@ mappings:
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
-  modifier: '2005200547'
+  modifier: '4214376'
   qualifier_concept_id: 2005200547
   qualifier_source_value: Elevated A1C levels (elevated blood sugars)
 - mapping_record_id: AIREADI_MAPPING_1849
@@ -40207,15 +40209,15 @@ mappings:
   src_code: '1'
   src_code_id: mh_a1c_1
   src_cd_description: 'Yes'
-  target_concept_id: 2005200547
-  local_concept_id: 2005200547
-  target_concept_name: Elevated A1C levels (elevated blood sugars)
+  target_concept_id: 4214376
+  target_concept_name: Hyperglycemia
   target_domain_id: Condition
-  target_vocabulary_id: AIREADI
+  target_vocabulary_id: SNOMED
   target_concept_class_id: Disorder
+  target_concept_code: '80394007'
   target_standard_concept: S
-  predicate_id: skos:exactMatch
-  confidence: 1.0
+  predicate_id: skos:closeMatch
+  confidence: 0.75
 - mapping_record_id: AIREADI_MAPPING_1869
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -46193,6 +46195,27 @@ mappings:
   target_vocabulary_id: LOINC
   target_concept_class_id: Answer
   target_concept_code: LA26683-5
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2143
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'Yes'
+  form_name: disposition
+  field_type: radio
+  field_id: eos_dsvst
+  question_or_answer: Answer
+  src_code: '3'
+  src_code_id: eos_dsvst_3
+  src_cd_description: Devices Returned
+  target_concept_id: 2005200589
+  local_concept_id: 2005200589
+  target_concept_name: Device returned
+  target_domain_id: Observation
+  target_vocabulary_id: AIREADI
+  target_concept_class_id: Qualifier Value
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
