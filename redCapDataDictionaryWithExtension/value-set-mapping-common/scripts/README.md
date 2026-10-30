@@ -8,6 +8,7 @@ Scripts to fill `MEASUREMENT.unit_concept_id` from the AI-READI concept map (`..
 | `00_load_concept_map.sql` | Loads the mapping file as `concept_map` (only needed for option B; set the file path) |
 | `unit_concept_lookup.csv` | **The ready-made lookup table** (114 rows): load it and skip building it |
 | `unit_concept_lookup_extended.csv` | **Reference view** of the 89 field keys (v1.8.2): per measurement field, its measurement (target) concept (ID, name, vocabulary, code) and its unit concept (ID, name, unit text), with the concept map lines they come from. Not needed by the join; rebuilt with `build_unit_concept_lookup_extended.py` |
+| `imported_field_concept_lookup.csv` | **Imported form, one row per field** (v1.8.6): the 65 mapped questions of the REDCap `imported` form (31 imported labs, MoCA, interview age, education), keyed by the REDCap field name (`field_id`), with the target concept (ID, name, domain, vocabulary, code), the `SRC_CODE` of the map (the LOINC code for the labs), the unit and the map line numbers. Join imported records on `field_id`; no need to edit `SRC_CODE` in the concept map. Rebuilt with `build_imported_field_concept_lookup.py` |
 | `01a_load_unit_concept_lookup_csv.sql` | Option A: creates `unit_lookup` from `unit_concept_lookup.csv` |
 | `01_create_unit_lookup.sql` | Option B: **one query** that builds `unit_lookup` from the concept map (same 114 rows) |
 | `02_view_unit_lookup.sql` | Review `unit_lookup`: counts, field and unit-text lists, duplicate check |
@@ -15,6 +16,7 @@ Scripts to fill `MEASUREMENT.unit_concept_id` from the AI-READI concept map (`..
 | `04_example_omop_survey_measurement.sql` | The same join, ready to run on `omop_survey.measurement` |
 | `05_check_no_fanout.sql` | Checks that the join adds no rows |
 | `06_check_units_after_etl.sql` | Checks units in MEASUREMENT after the ETL re-run |
+| `../ai_readi_redcap_value_set_mapping.metadata.json` | **Map version metadata** (v1.8.6): map version, repository release, row count and MD5 of each mapping file, and the values to record in OMOP (`cdm_source.source_description`, `metadata`). Written by `../../scripts/identify_map_version.py --write-metadata` |
 | `09_validate_units_and_value_ranges.sql` | Read-only data review of the delivered OMOP survey data (v1.8.5): unit coverage and fan-out, unit concepts, unit text vs assigned unit, value distributions, value-range flags, waist/hip, refraction, dates and age, repeated entries, zeros by year and monthly drift. Baselines from the 2026-10-28 check are in the comments |
 | `medication_route_lookup.csv`, `07_`, `07a_`, `08_` | Medication route lookup for `DRUG_EXPOSURE.route_concept_id` (see the end of this file) |
 

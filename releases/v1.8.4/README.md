@@ -25,5 +25,11 @@ Paths are under `redCapDataDictionaryWithExtension/`. MD5 is of the file as chec
 
 | OMOP survey build | Concept map used |
 |---|---|
-| Build checked 2026-10-28 | `v1.0-tvst` |
+| Build checked 2026-10-28 | `v1.2.1`, with local edits (see below) |
 | Handoff to the ETL team for the next build | `v1.8.4` (files above) |
+
+How the build version was identified: every change made in v1.1 and v1.2 is present in the data (`cage` → 3022304, hearing loss → 377889, `lbscat_rbc` → 3020416, `lbscat_wbc` → 3000905, `dmlgrain` → 2005200633, `paid_scrd` → 2005200635), and none of the v1.3 changes is (high cholesterol is still 4159131 and cancer 4194405; v1.3 changed them to 4029305 and 443392). v1.2.1 changed only concept names, so it cannot be told apart from v1.2 in the data.
+
+The mapping file used for the build, provided after the check, confirms **v1.2.1**: after allowing for row order and for spreadsheet re-formatting (8 long SNOMED codes shown in scientific notation, 4 ranges such as "3-4" turned into dates), it matches the v1.2.1 `_ai_readi_redcap_value_set_mapping_common.csv` row for row, with every concept ID unchanged, except for 33 local `SRC_CODE` edits: the 29 imported-lab question rows carry the REDCap field name (e.g. `import_glucose`) instead of the LOINC code (moved to `LOCAL_CONCEPT_ID` in 27 of them), and 4 MoCA rows carry the field names used in the data (`fluency_language`, `fluency_language_time`, `delayed_recall_with_no_clue`, `delayed_recall_with_no_clue_time`).
+
+The comparison can be repeated with `python redCapDataDictionaryWithExtension/scripts/identify_map_version.py <mapping file>` (added in v1.8.6).

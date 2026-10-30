@@ -22,7 +22,7 @@
 --   U8  Plausible / extreme range check per field (summary + row list)
 --   U9  Waist / hip: zeros, values entered in the wrong fields, mismatch with BMI
 --   U10 Refraction: large difference between the two eyes
---   U11 Dates and age at measurement
+--   U11 Dates and age at measurement; stored ages over 89 (cage, age_years_at_interview)
 --   U12 Same person, date and field with different values
 --   U13 Zeros by year (fields where 0 is not a real result)
 --   U14 Monthly median drift (lab or assay changes)
@@ -372,6 +372,24 @@ FROM mu JOIN omop_survey.person p ON p.person_id = mu.person_id
 GROUP BY 1, 2
 HAVING min_age < 39 OR max_age > 100
 ORDER BY min_age;
+
+-- Stored age values over 89 (ages must be capped at 90 = "90 or older").
+-- cage: "Age (in years)", demographics survey, concept 3022304 (value_as_number and value_as_string).
+-- age_years_at_interview: MoCA import, "pull down menu of 3-4 year age spans, age in years", 2005200372.
+-- Baseline (2026-10-28): cage 18 rows over 89 (90-94); age_years_at_interview added in v1.8.6, not yet checked.
+-- Pass: rows_over_89 = 0 and max_value <= 90 for both fields.
+SELECT tbl, field, COUNT(*) AS n, MIN(v) AS min_value, MAX(v) AS max_value,
+       MAX(TRY_CAST(s AS DOUBLE)) AS max_value_string,
+       SUM(CASE WHEN v > 89 OR TRY_CAST(s AS DOUBLE) > 89 THEN 1 ELSE 0 END) AS rows_over_89
+FROM (
+  SELECT 'observation' AS tbl, TRIM(SPLIT_PART(observation_source_value, ',', 1)) AS field,
+         value_as_number AS v, value_as_string AS s
+  FROM omop_survey.observation
+  UNION ALL
+  SELECT 'measurement', TRIM(SPLIT_PART(measurement_source_value, ',', 1)), value_as_number, CAST(NULL AS STRING)
+  FROM omop_survey.measurement)
+WHERE field IN ('cage', 'age_years_at_interview')
+GROUP BY 1, 2;
 
 -- -----------------------------------------------------------------------------
 -- U12. Same person, date and field with different values

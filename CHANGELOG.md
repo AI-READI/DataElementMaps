@@ -11,6 +11,32 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [v1.8.6] - 2026-10-29
+
+Map version tracking and one documentation fix. **No change to the concept map, the unit and route lookups, SSSOM or LinkML**: the mapping files are those of v1.8.4 (map version v1.8.4); no ETL re-run is needed for this release.
+
+### Added — map version tracking
+
+- `redCapDataDictionaryWithExtension/value-set-mapping-common/ai_readi_redcap_value_set_mapping.metadata.json`: map version (v1.8.4), repository release (v1.8.6), date, and the row count and MD5 of the common, map2omop and open-source public mapping files. It also gives the values the ETL can write to OMOP so that each build records the map it used: `cdm_source.source_description` = "AI-READI concept map v1.8.4 (common file MD5 …)", or a `metadata` row (name "AI-READI concept map version", `value_as_string` = v1.8.4). Regenerate at each release that changes the mapping files.
+- `redCapDataDictionaryWithExtension/scripts/identify_map_version.py` (standard library; needs a clone with tags): given any mapping CSV, finds the closest release, ignoring row order and spreadsheet re-formatting (long codes in scientific notation, ranges turned into dates), and lists the rows edited, added or removed. `--write-metadata` writes the metadata file.
+
+### Added — imported form lookup
+
+- `redCapDataDictionaryWithExtension/value-set-mapping-common/scripts/imported_field_concept_lookup.csv` (65 rows) and `build_imported_field_concept_lookup.py`: one row per mapped question of the REDCap `imported` form (31 imported labs, 30 MoCA items, `test_upload_date`, `years_of_education`, `moca_total_score_time`, `age_years_at_interview`), keyed by the REDCap field name. Columns: `field_id`, `field_label`, `src_code` (the map's `SRC_CODE`: the LOINC code for the labs), `target_concept_id`, `target_concept_name`, `target_domain_id`, `target_vocabulary_id`, `target_concept_code`, `unit_concept_id`, `unit_concept_name`, `unit_source_value`, `map_line`, `map_line_unit`, `note`. The ETL can join imported records on `field_id` and keep the LOINC code for reference, so `SRC_CODE` no longer needs local edits. Derived from the concept map (which is unchanged); for the 61 fields that are also in `unit_concept_lookup_extended.csv`, the concept and unit agree. `unit_concept_lookup.csv` and `unit_concept_lookup_extended.csv` are unchanged.
+
+### Added — age check
+
+- `09_validate_units_and_value_ranges.sql`, U11: stored ages over 89 for `cage` (concept 3022304) and `age_years_at_interview` (MoCA import, 2005200372), in `value_as_number` and `value_as_string`. Ages must be capped at 90 ("90 or older").
+
+### Fixed
+
+- `releases/v1.8.4/README.md`: the concept map version of the OMOP survey build checked on 2026-10-28 is **v1.2.1** (with 33 local `SRC_CODE` edits), not `v1.0-tvst`. Identified from the data: all v1.1 and v1.2 concept changes are present (e.g. `cage` → 3022304, `lbscat_rbc` → 3020416, `lbscat_wbc` → 3000905) and no v1.3 change is (e.g. high cholesterol 4159131 → 4029305 not applied). The mapping file used for the build, provided after the check, confirms v1.2.1 with `identify_map_version.py`: every concept ID matches; the only content differences are 33 local `SRC_CODE` edits (field names instead of LOINC codes for the 29 imported labs, the LOINC code moved to `LOCAL_CONCEPT_ID` in 27 of them, and the 4 MoCA field names used in the data, which match the map since v1.4). The file had also been re-saved in a spreadsheet: 8 long SNOMED codes lost digits (scientific notation) and 4 ranges such as "3-4" became dates; concept IDs were not affected.
+
+### Changed
+
+- `value-set-mapping-common/scripts/README.md`: lists the metadata file and the imported form lookup.
+- `CITATION.cff`, `codemeta.json`: version v1.8.6, date 2026-10-29.
+
 ## [v1.8.5] - 2026-10-28
 
 Validation scripts and a frozen v1.8.4 metrics snapshot. **No change to the concept map, the unit and route lookups, the master data dictionary, SSSOM or LinkML**: row counts and hashes are those of v1.8.4, and no ETL re-run is needed for this release.
