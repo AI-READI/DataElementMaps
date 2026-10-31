@@ -2,8 +2,8 @@
 (imported labs, MoCA, interview age and education), keyed by the REDCap field name.
 
 Use it in the ETL to join imported records on the field name (`field_id`) and take the OMOP concept from
-`target_concept_id`, without editing `SRC_CODE` in the concept map: the LOINC code of each lab stays in
-`src_code` for reference.
+`target_concept_id`. Since v1.8.8 the map's SRC_CODE of the imported labs is the field name (so `src_code`
+equals `field_id`); the LOINC code of each lab is in `target_concept_code`.
 
 Usage (from the repository root):
     python redCapDataDictionaryWithExtension/value-set-mapping-common/scripts/build_imported_field_concept_lookup.py .

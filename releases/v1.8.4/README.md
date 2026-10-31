@@ -26,7 +26,7 @@ Paths are under `redCapDataDictionaryWithExtension/`. MD5 is of the file as chec
 | OMOP survey build | Concept map used |
 |---|---|
 | Build checked 2026-10-28 | `v1.2.1`, with local edits (see below) |
-| Handoff to the ETL team for the next build | `v1.8.4` (files above) |
+| For ETL use in the next build | `v1.8.4` (files above) |
 
 How the build version was identified: every change made in v1.1 and v1.2 is present in the data (`cage` → 3022304, hearing loss → 377889, `lbscat_rbc` → 3020416, `lbscat_wbc` → 3000905, `dmlgrain` → 2005200633, `paid_scrd` → 2005200635), and none of the v1.3 changes is (high cholesterol is still 4159131 and cancer 4194405; v1.3 changed them to 4029305 and 443392). v1.2.1 changed only concept names, so it cannot be told apart from v1.2 in the data.
 

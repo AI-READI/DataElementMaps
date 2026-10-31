@@ -11,6 +11,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [v1.8.8] - 2026-10-31
+
+The concept map is easier to use in an ETL: every question row now carries its REDCap field name in `SRC_CODE`. **Map version v1.8.8.** Concept IDs are unchanged; no row was added or removed and every line number is the same.
+
+### Changed — concept map (`_ai_readi_redcap_value_set_mapping_common.csv`)
+
+- `SRC_CODE` of the 31 imported lab question rows (form `imported`, e.g. line 540 `import_glucose`, 1715 `import_uacr`): the LOINC code → the REDCap field name (= `FIELD_ID`), as for every other question row and for the MoCA rows since v1.4. The LOINC code stays in `TARGET_CONCEPT_CODE` (with `TARGET_CONCEPT_ID`), so nothing is lost. An ETL can now take the field name of any question row from `SRC_CODE`, without local edits of the mapping file (the build checked in v1.8.4 used 33 local `SRC_CODE` edits). Lines 554 and 584, which v1.8.4 filled with the LOINC code, now also hold the field name.
+- Master data dictionary synchronized (the same 31 rows, Changed 10/31/2026). `map2omop` and the open-source public file regenerated (31 and 30 rows). SSSOM and LinkML regenerated: the subject IDs of these rows change from the LOINC code to the field name (e.g. `imported.2345-7.Glucose` → `imported.import_glucose`).
+- `imported_field_concept_lookup.csv`: `src_code` now equals `field_id` for the labs; the LOINC code is in `target_concept_code`. `unit_concept_lookup.csv` and `unit_concept_lookup_extended.csv` are unchanged.
+
+### Added — documentation
+
+- `value-set-mapping-common/scripts/README.md`, "Using the concept map in an ETL": split the map on `temp_Question_or_Answer` (Question, Answer, Unit), the key of each row type (questions `SRC_CODE`; answers `FIELD_ID` + `SRC_CODE`, checkbox column `FIELD_ID___SRC_CODE`; units `FIELD_ID` or `unit_concept_lookup.csv`), a pandas example that reads every column as text, answer rows that are records of their own (`TARGET_DOMAIN_ID`), fields with two question rows, and fixed units.
+
+### Changed
+
+- Metadata file: map version v1.8.8, row counts and MD5s. `validate_concept_map_against_data.sql` section 5, `validate_concept_map_vocab.sql` V0 and `build_imported_field_concept_lookup.py`: notes for v1.8.8.
+- `releases/v1.8.4/README.md` and the v1.8.5 entry below: "handoff to the ETL team" reworded to "for ETL use".
+- `CITATION.cff`, `codemeta.json`: version v1.8.8, date 2026-10-31.
+
 ## [v1.8.7] - 2026-10-29
 
 Concept map fixes found by comparing the map with a REDCap export header (2026-10-29 extract), and the custom vocabulary brought in sync with the map. **Map version v1.8.7**: the ETL should switch to the v1.8.7 mapping files (uACR was not loaded with earlier versions).
@@ -90,7 +110,7 @@ Validation scripts and a frozen v1.8.4 metrics snapshot. **No change to the conc
 
 ### Added — release snapshot
 
-- `releases/v1.8.4/`: frozen reports for v1.8.4, for citation (poster and paper metrics): `concept_map_metrics.md` (counts from `count_concept_map.sql`), `audit_concept_map_report.md` (output of `audit_concept_map.py`) and a `README.md` with the MD5 and git blob of each v1.8.4 file and the concept map version used by each OMOP survey build (build checked 2026-10-28: `v1.0-tvst`; handoff to the ETL team for the next build: `v1.8.4`).
+- `releases/v1.8.4/`: frozen reports for v1.8.4, for citation (poster and paper metrics): `concept_map_metrics.md` (counts from `count_concept_map.sql`), `audit_concept_map_report.md` (output of `audit_concept_map.py`) and a `README.md` with the MD5 and git blob of each v1.8.4 file and the concept map version used by each OMOP survey build (build checked 2026-10-28: `v1.0-tvst`; for ETL use in the next build: `v1.8.4`).
 
 ### Fixed
 
