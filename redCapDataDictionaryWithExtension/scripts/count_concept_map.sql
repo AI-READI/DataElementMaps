@@ -37,10 +37,13 @@
 --     designated-but-unmapped ("Superseded unit row").
 --   * The NRBC rows (lbscat_nrbc, lbscat_nrbc_u; Map_to_OMOP = 'No' since v1.8.1: NRBC is not
 --     collected) are reported as designated-but-unmapped ("Not collected (NRBC)").
+--   * Duplicate imported fields (Map_to_OMOP = 'No' since v1.8.7: import_ldl_cholesterol,
+--     import_globulin_total, import_a_g_ratio, copies of mapped fields) are reported as
+--     designated-but-unmapped ("Duplicate field (not loaded)").
 --   * Answer rows switched off because the answer is not a REDCap choice (Map_to_OMOP = 'No',
 --     answer 0 of susmkstoage, sualcage, suvptoyr since v1.8) are counted with
 --     "Answer to an excluded question".
---   * Not designated (763 in v1.8.4) = REDCap data elements in the curated dictionary
+--   * Not designated (759 in v1.8.7; 763 in v1.8.4) = REDCap data elements in the curated dictionary
 --     (2,906) that are not rows in this mapping file. Rows that are not REDCap data
 --     elements (the unit rows added in v1.4, v1.6 and v1.7, the 44 retinal imaging procedure
 --     rows added in v1.7, the Yes/No answer rows and the ECG
@@ -78,6 +81,7 @@ SELECT
         WHEN Map_to_OMOP <> 'Yes' AND SRC_CODE LIKE 'moca_paper%'   THEN 'MoCA paper-administration flag'
         WHEN Map_to_OMOP <> 'Yes' AND (SRC_CODE = 'lbscat_nrbc' OR FIELD_ID = 'lbscat_nrbc_u')
                                                                     THEN 'Not collected (NRBC)'
+        WHEN Map_to_OMOP <> 'Yes' AND MODIFIER LIKE 'Not loaded:%'   THEN 'Duplicate field (not loaded)'
         WHEN Map_to_OMOP <> 'Yes' AND temp_Question_or_Answer = 'Answer'
                                                                     THEN 'Answer to an excluded question'
         WHEN Map_to_OMOP <> 'Yes' AND TARGET_DOMAIN_ID = 'Unit'     THEN 'Superseded unit row'
@@ -121,9 +125,10 @@ FROM rows
 ORDER BY CASE category
            WHEN 'Standard' THEN 1 WHEN 'Custom' THEN 2 WHEN 'Mapped total' THEN 3
            WHEN 'Designated but unmapped' THEN 4 WHEN 'Not designated' THEN 5 ELSE 6 END;
--- Expected (v1.8.4): Standard 1,519 (52.3%) / 403; Custom 486 (16.7%) / 339;
---           Mapped 2,005 (69.0%) / 742; Designated-unmapped 138 (4.7%);
---           Not designated 763 (26.3%); Total 2,906.
+-- Expected (v1.8.7): Standard 1,524 (52.4%) / 405; Custom 486 (16.7%) / 339;
+--           Mapped 2,010 (69.2%) / 744; Designated-unmapped 137 (4.7%);
+--           Not designated 759 (26.1%); Total 2,906.
+--           (v1.8.4: Standard 1,519 / 403; Mapped 2,005 / 742; Designated-unmapped 138; Not designated 763.)
 
 -- 2. Elements and distinct concepts by vocabulary ----------------------------------
 SELECT mapping_category,
@@ -134,7 +139,7 @@ FROM mapping_classified
 WHERE mapping_category IN ('Standard','Custom')
 GROUP BY mapping_category, TARGET_VOCABULARY_ID
 ORDER BY mapping_category DESC, elements DESC;
--- Expected (v1.8.4): LOINC 1,190/277; SNOMED 172/75; UCUM 132/40; CPT4 12/1; PPI 8/7;
+-- Expected (v1.8.7): LOINC 1,191/277; SNOMED 176/77; UCUM 132/40; CPT4 12/1; PPI 8/7;
 --           Ethnicity 4/2; OMOP Extension 1/1; AIREADI 387/262; AIREADI-Vision 69/47; AIREADI-MOCA 30/30.
 
 -- 3. Designated-but-unmapped breakdown -------------------------------------------------
@@ -143,9 +148,10 @@ FROM mapping_classified
 WHERE mapping_category = 'Designated but unmapped'
 GROUP BY unmapped_reason
 ORDER BY n DESC;
--- Expected (v1.8.4): reference range 46; survey timestamp 34; superseded unit row 20; specimen handling 12;
---           BCVA 10; answer to an excluded question 7; no matching concept 5; not collected (NRBC) 2;
---           REDCap administrative 1; MoCA paper flag 1 (total 138).
+-- Expected (v1.8.7): reference range 46; survey timestamp 34; superseded unit row 20; specimen handling 12;
+--           answer to an excluded question 7; BCVA sign modifier 6; no matching concept 5;
+--           duplicate field (not loaded) 3; not collected (NRBC) 2; REDCap administrative 1;
+--           MoCA paper flag 1 (total 137). (v1.8.4: BCVA 10, no duplicate fields; total 138.)
 
 -- 4. Confidence and SKOS predicate distribution -----------------------------------------
 SELECT mapping_category,
@@ -156,9 +162,9 @@ FROM mapping_classified
 WHERE mapping_category IN ('Standard','Custom')
 GROUP BY mapping_category, PREDICATE_ID, CONFIDENCE
 ORDER BY mapping_category DESC, PREDICATE_ID, CONFIDENCE DESC;
--- Expected (v1.8.4, standard): exact 1,258; close 259 (170 at 1, 89 at 0.75); related 2;
---                      confidence 1 = 1,428; 0.75 = 90; 0.5 = 1.
--- Expected (v1.8.4, custom):   all 486 exact match at confidence 1.
+-- Expected (v1.8.7, standard): exact 1,259; close 261 (170 at 1, 91 at 0.75); broad 2 (0.75); related 2;
+--                      confidence 1 = 1,429; 0.75 = 94; 0.5 = 1.
+-- Expected (v1.8.7, custom):   all 486 exact match at confidence 1.
 
 -- 5. Laterality qualifiers ---------------------------------------------------------------
 SELECT qualifier_concept_id, qualifier_source_value, COUNT(*) AS n
@@ -167,8 +173,8 @@ WHERE mapping_category IN ('Standard','Custom')
   AND qualifier_concept_id IN ('45876703','45883829','4298982','4320144','45888271','45888270')
 GROUP BY qualifier_concept_id, qualifier_source_value
 ORDER BY qualifier_concept_id;
--- Expected: Right eye 78 (45876703) and 22 (45888271, CPT4 RT, v1.7 procedure rows);
---           Left eye 78 (45883829) and 22 (45888270, CPT4 LT); Structure of right foot 2;
+-- Expected (v1.8.7): Right eye 79 (45876703; 78 before the v1.8.7 viaod_nd row) and 22 (45888271, CPT4 RT,
+--           v1.7 procedure rows); Left eye 79 (45883829) and 22 (45888270, CPT4 LT); Structure of right foot 2;
 --           Structure of left foot 2.
 
 -- 6. Integrity checks (each should return 0 rows) ---------------------------------------

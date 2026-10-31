@@ -28,7 +28,7 @@ import_alt_got,ALT (GPT),1742-6,3006923,Alanine aminotransferase [Enzymatic acti
 import_hba1c,HbA1c,4548-4,3004410,Hemoglobin A1c/Hemoglobin.total in Blood,Measurement,LOINC,4548-4,8554,percent,%,603,604,
 import_urine_creatinine,Urine creatinine,2161-8,3017250,Creatinine [Mass/volume] in Urine,Measurement,LOINC,2161-8,8840,milligram per deciliter,mg/dL,610,611,
 import_urine_albumin,Urine Albumin,1754-1,3012516,Albumin [Mass/volume] in Urine,Measurement,LOINC,1754-1,8840,milligram per deciliter,mg/dL,612,613,
-import_uarc,uACR,32294-1,3020682,Albumin/Creatinine [Ratio] in Urine,Measurement,LOINC,32294-1,8723,milligram per gram,mg/g,1715,2047,
+import_uacr,uACR,32294-1,3020682,Albumin/Creatinine [Ratio] in Urine,Measurement,LOINC,32294-1,8723,milligram per gram,mg/g,1715,2047,
 import_bun_creatinine_ratio,BUN/Creatinine ratio,3097-3,3018311,Urea nitrogen/Creatinine [Mass Ratio] in Serum or Plasma,Measurement,LOINC,3097-3,8523,ratio,ratio,2125,2126,
 test_upload_date,MOCA Date,,3006440,Date form completed,Observation,LOINC,30947-6,,,,614,,Date of the imported record (MoCA date); no value concept
 trails_visuospatial_executive,Visuospatial Executive - Trails,trails_visuospatial_executive,2005200344,Trail drawings score,Measurement,AIREADI-MOCA,,44777566,score,score,615,2048,

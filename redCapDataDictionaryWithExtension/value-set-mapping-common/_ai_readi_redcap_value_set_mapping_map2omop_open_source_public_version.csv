@@ -21,12 +21,12 @@ Yes,Yes,open-source,Yes,bcva,calc,,1515,Question,viaodmscore,,Mesopic LogMAR OD 
 Yes,Yes,open-source,Yes,bcva,calc,,1516,Question,viaosmscore,,Mesopic LogMAR OS Score,2005200337,2005200337,Mesopic LogMAR OS Score,Measurement,AIREADI-Vision,Clinical Observation,,S,skos:exactMatch,1,Mesopic LogMAR OS Score,,45883829,Left eye
 Yes,Yes,open-source,Yes,bcva,radio,viaomthd,3035,Answer,1,viaomthd_1,EVA,2005200058,2005200058,EVA,Measurement,AIREADI-Vision,Clinical Observation,,S,skos:exactMatch,1,,,,
 Yes,Yes,open-source,No,bcva,radio,viaomthd,3036,Answer,2,viaomthd_2,ETDRS,4268147,,ETDRS visual acuity chart,Device,SNOMED,Physical Object,400914004,S,skos:exactMatch,1,,,,
-Yes,Yes,open-source,No,bcva,checkbox,,,Question,viaod_nd,,OD - Not done,,,Right eye Autorefractor not done,,,,,,,,,,,
-Yes,Yes,open-source,No,bcva,checkbox,,,Question,viaos_nd,,OS - Not done,,,Left eye Autorefractor not done,,,,,,,,,,,
+Yes,Yes,open-source,No,bcva,checkbox,,,Question,viaod_nd,,OD - Not done,4301433,,Not done,Observation,SNOMED,Qualifier Value,385660001,S,skos:closeMatch,0.75,,,45876703,Right eye
+Yes,Yes,open-source,No,bcva,checkbox,,,Question,viaos_nd,,OS - Not done,4301433,,Not done,Observation,SNOMED,Qualifier Value,385660001,S,skos:closeMatch,0.75,,,45883829,Left eye
 Yes,Yes,open-source,No,bcva,radio,,,Question,viaodsph_m,,OD - Autorefractor - Sphere +/- modifier,,,,,,,,,,,,,,
 Yes,Yes,open-source,No,bcva,radio,,,Question,viaossph_m,,OS - Autorefractor - Sphere +/- modifier,,,,,,,,,,,,,,
-Yes,Yes,open-source,No,bcva,checkbox,viaodnd,,Answer,1,viaodnd_1,Not done,,,,,,,,,,,,,,
-Yes,Yes,open-source,No,bcva,checkbox,viaosnd,,Answer,1,viaosnd_1,Not done,,,,,,,,,,,,,,
+Yes,Yes,open-source,No,bcva,checkbox,viaod_nd,,Answer,1,viaod_nd_1,Not done,4264430,,Objective refraction,Meas Value,SNOMED,Procedure,397276001,S,skos:broadMatch,0.75,,,,
+Yes,Yes,open-source,No,bcva,checkbox,viaos_nd,,Answer,1,viaos_nd_1,Not done,4264430,,Objective refraction,Meas Value,SNOMED,Procedure,397276001,S,skos:broadMatch,0.75,,,,
 Yes,Yes,open-source,No,bcva,radio,viaodsph_m,,Answer,1,viaodsph_m_1,+ (positive) modifier for viaodsph,,,,,,,,,,,,,,
 Yes,Yes,open-source,No,bcva,radio,viaodsph_m,,Answer,0,viaodsph_m_0,- (negative) modifier for viaodsph,,,,,,,,,,,,,,
 Yes,Yes,open-source,No,bcva,radio,viaossph_m,,Answer,1,viaossph_m_1,+ (positive) modifier for viaossph,,,,,,,,,,,,,,
@@ -1716,7 +1716,7 @@ Yes,Yes,open-source,No,retinal_imaging_v2,yesno,rtfl_os,,Answer,1,rtfl_os_1,Yes,
 Yes,Yes,open-source,No,retinal_imaging_v2,yesno,rtfl_os,,Answer,0,rtfl_os_0,No,45878245,,No,Meas Value,LOINC,Answer,LA32-8,S,skos:exactMatch,1,left eye|45883829,,45883829,Left eye
 Yes,Yes,open-source,No,screening_survey,text,,1037,Question,scrcmpdat,,Screening survey date (date survey/form opened),4160030,,Performed,Observation,SNOMED,Qualifier Value,398166005,S,skos:closeMatch,0.75,Screening survey date (date survey/form opened),,2005200563,Screening Survey
 Yes,Yes,open-source,Yes,screening_survey,yesno,,1041,Question,mhterm_dm1,,Type I Diabetes,2005200014,2005200014,Has a doctor or other healthcare professional ever told you that you have/had...,Observation,AIREADI,Survey,,S,skos:exactMatch,1,201254,,201254,Type 1 diabetes mellitus
-Yes,Yes,open-source,Yes,screening_survey,yesno,,1042,Question,mh_a1c,,Elevated A1C levels (elevated blood sugars),2005200014,2005200014,Has a doctor or other healthcare professional ever told you that you have/had...,Observation,AIREADI,Survey,,S,skos:exactMatch,1,4214376,,2005200547,Elevated A1C levels (elevated blood sugars)
+Yes,Yes,open-source,Yes,screening_survey,yesno,,1042,Question,mh_a1c,,Elevated A1C levels (elevated blood sugars),2005200014,2005200014,Has a doctor or other healthcare professional ever told you that you have/had...,Observation,AIREADI,Survey,,S,skos:exactMatch,1,4214376,,4214376,Hyperglycemia
 Yes,Yes,open-source,Yes,screening_survey,yesno,,1043,Question,mhterm_dm2,,Type II Diabetes,2005200014,2005200014,Has a doctor or other healthcare professional ever told you that you have/had...,Observation,AIREADI,Survey,,S,skos:exactMatch,1,201826,,201826,Type 2 diabetes mellitus
 Yes,Yes,open-source,No,screening_survey,text,,1044,Question,mh_dm_age,,"If yes, at what age were you first diagnosed?",4307859,,Age at diagnosis,Observation,SNOMED,Observable Entity,423493009,S,skos:closeMatch,0.75,,,,
 Yes,Yes,open-source,Yes,screening_survey,yesno,,1045,Question,mhterm_predm,,Pre-diabetes,2005200014,2005200014,Has a doctor or other healthcare professional ever told you that you have/had...,Observation,AIREADI,Survey,,S,skos:exactMatch,1,37018196,,37018196,Prediabetes
@@ -1997,3 +1997,4 @@ Yes,Yes,open-source,No,disposition,yesno,eos_ds,,Answer,1,eos_ds_1,Yes,45877994,
 Yes,Yes,open-source,No,disposition,yesno,eos_ds,,Answer,0,eos_ds_0,No,45878245,,No,Meas Value,LOINC,Answer,LA32-8,S,skos:exactMatch,1,,,,
 Yes,Yes,open-source,No,ecg,text,,,Question,rtekgcmpdattim,,Date & time Cardiology - EKG - Pagewriter TC30 Cardiograp performed,4145308,,12 lead ECG,Procedure,SNOMED,Procedure,268400002,S,skos:exactMatch,1,,,,
 Yes,Yes,open-source,Yes,disposition,radio,eos_dsvst,,Answer,3,eos_dsvst_3,Devices Returned,2005200589,2005200589,Device returned,Observation,AIREADI,Qualifier Value,,S,skos:exactMatch,1,,,,
+Yes,Yes,open-source,No,consent_survey,checkbox,c184390,,Answer,1,c184390_1,Paper consent obtained,45877994,,Yes,Meas Value,LOINC,Answer,LA33-6,S,skos:exactMatch,1,,,,

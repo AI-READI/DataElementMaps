@@ -709,7 +709,17 @@ mappings:
   question_or_answer: Question
   src_code: viaod_nd
   src_cd_description: OD - Not done
-  target_concept_name: Right eye Autorefractor not done
+  target_concept_id: 4301433
+  target_concept_name: Not done
+  target_domain_id: Observation
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Qualifier Value
+  target_concept_code: '385660001'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 0.75
+  qualifier_concept_id: 45876703
+  qualifier_source_value: Right eye
 - mapping_record_id: AIREADI_MAPPING_0035
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -720,7 +730,17 @@ mappings:
   question_or_answer: Question
   src_code: viaos_nd
   src_cd_description: OS - Not done
-  target_concept_name: Left eye Autorefractor not done
+  target_concept_id: 4301433
+  target_concept_name: Not done
+  target_domain_id: Observation
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Qualifier Value
+  target_concept_code: '385660001'
+  target_standard_concept: S
+  predicate_id: skos:closeMatch
+  confidence: 0.75
+  qualifier_concept_id: 45883829
+  qualifier_source_value: Left eye
 - mapping_record_id: AIREADI_MAPPING_0036
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -748,11 +768,20 @@ mappings:
   extension_needed: 'No'
   form_name: bcva
   field_type: checkbox
-  field_id: viaodnd
+  field_id: viaod_nd
   question_or_answer: Answer
   src_code: '1'
-  src_code_id: viaodnd_1
+  src_code_id: viaod_nd_1
   src_cd_description: Not done
+  target_concept_id: 4264430
+  target_concept_name: Objective refraction
+  target_domain_id: Meas Value
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '397276001'
+  target_standard_concept: S
+  predicate_id: skos:broadMatch
+  confidence: 0.75
 - mapping_record_id: AIREADI_MAPPING_0039
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -760,11 +789,20 @@ mappings:
   extension_needed: 'No'
   form_name: bcva
   field_type: checkbox
-  field_id: viaosnd
+  field_id: viaos_nd
   question_or_answer: Answer
   src_code: '1'
-  src_code_id: viaosnd_1
+  src_code_id: viaos_nd_1
   src_cd_description: Not done
+  target_concept_id: 4264430
+  target_concept_name: Objective refraction
+  target_domain_id: Meas Value
+  target_vocabulary_id: SNOMED
+  target_concept_class_id: Procedure
+  target_concept_code: '397276001'
+  target_standard_concept: S
+  predicate_id: skos:broadMatch
+  confidence: 0.75
 - mapping_record_id: AIREADI_MAPPING_0040
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -36651,7 +36689,7 @@ mappings:
   extension_needed: 'No'
   form_name: imported
   field_type: calc
-  field_id: import_uarc
+  field_id: import_uacr
   field_id_num: 3018
   question_or_answer: Question
   src_code: 32294-1
@@ -39785,8 +39823,8 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
   modifier: '4214376'
-  qualifier_concept_id: 2005200547
-  qualifier_source_value: Elevated A1C levels (elevated blood sugars)
+  qualifier_concept_id: 4214376
+  qualifier_source_value: Hyperglycemia
 - mapping_record_id: AIREADI_MAPPING_1849
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -43992,10 +44030,10 @@ mappings:
   extension_needed: 'No'
   form_name: imported
   field_type: calc
-  field_id: import_uarc_u
+  field_id: import_uacr_u
   question_or_answer: Unit
   src_code: mg/g
-  src_code_id: import_uarc_u
+  src_code_id: import_uacr_u
   src_cd_description: milligram per gram
   target_concept_id: 8723
   target_concept_name: milligram per gram
@@ -46219,3 +46257,60 @@ mappings:
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2144
+  map_to_omop: 'Yes'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: consent_survey
+  field_type: checkbox
+  field_id: c184390
+  question_or_answer: Answer
+  src_code: '1'
+  src_code_id: c184390_1
+  src_cd_description: Paper consent obtained
+  target_concept_id: 45877994
+  target_concept_name: 'Yes'
+  target_domain_id: Meas Value
+  target_vocabulary_id: LOINC
+  target_concept_class_id: Answer
+  target_concept_code: LA33-6
+  target_standard_concept: S
+  predicate_id: skos:exactMatch
+  confidence: 1.0
+- mapping_record_id: AIREADI_MAPPING_2145
+  map_to_omop: 'No'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: import_ldl_cholesterol
+  question_or_answer: Question
+  src_code: import_ldl_cholesterol
+  src_cd_description: LDL Cholesterol (duplicate of the calculated field)
+  modifier: 'Not loaded: same Sampson-equation value as import_ldl_cholesterol_calculation (mapped, line 537)'
+- mapping_record_id: AIREADI_MAPPING_2146
+  map_to_omop: 'No'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: import_globulin_total
+  question_or_answer: Question
+  src_code: import_globulin_total
+  src_cd_description: Globulin, total (duplicate of the calculated field)
+  modifier: 'Not loaded: same value as import_globulin_total_norc (mapped, line 583)'
+- mapping_record_id: AIREADI_MAPPING_2147
+  map_to_omop: 'No'
+  transferred_to_fairhub_redcap_dataset: 'Yes'
+  protected_or_open_source: open-source
+  extension_needed: 'No'
+  form_name: imported
+  field_type: text
+  field_id: import_a_g_ratio
+  question_or_answer: Question
+  src_code: import_a_g_ratio
+  src_cd_description: A/G Ratio (unrounded duplicate of the calculated field)
+  modifier: 'Not loaded: unrounded copy of import_ag_ratio (mapped, line 584, 2 decimals)'

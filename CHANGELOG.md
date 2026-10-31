@@ -11,6 +11,48 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [v1.8.7] - 2026-10-29
+
+Concept map fixes found by comparing the map with a REDCap export header (2026-10-29 extract), and the custom vocabulary brought in sync with the map. **Map version v1.8.7**: the ETL should switch to the v1.8.7 mapping files (uACR was not loaded with earlier versions).
+
+### Fixed — concept map (`_ai_readi_redcap_value_set_mapping_common.csv`; existing line numbers unchanged)
+
+- Lines 1715, 2047: field `import_uarc` → `import_uacr` (question and unit row), the name REDCap exports. With the old name the urine albumin/creatinine ratio (3020682) was not matched to the export. Also fixed in `unit_concept_lookup.csv`, `unit_concept_lookup_extended.csv` and `imported_field_concept_lookup.csv`.
+- Lines 39, 40: checkbox answers `FIELD_ID` `viaodnd` / `viaosnd` → `viaod_nd` / `viaos_nd` (`SRC_CODE_ID` `viaod_nd_1` / `viaos_nd_1`), matching the question rows (35, 36) and the export columns `viaod_nd___1` / `viaos_nd___1`. Present since v1.0-tvst; reported by `audit_concept_map.py` A8.
+- Line 1849 (`mh_a1c` question): `qualifier_concept_id` 2005200547 → 4214376, `qualifier_source_value` "Hyperglycemia", as `MODIFIER` (v1.8.4 changed the answer and the modifier but not the qualifier).
+
+### Added — concept map
+
+- Lines 35, 36 (`viaod_nd`, `viaos_nd`, "Not done" checkbox of the autorefractor): 4301433 Not done (SNOMED 385660001, Observation, closeMatch 0.75), qualifier 45876703 Right eye / 45883829 Left eye as the other bcva OD / OS rows; answer 1 (lines 39, 40) → 4264430 Objective refraction (SNOMED 397276001) as the value, broadMatch 0.75. A checked box gives one observation: Not done, value Objective refraction, qualifier the eye. (Objective refraction is a Procedure concept; it is the value, not the observation concept, so the record stays an observation that the test was not done.)
+- Line 2145: `c184390` answer 1 (Paper consent obtained, export column `c184390___1`) → 45877994 Yes (LOINC LA33-6); the question (line 104) maps to 3018196 Informed consent obtained.
+- Lines 2146–2148, `Map_to_OMOP` = No: `import_ldl_cholesterol`, `import_globulin_total`, `import_a_g_ratio`, exported copies of the mapped `import_ldl_cholesterol_calculation`, `import_globulin_total_norc` and `import_ag_ratio` (same values in the 2026-10-29 extract; `import_a_g_ratio` is unrounded, `import_ag_ratio` has 2 decimals). Documented so that the fields are accounted for and not loaded twice.
+- The master data dictionary is synchronized (5 rows changed, 4 added; the 2 renamed `import_uacr` rows marked Changed 10/29/2026). `map2omop`: 2,114 rows; open-source public: 1,999.
+
+### Changed — custom vocabulary (`OHDSI-vocabulary-request/`)
+
+- `concept_manual.csv` (419 concepts): `standard_concept` = S for the 407 valid concepts (all used by the map as target, value or qualifier) and blank for the 12 deprecated ones. Deprecated concepts keep their row with `valid_end_date` and `invalid_reason`: 9 upgraded (U: 2005200017, 121, 182, 183, 222, 268, 280, 547, 628) and 3 deleted (D: 2005200025, 044, 306, never used by a released map). 2005200222 "Puff" (used by the map in v1.0-tvst through v1.3, removed in v1.4) is restored as U, replaced by 45744809 Actuation.
+- `concept_relationship_manual.csv` (428 rows; was 412): one row per custom concept, synchronized with `concept_manual.csv` (names, `SRC_CODE`, new concepts 2005200630–2005200635, Puff). `relationship_id` filled by rule, `predicate_id` kept on every row: `Maps to` and `Concept replaced by` for the 9 U concepts (9 + 9 rows), `Is a` for `skos:broadMatch` to a standard or classification concept in the same domain (109), blank otherwise (301). Checked against the OMOP vocabulary (R0–R7).
+- `SRC_CODE` of four MoCA concepts set to the REDCap field names, as the concept map since v1.4: 2005200364 `verbal_fluency_language` → `fluency_language`, 2005200365 `verbal_fluency_language_time` → `fluency_language_time`, 2005200368 `delayed_recall_with_no_cue` → `delayed_recall_with_no_clue`, 2005200369 `delayed_recall_with_no_cue_time` → `delayed_recall_with_no_clue_time`. Every valid concept's `SRC_CODE` now matches a field name or `<field>_<code>` answer code of the map. Concept IDs unchanged.
+- `AI-READI-Vocabulary/`: the 3 `concept_manual_*.csv` splits regenerated; new `concept_relationship_manual_AIREADI.csv` (344), `_AIREADI-MOCA.csv` (30), `_AIREADI-Vision.csv` (54).
+- Line 2 of both main files stays a blank row (line numbers unchanged). `AIREADi_OMOP_Vocabulary_Request/` (October 2025 submission) is unchanged.
+
+### Added — checks
+
+- `OHDSI-vocabulary-request/sql/01_load_vocabulary_manual.sql`: loads the vocabulary files (Databricks), builds the splits and checks counts, uniqueness, `standard_concept` against `invalid_reason`, split files against the main files, and names and codes between the two main files (L1–L5).
+- `OHDSI-vocabulary-request/sql/02_validate_concept_relationship_manual.sql`: relationship file against `omop_vocab` and `concept_manual.csv` (R0–R7: coverage, valid targets, standard targets, same domain for `Is a`, recorded names and codes, non-standard targets, deprecated concepts).
+- `scripts/check_map_fields_against_export.py` (standard library) and `redcap-data-dictionary/redcap_export_header_2026-10-29.csv` (header row only, no data): lists mapped fields with no export column (by protection level), export columns the map does not name, and checkbox `<field>___<code>` mismatches. Against the 2026-10-29 header: 39 mapped fields not exported (28 protected, 11 open-source to review), 19 export columns not in the map (administrative fields, `cmyn`, `cmotyn`, eye-tested fields, extra reference ranges), 1 checkbox answer not exported (`send_satisfaction_survey`).
+- `scripts/count_concept_map.sql`: new unmapped reason "Duplicate field (not loaded)"; expected counts for v1.8.7. `scripts/validate_concept_map_vocab.sql`: V0 = 2,147.
+
+### Changed
+
+- Metadata file: map version v1.8.7, row counts and MD5s. SSSOM and LinkML regenerated (mapping date 2026-10-29).
+- `CITATION.cff`, `codemeta.json`: version v1.8.7, date 2026-10-29.
+
+### Notes for the ETL
+
+- Use the v1.8.7 files as they are; do not open or re-save them in a spreadsheet.
+- Do not load `import_ldl_cholesterol_calculation` when it is ≤ 0 or total cholesterol, HDL or triglycerides is empty (8 rows in the 2026-10-29 extract: 5 at −9.44, the constant of the Sampson equation with no inputs; 3 negative results), nor `import_globulin_total_norc` ≤ 0 (1 row).
+
 ## [v1.8.6] - 2026-10-29
 
 Map version tracking and one documentation fix. **No change to the concept map, the unit and route lookups, SSSOM or LinkML**: the mapping files are those of v1.8.4 (map version v1.8.4); no ETL re-run is needed for this release.

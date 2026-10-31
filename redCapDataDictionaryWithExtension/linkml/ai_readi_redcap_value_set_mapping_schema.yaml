@@ -236,6 +236,7 @@ enums:
       S: {}
   PredicateEnum:
     permissible_values:
+      skos:broadMatch: {}
       skos:closeMatch: {}
       skos:exactMatch: {}
       skos:relatedMatch: {}

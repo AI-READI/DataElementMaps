@@ -45,7 +45,7 @@ import_sodium,imported,Sodium,3019550,Sodium [Moles/volume] in Serum or Plasma,L
 import_total_cholesterol,imported,Total Cholesterol,3027114,Cholesterol [Mass/volume] in Serum or Plasma,LOINC,2093-3,8840,milligram per deciliter,mg/dL,528,529,
 import_triglycerides,imported,Triglycerides,3022192,Triglyceride [Mass/volume] in Serum or Plasma,LOINC,2571-8,8840,milligram per deciliter,mg/dL,531,532,
 import_troponin_t,imported,Troponin-T,40769783,Troponin T.cardiac [Mass/volume] in Serum or Plasma by High sensitivity method,LOINC,67151-1,8725,nanogram per liter,ng/L,509,510,
-import_uarc,imported,uACR,3020682,Albumin/Creatinine [Ratio] in Urine,LOINC,32294-1,8723,milligram per gram,mg/g,1715,2047,
+import_uacr,imported,uACR,3020682,Albumin/Creatinine [Ratio] in Urine,LOINC,32294-1,8723,milligram per gram,mg/g,1715,2047,
 import_urine_albumin,imported,Urine Albumin,3012516,Albumin [Mass/volume] in Urine,LOINC,1754-1,8840,milligram per deciliter,mg/dL,612,613,
 import_urine_creatinine,imported,Urine creatinine,3017250,Creatinine [Mass/volume] in Urine,LOINC,2161-8,8840,milligram per deciliter,mg/dL,610,611,
 lbscat_a1c,lab_results,Hemoglobin - g/dL,3000963,Hemoglobin [Mass/volume] in Blood,LOINC,718-7,8713,gram per deciliter,g/dL,674,2034,
