@@ -94,9 +94,11 @@ HAVING COUNT(*) > 1;
 --   mh_a1c (Question)              2005200014        modifier 4214376
 --   mh_a1c 1 (Condition)           4214376   SNOMED  80394007  closeMatch 0.75
 --   eos_dsvst 3 (Answer)           2005200589 AIREADI
---   import_buncreatinineratio      3033837   src_code 31045-8
---   import_ag_ratio                3020509   src_code 1759-0
---   import_bun_creatinine_ratio    3018311   src_code 3097-3 (v1.8.2, unchanged)
+--   import_buncreatinineratio      3033837   src_code 31045-8 (v1.8.8: import_buncreatinineratio)
+--   import_ag_ratio                3020509   src_code 1759-0  (v1.8.8: import_ag_ratio)
+--   import_bun_creatinine_ratio    3018311   src_code 3097-3  (v1.8.8: import_bun_creatinine_ratio)
+--   From v1.8.8 the SRC_CODE of every imported lab question is its field name; the LOINC code
+--   is in TARGET_CONCEPT_CODE (tcode).
 SELECT field_id, src_code, row_type, domain_id, tid, tname, vocab, tcode, predicate, confidence, modifier
 FROM cm
 WHERE (src_code IN ('pxne16', 'mh_a1c') AND row_type = 'Question')

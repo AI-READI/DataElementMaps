@@ -10844,7 +10844,7 @@ mappings:
   field_id: import_nt_probnp
   field_id_num: 2914
   question_or_answer: Question
-  src_code: 33762-6
+  src_code: import_nt_probnp
   src_code_id: NT-proBNP
   src_cd_description: Natriuretic peptide.B prohormone N-Terminal [Mass/volume] in Serum or Plasma
   target_concept_id: 3029187
@@ -10912,7 +10912,7 @@ mappings:
   field_id: import_troponin_t
   field_id_num: 2918
   question_or_answer: Question
-  src_code: 67151-1
+  src_code: import_troponin_t
   src_code_id: Troponin-T
   src_cd_description: Troponin T.cardiac [Mass/volume] in Serum or Plasma by High sensitivity method
   target_concept_id: 40769783
@@ -10980,7 +10980,7 @@ mappings:
   field_id: import_c_peptide
   field_id_num: 2921
   question_or_answer: Question
-  src_code: 1986-9
+  src_code: import_c_peptide
   src_code_id: C-Peptide
   src_cd_description: C peptide [Mass/volume] in Serum or Plasma
   target_concept_id: 3010084
@@ -11048,7 +11048,7 @@ mappings:
   field_id: import_insulin
   field_id_num: 2925
   question_or_answer: Question
-  src_code: 3695-4
+  src_code: import_insulin
   src_code_id: Insulin
   src_cd_description: Insulin [Mass/volume] in Serum or Plasma
   target_concept_id: 3022466
@@ -11152,7 +11152,7 @@ mappings:
   field_id: import_crp_hs
   field_id_num: 2932
   question_or_answer: Question
-  src_code: 30522-7
+  src_code: import_crp_hs
   src_code_id: CRP-HS
   src_cd_description: C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method
   target_concept_id: 3010156
@@ -11220,7 +11220,7 @@ mappings:
   field_id: import_total_cholesterol
   field_id_num: 2936
   question_or_answer: Question
-  src_code: 2093-3
+  src_code: import_total_cholesterol
   src_code_id: Total Cholesterol
   src_cd_description: Cholesterol [Mass/volume] in Serum or Plasma
   target_concept_id: 3027114
@@ -11276,7 +11276,7 @@ mappings:
   field_id: import_triglycerides
   field_id_num: 2939
   question_or_answer: Question
-  src_code: 2571-8
+  src_code: import_triglycerides
   src_code_id: Triglycerides
   src_cd_description: Triglyceride [Mass/volume] in Serum or Plasma
   target_concept_id: 3022192
@@ -11332,7 +11332,7 @@ mappings:
   field_id: import_hdl_cholesterol
   field_id_num: 2942
   question_or_answer: Question
-  src_code: 2085-9
+  src_code: import_hdl_cholesterol
   src_code_id: HDL Cholesterol
   src_cd_description: Cholesterol in HDL [Mass/volume] in Serum or Plasma
   target_concept_id: 3007070
@@ -11388,7 +11388,7 @@ mappings:
   field_id: import_ldl_cholesterol_calculation
   field_id_num: 2945
   question_or_answer: Question
-  src_code: 13457-7
+  src_code: import_ldl_cholesterol_calculation
   src_code_id: LDL Cholesterol (calculated field)
   src_cd_description: Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation
   target_concept_id: 3028288
@@ -11444,7 +11444,7 @@ mappings:
   field_id: import_glucose
   field_id_num: 2948
   question_or_answer: Question
-  src_code: 2345-7
+  src_code: import_glucose
   src_code_id: Glucose
   src_cd_description: Glucose [Mass/volume] in Serum or Plasma
   target_concept_id: 3004501
@@ -11512,7 +11512,7 @@ mappings:
   field_id: import_bun
   field_id_num: 2952
   question_or_answer: Question
-  src_code: 3094-0
+  src_code: import_bun
   src_code_id: BUN
   src_cd_description: Urea nitrogen [Mass/volume] in Serum or Plasma
   target_concept_id: 3013682
@@ -11580,7 +11580,7 @@ mappings:
   field_id: import_creatinine
   field_id_num: 2956
   question_or_answer: Question
-  src_code: 2160-0
+  src_code: import_creatinine
   src_code_id: Creatinine
   src_cd_description: Creatinine [Mass/volume] in Serum or Plasma
   target_concept_id: 3016723
@@ -11670,7 +11670,7 @@ mappings:
   field_id: import_buncreatinineratio
   field_id_num: 2960
   question_or_answer: Question
-  src_code: 31045-8
+  src_code: import_buncreatinineratio
   src_code_id: BUN/Creatinine ratio
   src_cd_description: BUN/Creatinine ratio
   target_concept_id: 3033837
@@ -11694,7 +11694,7 @@ mappings:
   field_id: import_sodium
   field_id_num: 2961
   question_or_answer: Question
-  src_code: 2951-2
+  src_code: import_sodium
   src_code_id: Sodium
   src_cd_description: Sodium [Moles/volume] in Serum or Plasma
   target_concept_id: 3019550
@@ -11762,7 +11762,7 @@ mappings:
   field_id: import_potassium
   field_id_num: 2965
   question_or_answer: Question
-  src_code: 2823-3
+  src_code: import_potassium
   src_code_id: Potassium
   src_cd_description: Potassium [Moles/volume] in Serum or Plasma
   target_concept_id: 3023103
@@ -11830,7 +11830,7 @@ mappings:
   field_id: import_chloride
   field_id_num: 2969
   question_or_answer: Question
-  src_code: 2075-0
+  src_code: import_chloride
   src_code_id: Chloride
   src_cd_description: Chloride [Moles/volume] in Serum or Plasma
   target_concept_id: 3014576
@@ -11898,7 +11898,7 @@ mappings:
   field_id: import_carbon_dioxide_total
   field_id_num: 2973
   question_or_answer: Question
-  src_code: 2028-9
+  src_code: import_carbon_dioxide_total
   src_code_id: Carbon Dioxide, Total
   src_cd_description: Carbon dioxide, total [Moles/volume] in Serum or Plasma
   target_concept_id: 3015632
@@ -11966,7 +11966,7 @@ mappings:
   field_id: import_calcium
   field_id_num: 2977
   question_or_answer: Question
-  src_code: 17861-6
+  src_code: import_calcium
   src_code_id: Calcium
   src_cd_description: Calcium [Mass/volume] in Serum or Plasma
   target_concept_id: 3006906
@@ -12034,7 +12034,7 @@ mappings:
   field_id: import_protein_total
   field_id_num: 2981
   question_or_answer: Question
-  src_code: 2885-2
+  src_code: import_protein_total
   src_code_id: Protein, total
   src_cd_description: Protein [Mass/volume] in Serum or Plasma
   target_concept_id: 3020630
@@ -12102,7 +12102,7 @@ mappings:
   field_id: import_albumin
   field_id_num: 2985
   question_or_answer: Question
-  src_code: 1751-7
+  src_code: import_albumin
   src_code_id: Albumin
   src_cd_description: Albumin [Mass/volume] in Serum or Plasma
   target_concept_id: 3024561
@@ -12170,7 +12170,7 @@ mappings:
   field_id: import_globulin_total_norc
   field_id_num: 2989
   question_or_answer: Question
-  src_code: 2336-6
+  src_code: import_globulin_total_norc
   src_code_id: Globulin, total (calculated field)
   src_cd_description: Globulin [Mass/volume] in Serum
   target_concept_id: 3021886
@@ -12192,7 +12192,7 @@ mappings:
   field_id: import_ag_ratio
   field_id_num: 2990
   question_or_answer: Question
-  src_code: 1759-0
+  src_code: import_ag_ratio
   src_code_id: A/G Ratio (calculated field)
   src_cd_description: Albumin/Globulin ratio
   target_concept_id: 3020509
@@ -12214,7 +12214,7 @@ mappings:
   field_id: import_bilirubin_total
   field_id_num: 2991
   question_or_answer: Question
-  src_code: 1975-2
+  src_code: import_bilirubin_total
   src_code_id: Bilirubin, Total
   src_cd_description: Bilirubin.total [Mass/volume] in Serum or Plasma
   target_concept_id: 3024128
@@ -12236,7 +12236,7 @@ mappings:
   field_id: import_alkaline_phosphatase
   field_id_num: 2992
   question_or_answer: Question
-  src_code: 6768-6
+  src_code: import_alkaline_phosphatase
   src_code_id: Alkaline Phosphatase
   src_cd_description: Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma
   target_concept_id: 3035995
@@ -12326,7 +12326,7 @@ mappings:
   field_id: import_ast_got
   field_id_num: 2996
   question_or_answer: Question
-  src_code: 1920-8
+  src_code: import_ast_got
   src_code_id: AST (GOT)
   src_cd_description: Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma
   target_concept_id: 3013721
@@ -12394,7 +12394,7 @@ mappings:
   field_id: import_alt_got
   field_id_num: 3000
   question_or_answer: Question
-  src_code: 1742-6
+  src_code: import_alt_got
   src_code_id: ALT (GPT)
   src_cd_description: Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma
   target_concept_id: 3006923
@@ -12498,7 +12498,7 @@ mappings:
   field_id: import_hba1c
   field_id_num: 3007
   question_or_answer: Question
-  src_code: 4548-4
+  src_code: import_hba1c
   src_code_id: HbA1c
   src_cd_description: Hemoglobin A1c/Hemoglobin.total in Blood
   target_concept_id: 3004410
@@ -12602,7 +12602,7 @@ mappings:
   field_id: import_urine_creatinine
   field_id_num: 3014
   question_or_answer: Question
-  src_code: 2161-8
+  src_code: import_urine_creatinine
   src_code_id: Urine creatinine
   src_cd_description: Creatinine [Mass/volume] in Urine
   target_concept_id: 3017250
@@ -12646,7 +12646,7 @@ mappings:
   field_id: import_urine_albumin
   field_id_num: 3016
   question_or_answer: Question
-  src_code: 1754-1
+  src_code: import_urine_albumin
   src_code_id: Urine Albumin
   src_cd_description: Albumin [Mass/volume] in Urine
   target_concept_id: 3012516
@@ -36692,7 +36692,7 @@ mappings:
   field_id: import_uacr
   field_id_num: 3018
   question_or_answer: Question
-  src_code: 32294-1
+  src_code: import_uacr
   src_code_id: uACR
   src_cd_description: Albumin/Creatinine [Ratio] in Urine
   target_concept_id: 3020682
@@ -45848,7 +45848,7 @@ mappings:
   field_type: text
   field_id: import_bun_creatinine_ratio
   question_or_answer: Question
-  src_code: 3097-3
+  src_code: import_bun_creatinine_ratio
   src_code_id: BUN/Creatinine ratio
   src_cd_description: BUN/Creatinine ratio
   target_concept_id: 3018311

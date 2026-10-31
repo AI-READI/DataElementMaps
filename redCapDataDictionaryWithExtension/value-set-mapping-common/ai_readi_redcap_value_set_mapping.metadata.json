@@ -1,32 +1,32 @@
 {
   "name": "AI-READI REDCap to OMOP concept map",
-  "map_version": "v1.8.7",
+  "map_version": "v1.8.8",
   "map_version_note": "Release that last changed the mapping content; later releases may change only scripts or documentation.",
-  "repository_release": "v1.8.7",
-  "date": "2026-10-29",
+  "repository_release": "v1.8.8",
+  "date": "2026-10-31",
   "repository": "https://github.com/AI-READI/DataElementMaps",
-  "changelog": "https://github.com/AI-READI/DataElementMaps/blob/v1.8.7/CHANGELOG.md",
+  "changelog": "https://github.com/AI-READI/DataElementMaps/blob/v1.8.8/CHANGELOG.md",
   "files": {
     "_ai_readi_redcap_value_set_mapping_common.csv": {
       "variant": "common",
       "rows": 2147,
-      "md5": "b73d8b048b8fa643b329ab1d6e367496"
+      "md5": "426ac59a43cd967c525edf3fdb04bd2d"
     },
     "_ai_readi_redcap_value_set_mapping_common_map2omop.csv": {
       "variant": "map2omop",
       "rows": 2114,
-      "md5": "f0840987916f0cf4200d515505c07fe6"
+      "md5": "afa5c18efcb7d2f834674b031e20feb4"
     },
     "_ai_readi_redcap_value_set_mapping_map2omop_open_source_public_version.csv": {
       "variant": "public",
       "rows": 1999,
-      "md5": "db5c4a29f56b772badb002befda3b022"
+      "md5": "c0b849dbbba9187d102ea228a33d1fd5"
     }
   },
   "record_in_omop": {
-    "cdm_source.source_description": "AI-READI concept map v1.8.7 (common file MD5 b73d8b048b8fa643b329ab1d6e367496)",
+    "cdm_source.source_description": "AI-READI concept map v1.8.8 (common file MD5 426ac59a43cd967c525edf3fdb04bd2d)",
     "metadata.name": "AI-READI concept map version",
-    "metadata.value_as_string": "v1.8.7"
+    "metadata.value_as_string": "v1.8.8"
   },
   "check": "python redCapDataDictionaryWithExtension/scripts/identify_map_version.py <mapping file>"
 }
