@@ -12,8 +12,8 @@
 
 2. Write the metadata file (release step, after the mapping files are final):
 
-    python redCapDataDictionaryWithExtension/scripts/identify_map_version.py --write-metadata v1.8.4 \\
-        --release v1.8.6 --date 2026-10-29
+    python redCapDataDictionaryWithExtension/scripts/identify_map_version.py --write-metadata v1.8.7 \\
+        --release v1.8.7 --date 2026-10-29
 
    Writes value-set-mapping-common/ai_readi_redcap_value_set_mapping.metadata.json with the map
    version (the release that last changed the mapping content), the repository release, and the

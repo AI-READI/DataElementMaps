@@ -45,7 +45,7 @@ field,import_sodium,9557,mEq/L
 field,import_total_cholesterol,8840,mg/dL
 field,import_triglycerides,8840,mg/dL
 field,import_troponin_t,8725,ng/L
-field,import_uarc,8723,mg/g
+field,import_uacr,8723,mg/g
 field,import_urine_albumin,8840,mg/dL
 field,import_urine_creatinine,8840,mg/dL
 field,lbscat_a1c,8713,g/dL

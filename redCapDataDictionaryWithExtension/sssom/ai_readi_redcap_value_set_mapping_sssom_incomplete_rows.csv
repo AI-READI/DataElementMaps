@@ -1,11 +1,7 @@
 Map_to_OMOP,transferred_to_fairhub_REDCap_dataset,Protected_or_open-source,Extension_Needed,FORM_NAME,FIELD_TYPE,FIELD_ID,FIELD_ID_NUM,temp_Question_or_Answer,SRC_CODE,SRC_CODE_ID,SRC_CD_DESCRIPTION,TARGET_CONCEPT_ID,LOCAL_CONCEPT_ID,TARGET_CONCEPT_NAME,TARGET_DOMAIN_ID,TARGET_VOCABULARY_ID,TARGET_CONCEPT_CLASS_ID,TARGET_CONCEPT_CODE,TARGET_STANDARD_CONCEPT,PREDICATE_ID,CONFIDENCE,MODIFIER,value_as_concept_id,qualifier_concept_id,qualifier_source_value
 Yes,Yes,protected,No,screening_survey,calc,,1054,Question,ethnicscore,,Hispanic score (needed for demographics screening logic),0,,No matching concept,,,,,,,,,,,
-Yes,Yes,open-source,No,bcva,checkbox,,,Question,viaod_nd,,OD - Not done,,,Right eye Autorefractor not done,,,,,,,,,,,
-Yes,Yes,open-source,No,bcva,checkbox,,,Question,viaos_nd,,OS - Not done,,,Left eye Autorefractor not done,,,,,,,,,,,
 Yes,Yes,open-source,No,bcva,radio,,,Question,viaodsph_m,,OD - Autorefractor - Sphere +/- modifier,,,,,,,,,,,,,,
 Yes,Yes,open-source,No,bcva,radio,,,Question,viaossph_m,,OS - Autorefractor - Sphere +/- modifier,,,,,,,,,,,,,,
-Yes,Yes,open-source,No,bcva,checkbox,viaodnd,,Answer,1,viaodnd_1,Not done,,,,,,,,,,,,,,
-Yes,Yes,open-source,No,bcva,checkbox,viaosnd,,Answer,1,viaosnd_1,Not done,,,,,,,,,,,,,,
 Yes,Yes,open-source,No,bcva,radio,viaodsph_m,,Answer,1,viaodsph_m_1,+ (positive) modifier for viaodsph,,,,,,,,,,,,,,
 Yes,Yes,open-source,No,bcva,radio,viaodsph_m,,Answer,0,viaodsph_m_0,- (negative) modifier for viaodsph,,,,,,,,,,,,,,
 Yes,Yes,open-source,No,bcva,radio,viaossph_m,,Answer,1,viaossph_m_1,+ (positive) modifier for viaossph,,,,,,,,,,,,,,
@@ -74,3 +70,6 @@ Yes,Yes,open-source,No,imported,notes,import_notes_urine,3013,Question,,,NORC an
 No,Yes,open-source,No,moca,checkbox,,,Question,moca_paper___1,,Check if MOCA done on paper,,,,,,,,,,,,,,
 Yes,Yes,protected,No,current_medications,dropdown,cmroute,3005,Answer,888,cmroute_888,Other,0,,,,,,,,,,No matching route concept; route_source_value = Other,,,
 Yes,Yes,protected,No,current_medications,dropdown,cmdosu,3023,Answer,18,cmdosu_18,Other,0,,,,,,,,,,No matching unit concept; dose_unit_source_value = Other,,,
+No,Yes,open-source,No,imported,text,import_ldl_cholesterol,,Question,import_ldl_cholesterol,,LDL Cholesterol (duplicate of the calculated field),,,,,,,,,,,"Not loaded: same Sampson-equation value as import_ldl_cholesterol_calculation (mapped, line 537)",,,
+No,Yes,open-source,No,imported,text,import_globulin_total,,Question,import_globulin_total,,"Globulin, total (duplicate of the calculated field)",,,,,,,,,,,"Not loaded: same value as import_globulin_total_norc (mapped, line 583)",,,
+No,Yes,open-source,No,imported,text,import_a_g_ratio,,Question,import_a_g_ratio,,A/G Ratio (unrounded duplicate of the calculated field),,,,,,,,,,,"Not loaded: unrounded copy of import_ag_ratio (mapped, line 584, 2 decimals)",,,
