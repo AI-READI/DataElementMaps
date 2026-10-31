@@ -81,6 +81,9 @@ SELECT
         WHEN Map_to_OMOP <> 'Yes' AND SRC_CODE LIKE 'moca_paper%'   THEN 'MoCA paper-administration flag'
         WHEN Map_to_OMOP <> 'Yes' AND (SRC_CODE = 'lbscat_nrbc' OR FIELD_ID = 'lbscat_nrbc_u')
                                                                     THEN 'Not collected (NRBC)'
+        WHEN Map_to_OMOP <> 'Yes' AND (FIELD_ID LIKE 'import\_%\_min2' ESCAPE '\'
+                                    OR FIELD_ID LIKE 'import\_%\_max2' ESCAPE '\')
+                                                                    THEN 'Second reference range (not loaded)'
         WHEN Map_to_OMOP <> 'Yes' AND MODIFIER LIKE 'Not loaded:%'   THEN 'Duplicate field (not loaded)'
         WHEN Map_to_OMOP <> 'Yes' AND temp_Question_or_Answer = 'Answer'
                                                                     THEN 'Answer to an excluded question'

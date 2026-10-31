@@ -13,17 +13,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [v1.8.8] - 2026-10-31
 
-The concept map is easier to use in an ETL: every question row now carries its REDCap field name in `SRC_CODE`. **Map version v1.8.8.** Concept IDs are unchanged; no row was added or removed and every line number is the same.
+The concept map is easier to use in an ETL: every question row now carries its REDCap field name in `SRC_CODE`. **Map version v1.8.8.** Concept IDs are unchanged; existing line numbers are the same (3 reference-range rows appended, lines 2149–2151).
 
 ### Changed — concept map (`_ai_readi_redcap_value_set_mapping_common.csv`)
 
 - `SRC_CODE` of the 31 imported lab question rows (form `imported`, e.g. line 540 `import_glucose`, 1715 `import_uacr`): the LOINC code → the REDCap field name (= `FIELD_ID`), as for every other question row and for the MoCA rows since v1.4. The LOINC code stays in `TARGET_CONCEPT_CODE` (with `TARGET_CONCEPT_ID`), so nothing is lost. An ETL can now take the field name of any question row from `SRC_CODE`, without local edits of the mapping file (the build checked in v1.8.4 used 33 local `SRC_CODE` edits). Lines 554 and 584, which v1.8.4 filled with the LOINC code, now also hold the field name.
+- `SRC_CODE` of the other 59 imported question rows that had it blank → the field name (= `FIELD_ID`): the 46 reference-range rows (`import_<lab>_min`, `_max`, `_min2`, `_max2`), the 12 specimen rows (`import_collection_dt_*`, `import_process_dt_*`, `import_notes_*` for edta, serum, whole, urine) and `test_upload_date` (line 614). Every question row now has its field name in `SRC_CODE`.
 - Master data dictionary synchronized (the same 31 rows, Changed 10/31/2026). `map2omop` and the open-source public file regenerated (31 and 30 rows). SSSOM and LinkML regenerated: the subject IDs of these rows change from the LOINC code to the field name (e.g. `imported.2345-7.Glucose` → `imported.import_glucose`).
 - `imported_field_concept_lookup.csv`: `src_code` now equals `field_id` for the labs; the LOINC code is in `target_concept_code`. `unit_concept_lookup.csv` and `unit_concept_lookup_extended.csv` are unchanged.
+
+### Added — reference ranges
+
+- Concept map: 3 range rows that are in the REDCap export but were missing from the map, appended as lines 2149–2151 (`import_nt_probnp_max2`, `import_alt_got_min2`, `import_alt_got_max2`; Question, no target, like their neighbours). The map now lists all 49 range columns of the export (`check_map_fields_against_export.py`: export columns not in the map 19 → 16).
+- Concept map: `MODIFIER` of the 49 range rows says which lab the range belongs to and where it goes, e.g. "Reference range low of import_creatinine: MEASUREMENT.range_low of that lab (see imported_field_concept_lookup.csv)"; The 8 `_min2` / `_max2` rows (5 labs): `Map_to_OMOP` Yes → No and `MODIFIER` "Not loaded: second reference range … (meaning not documented)", like the other documented-but-not-loaded rows. `count_concept_map.sql` counts them as "Second reference range (not loaded)", not as duplicate fields. Range rows have no target concept: they hold no value in the map; the values are read from the export.
+- Master data dictionary synchronized (59 rows Changed, 3 Added, 10/31/2026). `map2omop` and the public file regenerated (2114 → 2109 and 1999 → 1994 rows: +3 appended, −8 second ranges now Map_to_OMOP = No), SSSOM/LinkML and the metadata file regenerated.
+- `imported_field_concept_lookup.csv`: four columns at the end (the existing 14 columns and 65 rows are unchanged): `range_low_field`, `range_high_field` (the REDCap export columns `<lab>_min` / `<lab>_max` that hold the participant's reference range, for `MEASUREMENT.range_low` / `range_high`) and `range_low_field_alt`, `range_high_field_alt` (the second range columns `<lab>_min2` / `<lab>_max2`, meaning not yet documented; not to be loaded). 23 of the 31 imported labs have a range (18 low and high, 4 high only, 1 low only); the 49 range columns of the 2026-10-29 export header are all listed. `build_imported_field_concept_lookup.py` fills them from the map's FIELD_IDs (and the export header file, if present).
 
 ### Added — documentation
 
 - `value-set-mapping-common/scripts/README.md`, "Using the concept map in an ETL": split the map on `temp_Question_or_Answer` (Question, Answer, Unit), the key of each row type (questions `SRC_CODE`; answers `FIELD_ID` + `SRC_CODE`, checkbox column `FIELD_ID___SRC_CODE`; units `FIELD_ID` or `unit_concept_lookup.csv`), a pandas example that reads every column as text, answer rows that are records of their own (`TARGET_DOMAIN_ID`), fields with two question rows, and fixed units.
+- `value-set-mapping-common/scripts/README.md`: reference-range rule (which export columns go to `range_low` / `range_high`, strip `<`, `<=`, `>`, `>=`, leave blank when not a number, do not load `_min2` / `_max2`).
 
 ### Changed
 
