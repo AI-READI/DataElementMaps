@@ -13,7 +13,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [v1.8.8] - 2026-10-31
 
-dietscore -> Map_to_OMOP = No, per ETL team. 10/31/2026
 The concept map is easier to use in an ETL: every question row now carries its REDCap field name in `SRC_CODE`. **Map version v1.8.8.** Concept IDs are unchanged; existing line numbers are the same (3 reference-range rows appended, lines 2149–2151).
 
 ### Changed — concept map (`_ai_readi_redcap_value_set_mapping_common.csv`)
@@ -22,6 +21,7 @@ The concept map is easier to use in an ETL: every question row now carries its R
 - `SRC_CODE` of the other 59 imported question rows that had it blank → the field name (= `FIELD_ID`): the 46 reference-range rows (`import_<lab>_min`, `_max`, `_min2`, `_max2`), the 12 specimen rows (`import_collection_dt_*`, `import_process_dt_*`, `import_notes_*` for edta, serum, whole, urine) and `test_upload_date` (line 614). Every question row now has its field name in `SRC_CODE`.
 - Master data dictionary synchronized (the same 31 rows, Changed 10/31/2026). `map2omop` and the open-source public file regenerated (31 and 30 rows). SSSOM and LinkML regenerated: the subject IDs of these rows change from the LOINC code to the field name (e.g. `imported.2345-7.Glucose` → `imported.import_glucose`).
 - `imported_field_concept_lookup.csv`: `src_code` now equals `field_id` for the labs; the LOINC code is in `target_concept_code`. `unit_concept_lookup.csv` and `unit_concept_lookup_extended.csv` are unchanged.
+- `dietscore` (line 206): `Map_to_OMOP` Yes → No, per the ETL team. Removed from `map2omop` (2109 → 2108 rows) and the public file (1994 → 1993); the custom concept 2005200064 stays valid. Master line 1094 synchronized (Changed 10/31/2026).
 
 ### Added — reference ranges
 
