@@ -10,21 +10,21 @@
     "_ai_readi_redcap_value_set_mapping_common.csv": {
       "variant": "common",
       "rows": 2150,
-      "md5": "f2ae302d8c236045c559733ac897f253"
+      "md5": "a585c03d9d841dd2cf16108345bc8416"
     },
     "_ai_readi_redcap_value_set_mapping_common_map2omop.csv": {
       "variant": "map2omop",
-      "rows": 2109,
-      "md5": "18f51f2ca4327ded4c8885c1cbb42cd0"
+      "rows": 2108,
+      "md5": "5387c6ee10ec75dbecd7bf85af6d0a38"
     },
     "_ai_readi_redcap_value_set_mapping_map2omop_open_source_public_version.csv": {
       "variant": "public",
-      "rows": 1994,
-      "md5": "77673e679d001752580232d3be5d6e23"
+      "rows": 1993,
+      "md5": "b66afaf487640238f9827c93d315725e"
     }
   },
   "record_in_omop": {
-    "cdm_source.source_description": "AI-READI concept map v1.8.8 (common file MD5 f2ae302d8c236045c559733ac897f253)",
+    "cdm_source.source_description": "AI-READI concept map v1.8.8 (common file MD5 a585c03d9d841dd2cf16108345bc8416)",
     "metadata.name": "AI-READI concept map version",
     "metadata.value_as_string": "v1.8.8"
   },
