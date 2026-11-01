@@ -4322,7 +4322,7 @@ mappings:
   predicate_id: skos:exactMatch
   confidence: 1.0
 - mapping_record_id: AIREADI_MAPPING_0205
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'Yes'

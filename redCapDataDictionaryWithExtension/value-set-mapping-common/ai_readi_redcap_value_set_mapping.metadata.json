@@ -14,12 +14,12 @@
     },
     "_ai_readi_redcap_value_set_mapping_common_map2omop.csv": {
       "variant": "map2omop",
-      "rows": 2109,
+      "rows": 2108,
       "md5": "18f51f2ca4327ded4c8885c1cbb42cd0"
     },
     "_ai_readi_redcap_value_set_mapping_map2omop_open_source_public_version.csv": {
       "variant": "public",
-      "rows": 1994,
+      "rows": 1993,
       "md5": "77673e679d001752580232d3be5d6e23"
     }
   },

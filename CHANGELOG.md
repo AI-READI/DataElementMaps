@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [v1.8.8] - 2026-10-31
 
+dietscore -> Map_to_OMOP = No, per ETL team. 10/31/2026
 The concept map is easier to use in an ETL: every question row now carries its REDCap field name in `SRC_CODE`. **Map version v1.8.8.** Concept IDs are unchanged; existing line numbers are the same (3 reference-range rows appended, lines 2149–2151).
 
 ### Changed — concept map (`_ai_readi_redcap_value_set_mapping_common.csv`)
