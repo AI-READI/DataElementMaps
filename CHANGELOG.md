@@ -30,6 +30,11 @@ The concept map is easier to use in an ETL: every question row now carries its R
 - Master data dictionary synchronized (59 rows Changed, 3 Added, 10/31/2026). `map2omop` and the public file regenerated (2114 → 2109 and 1999 → 1994 rows: +3 appended, −8 second ranges now Map_to_OMOP = No), SSSOM/LinkML and the metadata file regenerated.
 - `imported_field_concept_lookup.csv`: four columns at the end (the existing 14 columns and 65 rows are unchanged): `range_low_field`, `range_high_field` (the REDCap export columns `<lab>_min` / `<lab>_max` that hold the participant's reference range, for `MEASUREMENT.range_low` / `range_high`) and `range_low_field_alt`, `range_high_field_alt` (the second range columns `<lab>_min2` / `<lab>_max2`, meaning not yet documented; not to be loaded). 23 of the 31 imported labs have a range (18 low and high, 4 high only, 1 low only); the 49 range columns of the 2026-10-29 export header are all listed. `build_imported_field_concept_lookup.py` fills them from the map's FIELD_IDs (and the export header file, if present).
 
+### Added — counts (`count_concept_map.sql`, run by `run_counts.py`)
+
+- Section 4b: predicate × confidence table with rows and distinct concepts for standard and custom concepts, and a total row (v1.8.8: standard 1,524 (405 concepts), custom 485 (338), total 2,009 (743)). It reproduces the table reported with earlier releases (v1.7: 1,993 (738)).
+- New designated-but-unmapped reason "Calculated score not loaded (dietscore)" (it was counted with a blank reason after `dietscore` was set to `Map_to_OMOP = No`); "Expected" comments of sections 1–5 updated to v1.8.8 (custom 485 / 338, mapped 2,009 / 743, designated-but-unmapped 141, not designated 756).
+
 ### Added — documentation
 
 - `value-set-mapping-common/scripts/README.md`, "Using the concept map in an ETL": split the map on `temp_Question_or_Answer` (Question, Answer, Unit), the key of each row type (questions `SRC_CODE`; answers `FIELD_ID` + `SRC_CODE`, checkbox column `FIELD_ID___SRC_CODE`; units `FIELD_ID` or `unit_concept_lookup.csv`), a pandas example that reads every column as text, answer rows that are records of their own (`TARGET_DOMAIN_ID`), fields with two question rows, and fixed units.

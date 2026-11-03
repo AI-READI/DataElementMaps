@@ -43,7 +43,11 @@
 --   * Answer rows switched off because the answer is not a REDCap choice (Map_to_OMOP = 'No',
 --     answer 0 of susmkstoage, sualcage, suvptoyr since v1.8) are counted with
 --     "Answer to an excluded question".
---   * Not designated (759 in v1.8.7; 763 in v1.8.4) = REDCap data elements in the curated dictionary
+--   * Second reference ranges (Map_to_OMOP = 'No' since v1.8.8: import_<lab>_min2 / _max2, meaning not
+--     documented) are reported as designated-but-unmapped ("Second reference range (not loaded)").
+--   * dietscore (Map_to_OMOP = 'No' since v1.8.8, ETL team decision; it keeps its custom concept
+--     2005200064) is reported as designated-but-unmapped ("Calculated score not loaded (dietscore)").
+--   * Not designated (756 in v1.8.8; 759 in v1.8.7; 763 in v1.8.4) = REDCap data elements in the curated dictionary
 --     (2,906) that are not rows in this mapping file. Rows that are not REDCap data
 --     elements (the unit rows added in v1.4, v1.6 and v1.7, the 44 retinal imaging procedure
 --     rows added in v1.7, the Yes/No answer rows and the ECG
@@ -84,6 +88,7 @@ SELECT
         WHEN Map_to_OMOP <> 'Yes' AND (FIELD_ID LIKE 'import\_%\_min2' ESCAPE '\'
                                     OR FIELD_ID LIKE 'import\_%\_max2' ESCAPE '\')
                                                                     THEN 'Second reference range (not loaded)'
+        WHEN Map_to_OMOP <> 'Yes' AND SRC_CODE = 'dietscore'         THEN 'Calculated score not loaded (dietscore)'
         WHEN Map_to_OMOP <> 'Yes' AND MODIFIER LIKE 'Not loaded:%'   THEN 'Duplicate field (not loaded)'
         WHEN Map_to_OMOP <> 'Yes' AND temp_Question_or_Answer = 'Answer'
                                                                     THEN 'Answer to an excluded question'
@@ -128,9 +133,10 @@ FROM rows
 ORDER BY CASE category
            WHEN 'Standard' THEN 1 WHEN 'Custom' THEN 2 WHEN 'Mapped total' THEN 3
            WHEN 'Designated but unmapped' THEN 4 WHEN 'Not designated' THEN 5 ELSE 6 END;
--- Expected (v1.8.7): Standard 1,524 (52.4%) / 405; Custom 486 (16.7%) / 339;
---           Mapped 2,010 (69.2%) / 744; Designated-unmapped 137 (4.7%);
---           Not designated 759 (26.1%); Total 2,906.
+-- Expected (v1.8.8): Standard 1,524 (52.4%) / 405; Custom 485 (16.7%) / 338;
+--           Mapped 2,009 (69.1%) / 743; Designated-unmapped 141 (4.9%);
+--           Not designated 756 (26.0%); Total 2,906.
+--           (v1.8.7: Custom 486 / 339; Mapped 2,010 / 744; Designated-unmapped 137; Not designated 759.)
 --           (v1.8.4: Standard 1,519 / 403; Mapped 2,005 / 742; Designated-unmapped 138; Not designated 763.)
 
 -- 2. Elements and distinct concepts by vocabulary ----------------------------------
@@ -142,8 +148,9 @@ FROM mapping_classified
 WHERE mapping_category IN ('Standard','Custom')
 GROUP BY mapping_category, TARGET_VOCABULARY_ID
 ORDER BY mapping_category DESC, elements DESC;
--- Expected (v1.8.7): LOINC 1,191/277; SNOMED 176/77; UCUM 132/40; CPT4 12/1; PPI 8/7;
---           Ethnicity 4/2; OMOP Extension 1/1; AIREADI 387/262; AIREADI-Vision 69/47; AIREADI-MOCA 30/30.
+-- Expected (v1.8.8): LOINC 1,191/277; SNOMED 176/77; UCUM 132/40; CPT4 12/1; PPI 8/7;
+--           Ethnicity 4/2; OMOP Extension 1/1; AIREADI 386/261; AIREADI-Vision 69/47; AIREADI-MOCA 30/30.
+--           (v1.8.7: AIREADI 387/262; dietscore is not loaded since v1.8.8.)
 
 -- 3. Designated-but-unmapped breakdown -------------------------------------------------
 SELECT unmapped_reason, COUNT(*) AS n
@@ -151,10 +158,12 @@ FROM mapping_classified
 WHERE mapping_category = 'Designated but unmapped'
 GROUP BY unmapped_reason
 ORDER BY n DESC;
--- Expected (v1.8.7): reference range 46; survey timestamp 34; superseded unit row 20; specimen handling 12;
---           answer to an excluded question 7; BCVA sign modifier 6; no matching concept 5;
---           duplicate field (not loaded) 3; not collected (NRBC) 2; REDCap administrative 1;
---           MoCA paper flag 1 (total 137). (v1.8.4: BCVA 10, no duplicate fields; total 138.)
+-- Expected (v1.8.8): reference range 41; survey timestamp 34; superseded unit row 20; specimen handling 12;
+--           second reference range (not loaded) 8; answer to an excluded question 7; BCVA sign modifier 6;
+--           no matching concept 5; duplicate field (not loaded) 3; not collected (NRBC) 2;
+--           dietscore 1; REDCap administrative 1; MoCA paper flag 1 (total 141).
+--           (v1.8.7: reference range 46, no second-range or dietscore rows; total 137.
+--            v1.8.4: BCVA 10, no duplicate fields; total 138.)
 
 -- 4. Confidence and SKOS predicate distribution -----------------------------------------
 SELECT mapping_category,
@@ -165,9 +174,46 @@ FROM mapping_classified
 WHERE mapping_category IN ('Standard','Custom')
 GROUP BY mapping_category, PREDICATE_ID, CONFIDENCE
 ORDER BY mapping_category DESC, PREDICATE_ID, CONFIDENCE DESC;
--- Expected (v1.8.7, standard): exact 1,259; close 261 (170 at 1, 91 at 0.75); broad 2 (0.75); related 2;
+-- Expected (v1.8.8, standard): exact 1,259; close 261 (170 at 1, 91 at 0.75); broad 2 (0.75); related 2;
 --                      confidence 1 = 1,429; 0.75 = 94; 0.5 = 1.
--- Expected (v1.8.7, custom):   all 486 exact match at confidence 1.
+-- Expected (v1.8.8, custom):   all 485 exact match at confidence 1 (v1.8.7: 486).
+
+-- 4b. Predicate x confidence table: rows (distinct concepts), standard vs custom, with a total row.
+--     Same rows as section 4, plus the distinct concepts per cell (the table reported with each release).
+WITH m AS (
+    SELECT mapping_category, TRIM(PREDICATE_ID) AS predicate, TRIM(CONFIDENCE) AS confidence, target_id
+    FROM mapping_classified
+    WHERE mapping_category IN ('Standard','Custom')
+),
+cells AS (
+    SELECT predicate, confidence,
+           COUNT(*)                  FILTER (WHERE mapping_category = 'Standard') AS standard_rows,
+           COUNT(DISTINCT target_id) FILTER (WHERE mapping_category = 'Standard') AS standard_concepts,
+           COUNT(*)                  FILTER (WHERE mapping_category = 'Custom')   AS custom_rows,
+           COUNT(DISTINCT target_id) FILTER (WHERE mapping_category = 'Custom')   AS custom_concepts,
+           COUNT(*)                  AS total_rows,
+           COUNT(DISTINCT target_id) AS total_concepts
+    FROM m GROUP BY predicate, confidence
+    UNION ALL
+    SELECT 'Total', NULL,
+           COUNT(*)                  FILTER (WHERE mapping_category = 'Standard'),
+           COUNT(DISTINCT target_id) FILTER (WHERE mapping_category = 'Standard'),
+           COUNT(*)                  FILTER (WHERE mapping_category = 'Custom'),
+           COUNT(DISTINCT target_id) FILTER (WHERE mapping_category = 'Custom'),
+           COUNT(*), COUNT(DISTINCT target_id)
+    FROM m
+)
+SELECT * FROM cells
+ORDER BY predicate = 'Total', predicate, confidence DESC;
+-- Expected (v1.8.8), rows (distinct concepts):
+--   skos:broadMatch   0.75  standard 2 (1)                               total 2
+--   skos:closeMatch   1     standard 170 (43)                            total 170
+--   skos:closeMatch   0.75  standard 91 (40)                             total 91
+--   skos:exactMatch   1     standard 1,259 (329)   custom 485 (338)      total 1,744 (667)
+--   skos:relatedMatch 0.75  standard 1 (1)                               total 1
+--   skos:relatedMatch 0.5   standard 1 (1)                               total 1
+--   Total                   standard 1,524 (405)   custom 485 (338)      total 2,009 (743)
+--   (v1.7: standard 1,506 (396), custom 487 (342), total 1,993 (738); no broadMatch.)
 
 -- 5. Laterality qualifiers ---------------------------------------------------------------
 SELECT qualifier_concept_id, qualifier_source_value, COUNT(*) AS n
