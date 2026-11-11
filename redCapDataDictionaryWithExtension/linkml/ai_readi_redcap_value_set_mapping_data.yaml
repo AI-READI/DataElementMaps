@@ -11711,7 +11711,7 @@ mappings:
   target_concept_name: Creatinine max
   modifier: 'Not loaded: second reference range high of import_creatinine (meaning not documented)'
 - mapping_record_id: AIREADI_MAPPING_0553
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -11732,8 +11732,8 @@ mappings:
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
-  modifier: Stored value is creatinine/BUN (REDCap calculation inverted; field label says BUN/Creatinine); remap to 3018311
-    (LOINC 3097-3) when the REDCap formula and values are corrected
+  modifier: 'Not loaded: superseded by import_bun_creatinine_ratio (mapped, line 2125, 3018311); this field stores creatinine/BUN
+    (REDCap calculation inverted; field label says BUN/Creatinine)'
 - mapping_record_id: AIREADI_MAPPING_0554
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -13997,7 +13997,7 @@ mappings:
   field_type: text
   field_id_num: 1667
   question_or_answer: Question
-  src_code: lbscat_a1c
+  src_code: lbscat_hgb
   src_cd_description: Hemoglobin - g/dL
   target_concept_id: 3000963
   target_concept_name: Hemoglobin [Mass/volume] in Blood
@@ -14008,6 +14008,8 @@ mappings:
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
+  modifier: 'REDCap field renamed from lbscat_a1c to lbscat_hgb (field 1667): the field holds hemoglobin (g/dL, CBC panel),
+    not HbA1c (HbA1c is import_hba1c). Exports before the rename use lbscat_a1c'
 - mapping_record_id: AIREADI_MAPPING_0674
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'
@@ -43849,10 +43851,10 @@ mappings:
   extension_needed: 'No'
   form_name: lab_results
   field_type: text
-  field_id: lbscat_a1c_u
+  field_id: lbscat_hgb_u
   question_or_answer: Unit
   src_code: g/dL
-  src_code_id: lbscat_a1c_u
+  src_code_id: lbscat_hgb_u
   src_cd_description: gram per deciliter
   target_concept_id: 8713
   target_concept_name: gram per deciliter
@@ -44855,7 +44857,7 @@ mappings:
   confidence: 1.0
   modifier: fixed unit; no REDCap unit field
 - mapping_record_id: AIREADI_MAPPING_2079
-  map_to_omop: 'Yes'
+  map_to_omop: 'No'
   transferred_to_fairhub_redcap_dataset: 'Yes'
   protected_or_open_source: open-source
   extension_needed: 'No'
@@ -44875,7 +44877,7 @@ mappings:
   target_standard_concept: S
   predicate_id: skos:exactMatch
   confidence: 1.0
-  modifier: fixed unit; no REDCap unit field
+  modifier: 'Not loaded: unit of import_buncreatinineratio (not loaded, line 554); fixed unit; no REDCap unit field'
 - mapping_record_id: AIREADI_MAPPING_2080
   map_to_omop: 'Yes'
   transferred_to_fairhub_redcap_dataset: 'Yes'

@@ -206,7 +206,8 @@ SELECT * FROM VALUES
   ('import_troponin_t',                    0,  10000,     0,   100),
   ('import_urine_albumin',                 0,   2000,     0,   300),
   ('import_urine_creatinine',              5,   1000,     5,   500),
-  ('lbscat_a1c',                           4,     25,     8,    18),
+  ('lbscat_a1c',                           4,     25,     8,    18),   -- hemoglobin; field renamed lbscat_hgb in v1.8.9
+  ('lbscat_hgb',                           4,     25,     8,    18),
   ('lbscat_hct',                          10,     75,    25,    55),
   ('lbscat_mch',                          15,     45,    20,    36),
   ('lbscat_mchc',                         20,     45,    28,    37),

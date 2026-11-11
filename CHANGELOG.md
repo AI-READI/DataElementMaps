@@ -11,6 +11,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [v1.8.9] - 2026-11-10
+
+Two field changes requested for the next REDCap export and the ETL. **Map version v1.8.9.** No rows added or removed; every line number is unchanged.
+
+### Changed — concept map (`_ai_readi_redcap_value_set_mapping_common.csv`)
+
+- Hemoglobin field renamed **`lbscat_a1c` → `lbscat_hgb`**, for the next REDCap export: line 674 (`SRC_CODE`) and its fixed-unit row, line 2034 (`FIELD_ID` and `SRC_CODE_ID` `lbscat_hgb_u`, 8713 g/dL). The concept is unchanged, 3000963 *Hemoglobin [Mass/volume] in Blood* (LOINC 718-7): the field holds hemoglobin (g/dL, CBC panel), not HbA1c, which is `import_hba1c`. `MODIFIER` on line 674 records the rename. Exports made before the rename still name the field `lbscat_a1c`; with v1.8.9 that column is no longer matched, so load such exports with v1.8.8.
+- **`import_buncreatinineratio` no longer loaded** (lines 554 and its fixed-unit row 2080): `Map_to_OMOP` Yes → No, with `MODIFIER` "Not loaded: superseded by import_bun_creatinine_ratio …". The BUN/creatinine ratio is loaded only from `import_bun_creatinine_ratio` (line 2125, 3018311 *Urea nitrogen/Creatinine [Mass Ratio] in Serum or Plasma*, LOINC 3097-3). Line 554 keeps its concept (3033837) and its note that the field stores creatinine ÷ BUN, as documentation.
+- Master data dictionary synchronized (the same 4 rows, Changed 11/10/2026). `map2omop` and the open-source public file regenerated (2,108 → 2,106 and 1,993 → 1,991 rows); SSSOM and LinkML regenerated; metadata file: map version v1.8.9.
+
+### Changed — lookups and scripts
+
+- `unit_concept_lookup.csv`: key `lbscat_a1c` → `lbscat_hgb`; key `import_buncreatinineratio` removed (114 → 113 rows; `field` keys 89 → 88). `01_create_unit_lookup.sql` builds the same 113 rows from the map. `unit_concept_lookup_extended.csv` (88 rows) and `imported_field_concept_lookup.csv` (64 rows, 30 imported labs) rebuilt.
+- `06_check_units_after_etl.sql` and `09_validate_units_and_value_ranges.sql`: `lbscat_hgb` added next to `lbscat_a1c`, so data loaded before and after the rename are both checked.
+- `value-set-mapping-common/scripts/README.md`: lookup row counts and unit tables updated.
+- `count_concept_map.sql`: expected values for v1.8.9 (standard 1,522 / 404 concepts, custom 485 / 338, mapped 2,007 / 742; designated but unmapped 143, of which "Duplicate field (not loaded)" 5).
+- `CITATION.cff`, `codemeta.json`: version v1.8.9, date 2026-11-10.
+
 ## [v1.8.8] - 2026-10-31
 
 The concept map is easier to use in an ETL: every question row now carries its REDCap field name in `SRC_CODE`. **Map version v1.8.8.** Concept IDs are unchanged; existing line numbers are the same (3 reference-range rows appended, lines 2149–2151).
