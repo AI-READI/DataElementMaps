@@ -11,7 +11,6 @@ import_ldl_cholesterol_calculation,LDL Cholesterol (calculated field),import_ldl
 import_glucose,Glucose,import_glucose,3004501,Glucose [Mass/volume] in Serum or Plasma,Measurement,LOINC,2345-7,8840,milligram per deciliter,mg/dL,540,541,,import_glucose_min,import_glucose_max,,
 import_bun,BUN,import_bun,3013682,Urea nitrogen [Mass/volume] in Serum or Plasma,Measurement,LOINC,3094-0,8840,milligram per deciliter,mg/dL,544,545,,import_bun_min,import_bun_max,,
 import_creatinine,Creatinine,import_creatinine,3016723,Creatinine [Mass/volume] in Serum or Plasma,Measurement,LOINC,2160-0,8840,milligram per deciliter,mg/dL,548,549,,import_creatinine_min,import_creatinine_max,import_creatinine_min2,import_creatinine_max2
-import_buncreatinineratio,BUN/Creatinine ratio,import_buncreatinineratio,3033837,Creatinine/Urea nitrogen [Mass Ratio] in Serum or Plasma,Measurement,LOINC,31045-8,8523,ratio,ratio,554,2080,,,,,
 import_sodium,Sodium,import_sodium,3019550,Sodium [Moles/volume] in Serum or Plasma,Measurement,LOINC,2951-2,9557,milliequivalent per liter,mEq/L,555,556,,import_sodium_min,import_sodium_max,,
 import_potassium,Potassium,import_potassium,3023103,Potassium [Moles/volume] in Serum or Plasma,Measurement,LOINC,2823-3,9557,milliequivalent per liter,mEq/L,559,560,,import_potassium_min,import_potassium_max,,
 import_chloride,Chloride,import_chloride,3014576,Chloride [Moles/volume] in Serum or Plasma,Measurement,LOINC,2075-0,9557,milliequivalent per liter,mEq/L,563,564,,import_chloride_min,import_chloride_max,,

@@ -13,7 +13,7 @@ SELECT TRIM(SPLIT_PART(measurement_source_value, ',', 1)) AS field_name,
        COUNT(*) AS n
 FROM omop_survey.measurement
 WHERE TRIM(SPLIT_PART(measurement_source_value, ',', 1)) IN (
-        'lbscat_wbc', 'lbscat_rbc', 'lbscat_a1c', 'lbscat_hct', 'lbscat_mcv',
+        'lbscat_wbc', 'lbscat_rbc', 'lbscat_a1c', 'lbscat_hgb', 'lbscat_hct', 'lbscat_mcv',
         'lbscat_mch', 'lbscat_mchc', 'lbscat_rdw', 'lbscat_plt',
         'import_globulin_total_norc', 'import_bilirubin_total', 'import_potassium',
         'height_vsorres', 'weight_vsorres', 'bmi_vsorres', 'waist_vsorres', 'hip_vsorres',

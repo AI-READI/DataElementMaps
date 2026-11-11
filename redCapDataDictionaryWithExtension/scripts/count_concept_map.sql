@@ -39,7 +39,8 @@
 --     collected) are reported as designated-but-unmapped ("Not collected (NRBC)").
 --   * Duplicate imported fields (Map_to_OMOP = 'No' since v1.8.7: import_ldl_cholesterol,
 --     import_globulin_total, import_a_g_ratio, copies of mapped fields) are reported as
---     designated-but-unmapped ("Duplicate field (not loaded)").
+--     designated-but-unmapped ("Duplicate field (not loaded)"). Since v1.8.9 this also counts
+--     import_buncreatinineratio (superseded by import_bun_creatinine_ratio) and its fixed-unit row.
 --   * Answer rows switched off because the answer is not a REDCap choice (Map_to_OMOP = 'No',
 --     answer 0 of susmkstoage, sualcage, suvptoyr since v1.8) are counted with
 --     "Answer to an excluded question".
@@ -47,7 +48,7 @@
 --     documented) are reported as designated-but-unmapped ("Second reference range (not loaded)").
 --   * dietscore (Map_to_OMOP = 'No' since v1.8.8, ETL team decision; it keeps its custom concept
 --     2005200064) is reported as designated-but-unmapped ("Calculated score not loaded (dietscore)").
---   * Not designated (756 in v1.8.8; 759 in v1.8.7; 763 in v1.8.4) = REDCap data elements in the curated dictionary
+--   * Not designated (756 in v1.8.9 and v1.8.8; 759 in v1.8.7; 763 in v1.8.4) = REDCap data elements in the curated dictionary
 --     (2,906) that are not rows in this mapping file. Rows that are not REDCap data
 --     elements (the unit rows added in v1.4, v1.6 and v1.7, the 44 retinal imaging procedure
 --     rows added in v1.7, the Yes/No answer rows and the ECG
@@ -133,9 +134,10 @@ FROM rows
 ORDER BY CASE category
            WHEN 'Standard' THEN 1 WHEN 'Custom' THEN 2 WHEN 'Mapped total' THEN 3
            WHEN 'Designated but unmapped' THEN 4 WHEN 'Not designated' THEN 5 ELSE 6 END;
--- Expected (v1.8.8): Standard 1,524 (52.4%) / 405; Custom 485 (16.7%) / 338;
---           Mapped 2,009 (69.1%) / 743; Designated-unmapped 141 (4.9%);
+-- Expected (v1.8.9): Standard 1,522 (52.4%) / 404; Custom 485 (16.7%) / 338;
+--           Mapped 2,007 (69.1%) / 742; Designated-unmapped 143 (4.9%);
 --           Not designated 756 (26.0%); Total 2,906.
+--           (v1.8.8: Standard 1,524 / 405; Mapped 2,009 / 743; Designated-unmapped 141.)
 --           (v1.8.7: Custom 486 / 339; Mapped 2,010 / 744; Designated-unmapped 137; Not designated 759.)
 --           (v1.8.4: Standard 1,519 / 403; Mapped 2,005 / 742; Designated-unmapped 138; Not designated 763.)
 
@@ -148,9 +150,9 @@ FROM mapping_classified
 WHERE mapping_category IN ('Standard','Custom')
 GROUP BY mapping_category, TARGET_VOCABULARY_ID
 ORDER BY mapping_category DESC, elements DESC;
--- Expected (v1.8.8): LOINC 1,191/277; SNOMED 176/77; UCUM 132/40; CPT4 12/1; PPI 8/7;
+-- Expected (v1.8.9): LOINC 1,190/276; SNOMED 176/77; UCUM 131/40; CPT4 12/1; PPI 8/7;
 --           Ethnicity 4/2; OMOP Extension 1/1; AIREADI 386/261; AIREADI-Vision 69/47; AIREADI-MOCA 30/30.
---           (v1.8.7: AIREADI 387/262; dietscore is not loaded since v1.8.8.)
+--           (v1.8.8: LOINC 1,191/277, UCUM 132/40; v1.8.7: AIREADI 387/262; dietscore is not loaded since v1.8.8.)
 
 -- 3. Designated-but-unmapped breakdown -------------------------------------------------
 SELECT unmapped_reason, COUNT(*) AS n
@@ -158,10 +160,11 @@ FROM mapping_classified
 WHERE mapping_category = 'Designated but unmapped'
 GROUP BY unmapped_reason
 ORDER BY n DESC;
--- Expected (v1.8.8): reference range 41; survey timestamp 34; superseded unit row 20; specimen handling 12;
+-- Expected (v1.8.9): reference range 41; survey timestamp 34; superseded unit row 20; specimen handling 12;
 --           second reference range (not loaded) 8; answer to an excluded question 7; BCVA sign modifier 6;
---           no matching concept 5; duplicate field (not loaded) 3; not collected (NRBC) 2;
---           dietscore 1; REDCap administrative 1; MoCA paper flag 1 (total 141).
+--           no matching concept 5; duplicate field (not loaded) 5; not collected (NRBC) 2;
+--           dietscore 1; REDCap administrative 1; MoCA paper flag 1 (total 143).
+--           (v1.8.8: duplicate field (not loaded) 3; total 141.)
 --           (v1.8.7: reference range 46, no second-range or dietscore rows; total 137.
 --            v1.8.4: BCVA 10, no duplicate fields; total 138.)
 
@@ -174,9 +177,9 @@ FROM mapping_classified
 WHERE mapping_category IN ('Standard','Custom')
 GROUP BY mapping_category, PREDICATE_ID, CONFIDENCE
 ORDER BY mapping_category DESC, PREDICATE_ID, CONFIDENCE DESC;
--- Expected (v1.8.8, standard): exact 1,259; close 261 (170 at 1, 91 at 0.75); broad 2 (0.75); related 2;
---                      confidence 1 = 1,429; 0.75 = 94; 0.5 = 1.
--- Expected (v1.8.8, custom):   all 485 exact match at confidence 1 (v1.8.7: 486).
+-- Expected (v1.8.9, standard): exact 1,257; close 261 (170 at 1, 91 at 0.75); broad 2 (0.75); related 2;
+--                      confidence 1 = 1,427; 0.75 = 94; 0.5 = 1. (v1.8.8: exact 1,259; confidence 1 = 1,429.)
+-- Expected (v1.8.9, custom):   all 485 exact match at confidence 1 (v1.8.7: 486).
 
 -- 4b. Predicate x confidence table: rows (distinct concepts), standard vs custom, with a total row.
 --     Same rows as section 4, plus the distinct concepts per cell (the table reported with each release).
@@ -205,14 +208,15 @@ cells AS (
 )
 SELECT * FROM cells
 ORDER BY predicate = 'Total', predicate, confidence DESC;
--- Expected (v1.8.8), rows (distinct concepts):
+-- Expected (v1.8.9), rows (distinct concepts):
 --   skos:broadMatch   0.75  standard 2 (1)                               total 2
 --   skos:closeMatch   1     standard 170 (43)                            total 170
 --   skos:closeMatch   0.75  standard 91 (40)                             total 91
---   skos:exactMatch   1     standard 1,259 (329)   custom 485 (338)      total 1,744 (667)
+--   skos:exactMatch   1     standard 1,257 (328)   custom 485 (338)      total 1,742 (666)
 --   skos:relatedMatch 0.75  standard 1 (1)                               total 1
 --   skos:relatedMatch 0.5   standard 1 (1)                               total 1
---   Total                   standard 1,524 (405)   custom 485 (338)      total 2,009 (743)
+--   Total                   standard 1,522 (404)   custom 485 (338)      total 2,007 (742)
+--   (v1.8.8: exactMatch standard 1,259 (329); total standard 1,524 (405), total 2,009 (743).)
 --   (v1.7: standard 1,506 (396), custom 487 (342), total 1,993 (738); no broadMatch.)
 
 -- 5. Laterality qualifiers ---------------------------------------------------------------
